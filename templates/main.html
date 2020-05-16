@@ -97,15 +97,21 @@
     var PLAYER;
     var PLAYERS = [];
 
-    var altLayer = 'https://tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png';
-    var defaultLayer = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
+    const LAYERS = {
+        default: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+        alt: 'https://tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png',
+        watercolor: 'http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
+        terrain: 'http://c.tile.stamen.com/terrain-background/{z}/{x}/{y}.jpg',
+        bw: 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
+    };
      var map = L.map('mapid').setView([46.758162, 2.812324], 6);
-     var OSM = L.tileLayer(altLayer, {
+     var OSM = L.tileLayer(LAYERS.bw, {
 	maxZoom: 6,
      minZoom: 6,
          zoomControl: false,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-        });
+	 //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+     });
      OSM.addTo(map);
 
      function updatePlayerList(){
