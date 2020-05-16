@@ -1,0 +1,119 @@
+#mapid {
+    height: 100%;
+    background-color: gray;
+}
+
+#mapid .leaflet-control-zoom {
+    display: none;
+}
+
+.main {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+button {
+  font-family: monospace;
+}
+
+.column {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+    z-index: 1000;
+  width: 200px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right-corner {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.progress-container {
+  display: inline-flex;
+  position: relative;
+  padding: 0 10px;
+  height: 20px;
+  width: 20px;
+
+}
+.progress-inner {
+  height: 18px;
+  width: 18px;
+
+}
+#target {
+  color: blue;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.box .self {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.box .self .name {
+
+}
+
+.box .self .total-score {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.box .ranking ul {
+  list-style: none;
+  padding: 0;
+}
+
+.box .ranking .pname {
+  margin-right: 10px;
+}
+
+.box .ranking .pscore {
+  font-style: italic;
+}
+
+
+
+.box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: monospace;
+  margin-bottom: 15px;
+    z-index: 1000;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.box .title {
+  font-size: 1.1em;
+}
+
+.box .distance {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.box .deets {
+  margin-top: 10px;
+}
+
+.box .score {
+  margin-top: 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
