@@ -9,10 +9,10 @@ from geo import Point
 import geo
 
 
-def load_cities(fname="data/france_clean.csv", min_pop=25):
+def load_cities(fname="data/world_filtered.csv", min_pop=0):
     df = pd.read_csv(fname)
     df = df[df.population > min_pop]
-    return {((city, ""), Point(lon, lat)) for city, lon, lat in zip(df.name, df.lon, df.lat)}
+    return {((city, country), Point(lon, lat)) for city, country, lon, lat in zip(df.name, df.country, df.lon, df.lat)}
 
 CITIES = load_cities()
 
@@ -49,16 +49,21 @@ def random_city(forbidden=None):
 class GameRun:
     SCORE_MULTIPLIER = 1000
     TIME_PARAMS = (2, 2)
-    DIST_PARAMS = 500 # (2, 2)
-    DURATION = 6
+    DIST_PARAMS = 1500 # (2, 2)
+    DURATION = 8
 
-    def __init__(self, players, place=None, forbidden=None):
-        self.players = set(players)
+    def __init__(self, players, place=None, forbidden=None, dist_param=None, duration=None):
+        self.players = players
         self.scores =  defaultdict(float)
         self.messages = defaultdict(str)
         self.distances = defaultdict(float)
         self.durations = defaultdict(float)
         self.records = []
+
+        if dist_param is not None:
+            self.DIST_PARAMS = dist_param
+        if duration is not None:
+            self.DURATION = duration
 
         if place is None:
             place = random_city(forbidden)
@@ -66,9 +71,6 @@ class GameRun:
         self.start = None
         self.dones = defaultdict(lambda:False)
         self.callback = None
-
-    def add_player(self, player):
-        self.players.add(player)
 
     def display(self):
         (city, hint), _ = self.place
@@ -81,14 +83,14 @@ class GameRun:
         return self.display()
 
     @classmethod
-    def time_score(cls, delta):
-        return max(0, 1 - (delta / cls.DURATION))
+    def time_score(self, delta):
+        return max(0, 1 - (delta / self.DURATION))
         # a, b = cls.TIME_PARAMS
         # return cls.SCORE_MULTIPLIER * math.pi / 2 - math.atan((delta - a) / b)
 
     @classmethod
-    def dist_score(cls, dist):
-        return cls.SCORE_MULTIPLIER * max(0, 1 - (dist / cls.DIST_PARAMS))
+    def dist_score(self, dist):
+        return self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.DIST_PARAMS))
         # a, b = cls.DIST_PARAMS
         # return cls.SCORE_MULTIPLIER * math.pi / 2 - math.atan((dist - a) / b)
 

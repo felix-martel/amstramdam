@@ -1,10 +1,22 @@
 #mapid {
     height: 100%;
-    background-color: gray;
+    background-color: black;
+  cursor: crosshair;
 }
 
 #mapid .leaflet-control-zoom {
     display: none;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon-label {
+  position: absolute;
+  /*top: -10px;
+  left: 20px;*/
+  white-space: nowrap;
 }
 
 .main {
@@ -13,6 +25,36 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+#mask {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  z-index: 1001;
+}
+
+#popup {
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+}
+
+#popup table {
+  width: 100%;
+  font-size: 1.5em;
+}
+
+#popup button {
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 button {
@@ -24,7 +66,7 @@ button {
   top: 20px;
   left: 20px;
     z-index: 1000;
-  width: 200px;
+  width: 250px;
 }
 
 .game-info {
@@ -90,13 +132,14 @@ button {
 
 .box {
   background: white;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   padding: 20px;
   text-align: center;
   font-family: monospace;
   margin-bottom: 15px;
-    z-index: 1000;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  border: 5px solid blue;
+  /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);*/
 }
 
 .box .title {
