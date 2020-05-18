@@ -7,7 +7,7 @@ from geo import Point
 import geo
 
 
-def load_cities(fname="data/world_filtered.csv", min_pop=0):
+def load_cities(fname="data/places.world.csv", min_pop=0):
     def clean_city(city):
         if city.isupper():
             return city[0] + city[1:].lower()

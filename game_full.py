@@ -5,7 +5,7 @@ import pandas as pd
 
 from game import GameRun, CITIES, load_cities
 
-with open("data/other_names.txt", "r") as f:
+with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
     NAMES = {line.rstrip() for line in f}
 
 def choose_countries(df, max_per_country=10, max_rank=1000):
@@ -23,13 +23,13 @@ global_player_list = set()
 
 MAPS = {
     "world": {
-        "fname": "data/world_filtered.csv",
+        "fname": "data/places.world.csv",
         "min-pop": 0,
         "distance": 1500,
         "time-bonus": 6,
     },
     "france": {
-        "fname": "data/france_dept.csv",
+        "fname": "data/places.france.csv",
         "min-pop": 25,
         "distance": 300,
         "duration": 5,

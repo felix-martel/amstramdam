@@ -4,7 +4,7 @@ from game_full import Game
 import random
 from unidecode import unidecode
 
-with open("data/filtered_ancient_places.txt", "r", encoding="utf8") as f:
+with open("data/filtered_ancient_places.txt", "r", encoding="utf8", errors="ignore") as f:
     VALID_GAME_NAMES = {unidecode(line.rstrip()) for line in f}
 
 

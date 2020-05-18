@@ -243,8 +243,6 @@ if __name__ == '__main__':
         # Prevent server from being visible from the outside
         assert not PROD, "Can't have both flags DEBUG and PROD"
         kwargs = dict(debug=True)
-    elif PROD:
-        kwargs = dict()
     else:
         kwargs = dict(host= '0.0.0.0', port=80)
     socketio.run(app, **kwargs)
