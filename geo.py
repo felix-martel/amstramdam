@@ -23,7 +23,7 @@ class Point(object):
         return iter((self.lon, self.lat))
 
     def __repr__(self):
-        return f"{self.__class__}({self.lon}, {self.lat})"
+        return f"{self.__class__.__name__}({self.lon}, {self.lat})"
 
     def __hash__(self):
         return hash(tuple(self))

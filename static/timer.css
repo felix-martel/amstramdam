@@ -22,46 +22,46 @@
 /* Using the data attributes for the animation selectors. */
 /* Base settings for all animated elements */
 div[data-anim~=base] {
-  -webkit-animation-iteration-count: 1;  /* Only run once */
-  -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
-  -webkit-animation-timing-function:linear; /* Linear animation */
+  animation-iteration-count: 1;  /* Only run once */
+  animation-fill-mode: forwards; /* Hold the last keyframe */
+  animation-timing-function:linear; /* Linear animation */
 }
 
 .wrapper[data-anim~=wrapper] {
-  -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
-  -webkit-animation-delay: 3s; /* Wait half of the animation */
-  -webkit-animation-name: close-wrapper; /* Keyframes name */
+  animation-duration: 0.01s; /* Complete keyframes asap */
+  animation-delay: 3s; /* Wait half of the animation */
+  animation-name: close-wrapper; /* Keyframes name */
 }
 
 .circle[data-anim~=left] {
-  -webkit-animation-duration: 6s; /* Full animation time */
-  -webkit-animation-name: left-spin;
+  animation-duration: 6s; /* Full animation time */
+  animation-name: left-spin;
 }
 
 .circle[data-anim~=right] {
-  -webkit-animation-duration: 3s; /* Half animation time */
-  -webkit-animation-name: right-spin;
+  animation-duration: 3s; /* Half animation time */
+  animation-name: right-spin;
 }
 /* Rotate the right side of the progress bar from 0 to 180 degrees */
-@-webkit-keyframes right-spin {
+@keyframes right-spin {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 /* Rotate the left side of the progress bar from 0 to 360 degrees */
-@-webkit-keyframes left-spin {
+@keyframes left-spin {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 /* Set the wrapper clip to auto, effectively removing the clip */
-@-webkit-keyframes close-wrapper {
+@keyframes close-wrapper {
   to {
     clip: rect(auto, auto, auto, auto);
   }

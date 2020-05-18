@@ -1,10 +1,63 @@
+.blink-wrapper {
+  z-index: 1000;
+
+}
+
+.blink-item {
+  position: fixed;
+  background-color: blue;
+  opacity: 1;
+  transition: 0.1s ease-in-out;
+  z-index: 10;
+}
+.off .blink-item {
+  opacity: 0;
+}
+
+#top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+#left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+}
+#right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+}
+#bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+
+#game-box .box.hidden {
+  display: none;
+}
+
+#run-timer {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: blue;
+}
+
+
+
 #mapid {
     height: 100%;
     background-color: black;
   cursor: crosshair;
 }
 
-#mapid .leaflet-control-zoom {
+#mapid .leaflet-control-zoom, #leaflet .leaflet-control-zoom {
     display: none;
 }
 
@@ -19,12 +72,87 @@
   white-space: nowrap;
 }
 
+.map-container {
+  height: 220px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+
+#leaflet {
+  position: absolute;
+  top: 0;
+  left: -19px;
+  right: -20px;
+  bottom: -20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: blue;
+}
+
+#game-sharing-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: blue;
+  color: white;
+  z-index: 1000;
+  font-family: monospace;
+  padding: 2px 10px;
+  font-size: 0.9em;
+}
+#sharing-link {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.game-panel-container {
+  text-align: justify-all;
+}
+
+
+.game-panel {
+  vertical-align: top;
+  text-align: left;
+  display: inline-block;
+}
+
+.game-panel-container:after {
+    display:inline-block;
+    width:100%;
+    content:'';
+}
+
+.new-game {
+  padding-right: 25px;
+  border-right: 1px solid lightgray;
+}
+
+.existing-game {
+  padding-left: 25px;
+}
+
+#game-creator .fieldset {
+    margin: 10px 0;
+  }
+
 .main {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.nav {
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  color: blue;
+}
+.nav a, .nav a:visited, .nav a:active, .nav a:link {
+  color: blue;
 }
 
 #mask {
@@ -45,6 +173,7 @@
   width: 600px;
   transform: translate(-50%, -50%);
   z-index: 1002;
+  overflow: hidden;
 }
 
 #popup table {

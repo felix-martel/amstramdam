@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>(multigeo)</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/timer.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="popup-container" id="popup-container">
+        <div id="mask">
+
+        </div>
+        <div id="popup" class="box">
+            <div class="game-panel-container">
+
+            <div class="new-game game-panel">
+                <h2>New game</h2>
+                <form id="game-creator" action="/new" method="post">
+                    <div class="fieldset">
+                        <label for="map-selector">Map</label>
+                        <select name="map" id="map-selector" onchange="updateView()">
+                            <option value="france">France</option>
+                            <option value="world" selected>World</option>
+                        </select>
+                    </div>
+                    <div class="fieldset">
+                        <label for="n-runs-input">Runs</label>
+                        <input type="number" name="runs" id="n-runs-input" value="10">
+                    </div>
+                    <!--<div class="fieldset">
+                        <label for="min-dist-input">Min. distance</label>
+                    <input type="number" name="min-dist-input" id="min-dist-input" value="200">
+                    </div>-->
+                    <div class="fieldset">
+                        <label for="duration-input">Duration</label>
+                    <input type="number" name="duration" id="duration-input" value="10">
+                    </div>
+                    <div class="fieldset">
+                        <label for="zoom-checkbox"> <s> Allow zoom</s></label>
+                        <input id="zoom-checkbox" name="zoom" disabled type="checkbox">
+                    </div>
+                    <button type="submit" id="new-game-button">
+                        Create
+                    </button>
+                </form>
+            </div>
+            <div class="existing-game game-panel">
+                <h2>Join game</h2>
+                <input type="text" id="game-name" placeholder="Enter game name">
+                <button id="join-game-button">
+                    Join
+                </button>
+            </div>
+            </div>
+
+            <div class="map-container">
+                <div id="leaflet"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    const LAYERS = {
+        default: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+        alt: 'https://tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png',
+        watercolor: 'http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
+        terrain: 'http://c.tile.stamen.com/terrain-background/{z}/{x}/{y}.jpg',
+        bw: 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
+    };
+    const game = {
+        france: {
+            center: [46.758162, 2.812324],
+            zoom: 4
+        },
+        world: {
+            center: [23.7, 7.6],
+            zoom: 1
+        },
+    };
+    const currGame = game.world; // game.world;
+     var map = L.map('leaflet').setView(currGame.center, currGame.zoom);
+     var OSM = L.tileLayer(LAYERS.bw, {
+         zoomControl:  false, //false,
+       //attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+     });
+     OSM.addTo(map);
+
+    const gameSelector = document.getElementById("map-selector");
+    function updateView(){
+        let currGame = game[gameSelector.value];
+        map.setView(currGame.center, currGame.zoom);
+    }
+    var gameNameInput = document.getElementById("game-name");
+    var gameJoinButton = document.getElementById("join-game-button");
+    gameNameInput.addEventListener("keydown", function(event){
+        if (event.keyCode === 13){
+            event.preventDefault();
+            gameJoinButton.click();
+        }
+    });
+    gameJoinButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = `/game/${gameNameInput.value}`;
+    });
+</script>
+</body>
+</html>

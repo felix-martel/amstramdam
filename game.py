@@ -10,9 +10,21 @@ import geo
 
 
 def load_cities(fname="data/world_filtered.csv", min_pop=0):
+    def clean_city(city):
+        if city.isupper():
+            return city[0] + city[1:].lower()
+        return city
     df = pd.read_csv(fname)
-    df = df[df.population > min_pop]
-    return {((city, country), Point(lon, lat)) for city, country, lon, lat in zip(df.name, df.country, df.lon, df.lat)}
+    if "country" not in df.columns:
+        df["country"] = ""
+    if "dept" in df.columns:
+        idf = {"75", "91", "92", "93", "94"}
+        is_idf = df.dept.isin(idf)
+        mask = (~is_idf & (df.population > min_pop)) | (is_idf & (df.population > 3 * min_pop))
+        df = df[mask]
+    else:
+        df = df[df.population > min_pop]
+    return {((clean_city(city), country), Point(lon, lat)) for city, country, lon, lat in zip(df.name, df.country, df.lon, df.lat)}
 
 CITIES = load_cities()
 
@@ -48,11 +60,8 @@ def random_city(forbidden=None):
 
 class GameRun:
     SCORE_MULTIPLIER = 1000
-    TIME_PARAMS = (2, 2)
-    DIST_PARAMS = 1500 # (2, 2)
-    DURATION = 8
 
-    def __init__(self, players, place=None, forbidden=None, dist_param=None, duration=None):
+    def __init__(self, players, place=None, forbidden=None, dist_param=None, time_param=None, duration=None):
         self.players = players
         self.scores =  defaultdict(float)
         self.messages = defaultdict(str)
@@ -60,10 +69,10 @@ class GameRun:
         self.durations = defaultdict(float)
         self.records = []
 
-        if dist_param is not None:
-            self.DIST_PARAMS = dist_param
-        if duration is not None:
-            self.DURATION = duration
+
+        self.time_param = 5 if time_param is None else time_param
+        self.dist_param = 500 if dist_param is None else dist_param
+        self.duration = 10 if duration is None else duration
 
         if place is None:
             place = random_city(forbidden)
@@ -82,17 +91,11 @@ class GameRun:
         self.on_run_start(callback)
         return self.display()
 
-    @classmethod
     def time_score(self, delta):
-        return max(0, 1 - (delta / self.DURATION))
-        # a, b = cls.TIME_PARAMS
-        # return cls.SCORE_MULTIPLIER * math.pi / 2 - math.atan((delta - a) / b)
+        return max(0, 1 - (delta / self.time_param))
 
-    @classmethod
     def dist_score(self, dist):
-        return self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.DIST_PARAMS))
-        # a, b = cls.DIST_PARAMS
-        # return cls.SCORE_MULTIPLIER * math.pi / 2 - math.atan((dist - a) / b)
+        return self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.dist_param))
 
     @property
     def results(self):
@@ -106,6 +109,15 @@ class GameRun:
     def on_run_end(self):
         print(f"Game done, right answer was: {self.place[1]}")
         return self.place[1]
+
+    def get_params(self):
+        """So you can re-create a new GameRun with game2 = GameRun(**game1.get_params())"""
+        return dict(
+            players=set(self.players),
+            dist_param=self.dist_param,
+            time_param=self.time_param,
+            duration=self.duration
+        )
 
     def process_answer(self, guess, player):
         if player not in self.players:
@@ -138,13 +150,5 @@ class GameRun:
         if game_done:
             self.on_run_end()
         return res, game_done
-
-
-class Game:
-    def __init__(self, players, places=None):
-        self.players = players
-        self.id_ = generate_id()
-        if places is None:
-            self.places = random.shuffle(CITIES)
 
 

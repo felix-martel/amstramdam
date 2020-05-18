@@ -3,35 +3,72 @@ Associated with conda env 'tdc'
 """
 import threading
 import atexit
+from collections import defaultdict
 
-from flask import Flask, render_template, session, request
-from flask_socketio import SocketIO, send, emit
+from flask import Flask, render_template, session, request, redirect, url_for
+from flask_socketio import SocketIO, send, emit, join_room, leave_room, close_room
+
 
 from game import GameRun, PlayerList
 from game_full import Game
+import game_manager as manager
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "this is intended to be secret"
-socketio = SocketIO(app)
+app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
+socketio = SocketIO(app, async_mode="threading") # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
+
+
+
+N_RUNS = 10
+TIME_BETWEEN_RUNS = 12
 
 @app.route("/")
 def serve_main():
-    return render_template("main.html")
+    return render_template("lobby.html")
+    #return render_template("main.html")
 
-N_RUNS = 10
-TIME_BETWEEN_RUNS = 5
+@app.route("/new", methods=["GET", "POST"])
+def create_new_game():
+    params = {
+        "map": "world",
+        "duration": "10",
+        "zoom": False,
+        "runs": 10,
+        **request.form
+    }
+    ints = ["duration", "runs"]
+    for k in ints:
+        params[k] = int(params[k])
+    name, game = manager.create_game(n_run=params["runs"], time_param=params["duration"], map=params["map"])
+    print(manager.get_status())
 
-player_names = PlayerList()
-players = set()
-game = Game(n_run=N_RUNS)
-duration_thread = threading.Thread()
+    return redirect(url_for("serve_game", name=name))
 
-def interrupt():
-    global duration_thread
-    duration_thread.cancel()
+@app.route("/game/<name>")
+def serve_game(name):
+    if not manager.exists(name):
+        return redirect(url_for("serve_main"))
+    else:
+        session["game"] = name
+        game_name = session["game"]
+        game = manager.get_game(game_name)
+        params = dict(map=game.map_name, wait_time=TIME_BETWEEN_RUNS, duration=game.duration)
+        return render_template("main.html", game_name=name, params=params)
+
+
+
+timers = defaultdict(threading.Timer)
+
 
 @socketio.on('connection')
 def init_game(data):
+    game_name = session["game"]
+    if not manager.exists(game_name):
+        del session["game"]
+        return redirect(url_for("serve_main"))
+
+    join_room(game_name)
+    game = manager.get_game(game_name)
     if "player" in session:
         player = session["player"]
         if player not in game.players:
@@ -40,9 +77,9 @@ def init_game(data):
         player = game.add_player()
         session["player"] = player
 
-    print(f"Player <{player}> connected...", end=" ")
+    print(f"Player <{player}> connected to game <{game_name}>", end=" ")
     emit("init", dict(player=player))
-    emit("new-player", dict(player=player, leaderboard=game.get_current_leaderboard()), broadcast=True)
+    emit("new-player", dict(player=player, leaderboard=game.get_current_leaderboard()), broadcast=True, room=game_name)
 
 def safe_cancel(timer):
     try:
@@ -50,17 +87,40 @@ def safe_cancel(timer):
     except AttributeError:
         pass
 
-@socketio.on('disconnection')
+@socketio.on('disconnect')
 def remove_from_game():
+    if "player" not in session:
+        return
     player = session["player"]
+    game_name = session["game"]
+    game = manager.get_game(game_name)
     game.remove_player(player)
-    emit("player-left", dict(player=player, leaderboard=game.get_current_leaderboard()), broadcast=True)
+    leave_room(game_name)
+    emit("player-left", dict(player=player, leaderboard=game.get_current_leaderboard()), broadcast=True, room=game_name)
 
-def end_game():
-    global game
+    print(f"<{player}> disconnected!")
+
+    if not game.players:
+        manager.remove_game(game_name)
+        close_room(game_name)
+        safe_cancel(timers[game_name])
+        del timers[game_name]
+        print(f"Game <{game_name}> was removed!")
+
+
+def game_ender(game_name):
+    def ender():
+        return end_game(game_name)
+    return ender
+
+def end_game(game_name, run_id):
+    # global game
+    game = manager.get_game(game_name)
+    if game.curr_run_id != run_id:
+        print(f"end_game failed (current: {game.curr_run_id}, expected: {run_id})")
+        return
     print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
     with app.test_request_context('/'):
-        print("Entering end callback")
         # 1: get current place
         refname, (lon, lat) = game.current.place
         answer = dict(name=refname, lon=lon, lat=lat)
@@ -68,68 +128,93 @@ def end_game():
         # 2: end game
         records = game.current.records
         results, done = game.end()
-        socketio.emit("run-end", dict(
-            results=records,
-            answer=answer,
-            leaderboard=game.get_current_leaderboard()),
-        json=True, broadcast=True)
-        print("Run done")
+        socketio.emit("run-end",
+                      dict(results=records, answer=answer, leaderboard=game.get_current_leaderboard()),
+                        json=True, broadcast=True, room=game_name
+                      )
 
         # 3: continue?
         if done:
             # Do something, e.g display final results
-            socketio.emit("game-end", dict(leaderboard=game.get_current_leaderboard()), json=True, broadcast=True)
+            socketio.emit("game-end",
+                          dict(leaderboard=game.get_current_leaderboard()), json=True, broadcast=True,
+                          room=game_name)
 
-            game = Game(players=set(game.players), n_run=N_RUNS)
+            # game = Game(players=set(game.players), n_run=N_RUNS, map=game.map_name)
+            manager.relaunch_game(game_name)
             return
         else:
-            global duration_thread
-            duration_thread = threading.Timer(TIME_BETWEEN_RUNS, launch_run)
-            duration_thread.start()
+            timers[game_name] = threading.Timer(TIME_BETWEEN_RUNS, launch_run, [game_name, game.curr_run_id]) # run_launcher(game_name))
+            timers[game_name].start()
 
-def launch_run():
-    global duration_thread
-    print(f"\n--\nLaunching run {game.curr_run_id+1}\n--\n")
+
+def wait_and_run(seconds, func, *args, **kwargs):
+    def waiter():
+        socketio.sleep(seconds)
+        func(*args, **kwargs)
+    socketio.start_background_task(waiter)
+
+def launch_run(game_name, run_id):
+    # global duration_thread
+    game = manager.get_game(game_name)
+    if game is None or game.curr_run_id != run_id:
+        return
+    print(f"\n--\nLaunching run {game.curr_run_id+1} for game <{game_name}>\n--\n")
     with app.test_request_context('/'):
         hint = game.current.launch()
-        duration_thread = threading.Timer(game.current.DURATION, end_game)
-        duration_thread.start()
-        print(f"Hint is '{hint}")
-        socketio.emit("run-start", dict(hint=hint, current=game.curr_run_id, total=game.n_run), json=True, broadcast=True)
 
+        print(f"Hint is '{hint}'")
+        print(f"Broadcasting <event:run-start> to <room:{game_name}>")
+        socketio.emit("log", "Run launched [from line 164]", broadcast=True, room=game_name)
+        socketio.emit("run-start",
+                      dict(hint=hint, current=game.curr_run_id, total=game.n_run),
+                      json=True,
+                      room=game_name,
+                      broadcast=True)
+
+        timers[game_name] = threading.Timer(game.current.duration, end_game, [game_name, game.curr_run_id]) # game_ender(game_name))
+        timers[game_name].start()
 
 @socketio.on("launch")
 def launch_game():
+    game_name = session["game"]
+    game = manager.get_game(game_name)
     print(game)
     game.launch() # GameRun(players)
-    print("Game created...launching game")
-    emit("game-launched", broadcast=True)
+    print(f"Game <{game_name}> created...launching game")
+    emit("game-launched", broadcast=True, room=game_name)
 
-    launch_run()
+    launch_run(game_name, game.curr_run_id)
 
 @socketio.on('guess')
 def process_guess(data):
-    global duration_thread
-    print(data)
+    # global duration_thread
+    game_name = session["game"]
+    game = manager.get_game(game_name)
+
+    print(f"Received answer for game <{game_name}>:", data)
     player = data["player"]
     lon, lat = data["lon"], data["lat"]
 
     res, done = game.current.process_answer((lon, lat), player)
-    emit("log", f"Player <{player}> has scored {res['score']} points", broadcast=True)
+    emit("log", f"Player <{player}> has scored {res['score']} points", broadcast=True, room=game_name)
     emit("score", res, json=True)
     if done:
         try:
             print(f"\n--\nInterrupting run {game.curr_run_id+1}\n--\n")
-            safe_cancel(duration_thread)
+            safe_cancel(timers[game_name])
         except AttributeError:
             pass
-        end_game()
-        # emit("run-end", dict(results=game.records, answer=res["answer"]), json=True, broadcast=True)
-        # print("Game done")
 
-atexit.register(interrupt)
+        end_game(game_name, game.curr_run_id)
 
 
+DEBUG = False
 
 if __name__ == '__main__':
-    socketio.run(app, host= '0.0.0.0', port=80)
+    if DEBUG:
+        # Prevent server from being visible from the outside
+        kwargs = dict(debug=True)
+    else:
+        kwargs = dict(host= '0.0.0.0', port=80)
+    socketio.run(app, **kwargs)

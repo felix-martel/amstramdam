@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>(multigeo)</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./static/style.css">
-    <link rel="stylesheet" href="./static/timer.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='timer.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
@@ -19,7 +19,14 @@
     </style>
 </head>
 <body>
+<div class="blink-wrapper off" id="blink-wrapper">
+    <div class="blink-item" id="left"></div>
+    <div class="blink-item" id="right"></div>
+    <div class="blink-item" id="top"></div>
+    <div class="blink-item" id="bottom"></div>
+</div>
 <div class="main">
+    <div id="game-sharing-link">Share this game: <u id="sharing-link"></u></div>
     <div class="popup-container" id="popup-container" hidden>
         <div id="mask">
 
@@ -33,6 +40,9 @@
     </div>
         <div class="column">
     <div class="box">
+        <div class="nav">
+            <a href="/">Back to home</a>
+        </div>
       <div class="self">
       <div class="name" id="player-name">Non connecté</div>
         <div class="total-score"><span id="total-score">0</span> pts</div>
@@ -62,7 +72,7 @@
     </div>
 
     <div class="right-corner" id="game-box" hidden>
-        <div class="game-info box">
+        <div class="game-info box" id="display-hint">
             <span class="run-info">
                 <span id="run-current">0</span>/<span id="run-total">0</span>
             </span>
@@ -77,13 +87,47 @@
                 </div>
             </div>
         </div>
+        <div class="box hidden" id="display-timer">
+            <span class="timer-text">Next run in <span id="run-timer"></span>...</span>
+        </div>
     </div>
 
     <div id="mapid"></div>
+    <audio id="beep" hidden src="{{ url_for('static',filename='bip.mp3') }}"></audio>
 </div>
 
 <script type="text/javascript" charset="utf-8">
-    function getIcon(color="red", name="", labelOnly=false){
+    const params = {{ params | tojson}};
+    console.log(params);
+    document.getElementById("sharing-link").innerHTML = window.location.href;
+    const blinkContainer = document.getElementById("blink-wrapper");
+    const audioBeep = document.getElementById("beep");
+
+    //var blinkInterval;
+    function blink(audio= true){
+        const duration = 100; // In millisec
+        blinkContainer.classList.remove("off");
+        if (audio) {audioBeep.play();}
+        window.setTimeout(() => {
+            blinkContainer.classList.add("off");
+        }, duration);
+        console.log("Blinked");
+    }
+    /*
+    function blinkWarn(duration=params.duration || 3000){
+        let timeDecrease = 50;
+        let timeStep = 500;
+        let oneFrameDuration = 200;
+        let totalDuration = 0;
+        let interval = window.setTimeout(() => {
+            blink();
+
+        })
+    }
+    window.setInterval(() => {
+        blink();
+    }, 1000);*/
+    function getIcon(color="red", name="", labelOnly=false, random=false){
         const iconColor = labelOnly ? "transparent" : color;
         const markerHtmlStyles = `
           background: ${iconColor};
@@ -93,13 +137,17 @@
           border-radius: 5px;`;
         var inner;
         if (name) {
-            let x = 2* (Math.random()-0.5);
-            let y = Math.sqrt(1 - Math.pow(x, 2));
-            if (Math.random() > 0.5){
-                y = -y;
+            let x = 15;
+            let y = 15;
+            if (random){
+                x = 2* (Math.random()-0.5);
+                y = Math.sqrt(1 - Math.pow(x, 2));
+                if (Math.random() > 0.5){
+                    y = -y;
+                }
+                x = Math.round((15 + 15*Math.random())*x);
+                y = Math.round((15 + 15*Math.random())*y);
             }
-            x = Math.round((15 + 15*Math.random())*x);
-            y = Math.round((15 + 15*Math.random())*y);
             const labelStyle = `
             background-color: ${color};
             color: white;
@@ -107,6 +155,7 @@
             top: ${x}px;
             left: ${y}px;
             position: absolute;
+            font-family: monospace;
             `;
             inner = `<span class="icon-label" style="${labelStyle}">${name}</span>`;
         }
@@ -123,6 +172,7 @@
     function getLabelIcon(color="red", name=""){
 
     }
+
     var hintContainer = document.getElementById("target");
     var playerName = document.getElementById("player-name");
     var playerList = document.getElementById("player-list");
@@ -130,10 +180,11 @@
     var gameLauncher = document.getElementById("launch");
     var gameRelauncher = document.getElementById("relaunch-from-popup");
     var gameBox = document.getElementById("game-box");
+    var gameHint = document.getElementById("display-hint");
+    var gameWaitDisplayer = document.getElementById("display-timer");
     var gameLaunched = false;
     var runLaunched = false;
     var hasAnswered = false;
-
     var clickable = false;
     var PLAYER;
     var PLAYERS = [];
@@ -162,9 +213,12 @@
             // console.log(el);
             el.setAttribute("data-anim", `base ${c}`);
         });
+        document.getElementById("countdown-animation-wrapper").style.animationDelay = String(params.duration/2) + "s";
+        document.getElementById("countdown-animation-left").style.animationDuration = String(params.duration) + "s";
+        document.getElementById("countdown-animation-right").style.animationDuration = String(params.duration/2) + "s";
         countdownInterval = setInterval(() => {
             endCountdown();
-        }, 6000);
+        }, params.duration*1000);
     }
 
     let franceZoom = 6;
@@ -179,18 +233,31 @@
     };
     var centerFrance = [46.758162, 2.812324];
     var centerWorld = [23.7, 7.6];
-     var map = L.map('mapid').setView(centerWorld, zoom);
+    const game = {
+        france: {
+            center: centerFrance,
+            zoom: franceZoom
+        },
+        world: {
+            center: centerWorld,
+            zoom: worldZoom
+        },
+    };
+
+
+    const currGame = game[params.map]; // game.world;
+     var map = L.map('mapid').setView(currGame.center, currGame.zoom);
      mobileCheck = function() {
           let check = false;
           (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
           return check;
         };
      const isMobile = mobileCheck();
-     const maxZoom = isMobile ? zoom + 4 : zoom;
+     const maxZoom = isMobile ? 6 : currGame.zoom+2;
 
      var OSM = L.tileLayer(LAYERS.bw, {
-	    maxZoom: maxZoom,
-        minZoom: zoom,
+	    //maxZoom: currGame.zoom, //maxZoom,
+        minZoom: currGame.zoom,
          zoomControl:  false, //false,
 	 //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
@@ -202,10 +269,15 @@
      function updatePlayerList(){
          playerList.innerHTML = "";
          LEADERBOARD.forEach(el => {
-             playerList.innerHTML += `<li><span class="pname">${el.player}</span><span class="pscore">${el.score} pts</span></li>`
+             if (el.player === PLAYER){
+                 scorer.innerHTML = el.score;
+                 playerList.innerHTML += `<li><i><span class="pname">${el.player}*</span><span class="pscore">${el.score} pts</span></i></li>`
+             }
+             else {
+                playerList.innerHTML += `<li><span class="pname">${el.player}</span><span class="pscore">${el.score} pts</span></li>`
+             }
          });
      }
-
      function showResults(){
          let table = "";
        LEADERBOARD.forEach((el, i) => {
@@ -217,37 +289,71 @@
      function hideResults(){
        document.getElementById("popup-container").hidden = true;
      }
+     function displayGameBox(hint, currRun, totalRun){
+        gameBox.hidden = true;
+        gameHint.classList.remove("hidden");
+         gameWaitDisplayer.classList.add("hidden");
+        document.getElementById("run-current").innerHTML = currRun + 1;
+        document.getElementById("run-total").innerHTML = totalRun;
+        target.innerHTML = hint;
+        gameBox.hidden = false;
+     }
+     function hideGameBox(){
+         gameBox.hidden = true;
+     }
+     function startWaitTimer(){
+         gameHint.classList.add("hidden");
+         gameWaitDisplayer.classList.remove("hidden");
+         gameBox.hidden = false;
+
+         var duration = params.wait_time;
+         document.getElementById("run-timer").innerHTML = duration;
+         var waitInterval = window.setInterval(() => {
+             duration = duration - 1;
+             if (duration >= 0) {
+                 document.getElementById("run-timer").innerHTML = duration;
+             }
+             else {
+                 window.clearInterval(waitInterval);
+             }
+         }, 1000); // Update every second
+
+     }
     function makeAnimatedCircle(lat, lon, radius, color, onEnd){
          var newRadius = radius*1000; // Kilometres to meters
-         correctionCircle = L.circle([lat, lon], {
+         let circle = L.circle([lat, lon], {
                 color: color,
-                fillColor: color,
-                fillOpacity: 0.1,
+                // fillColor: color,
+                // fillOpacity: 0.1,
                 radius: 0.01
             });
-         correctionCircle.addTo(map);
+         circle.addTo(map);
          let duration = 400;
          let timestep = 5;
          let step = newRadius / timestep;
         //return;
 
         var interval = setInterval(function() {
-           var currentRadius = correctionCircle.getRadius();
+           var currentRadius = circle.getRadius();
            console.debug("currentRadius", currentRadius);
            if (currentRadius < newRadius) {
-               correctionCircle.setRadius(currentRadius + step);
+               circle.setRadius(currentRadius + step);
                //console.debug("new Radius", correctionCircle.getRadius());
            } else {
                clearInterval(interval);
                if (onEnd){
-                   console.log("Callback for animated circle");
                 onEnd();
 
                }
            }
         }, timestep);
-    }
 
+        return circle;
+    }
+    const blinkDelay = 3; // In seconds: screen will blink `blinkDelay` seconds before run end
+    const blinkTimestep = 500; // In milliseconds
+    var blinkTimeout;
+    var blinkInterval;
     console.log("Script loaded...");
         var socket = io();
         socket.on('connect', function() {
@@ -256,7 +362,6 @@
         });
         socket.on('disconnect', function() {
             console.log("Disconnecting...");
-            socket.emit("disconnection");
         });
         socket.on("log", function(data){
             console.log(data);
@@ -281,39 +386,80 @@
         });
         socket.on("run-start", (data) => {
             runLaunched = true;
-            console.log("Run started!");
+            console.log(`Run started, place to find is «${data.hint}»`);
             clearMap();
             startCountdown();
             hasAnswered = false;
-            gameBox.hidden = true;
+            document.getElementById("results").hidden = true;
+            displayGameBox(data.hint, data.current, data.total);
+
+            /*gameBox.hidden = true;
             document.getElementById("results").hidden = true;
             document.getElementById("run-current").innerHTML = data.current+1;
             document.getElementById("run-total").innerHTML = data.total;
             target.innerHTML = data.hint;
-            gameBox.hidden = false;
+            gameBox.hidden = false;*/
+
+            blinkTimeout = window.setTimeout(() => {
+                console.log(`${blinkDelay} seconds remaining...`);
+                blinkInterval = window.setInterval(() => {
+                    blink(false);
+                }, blinkTimestep);
+            }, 1000*(params.duration - blinkDelay));
         });
         socket.on("score", (data) => {
-            console.log("Received my score");
             let infobox = `+${data.score} points`;
-            // addMarker(data.answer.lat, data.answer.lon, "", "blue");
-            //L.polyline(
-            //    [
-            //        [data.guess.lat, data.guess.lon],
-            //        [data.answer.lat, data.answer.lon]
-            //    ]).addTo(map);
-            makeAnimatedCircle(data.guess.lat, data.guess.lon, data.dist, "red", () => {
+            addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
+            makeAnimatedCircle(data.answer.lat, data.answer.lon, data.dist, "red");
+            /*makeAnimatedCircle(data.guess.lat, data.guess.lon, data.dist, "red", () => {
                 addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
-            });
+            });*/
             let currScore = parseInt(scorer.innerHTML) + data.score;
             scorer.innerHTML = data.score;
+            const dist = Math.round(data.dist);
+            const score = Math.round(data.score);
+
             document.getElementById("answer-name").innerHTML = data.answer.name;
-            document.getElementById("main-disp-dist").innerHTML = Math.round(data.dist);
-            document.getElementById("disp-dist").innerHTML = Math.round(data.dist);
-            document.getElementById("disp-score-dist").innerHTML = Math.round(data.sd);
-            document.getElementById("disp-time").innerHTML = Math.round(data.delta * 100) / 100;
-            document.getElementById("disp-score-time").innerHTML = Math.round(data.st);
-            document.getElementById("curr-score").innerHTML = data.score;
+            document.getElementById("main-disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
+            document.getElementById("disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
+            document.getElementById("disp-score-dist").innerHTML = 0; //Math.round(data.sd);
+            document.getElementById("disp-time").innerHTML = 0; //Math.round(data.delta * 100) / 100;
+            document.getElementById("disp-score-time").innerHTML = 0; // Math.round(data.st);
+            document.getElementById("curr-score").innerHTML = 0; //score; //data.score;
             document.getElementById("results").hidden = false;
+
+            var incDist = 0;
+            const timeStep = 10;
+            const totalDuration = 1500; // (dist / dist_step) * timeStep= totalDuration
+            const distStep = Math.round(dist * (timeStep / totalDuration));
+            const scoreStep = (score === 0) ? 10 :  Math.round(score * (timeStep / totalDuration));
+            var incScore = 0;
+            var distInterval = window.setInterval(() => {
+                incDist = incDist + distStep;
+                if (incDist < dist){
+                    document.getElementById("main-disp-dist").innerHTML = incDist; // Math.round(data.dist);
+                    // document.getElementById("disp-dist").innerHTML = incDist;
+                }
+                else {
+                    document.getElementById("main-disp-dist").innerHTML = dist; // Math.round(data.dist);
+                    // document.getElementById("disp-dist").innerHTML = dist;
+                    window.clearInterval(distInterval);
+                }
+            }, timeStep);
+            var scoreInterval = window.setInterval(() => {
+                incScore = incScore + scoreStep;
+                if (incScore < score){
+                   document.getElementById("curr-score").innerHTML = incScore;
+                }
+                else {
+                    document.getElementById("curr-score").innerHTML = score;
+                    document.getElementById("disp-dist").innerHTML = dist; // Math.round(data.dist);
+                    document.getElementById("disp-score-dist").innerHTML = Math.round(data.sd);
+                    document.getElementById("disp-time").innerHTML = Math.round(data.delta * 100) / 100;
+                    document.getElementById("disp-score-time").innerHTML = Math.round(data.st);
+                    window.clearInterval(scoreInterval);
+                }
+            }, timeStep);
             // console.log("Results should be visible");
 
         });
@@ -336,21 +482,68 @@
             console.log("Run ended!");
             endCountdown();
             runLaunched = false;
-            if (!hasAnswered){
-                addMarker(data.answer.lat, data.answer.lon, "", "blue");
-            }
-            //clearMap([correctionCircle]);
-            //addMarker(data.answer.lat, data.answer.lon, "", "green");
+            window.clearInterval(blinkInterval);
+            window.clearTimeout(blinkTimeout);
+            startWaitTimer();
+            clearMap();
             LEADERBOARD = data.leaderboard;
             updatePlayerList();
-            //console.log(data.results);
-            data.results.forEach(rec => {
-                if (rec.player !== PLAYER){
-                    addMarker(rec.guess.lat, rec.guess.lon, rec.player, "purple");
-                }
-                //addGuess(rec.guess, rec.answer, rec.player, color);
+            displayRun(data);
+        });
+    function displayRun(data){
+        console.log("displaying run results");
+        const trueLon = data.answer.lon;
+        const trueLat = data.answer.lat;
+        var nAnswers = data.results.length;
+        const originalCenter = map.getCenter();
+        const originalZoom = map.getZoom();
+        const originalMaxZoom = map.getMaxZoom();
+        console.log("Storing zoom level", originalMaxZoom);
+        var trueAnswer = addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
+        var answers = L.featureGroup([trueAnswer]).addTo(map);
+        let requests = data.results.map((rec) => {
+            return new Promise((resolve) => {
+                let col = (rec.player === PLAYER) ? "red" : "purple";
+                makeAnimatedCircle(trueLat, trueLon, rec.dist || 10, col, () => {
+                    let marker = addMarker(rec.guess.lat, rec.guess.lon, rec.player, col);
+                    answers.addLayer(marker);
+                    resolve();
+                });
             });
         });
+        const ANIM_DURATION = 0.5;
+        const DELTA_PAD = 0.5;
+        Promise.all(requests).then(() => {
+            console.log("all done");
+            console.log(answers);
+            if (nAnswers > 0){
+                let bounds = answers.getBounds().pad(0.5);
+                let tempZoom = OSM.maxNativeZoom || 8;
+                console.log("bounds");
+                console.log("Setting zoom level", tempZoom);
+                map.setMaxZoom(tempZoom);
+                //OSM.maxZoom = tempZoom;
+                map.flyToBounds(bounds, {duration: ANIM_DURATION});
+            }
+        });
+        if (nAnswers > 0){
+            window.setTimeout(() => {
+                map.flyTo(originalCenter, originalZoom, {duration: ANIM_DURATION});
+                console.log("Restoring zoom level", originalMaxZoom);
+                map.setMaxZoom(originalMaxZoom);
+                //OSM.maxZoom  = originalMaxZoom;
+                console.log("View restored!");
+            }, (params.wait_time-2*ANIM_DURATION - DELTA_PAD)*1000);
+        }
+        /*data.results.forEach(rec => {
+            let col = (rec.player === PLAYER) ? "red" : "purple";
+            makeAnimatedCircle(trueLat, trueLon, rec.dist || 10, col, () => {
+                let marker = addMarker(rec.guess.lat, rec.guess.lon, rec.player, col);
+                answers.addLayer(marker);
+            });
+            console.log(answers);
+        })*/
+    }
     gameLauncher.addEventListener("click", (e) => {
         e.preventDefault();
         if (!gameLaunched){
