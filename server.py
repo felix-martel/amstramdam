@@ -1,5 +1,11 @@
 """
 Associated with conda env 'tdc'
+
+TODO: translate
+TODO: no-replacement sampling
+TODO: improve 'villes de france' >25k max 10/dept
+TODO: zoom anim duration
+TODO: virgule après les villes ???
 """
 import os
 from collections import defaultdict

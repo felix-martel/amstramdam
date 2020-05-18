@@ -16,7 +16,7 @@ def load_cities(fname="data/places.world.csv", min_pop=0):
     if "country" not in df.columns:
         df["country"] = ""
     if "dept" in df.columns:
-        idf = {"75", "91", "92", "93", "94"}
+        idf = {"75", "78", "91", "92", "93", "94", "95"}
         is_idf = df.dept.isin(idf)
         mask = (~is_idf & (df.population > min_pop)) | (is_idf & (df.population > 3 * min_pop))
         df = df[mask]

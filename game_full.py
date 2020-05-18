@@ -18,6 +18,8 @@ def choose_countries(df, max_per_country=10, max_rank=1000):
             cities.append({k: row[k] for k in ["name", "country", "lat", "lon", "population"]})
     return pd.DataFrame(cities)
 
+
+
 available_names = set(NAMES)
 global_player_list = set()
 

@@ -5,3 +5,4 @@ Flask-SocketIO
 numpy
 pandas
 unidecode
+eventlet
