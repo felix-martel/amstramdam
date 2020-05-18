@@ -7,6 +7,10 @@ TODO: improve 'villes de france' >25k max 10/dept
 TODO: zoom anim duration
 TODO: virgule après les villes ???
 """
+
+print("Loading server.py")
+
+import sys
 import os
 from collections import defaultdict
 
@@ -21,12 +25,10 @@ app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
 socketio = SocketIO(app) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
 
 
-
-
 @app.route("/")
 def serve_main():
+    print("Serving lobby")
     return render_template("lobby.html")
-    #return render_template("main.html")
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
@@ -249,8 +251,6 @@ if __name__ == '__main__':
         # Prevent server from being visible from the outside
         kwargs = dict(debug=True)
     else:
-        if os.name == 'nt':
-            kwargs = dict(host= '0.0.0.0', port=80)
-        else:
-            kwargs = dict()
+        port = os.environ.get("PORT", 80)
+        kwargs = dict(host= '0.0.0.0', port=port)
     socketio.run(app, **kwargs)
