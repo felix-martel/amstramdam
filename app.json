@@ -1,0 +1,5 @@
+{
+  "name": "Multigeo",
+  "description": "An online multiplayer game",
+  "buildpacks": "heroky/python"
+}
