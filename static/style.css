@@ -230,6 +230,24 @@ button {
   font-weight: bold;
 }
 
+.score {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.collective-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.collective-results .pname {
+  margin-right: 10px;
+}
+
+.collective-results .pscore {
+  font-style: italic;
+}
+
 .box .self {
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;

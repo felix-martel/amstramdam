@@ -46,7 +46,7 @@ def get_cities(map):
     return load_cities(map["fname"], map["min-pop"])
 
 class Game:
-    def __init__(self, players=None, n_run=20, time_param=None, dist_param=None, duration=None, map="world"):
+    def __init__(self, players=None, n_run=20, time_param=None, dist_param=None, duration=None, wait_time=8, map="world", pseudos=None):
         self.map_name = map
         map = MAPS[self.map_name]
         if dist_param is None:
@@ -71,8 +71,13 @@ class Game:
         random.shuffle(names)
         self.global_player_list = global_player_list
         self.available_names = available_names # set(names)
+        self.wait_time = wait_time
         self.records = [] # defaultdict(list)
         self.scores = defaultdict(int)
+        if pseudos is None:
+            pseudos = dict()
+        pseudos = {k: v for k, v in pseudos.items() if k in self.players}
+        self.pseudos = pseudos
 
         self.launched = False
         # self.run_in_progress = False
@@ -84,7 +89,9 @@ class Game:
             time_param=self.time_param,
             dist_param=self.dist_param,
             duration=self.duration,
-            map=self.map_name
+            map=self.map_name,
+            pseudos=self.pseudos,
+            wait_time=self.wait_time
         )
 
     def __str__(self):
@@ -107,6 +114,18 @@ Run: {self.curr_run_id+1}/{self.n_run}
         self.global_player_list.add(name)
         return name
 
+    def add_pseudo(self, name, pseudo):
+        if name not in self.players:
+            print(f"Ignored unknown player '{name}'")
+        self.pseudos[name] = pseudo
+
+    def remove_pseudo(self, name):
+        if name in self.pseudos:
+            del self.pseudos[name]
+
+    def get_pseudo(self, name):
+        return self.pseudos.get(name, name)
+
     def remove_player(self, name):
         if name in self.global_player_list:
             self.global_player_list.remove(name)
@@ -116,6 +135,7 @@ Run: {self.curr_run_id+1}/{self.n_run}
         if name in NAMES:
             self.available_names.add(name)
         self.players.remove(name)
+        self.remove_pseudo(name)
         if name in self.records:
             del self.records[name]
         if name in self.scores:

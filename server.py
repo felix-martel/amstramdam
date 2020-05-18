@@ -19,8 +19,6 @@ socketio = SocketIO(app, async_mode="threading") # For some reason, eventlet cau
 
 
 
-N_RUNS = 10
-TIME_BETWEEN_RUNS = 12
 
 @app.route("/")
 def serve_main():
@@ -34,12 +32,15 @@ def create_new_game():
         "duration": "10",
         "zoom": False,
         "runs": 10,
+        "wait_time": 10,
         **request.form
     }
-    ints = ["duration", "runs"]
+    ints = ["duration", "runs", "wait_time"]
     for k in ints:
         params[k] = int(params[k])
-    name, game = manager.create_game(n_run=params["runs"], time_param=params["duration"], map=params["map"])
+    name, game = manager.create_game(n_run=params["runs"],
+                                     duration=params["duration"],
+                                     map=params["map"], wait_time=params["wait_time"])
     print(manager.get_status())
 
     return redirect(url_for("serve_game", name=name))
@@ -52,7 +53,7 @@ def serve_game(name):
         session["game"] = name
         game_name = session["game"]
         game = manager.get_game(game_name)
-        params = dict(map=game.map_name, wait_time=TIME_BETWEEN_RUNS, duration=game.duration)
+        params = dict(map=game.map_name, wait_time=game.wait_time, duration=game.duration)
         return render_template("main.html", game_name=name, params=params)
 
 
@@ -78,8 +79,8 @@ def init_game(data):
         session["player"] = player
 
     print(f"Player <{player}> connected to game <{game_name}>", end=" ")
-    emit("init", dict(player=player))
-    emit("new-player", dict(player=player, leaderboard=game.get_current_leaderboard()), broadcast=True, room=game_name)
+    emit("init", dict(player=player, launched=game.launched))
+    emit("new-player", dict(player=player, leaderboard=game.get_current_leaderboard(), pseudos=game.pseudos), broadcast=True, room=game_name)
 
 def safe_cancel(timer):
     try:
@@ -113,6 +114,17 @@ def game_ender(game_name):
         return end_game(game_name)
     return ender
 
+def terminate_game(game_name):
+    game = manager.get_game(game_name)
+    if game is None or not game.done:
+        return
+    socketio.emit("game-end",
+                  dict(leaderboard=game.get_current_leaderboard()), json=True, broadcast=True,
+                  room=game_name)
+
+    # game = Game(players=set(game.players), n_run=N_RUNS, map=game.map_name)
+    manager.relaunch_game(game_name)
+
 def end_game(game_name, run_id):
     # global game
     game = manager.get_game(game_name)
@@ -135,16 +147,11 @@ def end_game(game_name, run_id):
 
         # 3: continue?
         if done:
-            # Do something, e.g display final results
-            socketio.emit("game-end",
-                          dict(leaderboard=game.get_current_leaderboard()), json=True, broadcast=True,
-                          room=game_name)
-
-            # game = Game(players=set(game.players), n_run=N_RUNS, map=game.map_name)
-            manager.relaunch_game(game_name)
-            return
+            #
+            timers[game_name] = threading.Timer(game.wait_time, terminate_game, [game_name])  # run_launcher(game_name))
+            timers[game_name].start()
         else:
-            timers[game_name] = threading.Timer(TIME_BETWEEN_RUNS, launch_run, [game_name, game.curr_run_id]) # run_launcher(game_name))
+            timers[game_name] = threading.Timer(game.wait_time, launch_run, [game_name, game.curr_run_id]) # run_launcher(game_name))
             timers[game_name].start()
 
 
@@ -186,6 +193,24 @@ def launch_game():
 
     launch_run(game_name, game.curr_run_id)
 
+def is_valid_pseudo(name):
+    # TODO: implement checks?
+    return True
+
+
+@socketio.on("name-change")
+def update_pseudo(data):
+    game_name = session["game"]
+    player = session.get("player")
+    if player is None:
+        return
+    game = manager.get_game(game_name)
+    pseudo = data["name"]
+    if is_valid_pseudo(pseudo):
+        game.add_pseudo(player, pseudo)
+    emit("new-name", dict(change=dict(player=player, pseudo=pseudo), pseudos=game.pseudos),
+         room=game_name, broadcast=True, json=True)
+
 @socketio.on('guess')
 def process_guess(data):
     # global duration_thread
@@ -195,9 +220,10 @@ def process_guess(data):
     print(f"Received answer for game <{game_name}>:", data)
     player = data["player"]
     lon, lat = data["lon"], data["lat"]
-
     res, done = game.current.process_answer((lon, lat), player)
     emit("log", f"Player <{player}> has scored {res['score']} points", broadcast=True, room=game_name)
+    emit("new-guess", dict(player=player, dist=res["dist"], delta=res["delta"], score=res["score"]),
+         broadcast=True, room=game_name)
     emit("score", res, json=True)
     if done:
         try:
