@@ -130,7 +130,7 @@ def terminate_game(game_name):
 def end_game(game_name, run_id):
     # global game
     game = manager.get_game(game_name)
-    if game.curr_run_id != run_id:
+    if game is None or game.curr_run_id != run_id:
         print(f"end_game failed (current: {game.curr_run_id}, expected: {run_id})")
         return
     print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
@@ -241,11 +241,14 @@ def process_guess(data):
 
 
 DEBUG = False
-
+PROD = True
 if __name__ == '__main__':
     if DEBUG:
         # Prevent server from being visible from the outside
+        assert not PROD, "Can't have both flags DEBUG and PROD"
         kwargs = dict(debug=True)
+    elif PROD:
+        kwargs = dict()
     else:
         kwargs = dict(host= '0.0.0.0', port=80)
     socketio.run(app, **kwargs)
