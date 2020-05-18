@@ -15,7 +15,7 @@ import game_manager as manager
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
-socketio = SocketIO(app, async_mode="threading") # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
+socketio = SocketIO(app) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
 
 
 
@@ -58,7 +58,7 @@ def serve_game(name):
 
 
 
-timers = defaultdict(threading.Timer)
+timers = defaultdict(int)
 
 
 @socketio.on('connection')
@@ -83,6 +83,8 @@ def init_game(data):
     emit("new-player", dict(player=player, leaderboard=game.get_current_leaderboard(), pseudos=game.pseudos), broadcast=True, room=game_name)
 
 def safe_cancel(timer):
+    if not timer:
+        return
     try:
         timer.cancel()
     except AttributeError:
@@ -148,11 +150,13 @@ def end_game(game_name, run_id):
         # 3: continue?
         if done:
             #
-            timers[game_name] = threading.Timer(game.wait_time, terminate_game, [game_name])  # run_launcher(game_name))
-            timers[game_name].start()
+            timers[game_name] = wait_and_run(game.wait_time, terminate_game, game_name)
+            # timers[game_name] = threading.Timer(game.wait_time, terminate_game, [game_name])  # run_launcher(game_name))
+            # timers[game_name].start()
         else:
-            timers[game_name] = threading.Timer(game.wait_time, launch_run, [game_name, game.curr_run_id]) # run_launcher(game_name))
-            timers[game_name].start()
+            timers[game_name] = wait_and_run(game.wait_time, launch_run, game_name, game.curr_run_id)
+            # timers[game_name] = threading.Timer(game.wait_time, launch_run, [game_name, game.curr_run_id]) # run_launcher(game_name))
+            # timers[game_name].start()
 
 
 def wait_and_run(seconds, func, *args, **kwargs):
@@ -179,8 +183,9 @@ def launch_run(game_name, run_id):
                       room=game_name,
                       broadcast=True)
 
-        timers[game_name] = threading.Timer(game.current.duration, end_game, [game_name, game.curr_run_id]) # game_ender(game_name))
-        timers[game_name].start()
+        timers[game_name] = wait_and_run(game.current.duration, end_game, game_name, game.curr_run_id)
+        # timers[game_name] = threading.Timer(game.current.duration, end_game, [game_name, game.curr_run_id]) # game_ender(game_name))
+        # timers[game_name].start()
 
 @socketio.on("launch")
 def launch_game():
