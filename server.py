@@ -1,6 +1,7 @@
 """
 Associated with conda env 'tdc'
 """
+import os
 from collections import defaultdict
 
 from flask import Flask, render_template, session, request, redirect, url_for
@@ -237,12 +238,13 @@ def process_guess(data):
 
 
 DEBUG = False
-PROD = True
 if __name__ == '__main__':
     if DEBUG:
         # Prevent server from being visible from the outside
-        assert not PROD, "Can't have both flags DEBUG and PROD"
         kwargs = dict(debug=True)
     else:
-        kwargs = dict(host= '0.0.0.0', port=80)
+        if os.name == 'nt':
+            kwargs = dict(host= '0.0.0.0', port=80)
+        else:
+            kwargs = dict()
     socketio.run(app, **kwargs)

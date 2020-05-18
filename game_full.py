@@ -32,7 +32,7 @@ MAPS = {
         "fname": "data/places.france.csv",
         "min-pop": 25,
         "distance": 300,
-        "duration": 5,
+        "time-bonus": 5,
     },
     "default": {
         "min-pop": 0,

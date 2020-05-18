@@ -14,6 +14,7 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+    <script src="{{ url_for('static',filename='countUp.js') }}"></script>
     <style>
 
     </style>
@@ -106,6 +107,9 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
+    //import { CountUp } from '{{ url_for('static',filename='countUp.js') }}';
+    // import { CountUp} from "../static/countUp";
+
     const params = {{ params | tojson}};
     console.log(params);
     document.getElementById("sharing-link").innerHTML = window.location.href;
@@ -419,7 +423,7 @@ var hintContainer = document.getElementById("target");
             }, 1000*(params.duration - blinkDelay));
         });
         socket.on("new-guess", (data) => {
-            console.log(data);
+            //console.log(data);
             addGuessEntry(data.player, data.dist);
         });
         socket.on("score", (data) => {
@@ -443,8 +447,22 @@ var hintContainer = document.getElementById("target");
             document.getElementById("curr-score").innerHTML = 0; //score; //data.score;
             document.getElementById("results").hidden = false;
 
-            var incDist = 0;
-            const timeStep = 10;
+            const distanceCounter = new CountUp('main-disp-dist', dist, {separator: ""});
+            distanceCounter.start();
+            const scoreCounter = new CountUp('curr-score', score, {separator: ""});
+
+            scoreCounter.start();
+
+            const secDistCounter =  new CountUp("disp-dist", Math.round(data.dist));
+            secDistCounter.start();
+            const sdCounter =  new CountUp("disp-score-dist", Math.round(data.sd));
+            sdCounter.start();
+            const timeCounter =  new CountUp("disp-time", Math.round(data.delta * 100)/100);
+            timeCounter.start();
+            const stCounter =  new CountUp("disp-score-time", Math.round(data.st));
+            stCounter.start();
+            /*var incDist = 0;
+            const timeStep = 50;
             const totalDuration = 1500; // (dist / dist_step) * timeStep= totalDuration
             const distStep = Math.round(dist * (timeStep / totalDuration));
             const scoreStep = (score === 0) ? 10 :  Math.round(score * (timeStep / totalDuration));
@@ -459,22 +477,24 @@ var hintContainer = document.getElementById("target");
                     document.getElementById("main-disp-dist").innerHTML = dist; // Math.round(data.dist);
                     // document.getElementById("disp-dist").innerHTML = dist;
                     window.clearInterval(distInterval);
+
+
                 }
             }, timeStep);
             var scoreInterval = window.setInterval(() => {
-                incScore = incScore + scoreStep;
-                if (incScore < score){
-                   document.getElementById("curr-score").innerHTML = incScore;
-                }
-                else {
-                    document.getElementById("curr-score").innerHTML = score;
-                    document.getElementById("disp-dist").innerHTML = dist; // Math.round(data.dist);
-                    document.getElementById("disp-score-dist").innerHTML = Math.round(data.sd);
-                    document.getElementById("disp-time").innerHTML = Math.round(data.delta * 100) / 100;
-                    document.getElementById("disp-score-time").innerHTML = Math.round(data.st);
-                    window.clearInterval(scoreInterval);
-                }
-            }, timeStep);
+            incScore = incScore + scoreStep;
+            if (incScore < score){
+               document.getElementById("curr-score").innerHTML = incScore;
+            }
+            else {
+                document.getElementById("curr-score").innerHTML = score;
+                document.getElementById("disp-dist").innerHTML = dist; // Math.round(data.dist);
+                document.getElementById("disp-score-dist").innerHTML = Math.round(data.sd);
+                document.getElementById("disp-time").innerHTML = Math.round(data.delta * 100) / 100;
+                document.getElementById("disp-score-time").innerHTML = Math.round(data.st);
+                window.clearInterval(scoreInterval);
+            }
+        }, timeStep);*/
             // console.log("Results should be visible");
 
         });
@@ -632,7 +652,7 @@ var hintContainer = document.getElementById("target");
             };
         //console.log(PLAYER);
         //console.log(data);
-        addMarker(coords.lat, coords.lng, PLAYER);
+        addMarker(coords.lat, coords.lng, getPlayerName(PLAYER));
         socket.emit("guess", data);
         hasAnswered = true;
         clickable = false;
