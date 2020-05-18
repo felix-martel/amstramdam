@@ -1,8 +1,6 @@
-import math
 import random
 import time
 import pandas as pd
-import threading
 
 from collections import defaultdict, Counter
 from geo import Point

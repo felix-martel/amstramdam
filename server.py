@@ -1,16 +1,12 @@
 """
 Associated with conda env 'tdc'
 """
-import threading
-import atexit
 from collections import defaultdict
 
 from flask import Flask, render_template, session, request, redirect, url_for
-from flask_socketio import SocketIO, send, emit, join_room, leave_room, close_room
+from flask_socketio import SocketIO, emit, join_room, leave_room, close_room
 
 
-from game import GameRun, PlayerList
-from game_full import Game
 import game_manager as manager
 
 app = Flask(__name__)

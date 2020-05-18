@@ -1,6 +1,6 @@
 from collections import Counter
 
-from game_full import Game, MAPS
+from game_full import Game
 import random
 from unidecode import unidecode
 

@@ -1,10 +1,9 @@
 from math import asin, atan2, cos, sin
 import math
 import geopy.distance as geod
-from pyproj import Proj
 import numpy as np
 
-lambert = Proj("epsg:2154")
+# lambert = Proj("epsg:2154")
 
 class Point(object):
     """Represents a point as (lon, lat)"""
