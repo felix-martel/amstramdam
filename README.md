@@ -16,10 +16,12 @@ Installation:
 pip install -r requirements.txt
 ```
 
-Lancement du serveur :
+Lancement du serveur 
 ```
-python server.py
+python server.py [--debug]
 ```
+Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugger. Sinon, `eventlet` est utilisé et peut suffire en production.
+
 
 ## À faire
 
