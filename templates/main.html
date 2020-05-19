@@ -206,6 +206,10 @@ var hintContainer = document.getElementById("target");
         PSEUDOS = pseudos || {};
         updatePlayerList();
     }
+    function addPseudo(player, name){
+        PSEUDOS[player] = name;
+        updatePlayerList();
+    }
 
     var countdownInterval;
     const countdownAnimationElements = ["wrapper", "left", "right"];
@@ -493,9 +497,15 @@ var hintContainer = document.getElementById("target");
         });
         socket.on("init", (data)=> {
             console.log(`You're now connected as <${data.player}>`);
+            var pseudo = getPseudoFromCookie();
             PLAYER = data.player;
             updatePseudos(data.pseudos);
-            playerName.innerHTML = PLAYER;
+            if (pseudo) {
+                console.log(PLAYER, "has requested a new pseudo", pseudo);
+                socket.emit("name-change", {name: pseudo});
+                addPseudo(PLAYER, pseudo);
+            }
+            playerName.innerHTML = getPlayerName(PLAYER);
             playerName.contentEditable = true;
             gameLaunched = data.launched;
             if (gameLaunched) {
@@ -573,6 +583,18 @@ var hintContainer = document.getElementById("target");
             console.log(answers);
         })*/
     }
+    function savePseudoToCookie(value){
+        value = encodeURIComponent(value);
+        console.log("Saving cookie amstramdamUsername =", value);
+        var expires = ";max-age=31536000";
+        document.cookie = "amstramdamUsername=" + value + expires;
+    }
+    function getPseudoFromCookie(){
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamUsername\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        cookieValue = decodeURIComponent(cookieValue);
+        console.log(cookieValue);
+        return cookieValue;
+    }
     playerName.addEventListener("keydown", (e) => {
         if (e.keyCode === 13){
             playerName.blur();
@@ -595,6 +617,7 @@ var hintContainer = document.getElementById("target");
         if (newName !== PLAYER){
             console.log(PLAYER, "has requested a new pseudo", newName);
             socket.emit("name-change", {name: newName});
+            savePseudoToCookie(newName);
         }
     });
     gameLauncher.addEventListener("click", (e) => {
