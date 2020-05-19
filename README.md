@@ -3,7 +3,7 @@
 *Le jeu original est accessible ici : [jeux-geographiques.com](https://www.jeux-geographiques.com/)*
 
 Le but est de localiser des villes de France et du monde le plus précisément et le plus rapidement possible, 
-sur le modèle de Jeux Géographiques.
+sur le modèle de Jeux Géographiques. Hébergé par Heroku à l'adresse [multigeo.herokuapp.com](http://multigeo.herokuapp.com/).
 
 Fonctionne avec `Python 3.8`, `Flask` et `SocketIO`. Le serveur est géré par `eventlet` 
 et les fonds de carte proviennent de 
@@ -44,6 +44,8 @@ python server.py
 - [ ] Add a `connect` button
 
 - [ ] Add a `home` link in results page
+
+- [ ] Mobile version
 
 
 
