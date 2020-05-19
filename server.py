@@ -1,11 +1,6 @@
 """
 Associated with conda env 'tdc'
 
-TODO: translate
-TODO: no-replacement sampling
-TODO: improve 'villes de france' >25k max 10/dept
-TODO: zoom anim duration
-TODO: virgule après les villes ???
 """
 
 print("Loading server.py")
@@ -24,11 +19,12 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
 socketio = SocketIO(app) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
 
+DATASETS = manager.get_all_datasets()
 
 @app.route("/")
 def serve_main():
     print("Serving lobby")
-    return render_template("lobby.html")
+    return render_template("lobby.html", datasets=DATASETS)
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
@@ -141,8 +137,8 @@ def end_game(game_name, run_id):
     print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
     with app.test_request_context('/'):
         # 1: get current place
-        refname, (lon, lat) = game.current.place
-        answer = dict(name=refname, lon=lon, lat=lat)
+        (city_name, hint), (lon, lat) = game.current.place
+        answer = dict(name=city_name, lon=lon, lat=lat)
 
         # 2: end game
         records = game.current.records
@@ -206,7 +202,6 @@ def launch_game():
 def is_valid_pseudo(name):
     # TODO: implement checks?
     return True
-
 
 @socketio.on("name-change")
 def update_pseudo(data):

@@ -1,10 +1,10 @@
 from collections import Counter
 
-from game_full import Game
+from game_full import Game, get_all_datasets
 import random
 from unidecode import unidecode
 
-with open("data/filtered_ancient_places.txt", "r", encoding="utf8", errors="ignore") as f:
+with open("data/game_names.txt", "r", encoding="utf8", errors="ignore") as f:
     VALID_GAME_NAMES = {unidecode(line.rstrip()) for line in f}
 
 

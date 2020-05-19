@@ -6,11 +6,23 @@ from collections import defaultdict, Counter
 from geo import Point
 import geo
 
+def reaccent(name):
+    name = name.lower()
+    stopwords = {"en", "le", "la", "les", "d", "de", "du", "des", "sur"}
+    def capit(s):
+        if s.lower() in stopwords:
+            return s
+        return s[0].upper() + s[1:]
+    seps = {" ", "-", "'"}
+    for sep in seps:
+        name = sep.join([capit(word) for word in name.split(sep)])
+    return  capit(name)
 
 def load_cities(fname="data/places.world.csv", min_pop=0):
     def clean_city(city):
         if city.isupper():
-            return city[0] + city[1:].lower()
+            return reaccent(city)
+            # return city[0] + city[1:].lower()
         return city
     df = pd.read_csv(fname)
     if "country" not in df.columns:
@@ -121,7 +133,7 @@ class GameRun:
         if player not in self.players:
             raise KeyError(f"Unknown player: '{player}'")
 
-        refname, ref = self.place
+        (main_name, hint), ref = self.place
         delta = time.time() - self.start
         dist = geo.distance(ref, guess)
 
@@ -138,7 +150,7 @@ class GameRun:
 
         res = dict(dist=dist, delta=delta, score=score, msg=msg,
                    guess=dict(lon=guess[0], lat=guess[1]),
-                   answer=dict(lon=ref[0], lat=ref[1], name=refname),
+                   answer=dict(lon=ref[0], lat=ref[1], name=main_name),
                    player=player, st=st, sd=sd
                    )
         self.records.append(res)

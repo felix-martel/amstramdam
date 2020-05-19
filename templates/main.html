@@ -6,6 +6,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='timer.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
@@ -36,13 +38,13 @@
             <table id="final-results">
 
             </table>
-            <button id="relaunch-from-popup">New game!</button>
+            <button id="relaunch-from-popup">Nouvelle partie</button>
         </div>
     </div>
         <div class="column">
     <div class="box">
         <div class="nav">
-            <a href="/">Back to home</a>
+            <a href="/">Accueil</a>
         </div>
       <div class="self">
       <div class="name" id="player-name">Non connecté</div>
@@ -53,14 +55,14 @@
         <ul id="player-list">
         </ul>
         <div class="controls">
-          <button id="launch">Launch</button>
+          <button id="launch">Commencer</button>
           <!--<button id="restart">Restart</button>-->
         </div>
       </div>
     </div>
       <div class="box" id="results" hidden>
           <div class="individual-results">
-              <div id="answer-name" class="title">Dieppe</div>
+              <div id="answer-name" class="title"></div>
       <div class="distance"><span id="main-disp-dist">0</span> km</div>
       <div class="deets">
         <div class="score-dist"><i id="disp-dist">0</i> km = <i id="disp-score-dist">0</i> pts</div>
@@ -98,12 +100,12 @@
             </div>
         </div>
         <div class="box hidden" id="display-timer">
-            <span class="timer-text">Next run in <span id="run-timer"></span>...</span>
+            <span class="timer-text">Prochaine manche dans <span id="run-timer"></span>...</span>
         </div>
     </div>
 
     <div id="mapid"></div>
-    <audio id="beep" hidden src="{{ url_for('static',filename='bip.mp3') }}"></audio>
+    <!--<audio id="beep" hidden src="{{ url_for('static',filename='bip.mp3') }}"></audio>-->
 </div>
 
 <script type="text/javascript" charset="utf-8">
@@ -111,10 +113,9 @@
     // import { CountUp} from "../static/countUp";
 
     const params = {{ params | tojson}};
-    console.log(params);
     document.getElementById("sharing-link").innerHTML = window.location.href;
     const blinkContainer = document.getElementById("blink-wrapper");
-    const audioBeep = document.getElementById("beep");
+    //const audioBeep = document.getElementById("beep");
 var hintContainer = document.getElementById("target");
     var playerName = document.getElementById("player-name");
     var playerList = document.getElementById("player-list");
@@ -132,12 +133,11 @@ var hintContainer = document.getElementById("target");
     var PLAYERS = [];
     var PSEUDOS = {};
     var LEADERBOARD = [];
-    console.log(PSEUDOS);
     updatePlayerList();
     function blink(audio= true){
         const duration = 100; // In millisec
         blinkContainer.classList.remove("off");
-        if (audio) {audioBeep.play();}
+        // if (audio) {audioBeep.play();}
         window.setTimeout(() => {
             blinkContainer.classList.add("off");
         }, duration);
@@ -235,6 +235,7 @@ var hintContainer = document.getElementById("target");
         watercolor: 'http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
         terrain: 'http://c.tile.stamen.com/terrain-background/{z}/{x}/{y}.jpg',
         bw: 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
+        bwSSL: 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
     };
     var centerFrance = [46.758162, 2.812324];
     var centerWorld = [23.7, 7.6];
@@ -260,7 +261,7 @@ var hintContainer = document.getElementById("target");
      const isMobile = mobileCheck();
      const maxZoom = isMobile ? 6 : currGame.zoom+2;
 
-     var OSM = L.tileLayer(LAYERS.bw, {
+     var OSM = L.tileLayer(LAYERS.bwSSL, {
 	    //maxZoom: currGame.zoom, //maxZoom,
         minZoom: currGame.zoom,
          zoomControl:  false, //false,
@@ -368,10 +369,9 @@ var hintContainer = document.getElementById("target");
     const blinkTimestep = 500; // In milliseconds
     var blinkTimeout;
     var blinkInterval;
-    console.log("Script loaded...");
         var socket = io();
         socket.on('connect', function() {
-            console.log("Emitting...");
+            console.log("Connecting...");
             socket.emit('connection', {data: 'I\'m connected!'});
         });
         socket.on('disconnect', function() {
@@ -427,13 +427,8 @@ var hintContainer = document.getElementById("target");
             addGuessEntry(data.player, data.dist);
         });
         socket.on("score", (data) => {
-            let infobox = `+${data.score} points`;
             addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
             makeAnimatedCircle(data.answer.lat, data.answer.lon, data.dist, "red");
-            /*makeAnimatedCircle(data.guess.lat, data.guess.lon, data.dist, "red", () => {
-                addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
-            });*/
-            let currScore = parseInt(scorer.innerHTML) + data.score;
             scorer.innerHTML = data.score;
             const dist = Math.round(data.dist);
             const score = Math.round(data.score);
@@ -461,42 +456,6 @@ var hintContainer = document.getElementById("target");
             timeCounter.start();
             const stCounter =  new CountUp("disp-score-time", Math.round(data.st));
             stCounter.start();
-            /*var incDist = 0;
-            const timeStep = 50;
-            const totalDuration = 1500; // (dist / dist_step) * timeStep= totalDuration
-            const distStep = Math.round(dist * (timeStep / totalDuration));
-            const scoreStep = (score === 0) ? 10 :  Math.round(score * (timeStep / totalDuration));
-            var incScore = 0;
-            var distInterval = window.setInterval(() => {
-                incDist = incDist + distStep;
-                if (incDist < dist){
-                    document.getElementById("main-disp-dist").innerHTML = incDist; // Math.round(data.dist);
-                    // document.getElementById("disp-dist").innerHTML = incDist;
-                }
-                else {
-                    document.getElementById("main-disp-dist").innerHTML = dist; // Math.round(data.dist);
-                    // document.getElementById("disp-dist").innerHTML = dist;
-                    window.clearInterval(distInterval);
-
-
-                }
-            }, timeStep);
-            var scoreInterval = window.setInterval(() => {
-            incScore = incScore + scoreStep;
-            if (incScore < score){
-               document.getElementById("curr-score").innerHTML = incScore;
-            }
-            else {
-                document.getElementById("curr-score").innerHTML = score;
-                document.getElementById("disp-dist").innerHTML = dist; // Math.round(data.dist);
-                document.getElementById("disp-score-dist").innerHTML = Math.round(data.sd);
-                document.getElementById("disp-time").innerHTML = Math.round(data.delta * 100) / 100;
-                document.getElementById("disp-score-time").innerHTML = Math.round(data.st);
-                window.clearInterval(scoreInterval);
-            }
-        }, timeStep);*/
-            // console.log("Results should be visible");
-
         });
         socket.on("init", (data)=> {
             console.log(`You're now connected as <${data.player}>`);

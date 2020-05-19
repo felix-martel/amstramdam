@@ -18,6 +18,28 @@ def choose_countries(df, max_per_country=10, max_rank=1000):
             cities.append({k: row[k] for k in ["name", "country", "lat", "lon", "population"]})
     return pd.DataFrame(cities)
 
+def choose_depts(df, max_per_country=10, min_pop=15):
+    data = df.to_dict("records")
+    countries = Counter()
+    cities = []
+    for row in sorted(data, key=lambda p:-p["population"]):
+        country = row["dept"]
+        if country not in countries or (min_pop < row["population"] and countries[country] < max_per_country):
+            countries[country] += 1
+            cities.append({k: row[k] for k in ["name", "dept", "lat", "lon", "population"]})
+    return pd.DataFrame(cities)
+
+def reaccent(name):
+    name = name.lower()
+    stopwords = {"en", "le", "la", "les", "d", "de", "du", "des", "sur"}
+    def capit(s):
+        if s.lower() in stopwords:
+            return s
+        return s[0].upper() + s[1:]
+    seps = {" ", "-", "'"}
+    for sep in seps:
+        name = sep.join([capit(word) for word in name.split(sep)])
+    return  capit(name)
 
 
 available_names = set(NAMES)
@@ -32,16 +54,20 @@ MAPS = {
     },
     "france": {
         "fname": "data/places.france.csv",
-        "min-pop": 25,
+        "min-pop": 0,
         "distance": 300,
         "time-bonus": 5,
-    },
-    "default": {
-        "min-pop": 0,
-        "distance": 500,
-        "time-bonus": 5
     }
 }
+
+def get_all_datasets():
+    data = []
+    for name, dataset in MAPS.items():
+        data.append(dict(
+            name=name,
+            points=[[lat, lon] for _, (lon, lat) in get_cities(dataset)],
+        ))
+    return data
 
 
 def get_cities(map):

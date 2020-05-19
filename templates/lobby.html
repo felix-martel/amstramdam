@@ -28,17 +28,17 @@
             <div class="game-panel-container">
 
             <div class="new-game game-panel">
-                <h2>New game</h2>
+                <h2>Nouvelle partie</h2>
                 <form id="game-creator" action="/new" method="post">
                     <div class="fieldset">
-                        <label for="map-selector">Map</label>
+                        <label for="map-selector">Carte</label>
                         <select name="map" id="map-selector" onchange="updateView()">
                             <option value="france">France</option>
-                            <option value="world" selected>World</option>
+                            <option value="world" selected>Monde entier</option>
                         </select>
                     </div>
                     <div class="fieldset">
-                        <label for="n-runs-input">Runs</label>
+                        <label for="n-runs-input">Manches</label>
                         <input type="number" name="runs" id="n-runs-input" value="10">
                     </div>
                     <!--<div class="fieldset">
@@ -46,11 +46,11 @@
                     <input type="number" name="min-dist-input" id="min-dist-input" value="200">
                     </div>-->
                     <div class="fieldset">
-                        <label for="duration-input">Run duration</label>
+                        <label for="duration-input">Durée d'une manche</label>
                     <input type="number" name="duration" id="duration-input" value="10">
                     </div>
                     <div class="fieldset">
-                        <label for="wait-input">Time between runs</label>
+                        <label for="wait-input">Durée entre les manches</label>
                     <input type="number" name="wait_time" id="wait-input" value="10">
                     </div>
                     <!--<div class="fieldset">
@@ -58,15 +58,15 @@
                         <input id="zoom-checkbox" name="zoom" disabled type="checkbox">
                     </div>-->
                     <button type="submit" id="new-game-button">
-                        Create
+                        C'est parti
                     </button>
                 </form>
             </div>
             <div class="existing-game game-panel">
-                <h2>Join game</h2>
-                <input type="text" id="game-name" placeholder="Enter game name">
+                <h2>Rejoindre</h2>
+                <input type="text" id="game-name" placeholder="Nom du jeu">
                 <button id="join-game-button">
-                    Join
+                    Rejoindre
                 </button>
             </div>
             </div>
@@ -85,6 +85,7 @@
         watercolor: 'http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
         terrain: 'http://c.tile.stamen.com/terrain-background/{z}/{x}/{y}.jpg',
         bw: 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
+        bwSSL: 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
     };
     const game = {
         france: {
@@ -96,17 +97,50 @@
             zoom: 1
         },
     };
-    const currGame = game.world; // game.world;
+    function getIcon(color="red", opacity=0.8){
+        const markerHtmlStyles = `
+          background: ${color};
+          width: 6px;
+          height: 6px;
+          display: block;
+          opacity: ${opacity};
+          border-radius: 3px;`;
+
+        return L.divIcon({
+            className: "my-custom-pin",
+            iconAnchor: [3, 3],
+            html: `<span class="icon" style="${markerHtmlStyles}"></span>`
+        })
+    }
+    const datasets = {{ datasets | tojson}};
+    var pointLayers = {};
+    datasets.forEach(dataset => {
+        var dataPoints = L.featureGroup();
+        dataset.points.forEach(coords => {
+            dataPoints.addLayer(L.marker(coords, {icon: getIcon("blue")}));
+        });
+        pointLayers[dataset.name] = dataPoints;
+    });
+    console.log(datasets);
+
+
+    var current = "world";
+    const currGame = game[current]; // game.world;
      var map = L.map('leaflet').setView(currGame.center, currGame.zoom);
-     var OSM = L.tileLayer(LAYERS.bw, {
+     var OSM = L.tileLayer(LAYERS.bwSSL, {
          zoomControl:  false, //false,
        //attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
      });
      OSM.addTo(map);
+     pointLayers[current].addTo(map);
+
 
     const gameSelector = document.getElementById("map-selector");
     function updateView(){
-        let currGame = game[gameSelector.value];
+        map.removeLayer(pointLayers[current]);
+        current = gameSelector.value;
+        map.addLayer(pointLayers[current]);
+        let currGame = game[current];
         map.setView(currGame.center, currGame.zoom);
     }
     var gameNameInput = document.getElementById("game-name");
