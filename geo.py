@@ -27,6 +27,10 @@ class Point(object):
     def __hash__(self):
         return hash(tuple(self))
 
+    @classmethod
+    def from_latlon(cls, lat, lon):
+        return cls(lon, lat)
+
     @property
     def url(self):
         return f"https://www.google.com/maps/@{self.lat:.7f},{self.lon:.7f},18z"

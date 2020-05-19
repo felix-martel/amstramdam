@@ -1,0 +1,52 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Nueva Caracas,10.503333999999999,-66.938238,Venezuela,VE,Distrito Capital,,2985000.0,1815679.0
+1,Maracaibo,10.666633000000001,-71.612447,Venezuela,VE,Zulia,admin,2072000.0,1457300.0
+2,Valencia,10.162022,-68.007648,Venezuela,VE,Carabobo,admin,1770000.0,1369053.0
+3,Barquisimeto,10.073889,-69.322778,Venezuela,VE,Lara,admin,1116000.0,809490.0
+4,Maracay,10.23535,-67.591128,Venezuela,VE,Aragua,admin,1007000.0,1007000.0
+5,Ciudad Guayana,8.351225,-62.641023,Venezuela,VE,Bolívar,,746535.0,522100.0
+6,Barcelona,10.136248,-64.686175,Venezuela,VE,Anzoátegui,admin,600954.0,121906.0
+7,Cabimas,10.388281,-71.439925,Venezuela,VE,Zulia,,441094.0,200818.0
+8,San Cristóbal,7.7669440000000005,-72.225,Venezuela,VE,Táchira,admin,438798.0,246583.0
+9,Maturín,9.746127,-63.170331999999995,Venezuela,VE,Monagas,admin,410972.0,304443.0
+10,Ciudad Bolívar,8.129234,-63.54085500000001,Venezuela,VE,Bolívar,admin,338000.0,297943.0
+11,Cumaná,10.46354,-64.177501,Venezuela,VE,Sucre,admin,317603.0,257783.0
+12,Maiquetía,10.596206,-66.954847,Venezuela,VE,Vargas,,315442.0,52564.0
+13,Los Teques,10.344472999999999,-67.043247,Venezuela,VE,Miranda,admin,303470.0,303470.0
+14,Alto Barinas,8.593105,-70.226104,Venezuela,VE,Barinas,,284289.0,238522.0
+15,Acarigua,9.554514,-69.195639,Venezuela,VE,Portuguesa,,260921.0,143704.0
+16,Punto Fijo,11.695598,-70.199574,Venezuela,VE,Falcón,,234736.0,131784.0
+17,El Tigre,8.887514999999999,-64.245439,Venezuela,VE,Anzoátegui,,197440.0,150999.0
+18,Porlamar,10.957964,-63.849059,Venezuela,VE,Nueva Esparta,,196934.0,87120.0
+19,Coro,11.404501,-69.67344399999999,Venezuela,VE,Falcón,admin,195227.0,172969.0
+20,Valera,9.317778,-70.603611,Venezuela,VE,Trujillo,,191167.0,93756.0
+21,Ocumare del Tuy,10.116486,-66.776092,Venezuela,VE,Miranda,,166072.0,95576.0
+22,Guanare,9.041826,-69.742056,Venezuela,VE,Portuguesa,admin,151642.0,112286.0
+23,Carora,10.175544,-70.08274499999999,Venezuela,VE,Lara,,149711.0,93788.0
+24,Carúpano Arriba,10.646559,-63.215818000000006,Venezuela,VE,Sucre,,126293.0,112082.0
+25,San Fernando,7.887816,-67.472362,Venezuela,VE,Apure,admin,122701.0,78779.0
+26,Anaco,9.426935,-64.474983,Venezuela,VE,Anzoátegui,,117596.0,82640.0
+27,Calabozo,8.924161999999999,-67.429286,Venezuela,VE,Guárico,,117132.0,104682.0
+28,San Carlos del Zulia,9.000029,-71.913515,Venezuela,VE,Zulia,,97288.0,56582.0
+29,Valle de La Pascua,9.215538,-66.007339,Venezuela,VE,Guárico,,89080.0,83467.0
+30,San Juan de los Morros,9.911522999999999,-67.35381,Venezuela,VE,Guárico,admin,87739.0,87739.0
+31,San Carlos,9.661241,-68.58268299999999,Venezuela,VE,Cojedes,admin,77192.0,77192.0
+32,San Felipe,10.339914,-68.742469,Venezuela,VE,Yaracuy,admin,76766.0,76766.0
+33,Machiques,10.064444,-72.545,Venezuela,VE,Zulia,,62968.0,26905.0
+34,Upata,8.008611,-62.398889000000004,Venezuela,VE,Bolívar,,53685.0,53264.0
+35,Puerto Ayacucho,5.65,-67.5975,Venezuela,VE,Amazonas,admin,52526.0,50719.0
+36,Tucupita,9.058056,-62.05,Venezuela,VE,Delta Amacuro,admin,51534.0,47874.0
+37,Trujillo,9.365833,-70.436944,Venezuela,VE,Trujillo,admin,50353.0,38110.0
+38,Zaraza,9.350286,-65.324519,Venezuela,VE,Guárico,,41483.0,29076.0
+39,Altagracia de Orituco,9.860047999999999,-66.381389,Venezuela,VE,Guárico,,40052.0,28802.0
+40,La Asunción,11.032831,-63.863530000000004,Venezuela,VE,Nueva Esparta,admin,35084.0,35084.0
+41,Santa Rita,10.538056,-71.516944,Venezuela,VE,Zulia,,31810.0,10380.0
+42,Guasdalito,7.242408,-70.732355,Venezuela,VE,Apure,,30860.0,25715.0
+43,Chaguarama,9.215556,-63.752221999999996,Venezuela,VE,Anzoátegui,,15000.0,10000.0
+44,El Dorado,6.733333,-61.63333299999999,Venezuela,VE,Bolívar,,2383.0,2383.0
+45,El Manteco,7.349921000000001,-62.541115000000005,Venezuela,VE,Bolívar,,2215.0,2215.0
+46,Esmeralda,3.166667,-65.55,Venezuela,VE,Amazonas,,150.0,149.0
+47,La Guaira,10.600402,-66.93002,Venezuela,VE,Vargas,admin,,
+48,Barinas,8.622608999999999,-70.20749,Venezuela,VE,Barinas,admin,,
+49,Caracas,10.488011,-66.879193,Venezuela,VE,Distrito Capital,primary,,
+50,Mérida,8.589722,-71.156111,Venezuela,VE,Mérida,admin,,

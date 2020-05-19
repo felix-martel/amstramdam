@@ -1,0 +1,35 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Dublin,53.333056000000006,-6.248889,Ireland,IE,Dublin,primary,1059000.0,968976.0
+1,Cork,51.898610999999995,-8.495833,Ireland,IE,Cork,admin,188907.0,136797.0
+2,Limerick,52.664722,-8.623056,Ireland,IE,Limerick,admin,90054.0,78078.0
+3,Galway,53.271944,-9.048888999999999,Ireland,IE,Galway,admin,75594.0,70686.0
+4,Waterford,52.258333,-7.111944,Ireland,IE,Waterford,admin,49275.0,49275.0
+5,Drogheda,53.718889000000004,-6.347778,Ireland,IE,Louth,,36533.0,33441.0
+6,Tralee,52.266667,-9.716667,Ireland,IE,Kerry,admin,26384.0,22941.0
+7,Kilkenny,52.654167,-7.252222,Ireland,IE,Kilkenny,admin,21589.0,21213.0
+8,Sligo,54.266667000000005,-8.483333,Ireland,IE,Sligo,admin,20228.0,14200.0
+9,Killarney,52.05,-9.516667,Ireland,IE,Kerry,,11902.0,7300.0
+10,Shannon,52.703889000000004,-8.864167,Ireland,IE,Clare,,8781.0,7506.0
+11,Monaghan,54.25,-6.966667,Ireland,IE,Monaghan,,5937.0,5937.0
+12,Ros Comáin,53.63333299999999,-8.183333,Ireland,IE,Roscommon,admin,4860.0,4860.0
+13,Donegal,54.65,-8.116667,Ireland,IE,Donegal,,2513.0,1945.0
+14,Lifford,54.83194399999999,-7.483611,Ireland,IE,Donegal,admin,,
+15,Carlow,52.840832999999996,-6.926111,Ireland,IE,Carlow,admin,,
+16,Mullingar,53.533333,-7.35,Ireland,IE,Westmeath,admin,,
+17,An Cabhán,53.990832999999995,-7.360556,Ireland,IE,Cavan,admin,,
+18,Wicklow,52.975,-6.049444,Ireland,IE,Wicklow,admin,,
+19,Dún Dealgan,54.0,-6.4166669999999995,Ireland,IE,Louth,admin,,
+20,Clonmel,52.355,-7.703889,Ireland,IE,Tipperary,admin,,
+21,Naas,53.215832999999996,-6.666944,Ireland,IE,Kildare,admin,,
+22,Ennis,52.843610999999996,-8.986388999999999,Ireland,IE,Clare,admin,,
+23,Port Laoise,53.032222,-7.3,Ireland,IE,Laois,admin,,
+24,Swords,53.459722,-6.218056,Ireland,IE,Fingal,admin,,
+25,Tallaght,53.287778,-6.341111,Ireland,IE,South Dublin,admin,,
+26,Wexford,52.334167,-6.4575,Ireland,IE,Wexford,admin,,
+27,Trim,53.555,-6.7916669999999995,Ireland,IE,Meath,admin,,
+28,Tullamore,53.273889000000004,-7.488889,Ireland,IE,Offaly,admin,,
+29,Castlebar,53.85,-9.3,Ireland,IE,Mayo,admin,,
+30,Nenagh,52.861943999999994,-8.196667,Ireland,IE,Tipperary,admin,,
+31,Dunleary,53.2925,-6.128611,Ireland,IE,Dún Laoghaire-Rathdown,admin,,
+32,Longford,53.733332999999995,-7.8,Ireland,IE,Longford,admin,,
+33,Carrick on Shannon,53.946943999999995,-8.09,Ireland,IE,Leitrim,admin,,

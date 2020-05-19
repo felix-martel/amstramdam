@@ -1,0 +1,59 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Paris,48.866667,2.333333,France,FR,Île-de-France,primary,9904000.0,11177.0
+1,Lyon,45.748457,4.846711,France,FR,Auvergne-Rhône-Alpes,admin,1423000.0,472317.0
+2,Marseille,43.285413,5.37606,France,FR,Provence-Alpes-Côte d’Azur,admin,1400000.0,794811.0
+3,Lille,50.632971000000005,3.058585,France,FR,Hauts-de-France,admin,1044000.0,228328.0
+4,Nice,43.713644,7.259519999999999,France,FR,Provence-Alpes-Côte d’Azur,,927000.0,338620.0
+5,Toulouse,43.599515999999994,1.433188,France,FR,Occitanie,admin,847000.0,433055.0
+6,Bordeaux,44.840439,-0.5805,France,FR,Nouvelle-Aquitaine,admin,803000.0,231844.0
+7,Rouen,49.433333000000005,1.083333,France,FR,Normandie,admin,532559.0,110276.0
+8,Strasbourg,48.600381,7.787355000000001,France,FR,Grand Est,admin,439972.0,274845.0
+9,Nantes,47.216509,-1.5523790000000002,France,FR,Pays de la Loire,admin,438537.0,277269.0
+10,Metz,49.115460999999996,6.175875,France,FR,Grand Est,minor,409186.0,123914.0
+11,Grenoble,45.171546,5.722387,France,FR,Auvergne-Rhône-Alpes,,388574.0,158552.0
+12,Toulon,43.117705,5.941712,France,FR,Provence-Alpes-Côte d’Azur,,357693.0,168701.0
+13,Montpellier,43.61092,3.8772300000000004,France,FR,Occitanie,minor,327254.0,248252.0
+14,Nancy,48.69211,6.187755999999999,France,FR,Grand Est,,268976.0,105334.0
+15,Saint-Étienne,45.435382000000004,4.391051,France,FR,Auvergne-Rhône-Alpes,,265684.0,176280.0
+16,Melun,48.545699,2.653562,France,FR,Île-de-France,,249432.0,38953.0
+17,Le Havre,49.5,0.13333299999999998,France,FR,Normandie,,242124.0,185972.0
+18,Tours,47.394836,0.7039770000000001,France,FR,Centre-Val de Loire,,236096.0,141621.0
+19,Clermont-Ferrand,45.779657,3.086281,France,FR,Auvergne-Rhône-Alpes,minor,233050.0,138681.0
+20,Orléans,47.902891,1.9038869999999999,France,FR,Centre-Val de Loire,admin,217301.0,124149.0
+21,Mulhouse,47.738082,7.347932000000001,France,FR,Grand Est,,215454.0,111430.0
+22,Rennes,48.111981,-1.674291,France,FR,Bretagne,admin,209375.0,199284.0
+23,Reims,49.25,4.033333,France,FR,Grand Est,,196565.0,159313.0
+24,Caen,49.197188,-0.326822,France,FR,Normandie,minor,190099.0,110624.0
+25,Angers,47.473806,-0.54774,France,FR,Pays de la Loire,,188380.0,168279.0
+26,Dijon,47.316666999999995,5.016667,France,FR,Bourgogne-Franche-Comté,admin,169946.0,149782.0
+27,Nîmes,43.833778,4.359623,France,FR,Occitanie,,169547.0,148236.0
+28,Limoges,45.831534000000005,1.2578049999999998,France,FR,Nouvelle-Aquitaine,minor,152199.0,141176.0
+29,Aix-en-Provence,43.528695,5.448791,France,FR,Provence-Alpes-Côte d’Azur,,146821.0,143797.0
+30,Perpignan,42.696172,2.897098,France,FR,Occitanie,,146620.0,110706.0
+31,Biarritz,43.480119,-1.5555809999999999,France,FR,Nouvelle-Aquitaine,,145348.0,33188.0
+32,Brest,48.390756,-4.486165,France,FR,Bretagne,,144899.0,140929.0
+33,Le Mans,48.000386,0.204709,France,FR,Pays de la Loire,,144515.0,142270.0
+34,Amiens,49.9,2.3,France,FR,Hauts-de-France,minor,143086.0,94731.0
+35,Besançon,47.248778,6.018152,France,FR,Bourgogne-Franche-Comté,minor,128426.0,119960.0
+36,Annecy,45.906206,6.1266989999999995,France,FR,Auvergne-Rhône-Alpes,,105749.0,49232.0
+37,Calais,50.951240999999996,1.8589900000000001,France,FR,Hauts-de-France,,92201.0,74433.0
+38,Poitiers,46.583333,0.333333,France,FR,Nouvelle-Aquitaine,minor,85960.0,84807.0
+39,Versailles,48.803593,2.134236,France,FR,Île-de-France,,85416.0,85416.0
+40,Kerbrient,47.730294,-3.4108059999999996,France,FR,Bretagne,,84952.0,58112.0
+41,Béziers,43.345287,3.2223740000000003,France,FR,Occitanie,,81438.0,74081.0
+42,La Rochelle,46.166667,-1.15,France,FR,Nouvelle-Aquitaine,,76997.0,76810.0
+43,Roanne,46.043290999999996,4.068553,France,FR,Auvergne-Rhône-Alpes,,73315.0,39840.0
+44,Bourges,47.083333,2.4,France,FR,Centre-Val de Loire,,72340.0,67987.0
+45,Arras,50.291799,2.780306,France,FR,Hauts-de-France,,64165.0,47052.0
+46,Troyes,48.300727,4.085244,France,FR,Grand Est,,61703.0,60785.0
+47,Cherbourg,49.639971,-1.615505,France,FR,Normandie,,60991.0,60991.0
+48,Agen,44.199912,0.626641,France,FR,Nouvelle-Aquitaine,,58223.0,34367.0
+49,Tarbes,43.233334,0.083333,France,FR,Occitanie,,54854.0,52106.0
+50,Ajaccio,41.927226,8.734619,France,FR,Corsica,admin,54364.0,39446.0
+51,Saint-Brieuc,48.510504,-2.765927,France,FR,Bretagne,,53223.0,52774.0
+52,Nevers,46.991203000000006,3.1570840000000002,France,FR,Bourgogne-Franche-Comté,,45929.0,43988.0
+53,Vichy,46.128264,3.4234720000000003,France,FR,Auvergne-Rhône-Alpes,,43158.0,27019.0
+54,Dieppe,49.920403,1.086542,France,FR,Normandie,,42461.0,35707.0
+55,Auxerre,47.7996,3.5703300000000002,France,FR,Bourgogne-Franche-Comté,,41516.0,34552.0
+56,Bastia,42.702778,9.45,France,FR,Corsica,,41001.0,40116.0
+57,Châlons-en-Champagne,48.953926,4.3672379999999995,France,FR,Grand Est,minor,,

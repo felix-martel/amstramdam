@@ -3,7 +3,9 @@ from collections import defaultdict, Counter
 
 import pandas as pd
 
-from game import GameRun, CITIES, load_cities
+from game import GameRun, load_cities
+from city_parser import GameMap, SPECIALS, COUNTRIES
+
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
     NAMES = {line.rstrip() for line in f}
@@ -29,61 +31,46 @@ def choose_depts(df, max_per_country=10, min_pop=15):
             cities.append({k: row[k] for k in ["name", "dept", "lat", "lon", "population"]})
     return pd.DataFrame(cities)
 
-def reaccent(name):
-    name = name.lower()
-    stopwords = {"en", "le", "la", "les", "d", "de", "du", "des", "sur"}
-    def capit(s):
-        if s.lower() in stopwords:
-            return s
-        return s[0].upper() + s[1:]
-    seps = {" ", "-", "'"}
-    for sep in seps:
-        name = sep.join([capit(word) for word in name.split(sep)])
-    return  capit(name)
-
 
 available_names = set(NAMES)
 global_player_list = set()
 
-MAPS = {
-    "world": {
-        "fname": "data/places.world.csv",
-        "min-pop": 0,
-        "distance": 1500,
-        "time-bonus": 6,
-    },
-    "france": {
-        "fname": "data/places.france.csv",
-        "min-pop": 0,
-        "distance": 300,
-        "time-bonus": 5,
-    }
-}
-
 def get_all_datasets():
     data = []
-    for name, dataset in MAPS.items():
+    for map_id, special in SPECIALS.items():
         data.append(dict(
-            name=name,
-            points=[[lat, lon] for _, (lon, lat) in get_cities(dataset)],
+            name=map_id,
+            display=special["name"],
+            points=[]
+        ))
+    data.append(dict(is_sep=True))
+    for map_id, special in COUNTRIES.items():
+        data.append(dict(
+            name=map_id,
+            display=special["name"],
+            points=[]
         ))
     return data
-
+   # data = []
+   # for name, dataset in MAPS.items():
+   #     data.append(dict(
+   #         name=name,
+   #         points=[[lat, lon] for _, (lon, lat) in get_cities(dataset)],
+   #     ))
+   # return data
 
 def get_cities(map):
     return load_cities(map["fname"], map["min-pop"])
 
 class Game:
-    def __init__(self, players=None, n_run=20, time_param=None, dist_param=None, duration=None, wait_time=8, map="world", pseudos=None):
+    def __init__(self, players=None, n_run=20, time_param=5, dist_param=None, duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.map_name = map
-        map = MAPS[self.map_name]
+        map = GameMap.from_name(self.map_name)
+        self.map_display_name = map.name
         if dist_param is None:
-            dist_param = map["distance"]
-        if time_param is None:
-            time_param = map["time-bonus"]
-        if duration is None:
-            duration = 10
-        self.map_info = map
+            dist_param = map.get_distance()
+        self.bbox = map.bounding_box()
+        # self.map_info = map
         self.n_run = n_run
         self.dist_param = dist_param
         self.time_param = time_param
@@ -91,7 +78,7 @@ class Game:
         if players is None:
             players = set()
         self.players = set(players)
-        self.places = random.sample(get_cities(map), self.n_run)
+        self.places = map.sample(self.n_run) # random.sample(get_cities(map), self.n_run)
         self.duration = duration
         self.runs = [GameRun(self.players, place, dist_param=self.dist_param, time_param=self.time_param, duration=duration)
                      for place in self.places]
@@ -118,13 +105,15 @@ class Game:
             dist_param=self.dist_param,
             duration=self.duration,
             map=self.map_name,
+            # map_display=self.map_display_name,
             pseudos=self.pseudos,
-            wait_time=self.wait_time
+            wait_time=self.wait_time,
         )
 
     def __str__(self):
         return f"""---
 Multigeo Game
+Map: {self.map_display_name}
 Players: {', '.join(self.players)}
 Places: {', '.join([p[0][0] for p in self.places])}
 Run: {self.curr_run_id+1}/{self.n_run}

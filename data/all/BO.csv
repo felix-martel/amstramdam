@@ -1,0 +1,67 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Santa Cruz,-17.783296,-63.182117000000005,Bolivia,BO,Santa Cruz,,2102998.0,1616063.0
+1,La Paz,-16.5,-68.15,Bolivia,BO,La Paz,primary,1590000.0,812799.0
+2,Cochabamba,-17.389498,-66.156797,Bolivia,BO,Cochabamba,admin,1000000.0,608276.0
+3,Oruro,-17.983333,-67.15,Bolivia,BO,Oruro,admin,246501.0,208684.0
+4,Quillacollo,-17.392277,-66.27838,Bolivia,BO,Cochabamba,,227052.0,227052.0
+5,Sucre,-19.047646,-65.259058,Bolivia,BO,Chuquisaca,primary,224838.0,221736.0
+6,Potosí,-19.583610999999998,-65.753056,Bolivia,BO,Potosí,admin,179901.0,141251.0
+7,Tarija,-21.525701,-64.728052,Bolivia,BO,Tarija,admin,159269.0,151757.0
+8,Montero,-17.338662,-63.2505,Bolivia,BO,Santa Cruz,,88616.0,79026.0
+9,Trinidad,-14.833332999999998,-64.9,Bolivia,BO,El Beni,admin,84259.0,54408.0
+10,Riberalta,-11.006545,-66.063119,Bolivia,BO,El Beni,,74014.0,74014.0
+11,Cobija,-11.018556,-68.757015,Bolivia,BO,Pando,admin,44437.0,26585.0
+12,Villazón,-22.088036,-65.59553000000001,Bolivia,BO,Potosí,,37215.0,30253.0
+13,Bermejo,-22.732056,-64.337244,Bolivia,BO,Tarija,,36544.0,36544.0
+14,Guayaramerín,-10.8,-65.383333,Bolivia,BO,El Beni,,36008.0,36008.0
+15,Viacha,-16.65,-68.3,Bolivia,BO,La Paz,,34776.0,34776.0
+16,Tupiza,-21.443445,-65.718751,Bolivia,BO,Potosí,,28766.0,22233.0
+17,Llallagua,-18.424259,-66.58388000000001,Bolivia,BO,Potosí,,28069.0,28069.0
+18,Camiri,-20.038489000000002,-63.518330000000006,Bolivia,BO,Santa Cruz,,27961.0,10464.0
+19,Punata,-17.542344,-65.834723,Bolivia,BO,Cochabamba,,26323.0,15194.0
+20,San Ignacio de Velasco,-16.366667,-60.95,Bolivia,BO,Santa Cruz,,25391.0,23569.0
+21,Puerto Suárez,-18.95,-57.8,Bolivia,BO,Santa Cruz,,22000.0,12546.0
+22,San Borja,-14.816667,-66.85,Bolivia,BO,El Beni,,19640.0,19640.0
+23,Villamontes,-21.262355,-63.469027000000004,Bolivia,BO,Tarija,,18761.0,18761.0
+24,Cliza,-17.587771,-65.93253399999999,Bolivia,BO,Cochabamba,,15816.0,8654.0
+25,Ascensión,-15.7,-63.083332999999996,Bolivia,BO,Santa Cruz,,14429.0,9741.0
+26,Uyuni,-20.466667,-66.833333,Bolivia,BO,Potosí,,12939.0,10293.0
+27,Rurrenabaque,-14.466667000000001,-67.56666700000001,Bolivia,BO,El Beni,,11749.0,11749.0
+28,Portachuelo,-17.351676,-63.392824,Bolivia,BO,Santa Cruz,,11485.0,8479.0
+29,Puerto Quijarro,-17.783333,-57.766667000000005,Bolivia,BO,Santa Cruz,,10392.0,10392.0
+30,Roboré,-18.333333,-59.75,Bolivia,BO,Santa Cruz,,10036.0,9882.0
+31,Challapata,-18.902082,-66.770484,Bolivia,BO,Oruro,,9114.0,8016.0
+32,Avichaca,-16.05,-68.65,Bolivia,BO,La Paz,,8447.0,8447.0
+33,Vallegrande,-18.489231,-64.106092,Bolivia,BO,Santa Cruz,,8422.0,5293.0
+34,Aiquile,-18.201284,-65.180128,Bolivia,BO,Cochabamba,,8224.0,3464.0
+35,Reyes,-14.316667,-67.383333,Bolivia,BO,El Beni,,7376.0,7376.0
+36,San Ramón,-13.283332999999999,-64.716667,Bolivia,BO,El Beni,,6490.0,4389.0
+37,San Carlos,-17.4,-63.75,Bolivia,BO,Santa Cruz,,6353.0,4180.0
+38,San Matías,-16.366667,-58.4,Bolivia,BO,Santa Cruz,,6352.0,6352.0
+39,Betanzos,-19.552926,-65.453952,Bolivia,BO,Potosí,,4847.0,4412.0
+40,Uncia,-18.467184,-66.570102,Bolivia,BO,Potosí,,4723.0,4723.0
+41,Camargo,-20.640607,-65.21052399999999,Bolivia,BO,Chuquisaca,,4715.0,4715.0
+42,San Javier,-16.270244,-62.503226,Bolivia,BO,Santa Cruz,,4210.0,4210.0
+43,Apolo,-14.716667000000001,-68.416667,Bolivia,BO,La Paz,,4189.0,4189.0
+44,Quime,-17.033333,-67.25,Bolivia,BO,La Paz,,4045.0,2404.0
+45,Charagua,-19.791507,-63.198639,Bolivia,BO,Santa Cruz,,3025.0,3025.0
+46,San Lorenzo,-21.417393,-64.749489,Bolivia,BO,Tarija,,3000.0,3000.0
+47,Samaipata,-18.180055,-63.875523,Bolivia,BO,Santa Cruz,,2926.0,2926.0
+48,Padilla,-19.306268,-64.302379,Bolivia,BO,Chuquisaca,,2920.0,1633.0
+49,Entre Ríos,-21.526954,-64.17275699999999,Bolivia,BO,Tarija,,2685.0,2685.0
+50,Tarabuco,-19.180284,-64.917558,Bolivia,BO,Chuquisaca,,2428.0,2300.0
+51,Baures,-13.583332999999998,-63.583332999999996,Bolivia,BO,El Beni,,2422.0,2422.0
+52,Coroico,-16.183332999999998,-67.733333,Bolivia,BO,La Paz,,2361.0,2361.0
+53,Sorata,-15.766667000000002,-68.633333,Bolivia,BO,La Paz,,2190.0,2190.0
+54,Corocoro,-17.166667,-68.45,Bolivia,BO,La Paz,,1884.0,1884.0
+55,Puerto Villarroel,-16.847373,-64.781685,Bolivia,BO,Cochabamba,,1778.0,1778.0
+56,San Rafael,-16.75,-60.566667,Bolivia,BO,Santa Cruz,,1201.0,1201.0
+57,Puerto Acosta,-15.533332999999999,-69.25,Bolivia,BO,La Paz,,1123.0,1123.0
+58,Sicasica,-17.333333,-67.733333,Bolivia,BO,La Paz,,1006.0,1006.0
+59,Cuevo,-20.452512,-63.51818000000001,Bolivia,BO,Santa Cruz,,953.0,953.0
+60,Sabaya,-19.01577,-68.37204399999999,Bolivia,BO,Oruro,,573.0,573.0
+61,Llica,-19.850656,-68.248474,Bolivia,BO,Potosí,,553.0,553.0
+62,Charaña,-17.6,-69.466667,Bolivia,BO,La Paz,,197.0,197.0
+63,Piso Firme,-13.661786,-61.835694999999994,Bolivia,BO,El Beni,,72.0,72.0
+64,Puerto Heath,-12.503332,-68.64995,Bolivia,BO,La Paz,,10.0,10.0
+65,Santa Cruz de la Sierra,-17.8,-63.166667000000004,Bolivia,BO,Santa Cruz,admin,,

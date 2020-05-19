@@ -1,0 +1,93 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Almaty,43.256667,76.928611,Kazakhstan,KZ,Almaty,admin,1209000,983512
+1,Shymkent,42.3,69.6,Kazakhstan,KZ,Ongtüstik Qazaqstan,admin,465392,414032
+2,Qaraghandy,49.8,73.1,Kazakhstan,KZ,Qaraghandy,admin,451800,304747
+3,Taraz,42.9,71.366667,Kazakhstan,KZ,Zhambyl,admin,358153,307294
+4,Astana,51.166666,71.45,Kazakhstan,KZ,Astana,primary,345604,325021
+5,Pavlodar,52.283333,76.966666,Kazakhstan,KZ,Pavlodar,admin,329002,303506
+6,Öskemen,49.966666,82.6,Kazakhstan,KZ,Shyghys Qazaqstan,admin,319067,249634
+7,Semey,50.426749,80.266694,Kazakhstan,KZ,Shyghys Qazaqstan,,311353,292780
+8,Qyzylorda,44.85,65.5,Kazakhstan,KZ,Qyzylorda,admin,300000,126519
+9,Aqtöbe,50.3,57.183333,Kazakhstan,KZ,Aqtöbe,admin,262457,258529
+10,Qostanay,53.216666000000004,63.63333299999999,Kazakhstan,KZ,Qostanay,admin,236901,210000
+11,Petropavl,54.866666,69.15,Kazakhstan,KZ,Soltüstik Qazaqstan,admin,228238,200920
+12,Oral,51.233333,51.366667,Kazakhstan,KZ,Batys Qazaqstan,admin,209788,200000
+13,Atyraū,47.116667,51.883333,Kazakhstan,KZ,Atyraū,admin,182753,158413
+14,Temirtaū,50.054938,72.96464300000001,Kazakhstan,KZ,Qaraghandy,,170600,163787
+15,Kökshetaū,53.283333,69.4,Kazakhstan,KZ,Aqmola,admin,128873,124444
+16,Ekibastuz,51.723714,75.322869,Kazakhstan,KZ,Pavlodar,,127868,121470
+17,Rudnyy,52.972903,63.116772,Kazakhstan,KZ,Qostanay,,124000,84471
+18,Zhezqazghan,47.783333,67.766667,Kazakhstan,KZ,Qaraghandy,,104357,104357
+19,Türkistan,43.299228,68.222892,Kazakhstan,KZ,Ongtüstik Qazaqstan,,97360,76127
+20,Taldyqorghan,45.016666,78.383333,Kazakhstan,KZ,Almaty,admin,88380,88380
+21,Balkhash,46.848056,74.995,Kazakhstan,KZ,Qaraghandy,,81364,79808
+22,Sarqan,45.411259,79.915449,Kazakhstan,KZ,Almaty,,76919,45739
+23,Kentaū,43.516721000000004,68.504631,Kazakhstan,KZ,Ongtüstik Qazaqstan,,57408,54321
+24,Ridder,50.344128999999995,83.51286800000001,Kazakhstan,KZ,Shyghys Qazaqstan,,56756,52664
+25,Arqalyq,50.249146,66.92026700000001,Kazakhstan,KZ,Qostanay,,55521,42000
+26,Zyryanovsk,49.72654,84.27318199999999,Kazakhstan,KZ,Shyghys Qazaqstan,,49658,44929
+27,Zhitiqara,52.19019,61.198935999999996,Kazakhstan,KZ,Qostanay,,46740,43104
+28,Ayagöz,47.964473,80.434372,Kazakhstan,KZ,Shyghys Qazaqstan,,45861,33479
+29,Arys,42.430155,68.808701,Kazakhstan,KZ,Ongtüstik Qazaqstan,,42648,36285
+30,Shū,43.60334,73.759192,Kazakhstan,KZ,Zhambyl,,42439,39785
+31,Qapshaghay,43.862107,77.065781,Kazakhstan,KZ,Almaty,,42167,38472
+32,Qarataū,43.178687,70.467681,Kazakhstan,KZ,Zhambyl,,37881,33605
+33,Qulsary,46.983333,54.016667000000005,Kazakhstan,KZ,Atyraū,,37103,37103
+34,Zharkent,44.1666,80.00654899999999,Kazakhstan,KZ,Almaty,,36496,34422
+35,Atbasar,51.806521999999994,68.359963,Kazakhstan,KZ,Aqmola,,35819,34797
+36,Esik,43.358857,77.440348,Kazakhstan,KZ,Almaty,,35319,26447
+37,Aksay,51.168099,52.997815,Kazakhstan,KZ,Batys Qazaqstan,,34799,26010
+38,Aral,46.8,61.666667000000004,Kazakhstan,KZ,Qyzylorda,,33017,27353
+39,Beyneu,45.183333000000005,55.1,Kazakhstan,KZ,Mangghystaū,,32452,32452
+40,Balyqshy,47.066666999999995,51.866667,Kazakhstan,KZ,Atyraū,,31624,19260
+41,Shīeli,44.168817,66.738872,Kazakhstan,KZ,Qyzylorda,,29832,21910
+42,Alga,49.900418,57.330543000000006,Kazakhstan,KZ,Aqtöbe,,28267,28267
+43,Oktyabr’sk,49.469124,57.419142,Kazakhstan,KZ,Aqtöbe,,28196,26373
+44,Shalqar,47.833333,59.6,Kazakhstan,KZ,Aqtöbe,,27256,27256
+45,Shemonaīkha,50.628114000000004,81.91212800000001,Kazakhstan,KZ,Shyghys Qazaqstan,,27176,20087
+46,Ereymentaū,51.623636,73.102651,Kazakhstan,KZ,Aqmola,,25141,14169
+47,Khromtaū,50.251173,58.440034,Kazakhstan,KZ,Aqtöbe,,23715,19513
+48,Lengir,42.181518,69.88582099999999,Kazakhstan,KZ,Ongtüstik Qazaqstan,,23058,21238
+49,Makīnsk,52.6329,70.419112,Kazakhstan,KZ,Aqmola,,23020,17711
+50,Oytal,42.890254999999996,73.228205,Kazakhstan,KZ,Zhambyl,,22673,9821
+51,Qarazhal,48.040209999999995,70.857056,Kazakhstan,KZ,Qaraghandy,,22170,13807
+52,Boralday,43.360278,76.857778,Kazakhstan,KZ,Almaty,,20996,20996
+53,Üshtöbe,45.252006,77.980067,Kazakhstan,KZ,Almaty,,20492,17741
+54,Zhosaly,45.487778000000006,64.078056,Kazakhstan,KZ,Qyzylorda,,20065,17982
+55,Atasū,48.686593,71.644688,Kazakhstan,KZ,Qaraghandy,,19616,13184
+56,Emba,48.829814,58.150422,Kazakhstan,KZ,Aqtöbe,,18760,1259
+57,Zaysan,47.467831,84.881108,Kazakhstan,KZ,Shyghys Qazaqstan,,17600,10798
+58,Derzhavīnsk,51.099222999999995,66.31557,Kazakhstan,KZ,Aqmola,,15848,13856
+59,Uryzhar,47.09302,81.62939300000001,Kazakhstan,KZ,Shyghys Qazaqstan,,14826,12882
+60,Maqat,47.65,53.316667,Kazakhstan,KZ,Atyraū,,14082,10256
+61,Esil,51.954949,66.40840899999999,Kazakhstan,KZ,Aqmola,,13504,627
+62,Taiynsha,53.846646,69.759873,Kazakhstan,KZ,Soltüstik Qazaqstan,,13148,1109
+63,Qulan,42.910104,72.72066099999999,Kazakhstan,KZ,Zhambyl,,13128,7272
+64,Otar,43.538129999999995,75.216174,Kazakhstan,KZ,Zhambyl,,11238,11238
+65,Būlaevo,54.905963,70.441549,Kazakhstan,KZ,Soltüstik Qazaqstan,,9886,880
+66,Aqadyr,48.260598,72.858255,Kazakhstan,KZ,Qaraghandy,,9710,1009
+67,Ertis,53.333649,75.45775,Kazakhstan,KZ,Pavlodar,,9216,3406
+68,Shar,49.585591,81.04851500000001,Kazakhstan,KZ,Shyghys Qazaqstan,,9087,1162
+69,Makhambet,47.666667,51.583333,Kazakhstan,KZ,Atyraū,,8905,618
+70,Zhangaözen,43.3,52.8,Kazakhstan,KZ,Mangghystaū,,8895,8895
+71,Aqsū,52.444223,71.95760600000001,Kazakhstan,KZ,Aqmola,,8543,8543
+72,Zhänibek,49.422073,46.847052000000005,Kazakhstan,KZ,Batys Qazaqstan,,8212,5436
+73,Qarqaraly,49.412873,75.472858,Kazakhstan,KZ,Qaraghandy,,8195,1603
+74,Qusmuryn,52.451073,64.619771,Kazakhstan,KZ,Qostanay,,8049,642
+75,Bayghanīn,48.689755,55.87512099999999,Kazakhstan,KZ,Aqtöbe,,7657,885
+76,Osakarovka,50.562193,72.570891,Kazakhstan,KZ,Qaraghandy,,7305,1087
+77,Bestöbe,52.497951,73.095919,Kazakhstan,KZ,Aqmola,,7189,7189
+78,Tobyl,52.696575,62.581014,Kazakhstan,KZ,Qostanay,,7155,672
+79,Zholymbet,51.742113,71.71245400000001,Kazakhstan,KZ,Aqmola,,6876,1062
+80,Kishkeneköl,53.63589399999999,72.340793,Kazakhstan,KZ,Soltüstik Qazaqstan,,6779,6779
+81,Qazaly,45.762778000000004,62.1075,Kazakhstan,KZ,Qyzylorda,,6582,290
+82,Chapaev,50.2,51.166667,Kazakhstan,KZ,Batys Qazaqstan,,6000,1031
+83,Torghay,49.633889,63.498056000000005,Kazakhstan,KZ,Qostanay,,5277,5277
+84,Fort-Shevchenko,44.506544,50.26388,Kazakhstan,KZ,Mangghystaū,,5213,1259
+85,Aqtaū,43.65,51.166666,Kazakhstan,KZ,Mangghystaū,admin,4479,4479
+86,Saryshagan,46.119167,73.619167,Kazakhstan,KZ,Qaraghandy,,4365,297
+87,Shongzhy,43.538134,79.465819,Kazakhstan,KZ,Almaty,,3902,3902
+88,Serebryansk,49.684134,83.295612,Kazakhstan,KZ,Shyghys Qazaqstan,,701,701
+89,Zhaltyr,51.628321,69.83551899999999,Kazakhstan,KZ,Aqmola,,694,694
+90,Sharbaqty,52.490866000000004,78.155562,Kazakhstan,KZ,Pavlodar,,107,107
+91,Būrylbaytal,44.939840000000004,74.01776600000001,Kazakhstan,KZ,Zhambyl,,100,85

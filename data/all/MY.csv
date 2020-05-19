@@ -1,0 +1,41 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,George Town,5.4112290000000005,100.335426,Malaysia,MY,Pulau Pinang,admin,2500000.0,720202.0
+1,Kuala Lumpur,3.166667,101.7,Malaysia,MY,Kuala Lumpur ,primary,1448000.0,1448000.0
+2,Johor Bahru,1.4655,103.7578,Malaysia,MY,Johor,admin,875000.0,802489.0
+3,Butterworth,5.399102,100.36381800000001,Malaysia,MY,Pulau Pinang,,821652.0,107591.0
+4,Melaka,2.1959999999999997,102.2405,Malaysia,MY,Melaka,,788706.0,503127.0
+5,Ipoh,4.5841,101.0829,Malaysia,MY,Perak,admin,673318.0,639136.0
+6,Kuching,1.416667,110.33333300000001,Malaysia,MY,,,570407.0,504963.0
+7,Kota Kinabalu,5.9749,116.0724,Malaysia,MY,Sabah,admin,527671.0,457326.0
+8,Kampong Baharu,6.116667,102.216667,Malaysia,MY,Kelantan,,505583.0,279316.0
+9,Shah Alam,3.083333,101.533333,Malaysia,MY,,,481654.0,481654.0
+10,Sandakan,5.8402,118.1179,Malaysia,MY,Sabah,,392288.0,291289.0
+11,Seremban Garden,2.702,101.9655,Malaysia,MY,Negeri Sembilan,,372917.0,300731.0
+12,Kuantan,3.8077,103.32600000000001,Malaysia,MY,Pahang,admin,366229.0,274695.0
+13,Kampung Sungai Pasir,5.615259,100.468041,Malaysia,MY,Kedah,,358499.0,228843.0
+14,Kuala Terengganu,5.3302,103.1408,Malaysia,MY,Terengganu,admin,350210.0,285065.0
+15,Alor Setar,6.121045,100.360137,Malaysia,MY,Kedah,admin,336475.0,217368.0
+16,Tawau,4.2498,117.8871,Malaysia,MY,Sabah,,306462.0,289531.0
+17,Taiping,4.85,100.733333,Malaysia,MY,Perak,,237095.0,217647.0
+18,Miri,4.4148,114.0089,Malaysia,MY,Sarawak,,228212.0,211703.0
+19,Sibu,2.3,111.816667,Malaysia,MY,Sarawak,,203832.0,198239.0
+20,Batu Pahat,1.8548,102.9325,Malaysia,MY,Johor,,199619.0,156236.0
+21,Muar,2.0442,102.5689,Malaysia,MY,Johor,,191346.0,127897.0
+22,Kluang,2.0251,103.3328,Malaysia,MY,Johor,,169828.0,156700.0
+23,Bintulu,3.166667,113.03333300000001,Malaysia,MY,Sarawak,,151617.0,83670.0
+24,Lahad Datu,5.0268,118.32700000000001,Malaysia,MY,Sabah,,105622.0,60310.0
+25,Teluk Intan,4.0259,101.0213,Malaysia,MY,Perak,,101659.0,63353.0
+26,Cukai,4.25,103.416667,Malaysia,MY,Terengganu,,82425.0,44646.0
+27,Kangar,6.4414,100.198619,Malaysia,MY,Perlis,admin,63869.0,63869.0
+28,Raub,3.7899,101.85700000000001,Malaysia,MY,Pahang,,40024.0,33521.0
+29,Kuala Lipis,4.1842,102.0468,Malaysia,MY,Pahang,,15448.0,15448.0
+30,Klang,3.0333330000000003,101.45,Malaysia,MY,Selangor,admin,,
+31,Seremban,2.7297,101.9381,Malaysia,MY,Negeri Sembilan,admin,,
+32,Kampung Lemal,6.030211,102.141257,Malaysia,MY,Kelantan,minor,,
+33,Kuching,1.55,110.33333300000001,Malaysia,MY,Sarawak,admin,,
+34,Ketereh,5.957008,102.24817,Malaysia,MY,Kelantan,minor,,
+35,Tumpat,6.197755,102.170976,Malaysia,MY,Kelantan,minor,,
+36,Victoria,5.276667,115.24166699999999,Malaysia,MY,Labuan,admin,,
+37,Pasir Mas,6.049337,102.139873,Malaysia,MY,Kelantan,minor,,
+38,Kota Bharu,6.133275,102.238603,Malaysia,MY,Kelantan,minor,,
+39,Pulai Chondong,5.871332,102.23176600000001,Malaysia,MY,Kelantan,minor,,

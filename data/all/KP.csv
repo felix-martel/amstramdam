@@ -1,0 +1,37 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,P’yŏngch’ŏn,38.993056,125.715278,"Korea, North",KP,P’yŏngyang,,3300000.0,2498797.0
+1,Namp’o,38.7375,125.40777800000001,"Korea, North",KP,P’yŏngnam,minor,1127000.0,455000.0
+2,Hasu-dong,39.923611,127.575556,"Korea, North",KP,Hamnam,,773000.0,418341.0
+3,Hŭngnam,39.831666999999996,127.61861100000002,"Korea, North",KP,Hamnam,,751322.0,346082.0
+4,Ch’ŏngjin,41.795556,129.775833,"Korea, North",KP,Hambuk,admin,672614.0,327000.0
+5,Sunch’ŏn,39.431667,125.932778,"Korea, North",KP,P’yŏngnam,,400629.0,400629.0
+6,Kaesŏng,37.970833,126.55444399999999,"Korea, North",KP,Hwangnam,minor,338155.0,272512.0
+7,Wŏnsan,39.152778000000005,127.443611,"Korea, North",KP,Kangwŏn,admin,329207.0,315643.0
+8,Kanggye,40.969465,126.58523100000001,"Korea, North",KP,Chagang,admin,299514.0,209530.0
+9,Sinŭiju,40.100556,124.39805600000001,"Korea, North",KP,P’yŏngbuk,admin,288112.0,46356.0
+10,Hyesan,41.401666999999996,128.177778,"Korea, North",KP,Yanggang,admin,227461.0,227461.0
+11,Haeju,38.040556,125.714722,"Korea, North",KP,Hwangnam,admin,224231.0,222396.0
+12,Kimch’aek-si,40.668889,129.189722,"Korea, North",KP,Hambuk,minor,187270.0,187270.0
+13,Manp’o,41.154722,126.28944399999999,"Korea, North",KP,Chagang,,186827.0,186827.0
+14,Sa-ri,38.536944,125.75694399999999,"Korea, North",KP,Hwangbuk,,154942.0,154942.0
+15,Chŏngju,39.693333,125.210278,"Korea, North",KP,P’yŏngbuk,,141769.0,29065.0
+16,Kilju,40.964166999999996,129.327778,"Korea, North",KP,Hambuk,,101165.0,63652.0
+17,Musan-ŭp,42.226085999999995,129.20775600000002,"Korea, North",KP,Hambuk,,80146.0,21739.0
+18,Tunjŏn,39.370278000000006,127.224167,"Korea, North",KP,Kangwŏn,,73619.0,73619.0
+19,Ongjin,37.934722,125.361944,"Korea, North",KP,Hwangnam,,69195.0,64247.0
+20,P’yŏnghwa-ri,38.316111,126.42638899999999,"Korea, North",KP,Hwangbuk,,66260.0,66260.0
+21,Sŏnbong,42.342222,130.39666699999998,"Korea, North",KP,Nasŏn,,60864.0,27331.0
+22,Changyŏn,38.250833,125.09611100000001,"Korea, North",KP,Hwangnam,,48984.0,39368.0
+23,Sinhŭng-ni,39.448333,125.45888899999999,"Korea, North",KP,P’yŏngnam,,19463.0,19463.0
+24,Ch’osan-ŭp,40.8325,125.80333300000001,"Korea, North",KP,Chagang,,7786.0,7786.0
+25,Kŭmbanhyŏng,40.855,128.11111100000002,"Korea, North",KP,Yanggang,,3839.0,3839.0
+26,Taep’yŏng-ni,40.591667,125.42916699999999,"Korea, North",KP,P’yŏngbuk,,1884.0,1884.0
+27,Yongsŏng il-tong,39.125465000000005,125.788983,"Korea, North",KP,P’yŏngyang,minor,,
+28,Rajin,42.248889,130.300278,"Korea, North",KP,Nasŏn,admin,,
+29,Pyongyang,39.019444,125.754722,"Korea, North",KP,P’yŏngyang,primary,,
+30,Sariwŏn,38.507222,125.75583300000001,"Korea, North",KP,Hwangbuk,admin,,
+31,Chaeryŏng-ŭp,38.399167,125.61555600000001,"Korea, North",KP,Hwangnam,minor,,
+32,Ŭijin-dong,40.975181,126.49583700000001,"Korea, North",KP,Chagang,minor,,
+33,Hamhŭng,39.918333000000004,127.53638899999999,"Korea, North",KP,Hamnam,admin,,
+34,P’yŏngsŏng,39.246389,125.871944,"Korea, North",KP,P’yŏngnam,admin,,
+35,Hŭngju-dong,40.99629,126.547555,"Korea, North",KP,Chagang,minor,,

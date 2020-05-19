@@ -1,0 +1,64 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Madrid,40.412752000000005,-3.707721,Spain,ES,Madrid,primary,5567000.0,50437.0
+1,Barcelona,41.398371000000004,2.1741,Spain,ES,Catalonia,admin,4920000.0,1581595.0
+2,Sevilla,37.382826,-5.973167,Spain,ES,Andalusia,admin,1212045.0,703021.0
+3,Bilbao,43.260919,-2.938764,Spain,ES,Basque Country,minor,875552.0,353187.0
+4,Valencia,39.466667,-0.366667,Spain,ES,Valencia,admin,808000.0,805304.0
+5,Zaragoza,41.645309999999995,-0.884861,Spain,ES,Aragon,admin,649404.0,448507.0
+6,Málaga,36.726665999999994,-4.4348019999999995,Spain,ES,Andalusia,minor,550058.0,528705.0
+7,Murcia,37.987041,-1.130042,Spain,ES,Murcia,admin,406807.0,329838.0
+8,Granada,37.178354,-3.5992010000000003,Spain,ES,Andalusia,minor,388290.0,238248.0
+9,Vigo,42.232822999999996,-8.722636999999999,Spain,ES,Galicia,,378952.0,292745.0
+10,Palma,39.574337,2.655222,Spain,ES,Balearic Islands,admin,375773.0,264129.0
+11,A Coruña,43.366609000000004,-8.406812,Spain,ES,Galicia,minor,370610.0,242619.0
+12,Santa María de Gracia,28.466666999999998,-16.266667,Spain,ES,Canary Islands,,336061.0,222190.0
+13,Gijón,43.535731,-5.661519,Spain,ES,Asturias,,335972.0,271452.0
+14,Valladolid,41.655181,-4.72372,Spain,ES,Castille-Leon,admin,322304.0,276443.0
+15,Córdoba,37.89155,-4.772748,Spain,ES,Andalusia,minor,321376.0,279648.0
+16,Alicante,38.34619,-0.48772200000000004,Spain,ES,Valencia,minor,315863.0,276827.0
+17,Cádiz,36.515789,-6.279692,Spain,ES,Andalusia,minor,283157.0,24708.0
+18,Pamplona,42.814075,-1.6411529999999999,Spain,ES,Navarre,admin,274545.0,193166.0
+19,Oviedo,43.363223,-5.853128,Spain,ES,Asturias,admin,235651.0,211398.0
+20,Zuazo de Vitoria,42.839797,-2.722069,Spain,ES,Basque Country,,224578.0,173641.0
+21,Santander,43.464721999999995,-3.804444,Spain,ES,Cantabria,admin,208763.0,183288.0
+22,Cartagena,37.605121000000004,-0.986232,Spain,ES,Murcia,,201274.0,131279.0
+23,Marbella,36.510484999999996,-4.885745,Spain,ES,Andalusia,,186131.0,120008.0
+24,Mataró,41.542113,2.444503,Spain,ES,Catalonia,,183293.0,116359.0
+25,Almería,36.833333,-2.45,Spain,ES,Andalusia,minor,179405.0,124660.0
+26,Burgos,42.350221000000005,-3.6752730000000002,Spain,ES,Castille-Leon,minor,170183.0,130319.0
+27,Salamanca,40.9681,-5.66202,Spain,ES,Castille-Leon,minor,162353.0,158560.0
+28,Albacete,38.995845,-1.857773,Spain,ES,Castille-La Mancha,minor,158094.0,97100.0
+29,Huelva,37.266385,-6.940044,Spain,ES,Andalusia,minor,144174.0,95290.0
+30,Logroño,42.466667,-2.45,Spain,ES,La Rioja,admin,143698.0,104139.0
+31,Badajoz,38.877894,-6.970613,Spain,ES,Extremadura,minor,140133.0,91144.0
+32,León,42.600031,-5.570316,Spain,ES,Castille-Leon,minor,136227.0,133801.0
+33,Tarragona,41.116667,1.25,Spain,ES,Catalonia,minor,126291.0,89624.0
+34,Ourense,42.331342,-7.862711,Spain,ES,Galicia,minor,118107.0,108083.0
+35,Jaén,37.772403999999995,-3.7901300000000004,Spain,ES,Andalusia,minor,116400.0,69418.0
+36,Algeciras,36.133257,-5.450511,Spain,ES,Andalusia,,111027.0,102348.0
+37,Santiago de Compostela,42.880035,-8.544825999999999,Spain,ES,Galicia,admin,92430.0,83012.0
+38,Lorca,37.671192,-1.701699,Spain,ES,Murcia,,86119.0,26964.0
+39,Toledo,39.867263,-4.0298099999999994,Spain,ES,Castille-La Mancha,admin,74632.0,33125.0
+40,Guadalajara,40.628621,-3.161849,Spain,ES,Castille-La Mancha,minor,72850.0,30963.0
+41,Linares,38.095193,-3.63602,Spain,ES,Andalusia,,59761.0,39338.0
+42,Arrecife,28.965706,-13.551378,Spain,ES,Canary Islands,,52944.0,41421.0
+43,Mérida,38.916109000000006,-6.343657,Spain,ES,Extremadura,admin,52423.0,52423.0
+44,Las Palmas de Gran Canaria,28.099727,-15.413429999999998,Spain,ES,Canary Islands,admin,,
+45,Vitoria-Gasteiz,42.85,-2.666667,Spain,ES,Basque Country,admin,,
+46,Castellón de la Plana,39.987497,-0.039245999999999996,Spain,ES,Valencia,minor,,
+47,Palencia,42.009552,-4.524063,Spain,ES,Castille-Leon,minor,,
+48,Lleida,41.616737,0.622183,Spain,ES,Catalonia,minor,,
+49,Cáceres,39.481877000000004,-6.373222,Spain,ES,Extremadura,minor,,
+50,Segovia,40.948083000000004,-4.11839,Spain,ES,Castille-Leon,minor,,
+51,Pontevedra,42.433333000000005,-8.633333,Spain,ES,Galicia,minor,,
+52,Santa Cruz de Tenerife,28.460238,-16.280616000000002,Spain,ES,Canary Islands,admin,,
+53,Soria,41.764334999999996,-2.468251,Spain,ES,Castille-Leon,minor,,
+54,Huesca,42.13868,-0.409411,Spain,ES,Aragon,minor,,
+55,Donostia,43.313556,-1.981855,Spain,ES,Basque Country,minor,,
+56,Cuenca,40.066666999999995,-2.1333330000000004,Spain,ES,Castille-La Mancha,minor,,
+57,Girona,41.982548,2.822449,Spain,ES,Catalonia,minor,,
+58,Ávila,40.657237,-4.699511,Spain,ES,Castille-Leon,minor,,
+59,Ciudad Real,38.986258,-3.92907,Spain,ES,Castille-La Mancha,minor,,
+60,Zamora,41.504940000000005,-5.745296,Spain,ES,Castille-Leon,minor,,
+61,Lugo,43.013813,-7.558542999999999,Spain,ES,Galicia,minor,,
+62,Teruel,40.345073,-1.104106,Spain,ES,Aragon,minor,,

@@ -1,0 +1,232 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,London,51.514247999999995,-0.093145,United Kingdom,GB,,primary,8567000.0,7421209.0
+1,Birmingham,52.466667,-1.916667,United Kingdom,GB,Birmingham,admin,2285000.0,984333.0
+2,Manchester,53.5,-2.2166669999999997,United Kingdom,GB,Manchester,admin,2230000.0,395515.0
+3,Leeds,53.8,-1.583333,United Kingdom,GB,Leeds,admin,1529000.0,455123.0
+4,Sheffield,53.36666700000001,-1.5,United Kingdom,GB,Sheffield,admin,1292900.0,552700.0
+5,Glasgow,55.833332999999996,-4.25,United Kingdom,GB,Glasgow City,admin,1160000.0,610268.0
+6,Newcastle upon Tyne,54.98805600000001,-1.619444,United Kingdom,GB,Newcastle upon Tyne,admin,882000.0,192382.0
+7,Nottingham,52.966667,-1.166667,United Kingdom,GB,Nottingham,admin,825600.0,305700.0
+8,Liverpool,53.416667000000004,-3.0,United Kingdom,GB,Liverpool,admin,811000.0,468945.0
+9,Southend-on-Sea,51.533333,0.7,United Kingdom,GB,Southend-on-Sea,admin,618386.0,173600.0
+10,Bristol,51.45,-2.583333,United Kingdom,GB,"Bristol, City of",admin,553528.0,430713.0
+11,Edinburgh,55.95,-3.2,United Kingdom,GB,"Edinburgh, City of",admin,504966.0,435791.0
+12,Brighton,50.833333,-0.15,United Kingdom,GB,Brighton and Hove,,503008.0,139001.0
+13,Bradford,53.783333,-1.75,United Kingdom,GB,Bradford,admin,501700.0,293717.0
+14,Leicester,52.63333299999999,-1.133333,United Kingdom,GB,Leicester,admin,457983.0,339239.0
+15,Sunderland,54.91194399999999,-1.383333,United Kingdom,GB,Sunderland,admin,452934.0,177965.0
+16,Belfast,54.6,-5.933333,United Kingdom,GB,Belfast,,450406.0,274770.0
+17,Portsmouth,50.766667,-1.083333,United Kingdom,GB,Portsmouth,admin,442252.0,205100.0
+18,Bournemouth,50.716667,-1.8833330000000001,United Kingdom,GB,Bournemouth,admin,426945.0,163600.0
+19,Middlesbrough,54.572778,-1.162778,United Kingdom,GB,Redcar and Cleveland,admin,416042.0,142707.0
+20,Coventry,52.416667,-1.55,United Kingdom,GB,Coventry,admin,388271.0,308313.0
+21,Southampton,50.9,-1.4,United Kingdom,GB,Southampton,admin,384417.0,384417.0
+22,Reading,51.433333000000005,-1.0,United Kingdom,GB,Reading,admin,369804.0,145700.0
+23,Sutton on Hull,53.783333,-0.31666700000000003,United Kingdom,GB,"Kingston upon Hull, City of",,302296.0,292501.0
+24,Blackpool,53.816667,-3.05,United Kingdom,GB,Blackpool,admin,272792.0,143101.0
+25,Plymouth,50.396389,-4.138611,United Kingdom,GB,Plymouth,admin,247297.0,231575.0
+26,Luton,51.883333,-0.416667,United Kingdom,GB,Luton,admin,235958.0,193669.0
+27,Oxford,51.75,-1.25,United Kingdom,GB,Oxfordshire,admin,192796.0,154566.0
+28,Norwich,52.63333299999999,1.3,United Kingdom,GB,Norfolk,admin,190756.0,177636.0
+29,Old Aberdeen,57.166667000000004,-2.1,United Kingdom,GB,Aberdeen City,,189364.0,183790.0
+30,York,53.966667,-1.083333,United Kingdom,GB,York,admin,158947.0,144202.0
+31,Dundee,56.5,-2.9666669999999997,United Kingdom,GB,Dundee City,admin,151592.0,150435.0
+32,Ipswich,52.083333,1.166667,United Kingdom,GB,Suffolk,admin,143767.0,134257.0
+33,Peterborough,52.583332999999996,-0.25,United Kingdom,GB,Peterborough,admin,140141.0,140141.0
+34,Cambridge,52.2,0.116667,United Kingdom,GB,Cambridgeshire,admin,128488.0,128488.0
+35,Exminster,50.683333000000005,-3.483333,United Kingdom,GB,Devon,,113118.0,103366.0
+36,Bath,51.379444,-2.365556,United Kingdom,GB,Bath and North East Somerset,admin,93238.0,92120.0
+37,Chester,53.2,-2.916667,United Kingdom,GB,Cheshire West and Chester,admin,89531.0,77040.0
+38,Greenock,55.933333,-4.75,United Kingdom,GB,Inverclyde,admin,74635.0,43495.0
+39,Carlisle,54.88333299999999,-2.933333,United Kingdom,GB,Cumbria,admin,72633.0,65907.0
+40,Scarborough,54.287222,-0.414167,United Kingdom,GB,North Yorkshire,,70571.0,70571.0
+41,Ayr,55.45,-4.616667,United Kingdom,GB,South Ayrshire,admin,69042.0,45513.0
+42,Inverness,57.466667,-4.233333,United Kingdom,GB,Highland,admin,45158.0,40755.0
+43,Perth,56.4,-3.433333,United Kingdom,GB,Perth and Kinross,admin,39654.0,39654.0
+44,River,51.133333,1.266667,United Kingdom,GB,Kent,,36384.0,28156.0
+45,Dumfries,55.066667,-3.55,United Kingdom,GB,Dumfries and Galloway,admin,31044.0,31044.0
+46,Omagh,54.601240000000004,-7.29085,United Kingdom,GB,Fermanagh and Omagh,admin,21056.0,16326.0
+47,Penzance,50.113611,-5.547778,United Kingdom,GB,Cornwall,,20812.0,15489.0
+48,Fort William,56.816667,-5.116667,United Kingdom,GB,Highland,,9652.0,9652.0
+49,Kirkwall,58.966667,-2.95,United Kingdom,GB,Orkney Islands,admin,8500.0,3153.0
+50,Wick,58.433333,-3.083333,United Kingdom,GB,Highland,,7147.0,7147.0
+51,Lerwick,60.15,-1.15,United Kingdom,GB,Shetland Islands,admin,6594.0,4614.0
+52,Ilford,51.559666,0.07080499999999999,United Kingdom,GB,Redbridge,admin,,
+53,Chelmsford,51.733333,0.483333,United Kingdom,GB,Essex,admin,,
+54,Weston-super-Mare,51.345833,-2.967778,United Kingdom,GB,North Somerset,admin,,
+55,Llangefni,53.266667000000005,-4.3333330000000005,United Kingdom,GB,Isle of Anglesey,admin,,
+56,Southport,53.666667000000004,-3.0,United Kingdom,GB,Sefton,admin,,
+57,Armagh,54.348119999999994,-6.64957,United Kingdom,GB,"Armagh, Banbridge and Craigavon",admin,,
+58,Rochester,51.383333,0.516667,United Kingdom,GB,Medway,admin,,
+59,Rochdale,53.61666700000001,-2.15,United Kingdom,GB,Rochdale,admin,,
+60,Motherwell,55.783333,-4.0,United Kingdom,GB,North Lanarkshire,admin,,
+61,Clydach Vale,51.626667,-3.476111,United Kingdom,GB,Rhondda Cynon Taff,admin,,
+62,Kirkintilloch,55.916667000000004,-4.1666669999999995,United Kingdom,GB,East Dunbartonshire,admin,,
+63,Stirling,56.11666700000001,-3.95,United Kingdom,GB,Stirling,admin,,
+64,Lambeth,51.5,-0.116667,United Kingdom,GB,Lambeth,admin,,
+65,Dungannon,54.503330000000005,-6.76427,United Kingdom,GB,Mid Ulster,admin,,
+66,Huddersfield,53.65,-1.7833330000000003,United Kingdom,GB,Kirklees,admin,,
+67,Stretford,53.45,-2.316667,United Kingdom,GB,Trafford,admin,,
+68,Preston,53.766667000000005,-2.7166669999999997,United Kingdom,GB,Lancashire,admin,,
+69,Newbury,51.4,-1.316667,United Kingdom,GB,West Berkshire,admin,,
+70,Rhuthun,53.11666700000001,-3.3,United Kingdom,GB,Denbighshire,admin,,
+71,Blackburn,53.75,-2.483333,United Kingdom,GB,Blackburn with Darwen,admin,,
+72,Wood Green,51.6,-0.116667,United Kingdom,GB,Haringey,admin,,
+73,Stafford,52.8,-2.1,United Kingdom,GB,St. Helens,admin,,
+74,Gloucester,51.833333,-2.25,United Kingdom,GB,Gloucestershire,admin,,
+75,Glenrothes,56.2,-3.183333,United Kingdom,GB,Fife,admin,,
+76,South Bank,54.566667,-1.15,United Kingdom,GB,Redcar and Cleveland,admin,,
+77,Pont-y-pŵl,51.701111,-3.044444,United Kingdom,GB,Torfaen,admin,,
+78,Durham,54.766667000000005,-1.566667,United Kingdom,GB,Durham,admin,,
+79,Bedford,52.133333,-0.45,United Kingdom,GB,Bedford,admin,,
+80,Taunton,51.021111,-3.104722,United Kingdom,GB,Somerset,admin,,
+81,Widnes,53.35,-2.733333,United Kingdom,GB,Halton,admin,,
+82,Uxbridge,51.55,-0.483333,United Kingdom,GB,Hillingdon,admin,,
+83,Elgin,57.65,-3.333333,United Kingdom,GB,Moray,admin,,
+84,Hove,50.833333,-0.183333,United Kingdom,GB,Brighton and Hove,admin,,
+85,Lewes,50.866667,-0.016666999999999998,United Kingdom,GB,East Sussex,admin,,
+86,Maidstone,51.266667,0.516667,United Kingdom,GB,Kent,admin,,
+87,Llandrindod Wells,52.233333,-3.3833330000000004,United Kingdom,GB,Powys,admin,,
+88,Kingston upon Hull,53.716667,-0.333333,United Kingdom,GB,"Kingston upon Hull, City of",admin,,
+89,Kingston upon Thames,51.416667,-0.283333,United Kingdom,GB,Kingston upon Thames,admin,,
+90,Barri,51.406667,-3.269444,United Kingdom,GB,"Vale of Glamorgan, The",admin,,
+91,Giffnock,55.8,-4.283333,United Kingdom,GB,East Renfrewshire,admin,,
+92,Hounslow,51.466667,-0.35,United Kingdom,GB,Hounslow,admin,,
+93,Derry,54.99899,-7.310630000000001,United Kingdom,GB,Derry and Strabane,admin,,
+94,Newtownabbey,54.66911999999999,-5.904434999999999,United Kingdom,GB,Antrim and Newtownabbey,admin,,
+95,Forfar,56.65,-2.8833330000000004,United Kingdom,GB,Angus,admin,,
+96,Torquay,50.45,-3.5,United Kingdom,GB,Torbay,admin,,
+97,East Ham,51.533333,0.05,United Kingdom,GB,Newham,admin,,
+98,Solihull,52.416667,-1.7833330000000003,United Kingdom,GB,Solihull,admin,,
+99,Poplar,51.5,-0.016666999999999998,United Kingdom,GB,Tower Hamlets,admin,,
+100,Mold,53.166667000000004,-3.1333330000000004,United Kingdom,GB,Flintshire,admin,,
+101,Warwick,52.283333,-1.583333,United Kingdom,GB,Warwickshire,admin,,
+102,Knowsley,53.45,-2.85,United Kingdom,GB,Knowsley,admin,,
+103,Hwlffordd,51.801667,-4.970833,United Kingdom,GB,Pembrokeshire,admin,,
+104,Rotherham,53.433333,-1.35,United Kingdom,GB,Rotherham,admin,,
+105,Caernarfon,53.15,-4.266667,United Kingdom,GB,Gwynedd,admin,,
+106,Morpeth,55.166667000000004,-1.6833330000000002,United Kingdom,GB,Northumberland,admin,,
+107,Irvine,55.6,-4.6666669999999995,United Kingdom,GB,North Ayrshire,admin,,
+108,Cwmbran,51.653056,-3.0266669999999998,United Kingdom,GB,Monmouthshire,admin,,
+109,Stornoway,58.216667,-6.366667,United Kingdom,GB,Eilean Siar,admin,,
+110,Darlington,54.533333,-1.566667,United Kingdom,GB,Darlington,admin,,
+111,Hackney,51.55,-0.05,United Kingdom,GB,Hackney,admin,,
+112,Trowbridge,51.318889,-2.208611,United Kingdom,GB,Wiltshire,admin,,
+113,Merthyr Tudful,51.75,-3.3833330000000004,United Kingdom,GB,Merthyr Tydfil,admin,,
+114,Hertford,51.8,-0.06666699999999999,United Kingdom,GB,Hertfordshire,admin,,
+115,Newry,54.17795,-6.33807,United Kingdom,GB,"Newry, Mourne and Down",admin,,
+116,Belfast,54.596819999999994,-5.92541,United Kingdom,GB,Belfast,admin,,
+117,Camberwell,51.473619,-0.09161799999999999,United Kingdom,GB,Southwark,admin,,
+118,Caerfyrddin,51.859167,-4.311667,United Kingdom,GB,Carmarthenshire,admin,,
+119,Cookstown,54.6428,-6.745189999999999,United Kingdom,GB,Mid Ulster,admin,,
+120,Dorchester,50.716667,-2.433333,United Kingdom,GB,Dorset,admin,,
+121,Port Talbot,51.6,-3.7833330000000003,United Kingdom,GB,Neath Port Talbot,admin,,
+122,Antrim,54.71291,-6.20846,United Kingdom,GB,Antrim and Newtownabbey,admin,,
+123,Gateshead,54.945,-1.6175,United Kingdom,GB,Gateshead,admin,,
+124,Wandsworth,51.45,-0.2,United Kingdom,GB,Wandsworth,admin,,
+125,Exeter,50.7,-3.5333330000000003,United Kingdom,GB,Devon,admin,,
+126,Camden Town,51.545664,-0.140308,United Kingdom,GB,Camden,admin,,
+127,Alloa,56.11666700000001,-3.8,United Kingdom,GB,Clackmannanshire,admin,,
+128,Chicksands,52.033333,-0.366667,United Kingdom,GB,Central Bedfordshire,admin,,
+129,Banbridge,54.35091,-6.26701,United Kingdom,GB,"Armagh, Banbridge and Craigavon",admin,,
+130,Walthamstow,51.6,-0.033333,United Kingdom,GB,Waltham Forest,admin,,
+131,Paisley,55.833332999999996,-4.433333,United Kingdom,GB,Renfrewshire,admin,,
+132,Chichester,50.833333,-0.783333,United Kingdom,GB,West Sussex,admin,,
+133,Craigavon,54.449659999999994,-6.36457,United Kingdom,GB,"Armagh, Banbridge and Craigavon",admin,,
+134,Woolwich,51.466667,0.2,United Kingdom,GB,Greenwich,admin,,
+135,Northallerton,54.333332999999996,-1.433333,United Kingdom,GB,North Yorkshire,admin,,
+136,Romford,51.583333,0.2,United Kingdom,GB,Havering,admin,,
+137,Walsall,52.6,-2.0,United Kingdom,GB,Walsall,admin,,
+138,Scunthorpe,53.583332999999996,-0.65,United Kingdom,GB,North Lincolnshire,admin,,
+139,Islington,51.533333,-0.1,United Kingdom,GB,Islington,admin,,
+140,Oldbury,52.5,-2.016667,United Kingdom,GB,Sandwell,admin,,
+141,Downpatrick,54.32694,-5.71134,United Kingdom,GB,"Newry, Mourne and Down",admin,,
+142,Livingston,55.88333299999999,-3.5333330000000003,United Kingdom,GB,West Lothian,admin,,
+143,Ashton-under-Lyne,53.5,-2.1,United Kingdom,GB,Tameside,admin,,
+144,Winchester,51.016667,-1.316667,United Kingdom,GB,Hampshire,admin,,
+145,Sandbach,53.13333299999999,-2.3666669999999996,United Kingdom,GB,Cheshire East,admin,,
+146,Derby,52.933333,-1.5,United Kingdom,GB,Derby,admin,,
+147,Twickenham,51.433333000000005,-0.31666700000000003,United Kingdom,GB,Richmond upon Thames,admin,,
+148,Saint Helens,53.45,-2.733333,United Kingdom,GB,St. Helens,admin,,
+149,Bury,53.6,-2.3,United Kingdom,GB,Bury,admin,,
+150,Maidenhead,51.516667,-0.7,United Kingdom,GB,Windsor and Maidenhead,admin,,
+151,Wembley,51.55,-0.283333,United Kingdom,GB,Brent,admin,,
+152,Hartlepool,54.686111,-1.2125,United Kingdom,GB,Hartlepool,admin,,
+153,Hugh Town,49.914597,-6.314273,United Kingdom,GB,Isles of Scilly,admin,,
+154,Oldham,53.55,-2.1166669999999996,United Kingdom,GB,Oldham,admin,,
+155,Bexleyheath,51.45,0.15,United Kingdom,GB,Bexley,admin,,
+156,Ebbw Vale,51.783333,-3.2,United Kingdom,GB,Blaenau Gwent,admin,,
+157,Magherafelt,54.754259999999995,-6.6094100000000005,United Kingdom,GB,Mid Ulster,admin,,
+158,Wigan,53.533333,-2.6166669999999996,United Kingdom,GB,Wigan,admin,,
+159,Ballymena,54.86121,-6.276330000000001,United Kingdom,GB,Mid and East Antrim,admin,,
+160,Halifax,53.716667,-1.85,United Kingdom,GB,Calderdale,admin,,
+161,Stockport,53.4,-2.15,United Kingdom,GB,Stockport,admin,,
+162,Stockton-on-Tees,54.583332999999996,-1.416667,United Kingdom,GB,Stockton-on-Tees,admin,,
+163,Northampton,52.25,-0.883333,United Kingdom,GB,Northamptonshire,admin,,
+164,Grays,51.483333,0.333333,United Kingdom,GB,Thurrock,admin,,
+165,Ystrad Mynach,51.640278,-3.2433330000000002,United Kingdom,GB,Caerphilly,admin,,
+166,Aberaeron,52.25,-4.25,United Kingdom,GB,Ceredigion,admin,,
+167,Newtown Saint Boswells,55.583332999999996,-2.683333,United Kingdom,GB,"Scottish Borders, The",admin,,
+168,Enfield,51.666667,-0.06666699999999999,United Kingdom,GB,Enfield,admin,,
+169,Stoke-on-Trent,53.0,-2.183333,United Kingdom,GB,Stoke-on-Trent,admin,,
+170,Sutton,51.35,-0.2,United Kingdom,GB,Sutton,admin,,
+171,Dudley,52.5,-2.083333,United Kingdom,GB,Dudley,admin,,
+172,Wrecsam,53.05,-3.0,United Kingdom,GB,Wrexham,admin,,
+173,Aberdeen,57.13333299999999,-2.1,United Kingdom,GB,Aberdeen City,admin,,
+174,Bolton,53.583332999999996,-2.433333,United Kingdom,GB,Bolton,admin,,
+175,Warrington,53.38333299999999,-2.6,United Kingdom,GB,Warrington,admin,,
+176,Salford,53.483332999999995,-2.266667,United Kingdom,GB,Salford,admin,,
+177,Kensington,51.504699,-0.199827,United Kingdom,GB,Kensington and Chelsea,admin,,
+178,Doncaster,53.533333,-1.116667,United Kingdom,GB,Doncaster,admin,,
+179,Swindon,51.516667,-1.7833330000000003,United Kingdom,GB,Swindon,admin,,
+180,Pen-y-Bont ar Ogwr,51.505833,-3.577222,United Kingdom,GB,Bridgend,admin,,
+181,Catford,51.45,-0.016666999999999998,United Kingdom,GB,Lewisham,admin,,
+182,Coleraine,55.134890000000006,-6.66873,United Kingdom,GB,Causeway Coast and Glens,admin,,
+183,Barnsley,53.55,-1.483333,United Kingdom,GB,Barnsley,admin,,
+184,Caerdydd,51.5,-3.2,United Kingdom,GB,Cardiff,admin,,
+185,Poole,50.716667,-2.0,United Kingdom,GB,Poole,admin,,
+186,Bracknell,51.416667,-0.75,United Kingdom,GB,Bracknell Forest,admin,,
+187,Wakefield,53.7,-1.483333,United Kingdom,GB,Wakefield,admin,,
+188,Thornbury,51.608889000000005,-2.520278,United Kingdom,GB,South Gloucestershire,admin,,
+189,Wokingham,51.416667,-0.833333,United Kingdom,GB,Wokingham,admin,,
+190,Falkirk,56.0,-3.766667,United Kingdom,GB,Falkirk,admin,,
+191,Haddington,55.933333,-2.766667,United Kingdom,GB,East Lothian,admin,,
+192,Abertawe,51.633333,-3.9666669999999997,United Kingdom,GB,Swansea,admin,,
+193,Beverley,53.833332999999996,-0.416667,United Kingdom,GB,East Riding of Yorkshire,admin,,
+194,Croydon,51.383333,-0.1,United Kingdom,GB,Croydon,admin,,
+195,South Shields,54.987778000000006,-1.421389,United Kingdom,GB,South Tyneside,admin,,
+196,Morden,51.398216999999995,-0.19837,United Kingdom,GB,Merton,admin,,
+197,Lochgilphead,56.033333,-5.4166669999999995,United Kingdom,GB,Argyll and Bute,admin,,
+198,Worcester,52.2,-2.2,United Kingdom,GB,Worcestershire,admin,,
+199,Matlock,53.13333299999999,-1.533333,United Kingdom,GB,Derbyshire,admin,,
+200,Shrewsbury,52.716667,-2.733333,United Kingdom,GB,Shropshire,admin,,
+201,Truro,50.261666999999996,-5.0433330000000005,United Kingdom,GB,Cornwall,admin,,
+202,Hereford,52.05,-2.7166669999999997,United Kingdom,GB,Herefordshire,admin,,
+203,Newport,51.583333,-2.983333,United Kingdom,GB,Newport,admin,,
+204,Oakham,52.666667000000004,-0.733333,United Kingdom,GB,Rutland,admin,,
+205,Milton Keynes,52.033333,-0.7,United Kingdom,GB,Milton Keynes,admin,,
+206,Dagenham,51.55,0.166667,United Kingdom,GB,Barking and Dagenham,admin,,
+207,Conwy,53.283333,-3.833333,United Kingdom,GB,Conwy,admin,,
+208,Dalkeith,55.86666700000001,-3.066667,United Kingdom,GB,Midlothian,admin,,
+209,Enniskillen,54.3466,-7.641139999999999,United Kingdom,GB,Fermanagh and Omagh,admin,,
+210,Hamilton,55.766667000000005,-4.033333,United Kingdom,GB,South Lanarkshire,admin,,
+211,Hendon,51.6,-0.216667,United Kingdom,GB,Barnet,admin,,
+212,Hammersmith,51.5,-0.23333299999999998,United Kingdom,GB,Hammersmith and Fulham,admin,,
+213,Bromley,51.4,0.05,United Kingdom,GB,Bromley,admin,,
+214,Telford,52.63333299999999,-2.5,United Kingdom,GB,Telford and Wrekin,admin,,
+215,Harrow,51.583333,-0.31666700000000003,United Kingdom,GB,Harrow,admin,,
+216,Ealing,51.488802,-0.30479,United Kingdom,GB,Ealing,admin,,
+217,Slough,51.5,-0.583333,United Kingdom,GB,Slough,admin,,
+218,Wolverhampton,52.583332999999996,-2.1333330000000004,United Kingdom,GB,Wolverhampton,admin,,
+219,Dumbarton,55.95,-4.566667,United Kingdom,GB,West Dunbartonshire,admin,,
+220,Bangor,54.66166,-5.66545,United Kingdom,GB,Ards and North Down,admin,,
+221,Wallsend,54.991389,-1.5597219999999998,United Kingdom,GB,North Tyneside,admin,,
+222,Strabane,54.8224,-7.468439999999999,United Kingdom,GB,Derry and Strabane,admin,,
+223,City of Westminster,51.5,-0.116667,United Kingdom,GB,Westminster,admin,,
+224,Lincoln,53.233332999999995,-0.533333,United Kingdom,GB,Lincolnshire,admin,,
+225,Newport,50.7,-1.3,United Kingdom,GB,Isle of Wight,admin,,
+226,Lisburn,54.50991,-6.0404,United Kingdom,GB,Lisburn and Castlereagh,admin,,
+227,Aylesbury,51.816666999999995,-0.8,United Kingdom,GB,Buckinghamshire,admin,,
+228,Wallasey,53.433333,-3.066667,United Kingdom,GB,Wirral,admin,,
+229,Grimsby,53.533333,-0.05,United Kingdom,GB,North East Lincolnshire,admin,,
+230,Kilmarnock,55.63333299999999,-4.533333,United Kingdom,GB,East Ayrshire,admin,,

@@ -1,0 +1,34 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Mogadishu,2.046193,45.334070000000004,Somalia,SO,Banaadir,primary,1100000.0,875388.0
+1,Kismaayo,-0.358173,42.545365000000004,Somalia,SO,Jubbada Hoose,admin,234852.0,134951.0
+2,Jamaame,0.06968300000000001,42.744972,Somalia,SO,Jubbada Hoose,,185270.0,128577.0
+3,Jawhar,2.780868,45.500484,Somalia,SO,Shabeellaha Dhexe,admin,111308.0,62000.0
+4,Beledweyne,4.735833,45.203610999999995,Somalia,SO,Hiiraan,admin,62945.0,55410.0
+5,Gaalkacyo,6.769722,47.430833,Somalia,SO,Mudug,admin,61200.0,53501.0
+6,Boosaaso,11.284208999999999,49.181577000000004,Somalia,SO,Bari,admin,46969.0,46969.0
+7,Luuq,3.79376,42.544501000000004,Somalia,SO,Gedo,,33820.0,33820.0
+8,Buurhakaba,2.802571,44.078055,Somalia,SO,Bay,minor,31267.0,27792.0
+9,Eyl,7.9803,49.8164,Somalia,SO,Nugaal,,18904.0,369.0
+10,Bandarbeyla,9.4942,50.8122,Somalia,SO,Bari,,13753.0,13753.0
+11,Garbahaarrey,3.3289190000000004,42.220909999999996,Somalia,SO,Gedo,admin,12652.0,12652.0
+12,Buur Gaabo,-1.219174,41.837245,Somalia,SO,Jubbada Hoose,,3096.0,3096.0
+13,Garoowe,8.405364,48.484465,Somalia,SO,Nugaal,admin,2568.0,2568.0
+14,Marka,1.7159380000000002,44.771662,Somalia,SO,Shabeellaha Hoose,admin,1958.0,1958.0
+15,Xuddur,4.121291,43.889452,Somalia,SO,Bakool,admin,1639.0,1639.0
+16,Bu’aale,1.083333,42.583333,Somalia,SO,Jubbada Dhexe,admin,1490.0,1490.0
+17,Qardho,9.505061999999999,49.084944,Somalia,SO,Bari,,1341.0,1341.0
+18,Mereeg,3.766667,47.3,Somalia,SO,Galguduud,,548.0,548.0
+19,Caluula,11.966113,50.756935999999996,Somalia,SO,Bari,,513.0,513.0
+20,Hurdiyo,10.5627,51.1344,Somalia,SO,Bari,,176.0,176.0
+21,Qoryooley,1.7878450000000001,44.529990000000005,Somalia,SO,Shabeellaha Hoose,minor,,
+22,Laascaanood,8.477378999999999,47.35971,Somalia,SO,Sool,admin,,
+23,Ceerigaabo,10.616158,47.367946999999994,Somalia,SO,Sanaag,admin,,
+24,Baidoa,3.113826,43.649802,Somalia,SO,Bay,admin,,
+25,Dhuusamarreeb,5.535975,46.386656,Somalia,SO,Galguduud,admin,,
+26,Afgooye,2.1381,45.1212,Somalia,SO,Shabeellaha Hoose,minor,,
+27,Burco,9.522125,45.533626,Somalia,SO,Togdheer,admin,,
+28,Hobyo,5.3505,48.5268,Somalia,SO,Mudug,minor,,
+29,Laasqoray,11.1595,48.1967,Somalia,SO,Sanaag,minor,,
+30,Baki,9.892059,43.385306,Somalia,SO,Awdal,admin,,
+31,Hargeysa,9.56,44.065,Somalia,SO,Woqooyi Galbeed,admin,,
+32,Lughaye,10.685733,43.943973,Somalia,SO,Awdal,minor,,

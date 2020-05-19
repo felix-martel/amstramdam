@@ -51,8 +51,13 @@
                     <div class="fieldset">
                         <label for="map-selector">Carte</label>
                         <select name="map" id="map-selector" onchange="updateView()">
-                            <option value="france">France</option>
-                            <option value="world" selected>Monde entier</option>
+                            {% for dataset in datasets %}
+                                {% if dataset.is_sep %}
+                                    <option disabled> </option>
+                                {% else %}
+                                    <option value="{{dataset.name}}">{{ dataset.display}}</option>
+                                {% endif %}
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="fieldset">
@@ -75,6 +80,12 @@
                         <label for="zoom-checkbox"> <s> Allow zoom</s></label>
                         <input id="zoom-checkbox" name="zoom" disabled type="checkbox">
                     </div>-->
+                    <div class="fieldset">
+                        <label for="diff-level">Niveau de difficulté</label>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="diff-level" name="difficulty">
+                        </div>
+                    </div>
                     <button type="submit" id="new-game-button">
                         C'est parti
                     </button>
@@ -110,16 +121,10 @@
         bw: 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
         bwSSL: 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
     };
-    const game = {
-        france: {
-            center: [46.758162, 2.812324],
-            zoom: 4
-        },
-        world: {
+    const defaultView = {
             center: [23.7, 7.6],
             zoom: 1
-        },
-    };
+        };
     function getIcon(color="red", opacity=0.8){
         const markerHtmlStyles = `
           background: ${color};
@@ -135,37 +140,46 @@
             html: `<span class="icon" style="${markerHtmlStyles}"></span>`
         })
     }
-    const datasets = {{ datasets | tojson}};
-    var pointLayers = {};
-    datasets.forEach(dataset => {
-        var dataPoints = L.featureGroup();
-        dataset.points.forEach(coords => {
-            dataPoints.addLayer(L.marker(coords, {icon: getIcon("blue")}));
-        });
-        pointLayers[dataset.name] = dataPoints;
-    });
-    console.log(datasets);
 
 
-    var current = "world";
-    const currGame = game[current]; // game.world;
-     var map = L.map('leaflet').setView(currGame.center, currGame.zoom);
-     var OSM = L.tileLayer(LAYERS.bwSSL, {
-         zoomControl:  false, //false,
-       //attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
-     });
+     var map = L.map('leaflet').setView(defaultView.center, defaultView.zoom);
+     var OSM = L.tileLayer(LAYERS.bwSSL, {zoomControl:  false, });
      OSM.addTo(map);
-     pointLayers[current].addTo(map);
 
+     /* HANDLE DATA POINTS */
+     var pointLayer = L.featureGroup();
+    pointLayer.addTo(map);
 
     const gameSelector = document.getElementById("map-selector");
-    function updateView(){
-        map.removeLayer(pointLayers[current]);
-        current = gameSelector.value;
-        map.addLayer(pointLayers[current]);
-        let currGame = game[current];
-        map.setView(currGame.center, currGame.zoom);
+    function GET(theUrl, callback)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                callback(JSON.parse(xmlHttp.responseText));
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
     }
+
+    function updateView(){
+        if (pointLayer){
+            map.removeLayer(pointLayer);
+        }
+        const dataset = gameSelector.value;
+        GET(`/points/${dataset}`, (data) => {
+            console.log(data);
+            pointLayer = L.featureGroup();
+            data.points.forEach(coords => {
+                pointLayer.addLayer(L.marker(coords, {icon: getIcon("blue")}));
+            });
+
+            const bounds = pointLayer.getBounds();
+            pointLayer.addTo(map);
+            map.flyToBounds(bounds);
+        });
+    }
+
     var gameNameInput = document.getElementById("game-name");
     var gameJoinButton = document.getElementById("join-game-button");
     gameNameInput.addEventListener("keydown", function(event){

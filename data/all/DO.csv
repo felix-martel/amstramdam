@@ -1,0 +1,35 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Santo Domingo,18.466667,-69.9,Dominican Republic,DO,Ozama,primary,2154000.0,2873.0
+1,Santiago,19.451703,-70.69703,Dominican Republic,DO,Cibao Norte,admin,1550753.0,1391262.0
+2,San Pedro de Macorís,18.461557,-69.29718100000001,Dominican Republic,DO,Higuamo,admin,217899.0,204140.0
+3,La Romana,18.427335,-68.972849,Dominican Republic,DO,Yuma,admin,208437.0,196506.0
+4,La Vega,19.222072,-70.529558,Dominican Republic,DO,Cibao Sur,admin,163197.0,102426.0
+5,San Cristóbal,18.418631,-70.107913,Dominican Republic,DO,Valdesia,admin,154040.0,154040.0
+6,San Francisco de Macorís,19.30099,-70.252586,Dominican Republic,DO,Cibao Nordeste,admin,152538.0,124763.0
+7,Higüey,18.609363000000002,-68.71198100000001,Dominican Republic,DO,Yuma,minor,123787.0,123787.0
+8,Puerto Plata,19.7875,-70.6875,Dominican Republic,DO,Cibao Norte,minor,119897.0,119897.0
+9,Barahona,18.20854,-71.10077199999999,Dominican Republic,DO,Enriquillo,admin,90128.0,77160.0
+10,Bonao,18.936874,-70.409226,Dominican Republic,DO,Cibao Sur,minor,73269.0,73269.0
+11,San Juan,18.805884,-71.229907,Dominican Republic,DO,El Valle,admin,72950.0,72950.0
+12,Baní,18.279644,-70.331845,Dominican Republic,DO,Valdesia,minor,66709.0,66709.0
+13,Moca,19.393521,-70.525977,Dominican Republic,DO,Cibao Norte,minor,61834.0,61834.0
+14,Azua,18.453192,-70.73490100000001,Dominican Republic,DO,Valdesia,minor,59139.0,59139.0
+15,Mao,19.55186,-71.078133,Dominican Republic,DO,Cibao Noroeste,admin,48297.0,48297.0
+16,Salcedo,19.377619,-70.41762,Dominican Republic,DO,Cibao Nordeste,minor,45299.0,45299.0
+17,El Pino,18.883333,-71.666667,Dominican Republic,DO,,,43894.0,27908.0
+18,Cotuí,19.052716,-70.149392,Dominican Republic,DO,Cibao Sur,minor,41641.0,41641.0
+19,Hato Mayor,18.762777,-69.256807,Dominican Republic,DO,Higuamo,minor,35999.0,35999.0
+20,Nagua,19.37463,-69.84948399999999,Dominican Republic,DO,Cibao Nordeste,minor,33862.0,33862.0
+21,Neiba,18.481375,-71.419648,Dominican Republic,DO,Enriquillo,minor,25731.0,18670.0
+22,El Seibo,18.765589000000002,-69.03886,Dominican Republic,DO,Yuma,minor,23547.0,23547.0
+23,Monte Cristi,19.847222,-71.641667,Dominican Republic,DO,Cibao Noroeste,minor,17001.0,16704.0
+24,Dajabón,19.548779,-71.708288,Dominican Republic,DO,Cibao Noroeste,minor,16398.0,16398.0
+25,Sabaneta,19.477930999999998,-71.341249,Dominican Republic,DO,Cibao Noroeste,minor,16380.0,16380.0
+26,Monte Plata,18.807002,-69.783989,Dominican Republic,DO,Higuamo,minor,15532.0,15532.0
+27,Samaná,19.205614,-69.336851,Dominican Republic,DO,Cibao Nordeste,minor,11432.0,11432.0
+28,Pedernales,18.038376,-71.74403000000001,Dominican Republic,DO,Enriquillo,minor,11072.0,11072.0
+29,Jimaní,18.491685999999998,-71.850217,Dominican Republic,DO,Enriquillo,minor,6567.0,6567.0
+30,Bávaro,18.696341,-68.433996,Dominican Republic,DO,Yuma,,795.0,795.0
+31,San José de Ocoa,18.546609,-70.50630699999999,Dominican Republic,DO,Valdesia,minor,,
+32,Santo Domingo Este,18.488468,-69.857066,Dominican Republic,DO,Ozama,admin,,
+33,Comendador,18.8775,-71.70277800000001,Dominican Republic,DO,El Valle,minor,,

@@ -1,0 +1,677 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Moscow,55.752221999999996,37.615556,Russia,RU,Moskva,primary,10452000.0,10452000.0
+1,Saint Petersburg,59.89444399999999,30.264166999999997,Russia,RU,Sankt-Peterburg,admin,4553000.0,3493212.0
+2,Novosibirsk,55.0415,82.9346,Russia,RU,Novosibirskaya Oblast’,admin,1389000.0,1037201.0
+3,Yekaterinburg,56.8519,60.6122,Russia,RU,Sverdlovskaya Oblast’,admin,1313000.0,1227976.0
+4,Nizhniy Novgorod,56.326944,44.0075,Russia,RU,Nizhegorodskaya Oblast’,admin,1278000.0,1214926.0
+5,Samara,53.200065,50.150002,Russia,RU,Samarskaya Oblast’,admin,1137000.0,856190.0
+6,Omsk,55.0,73.4,Russia,RU,Omskaya Oblast’,admin,1135000.0,1043403.0
+7,Kazan’,55.788740000000004,49.122144,Russia,RU,Tatarstan,admin,1115000.0,912270.0
+8,Chelyabinsk,55.154015,61.42915,Russia,RU,Chelyabinskaya Oblast’,admin,1091000.0,946604.0
+9,Rostov-na-Donu,47.23135,39.723284,Russia,RU,Rostovskaya Oblast’,admin,1052000.0,1013134.0
+10,Ufa,54.785167,56.045621,Russia,RU,Bashkortostan,admin,1018000.0,920756.0
+11,Perm’,58.00928199999999,56.284063,Russia,RU,Permskiy Kray,,997000.0,851308.0
+12,Volgograd,48.719390000000004,44.501835,Russia,RU,Volgogradskaya Oblast’,admin,984000.0,619655.0
+13,Krasnoyarsk,56.018393,92.867174,Russia,RU,Krasnoyarskiy Kray,admin,925000.0,302210.0
+14,Voronezh,51.672035,39.184301,Russia,RU,Voronezhskaya Oblast’,admin,844000.0,295469.0
+15,Saratov,51.540556,46.008611,Russia,RU,Saratovskaya Oblast’,admin,843000.0,786173.0
+16,Krasnodar,45.044843,38.976029,Russia,RU,Krasnodarskiy Kray,admin,649851.0,552532.0
+17,Ul’yanovsk,54.328241000000006,48.38657,Russia,RU,Ul’yanovskaya Oblast’,admin,640680.0,502427.0
+18,Izhevsk,56.849756000000006,53.204479000000006,Russia,RU,Udmurtiya,admin,631038.0,591422.0
+19,Yaroslavl’,57.619769999999995,39.85536,Russia,RU,Yaroslavskaya Oblast’,admin,606730.0,535578.0
+20,Barnaul,53.360556,83.763611,Russia,RU,Altayskiy Kray,admin,599579.0,539843.0
+21,Vladivostok,43.1211,131.9226,Russia,RU,Primorskiy Kray,admin,587022.0,586212.0
+22,Irkutsk,52.297778,104.296389,Russia,RU,Irkutskaya Oblast’,admin,586695.0,557955.0
+23,Khabarovsk,48.482715,135.083793,Russia,RU,Khabarovskiy Kray,admin,579000.0,546411.0
+24,Makhachkala,42.976378000000004,47.502356,Russia,RU,Dagestan,admin,554981.0,497959.0
+25,Orenburg,51.7727,55.0988,Russia,RU,Orenburgskaya Oblast’,admin,550204.0,511437.0
+26,Novokuznetsk,53.7557,87.1099,Russia,RU,Kemerovskaya Oblast’,,539616.0,521035.0
+27,Tomsk,56.49770899999999,84.974374,Russia,RU,Tomskaya Oblast’,admin,535479.0,408421.0
+28,Ryazan’,54.6269,39.6916,Russia,RU,Ryazanskaya Oblast’,admin,520173.0,484573.0
+29,Tyumen’,57.152221999999995,65.527222,Russia,RU,Tyumenskaya Oblast’,admin,519119.0,402785.0
+30,Lipetsk,52.603111,39.570762,Russia,RU,Lipetskaya Oblast’,admin,515655.0,488633.0
+31,Penza,53.200656,45.004643,Russia,RU,Penzenskaya Oblast’,admin,512602.0,471284.0
+32,Astrakhan’,46.349683,48.040756,Russia,RU,Astrakhanskaya Oblast’,admin,502533.0,484194.0
+33,Tula,54.202132999999996,37.644294,Russia,RU,Tul’skaya Oblast’,admin,489486.0,468825.0
+34,Kemerovo,55.333332999999996,86.083333,Russia,RU,Kemerovskaya Oblast’,admin,477090.0,464279.0
+35,Krasnyye Chelny,55.7,52.35,Russia,RU,Tatarstan,,461086.0,461086.0
+36,Kirov,58.596654,49.660068,Russia,RU,Kirovskaya Oblast’,admin,457437.0,457383.0
+37,Cheboksary,56.132222,47.251944,Russia,RU,Chuvashiya,admin,446781.0,441274.0
+38,Kaliningrad,54.706493,20.510951000000002,Russia,RU,Kaliningradskaya Oblast’,admin,434954.0,371499.0
+39,Bryansk,53.252089,34.371666,Russia,RU,Bryanskaya Oblast’,admin,427236.0,425784.0
+40,Afanasovo,57.01279,41.044438,Russia,RU,Ivanovskaya Oblast’,,420839.0,414215.0
+41,Magnitogorsk,53.418611,59.047222,Russia,RU,Chelyabinskaya Oblast’,,413351.0,204098.0
+42,Kursk,51.737328999999995,36.187349,Russia,RU,Kurskaya Oblast’,admin,409431.0,388053.0
+43,Tver’,56.860491,35.876027,Russia,RU,Tverskaya Oblast’,admin,400212.0,363874.0
+44,Surgut,61.25,73.416667,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,400000.0,306703.0
+45,Nizhniy Tagil,57.91944399999999,59.965,Russia,RU,Sverdlovskaya Oblast’,,381116.0,367571.0
+46,Vladikavkaz,43.036667,44.667778000000006,Russia,RU,North Ossetia,admin,364630.0,317370.0
+47,Stavropol’,45.0428,41.9734,Russia,RU,Stavropol’skiy Kray,admin,363064.0,338527.0
+48,Ulan-Ude,51.827212,107.606268,Russia,RU,Buryatiya,admin,360278.0,347976.0
+49,Arkhangel’sk,64.5401,40.5433,Russia,RU,Arkhangel’skaya Oblast’,admin,356051.0,234322.0
+50,Belgorod,50.610743,36.580152000000005,Russia,RU,Belgorodskaya Oblast’,admin,345289.0,310720.0
+51,Kurgan,55.45,65.333333,Russia,RU,Kurganskaya Oblast’,admin,343129.0,315670.0
+52,Kaluga,54.529302,36.275415,Russia,RU,Kaluzhskaya Oblast’,admin,338978.0,288489.0
+53,Orël,52.965076,36.078495000000004,Russia,RU,Orlovskaya Oblast’,admin,334552.0,324200.0
+54,Novyy Sochi,43.609565,39.717382,Russia,RU,Krasnodarskiy Kray,,327608.0,325670.0
+55,Yoshkar-Ola,56.63694399999999,47.871111,Russia,RU,Mariy-El,admin,324406.0,279100.0
+56,Volzhskiy,48.785832,44.77973,Russia,RU,Volgogradskaya Oblast’,,323293.0,288752.0
+57,Smolensk,54.7818,32.0401,Russia,RU,Smolenskaya Oblast’,admin,320991.0,302918.0
+58,Podol’sk,55.424184999999994,37.554717,Russia,RU,Moskovskaya Oblast’,,320635.0,179400.0
+59,Murmansk,68.979174,33.092514,Russia,RU,Murmanskaya Oblast’,admin,319263.0,224253.0
+60,Vladimir,56.136547,40.396576,Russia,RU,Vladimirskaya Oblast’,admin,318648.0,310024.0
+61,Cherepovets,59.13333299999999,37.9,Russia,RU,Vologodskaya Oblast’,,311850.0,219363.0
+62,Chita,52.031712,113.500867,Russia,RU,Zabaykal’skiy Kray,admin,308500.0,277807.0
+63,Nal’chik,43.498056,43.618889,Russia,RU,Kabardino-Balkariya,admin,307866.0,272800.0
+64,Saransk,54.1838,45.1749,Russia,RU,Mordoviya,admin,303394.0,303215.0
+65,Tambov,52.731689,41.443262,Russia,RU,Tambovskaya Oblast’,admin,301482.0,290933.0
+66,Vologda,59.2187,39.8886,Russia,RU,Vologodskaya Oblast’,admin,294889.0,208495.0
+67,Taganrog,47.23617,38.896878,Russia,RU,Rostovskaya Oblast’,,279056.0,230864.0
+68,Kostroma,57.766468,40.926864,Russia,RU,Kostromskaya Oblast’,admin,277656.0,236255.0
+69,Komsomol’sk-na-Amure,50.550340000000006,137.00995,Russia,RU,Khabarovskiy Kray,admin,275908.0,252840.0
+70,Prokop’yevsk,53.9059,86.719,Russia,RU,Kemerovskaya Oblast’,,275615.0,209479.0
+71,Sterlitamak,53.624618999999996,55.950148,Russia,RU,Bashkortostan,,267231.0,172849.0
+72,Petrozavodsk,61.796131,34.349295,Russia,RU,Kareliya,admin,265025.0,231676.0
+73,Dzerzhinsk,56.241431999999996,43.455393,Russia,RU,Nizhegorodskaya Oblast’,,256537.0,214378.0
+74,Orsk,51.204873,58.566848,Russia,RU,Orenburgskaya Oblast’,,246836.0,71870.0
+75,Bratsk,56.161958999999996,101.62183900000001,Russia,RU,Irkutskaya Oblast’,,246348.0,21462.0
+76,Nizhnevartovsk,60.9344,76.5531,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,244937.0,27833.0
+77,Angarsk,52.536667,103.88638900000001,Russia,RU,Irkutskaya Oblast’,,243158.0,220280.0
+78,Novorossiysk,44.724385999999996,37.767524,Russia,RU,Krasnodarskiy Kray,,241856.0,217998.0
+79,Yakutsk,62.033889,129.733056,Russia,RU,Sakha (Yakutiya),admin,235600.0,206026.0
+80,Nizhnekamsk,55.636570999999996,51.824474,Russia,RU,Tatarstan,,234297.0,186429.0
+81,Syktyvkar,61.676421999999995,50.809940999999995,Russia,RU,Komi,admin,230910.0,230139.0
+82,Noginsk,55.866466,38.443799,Russia,RU,Moskovskaya Oblast’,,229731.0,115979.0
+83,Noginsk,64.483333,91.233333,Russia,RU,Krasnoyarskiy Kray,,229731.0,229731.0
+84,Staryy Oskol,51.296667,37.841667,Russia,RU,Belgorodskaya Oblast’,,226977.0,173285.0
+85,Groznyy,43.311946999999996,45.688951,Russia,RU,Chechnya,admin,226100.0,216375.0
+86,Kolpino,59.744167000000004,30.579444,Russia,RU,Sankt-Peterburg,,225801.0,136076.0
+87,Shakhty,47.709106,40.214434000000004,Russia,RU,Rostovskaya Oblast’,,221312.0,191095.0
+88,Blagoveshchensk,50.279614,127.54050500000001,Russia,RU,Amurskaya Oblast’,admin,221296.0,192126.0
+89,Velikiy Novgorod,58.516667000000005,31.283333000000002,Russia,RU,Novgorodskaya Oblast’,admin,218717.0,218717.0
+90,Rybinsk,58.044598,38.842594,Russia,RU,Yaroslavskaya Oblast’,,216724.0,191025.0
+91,Biysk,52.536389,85.207222,Russia,RU,Altayskiy Kray,,215430.0,204163.0
+92,Pskov,57.8136,28.3496,Russia,RU,Pskovskaya Oblast’,admin,201990.0,177969.0
+93,Balakovo,52.027824,47.800696,Russia,RU,Saratovskaya Oblast’,,199572.0,146071.0
+94,Armavir,44.9892,41.1234,Russia,RU,Krasnodarskiy Kray,,199548.0,184079.0
+95,Engel’s,51.483889000000005,46.105278000000006,Russia,RU,Saratovskaya Oblast’,,196011.0,170431.0
+96,Severodvinsk,64.5635,39.8302,Russia,RU,Arkhangel’skaya Oblast’,,194292.0,169863.0
+97,Zlatoust,55.171110999999996,59.650833,Russia,RU,Chelyabinskaya Oblast’,,191366.0,161204.0
+98,Syzran’,53.1585,48.4681,Russia,RU,Samarskaya Oblast’,,189338.0,153840.0
+99,Petropavlovsk-Kamchatskiy,53.044435,158.65076200000001,Russia,RU,Kamchatskiy Kray,admin,187282.0,177259.0
+100,Kamensk-Ural’skiy,56.4185,61.9329,Russia,RU,Sverdlovskaya Oblast’,,182500.0,170697.0
+101,Yuzhno-Sakhalinsk,46.954068,142.736027,Russia,RU,Sakhalinskaya Oblast’,admin,176484.0,172886.0
+102,Berezniki,59.4091,56.8204,Russia,RU,Permskiy Kray,,167748.0,138862.0
+103,Volgodonsk,47.513611,42.151389,Russia,RU,Rostovskaya Oblast’,,167731.0,77138.0
+104,Miass,55.045,60.108332999999995,Russia,RU,Chelyabinskaya Oblast’,,167500.0,130169.0
+105,Abakan,53.71555600000001,91.429167,Russia,RU,Khakasiya,admin,167289.0,155465.0
+106,Novocherkassk,47.420175,40.091325,Russia,RU,Rostovskaya Oblast’,,166974.0,151967.0
+107,Noril’sk,69.3535,88.2027,Russia,RU,Krasnoyarskiy Kray,,165873.0,140800.0
+108,Rubtsovsk,51.5,81.25,Russia,RU,Altayskiy Kray,,161065.0,157201.0
+109,Salavat,53.38365,55.907729,Russia,RU,Bashkortostan,,159893.0,63403.0
+110,Nakhodka,42.813837,132.873476,Russia,RU,Primorskiy Kray,,159551.0,146920.0
+111,Nakhodka,67.738889,77.55833299999999,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,159551.0,159551.0
+112,Maykop,44.607778,40.105833000000004,Russia,RU,Adygeya,admin,158451.0,128303.0
+113,Ussuriysk,43.802914,131.94577900000002,Russia,RU,Primorskiy Kray,,157068.0,124279.0
+114,Kovrov,56.357222,41.319167,Russia,RU,Vladimirskaya Oblast’,,154224.0,151896.0
+115,Novokuybyshevsk,53.0959,49.9462,Russia,RU,Samarskaya Oblast’,,152334.0,111800.0
+116,Kolomna,55.079443999999995,38.778333,Russia,RU,Moskovskaya Oblast’,,147690.0,112959.0
+117,Pyatigorsk,44.048611,43.059444,Russia,RU,Stavropol’skiy Kray,,142865.0,29626.0
+118,Arzamas,55.394852,43.83992,Russia,RU,Nizhegorodskaya Oblast’,,142597.0,109479.0
+119,Al’met’yevsk,54.904424,52.315397,Russia,RU,Tatarstan,,140437.0,95505.0
+120,Orekhovo-Zuyevo,55.806722,38.961782,Russia,RU,Moskovskaya Oblast’,,140247.0,120000.0
+121,Serpukhov,54.915785,37.411139,Russia,RU,Moskovskaya Oblast’,,135584.0,128158.0
+122,Nevinnomyssk,44.6333,41.9444,Russia,RU,Stavropol’skiy Kray,,134380.0,134345.0
+123,Pervoural’sk,56.905278,59.943611,Russia,RU,Sverdlovskaya Oblast’,,133600.0,120872.0
+124,Kislovodsk,43.913333,42.720833,Russia,RU,Stavropol’skiy Kray,,132771.0,131903.0
+125,Dimitrovgrad,54.25,49.55,Russia,RU,Ul’yanovskaya Oblast’,,132226.0,110201.0
+126,Muromskiy,55.5571,42.0272,Russia,RU,Vladimirskaya Oblast’,,131287.0,126931.0
+127,Novomoskovsk,54.0105,38.2846,Russia,RU,Tul’skaya Oblast’,,130982.0,18201.0
+128,Kamyshin,50.098331,45.416013,Russia,RU,Volgogradskaya Oblast’,,128626.0,36600.0
+129,Neftekamsk,56.092,54.2661,Russia,RU,Bashkortostan,,126805.0,117535.0
+130,Achinsk,56.2694,90.4993,Russia,RU,Krasnoyarskiy Kray,,117634.0,107449.0
+131,Vyborg,60.707631000000006,28.752826000000002,Russia,RU,Leningradskaya Oblast’,,117201.0,78633.0
+132,Cherkessk,44.223333000000004,42.057778000000006,Russia,RU,Karachayevo-Cherkesiya,admin,116224.0,86082.0
+133,Yelets,52.623658999999996,38.501686,Russia,RU,Lipetskaya Oblast’,,115919.0,115688.0
+134,Tobol’sk,58.198071,68.25456700000001,Russia,RU,Tyumenskaya Oblast’,,113800.0,61955.0
+135,Nefteyugansk,61.083332999999996,72.7,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,112632.0,112632.0
+136,Noyabr’sk,63.166667000000004,75.616667,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,110572.0,110572.0
+137,Bataysk,47.139747,39.75181,Russia,RU,Rostovskaya Oblast’,,109962.0,103727.0
+138,Sergiyev Posad,56.3,38.133333,Russia,RU,Moskovskaya Oblast’,,109252.0,104843.0
+139,Leninsk-Kuznetskiy,54.6567,86.1737,Russia,RU,Kemerovskaya Oblast’,,109023.0,107072.0
+140,Kyzyl,51.714721000000004,94.453379,Russia,RU,Tyva,admin,108240.0,104381.0
+141,Oktyabr’skiy,54.481469999999995,53.471031,Russia,RU,Bashkortostan,,108200.0,67386.0
+142,Obninsk,55.09680600000001,36.610064,Russia,RU,Kaluzhskaya Oblast’,,107392.0,25080.0
+143,Chapayevsk,53.0117,49.7513,Russia,RU,Samarskaya Oblast’,,107164.0,70147.0
+144,Elista,46.307778000000006,44.255833,Russia,RU,Kalmykiya,admin,106971.0,92485.0
+145,Kandalaksha,67.162002,32.412287,Russia,RU,Murmanskaya Oblast’,,106798.0,38431.0
+146,Novotroitsk,51.203012,58.326653,Russia,RU,Orenburgskaya Oblast’,,106186.0,74371.0
+147,Derbent,42.067795000000004,48.289874,Russia,RU,Dagestan,,105965.0,88553.0
+148,Kiselëvsk,53.99,86.6621,Russia,RU,Kemerovskaya Oblast’,,104000.0,70328.0
+149,Velikiye Luki,56.34,30.545170000000002,Russia,RU,Pskovskaya Oblast’,,103149.0,83337.0
+150,Ukhta,63.567054000000006,53.683478,Russia,RU,Komi,,102187.0,90606.0
+151,Kansk,56.20166700000001,95.7175,Russia,RU,Krasnoyarskiy Kray,,101502.0,87339.0
+152,Sarapul,56.470977000000005,53.803603,Russia,RU,Udmurtiya,,101344.0,83901.0
+153,Solikamsk,59.6316,56.7685,Russia,RU,Permskiy Kray,,100812.0,93982.0
+154,Glazov,58.1393,52.658,Russia,RU,Udmurtiya,,100676.0,86028.0
+155,Ust’-Ilimsk,58.008047,102.66926,Russia,RU,Irkutskaya Oblast’,,100271.0,37353.0
+156,Novoshakhtinsk,47.760366,39.933351,Russia,RU,Rostovskaya Oblast’,,99478.0,66061.0
+157,Tuapse,44.1053,39.0802,Russia,RU,Krasnodarskiy Kray,minor,99145.0,64234.0
+158,Votkinsk,57.048651,53.987168999999994,Russia,RU,Udmurtiya,,98633.0,83863.0
+159,Serov,59.603336999999996,60.5787,Russia,RU,Sverdlovskaya Oblast’,,98438.0,85224.0
+160,Balashov,51.5502,43.1667,Russia,RU,Saratovskaya Oblast’,,98107.0,70107.0
+161,Zheleznogorsk,52.331,35.3711,Russia,RU,Kurskaya Oblast’,,97900.0,90524.0
+162,Kuznetsk,53.11675,46.600367999999996,Russia,RU,Penzenskaya Oblast’,,95574.0,90480.0
+163,Magadan,59.563803,150.80347,Russia,RU,Magadanskaya Oblast’,admin,95282.0,87161.0
+164,Novyy Urengoy,66.083333,76.633333,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,94212.0,503.0
+165,Imeni Michurina,52.9338,40.5369,Russia,RU,Tambovskaya Oblast’,,93499.0,93229.0
+166,Nazran’,43.225967,44.773231,Russia,RU,Ingushetiya,,93357.0,93357.0
+167,Kineshma,57.439139000000004,42.128943,Russia,RU,Ivanovskaya Oblast’,,92983.0,90765.0
+168,Bugul’ma,54.5378,52.7985,Russia,RU,Tatarstan,,91900.0,78868.0
+169,Novoaltaysk,53.3917,83.9363,Russia,RU,Altayskiy Kray,,91386.0,61050.0
+170,Gatchina,59.576389,30.128333,Russia,RU,Leningradskaya Oblast’,,90486.0,89761.0
+171,Kirovo-Chepetsk,58.553858999999996,50.03986,Russia,RU,Kirovskaya Oblast’,,90252.0,52859.0
+172,Yegor’yevsk,55.382833,39.032334000000006,Russia,RU,Moskovskaya Oblast’,,89795.0,85200.0
+173,Yeysk,46.7055,38.2739,Russia,RU,Krasnodarskiy Kray,minor,87814.0,65369.0
+174,Buzuluk,52.7807,52.2635,Russia,RU,Orenburgskaya Oblast’,,87714.0,81810.0
+175,Shchëkino,54.00513,37.52194,Russia,RU,Tul’skaya Oblast’,,86088.0,60700.0
+176,Usol’ye-Sibirskoye,52.751943999999995,103.645278,Russia,RU,Irkutskaya Oblast’,,85900.0,84124.0
+177,Yurga,55.72305600000001,84.886111,Russia,RU,Kemerovskaya Oblast’,,84220.0,60771.0
+178,Anzhero-Sudzhensk,56.081,86.0285,Russia,RU,Kemerovskaya Oblast’,,83692.0,82526.0
+179,Troitsk,54.0979,61.5773,Russia,RU,Chelyabinskaya Oblast’,,82338.0,57500.0
+180,Kaspiysk,42.881648,47.639194,Russia,RU,Dagestan,,81752.0,41151.0
+181,Asbest,57.009933999999994,61.457763,Russia,RU,Sverdlovskaya Oblast’,,81248.0,74583.0
+182,Klin,56.333332999999996,36.733333,Russia,RU,Moskovskaya Oblast’,,80778.0,63664.0
+183,Vorkuta,67.498841,64.052526,Russia,RU,Komi,,80039.0,62484.0
+184,Kropotkin,45.4375,40.575556,Russia,RU,Krasnodarskiy Kray,,79599.0,61437.0
+185,Shadrinsk,56.0852,63.6335,Russia,RU,Kurganskaya Oblast’,,79479.0,55128.0
+186,Birobidzhan,48.792845,132.923856,Russia,RU,Yevreyskaya Avtonomnaya Oblast’,admin,76146.0,73899.0
+187,Kamensk-Shakhtinskiy,48.317794,40.259475,Russia,RU,Rostovskaya Oblast’,minor,75814.0,62261.0
+188,Buynaksk,42.819001,47.119197,Russia,RU,Dagestan,,75800.0,75800.0
+189,Georgiyevsk,44.151944,43.469722,Russia,RU,Stavropol’skiy Kray,,72649.0,45668.0
+190,Chusovoy,58.3013,57.8131,Russia,RU,Permskiy Kray,,72113.0,50205.0
+191,Chernogorsk,53.823611,91.28416700000001,Russia,RU,Khakasiya,,71582.0,8049.0
+192,Vol’sk,52.045409,47.379929,Russia,RU,Saratovskaya Oblast’,,70500.0,53554.0
+193,Belogorsk,50.91644,128.47726,Russia,RU,Amurskaya Oblast’,,70203.0,67911.0
+194,Tuymazy,54.60665699999999,53.709699,Russia,RU,Bashkortostan,,68829.0,54823.0
+195,Borisoglebsk,51.367129,42.084942,Russia,RU,Voronezhskaya Oblast’,,68597.0,61393.0
+196,Khanty-Mansiysk,61.004167,69.001944,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,admin,67800.0,28428.0
+197,Ishim,56.112807,69.490148,Russia,RU,Tyumenskaya Oblast’,,67762.0,53834.0
+198,Oktyabr’skiy,52.658412,156.241768,Russia,RU,Kamchatskiy Kray,,67386.0,67386.0
+199,Apatity,67.564142,33.4031,Russia,RU,Murmanskaya Oblast’,,66907.0,61186.0
+200,Aleksin,54.505030000000005,37.067403000000006,Russia,RU,Tul’skaya Oblast’,,66885.0,51503.0
+201,Kungur,57.4368,56.9593,Russia,RU,Permskiy Kray,minor,66389.0,53434.0
+202,Klintsy,52.760186,32.239345,Russia,RU,Bryanskaya Oblast’,,66336.0,55434.0
+203,Neryungri,56.666368999999996,124.63825200000001,Russia,RU,Sakha (Yakutiya),,66320.0,408.0
+204,Leninogorsk,54.602559,52.460871,Russia,RU,Tatarstan,,66263.0,40461.0
+205,Lesosibirsk,58.2938,92.3823,Russia,RU,Krasnoyarskiy Kray,,65945.0,65313.0
+206,Polevskoy,56.442221999999994,60.187778,Russia,RU,Sverdlovskaya Oblast’,,65770.0,19642.0
+207,Kumertau,52.766667000000005,55.783333,Russia,RU,Bashkortostan,,65321.0,32014.0
+208,Tikhoretsk,45.854721999999995,40.125278,Russia,RU,Krasnodarskiy Kray,minor,64387.0,60350.0
+209,Svobodnyy,51.37525,128.140971,Russia,RU,Amurskaya Oblast’,,63620.0,61017.0
+210,Rzhev,56.262413,34.328168,Russia,RU,Tverskaya Oblast’,,63414.0,62246.0
+211,Novaya Balakhna,56.489887,43.60114,Russia,RU,Nizhegorodskaya Oblast’,,63083.0,61891.0
+212,Belebey,54.11666700000001,54.11666700000001,Russia,RU,Bashkortostan,,62582.0,52767.0
+213,Chistopol’,55.363110999999996,50.642438,Russia,RU,Tatarstan,,62200.0,42265.0
+214,Tikhvin,59.645106999999996,33.529371999999995,Russia,RU,Leningradskaya Oblast’,,62075.0,39511.0
+215,Labinsk,44.634167,40.735556,Russia,RU,Krasnodarskiy Kray,minor,61945.0,41243.0
+216,Iskitim,54.6366,83.3045,Russia,RU,Novosibirskaya Oblast’,,61827.0,59786.0
+217,Vyksa,55.3175,42.174444,Russia,RU,Nizhegorodskaya Oblast’,,61664.0,59048.0
+218,Sibay,52.718056000000004,58.665833,Russia,RU,Bashkortostan,,61590.0,47802.0
+219,Sal’sk,46.474703000000005,41.541142,Russia,RU,Rostovskaya Oblast’,minor,61000.0,48478.0
+220,Shuya,56.848649,41.388329999999996,Russia,RU,Ivanovskaya Oblast’,,60705.0,58466.0
+221,Zima,53.9202,102.0442,Russia,RU,Irkutskaya Oblast’,,60239.0,33323.0
+222,Kotlas,61.257452,46.649634000000006,Russia,RU,Arkhangel’skaya Oblast’,,59879.0,59180.0
+223,Gorno-Altaysk,51.956111,85.955,Russia,RU,Altay,admin,59868.0,54917.0
+224,Mikhaylovka,50.06,43.2379,Russia,RU,Volgogradskaya Oblast’,,58898.0,55757.0
+225,Solnechnogorsk,56.183333,36.983333,Russia,RU,Moskovskaya Oblast’,,58891.0,37195.0
+226,Arsen’yev,44.152543,133.27791100000002,Russia,RU,Primorskiy Kray,,58700.0,54742.0
+227,Borovichi,58.387779,33.915463,Russia,RU,Novgorodskaya Oblast’,,57887.0,56571.0
+228,Cheremkhovo,53.156110999999996,103.0675,Russia,RU,Irkutskaya Oblast’,,57395.0,45978.0
+229,Roslavl’,53.952778,32.863889,Russia,RU,Smolenskaya Oblast’,,56971.0,51627.0
+230,Nizhnyaya Tura,58.6293,59.8118,Russia,RU,Sverdlovskaya Oblast’,,56084.0,56084.0
+231,Sayanogorsk,53.0875,91.399722,Russia,RU,Khakasiya,,55642.0,49939.0
+232,Gelendzhik,44.5622,38.0848,Russia,RU,Krasnodarskiy Kray,,55508.0,50715.0
+233,Vyaz’ma,55.210391,34.295076,Russia,RU,Smolenskaya Oblast’,,55500.0,42737.0
+234,Krasnokamensk,50.0979,118.0369,Russia,RU,Zabaykal’skiy Kray,,54316.0,50300.0
+235,Severomorsk,69.06888599999999,33.416218,Russia,RU,Murmanskaya Oblast’,,53921.0,39497.0
+236,Vyshniy Volochëk,57.591246,34.564529,Russia,RU,Tverskaya Oblast’,,53800.0,46708.0
+237,Buguruslan,53.6554,52.442,Russia,RU,Orenburgskaya Oblast’,,53511.0,50243.0
+238,Livny,52.425344,37.606888,Russia,RU,Orlovskaya Oblast’,,52915.0,51640.0
+239,Krasnokamsk,58.0796,55.7552,Russia,RU,Permskiy Kray,,52689.0,48075.0
+240,Tayshetka,55.9611,97.9562,Russia,RU,Irkutskaya Oblast’,,52184.0,37766.0
+241,Nyagan’,62.140556000000004,65.39361099999999,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,52137.0,40340.0
+242,Kimry,56.86666700000001,37.35,Russia,RU,Tverskaya Oblast’,,52070.0,48992.0
+243,Tulun,54.563578,100.58143299999999,Russia,RU,Irkutskaya Oblast’,,51330.0,45484.0
+244,Kyshtym,55.714,60.5528,Russia,RU,Chelyabinskaya Oblast’,,50911.0,41625.0
+245,Otradnyy,53.37595699999999,51.345197,Russia,RU,Samarskaya Oblast’,,50127.0,42673.0
+246,Kanash,55.509618,47.491265999999996,Russia,RU,Chuvashiya,,49886.0,48137.0
+247,Monchegorsk,67.939722,32.873889,Russia,RU,Murmanskaya Oblast’,,49868.0,44001.0
+248,Korshunovka,53.4349,41.844729,Russia,RU,Tambovskaya Oblast’,,49350.0,43311.0
+249,Ruzayevka,54.063873,44.950905,Russia,RU,Mordoviya,,49311.0,39959.0
+250,Verkhnyaya Salda,58.048742000000004,60.559493,Russia,RU,Sverdlovskaya Oblast’,,48992.0,48058.0
+251,Slobodskoy,58.732222,50.177222,Russia,RU,Kirovskaya Oblast’,,48962.0,32361.0
+252,Megion,61.0296,76.1136,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,48691.0,46610.0
+253,Torzhok,57.043594999999996,34.962207,Russia,RU,Tverskaya Oblast’,,48546.0,43132.0
+254,Belaya Kalitva,48.185853,40.774244,Russia,RU,Rostovskaya Oblast’,minor,48098.0,47521.0
+255,Mtsensk,53.27656700000001,36.573337,Russia,RU,Orlovskaya Oblast’,,47609.0,1390.0
+256,Gryazi,52.496573,39.935932,Russia,RU,Lipetskaya Oblast’,,47413.0,45489.0
+257,Mozhga,56.374511,52.255426,Russia,RU,Udmurtiya,,47270.0,38926.0
+258,Amursk,50.23685,136.881363,Russia,RU,Khabarovskiy Kray,,46993.0,44810.0
+259,Safonovo,55.15,33.216667,Russia,RU,Smolenskaya Oblast’,,46637.0,42285.0
+260,Alatyr’,54.8421,46.5813,Russia,RU,Chuvashiya,,46427.0,42156.0
+261,Nadym,65.533333,72.516667,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,46339.0,7107.0
+262,Pechora,65.147165,57.224392,Russia,RU,Komi,,46113.0,45801.0
+263,Spasskoye,44.612148,132.80006799999998,Russia,RU,Primorskiy Kray,,45900.0,43822.0
+264,Apsheronsk,44.464721999999995,39.734167,Russia,RU,Krasnodarskiy Kray,minor,45876.0,40451.0
+265,Mozdok,43.743593,44.651769,Russia,RU,North Ossetia,,45702.0,40823.0
+266,Volkhov,59.819014,32.367159,Russia,RU,Leningradskaya Oblast’,,45673.0,45060.0
+267,Yefremov,53.14806,38.099235,Russia,RU,Tul’skaya Oblast’,,45497.0,44369.0
+268,Gorod Shebekino,50.416667,36.916667,Russia,RU,Belgorodskaya Oblast’,minor,45194.0,37409.0
+269,Chernyakhovsk,54.63345,21.815566,Russia,RU,Kaliningradskaya Oblast’,minor,45187.0,39526.0
+270,Usinsk,65.993889,57.52805600000001,Russia,RU,Komi,,45000.0,40827.0
+271,Strezhevoy,60.7333,77.5889,Russia,RU,Tomskaya Oblast’,,44784.0,33211.0
+272,Yelkhovskiy,57.35,61.9,Russia,RU,Sverdlovskaya Oblast’,,44689.0,33700.0
+273,Kamen’-na-Obi,53.7884,81.3423,Russia,RU,Altayskiy Kray,,44564.0,37202.0
+274,Akhtubinsk,48.279548,46.172167,Russia,RU,Astrakhanskaya Oblast’,,44551.0,31807.0
+275,Timashevsk,45.61694,38.952464,Russia,RU,Krasnodarskiy Kray,minor,44024.0,44024.0
+276,Alapayevsk,57.851576,61.696270999999996,Russia,RU,Sverdlovskaya Oblast’,,44000.0,43327.0
+277,Novozybkov,52.5396,31.9275,Russia,RU,Bryanskaya Oblast’,,43534.0,42571.0
+278,Nizhneudinsk,54.9076,99.0276,Russia,RU,Irkutskaya Oblast’,,43326.0,38723.0
+279,Sovetsk,55.08391999999999,21.878514000000003,Russia,RU,Kaliningradskaya Oblast’,minor,43309.0,37024.0
+280,Mariinsk,56.213889,87.747222,Russia,RU,Kemerovskaya Oblast’,,43122.0,39567.0
+281,Krasnoufimsk,56.605854,57.766856000000004,Russia,RU,Sverdlovskaya Oblast’,,43121.0,37296.0
+282,Partizansk,43.12165,133.123474,Russia,RU,Primorskiy Kray,,42489.0,38980.0
+283,Sokol,59.461667000000006,40.120556,Russia,RU,Vologodskaya Oblast’,,42174.0,29101.0
+284,Yemanzhelinsk,54.754721999999994,61.32083299999999,Russia,RU,Chelyabinskaya Oblast’,,42023.0,29849.0
+285,Lesozavodsk,45.478854,133.428248,Russia,RU,Primorskiy Kray,,41778.0,36705.0
+286,Uryupinsk,50.8047,42.0138,Russia,RU,Volgogradskaya Oblast’,,41644.0,34343.0
+287,Gay,51.4666,58.4552,Russia,RU,Orenburgskaya Oblast’,,41619.0,37801.0
+288,Zelenokumsk,44.406944,43.880556,Russia,RU,Stavropol’skiy Kray,,41306.0,29135.0
+289,Birsk,55.421110999999996,55.542778000000006,Russia,RU,Bashkortostan,,41014.0,26792.0
+290,Frolovo,49.771326,43.662221,Russia,RU,Volgogradskaya Oblast’,,40882.0,39311.0
+291,Mirnyy,62.535278000000005,113.96111100000002,Russia,RU,Sakha (Yakutiya),,40308.0,20763.0
+292,Luga,58.737221999999996,29.845278000000004,Russia,RU,Leningradskaya Oblast’,,40114.0,34135.0
+293,Ob’,54.9872,82.7166,Russia,RU,Novosibirskaya Oblast’,,39949.0,24238.0
+294,Uray,60.130441000000005,64.78895899999999,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,39878.0,844.0
+295,Alekseyevka,50.6309,38.6903,Russia,RU,Belgorodskaya Oblast’,,39848.0,37419.0
+296,Bogoroditsk,53.771663000000004,38.124078999999995,Russia,RU,Tul’skaya Oblast’,,39553.0,30216.0
+297,Tavda,58.042537,65.272583,Russia,RU,Sverdlovskaya Oblast’,,39480.0,25322.0
+298,Kirov,54.066863,34.29955,Russia,RU,Kaluzhskaya Oblast’,,39319.0,28385.0
+299,Vichuga,57.212757999999994,41.930116999999996,Russia,RU,Ivanovskaya Oblast’,,39071.0,37116.0
+300,Asha,54.9973,57.2722,Russia,RU,Chelyabinskaya Oblast’,,38883.0,33006.0
+301,Gur’yevsk,54.283333,85.93333299999999,Russia,RU,Kemerovskaya Oblast’,,38757.0,25000.0
+302,Millerovo,48.922653000000004,40.396732,Russia,RU,Rostovskaya Oblast’,minor,38527.0,26926.0
+303,Salekhard,66.53,66.60194399999999,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,admin,38025.0,26829.0
+304,Uglich,57.5275,38.331666999999996,Russia,RU,Yaroslavskaya Oblast’,,37732.0,34978.0
+305,Tynda,55.155997,124.724787,Russia,RU,Amurskaya Oblast’,,37335.0,29039.0
+306,Kasimov,54.941111,41.395278000000005,Russia,RU,Ryazanskaya Oblast’,,36663.0,35355.0
+307,Serdobsk,52.45860699999999,44.216892,Russia,RU,Penzenskaya Oblast’,,36652.0,23874.0
+308,Slantsy,59.118168999999995,28.091374,Russia,RU,Leningradskaya Oblast’,,36209.0,18749.0
+309,Severoural’sk,60.153275,59.952054000000004,Russia,RU,Sverdlovskaya Oblast’,,36138.0,33500.0
+310,Blagodarnyy,45.097778000000005,43.436389,Russia,RU,Stavropol’skiy Kray,,35995.0,20146.0
+311,Boyarka,70.766667,97.5,Russia,RU,Krasnoyarskiy Kray,,35968.0,35968.0
+312,Yalutorovsk,56.65358199999999,66.300575,Russia,RU,Tyumenskaya Oblast’,,35892.0,27268.0
+313,Valuyki,50.2035,38.1067,Russia,RU,Belgorodskaya Oblast’,,35887.0,28203.0
+314,Shar’ya,58.36909300000001,45.515582,Russia,RU,Kostromskaya Oblast’,,35532.0,29800.0
+315,Shumerlya,55.500494999999994,46.41288,Russia,RU,Chuvashiya,,35230.0,35220.0
+316,Korsakov,46.634202,142.777225,Russia,RU,Sakhalinskaya Oblast’,,35091.0,31240.0
+317,Bezhetsk,57.785064,36.696512,Russia,RU,Tverskaya Oblast’,,34736.0,28114.0
+318,Kondopoga,62.205654,34.261382,Russia,RU,Kareliya,,34360.0,29544.0
+319,Staraya Russa,57.994386999999996,31.360810999999998,Russia,RU,Novgorodskaya Oblast’,,34303.0,30880.0
+320,Slavgorod,52.9978,78.6449,Russia,RU,Altayskiy Kray,,34141.0,21161.0
+321,Verkhniy Ufaley,56.0556,60.2397,Russia,RU,Chelyabinskaya Oblast’,,33879.0,33245.0
+322,Zaozërnyy,55.9618,94.70700000000001,Russia,RU,Krasnoyarskiy Kray,,33865.0,33865.0
+323,Rostov,57.191402000000004,39.413940000000004,Russia,RU,Yaroslavskaya Oblast’,,33803.0,33353.0
+324,Dyat’kovo,53.597822,34.338248,Russia,RU,Bryanskaya Oblast’,,33527.0,33200.0
+325,Segezha,63.741468999999995,34.322181,Russia,RU,Kareliya,,33354.0,24568.0
+326,Velikiy Ustyug,60.761863,46.313519,Russia,RU,Vologodskaya Oblast’,,33237.0,32642.0
+327,Kotovsk,52.586659999999995,41.502103999999996,Russia,RU,Tambovskaya Oblast’,,33077.0,29365.0
+328,Kholmsk,47.047366,142.05048100000002,Russia,RU,Sakhalinskaya Oblast’,,32911.0,32681.0
+329,Omutninsk,58.670007999999996,52.193195,Russia,RU,Kirovskaya Oblast’,,32800.0,25364.0
+330,Kudymkar,59.013056000000006,54.655556000000004,Russia,RU,Permskiy Kray,minor,32423.0,31596.0
+331,Barabinsk,55.357091000000004,78.356971,Russia,RU,Novosibirskaya Oblast’,,31508.0,28269.0
+332,Novaya Gubakha,58.8398,57.5544,Russia,RU,Permskiy Kray,,31424.0,6009.0
+333,Sasovo,54.353688,41.919859,Russia,RU,Ryazanskaya Oblast’,,31325.0,29858.0
+334,Karpinsk,59.7703,59.9964,Russia,RU,Sverdlovskaya Oblast’,,30807.0,30070.0
+335,Mednogorsk,51.4128,57.595,Russia,RU,Orenburgskaya Oblast’,,30676.0,23872.0
+336,Borzya,50.383333,116.516667,Russia,RU,Zabaykal’skiy Kray,,30421.0,28885.0
+337,Svetogorsk,61.112134,28.863211,Russia,RU,Leningradskaya Oblast’,,30115.0,15733.0
+338,Sovetskaya Gavan’,48.972149,140.289188,Russia,RU,Khabarovskiy Kray,,29740.0,26024.0
+339,Kirovsk,67.614749,33.672739,Russia,RU,Murmanskaya Oblast’,,29605.0,16293.0
+340,Sosnogorsk,63.602288,53.881751,Russia,RU,Komi,,29343.0,19197.0
+341,Karasuk,53.73771800000001,78.040255,Russia,RU,Novosibirskaya Oblast’,,28589.0,24928.0
+342,Kartaly,53.05285,60.64903,Russia,RU,Chelyabinskaya Oblast’,,28503.0,25711.0
+343,Zheleznogorsk-Ilimskiy,56.5768,104.1217,Russia,RU,Irkutskaya Oblast’,,28456.0,26126.0
+344,Kotel’nich,58.3089,48.348,Russia,RU,Kirovskaya Oblast’,,28431.0,27600.0
+345,Dal’nerechensk,45.931490000000004,133.739058,Russia,RU,Primorskiy Kray,,28300.0,23535.0
+346,Nev’yansk,57.4953,60.2112,Russia,RU,Sverdlovskaya Oblast’,,28170.0,25900.0
+347,Aleysk,52.4926,82.7822,Russia,RU,Altayskiy Kray,,28019.0,16936.0
+348,Kolpashevo,58.313056,82.908889,Russia,RU,Tomskaya Oblast’,,27876.0,27876.0
+349,Atkarsk,51.871853,45.007752,Russia,RU,Saratovskaya Oblast’,,27554.0,19077.0
+350,Sol’-Iletsk,51.163103,54.991756,Russia,RU,Orenburgskaya Oblast’,,27419.0,22891.0
+351,Nikolayevsk-na-Amure,53.146570999999994,140.722875,Russia,RU,Khabarovskiy Kray,,27152.0,27074.0
+352,Asino,56.999871,86.143928,Russia,RU,Tomskaya Oblast’,,27070.0,22395.0
+353,Zeya,53.736006,127.25700400000001,Russia,RU,Amurskaya Oblast’,,26999.0,26999.0
+354,Tara,56.89435600000001,74.37096,Russia,RU,Omskaya Oblast’,,26986.0,21275.0
+355,Pugachev,52.013333,48.8025,Russia,RU,Saratovskaya Oblast’,,26690.0,26690.0
+356,Okha,53.589907,142.953129,Russia,RU,Sakhalinskaya Oblast’,,26560.0,24362.0
+357,Bakal,54.9417,58.8083,Russia,RU,Chelyabinskaya Oblast’,,26559.0,21762.0
+358,Buy,58.48066800000001,41.536992,Russia,RU,Kostromskaya Oblast’,,26486.0,25077.0
+359,Vel’sk,61.07005699999999,42.0983,Russia,RU,Arkhangel’skaya Oblast’,,26300.0,25158.0
+360,Krasnoarmeysk,51.023889000000004,45.696944,Russia,RU,Saratovskaya Oblast’,,25841.0,15410.0
+361,Severobaykal’sk,55.636954,109.322972,Russia,RU,Buryatiya,,25800.0,25800.0
+362,Lensk,60.725278,114.927778,Russia,RU,Sakha (Yakutiya),,25589.0,23694.0
+363,Ust’-Kut,56.7938,105.7672,Russia,RU,Irkutskaya Oblast’,,25388.0,25388.0
+364,Nelidovka,56.196352000000005,32.774059,Russia,RU,Tverskaya Oblast’,,25349.0,24597.0
+365,Tatarsk,55.219035,75.982835,Russia,RU,Novosibirskaya Oblast’,,25150.0,23214.0
+366,Bologoye,57.879897,34.106805,Russia,RU,Tverskaya Oblast’,,25142.0,18428.0
+367,Topki,55.2769,85.6163,Russia,RU,Kemerovskaya Oblast’,,24672.0,24672.0
+368,Aldan,58.610214,125.39613,Russia,RU,Sakha (Yakutiya),,24426.0,12717.0
+369,Gusinoozërsk,51.283333,106.5,Russia,RU,Buryatiya,,24083.0,16914.0
+370,Kalachinsk,55.052862,74.57511099999999,Russia,RU,Omskaya Oblast’,,24059.0,16954.0
+371,Bogotol,56.17166700000001,89.586111,Russia,RU,Krasnoyarskiy Kray,,23622.0,21497.0
+372,Dudinka,69.405833,86.177778,Russia,RU,Krasnoyarskiy Kray,,23619.0,22207.0
+373,L’gov,51.6888,35.2843,Russia,RU,Kurskaya Oblast’,,23500.0,8687.0
+374,Inta,66.03970100000001,60.148791,Russia,RU,Komi,,22921.0,1900.0
+375,Tashtagol,52.7657,87.8894,Russia,RU,Kemerovskaya Oblast’,,22779.0,21025.0
+376,Onega,63.90606700000001,38.140347999999996,Russia,RU,Arkhangel’skaya Oblast’,,22693.0,18202.0
+377,Kizel,59.0513,57.6455,Russia,RU,Permskiy Kray,,22135.0,21807.0
+378,Toguchin,55.235278,84.38583299999999,Russia,RU,Novosibirskaya Oblast’,,21886.0,18288.0
+379,Nar’yan-Mar,67.641793,53.043071,Russia,RU,Nenetskiy Avtonomnyy Okrug,admin,21658.0,18041.0
+380,Shimanovsk,52.005753000000006,127.67756100000001,Russia,RU,Amurskaya Oblast’,,21466.0,11683.0
+381,Palatka,60.101833,150.934333,Russia,RU,Magadanskaya Oblast’,,21452.0,4534.0
+382,Isil’kul’,54.91091,71.272823,Russia,RU,Omskaya Oblast’,,21136.0,21136.0
+383,Petrovsk-Zabaykal’skiy,51.275304,108.843005,Russia,RU,Zabaykal’skiy Kray,,20889.0,19713.0
+384,Krasnoural’sk,58.3638,60.0407,Russia,RU,Sverdlovskaya Oblast’,,20571.0,20571.0
+385,Cherepanovo,54.2222,83.381,Russia,RU,Novosibirskaya Oblast’,,20125.0,10064.0
+386,Rayevskiy,54.0658,54.9468,Russia,RU,Bashkortostan,,20060.0,7097.0
+387,Yeniseysk,58.449371,92.17967900000001,Russia,RU,Krasnoyarskiy Kray,,19920.0,10895.0
+388,Bikin,46.816918,134.257857,Russia,RU,Khabarovskiy Kray,,19659.0,18870.0
+389,Ivdel’,60.691111,60.420556000000005,Russia,RU,Sverdlovskaya Oblast’,,19379.0,3554.0
+390,Uzhur,55.312463,89.833011,Russia,RU,Krasnoyarskiy Kray,,19212.0,15637.0
+391,Polyarnyy,69.19888900000001,33.447778,Russia,RU,Murmanskaya Oblast’,,19200.0,17332.0
+392,Slyudyanka,51.659444,103.70611099999999,Russia,RU,Irkutskaya Oblast’,,18809.0,11032.0
+393,Kavalerovo,44.272213,135.052272,Russia,RU,Primorskiy Kray,,18657.0,16945.0
+394,Vanino,49.09848,140.25313,Russia,RU,Khabarovskiy Kray,,18618.0,13353.0
+395,Kyakhta,50.357366,106.450332,Russia,RU,Buryatiya,,18431.0,6305.0
+396,Abaza,52.655,90.09277800000001,Russia,RU,Khakasiya,,18094.0,17183.0
+397,Kirsanov,52.654941,42.722361,Russia,RU,Tambovskaya Oblast’,,17975.0,16027.0
+398,Kurtamysh,54.910278000000005,64.431944,Russia,RU,Kurganskaya Oblast’,,17936.0,2076.0
+399,Sovetsk,57.5182,49.1222,Russia,RU,Kirovskaya Oblast’,,17869.0,2172.0
+400,Pallasovka,50.05,46.883333,Russia,RU,Volgogradskaya Oblast’,,17139.0,2782.0
+401,Plast,54.369136,60.813609,Russia,RU,Chelyabinskaya Oblast’,,17050.0,13911.0
+402,Severo-Nevel’sk,46.683333000000005,141.866667,Russia,RU,Sakhalinskaya Oblast’,,17000.0,16509.0
+403,Poronaysk,49.221877,143.096939,Russia,RU,Sakhalinskaya Oblast’,,16677.0,14433.0
+404,Kamenka,53.181389,44.049444,Russia,RU,Penzenskaya Oblast’,,16560.0,16560.0
+405,Kupino,54.366349,77.29805,Russia,RU,Novosibirskaya Oblast’,,16333.0,3380.0
+406,Nikolayevsk,50.028242,45.459531,Russia,RU,Volgogradskaya Oblast’,,16044.0,3563.0
+407,Bodaybo,57.850556000000005,114.19333300000001,Russia,RU,Irkutskaya Oblast’,,15933.0,15933.0
+408,Nikel’,69.412848,30.221977000000003,Russia,RU,Murmanskaya Oblast’,,15866.0,15596.0
+409,Kodinsk,58.688056,99.184444,Russia,RU,Krasnoyarskiy Kray,,15670.0,15670.0
+410,Gornyak,50.994167,81.466111,Russia,RU,Altayskiy Kray,,15668.0,3466.0
+411,Nerchinsk,51.983333,116.58333300000001,Russia,RU,Zabaykal’skiy Kray,,15360.0,8599.0
+412,Kulunda,52.566,78.9385,Russia,RU,Altayskiy Kray,,15345.0,2318.0
+413,Udachnyy,66.429887,112.40210400000001,Russia,RU,Sakha (Yakutiya),,15266.0,15266.0
+414,Vyazemskiy,47.537575,134.755562,Russia,RU,Khabarovskiy Kray,,15247.0,13135.0
+415,Chegdomyn,51.128534,133.008274,Russia,RU,Khabarovskiy Kray,,14855.0,116.0
+416,Ust’-Ordynskiy,52.805,104.751,Russia,RU,Irkutskaya Oblast’,,14538.0,14538.0
+417,Shilka,51.85,116.03333300000001,Russia,RU,Zabaykal’skiy Kray,,14132.0,6990.0
+418,Kem’,64.95546,34.579294,Russia,RU,Kareliya,,13829.0,13829.0
+419,Golyshmanovo,56.3979,68.372786,Russia,RU,Tyumenskaya Oblast’,,13424.0,3993.0
+420,Kirensk,57.785278000000005,108.111944,Russia,RU,Irkutskaya Oblast’,,13308.0,210.0
+421,Uyar,55.8118,94.3247,Russia,RU,Krasnoyarskiy Kray,,13167.0,11573.0
+422,Uglegorsk,49.080467,142.06448899999998,Russia,RU,Sakhalinskaya Oblast’,,12669.0,11610.0
+423,Mogocha,53.734166,119.765153,Russia,RU,Zabaykal’skiy Kray,,12647.0,8626.0
+424,Nazyvayevsk,55.569747,71.35294300000001,Russia,RU,Omskaya Oblast’,,12284.0,9593.0
+425,Belomorsk,64.523222,34.766796,Russia,RU,Kareliya,,12165.0,12165.0
+426,Cherlak,54.155,74.8055,Russia,RU,Omskaya Oblast’,,12122.0,1999.0
+427,Aleksandrovsk-Sakhalinskiy,50.899257,142.162146,Russia,RU,Sakhalinskaya Oblast’,,12024.0,6503.0
+428,Dolinsk,47.329465,142.792914,Russia,RU,Sakhalinskaya Oblast’,,11989.0,11594.0
+429,Magdagachi,53.453977,125.80931799999999,Russia,RU,Amurskaya Oblast’,,11739.0,4402.0
+430,Severnyy,67.633333,64.1,Russia,RU,Komi,,11562.0,11562.0
+431,Zmeinogorsk,51.157763,82.195336,Russia,RU,Altayskiy Kray,,11514.0,9429.0
+432,Aginskoye,51.1,114.53333300000001,Russia,RU,Zabaykal’skiy Kray,,11491.0,11491.0
+433,Kirs,59.338825,52.244671000000004,Russia,RU,Kirovskaya Oblast’,,11385.0,5253.0
+434,Kargat,55.195556,80.281111,Russia,RU,Novosibirskaya Oblast’,,10881.0,841.0
+435,Khilok,51.367774,110.468042,Russia,RU,Zabaykal’skiy Kray,,10627.0,2454.0
+436,Taksimo,56.341618000000004,114.90048300000001,Russia,RU,Buryatiya,,10359.0,10359.0
+437,Anadyr’,64.734237,177.51029499999999,Russia,RU,Chukotskiy Avtonomnyy Okrug,admin,10332.0,10332.0
+438,Nogliki,51.799175,143.138713,Russia,RU,Sakhalinskaya Oblast’,,10098.0,10098.0
+439,Skovorodino,53.984731000000004,123.940302,Russia,RU,Amurskaya Oblast’,,10007.0,2964.0
+440,Obluch’ye,49.01782,131.049597,Russia,RU,Yevreyskaya Avtonomnaya Oblast’,,10000.0,9379.0
+441,Vilyuysk,63.746826,121.63338999999999,Russia,RU,Sakha (Yakutiya),,9948.0,1139.0
+442,Pokrovsk,61.477677,129.136994,Russia,RU,Sakha (Yakutiya),,9763.0,6368.0
+443,Biryusinsk,55.9634,97.8235,Russia,RU,Irkutskaya Oblast’,,9583.0,6816.0
+444,Dombarovskiy,50.7587,59.5386,Russia,RU,Orenburgskaya Oblast’,,9556.0,1572.0
+445,Igrim,63.1906,64.4162,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,9545.0,9545.0
+446,Shira,54.491111,89.953056,Russia,RU,Khakasiya,,9358.0,314.0
+447,Ust’-Nera,64.59804399999999,143.252958,Russia,RU,Sakha (Yakutiya),,9148.0,9148.0
+448,Suntar,62.14444399999999,117.63194399999999,Russia,RU,Sakha (Yakutiya),,8639.0,793.0
+449,Olovyannaya,50.95,115.566667,Russia,RU,Zabaykal’skiy Kray,,8247.0,2316.0
+450,Dal’negorsk,44.555303,135.569198,Russia,RU,Primorskiy Kray,,8123.0,8123.0
+451,Igarka,67.4655,86.6027,Russia,RU,Krasnoyarskiy Kray,,7470.0,5054.0
+452,Susuman,62.780747999999996,148.15395800000002,Russia,RU,Magadanskaya Oblast’,,7367.0,7367.0
+453,Khandyga,62.653335,135.566703,Russia,RU,Sakha (Yakutiya),,6796.0,6796.0
+454,Makarov,48.626985,142.779992,Russia,RU,Sakhalinskaya Oblast’,,6663.0,2480.0
+455,Verkhnevilyuysk,63.445781999999994,120.30738899999999,Russia,RU,Sakha (Yakutiya),,6341.0,6341.0
+456,Umba,66.687064,34.342915000000005,Russia,RU,Murmanskaya Oblast’,,6128.0,6128.0
+457,Tazovskiy,67.47150400000001,78.716197,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,5981.0,5981.0
+458,Mundybash,53.211000000000006,87.2983,Russia,RU,Kemerovskaya Oblast’,,5870.0,5870.0
+459,Bilibino,68.056107,166.44381299999998,Russia,RU,Chukotskiy Avtonomnyy Okrug,,5757.0,5757.0
+460,Tiksi,71.69001899999999,128.86467199999998,Russia,RU,Sakha (Yakutiya),,5700.0,5700.0
+461,Okhotsk,59.364355,143.291944,Russia,RU,Khabarovskiy Kray,,5570.0,5570.0
+462,Tura,64.283333,100.25,Russia,RU,Krasnoyarskiy Kray,,5444.0,5444.0
+463,Chernyshevskiy,63.016014,112.46901100000001,Russia,RU,Sakha (Yakutiya),,5137.0,5137.0
+464,Artëmovsk,54.348333,93.435556,Russia,RU,Krasnoyarskiy Kray,,4948.0,4948.0
+465,Ust’-Kamchatsk,56.225037,162.483588,Russia,RU,Kamchatskiy Kray,,4939.0,4939.0
+466,Pevek,69.70286999999999,170.29993000000002,Russia,RU,Chukotskiy Avtonomnyy Okrug,,4837.0,4837.0
+467,Turukhansk,65.794791,87.950061,Russia,RU,Krasnoyarskiy Kray,,4774.0,4774.0
+468,Bagdarin,54.433333,113.6,Russia,RU,Buryatiya,,4676.0,4676.0
+469,Sangar,63.923007999999996,127.471351,Russia,RU,Sakha (Yakutiya),,4633.0,4633.0
+470,Batagay,67.656529,134.639621,Russia,RU,Sakha (Yakutiya),,4266.0,4266.0
+471,Omsukchan,62.515752,155.79038500000001,Russia,RU,Magadanskaya Oblast’,,4201.0,4201.0
+472,Novyy Uoyan,56.157222,111.705556,Russia,RU,Buryatiya,,4184.0,4184.0
+473,Vitim,59.44325799999999,112.569929,Russia,RU,Sakha (Yakutiya),,3843.0,3843.0
+474,Teeli,51.013985,90.205349,Russia,RU,Tyva,,3732.0,3732.0
+475,Cherskiy,68.753254,161.331967,Russia,RU,Sakha (Yakutiya),,3707.0,3707.0
+476,Mezen’,65.8401,44.2542,Russia,RU,Arkhangel’skaya Oblast’,,3672.0,1249.0
+477,Palana,59.083838,159.956297,Russia,RU,Kamchatskiy Kray,,3671.0,3671.0
+478,Zyryanka,65.734891,150.894294,Russia,RU,Sakha (Yakutiya),,3627.0,3627.0
+479,De-Kastri,51.475431,140.769857,Russia,RU,Khabarovskiy Kray,,3615.0,3615.0
+480,Srednekolymsk,67.456587,153.70246,Russia,RU,Sakha (Yakutiya),,3459.0,3459.0
+481,Bukachacha,52.983332999999995,116.91666699999999,Russia,RU,Zabaykal’skiy Kray,,3372.0,497.0
+482,Ugol’nyye Kopi,64.74504300000001,177.68948400000002,Russia,RU,Chukotskiy Avtonomnyy Okrug,,3367.0,3367.0
+483,Krasnogorsk,48.417284,142.08686,Russia,RU,Sakhalinskaya Oblast’,,3304.0,3304.0
+484,Zhigansk,66.766008,123.374183,Russia,RU,Sakha (Yakutiya),,3237.0,3237.0
+485,Khatanga,71.966667,102.5,Russia,RU,Krasnoyarskiy Kray,,3205.0,3205.0
+486,Ust’-Maya,60.415535,134.544052,Russia,RU,Sakha (Yakutiya),,3062.0,3062.0
+487,Saranpaul’,64.266667,60.916667000000004,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,2985.0,2985.0
+488,Provideniya,64.426976,-173.218855,Russia,RU,,,2536.0,957.0
+489,Chokurdakh,70.618973,147.89729599999998,Russia,RU,Sakha (Yakutiya),,2506.0,2506.0
+490,Severo-Kuril’sk,50.675312,156.126949,Russia,RU,Sakhalinskaya Oblast’,,2422.0,2422.0
+491,Egvekinot,66.32166099999999,-179.121976,Russia,RU,Chukotskiy Avtonomnyy Okrug,,2248.0,2248.0
+492,Evensk,61.917224,159.233477,Russia,RU,Magadanskaya Oblast’,,2024.0,2024.0
+493,Saskylakh,71.916667,114.08333300000001,Russia,RU,Sakha (Yakutiya),,1920.0,1920.0
+494,Beringovskiy,63.061007999999994,179.35046100000002,Russia,RU,Chukotskiy Avtonomnyy Okrug,,1861.0,1861.0
+495,Novyy Port,67.68333299999999,72.93333299999999,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,1790.0,1790.0
+496,Ust’-Kuyga,70.002077,135.54876399999998,Russia,RU,Sakha (Yakutiya),,1517.0,1517.0
+497,El’dikan,60.780319999999996,135.15479299999998,Russia,RU,Sakha (Yakutiya),,1516.0,1516.0
+498,Verkhoyansk,67.55386999999999,133.389758,Russia,RU,Sakha (Yakutiya),,1388.0,1388.0
+499,Chumikan,54.718574,135.316304,Russia,RU,Khabarovskiy Kray,,1305.0,1305.0
+500,Ayan,56.463136,138.17777,Russia,RU,Khabarovskiy Kray,,1286.0,1286.0
+501,Lavrentiya,65.586036,-171.02082,Russia,RU,Chukotskiy Avtonomnyy Okrug,,1242.0,78.0
+502,Dikson,73.50694399999999,80.546389,Russia,RU,Krasnoyarskiy Kray,,1113.0,1113.0
+503,Klyuchi,56.320349,160.84540900000002,Russia,RU,Kamchatskiy Kray,,1089.0,1089.0
+504,Omolon,65.232619,160.53947,Russia,RU,Chukotskiy Avtonomnyy Okrug,,1050.0,1050.0
+505,Uelen,66.166667,-169.8,Russia,RU,Chukotskiy Avtonomnyy Okrug,,776.0,776.0
+506,Yerëma,60.363960999999996,107.763182,Russia,RU,Irkutskaya Oblast’,,745.0,745.0
+507,Mikhalkino,69.416025,161.518819,Russia,RU,Sakha (Yakutiya),,570.0,570.0
+508,Sherlovaya Gora,50.566666999999995,116.25,Russia,RU,Zabaykal’skiy Kray,,411.0,411.0
+509,Nizhneyansk,71.440302,136.135846,Russia,RU,Sakha (Yakutiya),,400.0,391.0
+510,Korf,60.371426,166.016244,Russia,RU,Kamchatskiy Kray,,400.0,400.0
+511,Bugrino,68.780922,49.306544,Russia,RU,Nenetskiy Avtonomnyy Okrug,,300.0,300.0
+512,Shoyna,67.876024,44.15787,Russia,RU,Nenetskiy Avtonomnyy Okrug,,300.0,300.0
+513,Put’ Lenina,68.516667,107.8,Russia,RU,Sakha (Yakutiya),,298.0,298.0
+514,Enurmino,66.95461800000001,-171.86889399999998,Russia,RU,Chukotskiy Avtonomnyy Okrug,,297.0,297.0
+515,Amderma,69.7576,61.6655,Russia,RU,Nenetskiy Avtonomnyy Okrug,,282.0,282.0
+516,Gubkin,51.281667,37.545833,Russia,RU,Belgorodskaya Oblast’,,272.0,272.0
+517,Kuznetsova-Vikhoreva,56.083332999999996,101.266667,Russia,RU,Irkutskaya Oblast’,,166.0,166.0
+518,Progress,49.742340999999996,129.675976,Russia,RU,Amurskaya Oblast’,,146.0,146.0
+519,Mukhomornoye,66.39415100000001,173.330576,Russia,RU,Chukotskiy Avtonomnyy Okrug,,100.0,10.0
+520,Vorontsovo,71.696788,83.556871,Russia,RU,Krasnoyarskiy Kray,,100.0,100.0
+521,Kovda,66.69269399999999,32.871259,Russia,RU,Murmanskaya Oblast’,,20.0,20.0
+522,Bol’sheretsk,52.43818,156.360256,Russia,RU,Kamchatskiy Kray,,10.0,10.0
+523,Yessey,68.483333,102.166667,Russia,RU,Krasnoyarskiy Kray,,10.0,10.0
+524,Khorgo,73.483333,113.63333300000001,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+525,Tunguskhaya,64.89009300000001,125.242231,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+526,Chagda,60.080641,133.938655,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+527,Siglan,59.040278,152.417878,Russia,RU,Magadanskaya Oblast’,,10.0,10.0
+528,Gyda,70.881389,78.466111,Russia,RU,Yamalo-Nenetskiy Avtonomnyy Okrug,,10.0,10.0
+529,Khakhar’,57.67946800000001,135.45414399999999,Russia,RU,Khabarovskiy Kray,,10.0,10.0
+530,Menkerya,67.988902,123.34745500000001,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+531,Lar’yak,61.100832999999994,80.251389,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,10.0,10.0
+532,Starorybnoye,72.766667,104.8,Russia,RU,Krasnoyarskiy Kray,,10.0,10.0
+533,Il’pyrskiy,59.962143999999995,164.186343,Russia,RU,Kamchatskiy Kray,,10.0,10.0
+534,Zhilinda,70.138871,113.987711,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+535,Olenëk,68.5,112.45,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+536,Manily,62.487680000000005,165.34566,Russia,RU,Kamchatskiy Kray,,10.0,10.0
+537,Karamken,60.209247999999995,151.093882,Russia,RU,Magadanskaya Oblast’,,10.0,10.0
+538,Ust’-Olenëk,72.98728100000001,119.81656799999999,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+539,Varnek,69.7142,60.0529,Russia,RU,Nenetskiy Avtonomnyy Okrug,,10.0,10.0
+540,Shalaurova,73.184163,143.231093,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+541,Agapa,71.45,89.25,Russia,RU,Krasnoyarskiy Kray,,10.0,10.0
+542,Numto,63.666667000000004,71.333333,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,10.0,10.0
+543,Omchak,61.643328000000004,147.877063,Russia,RU,Magadanskaya Oblast’,,10.0,10.0
+544,Podkamennaya Tunguska,61.599167,90.123611,Russia,RU,Krasnoyarskiy Kray,,10.0,10.0
+545,Zemlya Bunge,74.878155,142.109433,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+546,Indiga,67.65660799999999,49.034754,Russia,RU,Nenetskiy Avtonomnyy Okrug,,10.0,10.0
+547,Strelka,61.88714399999999,152.21927,Russia,RU,Magadanskaya Oblast’,,10.0,10.0
+548,Pakhachi,60.555753,169.144468,Russia,RU,Kamchatskiy Kray,,10.0,10.0
+549,Tiyerbes,64.373413,120.545397,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+550,Zvëzdnyy,70.916667,-179.6,Russia,RU,Chukotskiy Avtonomnyy Okrug,,10.0,10.0
+551,Ul’kan,55.896125,107.79836399999999,Russia,RU,Irkutskaya Oblast’,,10.0,10.0
+552,Sagastyr,73.38154499999999,126.600071,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+553,Matochkin Shar,73.266667,56.45,Russia,RU,Arkhangel’skaya Oblast’,,10.0,10.0
+554,Utkholok,57.510355000000004,157.20558400000002,Russia,RU,Kamchatskiy Kray,,10.0,10.0
+555,Peregrebnoye,62.963889,65.08805600000001,Russia,RU,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,,10.0,10.0
+556,Tukchi,57.36863,139.517804,Russia,RU,Khabarovskiy Kray,,10.0,10.0
+557,Nyukzha,56.6,121.45,Russia,RU,Amurskaya Oblast’,,10.0,10.0
+558,Trofimovsk,72.6,127.03333300000001,Russia,RU,Sakha (Yakutiya),,10.0,10.0
+559,Komsa,61.868056,89.257778,Russia,RU,Krasnoyarskiy Kray,,10.0,10.0
+560,Magas,43.166667,44.8,Russia,RU,Ingushetiya,admin,,
+561,Temryuk,45.270547,37.387161,Russia,RU,Krasnodarskiy Kray,minor,,
+562,Kamenolomni,47.668525,40.205104,Russia,RU,Rostovskaya Oblast’,minor,,
+563,Severskaya,44.854071999999995,38.676865,Russia,RU,Krasnodarskiy Kray,minor,,
+564,Baltiysk,54.653819999999996,19.911036,Russia,RU,Kaliningradskaya Oblast’,minor,,
+565,Yegorlykskaya,46.565636,40.656208,Russia,RU,Rostovskaya Oblast’,minor,,
+566,Ozërsk,54.41055600000001,22.011667000000003,Russia,RU,Kaliningradskaya Oblast’,minor,,
+567,Vesëlyy,47.093379999999996,40.742201,Russia,RU,Rostovskaya Oblast’,minor,,
+568,Kantemirovka,49.708871,39.859221999999995,Russia,RU,Voronezhskaya Oblast’,minor,,
+569,Adygeysk,44.884135,39.190712,Russia,RU,Adygeya,minor,,
+570,Gur’yevsk,54.77323199999999,20.605210999999997,Russia,RU,Kaliningradskaya Oblast’,minor,,
+571,Slavsk,55.042504,21.677044,Russia,RU,Kaliningradskaya Oblast’,minor,,
+572,Pionerskiy,54.950826,20.227479000000002,Russia,RU,Kaliningradskaya Oblast’,minor,,
+573,Mayskiy,43.641401,44.038508,Russia,RU,Kabardino-Balkariya,minor,,
+574,Svetlyy,54.67501,20.134732999999997,Russia,RU,Kaliningradskaya Oblast’,minor,,
+575,Kalininskaya,45.484403,38.662212,Russia,RU,Krasnodarskiy Kray,minor,,
+576,Oblivskaya,48.536159999999995,42.501381,Russia,RU,Rostovskaya Oblast’,minor,,
+577,Abinsk,44.868035,38.157283,Russia,RU,Krasnodarskiy Kray,minor,,
+578,Kurganinsk,44.88,40.598611,Russia,RU,Krasnodarskiy Kray,minor,,
+579,Gorod Maykop,44.666667,40.0,Russia,RU,Adygeya,admin,,
+580,Gul’kevichi,45.358999999999995,40.7026,Russia,RU,Krasnodarskiy Kray,minor,,
+581,Shovgenovskiy,45.010278,40.225,Russia,RU,Adygeya,minor,,
+582,Takhtamukay,44.9215,38.995826,Russia,RU,Adygeya,minor,,
+583,Kagal’nitskaya,46.880555,40.146566,Russia,RU,Rostovskaya Oblast’,minor,,
+584,Belorechensk,44.771271999999996,39.878792,Russia,RU,Krasnodarskiy Kray,minor,,
+585,Tul’skiy,44.513611,40.178889,Russia,RU,Adygeya,minor,,
+586,Tarasovskiy,48.727273,40.362669,Russia,RU,Rostovskaya Oblast’,minor,,
+587,Krasnoarmeyskaya,45.366144,38.211711,Russia,RU,Krasnodarskiy Kray,minor,,
+588,Otradnaya,44.393333,41.520556,Russia,RU,Krasnodarskiy Kray,minor,,
+589,Bryukhovetskaya,45.806034000000004,38.999593,Russia,RU,Krasnodarskiy Kray,minor,,
+590,Staroshcherbinovskaya,46.6311,38.6742,Russia,RU,Krasnodarskiy Kray,minor,,
+591,Kazanskaya,49.793333000000004,41.146667,Russia,RU,Rostovskaya Oblast’,minor,,
+592,Krasnoznamensk,54.942221999999994,22.489722,Russia,RU,Kaliningradskaya Oblast’,minor,,
+593,Okhansk,57.7203,55.3882,Russia,RU,Permskiy Kray,minor,,
+594,Zimovniki,47.1474,42.4721,Russia,RU,Rostovskaya Oblast’,minor,,
+595,Ivanovo,56.997192000000005,40.971392,Russia,RU,Ivanovskaya Oblast’,admin,,
+596,Krasnogvardeyskoye,45.127801,39.572456,Russia,RU,Adygeya,minor,,
+597,Chertkovo,49.384705,40.154709000000004,Russia,RU,Rostovskaya Oblast’,minor,,
+598,Kizlyar,43.847118,46.714446,Russia,RU,Dagestan,minor,,
+599,Tselina,46.533809999999995,41.032841,Russia,RU,Rostovskaya Oblast’,minor,,
+600,Perm’,58.017410999999996,56.285517000000006,Russia,RU,Permskiy Kray,admin,,
+601,Pokrovskoye,47.415701,38.897063,Russia,RU,Rostovskaya Oblast’,minor,,
+602,Alagir,43.042221999999995,44.222221999999995,Russia,RU,North Ossetia,minor,,
+603,Konstantinovsk,47.582778000000005,41.092222,Russia,RU,Rostovskaya Oblast’,minor,,
+604,Rodionovo-Nesvetayskaya,47.610333000000004,39.71212,Russia,RU,Rostovskaya Oblast’,minor,,
+605,Slavyansk-na-Kubani,45.2558,38.1256,Russia,RU,Krasnodarskiy Kray,minor,,
+606,Krasnyy Sulin,47.892208000000004,40.070367,Russia,RU,Rostovskaya Oblast’,minor,,
+607,Dinskaya,45.215157,39.226496000000004,Russia,RU,Krasnodarskiy Kray,minor,,
+608,Igra,57.5549,53.0544,Russia,RU,Udmurtiya,minor,,
+609,Svetlogorsk,54.939873999999996,20.154787,Russia,RU,Kaliningradskaya Oblast’,minor,,
+610,Mostovskoy,44.412222,40.793611,Russia,RU,Krasnodarskiy Kray,minor,,
+611,Gvardeysk,54.647721,21.065131,Russia,RU,Kaliningradskaya Oblast’,minor,,
+612,Vyselki,45.581282,39.664093,Russia,RU,Krasnodarskiy Kray,minor,,
+613,Chaltyr’,47.28477,39.482323,Russia,RU,Rostovskaya Oblast’,minor,,
+614,Ust’-Labinsk,45.210768,39.689138,Russia,RU,Krasnodarskiy Kray,minor,,
+615,Milyutinskaya,48.627878,41.667885,Russia,RU,Rostovskaya Oblast’,minor,,
+616,Belaya Glina,46.078016,40.86651,Russia,RU,Krasnodarskiy Kray,minor,,
+617,Uni,57.751000000000005,51.4913,Russia,RU,Kirovskaya Oblast’,minor,,
+618,Proletarsk,46.702886,41.727167,Russia,RU,Rostovskaya Oblast’,minor,,
+619,Ust’-Donetskiy,47.641895,40.871819,Russia,RU,Rostovskaya Oblast’,minor,,
+620,Bol’shaya Martynovka,47.274208,41.66681,Russia,RU,Rostovskaya Oblast’,minor,,
+621,Veshenskaya,49.630327,41.733402000000005,Russia,RU,Rostovskaya Oblast’,minor,,
+622,Aksay,47.258381,39.866746,Russia,RU,Rostovskaya Oblast’,minor,,
+623,Krylovskaya,46.319444,39.971111,Russia,RU,Krasnodarskiy Kray,minor,,
+624,Azov,47.10779,39.416481,Russia,RU,Rostovskaya Oblast’,minor,,
+625,Polessk,54.86205,21.102791,Russia,RU,Kaliningradskaya Oblast’,minor,,
+626,Koshekhabl’,44.897222,40.511944,Russia,RU,Adygeya,minor,,
+627,Tbilisskaya,45.363333000000004,40.19,Russia,RU,Krasnodarskiy Kray,minor,,
+628,Grayvoron,50.4767,35.6773,Russia,RU,Belgorodskaya Oblast’,minor,,
+629,Bagrationovsk,54.387143,20.643721,Russia,RU,Kaliningradskaya Oblast’,minor,,
+630,Anapa,44.890845,37.323901,Russia,RU,Krasnodarskiy Kray,minor,,
+631,Gusev,54.592222,22.199722,Russia,RU,Kaliningradskaya Oblast’,minor,,
+632,Kashary,49.040009999999995,41.005569,Russia,RU,Rostovskaya Oblast’,minor,,
+633,Matveyev Kurgan,47.5645,38.869468,Russia,RU,Rostovskaya Oblast’,minor,,
+634,Zelenogradsk,54.958926,20.476684,Russia,RU,Kaliningradskaya Oblast’,minor,,
+635,Khasavyurt,43.250896999999995,46.58766,Russia,RU,Dagestan,minor,,
+636,Neman,55.031110999999996,22.026389,Russia,RU,Kaliningradskaya Oblast’,minor,,
+637,Krymsk,44.929336,37.991166,Russia,RU,Krasnodarskiy Kray,minor,,
+638,Debesy,57.6515,53.8089,Russia,RU,Udmurtiya,minor,,
+639,Bagayevskaya,47.324113,40.387908,Russia,RU,Rostovskaya Oblast’,minor,,
+640,Semikarakorsk,47.519428999999995,40.811202,Russia,RU,Rostovskaya Oblast’,minor,,
+641,Oktyabr’skiy,57.744561,41.00193,Russia,RU,Kostromskaya Oblast’,minor,,
+642,Kez,57.8957,53.7132,Russia,RU,Udmurtiya,minor,,
+643,Logashkino,70.852589,153.876455,Russia,RU,Sakha (Yakutiya),,0.0,0.0
+644,Uspenskoye,44.8311,41.3927,Russia,RU,Krasnodarskiy Kray,minor,,
+645,Zavetnoye,47.119444,43.890278,Russia,RU,Rostovskaya Oblast’,minor,,
+646,Kanevskaya,46.0849,38.9596,Russia,RU,Krasnodarskiy Kray,minor,,
+647,Nytva,57.9437,55.3396,Russia,RU,Permskiy Kray,minor,,
+648,Primorsko-Akhtarsk,46.0497,38.1747,Russia,RU,Krasnodarskiy Kray,minor,,
+649,Kizilyurt,43.206965999999994,46.867899,Russia,RU,Dagestan,minor,,
+650,Bokovskaya,49.228988,41.830603,Russia,RU,Rostovskaya Oblast’,minor,,
+651,Kavkazskaya,45.4453,40.6765,Russia,RU,Krasnodarskiy Kray,minor,,
+652,Tsimlyansk,47.646111,42.101944,Russia,RU,Rostovskaya Oblast’,minor,,
+653,Novokubansk,45.117,41.0267,Russia,RU,Krasnodarskiy Kray,minor,,
+654,Morozovsk,48.355021,41.826269,Russia,RU,Rostovskaya Oblast’,minor,,
+655,Nordvik,74.033333,111.53333300000001,Russia,RU,Krasnoyarskiy Kray,,0.0,0.0
+656,Peschanokopskoye,46.195167,41.081431,Russia,RU,Rostovskaya Oblast’,minor,,
+657,Zernograd,46.845176,40.308341999999996,Russia,RU,Rostovskaya Oblast’,minor,,
+658,Remontnoye,46.5614,43.6501,Russia,RU,Rostovskaya Oblast’,minor,,
+659,Dubovskoye,47.4142,42.7697,Russia,RU,Rostovskaya Oblast’,minor,,
+660,Novopokrovskaya,45.951389,40.700556,Russia,RU,Krasnodarskiy Kray,minor,,
+661,Giaginskaya,44.862084,40.07195,Russia,RU,Adygeya,minor,,
+662,Kushchëvskaya,46.5599,39.6321,Russia,RU,Krasnodarskiy Kray,minor,,
+663,Nesterov,54.630556000000006,22.571389,Russia,RU,Kaliningradskaya Oblast’,minor,,
+664,Starominskaya,46.53,39.049721999999996,Russia,RU,Krasnodarskiy Kray,minor,,
+665,Sovetskoye,46.721944,42.146389,Russia,RU,Rostovskaya Oblast’,minor,,
+666,Kuybyshevo,47.81228,38.907312,Russia,RU,Rostovskaya Oblast’,minor,,
+667,Leningradskaya,46.3214,39.3877,Russia,RU,Krasnodarskiy Kray,minor,,
+668,Ambarchik,69.62463699999999,162.302537,Russia,RU,Sakha (Yakutiya),,0.0,0.0
+669,Korenovsk,45.468993,39.451364,Russia,RU,Krasnodarskiy Kray,minor,,
+670,Balezino,57.9787,53.0138,Russia,RU,Udmurtiya,minor,,
+671,Pavlovskaya,46.1377,39.7832,Russia,RU,Krasnodarskiy Kray,minor,,
+672,Pravdinsk,54.442893999999995,21.017853,Russia,RU,Kaliningradskaya Oblast’,minor,,
+673,Prokhladnyy,43.757412,44.029697999999996,Russia,RU,Kabardino-Balkariya,minor,,
+674,Romanovskaya,47.5426,42.0285,Russia,RU,Rostovskaya Oblast’,minor,,
+675,Kazach’ye,70.74153000000001,136.205549,Russia,RU,Sakha (Yakutiya),,-99.0,-99.0

@@ -1,0 +1,40 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Sofia,42.683333000000005,23.316667000000002,Bulgaria,BG,Sofia-Grad,primary,1185000.0,874827.0
+1,Plovdiv,42.15,24.75,Bulgaria,BG,Plovdiv,admin,340494.0,297685.0
+2,Varna,43.216667,27.916666999999997,Bulgaria,BG,Varna,admin,312770.0,178274.0
+3,Burgas,42.506058,27.467809999999997,Bulgaria,BG,Burgas,admin,195966.0,152542.0
+4,Ruse,43.856389,25.970833,Bulgaria,BG,Ruse,admin,184270.0,156238.0
+5,Stara Zagora,42.432778000000006,25.641944,Bulgaria,BG,Stara Zagora,admin,143431.0,113200.0
+6,Pleven,43.416667,24.616667,Bulgaria,BG,Pleven,admin,118675.0,102216.0
+7,Sliven,42.685833,26.329166999999998,Bulgaria,BG,Sliven,admin,96368.0,78325.0
+8,Dobrich,43.566666999999995,27.833333000000003,Bulgaria,BG,Dobrich,admin,94831.0,52795.0
+9,Shumen,43.276666999999996,26.929167,Bulgaria,BG,Shumen,admin,87283.0,63692.0
+10,Pernik,42.6,23.033333,Bulgaria,BG,Pernik,admin,82467.0,78783.0
+11,Haskovo,41.940278,25.569444,Bulgaria,BG,Haskovo,admin,79699.0,65911.0
+12,Vratsa,43.21,23.5625,Bulgaria,BG,Vratsa,admin,71633.0,64941.0
+13,Kyustendil,42.283889,22.691111,Bulgaria,BG,Kyustendil,admin,51067.0,48286.0
+14,Montana,43.4125,23.225,Bulgaria,BG,Montana,admin,47445.0,47445.0
+15,Lovech,43.133333,24.716667,Bulgaria,BG,Lovech,admin,42211.0,42211.0
+16,Razgrad,43.533333,26.516666999999998,Bulgaria,BG,Razgrad,admin,38285.0,38285.0
+17,Borino,41.684083,24.293000000000003,Bulgaria,BG,Smolyan,minor,,
+18,Madan,41.498686,24.939726999999998,Bulgaria,BG,Smolyan,minor,,
+19,Zlatograd,41.379498,25.096052,Bulgaria,BG,Smolyan,minor,,
+20,Pazardzhik,42.2,24.333333,Bulgaria,BG,Pazardzhik,admin,,
+21,Smolyan,41.585278,24.691944,Bulgaria,BG,Smolyan,admin,,
+22,Blagoevgrad,42.016667,23.1,Bulgaria,BG,Blagoevgrad,admin,,
+23,Nedelino,41.456019,25.080081,Bulgaria,BG,Smolyan,minor,,
+24,Rudozem,41.487514000000004,24.849452,Bulgaria,BG,Smolyan,minor,,
+25,Devin,41.742048,24.397208,Bulgaria,BG,Smolyan,minor,,
+26,Veliko Tarnovo,43.085833,25.655556,Bulgaria,BG,Veliko Tarnovo,admin,,
+27,Vidin,43.99,22.8725,Bulgaria,BG,Vidin,admin,,
+28,Kirkovo,41.327153,25.363789999999998,Bulgaria,BG,Kardzhali,minor,,
+29,Krumovgrad,41.471270000000004,25.654847,Bulgaria,BG,Kardzhali,minor,,
+30,Dzhebel,41.495662,25.303625,Bulgaria,BG,Kardzhali,minor,,
+31,Silistra,44.116667,27.266666999999998,Bulgaria,BG,Silistra,admin,,
+32,Sarnitsa,41.738347,24.024355,Bulgaria,BG,Pazardzhik,minor,,
+33,Shiroka Laka,41.679252000000005,24.581351,Bulgaria,BG,Smolyan,minor,,
+34,Yambol,42.483333,26.5,Bulgaria,BG,Yambol,admin,,
+35,Dospat,41.644622999999996,24.158566,Bulgaria,BG,Smolyan,minor,,
+36,Kardzhali,41.65,25.366667,Bulgaria,BG,Kardzhali,admin,,
+37,Gabrovo,42.874722,25.334167,Bulgaria,BG,Gabrovo,admin,,
+38,Targovishte,43.259167,26.589167,Bulgaria,BG,Targovishte,admin,,

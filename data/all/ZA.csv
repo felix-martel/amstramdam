@@ -1,0 +1,73 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Johannesburg,-26.205171,28.049815000000002,South Africa,ZA,Gauteng,admin,3435000.0,2026469.0
+1,Cape Town,-33.925839,18.423218,South Africa,ZA,Western Cape,primary,3215000.0,2432858.0
+2,Benoni,-26.190851000000002,28.311338,South Africa,ZA,Gauteng,,2986000.0,605344.0
+3,Durban,-29.857896000000004,31.029197999999997,South Africa,ZA,KwaZulu-Natal,,2729000.0,2729000.0
+4,Pretoria,-25.706944,28.229444,South Africa,ZA,Gauteng,primary,1338000.0,1338000.0
+5,Vereeniging,-26.673133,27.926146999999997,South Africa,ZA,Gauteng,,1074000.0,474681.0
+6,Port Elizabeth,-33.917988,25.570066,South Africa,ZA,Eastern Cape,,1021000.0,640054.0
+7,Pietermaritzburg,-29.616784999999997,30.39278,South Africa,ZA,KwaZulu-Natal,admin,750845.0,490951.0
+8,Bloemfontein,-29.121065,26.214002999999998,South Africa,ZA,Free State,primary,463064.0,456669.0
+9,Welkom,-27.986441999999997,26.706612,South Africa,ZA,Free State,,431944.0,126079.0
+10,Nelspruit,-25.474482000000002,30.970333,South Africa,ZA,Mpumalanga,admin,348138.0,21540.0
+11,East London,-33.011051,27.910049,South Africa,ZA,Eastern Cape,,338627.0,338627.0
+12,Thohoyandou,-22.945642000000003,30.484971999999996,South Africa,ZA,Limpopo,,269707.0,44046.0
+13,Springs,-26.258374,28.471729999999997,South Africa,ZA,Gauteng,,236083.0,186394.0
+14,Uitenhage,-33.75757,25.397099,South Africa,ZA,Eastern Cape,,228912.0,206766.0
+15,Polokwane,-23.904485,29.468851,South Africa,ZA,Limpopo,admin,220045.0,123749.0
+16,Paarl,-33.733781,18.975228,South Africa,ZA,Western Cape,,187865.0,131718.0
+17,Klerksdorp,-26.852128000000004,26.666719,South Africa,ZA,North West,,178921.0,147804.0
+18,George,-33.963,22.461727,South Africa,ZA,Western Cape,,174582.0,113248.0
+19,Rustenburg,-25.667562,27.242078999999997,South Africa,ZA,North West,,165976.0,124064.0
+20,Kimberley,-28.732262,24.762315,South Africa,ZA,Northern Cape,admin,165264.0,142089.0
+21,Bhisho,-32.847212,27.442179,South Africa,ZA,Eastern Cape,admin,160997.0,137287.0
+22,Middelburg,-25.775071,29.464821,South Africa,ZA,Mpumalanga,,154706.0,93790.0
+23,Vryheid,-27.76952,30.791653000000004,South Africa,ZA,KwaZulu-Natal,,150012.0,66717.0
+24,Umtata,-31.588926,28.784431,South Africa,ZA,Eastern Cape,,137772.0,78663.0
+25,Worcester,-33.64651,19.448523,South Africa,ZA,Western Cape,,127597.0,90803.0
+26,Potchefstroom,-26.716666999999998,27.1,South Africa,ZA,North West,,123669.0,83814.0
+27,Brits,-25.634731,27.780224,South Africa,ZA,North West,,122497.0,39947.0
+28,Queenstown,-31.897563,26.875328999999997,South Africa,ZA,Eastern Cape,,105309.0,87240.0
+29,Mmabatho,-25.85,25.633333,South Africa,ZA,North West,,104428.0,76754.0
+30,Kroonstad,-27.65036,27.234879,South Africa,ZA,Free State,,103992.0,72835.0
+31,Bethal,-26.457937,29.465534,South Africa,ZA,Mpumalanga,,101919.0,90450.0
+32,Grahamstown,-33.304216,26.532759999999996,South Africa,ZA,Eastern Cape,,91548.0,49083.0
+33,Bethlehem,-28.230779,28.307071,South Africa,ZA,Free State,,83654.0,49092.0
+34,Oudtshoorn,-33.592343,22.205482,South Africa,ZA,Western Cape,,76708.0,47998.0
+35,Standerton,-26.933654999999998,29.241518,South Africa,ZA,Mpumalanga,,74021.0,18093.0
+36,Upington,-28.447758,21.256121,South Africa,ZA,Northern Cape,,71373.0,52799.0
+37,Saldanha,-33.01167,17.944202,South Africa,ZA,Western Cape,,68284.0,6654.0
+38,Tzaneen,-23.833222,30.163505999999998,South Africa,ZA,Limpopo,,67245.0,16954.0
+39,Knysna,-34.036643,23.049704000000002,South Africa,ZA,Western Cape,,63106.0,4668.0
+40,Graaff-Reinet,-32.25,24.55,South Africa,ZA,Eastern Cape,,62896.0,3021.0
+41,Port Shepstone,-30.741369,30.454991999999997,South Africa,ZA,KwaZulu-Natal,,52793.0,21858.0
+42,Vryburg,-26.956588,24.728403,South Africa,ZA,North West,,49588.0,13590.0
+43,Ladysmith,-28.553914000000002,29.782697,South Africa,ZA,KwaZulu-Natal,,47375.0,47375.0
+44,Beaufort West,-32.356708000000005,22.582947,South Africa,ZA,Western Cape,,44737.0,11404.0
+45,Aliwal North,-30.693664000000002,26.711407,South Africa,ZA,Eastern Cape,,44436.0,8410.0
+46,Volksrust,-27.365415000000002,29.881752000000002,South Africa,ZA,Mpumalanga,,43378.0,7411.0
+47,Lebowakgomo,-24.2,29.5,South Africa,ZA,Limpopo,,33308.0,397.0
+48,Cradock,-32.164221000000005,25.619176,South Africa,ZA,Eastern Cape,,32898.0,32898.0
+49,De Aar,-30.649657,24.012295,South Africa,ZA,Northern Cape,,32318.0,5021.0
+50,Hermanus,-34.418696000000004,19.234464000000003,South Africa,ZA,Western Cape,,25153.0,7396.0
+51,Ulundi,-28.335233000000002,31.416171999999996,South Africa,ZA,KwaZulu-Natal,,20753.0,5581.0
+52,Komatipoort,-25.433204999999997,31.954777000000004,South Africa,ZA,Mpumalanga,,20508.0,159.0
+53,Messina,-22.351308,30.039596999999997,South Africa,ZA,Limpopo,,20191.0,3505.0
+54,Middelburg,-31.492849,25.00633,South Africa,ZA,Eastern Cape,,18164.0,3764.0
+55,Port Alfred,-33.590571999999995,26.891037,South Africa,ZA,Eastern Cape,,17959.0,795.0
+56,Bloemhof,-27.646855,25.606973,South Africa,ZA,North West,,17122.0,4203.0
+57,Mossel Bay,-34.183067,22.146048,South Africa,ZA,Western Cape,,16743.0,16743.0
+58,Bredasdorp,-34.532154,20.040308,South Africa,ZA,Western Cape,,14936.0,1970.0
+59,Swellendam,-34.022624,20.441706,South Africa,ZA,Western Cape,,13674.0,4234.0
+60,Colesberg,-30.719994,25.097185,South Africa,ZA,Northern Cape,,12423.0,2559.0
+61,Brandfort,-28.700083000000003,26.459684000000003,South Africa,ZA,Free State,,12091.0,289.0
+62,Prieska,-29.664088,22.747421,South Africa,ZA,Northern Cape,,11236.0,4045.0
+63,Springbok,-29.664336,17.886495,South Africa,ZA,Northern Cape,,10438.0,2809.0
+64,Kuruman,-27.452402000000003,23.432456,South Africa,ZA,Northern Cape,,10006.0,9093.0
+65,Port Saint John’s,-31.622911,29.544772,South Africa,ZA,Eastern Cape,,5939.0,5939.0
+66,Carnarvon,-30.968265999999996,22.133026,South Africa,ZA,Northern Cape,,5785.0,5785.0
+67,Pofadder,-29.128299,19.394915,South Africa,ZA,Northern Cape,,4220.0,4220.0
+68,Vanrhynsdorp,-31.608884999999997,18.739679000000002,South Africa,ZA,Western Cape,,3331.0,3331.0
+69,Alexander Bay,-28.596078000000002,16.485355,South Africa,ZA,Northern Cape,,1500.0,1452.0
+70,Ubombo,-27.563672999999998,32.085699,South Africa,ZA,KwaZulu-Natal,,564.0,564.0
+71,Mahikeng,-25.86522,25.644213,South Africa,ZA,North West,admin,,

@@ -1,4 +1,4 @@
-,name,country,lat,lon,population
+,city,admin,lat,lng,population
 0,Tokyo,Japan,35.685,139.7514,35676.0
 1,New York,United States,40.6943,-73.9249,19354.922
 2,Mexico City,Mexico,19.4424,-99.131,19028.0

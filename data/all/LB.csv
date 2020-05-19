@@ -1,0 +1,29 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Beirut,33.871944,35.509722,Lebanon,LB,Beyrouth,primary,1846000.0,1712125.0
+1,Sidon,33.559932,35.375636,Lebanon,LB,Liban-Sud,admin,173894.0,173894.0
+2,Nabatîyé el Faouqa,33.363889,35.4925,Lebanon,LB,Nabatîyé,,80000.0,40000.0
+3,Zahlé,33.849722,35.904167,Lebanon,LB,Béqaa,admin,78145.0,44239.0
+4,Bsaba,33.803056,35.5425,Lebanon,LB,Mont-Liban,,9000.0,9000.0
+5,Baabda,33.833889,35.544167,Lebanon,LB,Mont-Liban,admin,,
+6,Aaley,33.805278,35.6,Lebanon,LB,Mont-Liban,minor,,
+7,Halba,34.542778000000006,36.079722,Lebanon,LB,Aakkâr,admin,,
+8,Hâsbaïya,33.397778,35.685,Lebanon,LB,Nabatîyé,minor,,
+9,Jezzîne,33.541667,35.584444,Lebanon,LB,Liban-Sud,minor,,
+10,Jdaidet el Matn,33.890556,35.566389,Lebanon,LB,Mont-Liban,minor,,
+11,Joubb Jannîne,33.626944,35.784167,Lebanon,LB,Béqaa,minor,,
+12,Nabatîyé,33.378692,35.483123,Lebanon,LB,Nabatîyé,admin,,
+13,Beït ed Dîne,33.694167,35.580833,Lebanon,LB,Mont-Liban,minor,,
+14,Batroûn,34.255278000000004,35.658056,Lebanon,LB,Liban-Nord,minor,,
+15,Amioûn,34.3,35.808889,Lebanon,LB,Liban-Nord,minor,,
+16,Baalbek,34.005833,36.218056,Lebanon,LB,Baalbek-Hermel,admin,,
+17,Marjayoûn,33.360278,35.591111,Lebanon,LB,Nabatîyé,minor,,
+18,Joünié,33.980833000000004,35.617778,Lebanon,LB,Mont-Liban,minor,,
+19,Bcharré,34.250833,36.010556,Lebanon,LB,Liban-Nord,minor,,
+20,Jbaïl,34.121111,35.648056,Lebanon,LB,Mont-Liban,minor,,
+21,Tripoli,34.436667,35.849722,Lebanon,LB,Liban-Nord,admin,,
+22,Sîr ed Danniyé,34.385278,36.031110999999996,Lebanon,LB,Liban-Nord,minor,,
+23,Zghartā,34.397394,35.894928,Lebanon,LB,Liban-Nord,minor,,
+24,El Hermel,34.394166999999996,36.384722,Lebanon,LB,Baalbek-Hermel,minor,,
+25,Bent Jbaïl,33.119444,35.433333000000005,Lebanon,LB,Nabatîyé,minor,,
+26,Tyre,33.273333,35.193889,Lebanon,LB,Liban-Sud,minor,,
+27,Râchaïya el Ouadi,33.500886,35.843697,Lebanon,LB,Béqaa,minor,,

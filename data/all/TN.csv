@@ -1,0 +1,30 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Tunis,36.806112,10.171078,Tunisia,TN,Tunis,primary,2412500.0,728453.0
+1,Sfax,34.740556,10.760278,Tunisia,TN,Sfax,admin,453050.0,277278.0
+2,Hammam Sousse,35.860904,10.603131,Tunisia,TN,Sousse,,327004.0,164123.0
+3,Gabès,33.881457,10.098196000000002,Tunisia,TN,Gabès,admin,219517.0,110075.0
+4,Zarzis,33.503981,11.112155,Tunisia,TN,Médenine,,159161.0,79316.0
+5,Kairouan,35.678102,10.096333,Tunisia,TN,Kairouan,admin,144522.0,119794.0
+6,Bizerte,37.274423,9.87391,Tunisia,TN,Bizerte,admin,139843.0,115268.0
+7,Gafsa,34.425,8.784167,Tunisia,TN,Gafsa,admin,126803.0,81232.0
+8,Nabeul,36.456058,10.737630000000001,Tunisia,TN,Nabeul,admin,115149.0,115149.0
+9,Ariana,36.860116999999995,10.193371,Tunisia,TN,Tunis,admin,97687.0,97687.0
+10,Kasserine,35.167578000000006,8.836506,Tunisia,TN,Kasserine,admin,81987.0,78158.0
+11,Mnara,35.697731,10.781591,Tunisia,TN,Monastir,,71546.0,41400.0
+12,Tataouine,32.929674,10.451767,Tunisia,TN,Tataouine,admin,62577.0,62577.0
+13,Béja,36.725638000000004,9.181692,Tunisia,TN,Béja,admin,59567.0,57233.0
+14,Jendouba,36.501135999999995,8.780239,Tunisia,TN,Jendouba,admin,51408.0,51408.0
+15,El Kef,36.174239,8.704863000000001,Tunisia,TN,Kef,admin,47979.0,36628.0
+16,Mahdia,35.504721999999994,11.062222,Tunisia,TN,Mahdia,admin,45977.0,45977.0
+17,Sidi Bouzid,35.038234,9.484935,Tunisia,TN,Sidi Bouzid,admin,42098.0,42098.0
+18,Tozeur,33.919683,8.133519999999999,Tunisia,TN,Tozeur,admin,39504.0,34943.0
+19,Siliana,36.084965999999994,9.370818,Tunisia,TN,Siliana,admin,26960.0,26960.0
+20,Kebili,33.704387,8.969033999999999,Tunisia,TN,Kébili,admin,19875.0,19875.0
+21,Ben Gardane,33.13783,11.219649,Tunisia,TN,Médenine,,19843.0,13364.0
+22,Zaghouan,36.402907,10.142925,Tunisia,TN,Zaghouan,admin,16911.0,16911.0
+23,Dehiba,32.007992,10.701353,Tunisia,TN,Tataouine,,3525.0,3525.0
+24,Sousse,35.825388000000004,10.636991,Tunisia,TN,Sousse,admin,,
+25,Ben Arous,36.753056,10.218889,Tunisia,TN,Tunis,admin,,
+26,Medenine,33.354946999999996,10.505478,Tunisia,TN,Médenine,admin,,
+27,Manouba,36.808029,10.097205,Tunisia,TN,Tunis,admin,,
+28,Monastir,35.783333,10.833333,Tunisia,TN,Monastir,admin,,

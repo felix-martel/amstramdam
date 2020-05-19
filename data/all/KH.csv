@@ -1,0 +1,74 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Phnom Penh,11.56245,104.91600600000001,Cambodia,KH,Phnom Penh,primary,1466000.0,1466000.0
+1,Battambang,13.102713,103.198215,Cambodia,KH,Battambang,admin,154773.0,150444.0
+2,Siem Reap,13.361792999999999,103.860556,Cambodia,KH,Siem Reap,admin,109398.0,85000.0
+3,Kampong Cham,11.993387,105.463502,Cambodia,KH,Kampong Cham,admin,83233.0,61750.0
+4,Kampong Chhnang,12.25,104.666667,Cambodia,KH,Kampong Chhnang,admin,75244.0,56390.0
+5,Prey Veng,11.486819,105.32533400000001,Cambodia,KH,Prey Veng,admin,74000.0,74000.0
+6,Pursat,12.538778,103.91920400000001,Cambodia,KH,Pursat,admin,52476.0,13446.0
+7,Sisŏphŏn,13.585876,102.97368900000001,Cambodia,KH,Banteay Meanchey,admin,50302.0,23218.0
+8,Kampot,10.61041,104.181448,Cambodia,KH,Kampot,admin,50105.0,22691.0
+9,Kampong Speu,11.453321,104.52084599999999,Cambodia,KH,Kampong Speu,admin,33231.0,33231.0
+10,Koh Kong,11.615314,102.983798,Cambodia,KH,Koh Kong,admin,33134.0,27436.0
+11,Stung Treng,13.525865,105.96830200000001,Cambodia,KH,Stung Treng,admin,29665.0,29665.0
+12,Tbêng Méanchey,13.807315,104.980455,Cambodia,KH,Preah Vihear,admin,24380.0,24380.0
+13,Svay Rieng,11.087852,105.79935400000001,Cambodia,KH,Svay Rieng,admin,23956.0,23956.0
+14,Kratie,12.488113,106.018786,Cambodia,KH,Kratie,admin,19975.0,19975.0
+15,Kampong Thom,12.711122,104.888732,Cambodia,KH,Kampong Thom,admin,19951.0,19951.0
+16,Lumphăt,13.487841,106.98158400000001,Cambodia,KH,Ratanakiri,,19205.0,19205.0
+17,Takeo,10.99081,104.784984,Cambodia,KH,Takeo,admin,15264.0,15264.0
+18,Sênmônoŭrôm,12.455827000000001,107.18810900000001,Cambodia,KH,Mondolkiri,admin,7944.0,7944.0
+19,Suŏng,11.911779,105.658208,Cambodia,KH,Tbong Khmum,admin,,
+20,Aek Phnum,13.159932000000001,103.231338,Cambodia,KH,Battambang,minor,,
+21,Thpong,11.75375,104.42743399999999,Cambodia,KH,Kampong Speu,minor,,
+22,Preah Netr Preah,13.623709,103.182125,Cambodia,KH,Banteay Meanchey,minor,,
+23,Samlout,12.616978999999999,102.858621,Cambodia,KH,Battambang,minor,,
+24,Phnum Proek,13.223498999999999,102.395463,Cambodia,KH,Battambang,minor,,
+25,Bavel,13.251276999999998,102.87795,Cambodia,KH,Battambang,minor,,
+26,Kampot,10.604208,104.25611500000001,Cambodia,KH,Kampot,minor,,
+27,Chhuk,10.836445,104.455282,Cambodia,KH,Kampot,minor,,
+28,Phnum Kravanh,12.351211,103.769401,Cambodia,KH,Pursat,minor,,
+29,Sangkae,13.07943,103.244537,Cambodia,KH,Battambang,minor,,
+30,Kiri Vongs,10.637805,104.87319,Cambodia,KH,Takeo,minor,,
+31,Ta Khmau,11.446411999999999,104.945558,Cambodia,KH,Kandal,minor,,
+32,Krong Kep,10.482905,104.316721,Cambodia,KH,Kep,admin,,
+33,Mittakpheap,10.622677000000001,103.52473,Cambodia,KH,Sihanoukville,minor,,
+34,Thma Puok,13.939872,103.053071,Cambodia,KH,Banteay Meanchey,minor,,
+35,Bat Dambang,13.262979999999999,103.090369,Cambodia,KH,Battambang,minor,,
+36,Tram Kak,11.011735,104.676314,Cambodia,KH,Takeo,minor,,
+37,Basedth,11.149178,104.536411,Cambodia,KH,Kampong Speu,minor,,
+38,Kampong Trach,10.558475,104.46753199999999,Cambodia,KH,Kampot,minor,,
+39,Trapeang Prasat,14.186892000000002,104.355335,Cambodia,KH,Oddar Meanchey,minor,,
+40,Chum Kiri,10.925216,104.421853,Cambodia,KH,Kampot,minor,,
+41,Pailin,12.848946,102.60928299999999,Cambodia,KH,Pailin,admin,,
+42,Svay Chek,13.805385999999999,102.961841,Cambodia,KH,Banteay Meanchey,minor,,
+43,Bak Khlang,11.569028999999999,102.95541800000001,Cambodia,KH,Koh Kong,minor,,
+44,Thma Bang,11.629253,103.529578,Cambodia,KH,Koh Kong,minor,,
+45,Mongkol Borei,13.54057,103.026933,Cambodia,KH,Banteay Meanchey,minor,,
+46,Ban Lŭng,13.739391,106.987268,Cambodia,KH,Ratanakiri,admin,,
+47,Mondul Seima,11.62411,102.950147,Cambodia,KH,Koh Kong,minor,,
+48,Smach Meanchey,11.604122,102.988014,Cambodia,KH,Koh Kong,minor,,
+49,Srae Ambel,11.122121,103.75383199999999,Cambodia,KH,Koh Kong,minor,,
+50,Anlong Veaeng,14.232229,104.081074,Cambodia,KH,Oddar Meanchey,minor,,
+51,Soutr Nikom,13.238787,104.137843,Cambodia,KH,Siem Reap,minor,,
+52,Kampong Seila,11.091669,103.90078299999999,Cambodia,KH,Koh Kong,minor,,
+53,Srei Snam,13.834198,103.51315,Cambodia,KH,Siem Reap,minor,,
+54,Phnum Sruoch,11.384999,104.371646,Cambodia,KH,Kampong Speu,minor,,
+55,Kandal Stueng,11.413501,104.826477,Cambodia,KH,Kandal,minor,,
+56,Koas Krala,12.755883,103.255137,Cambodia,KH,Battambang,minor,,
+57,Ou Chrov,13.638848000000001,102.583559,Cambodia,KH,Banteay Meanchey,minor,,
+58,Ta Khmau,11.483333,104.95,Cambodia,KH,Kandal,admin,,
+59,Botum Sakor,11.187197,103.471166,Cambodia,KH,Koh Kong,minor,,
+60,Sala Krau,12.956114999999999,102.608909,Cambodia,KH,Pailin,minor,,
+61,Damnak Chang’aeur,10.530211999999999,104.368809,Cambodia,KH,Kep,minor,,
+62,Ta Loas,12.807903999999999,103.460227,Cambodia,KH,Battambang,minor,,
+63,Veal Veaeng,12.304911,103.102298,Cambodia,KH,Pursat,minor,,
+64,Banteay Meas,10.667814,104.560262,Cambodia,KH,Kampot,minor,,
+65,Moung Ruessei,12.774522,103.449264,Cambodia,KH,Battambang,minor,,
+66,Sihanoukville,10.635917,103.501715,Cambodia,KH,Sihanoukville,admin,,
+67,Sampov Lun,13.431897,102.375742,Cambodia,KH,Banteay Meanchey,minor,,
+68,Kamrieng,13.08806,102.490735,Cambodia,KH,Battambang,minor,,
+69,Phnum Srok,13.744026000000002,103.338921,Cambodia,KH,Banteay Meanchey,minor,,
+70,Kralanh,13.605347,103.41903,Cambodia,KH,Siem Reap,minor,,
+71,Banan,12.939644,103.14239,Cambodia,KH,Battambang,minor,,
+72,Sâmraông,14.181747,103.517612,Cambodia,KH,Oddar Meanchey,admin,,

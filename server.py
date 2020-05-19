@@ -1,8 +1,9 @@
 """
 Associated with conda env 'tdc'
-# TODO add a Home button on results screen
 # TODO add a 'Connect' button when connection is not automatic
 # Add support for other countries/regions
+# Add a chatc
+# Use FA: <script src="https://kit.fontawesome.com/0b60c47224.js" crossorigin="anonymous"></script>
 """
 
 print("Loading server.py")
@@ -12,10 +13,10 @@ import os
 from collections import defaultdict
 import argparse
 
-from flask import Flask, render_template, session, request, redirect, url_for
+from flask import Flask, render_template, session, request, redirect, url_for, jsonify
 from flask_socketio import SocketIO, emit, join_room, leave_room, close_room
 
-
+from city_parser import GameMap, MAPS
 import game_manager as manager
 
 
@@ -32,11 +33,21 @@ app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
 socketio = SocketIO(app, async_mode=async_mode) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
 
 DATASETS = manager.get_all_datasets()
+DATASET_GEOMETRIES = dict()
 
 @app.route("/")
 def serve_main():
     print("Serving lobby")
     return render_template("lobby.html", datasets=DATASETS)
+
+
+@app.route("/points/<dataset>")
+def get_dataset_geometry(dataset):
+    if dataset not in MAPS:
+        data = {}
+    else:
+        data = GameMap.from_name(dataset).get_geometry()
+    return jsonify(data)
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
@@ -66,7 +77,11 @@ def serve_game(name):
         session["game"] = name
         game_name = session["game"]
         game = manager.get_game(game_name)
-        params = dict(map=game.map_name, wait_time=game.wait_time, duration=game.duration)
+        params = dict(
+            map=game.map_name,
+            wait_time=game.wait_time,
+            bbox=game.bbox,
+            duration=game.duration)
         return render_template("main.html", game_name=name, params=params)
 
 
@@ -77,14 +92,19 @@ timers = defaultdict(int)
 @socketio.on('connection')
 def init_game(data):
     game_name = session["game"]
+    player = session.get("player", "unknown")
+    print(f"Receive <event:connection[to={game_name}> from <player:{player}>")
     if not manager.exists(game_name):
+        print(f"Game <game:{game_name}> doesnt exist")
         del session["game"]
-        return redirect(url_for("serve_main"))
+        emit("redirect", dict(url=url_for("serve_main")), json=True)
+        # return redirect(url_for("serve_main"))
 
     join_room(game_name)
     game = manager.get_game(game_name)
     if "player" in session:
         player = session["player"]
+        print(f"Receive <event:connection> from existing player <player:{player}>")
         if player not in game.players:
             game.add_player(player)
     else:
@@ -144,7 +164,7 @@ def end_game(game_name, run_id):
     # global game
     game = manager.get_game(game_name)
     if game is None or game.curr_run_id != run_id:
-        print(f"end_game failed (current: {game.curr_run_id}, expected: {run_id})")
+        print(f"end_game failed (current: {game.curr_run_id if game is not None else 'NoneType'}, expected: {run_id})")
         return
     print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
     with app.test_request_context('/'):

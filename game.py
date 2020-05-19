@@ -36,12 +36,12 @@ def load_cities(fname="data/places.world.csv", min_pop=0):
         df = df[df.population > min_pop]
     return {((clean_city(city), country), Point(lon, lat)) for city, country, lon, lat in zip(df.name, df.country, df.lon, df.lat)}
 
-CITIES = load_cities()
-
-OLD_CITIES = {
-    (("Paris", "France"), Point(2.3488, 48.8534)),
-    (("Lyon", "France"), Point(4.85, 45.75))
-}
+# CITIES = load_cities()
+#
+# OLD_CITIES = {
+#     (("Paris", "France"), Point(2.3488, 48.8534)),
+#     (("Lyon", "France"), Point(4.85, 45.75))
+# }
 
 MSG_TEMPLATE = """Distance: {dist:.1f}km (+{sd:.0f} pts)
 Time: {delta:.2f}s (+{st:.0f} pts)
@@ -49,29 +49,29 @@ Time: {delta:.2f}s (+{st:.0f} pts)
 Score: +{score} pts
 """
 
-class PlayerList:
-    def __init__(self):
-        self.players = ["charles", "georges", "valery", "francois", "jacques", "nicolas", "hollandouille", "emmanuel"]
-        self.currents = Counter()
-
-    def new(self):
-        player = random.choice(self.players)
-        self.currents[player] += 1
-        return f"{player}_{self.currents[player]}"
-
-def generate_id():
-    return random.randint(1, 1000)
-
-def random_city(forbidden=None):
-    if forbidden is None:
-        forbidden = set()
-    city, loc = random.choice(list(CITIES - forbidden))
-    return city, loc
+#class PlayerList:
+#    def __init__(self):
+#        self.players = ["charles", "georges", "valery", "francois", "jacques", "nicolas", "hollandouille", "emmanuel"]
+#        self.currents = Counter()
+#
+#    def new(self):
+#        player = random.choice(self.players)
+#        self.currents[player] += 1
+#        return f"{player}_{self.currents[player]}"
+#
+#def generate_id():
+#    return random.randint(1, 1000)
+#
+#def random_city(forbidden=None):
+#    if forbidden is None:
+#        forbidden = set()
+#    city, loc = random.choice(list(CITIES - forbidden))
+#    return city, loc
 
 class GameRun:
     SCORE_MULTIPLIER = 1000
 
-    def __init__(self, players, place=None, forbidden=None, dist_param=None, time_param=None, duration=None):
+    def __init__(self, players, place, forbidden=None, dist_param=None, time_param=None, duration=None):
         self.players = players
         self.scores =  defaultdict(float)
         self.messages = defaultdict(str)
@@ -84,8 +84,6 @@ class GameRun:
         self.dist_param = 500 if dist_param is None else dist_param
         self.duration = 10 if duration is None else duration
 
-        if place is None:
-            place = random_city(forbidden)
         self.place = place
         self.start = None
         self.dones = defaultdict(lambda:False)

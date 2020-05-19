@@ -73,6 +73,16 @@
   white-space: nowrap;
 }
 
+.fa-icon {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
 .map-container {
   height: 220px;
   width: 100%;
@@ -127,6 +137,23 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
 .game-panel {
   text-align: left;
   width: 40%;
+}
+
+#player-name[contenteditable="true"]::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: lightgray;
+  content: "\f304"; /**/
+
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+  font-size: 0.7em;
+  position: relative;
+  left: 5px;
 }
 
 /*

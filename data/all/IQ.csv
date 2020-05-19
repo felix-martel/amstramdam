@@ -1,0 +1,126 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Baghdad,33.340582,44.400876000000004,Iraq,IQ,Baghdād,primary,5054000.0,5054000.0
+1,Mosul,36.335,43.118889,Iraq,IQ,Nīnawá,admin,1316000.0,1140934.0
+2,Dihok,36.867089,42.988446,Iraq,IQ,Dahūk,admin,986000.0,255000.0
+3,Erbil,36.192572999999996,44.01062,Iraq,IQ,Arbīl,admin,926000.0,665740.0
+4,Al Başrah,30.533015999999996,47.797466,Iraq,IQ,Al Başrah,admin,870000.0,870000.0
+5,An Najaf,32.025944,44.346246,Iraq,IQ,An Najaf,admin,665552.0,560000.0
+6,Kirkuk,35.468056,44.392222,Iraq,IQ,Kirkūk,admin,601433.0,508672.0
+7,Al Ḩillah,32.463671999999995,44.41963,Iraq,IQ,Bābil,admin,594605.0,364700.0
+8,Karbalā’,32.597902000000005,44.016482,Iraq,IQ,Karbalā’,admin,510692.0,434450.0
+9,An Nāşirīyah,31.057993,46.257262,Iraq,IQ,Dhī Qār,admin,451547.0,400249.0
+10,Ad Dīwānīyah,31.992886,44.925521,Iraq,IQ,Al Qādisīyah,admin,358408.0,318801.0
+11,Al ‘Amārah,31.835612,47.144832,Iraq,IQ,Maysān,admin,345007.0,323302.0
+12,Al Kūt,32.512796,45.818171,Iraq,IQ,Wāsiţ,admin,321521.0,315162.0
+13,Ba‘qūbah,33.746595,44.643663000000004,Iraq,IQ,Diyālá,admin,299479.0,152550.0
+14,Ar Ramādī,33.420559999999995,43.307779,Iraq,IQ,Al Anbār,admin,295121.0,274539.0
+15,Az Zubayr,30.392132,47.701745,Iraq,IQ,Al Başrah,minor,262219.0,122676.0
+16,Al Fallūjah,33.349128,43.785986,Iraq,IQ,Al Anbār,minor,231819.0,190159.0
+17,As Samāwah,31.305903999999998,45.279884,Iraq,IQ,Al Muthanná,admin,174978.0,152890.0
+18,Ash Shaţrah,31.409063,46.172703999999996,Iraq,IQ,Dhī Qār,minor,161949.0,82732.0
+19,Sāmarrā’,34.195896000000005,43.88568,Iraq,IQ,Şalāḩ ad Dīn,minor,158508.0,158508.0
+20,Tall ‘Afar,36.379134,42.448065,Iraq,IQ,Nīnawá,minor,144465.0,144465.0
+21,Zaxo,37.148713,42.685909,Iraq,IQ,Dahūk,minor,134863.0,95052.0
+22,Al Musayyib,32.778724,44.290052,Iraq,IQ,Bābil,minor,76454.0,42901.0
+23,Tikrīt,34.615807000000004,43.678606,Iraq,IQ,Şalāḩ ad Dīn,admin,56591.0,42477.0
+24,Mandalī,33.748103,45.555028,Iraq,IQ,Diyālá,,29785.0,3056.0
+25,Ar Ruţbah,33.037183,40.285862,Iraq,IQ,Al Anbār,minor,22370.0,12029.0
+26,Qūshtabah,36.00193,44.038267,Iraq,IQ,Arbīl,minor,,
+27,Zummār,36.656674,42.601653000000006,Iraq,IQ,Nīnawá,minor,,
+28,Al Maymūnah,31.678995,46.96948,Iraq,IQ,Maysān,minor,,
+29,Aş Şuwayrah,32.925556,44.775833,Iraq,IQ,Wāsiţ,minor,,
+30,Dukan,35.929221999999996,44.962821999999996,Iraq,IQ,As Sulaymānīyah,minor,,
+31,Al Jabāyish,30.965878999999997,47.001955,Iraq,IQ,Dhī Qār,minor,,
+32,Kasnazān,36.20067,44.132627,Iraq,IQ,Arbīl,minor,,
+33,Hīt,33.636635999999996,42.827683,Iraq,IQ,Al Anbār,minor,,
+34,Amêdî,37.092137,43.487688,Iraq,IQ,Dahūk,minor,,
+35,Ar Rumaythah,31.528453999999996,45.203772,Iraq,IQ,Al Muthanná,minor,,
+36,Zawîte,36.905678,43.143244,Iraq,IQ,Dahūk,minor,,
+37,‘Afak,32.064304,45.247434000000005,Iraq,IQ,Al Qādisīyah,minor,,
+38,Al Kaḩlā’,31.667894,47.294498,Iraq,IQ,Maysān,minor,,
+39,Dibis,35.674815,44.070667,Iraq,IQ,Kirkūk,minor,,
+40,Qeładizê,36.185358,45.127346,Iraq,IQ,As Sulaymānīyah,minor,,
+41,Al Ḩayy,32.174191,46.043454,Iraq,IQ,Wāsiţ,minor,,
+42,Al Hāshimīyah,32.363506,44.660111,Iraq,IQ,Bābil,minor,,
+43,Dāqūq,35.139234,44.449067,Iraq,IQ,Kirkūk,minor,,
+44,Al ‘Azīzīyah,32.909411999999996,45.063586,Iraq,IQ,Wāsiţ,minor,,
+45,Aţ Ţārmīyah,33.674444,44.395833,Iraq,IQ,Baghdād,minor,,
+46,Al Ḩaqlānīyah,34.085988,42.361736,Iraq,IQ,Al Anbār,minor,,
+47,Balad,34.014846,44.145737,Iraq,IQ,Şalāḩ ad Dīn,minor,,
+48,Al Kūfah,32.024915,44.396421999999994,Iraq,IQ,An Najaf,minor,,
+49,‘Aqrah,36.733222,43.879639000000005,Iraq,IQ,Nīnawá,minor,,
+50,Shaqlāwah,36.404221,44.325628,Iraq,IQ,Arbīl,minor,,
+51,Choman,36.636652000000005,44.888201,Iraq,IQ,Arbīl,minor,,
+52,Kifrī,34.689626000000004,44.960571,Iraq,IQ,Diyālá,minor,,
+53,‘Aynkāwah,36.230605,43.994421,Iraq,IQ,Arbīl,minor,,
+54,Al Manādhirah,31.906924,44.486488,Iraq,IQ,An Najaf,minor,,
+55,Al Qurnah,31.015475,47.43362,Iraq,IQ,Al Başrah,minor,,
+56,Ash Shaykhān,36.695948,43.352017,Iraq,IQ,Nīnawá,minor,,
+57,Seyid Sadiq,35.352779999999996,45.866820000000004,Iraq,IQ,As Sulaymānīyah,minor,,
+58,‘Alī al Gharbī,32.461863,46.687938,Iraq,IQ,Maysān,minor,,
+59,Al Khāliş,33.851184,44.520466,Iraq,IQ,Diyālá,minor,,
+60,Ash Sharqāt,35.517222,43.228056,Iraq,IQ,Şalāḩ ad Dīn,minor,,
+61,‘Ayn Tamr,32.56687,43.488153999999994,Iraq,IQ,Karbalā’,minor,,
+62,‘Anah,34.368573,41.981938,Iraq,IQ,Al Anbār,minor,,
+63,Al Majar al Kabīr,31.583721,47.168801,Iraq,IQ,Maysān,minor,,
+64,Al Madīnah,30.963243,47.26998,Iraq,IQ,Al Başrah,minor,,
+65,Al Maḩāwīl,32.661381,44.408537,Iraq,IQ,Bābil,minor,,
+66,Al Maḩmūdīyah,33.062213,44.365641,Iraq,IQ,Baghdād,minor,,
+67,Slêmanî,35.564964,45.432905,Iraq,IQ,As Sulaymānīyah,admin,,
+68,Al Ba‘āj,36.042597,41.716322999999996,Iraq,IQ,Nīnawá,minor,,
+69,Qeredagh,35.307096,45.390601000000004,Iraq,IQ,As Sulaymānīyah,minor,,
+70,Nāḩiyat Baḩār,30.176494,48.397752000000004,Iraq,IQ,Al Başrah,minor,,
+71,Nāḩiyat ‘Atbah,30.481168,48.014241999999996,Iraq,IQ,Al Başrah,minor,,
+72,Al Ḩamzah,31.724444000000002,44.976944,Iraq,IQ,Al Qādisīyah,minor,,
+73,Tallkayf,36.491092,43.120255,Iraq,IQ,Nīnawá,minor,,
+74,Ar Rifā‘ī,31.720786,46.107779,Iraq,IQ,Dhī Qār,minor,,
+75,Atrūsh,36.837692,43.334503000000005,Iraq,IQ,Nīnawá,minor,,
+76,Mêrgasur,36.843083,44.300944,Iraq,IQ,Arbīl,minor,,
+77,Khānaqīn,34.348201,45.390648999999996,Iraq,IQ,Diyālá,minor,,
+78,Al ‘Awjah,34.533333,43.733333,Iraq,IQ,Şalāḩ ad Dīn,minor,,
+79,Sêmêl,36.858226,42.848199,Iraq,IQ,Dahūk,minor,,
+80,Al Qayyārah,35.799327000000005,43.294469,Iraq,IQ,Nīnawá,minor,,
+81,Khabāt,36.277983,43.67065,Iraq,IQ,Arbīl,minor,,
+82,Sinjār,36.320901,41.876562,Iraq,IQ,Nīnawá,minor,,
+83,Al Ḩawījah,35.325921,43.77267,Iraq,IQ,Kirkūk,minor,,
+84,Baḩirkah,36.315559,44.035331,Iraq,IQ,Arbīl,minor,,
+85,Barwānah,34.094317,42.382872,Iraq,IQ,Al Anbār,minor,,
+86,Dāratū,36.120622999999995,44.059719,Iraq,IQ,Arbīl,minor,,
+87,Ash Shāmīyah,31.962568,44.60075,Iraq,IQ,Al Qādisīyah,minor,,
+88,Derbendîxan,35.112066,45.686628000000006,Iraq,IQ,As Sulaymānīyah,minor,,
+89,Soran,36.653203000000005,44.544067,Iraq,IQ,Arbīl,minor,,
+90,Badrah,33.115084,45.933440999999995,Iraq,IQ,Wāsiţ,minor,,
+91,Al Ḩamdānīyah,36.269743,43.376083,Iraq,IQ,Nīnawá,minor,,
+92,Baladrūz,33.696313,45.077825,Iraq,IQ,Diyālá,minor,,
+93,Bayjī,34.92915,43.488778,Iraq,IQ,Şalāḩ ad Dīn,minor,,
+94,Makhmūr,35.776216999999995,43.579738,Iraq,IQ,Arbīl,minor,,
+95,Rāwah,34.482293,41.918979,Iraq,IQ,Al Anbār,minor,,
+96,Ṟuwandiz,36.612065,44.523715,Iraq,IQ,Arbīl,minor,,
+97,Pênciwên,35.623290999999995,45.947142,Iraq,IQ,As Sulaymānīyah,minor,,
+98,Mawet,35.901195,45.413011,Iraq,IQ,As Sulaymānīyah,minor,,
+99,Abī al Khaşīb,30.446362,47.978134000000004,Iraq,IQ,Al Başrah,minor,,
+100,Nāḩiyat Alī ash Sharqī,32.122869,46.749280999999996,Iraq,IQ,Maysān,minor,,
+101,Ṟaniye,36.255111,44.882389,Iraq,IQ,As Sulaymānīyah,minor,,
+102,Chemchemał,35.533558,44.834296,Iraq,IQ,As Sulaymānīyah,minor,,
+103,Hełebcey Taze,35.319748,45.689478,Iraq,IQ,As Sulaymānīyah,minor,,
+104,Sūq ash Shuyūkh,30.890858,46.454249,Iraq,IQ,Dhī Qār,minor,,
+105,Chwarta,35.726587,45.572318,Iraq,IQ,As Sulaymānīyah,minor,,
+106,Al Hindīyah,32.546704999999996,44.227653000000004,Iraq,IQ,Karbalā’,minor,,
+107,Batîfa,37.174611999999996,43.01188,Iraq,IQ,Dahūk,minor,,
+108,Ţūz Khūrmātū,34.888083,44.632564,Iraq,IQ,Şalāḩ ad Dīn,minor,,
+109,Ṟizgarî,37.140206,42.570605,Iraq,IQ,Dahūk,minor,,
+110,Al Qā’im,34.392509999999994,40.989451,Iraq,IQ,Al Anbār,minor,,
+111,Bameṟnê,37.121629999999996,43.270901,Iraq,IQ,Dahūk,minor,,
+112,Abū Ghurayb,33.305628999999996,44.18477,Iraq,IQ,Baghdād,minor,,
+113,Al Miqdādīyah,33.978611,44.936944,Iraq,IQ,Diyālá,minor,,
+114,Al Ḩaḑar,35.572905,42.733948999999996,Iraq,IQ,Nīnawá,minor,,
+115,Qal‘at Şāliḩ,31.528024,47.293616,Iraq,IQ,Maysān,minor,,
+116,Kūysinjaq,36.08289,44.628733000000004,Iraq,IQ,Arbīl,minor,,
+117,Ḩadīthah,34.136607,42.377266999999996,Iraq,IQ,Al Anbār,minor,,
+118,An Nu‘mānīyah,32.556211,45.412934,Iraq,IQ,Wāsiţ,minor,,
+119,Al Fāw,29.974214,48.47309,Iraq,IQ,Al Başrah,minor,,
+120,Kelar,34.628052000000004,45.318518,Iraq,IQ,As Sulaymānīyah,minor,,
+121,Hełebce,35.183723,45.986186,Iraq,IQ,As Sulaymānīyah,minor,,
+122,Ad Dawr,34.455969,43.793409000000004,Iraq,IQ,Şalāḩ ad Dīn,minor,,
+123,Al Khiḑr,31.200227,45.553205,Iraq,IQ,Al Muthanná,minor,,
+124,As Salmān,30.504641999999997,44.539429999999996,Iraq,IQ,Al Muthanná,minor,,

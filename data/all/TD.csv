@@ -1,0 +1,28 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,N’Djamena,12.108502,15.048173,Chad,TD,Ville de N’Djaména,primary,989000.0,681387.0
+1,Bongor,10.280555999999999,15.372222,Chad,TD,Mayo-Kébbi Est,admin,193941.0,30518.0
+2,Sagh,9.1429,18.3923,Chad,TD,Moyen-Chari,admin,169196.0,102528.0
+3,Abéché,13.816667,20.816667000000002,Chad,TD,Ouaddaï,admin,158317.0,74188.0
+4,Moundou,8.566667,16.083333,Chad,TD,Logone Occidental,admin,156705.0,135167.0
+5,Kelo,9.308594,15.806575,Chad,TD,Tandjilé,,96224.0,42533.0
+6,Pala Oua,9.3522,14.9675,Chad,TD,Mayo-Kébbi Ouest,,35466.0,204.0
+7,Am Timan,11.0297,20.2827,Chad,TD,Salamat,admin,30443.0,28885.0
+8,Doba,8.65,16.85,Chad,TD,Logone Oriental,admin,29597.0,24336.0
+9,Mongo,12.184412,18.693031,Chad,TD,Guéra,admin,27763.0,27763.0
+10,Ati,13.2154,18.3353,Chad,TD,Batha,admin,25373.0,24074.0
+11,Laï,9.3952,16.2989,Chad,TD,Tandjilé,admin,19382.0,19382.0
+12,Oum Hadjer,13.2954,19.6966,Chad,TD,Batha,,19271.0,3894.0
+13,Mao,14.121159,15.310305,Chad,TD,Kanem,admin,18031.0,12049.0
+14,Biltine,14.533332999999999,20.916667,Chad,TD,Wadi Fira,admin,11000.0,2365.0
+15,Bol,13.458611,14.714722,Chad,TD,Lac,admin,3303.0,3303.0
+16,Fada,17.185351,21.581138,Chad,TD,Ennedi-Ouest,admin,448.0,448.0
+17,Zouar,20.458333,16.527778,Chad,TD,Tibesti,,204.0,204.0
+18,Moussoro,13.641434,16.489409,Chad,TD,Barh el Gazel,admin,,
+19,Pala,9.3642,14.9046,Chad,TD,Mayo-Kébbi Ouest,admin,,
+20,Massenya,11.4039,16.1705,Chad,TD,Chari-Baguirmi,admin,,
+21,Massakory,12.995999000000001,15.729269,Chad,TD,Hadjer-Lamis,admin,,
+22,Faya,17.925698,19.104275,Chad,TD,Borkou,admin,,
+23,Koumra,8.912561,17.553922,Chad,TD,Mandoul,admin,,
+24,Goz Beïda,12.224841,21.410339999999998,Chad,TD,Sila,admin,,
+25,Bardaï,21.35494,17.001210999999998,Chad,TD,Tibesti,admin,,
+26,Am Djarass,16.065889000000002,22.843078,Chad,TD,Ennedi-Est,admin,,

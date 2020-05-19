@@ -1,0 +1,43 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Niamey,13.516667000000002,2.1166669999999996,Niger,NE,Niamey,primary,915000.0,742791.0
+1,Maradi,13.5,7.101744,Niger,NE,Maradi,admin,232555.0,163487.0
+2,Zinder,13.804869,8.988371,Niger,NE,Zinder,admin,230358.0,191424.0
+3,Agadez,16.973333,7.991111,Niger,NE,Agadez,,117770.0,88561.0
+4,Tahoua,14.8888,5.2692,Niger,NE,Tahoua,admin,115956.0,80425.0
+5,Arlit,18.736944,7.385278,Niger,NE,Agadez,minor,100000.0,80000.0
+6,Birnin Konni,13.795620999999999,5.255298000000001,Niger,NE,Tahoua,minor,65252.0,48103.0
+7,Dosso,13.049000000000001,3.1937,Niger,NE,Dosso,admin,49750.0,43213.0
+8,Gaya,11.884347,3.44919,Niger,NE,Dosso,minor,33051.0,25738.0
+9,Diffa,13.31536,12.611345,Niger,NE,Diffa,admin,30988.0,27948.0
+10,Ayorou,14.730746,0.917385,Niger,NE,Tillabéri,,26290.0,1712.0
+11,Madaoua,14.073,5.96,Niger,NE,Tahoua,minor,24804.0,15104.0
+12,Tillabéri,14.207113,1.454179,Niger,NE,Tillabéri,admin,19262.0,8362.0
+13,Nguigmi,14.249532,13.109210999999998,Niger,NE,Diffa,minor,17897.0,12739.0
+14,Gouré,13.983504,10.270354,Niger,NE,Zinder,minor,14639.0,11944.0
+15,Djado,21.015982,12.308442,Niger,NE,Agadez,,10.0,10.0
+16,Illéla,14.4605,5.2437,Niger,NE,Tahoua,minor,,
+17,Guidan Roumdji,13.657597,6.695675,Niger,NE,Maradi,minor,,
+18,Tchintabaraden,15.8969,5.7985,Niger,NE,Tahoua,minor,,
+19,Say,13.1007,2.3689,Niger,NE,Tillabéri,minor,,
+20,Loga,13.6132,3.2358,Niger,NE,Dosso,minor,,
+21,Ouallam,14.316415,2.08597,Niger,NE,Tillabéri,minor,,
+22,Téra,14.007762,0.753059,Niger,NE,Tillabéri,minor,,
+23,Keïta,14.7551,5.7749,Niger,NE,Tahoua,minor,,
+24,Dogondoutchi,13.63933,4.028748,Niger,NE,Dosso,minor,,
+25,Magaria,12.998257,8.909913000000001,Niger,NE,Zinder,minor,,
+26,Filingué,14.3521,3.3168,Niger,NE,Tillabéri,minor,,
+27,Abalak,15.4509,6.2793,Niger,NE,Tahoua,minor,,
+28,Kollo,13.3043,2.339,Niger,NE,Tillabéri,minor,,
+29,Tchirozérine,17.220962,7.761400999999999,Niger,NE,Agadez,minor,,
+30,Mayahi,13.955323000000002,7.671214999999999,Niger,NE,Maradi,minor,,
+31,Bilma,18.685325,12.916427,Niger,NE,Agadez,minor,,
+32,Bouza,14.422931,6.042783999999999,Niger,NE,Tahoua,minor,,
+33,Tanout,14.970885999999998,8.887861000000001,Niger,NE,Zinder,minor,,
+34,Aguié,13.506008,7.778627,Niger,NE,Maradi,minor,,
+35,Maïné Soroa,13.211394,12.0241,Niger,NE,Diffa,minor,,
+36,Birnin Gaouré,13.081729,2.910993,Niger,NE,Dosso,minor,,
+37,Tessaoua,13.757367000000002,7.987405,Niger,NE,Maradi,minor,,
+38,Mirriah,13.707273999999998,9.150127000000001,Niger,NE,Zinder,minor,,
+39,Dakoro,14.510556,6.765,Niger,NE,Maradi,minor,,
+40,Madarounfa,13.308670999999999,7.156022999999999,Niger,NE,Maradi,minor,,
+41,Kantché,13.539257000000001,8.46293,Niger,NE,Zinder,minor,,

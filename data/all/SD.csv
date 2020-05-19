@@ -1,0 +1,33 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Khartoum,15.588056,32.534167,Sudan,SD,Khartoum,primary,4754000.0,1974647.0
+1,Omdurman,15.636110999999998,32.437222,Sudan,SD,Khartoum,,2395159.0,2183698.0
+2,Port Sudan,19.615484,37.203107,Sudan,SD,Red Sea,admin,489725.0,489725.0
+3,Kassala,15.458728,36.389684,Sudan,SD,Kassala,admin,401477.0,339521.0
+4,El Obeid,13.181934,30.221871999999998,Sudan,SD,North Kordofan,admin,393311.0,269424.0
+5,Nyala,12.048882,24.880694000000002,Sudan,SD,South Darfur,admin,392373.0,392373.0
+6,Kūstī,13.166667000000002,32.666667,Sudan,SD,White Nile,,345068.0,203858.0
+7,Wad Medani,14.392270000000002,33.528040000000004,Sudan,SD,Al Gazira,admin,332714.0,284367.0
+8,El Fasher,13.616389000000002,25.356389,Sudan,SD,North Darfur,admin,252609.0,189203.0
+9,Gedaref,14.035832999999998,35.384444,Sudan,SD,Al Gedaref,admin,201282.0,201282.0
+10,Shendi,16.6915,33.4341,Sudan,SD,River Nile,,186611.0,53568.0
+11,Ed Damazin,11.801467,34.356539,Sudan,SD,Blue Nile,admin,186051.0,42009.0
+12,Kadugli,11.011111,29.718333,Sudan,SD,South Kordofan,admin,176931.0,87666.0
+13,Madent Atbara,17.6925,33.9852,Sudan,SD,River Nile,,168612.0,107930.0
+14,El Geneina,13.442742,22.448932,Sudan,SD,West Darfur,admin,162981.0,159310.0
+15,Al Manāqil,14.2459,32.9891,Sudan,SD,Al Gazira,,151827.0,128297.0
+16,Sannār,13.55,33.633333,Sudan,SD,Sennar,,130122.0,76494.0
+17,An Nuhūd,12.7,28.433333,Sudan,SD,Western Kordofan,,108008.0,61239.0
+18,Ed Damer,17.598981,33.972051,Sudan,SD,River Nile,admin,103941.0,84856.0
+19,Ad Diwem,14.0012,32.3116,Sudan,SD,White Nile,,87068.0,22583.0
+20,Tokār,18.4254,37.729,Sudan,SD,Red Sea,,73202.0,22250.0
+21,Umm Ruwaba,12.9061,31.2158,Sudan,SD,North Kordofan,,55742.0,16257.0
+22,Berber,18.021578,33.982991,Sudan,SD,River Nile,,49556.0,22395.0
+23,Dongola,19.18163,30.476888,Sudan,SD,Northern,admin,26404.0,26404.0
+24,Haya,18.3353,36.3856,Sudan,SD,Red Sea,,20000.0,14818.0
+25,Babanūsah,11.333333,27.8,Sudan,SD,Western Kordofan,,19700.0,19700.0
+26,Wādī Ḩalfā’,21.8,31.35,Sudan,SD,Northern,,17121.0,17121.0
+27,Rabak,13.187975,32.74365,Sudan,SD,White Nile,admin,,
+28,Ed Daein,11.467222,26.131667,Sudan,SD,East Darfur,admin,,
+29,El Fula,11.711955,28.346196999999997,Sudan,SD,Western Kordofan,admin,,
+30,Zalingei,12.909179,23.470578,Sudan,SD,Central Darfur,admin,,
+31,Singa,13.1483,33.931168,Sudan,SD,Sennar,admin,,
