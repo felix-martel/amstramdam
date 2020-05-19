@@ -18,14 +18,20 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, close_room
 
 import game_manager as manager
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
-socketio = SocketIO(app) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
-
-DATASETS = manager.get_all_datasets()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="Use local server with debugger", action="store_true")
+parser.add_argument("-t", "--threading", help="Use threading lib instead of eventlet", action="store_true")
+args = parser.parse_args()
+DEBUG = args.debug
+async_mode = "threading" if args.threading else "eventlet"
+print(f"Launching app with args debug={DEBUG}, async={async_mode}")
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
+socketio = SocketIO(app, async_mode=async_mode) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
+
+DATASETS = manager.get_all_datasets()
 
 @app.route("/")
 def serve_main():
@@ -248,10 +254,6 @@ def process_guess(data):
 
 # DEBUG = False
 if __name__ == '__main__':
-    args = parser.parse_args()
-    DEBUG = args.debug
-    print("debug =", DEBUG)
-
     if DEBUG:
         # Prevent server from being visible from the outside
         kwargs = dict(debug=True)

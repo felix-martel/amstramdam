@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Multigéo</title>
-<meta property="og:title" content="Multigéo" />
+<meta property="og:title" content="am·stram·dam" />
 <meta property="og:description" content="«à l’endroit où les rives du fleuve perdent leur mine souriante, où monts et rochers avec leurs ruines fantastiques de vieux bourgs prennent un air hautain, plus sauvage, plus grave et plus majestueux, on découvre, pareille à une légende lugubre de l’ancien temps, la vieille et sombre ville de Bacharach.»" />
 <meta property="og:image" content="{{ url_for('static',filename='background.png') }}" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>am·stram·dam</title>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.mobile.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='timer.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
@@ -34,20 +35,24 @@
     <div class="blink-item" id="bottom"></div>
 </div>
 <div class="main">
-    <div id="game-sharing-link">Share this game: <u id="sharing-link"></u></div>
+    <div id="game-sharing-link">Inviter des amis: <u id="sharing-link"></u></div>
     <div class="popup-container" id="popup-container" hidden>
         <div id="mask">
 
         </div>
         <div id="popup" class="box">
+            <h2 class="blue">Partie terminée !</h2>
             <table id="final-results">
 
             </table>
             <button id="relaunch-from-popup">Nouvelle partie</button>
+            <div style="margin-top:15px;">
+                <a  href="/">Retour à l'accueil</a>
+            </div>
         </div>
     </div>
-        <div class="column">
-    <div class="box">
+        <div class="column" id="left-column-display">
+    <div class="box" id="main-info-box">
         <div class="nav">
             <a href="/">Accueil</a>
         </div>
@@ -330,8 +335,10 @@ var hintContainer = document.getElementById("target");
          }, 1000); // Update every second
 
      }
+
         function addGuessEntry(name, distance){
-            document.getElementById("results").hidden = false;
+            // document.getElementById("results").hidden = false;
+            showRunResults();
             var resultContainer = document.getElementById("current-results");
             distance = Math.round(distance);
             resultContainer.innerHTML += `<li><span class="pname">${getPlayerName(name)}</span><span class="pscore">${distance}km</span></li>`;
@@ -369,6 +376,20 @@ var hintContainer = document.getElementById("target");
         }, timestep);
 
         return circle;
+    }
+    function showRunResults(){
+         const container = document.getElementById("left-column-display");
+         if (!container.classList.contains("with-results")){
+             container.classList.add("with-results");
+         }
+         document.getElementById("results").hidden = false;
+    }
+    function hideRunResults(){
+         const container = document.getElementById("left-column-display");
+         if (container.classList.contains("with-results")){
+             container.classList.remove("with-results");
+         }
+         document.getElementById("results").hidden = true;
     }
     const blinkDelay = 3; // In seconds: screen will blink `blinkDelay` seconds before run end
     const blinkTimestep = 500; // In milliseconds
@@ -408,9 +429,10 @@ var hintContainer = document.getElementById("target");
             console.log(`Run started, place to find is «${data.hint}»`);
             clearMap();
             clearGuessEntries();
+            hideRunResults();
             startCountdown();
             hasAnswered = false;
-            document.getElementById("results").hidden = true;
+            //document.getElementById("results").hidden = true;
             displayGameBox(data.hint, data.current, data.total);
 
             /*gameBox.hidden = true;
@@ -548,6 +570,13 @@ var hintContainer = document.getElementById("target");
         if (e.keyCode === 13){
             playerName.blur();
         }
+        if (playerName.innerHTML.length >= 20){
+            e.preventDefault();
+        }
+    });
+    playerName.addEventListener("click", (e) => {
+        //playerName.focus();
+        e.stopPropagation();
     });
     playerName.addEventListener("focusout", (e) => {
         const newName = playerName.innerHTML;
@@ -563,6 +592,7 @@ var hintContainer = document.getElementById("target");
     });
     gameLauncher.addEventListener("click", (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (!gameLaunched){
             socket.emit("launch");
         }
@@ -621,6 +651,14 @@ var hintContainer = document.getElementById("target");
         hasAnswered = true;
         clickable = false;
     }
+    const mainInfoBox = document.getElementById("main-info-box");
+    mainInfoBox.addEventListener("click", () => {
+        if (mainInfoBox.classList.contains("toggled")){
+            mainInfoBox.classList.remove("toggled");
+        } else {
+            mainInfoBox.classList.add("toggled");
+        }
+    });
 
     map.on('click', onMapClick);
     </script>

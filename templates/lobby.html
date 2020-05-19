@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta property="og:title" content="Multigéo" />
+    <meta property="og:title" content="am·stram·dam" />
     <meta property="og:description" content="«à l’endroit où les rives du fleuve perdent leur mine souriante, où monts et rochers avec leurs ruines fantastiques de vieux bourgs prennent un air hautain, plus sauvage, plus grave et plus majestueux, on découvre, pareille à une légende lugubre de l’ancien temps, la vieille et sombre ville de Bacharach.»" />
     <meta property="og:image" content="{{ url_for('static',filename='background.png') }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <title>Multigéo - Accueil</title>
+    <title>am·stram·dam</title>
 
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/style.mobile.css">
     <link rel="stylesheet" href="./static/timer.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -37,7 +38,11 @@
         <div id="mask">
 
         </div>
-        <div id="popup" class="box">
+        <div id="popup" class="box popup-top">
+            <div class="main-title">
+                <h1 class="blue">am·stram·dam</h1>
+                <div><i>Localiser les villes sur la carte, le plus rapidement possible</i></div>
+            </div>
             <div class="game-panel-container">
 
             <div class="new-game game-panel">
@@ -75,9 +80,14 @@
                     </button>
                 </form>
             </div>
+                <div class="vsep padded"></div>
             <div class="existing-game game-panel">
                 <h2>Rejoindre</h2>
-                <input type="text" id="game-name" placeholder="Nom du jeu">
+                <div>
+                    <i>Entrez le nom d'une partie existante :</i>
+                </div>
+                <input type="text" id="game-name"  size="15">
+                <br>
                 <button id="join-game-button">
                     Rejoindre
                 </button>
