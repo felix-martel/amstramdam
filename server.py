@@ -1,6 +1,8 @@
 """
 Associated with conda env 'tdc'
-
+# TODO add a Home button on results screen
+# TODO add a 'Connect' button when connection is not automatic
+# Add support for other countries/regions
 """
 
 print("Loading server.py")
@@ -8,6 +10,7 @@ print("Loading server.py")
 import sys
 import os
 from collections import defaultdict
+import argparse
 
 from flask import Flask, render_template, session, request, redirect, url_for
 from flask_socketio import SocketIO, emit, join_room, leave_room, close_room
@@ -20,6 +23,9 @@ app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
 socketio = SocketIO(app) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
 
 DATASETS = manager.get_all_datasets()
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", "--debug", help="Use local server with debugger", action="store_true")
 
 @app.route("/")
 def serve_main():
@@ -240,8 +246,12 @@ def process_guess(data):
         end_game(game_name, game.curr_run_id)
 
 
-DEBUG = False
+# DEBUG = False
 if __name__ == '__main__':
+    args = parser.parse_args()
+    DEBUG = args.debug
+    print("debug =", DEBUG)
+
     if DEBUG:
         # Prevent server from being visible from the outside
         kwargs = dict(debug=True)
