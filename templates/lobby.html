@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./static/style.css">
     <link rel="stylesheet" href="./static/style.mobile.css">
     <link rel="stylesheet" href="./static/timer.css">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
@@ -76,10 +77,10 @@
                         <label for="wait-input">Durée entre les manches</label>
                     <input type="number" name="wait_time" id="wait-input" value="10">
                     </div>
-                    <!--<div class="fieldset">
-                        <label for="zoom-checkbox"> <s> Allow zoom</s></label>
-                        <input id="zoom-checkbox" name="zoom" disabled type="checkbox">
-                    </div>-->
+                    <div class="fieldset">
+                        <label for="zoom-checkbox">Partie publique</label>
+                        <input id="zoom-checkbox" checked name="public" type="checkbox">
+                    </div>
                     <div class="fieldset">
                         <label for="diff-level">Niveau de difficulté</label>
                         <div class="slidecontainer">
@@ -98,10 +99,22 @@
                     <i>Entrez le nom d'une partie existante :</i>
                 </div>
                 <input type="text" id="game-name"  size="15">
-                <br>
                 <button id="join-game-button">
                     Rejoindre
                 </button>
+
+                    <h4>Parties publiques</h4>
+                <div class="game-list">
+                    {% for game in games %}
+                    <div class="game-item">
+                        <a href="/game/{{game.name}}">{{game.name | trim}}</a>
+                        <span class="game-infos">{{game.map}}·
+                            difficulté {{100*game.difficulty|round|int}}% ·
+                            {{game.players}} joueur{% if game.players > 1 %}s{% endif %}
+                        </span>
+                    </div>
+                {% endfor %}
+                </div>
             </div>
             </div>
 

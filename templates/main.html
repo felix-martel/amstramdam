@@ -300,7 +300,6 @@ var hintContainer = document.getElementById("target");
 
     const currGame = game; // game.world;
      var map = L.map('mapid'); //.setView(currGame.center, currGame.zoom);
-    console.log(params.bbox);
     map.fitBounds(params.bbox);
      mobileCheck = function() {
           let check = false;
@@ -617,14 +616,12 @@ var hintContainer = document.getElementById("target");
     }
     function savePseudoToCookie(value){
         value = encodeURIComponent(value);
-        console.log("Saving cookie amstramdamUsername =", value);
         var expires = ";max-age=31536000";
         document.cookie = "amstramdamUsername=" + value + expires;
     }
     function getPseudoFromCookie(){
         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamUsername\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         cookieValue = decodeURIComponent(cookieValue);
-        console.log(cookieValue);
         return cookieValue;
     }
     playerName.addEventListener("keydown", (e) => {
@@ -751,7 +748,6 @@ var hintContainer = document.getElementById("target");
     });
 
     socket.on("chat:new", (data) => {
-        console.log("Received message '" + data.message + "' from", data.author);
         if (data.author !== PLAYER){
             appendMessage(data.message, data.author);
         }

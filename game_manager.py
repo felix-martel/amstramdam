@@ -31,6 +31,10 @@ def remove_game(name):
 def get_game(name):
     return MANAGER.get(name, None)
 
+def get_public_games():
+    return [dict(name=name, map=game.map_display_name, players=len(game.players), difficulty=game.difficulty) for name, game in MANAGER.items()
+            if game.is_public]
+
 def relaunch_game(name, **kwargs):
     old_game = MANAGER[name]
     params = {**old_game.get_params(), **kwargs}

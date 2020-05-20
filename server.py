@@ -38,7 +38,7 @@ DATASET_GEOMETRIES = dict()
 @app.route("/")
 def serve_main():
     print("Serving lobby")
-    return render_template("lobby.html", datasets=DATASETS)
+    return render_template("lobby.html", datasets=DATASETS, games=manager.get_public_games())
 
 
 @app.route("/points/<dataset>")
@@ -58,15 +58,18 @@ def create_new_game():
         "runs": 10,
         "wait_time": 10,
         "difficulty": 100,
+        "public": False,
         **request.form
     }
     ints = ["duration", "runs", "wait_time", "difficulty"]
     for k in ints:
         params[k] = int(params[k])
+    params["public"] = bool(params["public"])
     params["difficulty"] /= 100
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],
+                                     is_public=params["public"],
                                      map=params["map"], wait_time=params["wait_time"])
     print(manager.get_status())
 

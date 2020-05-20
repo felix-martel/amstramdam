@@ -64,7 +64,7 @@ def get_cities(map):
 
 class Game:
     def __init__(self, players=None, n_run=20, time_param=5, dist_param=None,
-                 difficulty=1,
+                 difficulty=1, is_public=False,
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.map_name = map
         map = GameMap.from_name(self.map_name)
@@ -92,6 +92,7 @@ class Game:
         self.wait_time = wait_time
         self.records = [] # defaultdict(list)
         self.scores = defaultdict(int)
+        self.is_public = is_public
         if pseudos is None:
             pseudos = dict()
         pseudos = {k: v for k, v in pseudos.items() if k in self.players}
@@ -112,11 +113,12 @@ class Game:
             pseudos=self.pseudos,
             wait_time=self.wait_time,
             difficulty=self.difficulty,
+            is_public=self.is_public
         )
 
     def __str__(self):
         return f"""---
-Multigeo Game
+Multigeo {'Public' if self.is_public else 'Private'} Game
 Map: {self.map_display_name}
 Difficulty: {100.*self.difficulty:.0f}%
 Players: {', '.join(self.players)}
