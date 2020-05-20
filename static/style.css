@@ -62,6 +62,14 @@
     display: none;
 }
 
+.my-custom-pin {
+  opacity: 1;
+  transition: 0.2s ease-in opacity;
+}
+.my-custom-pin.hidden {
+  opacity: 0;
+}
+
 .icon {
   position: relative;
 }
@@ -81,6 +89,25 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.slider {
+  height: 5px;
+  border-radius: 2px;
+}
+
+input[type=range]:hover::-webkit-slider-thumb {
+  background: blue !important;
+  color: blue;
+  border-color: blue;
+  -webkit-appearance: none !important;
+}
+
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background: blue !important;
+  color: blue;
+  border-color: blue;
+  -webkit-appearance: none !important;
+}
 
 
 .map-container {
@@ -89,6 +116,9 @@
   background-color: black;
   position: relative;
 }
+
+
+
 
 #leaflet {
   position: absolute;
@@ -200,7 +230,7 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
 }
 
 a, a:visited, a:active, a:link {
-  color: blue;
+  color: blue !important;
 }
 
 #mask {

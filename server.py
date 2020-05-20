@@ -57,13 +57,16 @@ def create_new_game():
         "zoom": False,
         "runs": 10,
         "wait_time": 10,
+        "difficulty": 100,
         **request.form
     }
-    ints = ["duration", "runs", "wait_time"]
+    ints = ["duration", "runs", "wait_time", "difficulty"]
     for k in ints:
         params[k] = int(params[k])
+    params["difficulty"] /= 100
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
+                                     difficulty=params["difficulty"],
                                      map=params["map"], wait_time=params["wait_time"])
     print(manager.get_status())
 

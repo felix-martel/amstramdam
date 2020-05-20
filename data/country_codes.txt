@@ -9,7 +9,7 @@ Argentine	AR
 Australie	AU
 Autriche	AT
 Azerbaïdjan	AZ
-Bélarus	BY
+Biélorussie	BY
 Belgique	BE
 Bolivie	BO
 Bosnie-Herzégovine	BA
@@ -93,6 +93,7 @@ Slovaquie	SK
 Slovénie	SI
 Somalie	SO
 Soudan	SD
+Sri Lanka	LK
 Suède	SE
 Suisse	CH
 Tadjikistan	TJ

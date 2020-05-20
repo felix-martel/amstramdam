@@ -63,7 +63,9 @@ def get_cities(map):
     return load_cities(map["fname"], map["min-pop"])
 
 class Game:
-    def __init__(self, players=None, n_run=20, time_param=5, dist_param=None, duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
+    def __init__(self, players=None, n_run=20, time_param=5, dist_param=None,
+                 difficulty=1,
+                 duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.map_name = map
         map = GameMap.from_name(self.map_name)
         self.map_display_name = map.name
@@ -71,6 +73,7 @@ class Game:
             dist_param = map.get_distance()
         self.bbox = map.bounding_box()
         # self.map_info = map
+        self.difficulty = difficulty
         self.n_run = n_run
         self.dist_param = dist_param
         self.time_param = time_param
@@ -78,7 +81,7 @@ class Game:
         if players is None:
             players = set()
         self.players = set(players)
-        self.places = map.sample(self.n_run) # random.sample(get_cities(map), self.n_run)
+        self.places = map.sample(self.n_run, self.difficulty) # random.sample(get_cities(map), self.n_run)
         self.duration = duration
         self.runs = [GameRun(self.players, place, dist_param=self.dist_param, time_param=self.time_param, duration=duration)
                      for place in self.places]
@@ -108,12 +111,14 @@ class Game:
             # map_display=self.map_display_name,
             pseudos=self.pseudos,
             wait_time=self.wait_time,
+            difficulty=self.difficulty,
         )
 
     def __str__(self):
         return f"""---
 Multigeo Game
 Map: {self.map_display_name}
+Difficulty: {100.*self.difficulty:.0f}%
 Players: {', '.join(self.players)}
 Places: {', '.join([p[0][0] for p in self.places])}
 Run: {self.curr_run_id+1}/{self.n_run}
