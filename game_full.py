@@ -77,7 +77,7 @@ class Game:
         self.n_run = n_run
         self.dist_param = dist_param
         self.time_param = time_param
-        self.curr_run_id = 0
+        self.__curr_run_id = 0
         if players is None:
             players = set()
         self.players = set(players)
@@ -96,6 +96,7 @@ class Game:
         if pseudos is None:
             pseudos = dict()
         pseudos = {k: v for k, v in pseudos.items() if k in self.players}
+        self.done = False
         self.pseudos = pseudos
 
         self.launched = False
@@ -115,6 +116,17 @@ class Game:
             difficulty=self.difficulty,
             is_public=self.is_public
         )
+
+    @property
+    def curr_run_id(self):
+        return self.__curr_run_id
+
+    @curr_run_id.setter
+    def curr_run_id(self, value):
+        if value >= len(self.runs):
+            value = len(self.runs) - 1
+            self.done = True
+        self.__curr_run_id = value
 
     def __str__(self):
         return f"""---
@@ -167,8 +179,8 @@ Run: {self.curr_run_id+1}/{self.n_run}
 
     @property
     def current(self):
-        if self.done:
-            return self.runs[-1]
+        # if self.done:
+        #     return self.runs[-1]
         return self.runs[self.curr_run_id]
 
     def launch(self):
@@ -176,8 +188,8 @@ Run: {self.curr_run_id+1}/{self.n_run}
         return self.current #.launch()
 
     @property
-    def done(self):
-        return self.curr_run_id == self.n_run
+    def old_done(self):
+        return self.curr_run_id >= self.n_run
 
     def on_game_end(self):
         print("Game ended!")
