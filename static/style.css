@@ -55,8 +55,24 @@
   position: relative;
   min-height: 200px;
   overflow: hidden;
+
 }
 
+#chat-box-popup {
+  position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 0;
+    width: 180px;
+    border-right: 1px solid lightgray;
+    margin-bottom: 0;
+  overflow: hidden
+}
+
+.popup-main {
+  margin-left: 180px;
+}
 .inner-chat {
     position: absolute;
     bottom: 0;
@@ -406,6 +422,10 @@ button {
   z-index: 1000;
   border: 5px solid blue;
   /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);*/
+}
+
+.box.no-border {
+  border: none;
 }
 
 .box .title {

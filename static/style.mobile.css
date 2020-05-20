@@ -21,17 +21,20 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       min-height: 100%;
+    z-index: 1002;
+}
+  #popup .popup-main {
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
-    z-index: 1002;
-}
+      margin: 0;
+  }
 
   #popup.popup-top {
       justify-content: start;
   }
 
-  #chat-box {
+  #chat-box, #chat-box-popup {
       display: none;
   }
 

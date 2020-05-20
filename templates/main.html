@@ -42,7 +42,20 @@
 
         </div>
         <div id="popup" class="box">
-            <h2 class="blue">Partie terminée !</h2>
+            <div class="popup-left">
+                <div class="box no-border" id="chat-box-popup">
+                <div class="inner-chat">
+                    <div id="chat-messages-popup" class="chat-messages">
+
+                    </div>
+                    <div class="input">
+                        <textarea name="chat-input" id="chat-input-popup" class="chat-input" placeholder="Envoyez un message"></textarea>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-main">
+                <h2 class="blue">Partie terminée !</h2>
             <table id="final-results">
 
             </table>
@@ -50,6 +63,8 @@
             <div style="margin-top:15px;">
                 <a  href="/">Retour à l'accueil</a>
             </div>
+            </div>
+
         </div>
     </div>
         <div class="column" id="left-column-display">
@@ -708,15 +723,27 @@ var hintContainer = document.getElementById("target");
         /* CHAT SUPPORT */
     var chatInput = document.getElementById("chat-input");
     var chatMessages = document.getElementById("chat-messages");
+    var chatInput2 = document.getElementById("chat-input-popup");
+    var chatMessages2 = document.getElementById("chat-messages-popup");
 
     function appendMessage(message, author){
-        chatMessages.innerHTML += `<div class="chat-message"><span class="chat-author">${getPlayerName(author)}</span><span class="chat-message-content">${message}</span></div>`;
+            var el = `<div class="chat-message"><span class="chat-author">${getPlayerName(author)}</span><span class="chat-message-content">${message}</span></div>`;
+        chatMessages.innerHTML += el;
+        chatMessages2.innerHTML += el;
     }
     chatInput.addEventListener("keyup", (e) => {
         if (e.keyCode === 13){
             var message = chatInput.value;
             socket.emit("chat:send", message);
             chatInput.value = "";
+            appendMessage(message, PLAYER);
+        }
+    });
+    chatInput2.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13){
+            var message = chatInput2.value;
+            socket.emit("chat:send", message);
+            chatInput2.value = "";
             appendMessage(message, PLAYER);
         }
     });
