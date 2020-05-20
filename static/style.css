@@ -233,6 +233,11 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   padding: 2px 10px;
   font-size: 0.9em;
 }
+
+#game-sharing-link a, #game-sharing-link a:active, #game-sharing-link a:visited, #game-sharing-link a:hover {
+  color: white !important;
+}
+
 #sharing-link {
   font-size: 1.1em;
   font-weight: bold;

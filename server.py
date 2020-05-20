@@ -6,19 +6,17 @@ Associated with conda env 'tdc'
 # Use FA: <script src="https://kit.fontawesome.com/0b60c47224.js" crossorigin="anonymous"></script>
 """
 
-print("Loading server.py")
-
-import sys
 import os
 from collections import defaultdict
 import argparse
 
 from flask import Flask, render_template, session, request, redirect, url_for, jsonify
 from flask_socketio import SocketIO, emit, join_room, leave_room, close_room
+from flask_talisman import Talisman
 
 from city_parser import GameMap, MAPS
 import game_manager as manager
-
+from security import csp
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="Use local server with debugger", action="store_true")
@@ -28,16 +26,21 @@ DEBUG = args.debug
 async_mode = "threading" if args.threading else "eventlet"
 print(f"Launching app with args debug={DEBUG}, async={async_mode}")
 
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = b'\x93\xd6j63\xffoP\x1c\xa8\x82\xca\x92\xfd\xf9\xc8'
-socketio = SocketIO(app, async_mode=async_mode) # For some reason, eventlet causes bugs (maybe because I use threading.Timer for callbcks
+app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(",")[0]
+
+
+Talisman(app, content_security_policy=csp,
+    content_security_policy_nonce_in=['default-src'], force_https=True)
+
+socketio = SocketIO(app, async_mode=async_mode)
 
 DATASETS = manager.get_all_datasets()
 DATASET_GEOMETRIES = dict()
 
 @app.route("/")
 def serve_main():
-    print("Serving lobby")
     return render_template("lobby.html", datasets=DATASETS, games=manager.get_public_games())
 
 
@@ -170,7 +173,6 @@ def end_game(game_name, run_id):
     # global game
     game = manager.get_game(game_name)
     if game is None or game.curr_run_id != run_id:
-        print(f"end_game failed (current: {game.curr_run_id if game is not None else 'NoneType'}, expected: {run_id})")
         return
     print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
     with app.test_request_context('/'):
@@ -209,13 +211,11 @@ def launch_run(game_name, run_id):
     game = manager.get_game(game_name)
     if game is None or game.curr_run_id != run_id:
         return
-    print(f"\n--\nLaunching run {game.curr_run_id+1} for game <{game_name}>\n--\n")
+    print(f"--\nLaunching run {game.curr_run_id+1} for game <{game_name}>\n--")
     with app.test_request_context('/'):
         hint = game.current.launch()
 
         print(f"Hint is '{hint}'")
-        print(f"Broadcasting <event:run-start> to <room:{game_name}>")
-        socketio.emit("log", "Run launched [from line 164]", broadcast=True, room=game_name)
         socketio.emit("run-start",
                       dict(hint=hint, current=game.curr_run_id, total=game.n_run),
                       json=True,
@@ -223,8 +223,6 @@ def launch_run(game_name, run_id):
                       broadcast=True)
 
         timers[game_name] = wait_and_run(game.current.duration, end_game, game_name, game.curr_run_id)
-        # timers[game_name] = threading.Timer(game.current.duration, end_game, [game_name, game.curr_run_id]) # game_ender(game_name))
-        # timers[game_name].start()
 
 @socketio.on("launch")
 def launch_game():
@@ -232,7 +230,6 @@ def launch_game():
     game = manager.get_game(game_name)
     print(game)
     game.launch() # GameRun(players)
-    print(f"Game <{game_name}> created...launching game")
     emit("game-launched", broadcast=True, room=game_name)
 
     launch_run(game_name, game.curr_run_id)
@@ -269,7 +266,6 @@ def process_guess(data):
     game_name = session["game"]
     game = manager.get_game(game_name)
 
-    print(f"Received answer for game <{game_name}>:", data)
     player = data["player"]
     lon, lat = data["lon"], data["lat"]
     res, done = game.current.process_answer((lon, lat), player)
@@ -279,7 +275,7 @@ def process_guess(data):
     emit("score", res, json=True)
     if done:
         try:
-            print(f"\n--\nInterrupting run {game.curr_run_id+1}\n--\n")
+            print(f"--\nInterrupting run {game.curr_run_id+1}\n--")
             safe_cancel(timers[game_name])
         except AttributeError:
             pass

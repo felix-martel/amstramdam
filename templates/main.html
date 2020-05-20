@@ -151,7 +151,7 @@
     <!--<audio id="beep" hidden src="{{ url_for('static',filename='bip.mp3') }}"></audio>-->
 </div>
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8"  nonce="{{ csp_nonce() }}">
     //import { CountUp } from '{{ url_for('static',filename='countUp.js') }}';
     // import { CountUp} from "../static/countUp";
 

@@ -138,6 +138,7 @@ Places: {', '.join([p[0][0] for p in self.places])}
 Run: {self.curr_run_id+1}/{self.n_run}
 ---"""
 
+
     def add_player(self, name=None):
         if name is not None:
             assert name not in self.global_player_list, f"Name '{name}' already exists"
