@@ -58,6 +58,10 @@
 
 }
 
+#chat-box.hidden {
+  display: none;
+}
+
 #chat-box-popup {
   position: fixed;
     top: 0;
@@ -69,6 +73,34 @@
     margin-bottom: 0;
   overflow: hidden
 }
+
+.controls {
+  position: relative;
+}
+
+#close-chatbox {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    color: #a1a1a1;
+    cursor:pointer;
+
+}
+#close-chatbox:hover {
+  color: blue;
+}
+
+#chat-toggle-button {
+    position: absolute;
+    top: 2px;
+    right: 0;
+  color: blue;
+  cursor:pointer;
+}
+#chat-toggle-button:hover {
+    color: #000085;
+}
+
 
 .popup-main {
   margin-left: 180px;
@@ -324,6 +356,8 @@ a, a:visited, a:active, a:link {
 button {
   font-family: monospace;
 }
+
+
 
 .column {
   position: fixed;

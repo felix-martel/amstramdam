@@ -9,6 +9,9 @@
       z-index: 1001;
   }
 
+    #chat-toggle-button {
+        display: none;
+    }
 
   #popup {
       top: 0;

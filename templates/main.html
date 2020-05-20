@@ -84,12 +84,14 @@
         </ul>
         <div class="controls">
           <button id="launch">Commencer</button>
+            <i class="fas fa-comments" id="chat-toggle-button"></i>
           <!--<button id="restart">Restart</button>-->
         </div>
       </div>
     </div>
 
             <div class="box" id="chat-box">
+                <i id="close-chatbox" class="fas fa-times"></i>
                 <div class="inner-chat">
                     <div id="chat-messages" class="chat-messages">
 
@@ -754,6 +756,14 @@ var hintContainer = document.getElementById("target");
             appendMessage(data.message, data.author);
         }
     });
+
+    document.getElementById("chat-toggle-button").addEventListener("click", () => {
+        document.getElementById("chat-box").classList.toggle("hidden");
+    });
+
+    document.getElementById("close-chatbox").addEventListener("click", () => {
+        document.getElementById("chat-box").classList.add("hidden");
+    })
 
     map.on('click', onMapClick);
     </script>
