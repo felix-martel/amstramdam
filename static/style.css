@@ -50,7 +50,48 @@
   color: blue;
 }
 
+/* CHAT */
+#chat-box {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+}
 
+.inner-chat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.chat-message {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.chat-author {
+      margin-right: 15px;
+    font-style: italic;
+}
+.chat-author:after {
+  content: ":";
+  display: inline;
+}
+.chat-input {
+    resize: none;
+    border: none;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.chat-input:focus {
+  outline: none;
+}
+.chat-input:hover {
+  border-color: gray;
+}
 
 #mapid {
     height: 100%;

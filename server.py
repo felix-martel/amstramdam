@@ -238,6 +238,15 @@ def is_valid_pseudo(name):
     # TODO: implement checks?
     return True
 
+
+@socketio.on("chat:send")
+def process_chat_message(message):
+    game_name = session.get("game")
+    author = session.get("player")
+    if author is None or game_name is None:
+        return
+    emit("chat:new", dict(author=author, message=message), json=True, broadcast=True, room=game_name)
+
 @socketio.on("name-change")
 def update_pseudo(data):
     game_name = session["game"]

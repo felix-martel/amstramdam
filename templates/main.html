@@ -53,6 +53,8 @@
         </div>
     </div>
         <div class="column" id="left-column-display">
+
+
     <div class="box" id="main-info-box">
         <div class="nav">
             <a href="/">Accueil</a>
@@ -71,6 +73,19 @@
         </div>
       </div>
     </div>
+
+            <div class="box" id="chat-box">
+                <div class="inner-chat">
+                    <div id="chat-messages" class="chat-messages">
+
+                    </div>
+                    <div class="input">
+                        <textarea name="chat-input" id="chat-input" class="chat-input" placeholder="Envoyez un message"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
       <div class="box" id="results" hidden>
           <div class="individual-results">
               <div id="answer-name" class="title"></div>
@@ -687,6 +702,29 @@ var hintContainer = document.getElementById("target");
             mainInfoBox.classList.remove("toggled");
         } else {
             mainInfoBox.classList.add("toggled");
+        }
+    });
+
+        /* CHAT SUPPORT */
+    var chatInput = document.getElementById("chat-input");
+    var chatMessages = document.getElementById("chat-messages");
+
+    function appendMessage(message, author){
+        chatMessages.innerHTML += `<div class="chat-message"><span class="chat-author">${getPlayerName(author)}</span><span class="chat-message-content">${message}</span></div>`;
+    }
+    chatInput.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13){
+            var message = chatInput.value;
+            socket.emit("chat:send", message);
+            chatInput.value = "";
+            appendMessage(message, PLAYER);
+        }
+    });
+
+    socket.on("chat:new", (data) => {
+        console.log("Received message '" + data.message + "' from", data.author);
+        if (data.author !== PLAYER){
+            appendMessage(data.message, data.author);
         }
     });
 
