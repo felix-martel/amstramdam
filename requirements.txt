@@ -2,6 +2,7 @@ numpy
 geopy
 Flask
 Flask-SocketIO
+flask-talisman
 numpy
 pandas
 unidecode
