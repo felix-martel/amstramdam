@@ -50,7 +50,7 @@
                 <form id="game-creator" action="/new" method="post">
                     <div class="fieldset">
                         <label for="map-selector">Carte</label>
-                        <select name="map" id="map-selector" onchange="updateView()">
+                        <select name="map" id="map-selector">
                             {% for dataset in datasets %}
                                 {% if dataset.is_sep %}
                                     <option disabled> </option>
@@ -199,6 +199,10 @@
 
         });
     }
+
+    gameSelector.addEventListener("change", () => {
+        updateView();
+    });
 
     function updateDifficulty(){
         if (pointLayer){
