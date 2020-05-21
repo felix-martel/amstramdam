@@ -39,7 +39,7 @@ valid_hosts = ["http://"+h for h in hosts] + ["https://"+h for h in hosts]
 async_mode = "threading" if args.threading else "eventlet"
 print(f"Launching app with args debug={DEBUG}, async={async_mode}, local={is_local}, hosts={', '.join(valid_hosts)}")
 
-
+debug_params = dict(engineio_logger=True, logger=True) if is_local else {}
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(",")[0]
 
@@ -49,11 +49,7 @@ Talisman(app, content_security_policy=csp,
 
 
 
-socketio = SocketIO(app,
-                    async_mode=async_mode,
-                    engineio_logger=True,
-                    logger=True,
-                    cors_allowed_origins=valid_hosts)
+socketio = SocketIO(app, async_mode=async_mode, cors_allowed_origins=valid_hosts, **debug_params)
 
 DATASETS = manager.get_all_datasets()
 DATASET_GEOMETRIES = dict()
