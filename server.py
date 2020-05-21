@@ -199,7 +199,7 @@ def end_game(game_name, run_id):
         records = game.current.records
         results, done = game.end()
         socketio.emit("run-end",
-                      dict(results=records, answer=answer, leaderboard=game.get_current_leaderboard()),
+                      dict(results=records, answer=answer, leaderboard=game.get_current_leaderboard(), done=done),
                         json=True, broadcast=True, room=game_name
                       )
 
@@ -247,7 +247,8 @@ def launch_game():
     game.launch() # GameRun(players)
     emit("game-launched", broadcast=True, room=game_name)
 
-    launch_run(game_name, game.curr_run_id)
+    wait_and_run(3, launch_run, game_name, game.curr_run_id)
+    #launch_run(game_name, game.curr_run_id)
 
 def is_valid_pseudo(name):
     # TODO: implement checks?

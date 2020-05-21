@@ -45,7 +45,11 @@
             <div class="popup-left">
                 <div class="box no-border" id="chat-box-popup">
                 <div class="inner-chat">
-                    <div id="chat-messages-popup" class="chat-messages">
+
+                    <div class="messages-wrapper">
+                        <div id="chat-messages-popup" class="chat-messages">
+
+                        </div>
 
                     </div>
                     <div class="input">
@@ -93,7 +97,10 @@
             <div class="box" id="chat-box">
                 <i id="close-chatbox" class="fas fa-times"></i>
                 <div class="inner-chat">
-                    <div id="chat-messages" class="chat-messages">
+                    <div class="messages-wrapper">
+                        <div id="chat-messages" class="chat-messages">
+
+                        </div>
 
                     </div>
                     <div class="input">
@@ -143,7 +150,8 @@
             </div>
         </div>
         <div class="box hidden" id="display-timer">
-            <span class="timer-text">Prochaine manche dans <span id="run-timer"></span>...</span>
+            <span class="timer-text">
+                <span id="timer-legend">Prochaine manche dans </span><span id="run-timer"></span>...</span>
         </div>
     </div>
 
@@ -317,7 +325,7 @@ var hintContainer = document.getElementById("target");
 	 //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
      });
-    //OSM.addTo(map); DEBUG ONLY
+    OSM.addTo(map);
     var spider = new OverlappingMarkerSpiderfier(map);
     var correctionCircle;
 
@@ -356,12 +364,21 @@ var hintContainer = document.getElementById("target");
      function hideGameBox(){
          gameBox.hidden = true;
      }
-     function startWaitTimer(){
+     const TEXTS = {
+         beforeNewRun: "Prochaine manche dans ",
+         beforeGameEnd: "Partie finie, palmarès dans ",
+         beforeGameStart: "Début de partie dans "
+     }
+     function startWaitTimer({
+                                 duration= params.wait_time,
+                                 label= TEXTS.beforeNewRun
+     } = {}){
          gameHint.classList.add("hidden");
          gameWaitDisplayer.classList.remove("hidden");
          gameBox.hidden = false;
 
-         var duration = params.wait_time;
+         //var duration = params.wait_time;
+         document.getElementById("timer-legend").innerHTML = label;
          document.getElementById("run-timer").innerHTML = duration;
          var waitInterval = window.setInterval(() => {
              duration = duration - 1;
@@ -458,6 +475,7 @@ var hintContainer = document.getElementById("target");
             hideResults();
             gameLaunched = true;
             gameLauncher.disabled = true;
+            startWaitTimer({duration: 3, label: TEXTS.beforeGameStart});
         });
         socket.on("game-end", (data) => {
            console.log("Game ended!");
@@ -567,7 +585,7 @@ var hintContainer = document.getElementById("target");
             runLaunched = false;
             window.clearInterval(blinkInterval);
             window.clearTimeout(blinkTimeout);
-            startWaitTimer();
+            startWaitTimer({label: data.done ? TEXTS.beforeGameEnd : TEXTS.beforeNewRun});
             clearMap();
             LEADERBOARD = data.leaderboard;
             updatePlayerList();
@@ -577,9 +595,6 @@ var hintContainer = document.getElementById("target");
         const trueLon = data.answer.lon;
         const trueLat = data.answer.lat;
         var nAnswers = data.results.length;
-        const originalCenter = map.getCenter();
-        const originalZoom = map.getZoom();
-        const originalMaxZoom = map.getMaxZoom();
         var trueAnswer = addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
         var answers = L.featureGroup([trueAnswer]).addTo(map);
         let requests = data.results.map((rec) => {
@@ -592,32 +607,27 @@ var hintContainer = document.getElementById("target");
                 });
             });
         });
-        const ANIM_DURATION = 0.5;
-        const DELTA_PAD = 0.5;
-        Promise.all(requests).then(() => {
-            if (nAnswers > 0){
-                let bounds = answers.getBounds().pad(0.5);
-                let tempZoom = OSM.maxNativeZoom || 8;
-                // map.setMaxZoom(tempZoom);
-                //OSM.maxZoom = tempZoom;
-                map.flyToBounds(bounds, {duration: ANIM_DURATION});
-            }
-        });
-        if (nAnswers > 0){
-            window.setTimeout(() => {
-                map.flyTo(originalCenter, originalZoom, {duration: ANIM_DURATION});
-                map.setMaxZoom(originalMaxZoom);
-                //OSM.maxZoom  = originalMaxZoom;
-            }, (params.wait_time-2*ANIM_DURATION - DELTA_PAD)*1000);
-        }
-        /*data.results.forEach(rec => {
-            let col = (rec.player === PLAYER) ? "red" : "purple";
-            makeAnimatedCircle(trueLat, trueLon, rec.dist || 10, col, () => {
-                let marker = addMarker(rec.guess.lat, rec.guess.lon, rec.player, col);
-                answers.addLayer(marker);
+        if (!isMobile){
+            const originalCenter = map.getCenter();
+            const originalZoom = map.getZoom();
+            const originalMaxZoom = map.getMaxZoom();
+            const ANIM_DURATION = 0.5;
+            const DELTA_PAD = 0.5;
+            Promise.all(requests).then(() => {
+                if (nAnswers > 0){
+                    let bounds = answers.getBounds().pad(0.5);
+                    let tempZoom = OSM.maxNativeZoom || 8;
+                    map.flyToBounds(bounds, {duration: ANIM_DURATION});
+                }
             });
-            console.log(answers);
-        })*/
+            if (nAnswers > 0){
+                window.setTimeout(() => {
+                    map.flyTo(originalCenter, originalZoom, {duration: ANIM_DURATION});
+                    map.setMaxZoom(originalMaxZoom);
+                    //OSM.maxZoom  = originalMaxZoom;
+                }, (params.wait_time-2*ANIM_DURATION - DELTA_PAD)*1000);
+            }
+        }
     }
     function savePseudoToCookie(value){
         value = encodeURIComponent(value);
