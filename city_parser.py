@@ -31,9 +31,10 @@ REGIONS = {
     region_id: dict(name=region_name, codes=read_region(region_id), limit_size=500, method="from_country_codes") for region_id, region_name in REGION_NAMES.items()
 }
 SPECIALS = {
-    "france_hard": dict(name="France ", file="data/places.france.csv"),
     "world": dict(name="Monde entier", file="data/places.world.csv", use_hint=True),
     **REGIONS,
+    "france_hard": dict(name="France (difficile)", file="data/places.france.csv"),
+    "france_easy": dict(name="France (facile)", file="data/all/FR.csv", use_hint=True),
 }
 COUNTRIES = {code: dict(name=country, file=f"data/all/{code}.csv", limit_size=1000, use_hint=True) for country, code in COUNTRY_CODES.items()}
 

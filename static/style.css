@@ -1,3 +1,35 @@
+* {
+  font-family: "Roboto", monospace;
+}
+
+button {
+  background: transparent;
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
+
+button:hover {
+  border-color: blue;
+  color: blue;
+}
+
+input, select {
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
+
+input:hover, select:hover {
+  border-color: blue;
+}
+
+input:focus, input:active, select:focus, select:active {
+  outline: none;
+}
+
+option:checked {
+  background-color: blue;
+
+}
 
 .blink-wrapper {
   z-index: 1000;
@@ -86,6 +118,7 @@
     right: 7px;
     color: #a1a1a1;
     cursor:pointer;
+  z-index: 1;
 
 }
 #close-chatbox:hover {
@@ -128,18 +161,20 @@
 
 #title {
   position: relative;
+  font-style: italic;
+  font-weight: 900;
 }
 
 #title:after {
   display: block;
   content: "beta";
   color: red;
-  font-family: monospace;
+  /*font-family: "Courier Prime", monospace;*/
   position: absolute;
   left:100%;
     top: 0;
-    font-size: 0.5em;
-    font-style: italic;
+    font-size: 0.4em;
+    font-style: normal;
     /* font-weight: normal; */
     text-transform: uppercase;
     /* letter-spacing: 0.3em;*/
@@ -261,7 +296,7 @@ input[type=range]:focus::-webkit-slider-thumb {
 #leaflet {
   position: absolute;
   top: 0;
-  left: -19px;
+  left: -20px;
   right: -20px;
   bottom: -20px;
 }
@@ -271,6 +306,8 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   margin: 15px 0;
 }
 
+
+
 #game-sharing-link {
   position: fixed;
   bottom: 0;
@@ -278,13 +315,14 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   background: blue;
   color: white;
   z-index: 1000;
-  font-family: monospace;
+  /*font-family: "Courier Prime", monospace;*/
   padding: 2px 10px;
   font-size: 0.9em;
 }
 
 #game-sharing-link a, #game-sharing-link a:active, #game-sharing-link a:visited, #game-sharing-link a:hover {
   color: white !important;
+  margin-right: 15px;
 }
 
 #sharing-link {
@@ -428,7 +466,7 @@ a, a:visited, a:active, a:link {
 }
 
 button {
-  font-family: monospace;
+  /*font-family: "Courier Prime", monospace;*/
 }
 
 
@@ -525,7 +563,7 @@ button {
   /*border-radius: 10px;*/
   padding: 20px;
   text-align: center;
-  font-family: monospace;
+  /*font-family: "Courier Prime", monospace;*/
   margin-bottom: 15px;
   z-index: 1000;
   border: 5px solid blue;

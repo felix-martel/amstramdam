@@ -1,9 +1,8 @@
 """
 Associated with conda env 'tdc'
 # TODO add a 'Connect' button when connection is not automatic
-# Add support for other countries/regions
-# Add a chatc
-# Use FA: <script src="https://kit.fontawesome.com/0b60c47224.js" crossorigin="anonymous"></script>
+# TODO add a refresh button on 'public games' or auto-refresh
+# TODO add the number of people connected on the lobby screen
 """
 
 import os
@@ -45,7 +44,7 @@ app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_lo
 
 
 Talisman(app, content_security_policy=csp,
-    content_security_policy_nonce_in=['default-src'], force_https=True)
+    content_security_policy_nonce_in=['script-src'], force_https=True)
 
 
 

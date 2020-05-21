@@ -1,9 +1,17 @@
 csp = {
     "default-src": [
         "'self'",
+    ],
+    "font-src": [
+        "*.fontawesome.com",
+        "fonts.gstatic.com"
+    ],
+    "script-src": [
+        "'self'",
         "*.cloudflare.com",
         "unpkg.com",
         "*.fontawesome.com",
+        "fontawesome.com",
     ],
     "img-src": [
         "'self'",
@@ -15,6 +23,7 @@ csp = {
         "'self'",
         "'unsafe-inline'",
         "unpkg.com",
-        "*.fontawesome.com"
+        "*.fontawesome.com",
+        "fonts.googleapis.com"
     ]
 }

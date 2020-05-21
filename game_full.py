@@ -5,7 +5,7 @@ import pandas as pd
 
 from game import GameRun, load_cities
 from city_parser import GameMap, SPECIALS, COUNTRIES
-
+from datetime import datetime, timedelta
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
     NAMES = {line.rstrip() for line in f}
@@ -64,7 +64,7 @@ def get_cities(map):
 
 class Game:
     def __init__(self, players=None, n_run=20, time_param=5, dist_param=None,
-                 difficulty=1, is_public=False,
+                 difficulty=1, is_public=False, creation_date=None,
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.map_name = map
         map = GameMap.from_name(self.map_name)
@@ -99,6 +99,9 @@ class Game:
         self.done = False
         self.pseudos = pseudos
 
+        if creation_date is None:
+            creation_date = datetime.now()
+        self.date_created = creation_date
         self.launched = False
         # self.run_in_progress = False
 
@@ -114,8 +117,11 @@ class Game:
             pseudos=self.pseudos,
             wait_time=self.wait_time,
             difficulty=self.difficulty,
-            is_public=self.is_public
+            is_public=self.is_public,
+            creation_date=self.date_created
         )
+
+
 
     @property
     def curr_run_id(self):
@@ -187,6 +193,11 @@ Run: {self.curr_run_id+1}/{self.n_run}
     def launch(self):
         self.launched = True
         return self.current #.launch()
+
+    def is_expired(self, hours=6):
+        """Kwargs must be valid arguments for timedelta"""
+        expiration_date = self.date_created + timedelta(seconds=3600*hours)
+        return len(self.players) == 0 and expiration_date < datetime.now()
 
     @property
     def old_done(self):

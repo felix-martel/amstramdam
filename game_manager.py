@@ -31,9 +31,20 @@ def remove_game(name):
 def get_game(name):
     return MANAGER.get(name, None)
 
+def iter_games(purge=True):
+    to_purge = set()
+    for name, game in MANAGER.items():
+        if purge and game.is_expired():
+            to_purge.add(name)
+        else:
+            yield name, game
+    for name in to_purge:
+        remove_game(name)
+
+
 def get_public_games():
-    return [dict(name=name, map=game.map_display_name, players=len(game.players), difficulty=game.difficulty) for name, game in MANAGER.items()
-            if game.is_public]
+    return [dict(name=name, map=game.map_display_name, players=len(game.players), difficulty=game.difficulty) for name, game in iter_games()
+            if game.is_public and len(game.players) > 0] # Dirty fix for the case 'route to /game/xxx then socket io fails'
 
 def relaunch_game(name, **kwargs):
     old_game = MANAGER[name]
@@ -44,8 +55,9 @@ def relaunch_game(name, **kwargs):
 def exists(name):
     return name in MANAGER
 
-def get_all_games():
-    return list(MANAGER.keys())
+def get_all_games(include_expired_games=False):
+    purge = not include_expired_games
+    return [name for name, game in iter_games(purge)]
 
 def get_status():
     s = ""
