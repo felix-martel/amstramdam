@@ -7,7 +7,9 @@ sur le modèle de Jeux Géographiques. Hébergé par Heroku à l'adresse [amstra
 
 Fonctionne avec `Python 3.8`, `Flask` et `SocketIO`. Le serveur est géré par `eventlet` 
 et les fonds de carte proviennent de 
-[Stamen](http://maps.stamen.com/#toner/12/37.7706/-122.3782)+[OpenStreetMap](http://openstreetmap.org/).
+[Stamen](http://maps.stamen.com/#toner/12/37.7706/-122.3782)+[OpenStreetMap](http://openstreetmap.org/). 
+
+Source des données : [World Cities Database](https://simplemaps.com/data/world-cities) sous licence [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/) pour les villes hors France, [NosDonnées.FR](https://www.data.gouv.fr/fr/datasets/listes-des-communes-geolocalisees-par-regions-departements-circonscriptions-nd/) sous licence [Open Database License](https://opendatacommons.org/licenses/odbl/summary/) pour les villes de France.
 
 ## Installation & développement
 
