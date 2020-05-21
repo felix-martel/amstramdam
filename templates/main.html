@@ -436,7 +436,10 @@ var hintContainer = document.getElementById("target");
     var blinkInterval;
 
 
-        var socket = io({rejectUnauthorized: !params.debug});
+        var socket = io({
+            rejectUnauthorized: !params.debug,
+            reconnectionAttempts: 10, // DEBUG
+        });
         socket.on('connect', function() {
             console.log("Connecting...");
             socket.emit('connection', {data: 'I\'m connected!'});
