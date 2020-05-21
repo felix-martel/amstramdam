@@ -47,11 +47,11 @@ Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugge
 
 - [x] Mobile version
 
-- [ ] Fix HTTPS issue
+- [x] Fix HTTPS issue
 
-- [ ] Add a timer when launching a game ("game will start in 3..2..1")
+- [x] Add a timer when launching a game ("game will start in 3..2..1")
 
-- [ ] Disable/fix zoom animations on mobile
+- [x] Disable/fix zoom animations on mobile
 
-
+- [ ] Add a "Signaler un bug" button, linking to [the project issue page](https://github.com/felix-martel/multigeo/issues/new)
 
