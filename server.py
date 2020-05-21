@@ -24,7 +24,8 @@ parser.add_argument("-t", "--threading", help="Use threading lib instead of even
 args = parser.parse_args()
 DEBUG = args.debug
 async_mode = "threading" if args.threading else "eventlet"
-print(f"Launching app with args debug={DEBUG}, async={async_mode}")
+is_local = os.environ.get("IS_HEROKU") != "1"
+print(f"Launching app with args debug={DEBUG}, async={async_mode}, local={is_local}")
 
 
 app = Flask(__name__)
@@ -291,4 +292,5 @@ if __name__ == '__main__':
     else:
         port = os.environ.get("PORT", 80)
         kwargs = dict(host= '0.0.0.0', port=port)
+
     socketio.run(app, **kwargs)
