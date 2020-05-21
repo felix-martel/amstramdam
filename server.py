@@ -18,6 +18,10 @@ from city_parser import GameMap, MAPS
 import game_manager as manager
 from security import csp
 
+
+import eventlet
+eventlet.monkey_patch(socket=False)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="Use local server with debugger", action="store_true")
 parser.add_argument("-t", "--threading", help="Use threading lib instead of eventlet", action="store_true")
@@ -35,7 +39,7 @@ app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_lo
 Talisman(app, content_security_policy=csp,
     content_security_policy_nonce_in=['default-src'], force_https=True)
 
-socketio = SocketIO(app, async_mode=async_mode)
+socketio = SocketIO(app, async_mode=async_mode, engineio_logger=True, logger=True)
 
 DATASETS = manager.get_all_datasets()
 DATASET_GEOMETRIES = dict()
@@ -283,6 +287,8 @@ def process_guess(data):
 
         end_game(game_name, game.curr_run_id)
 
+certfile = "extra/certif.crt"
+keyfile ="extra/certif.key"
 
 # DEBUG = False
 if __name__ == '__main__':
@@ -292,5 +298,9 @@ if __name__ == '__main__':
     else:
         port = os.environ.get("PORT", 80)
         kwargs = dict(host= '0.0.0.0', port=port)
+    if is_local:
+        kwargs["certfile"] = certfile
+        kwargs["keyfile"] = keyfile
+        kwargs["port"] = 443
 
     socketio.run(app, **kwargs)
