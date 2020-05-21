@@ -53,5 +53,5 @@ Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugge
 
 - [x] Disable/fix zoom animations on mobile
 
-
+- [ ] Add a "Signaler un bug" button, linking to [the project issue page](https://github.com/felix-martel/multigeo/issues/new)
 
