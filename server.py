@@ -26,10 +26,18 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="Use local server with debugger", action="store_true")
 parser.add_argument("-t", "--threading", help="Use threading lib instead of eventlet", action="store_true")
 args = parser.parse_args()
+
 DEBUG = args.debug
-async_mode = "threading" if args.threading else "eventlet"
 is_local = os.environ.get("IS_HEROKU") != "1"
-print(f"Launching app with args debug={DEBUG}, async={async_mode}, local={is_local}")
+
+hosts = ["multigeo.herokuapp.com", "amstramdam.com"]
+hosts += ["www." + name for name in hosts]
+if is_local:
+    hosts.extend(["127.0.0.1", "localhost"])
+valid_hosts = ["http://"+h for h in hosts] + ["https://"+h for h in hosts]
+
+async_mode = "threading" if args.threading else "eventlet"
+print(f"Launching app with args debug={DEBUG}, async={async_mode}, local={is_local}, hosts={', '.join(valid_hosts)}")
 
 
 app = Flask(__name__)
@@ -39,7 +47,13 @@ app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_lo
 Talisman(app, content_security_policy=csp,
     content_security_policy_nonce_in=['default-src'], force_https=True)
 
-socketio = SocketIO(app, async_mode=async_mode, engineio_logger=True, logger=True)
+
+
+socketio = SocketIO(app,
+                    async_mode=async_mode,
+                    engineio_logger=True,
+                    logger=True,
+                    cors_allowed_origins=valid_hosts)
 
 DATASETS = manager.get_all_datasets()
 DATASET_GEOMETRIES = dict()
@@ -96,7 +110,7 @@ def serve_game(name):
             wait_time=game.wait_time,
             bbox=game.bbox,
             duration=game.duration)
-        return render_template("main.html", game_name=name, params=params)
+        return render_template("main.html", game_name=name, params=params, debug=DEBUG or is_local)
 
 
 
