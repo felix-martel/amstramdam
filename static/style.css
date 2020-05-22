@@ -404,6 +404,9 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
 
 #game-creator .fieldset {
     margin: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
   }
 
 #game-creator .fieldset input[type="number"] {
