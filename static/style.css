@@ -446,7 +446,10 @@ a, a:visited, a:active, a:link {
   transform: translate(-50%, -50%);
   z-index: 1002;
   overflow: hidden;
+  /*min-height: 400px;*/
 }
+
+
 
 
 @media screen and (max-width: 800px) {

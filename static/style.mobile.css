@@ -25,6 +25,7 @@
       box-sizing: border-box;
       min-height: 100%;
     z-index: 1002;
+      min-height: 0;
 }
   #popup .popup-main {
       display: flex;

@@ -24,6 +24,7 @@ eventlet.monkey_patch(socket=False)
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="Use local server with debugger", action="store_true")
 parser.add_argument("-t", "--threading", help="Use threading lib instead of eventlet", action="store_true")
+parser.add_argument("-l", "--log", help="Add eventlet loggger", action="store_true")
 args = parser.parse_args()
 
 DEBUG = args.debug
@@ -38,7 +39,7 @@ valid_hosts = ["http://"+h for h in hosts] + ["https://"+h for h in hosts]
 async_mode = "threading" if args.threading else "eventlet"
 print(f"Launching app with args debug={DEBUG}, async={async_mode}, local={is_local}, hosts={', '.join(valid_hosts)}")
 
-debug_params = dict(engineio_logger=True, logger=True) if is_local else {}
+debug_params = dict(engineio_logger=True, logger=True) if is_local and args.log else {}
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(",")[0]
 

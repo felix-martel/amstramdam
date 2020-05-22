@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    document.getElementById("sharing-link").innerHTML = window.location.href;
-    const blinkContainer = document.getElementById("blink-wrapper");
-    //const audioBeep = document.getElementById("beep");
-var hintContainer = document.getElementById("target");
-    var playerName = document.getElementById("player-name");
-    var playerList = document.getElementById("player-list");
-    var scorer = document.getElementById("total-score");
-    var gameLauncher = document.getElementById("launch");
-    var gameRelauncher = document.getElementById("relaunch-from-popup");
-    var gameBox = document.getElementById("game-box");
-    var gameHint = document.getElementById("display-hint");
-    var gameWaitDisplayer = document.getElementById("display-timer");
+    function $(identifier){
+        return document.getElementById(identifier);
+    };
+    
+    $("sharing-link").innerHTML = window.location.href;
+    const blinkContainer = $("blink-wrapper");
+    //const audioBeep = $("beep");
+var hintContainer = $("target");
+    var playerName = $("player-name");
+    var playerList = $("player-list");
+    var scorer = $("total-score");
+    var gameLauncher = $("launch");
+    var gameRelauncher = $("relaunch-from-popup");
+    var gameBox = $("game-box");
+    var gameHint = $("display-hint");
+    var gameWaitDisplayer = $("display-timer");
     var gameLaunched = false;
     var runLaunched = false;
     var hasAnswered = false;
@@ -20,6 +23,9 @@ var hintContainer = document.getElementById("target");
     var PLAYERS = [];
     var PSEUDOS = {};
     var LEADERBOARD = [];
+    var autozoomCheckbox = $("autozoom-check");
+    autozoomCheckbox.checked = readAutozoom();
+
     updatePlayerList();
     function blink(audio= true){
         const duration = 100; // In millisec
@@ -90,10 +96,10 @@ var hintContainer = document.getElementById("target");
     var countdownInterval;
     const countdownAnimationElements = ["wrapper", "left", "right"];
     function endCountdown(){
-        document.getElementById("countdown-animation-wrapper").hidden = true;
+        $("countdown-animation-wrapper").hidden = true;
         countdownAnimationElements.forEach(c => {
             let id = `countdown-animation-${c}`;
-            let el = document.getElementById(id);
+            let el = $(id);
             // console.debug(id);
             // console.debug(el);
             el.setAttribute("data-anim", "");
@@ -101,17 +107,17 @@ var hintContainer = document.getElementById("target");
     }
     function startCountdown(){
         clearInterval(countdownInterval);
-        document.getElementById("countdown-animation-wrapper").hidden = false;
+        $("countdown-animation-wrapper").hidden = false;
         countdownAnimationElements.forEach(c => {
             let id = `countdown-animation-${c}`;
-            let el = document.getElementById(id);
+            let el = $(id);
             // console.debug(id);
             // console.debug(el);
             el.setAttribute("data-anim", `base ${c}`);
         });
-        document.getElementById("countdown-animation-wrapper").style.animationDelay = String(params.duration/2) + "s";
-        document.getElementById("countdown-animation-left").style.animationDuration = String(params.duration) + "s";
-        document.getElementById("countdown-animation-right").style.animationDuration = String(params.duration/2) + "s";
+        $("countdown-animation-wrapper").style.animationDelay = String(params.duration/2) + "s";
+        $("countdown-animation-left").style.animationDuration = String(params.duration) + "s";
+        $("countdown-animation-right").style.animationDuration = String(params.duration/2) + "s";
         countdownInterval = setInterval(() => {
             endCountdown();
         }, params.duration*1000);
@@ -181,18 +187,18 @@ var hintContainer = document.getElementById("target");
        LEADERBOARD.forEach((el, i) => {
            table += `<tr><td class="rank">${i+1}</td><td class="player-name">${getPlayerName(el.player)}</td><td class="player-score">${el.score}pts</td></tr>`
        });
-       document.getElementById("final-results").innerHTML = table;
-       document.getElementById("popup-container").hidden = false;
+       $("final-results").innerHTML = table;
+       $("popup-container").hidden = false;
      }
      function hideResults(){
-       document.getElementById("popup-container").hidden = true;
+       $("popup-container").hidden = true;
      }
      function displayGameBox(hint, currRun, totalRun){
         gameBox.hidden = true;
         gameHint.classList.remove("hidden");
          gameWaitDisplayer.classList.add("hidden");
-        document.getElementById("run-current").innerHTML = currRun + 1;
-        document.getElementById("run-total").innerHTML = totalRun;
+        $("run-current").innerHTML = currRun + 1;
+        $("run-total").innerHTML = totalRun;
         target.innerHTML = hint;
         gameBox.hidden = false;
      }
@@ -213,12 +219,12 @@ var hintContainer = document.getElementById("target");
          gameBox.hidden = false;
 
          //var duration = params.wait_time;
-         document.getElementById("timer-legend").innerHTML = label;
-         document.getElementById("run-timer").innerHTML = duration;
+         $("timer-legend").innerHTML = label;
+         $("run-timer").innerHTML = duration;
          var waitInterval = window.setInterval(() => {
              duration = duration - 1;
              if (duration >= 0) {
-                 document.getElementById("run-timer").innerHTML = duration;
+                 $("run-timer").innerHTML = duration;
              }
              else {
                  window.clearInterval(waitInterval);
@@ -228,14 +234,14 @@ var hintContainer = document.getElementById("target");
      }
 
         function addGuessEntry(name, distance){
-            // document.getElementById("results").hidden = false;
+            // $("results").hidden = false;
             showRunResults();
-            var resultContainer = document.getElementById("current-results");
+            var resultContainer = $("current-results");
             distance = Math.round(distance);
             resultContainer.innerHTML += `<li><span class="pname">${getPlayerName(name)}</span><span class="pscore">${distance}km</span></li>`;
         }
         function clearGuessEntries(){
-            document.getElementById("current-results").innerHTML = "";
+            $("current-results").innerHTML = "";
         }
     function makeAnimatedCircle(lat, lon, radius, color, onEnd){
          var newRadius = radius*1000; // Kilometres to meters
@@ -267,18 +273,18 @@ var hintContainer = document.getElementById("target");
         return circle;
     }
     function showRunResults(){
-         const container = document.getElementById("left-column-display");
+         const container = $("left-column-display");
          if (!container.classList.contains("with-results")){
              container.classList.add("with-results");
          }
-         document.getElementById("results").hidden = false;
+         $("results").hidden = false;
     }
     function hideRunResults(){
-         const container = document.getElementById("left-column-display");
+         const container = $("left-column-display");
          if (container.classList.contains("with-results")){
              container.classList.remove("with-results");
          }
-         document.getElementById("results").hidden = true;
+         $("results").hidden = true;
     }
     const blinkDelay = 3; // In seconds: screen will blink `blinkDelay` seconds before run end
     const blinkTimestep = 500; // In milliseconds
@@ -330,13 +336,13 @@ var hintContainer = document.getElementById("target");
             hideRunResults();
             startCountdown();
             hasAnswered = false;
-            //document.getElementById("results").hidden = true;
+            //$("results").hidden = true;
             displayGameBox(data.hint, data.current, data.total);
 
             /*gameBox.hidden = true;
-            document.getElementById("results").hidden = true;
-            document.getElementById("run-current").innerHTML = data.current+1;
-            document.getElementById("run-total").innerHTML = data.total;
+            $("results").hidden = true;
+            $("run-current").innerHTML = data.current+1;
+            $("run-total").innerHTML = data.total;
             target.innerHTML = data.hint;
             gameBox.hidden = false;*/
 
@@ -358,14 +364,14 @@ var hintContainer = document.getElementById("target");
             const dist = Math.round(data.dist);
             const score = Math.round(data.score);
 
-            document.getElementById("answer-name").innerHTML = data.answer.name;
-            document.getElementById("main-disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
-            document.getElementById("disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
-            document.getElementById("disp-score-dist").innerHTML = 0; //Math.round(data.sd);
-            document.getElementById("disp-time").innerHTML = 0; //Math.round(data.delta * 100) / 100;
-            document.getElementById("disp-score-time").innerHTML = 0; // Math.round(data.st);
-            document.getElementById("curr-score").innerHTML = 0; //score; //data.score;
-            document.getElementById("results").hidden = false;
+            $("answer-name").innerHTML = data.answer.name;
+            $("main-disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
+            $("disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
+            $("disp-score-dist").innerHTML = 0; //Math.round(data.sd);
+            $("disp-time").innerHTML = 0; //Math.round(data.delta * 100) / 100;
+            $("disp-score-time").innerHTML = 0; // Math.round(data.st);
+            $("curr-score").innerHTML = 0; //score; //data.score;
+            $("results").hidden = false;
 
             const distanceCounter = new CountUp('main-disp-dist', dist, {separator: ""});
             distanceCounter.start();
@@ -424,6 +430,8 @@ var hintContainer = document.getElementById("target");
             updatePlayerList();
             displayRun(data);
         });
+    var comeBackToPreviousZoom;
+
     function displayRun(data){
         const trueLon = data.answer.lon;
         const trueLat = data.answer.lat;
@@ -440,7 +448,8 @@ var hintContainer = document.getElementById("target");
                 });
             });
         });
-        if (!isMobile){
+
+        if (!isMobile && autozoomCheckbox.checked ){
             const originalCenter = map.getCenter();
             const originalZoom = map.getZoom();
             const originalMaxZoom = map.getMaxZoom();
@@ -454,11 +463,15 @@ var hintContainer = document.getElementById("target");
                 }
             });
             if (nAnswers > 0){
-                window.setTimeout(() => {
+                comeBackToPreviousZoom = window.setTimeout(() => {
                     map.flyTo(originalCenter, originalZoom, {duration: ANIM_DURATION});
                     map.setMaxZoom(originalMaxZoom);
                     //OSM.maxZoom  = originalMaxZoom;
                 }, (params.wait_time-2*ANIM_DURATION - DELTA_PAD)*1000);
+            }
+        } else {
+            if (comeBackToPreviousZoom){
+                window.clearTimeout(comeBackToPreviousZoom)
             }
         }
     }
@@ -471,6 +484,14 @@ var hintContainer = document.getElementById("target");
         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamUsername\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         cookieValue = decodeURIComponent(cookieValue);
         return cookieValue;
+    }
+    function storeAutozoom(value){
+        document.cookie = `amstramdamAutozoom=${+value}`;
+    }
+    function readAutozoom(value){
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamAutozoom\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        return cookieValue !== "0";
+
     }
     playerName.addEventListener("keydown", (e) => {
         if (e.keyCode === 13){
@@ -558,7 +579,7 @@ var hintContainer = document.getElementById("target");
         hasAnswered = true;
         clickable = false;
     }
-    const mainInfoBox = document.getElementById("main-info-box");
+    const mainInfoBox = $("main-info-box");
         mainInfoBox.addEventListener("click", () => {
         if (mainInfoBox.classList.contains("toggled")){
             mainInfoBox.classList.remove("toggled");
@@ -567,11 +588,16 @@ var hintContainer = document.getElementById("target");
         }
     });
 
+        autozoomCheckbox.addEventListener("change", () => {
+            console.log("toggled");
+            storeAutozoom(autozoomCheckbox.checked);
+        });
+
         /* CHAT SUPPORT */
-    var chatInput = document.getElementById("chat-input");
-    var chatMessages = document.getElementById("chat-messages");
-    var chatInput2 = document.getElementById("chat-input-popup");
-    var chatMessages2 = document.getElementById("chat-messages-popup");
+    var chatInput = $("chat-input");
+    var chatMessages = $("chat-messages");
+    var chatInput2 = $("chat-input-popup");
+    var chatMessages2 = $("chat-messages-popup");
 
     function appendMessage(message, author){
             var el = `<div class="chat-message"><span class="chat-author">${getPlayerName(author)}</span><span class="chat-message-content">${message}</span></div>`;
@@ -601,12 +627,12 @@ var hintContainer = document.getElementById("target");
         }
     });
 
-    document.getElementById("chat-toggle-button").addEventListener("click", () => {
-        document.getElementById("chat-box").classList.toggle("hidden");
+    $("chat-toggle-button").addEventListener("click", () => {
+        $("chat-box").classList.toggle("hidden");
     });
 
-    document.getElementById("close-chatbox").addEventListener("click", () => {
-        document.getElementById("chat-box").classList.add("hidden");
+    $("close-chatbox").addEventListener("click", () => {
+        $("chat-box").classList.add("hidden");
     })
 
     map.on('click', onMapClick);
