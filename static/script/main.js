@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return document.getElementById(identifier);
     };
     
-    $("sharing-link").innerHTML = window.location.href;
+    $("sharing-link").innerHTML = window.location.href.replace("https://", "").replace("www", "");
     const blinkContainer = $("blink-wrapper");
     //const audioBeep = $("beep");
 var hintContainer = $("target");
@@ -24,7 +24,14 @@ var hintContainer = $("target");
     var PSEUDOS = {};
     var LEADERBOARD = [];
     var autozoomCheckbox = $("autozoom-check");
+    var newMessageWhileHidden = false;
     autozoomCheckbox.checked = readAutozoom();
+    if (!readChatVisibility()){
+        $("chat-box").classList.add("hidden");
+    }
+    function chatIsHidden(){
+        return $("chat-box").classList.contains("hidden");
+    }
 
     updatePlayerList();
     function blink(audio= true){
@@ -491,7 +498,13 @@ var hintContainer = $("target");
     function readAutozoom(value){
         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamAutozoom\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         return cookieValue !== "0";
-
+    }
+    function storeChatVisibility(value){
+        document.cookie = `amstramdamChatVisible=${+value}`;
+    }
+    function readChatVisibility(value){
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamChatVisible\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        return cookieValue !== "0";
     }
     playerName.addEventListener("keydown", (e) => {
         if (e.keyCode === 13){
@@ -589,7 +602,6 @@ var hintContainer = $("target");
     });
 
         autozoomCheckbox.addEventListener("change", () => {
-            console.log("toggled");
             storeAutozoom(autozoomCheckbox.checked);
         });
 
@@ -624,16 +636,29 @@ var hintContainer = $("target");
     socket.on("chat:new", (data) => {
         if (data.author !== PLAYER){
             appendMessage(data.message, data.author);
+            if (chatIsHidden()){
+                $("chat-toggle-button").classList.add("unread-message");
+            }
         }
     });
 
     $("chat-toggle-button").addEventListener("click", () => {
-        $("chat-box").classList.toggle("hidden");
+        var state = $("chat-box").classList;
+        state.toggle("hidden");
+        var visibility;
+        if (chatIsHidden()){
+            visibility = "0";
+        } else {
+            $("chat-toggle-button").classList.remove("unread-message");
+            visibility = "1";
+        }
+        storeChatVisibility(visibility);
     });
 
     $("close-chatbox").addEventListener("click", () => {
         $("chat-box").classList.add("hidden");
-    })
+        storeChatVisibility("0");
+    });
 
     map.on('click', onMapClick);
 });

@@ -132,6 +132,17 @@ option:checked {
   color: blue;
   cursor:pointer;
 }
+#chat-toggle-button.unread-message:after {
+  display: block;
+  width: 6px;
+  height:6px;
+  border-radius: 3px;
+  background: red;
+  content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 #chat-toggle-button:hover {
     color: #000085;
 }
