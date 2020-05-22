@@ -1,0 +1,33 @@
+,admin,capital,city,country,iso2,lat,lng,population,population_proper
+0,Etats-Unis d'Amérique,,New York,United States of America,US,40.76149276,-73.98143112,19040000.0,8008278.0
+1,Mexique,primary,Mexico City,Mexico,MX,19.434167,-99.138611,19028000.0,10811002.0
+2,Etats-Unis d'Amérique,minor,Los Angeles,United States of America,US,34.0522342,-118.24368490000002,12500000.0,3694820.0
+3,Etats-Unis d'Amérique,minor,Chicago,United States of America,US,41.850033,-87.6500523,8990000.0,2841952.0
+4,Etats-Unis d'Amérique,minor,Miami,United States of America,US,25.7742658,-80.1936589,5585000.0,382894.0
+5,Etats-Unis d'Amérique,minor,Philadelphia,United States of America,US,39.952335,-75.16378900000002,5492000.0,1517550.0
+6,Canada,admin,Toronto,Canada,CA,43.666667,-79.416667,5213000.0,3934421.0
+7,Etats-Unis d'Amérique,minor,Dallas,United States of America,US,32.783055600000004,-96.8066667,4798000.0,1211704.0
+8,Etats-Unis d'Amérique,admin,Atlanta,United States of America,US,33.7489954,-84.3879824,4506000.0,422908.0
+9,Etats-Unis d'Amérique,admin,Boston,United States of America,US,42.3584308,-71.05977320000002,4467000.0,589141.0
+10,Etats-Unis d'Amérique,minor,Houston,United States of America,US,29.7632836,-95.3632715,4459000.0,3647574.0
+11,Etats-Unis d'Amérique,primary,Washington,United States of America,US,38.8951118,-77.0363658,4338000.0,552433.0
+12,Mexique,admin,Guadalajara,Mexico,MX,20.666823,-103.391824,4198000.0,1640589.0
+13,Etats-Unis d'Amérique,minor,Detroit,United States of America,US,42.33142700000001,-83.0457538,4101000.0,951270.0
+14,Mexique,admin,Monterrey,Mexico,MX,25.675065,-100.318465,3712000.0,1122874.0
+15,Canada,,Montréal,Canada,CA,45.5,-73.583333,3678000.0,2356556.0
+16,Etats-Unis d'Amérique,admin,Phoenix,United States of America,US,33.4483771,-112.0740373,3551000.0,1321045.0
+17,Etats-Unis d'Amérique,minor,San Francisco,United States of America,US,37.7749295,-122.4194155,3450000.0,732072.0
+18,Etats-Unis d'Amérique,minor,Seattle,United States of America,US,47.6062095,-122.33207079999998,3074000.0,569369.0
+19,Etats-Unis d'Amérique,,Irvine,United States of America,US,33.669464899999994,-117.8231107,3010232.0,212375.0
+20,Etats-Unis d'Amérique,minor,San Diego,United States of America,US,32.7153292,-117.1572551,2916000.0,961141.0
+21,Etats-Unis d'Amérique,minor,Minneapolis,United States of America,US,44.9799654,-93.2638361,2616000.0,367773.0
+22,Etats-Unis d'Amérique,,Brooklyn,United States of America,US,40.65009286,-73.94956366,2565635.0,2565635.0
+23,Etats-Unis d'Amérique,minor,Tampa,United States of America,US,27.9475216,-82.4584279,2314000.0,324465.0
+24,Canada,,Vancouver,Canada,CA,49.25,-123.133333,2313328.0,603502.0
+25,Etats-Unis d'Amérique,admin,Denver,United States of America,US,39.7391536,-104.9847034,2313000.0,1548599.0
+26,Cuba,primary,Havana,Cuba,CU,23.131944,-82.36416700000002,2174000.0,1990917.0
+27,République Dominicaine,primary,Santo Domingo,Dominican Republic,DO,18.466667,-69.9,2154000.0,2873.0
+28,Panama,primary,Panama City,Panama,PA,8.966667,-79.533333,1281000.0,408168.0
+29,Canada,primary,Ottawa,Canada,CA,45.416667,-75.7,1145000.0,812129.0
+30,Canada,,Calgary,Canada,CA,51.083333,-114.083333,1110000.0,915322.0
+31,Guatemala,minor,Guatemala,Guatemala,GT,14.633426,-90.516722,1024000.0,994938.0

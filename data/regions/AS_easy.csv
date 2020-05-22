@@ -1,0 +1,33 @@
+,Unnamed: 0,admin,capital,city,country,iso2,lat,lng,population,population_proper,ranks,continent_code,continent
+0,0,Afghanistan,primary,Kabul,Afghanistan,AF,34.516667,69.18333299999999,3277000.0,3043532.0,12449,AS,Asie
+0,0,Azerbaïdjan,primary,Baku,Azerbaijan,AZ,40.39527800000001,49.882222,2122300.0,1892000.0,12619,AS,Asie
+2,2,Myanmar,primary,Nay Pyi Taw,Burma,MM,19.745,96.129722,930000.0,194824.0,2764,AS,Asie
+37,37,Myanmar,primary,Rangoon,Burma,MM,16.805278,96.156111,0.0,,471,AS,Asie
+0,0,Cambodge,primary,Phnom Penh,Cambodia,KH,11.56245,104.916006,1466000.0,1466000.0,16244,AS,Asie
+1,1,Chine,primary,Beijing,China,CN,39.928819,116.388869,11106000.0,7480601.0,12991,AS,Asie
+26,26,Taïwan,primary,Taipei,Taiwan,TW,25.047763,121.531846,0.0,,12860,AS,Asie
+114,114,Inde,primary,New Delhi,India,IN,28.6,77.2,317797.0,317797.0,13050,AS,Asie
+2382,2382,Indonésie,primary,Jakarta,Indonesia,ID,-6.174444,106.829444,0.0,,11014,AS,Asie
+0,0,Iran,primary,Tehran,Iran,IR,35.705,51.4216,7873000.0,7153309.0,1116,AS,Asie
+0,0,Iraq,primary,Baghdad,Iraq,IQ,33.340582,44.400876,5054000.0,5054000.0,276,AS,Asie
+0,0,Japon,primary,Tokyo,Japan,JP,35.685,139.751389,35676000.0,8336599.0,94,AS,Asie
+4,4,Kazakhstan,primary,Astana,Kazakhstan,KZ,51.166666,71.45,345604.0,325021.0,904,AS,Asie
+0,0,Jordanie,primary,Amman,Jordan,JO,31.95,35.93333300000001,1060000.0,1060000.0,992,AS,Asie
+29,29,Corée du Nord,primary,Pyongyang,"Korea, North",KP,39.019444,125.754722,0.0,,839,AS,Asie
+0,0,Corée du Sud,primary,Seoul,"Korea, South",KR,37.5985,126.9783,9796000.0,9796000.0,846,AS,Asie
+0,0,Kirghizistan,primary,Bishkek,Kyrgyzstan,KG,42.873056,74.600278,837000.0,804212.0,2235,AS,Asie
+0,0,Laos,primary,Vientiane,Laos,LA,17.966667,102.6,754000.0,570348.0,2308,AS,Asie
+0,0,Liban,primary,Beirut,Lebanon,LB,33.871944,35.509722,1846000.0,1712125.0,2148,AS,Asie
+1,1,Malaisie,primary,Kuala Lumpur,Malaysia,MY,3.166667,101.7,1448000.0,1448000.0,2109,AS,Asie
+0,0,Mongolie,primary,Ulaanbaatar,Mongolia,MN,47.916667,106.916667,885000.0,769612.0,2217,AS,Asie
+10,10,Pakistan,primary,Islamabad,Pakistan,PK,33.69,73.0551,780000.0,601600.0,1738,AS,Asie
+78,78,Philippines,primary,Manila,Philippines,PH,14.6042,120.9822,0.0,,1660,AS,Asie
+0,0,Russie,primary,Moscow,Russia,RU,55.752222,37.615556,10452000.0,10452000.0,2010,AS,Asie
+0,0,Arabie Saoudite,primary,Riyadh,Saudi Arabia,SA,24.653837,46.715683,4465000.0,4205961.0,8203,AS,Asie
+1,1,Viet Nam,primary,Hanoi,Vietnam,VN,21.028167,105.854152,4378000.0,1431270.0,8166,AS,Asie
+1,1,Syrie,primary,Damascus,Syria,SY,33.512529,36.278016,2466000.0,2466000.0,7696,AS,Asie
+0,0,Tadjikistan,primary,Dushanbe,Tajikistan,TJ,38.56,68.773889,1086244.0,679400.0,9064,AS,Asie
+752,752,Thaïlande,primary,Bangkok,Thailand,TH,13.753979,100.501444,0.0,,8796,AS,Asie
+1,1,Turquie,primary,Ankara,Turkey,TR,39.911652,32.840305,3716000.0,3307379.0,5757,AS,Asie
+0,0,Ouzbékistan,primary,Tashkent,Uzbekistan,UZ,41.316667,69.25,2184000.0,1978028.0,6284,AS,Asie
+0,0,Yémen,primary,Sanaa,Yemen,YE,15.354722,44.206667,2008000.0,1835853.0,6318,AS,Asie

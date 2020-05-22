@@ -50,14 +50,21 @@
             <div class="new-game game-panel">
                 <h2>Nouvelle partie</h2>
                 <form id="game-creator" action="/new" method="post">
+                    {# {{datasets}} #}
                     <div class="fieldset">
                         <label for="map-selector">Carte</label>
                         <select name="map" id="map-selector">
-                            {% for dataset in datasets %}
-                                {% if dataset.is_sep %}
-                                    <option disabled> </option>
+                             {% for dataGroup in datasets %}
+                                {% if loop.index0 == 0 %}
+                                    {% for dataset in dataGroup.maps %}
+                                        <option value="{{dataset.map_id}}">{{ dataset.params.name}}</option>
+                                    {% endfor %}}
                                 {% else %}
-                                    <option value="{{dataset.name}}">{{ dataset.display}}</option>
+                                    <optgroup label="{{ dataGroup.group}}">
+                                        {% for dataset in dataGroup.maps %}
+                                            <option value="{{dataset.map_id}}">{{ dataset.params.name}}</option>
+                                        {% endfor %}}
+                                    </optgroup>
                                 {% endif %}
                             {% endfor %}
                         </select>

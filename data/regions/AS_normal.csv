@@ -1,0 +1,265 @@
+,admin,capital,city,country,iso2,lat,lng,population,population_proper
+0,Japon,primary,Tokyo,Japan,JP,35.685,139.751389,35676000.0,8336599.0
+1,Inde,admin,Mumbai,India,IN,18.987807,72.83644699999998,18978000.0,12691836.0
+2,Inde,admin,Delhi,India,IN,28.651952,77.231495,15926000.0,7633213.0
+3,Chine,admin,Shanghai,China,CN,31.222222,121.458056,14987000.0,14608512.0
+4,Inde,admin,Kolkata,India,IN,22.562627,88.36304399999999,14787000.0,4631392.0
+5,Pakistan,admin,Karachi,Pakistan,PK,24.9056,67.0822,12130000.0,11624219.0
+6,Japon,admin,Ōsaka,Japan,JP,34.683333000000005,135.51666699999998,11294000.0,2592413.0
+7,Chine,primary,Beijing,China,CN,39.928819,116.388869,11106000.0,7480601.0
+8,Philippines,,Barilan,Philippines,PH,14.6333,121.0,11100000.0,3077575.0
+9,Russie,primary,Moscow,Russia,RU,55.752222,37.615556,10452000.0,10452000.0
+10,Turquie,admin,Istanbul,Turkey,TR,41.011046,28.957798,10061000.0,9945610.0
+11,Corée du Sud,primary,Seoul,"Korea, South",KR,37.5985,126.9783,9796000.0,9796000.0
+12,Indonésie,,Jakarta Pusat,Indonesia,ID,-6.1818,106.8223,9125000.0,8540121.0
+13,Chine,admin,Guangzhou,China,CN,23.116667,113.25,8829000.0,3152825.0
+14,Iran,primary,Tehran,Iran,IR,35.705,51.4216,7873000.0,7153309.0
+15,Chine,minor,Shenzhen,China,CN,22.533333,114.133333,7581000.0,1002592.0
+16,Chine,admin,Wuhan,China,CN,30.583333000000003,114.266667,7243000.0,4184206.0
+17,Chine,admin,Tianjin,China,CN,39.142222,117.176667,7180000.0,3766207.0
+18,Inde,admin,Chennai,India,IN,13.084622,80.248357,7163000.0,4328063.0
+19,Taïwan,,Tanmei,Taiwan,TW,25.055738,121.581421,6900273.0,2618772.0
+20,Inde,admin,Bengalūru,India,IN,12.977063,77.587106,6787000.0,5104047.0
+21,Thaïlande,minor,Bang Rak,Thailand,TH,13.730579,100.523884,6704000.0,5104476.0
+22,Pakistan,admin,Lahore,Pakistan,PK,31.549722,74.343611,6577000.0,6310888.0
+23,Chine,admin,Chongqing,China,CN,29.562778,106.552778,6461000.0,3967028.0
+24,Inde,admin,Hyderabad,India,IN,17.384052,78.456355,6376000.0,3597816.0
+25,Inde,minor,Ahmadābād,India,IN,23.025793,72.587265,5375000.0,3719710.0
+26,Viet Nam,admin,Ho Chi Minh City,Vietnam,VN,10.776577,106.70085,5314000.0,3467331.0
+27,Iraq,primary,Baghdad,Iraq,IQ,33.340582,44.400876,5054000.0,5054000.0
+28,Inde,,Hāora,India,IN,22.576882,88.318566,4841638.0,1027672.0
+29,Chine,admin,Shenyang,China,CN,41.792222,123.432778,4787000.0,3512192.0
+30,Inde,,Pune,India,IN,18.513271,73.849852,4672000.0,2935744.0
+31,Russie,admin,Saint Petersburg,Russia,RU,59.89444399999999,30.264167,4553000.0,3493212.0
+32,Chine,minor,Dongguan,China,CN,23.048889000000006,113.744722,4528000.0,4528000.0
+33,Arabie Saoudite,primary,Riyadh,Saudi Arabia,SA,24.653837,46.715683,4465000.0,4205961.0
+34,Viet Nam,primary,Hanoi,Vietnam,VN,21.028167,105.854152,4378000.0,1431270.0
+35,Chine,admin,Chengdu,China,CN,30.666667,104.066667,4123000.0,3950437.0
+36,Myanmar,,Nyaunggon,Burma,MM,16.747275,96.160819,4088000.0,3301820.0
+37,Inde,,Sūrat,India,IN,21.195944,72.830232,3842000.0,2894504.0
+38,Turquie,primary,Ankara,Turkey,TR,39.911652,32.840305,3716000.0,3307379.0
+39,Japon,admin,Yokohama,Japan,JP,35.43333300000001,139.65,3697894.0,3697894.0
+40,Corée du Sud,admin,Busan,"Korea, South",KR,35.102778,129.040278,3480000.0,3480000.0
+41,Corée du Nord,,P’yŏngch’ŏn,"Korea, North",KP,38.993056,125.715278,3300000.0,2498797.0
+42,Afghanistan,primary,Kabul,Afghanistan,AF,34.516667,69.18333299999999,3277000.0,3043532.0
+43,Japon,admin,Nagoya,Japan,JP,35.183333000000005,136.9,3230000.0,2191279.0
+44,Arabie Saoudite,,Jeddah,Saudi Arabia,SA,21.542381,39.197969,3012000.0,2867446.0
+45,Indonésie,admin,Surabaya,Indonesia,ID,-7.249167,112.750833,2845000.0,2374658.0
+46,Japon,admin,Fukuoka,Japan,JP,33.6,130.416667,2792000.0,1392289.0
+47,Taïwan,admin,Kaohsiung,Taiwan,TW,22.616256,120.313329,2769072.0,1519711.0
+48,Philippines,admin,Quezon City,Philippines,PH,14.6488,121.0509,2761720.0,2761720.0
+49,Syrie,admin,Aleppo,Syria,SY,36.201241,37.161173,2738000.0,1602264.0
+50,Taïwan,,Taiping,Taiwan,TW,24.128582,120.719296,2629323.0,1040725.0
+51,Pakistan,minor,Faisalābād,Pakistan,PK,31.416667,73.083333,2617000.0,2506595.0
+52,Turquie,admin,İzmir,Turkey,TR,38.412726,27.138376,2587000.0,2322818.0
+53,Corée du Sud,admin,Incheon,"Korea, South",KR,37.453611,126.731667,2550000.0,2550000.0
+54,Japon,admin,Sapporo,Japan,JP,43.066667,141.35,2544000.0,1861786.0
+55,Malaisie,admin,George Town,Malaysia,MY,5.4112290000000005,100.335426,2500000.0,720202.0
+56,Iran,admin,Mashhad,Iran,IR,36.315591,59.567964,2469000.0,2167253.0
+57,Syrie,primary,Damascus,Syria,SY,33.512529,36.278016,2466000.0,2466000.0
+58,Corée du Sud,admin,Daegu,"Korea, South",KR,35.870278000000006,128.591111,2460000.0,2460000.0
+59,Indonésie,,Tanjung,Indonesia,ID,-6.929722,107.585556,2394000.0,1699719.0
+60,Indonésie,,Bekasijaya,Indonesia,ID,-6.2308330000000005,107.013611,2378211.0,1520119.0
+61,Japon,admin,Sendai,Japan,JP,38.266667,140.866667,2250000.0,1037562.0
+62,Ouzbékistan,primary,Tashkent,Uzbekistan,UZ,41.316667,69.25,2184000.0,1978028.0
+63,Azerbaïdjan,primary,Baku,Azerbaijan,AZ,40.39527800000001,49.882222,2122300.0,1892000.0
+64,Indonésie,,Merdeka,Indonesia,ID,3.5704,98.6593,2115000.0,1750971.0
+65,Arabie Saoudite,admin,Ad Dammām,Saudi Arabia,SA,26.434417,50.103263,2054710.0,768602.0
+66,Japon,admin,Hiroshima,Japan,JP,34.4,132.45,2045000.0,1143841.0
+67,Yémen,primary,Sanaa,Yemen,YE,15.354722,44.206667,2008000.0,1835853.0
+68,Viet Nam,admin,Haiphong,Vietnam,VN,20.864807,106.683449,1969000.0,602695.0
+69,Taïwan,admin,Tainan,Taiwan,TW,22.990833,120.213333,1876312.0,762000.0
+70,Pakistan,,Serai,Pakistan,PK,34.739329999999995,72.335655,1860310.0,1860310.0
+71,Pakistan,minor,Rāwalpindi,Pakistan,PK,33.597331,73.047904,1858000.0,1743101.0
+72,Liban,primary,Beirut,Lebanon,LB,33.871944,35.509722,1846000.0,1712125.0
+73,Japon,admin,Kyōto,Japan,JP,35.016667,135.75,1805000.0,1459640.0
+74,Indonésie,admin,Palembang,Indonesia,ID,-2.976389,104.75,1749000.0,1441500.0
+75,Taïwan,,Zhongcuo,Taiwan,TW,24.966667,121.233333,1632616.0,369770.0
+76,Iran,admin,Eşfahān,Iran,IR,32.657218,51.677608,1628000.0,1517766.0
+77,Japon,admin,Kōbe,Japan,JP,34.683333000000005,135.183333,1528478.0,1528478.0
+78,Pakistan,minor,Multān,Pakistan,PK,30.196789000000006,71.478241,1522000.0,1437230.0
+79,Pakistan,minor,Gujrānwāla,Pakistan,PK,32.155667,74.18705200000002,1513000.0,1384471.0
+80,Turquie,admin,Bursa,Turkey,TR,40.195593,29.06013,1492000.0,1359089.0
+81,Corée du Sud,,Yejŏng,"Korea, South",KR,36.333333,127.383333,1468000.0,1448330.0
+82,Cambodge,primary,Phnom Penh,Cambodia,KH,11.56245,104.916006,1466000.0,1466000.0
+83,Pakistan,minor,Hyderābād City,Pakistan,PK,25.396891,68.377183,1459000.0,1386330.0
+84,Malaisie,primary,Kuala Lumpur,Malaysia,MY,3.166667,101.7,1448000.0,1448000.0
+85,Corée du Sud,admin,Gwangju,"Korea, South",KR,35.154722,126.915556,1440000.0,1416938.0
+86,Iran,admin,Karaj,Iran,IR,35.832664,50.991545,1423000.0,1423000.0
+87,Iran,admin,Tabrīz,Iran,IR,38.08,46.2919,1413000.0,1196426.0
+88,Philippines,admin,Davao,Philippines,PH,7.0730559999999985,125.612778,1402000.0,1212504.0
+89,Indonésie,,Semarangindah,Indonesia,ID,-6.974,110.3909,1396000.0,1288084.0
+90,Russie,admin,Novosibirsk,Russia,RU,55.0415,82.9346,1389000.0,1037201.0
+91,Iraq,admin,Mosul,Iraq,IQ,36.335,43.118889,1316000.0,1140934.0
+92,Russie,admin,Yekaterinburg,Russia,RU,56.8519,60.6122,1313000.0,1227976.0
+93,Pakistan,admin,Peshāwar,Pakistan,PK,34.008,71.57848800000002,1303000.0,1218773.0
+94,Myanmar,admin,Mandalay,Burma,MM,21.969673,96.087381,1300000.0,1034000.0
+95,Turquie,admin,Adana,Turkey,TR,37.001667,35.32888900000001,1293000.0,1197890.0
+96,Russie,admin,Nizhniy Novgorod,Russia,RU,56.326944,44.0075,1278000.0,1214926.0
+97,Indonésie,,Ujungtanah,Indonesia,ID,-5.1146,119.4245,1262000.0,1262000.0
+98,Iran,admin,Shīrāz,Iran,IR,29.610308000000003,52.531135,1240000.0,1240000.0
+99,Kazakhstan,admin,Almaty,Kazakhstan,KZ,43.256667,76.928611,1209000.0,983512.0
+100,Pakistan,minor,Abbottābād,Pakistan,PK,34.1463,73.21168399999998,1183647.0,881000.0
+101,Indonésie,minor,Cilacap,Indonesia,ID,-7.726389,109.009444,1174964.0,1174964.0
+102,Russie,admin,Samara,Russia,RU,53.200065,50.150002,1137000.0,856190.0
+103,Russie,admin,Omsk,Russia,RU,55.0,73.4,1135000.0,1043403.0
+104,Corée du Nord,minor,Namp’o,"Korea, North",KP,38.7375,125.407778,1127000.0,455000.0
+105,Philippines,admin,Cagayan de Oro,Philippines,PH,8.481111,124.643056,1121561.0,602088.0
+106,Viet Nam,admin,Cần Thơ,Vietnam,VN,10.037105,105.788249,1121000.0,259598.0
+107,Russie,admin,Kazan’,Russia,RU,55.78874,49.122144,1115000.0,912270.0
+108,Russie,admin,Chelyabinsk,Russia,RU,55.154015,61.42915,1091000.0,946604.0
+109,Tadjikistan,primary,Dushanbe,Tajikistan,TJ,38.56,68.773889,1086244.0,679400.0
+110,Corée du Sud,,Kumasan,"Korea, South",KR,35.2,128.583333,1081499.0,1081499.0
+111,Corée du Sud,,Suwŏn,"Korea, South",KR,37.291111,127.008889,1078000.0,1078000.0
+112,Corée du Sud,admin,Ulsan,"Korea, South",KR,35.537222,129.316667,1061000.0,962865.0
+113,Jordanie,primary,Amman,Jordan,JO,31.95,35.93333300000001,1060000.0,1060000.0
+114,Russie,admin,Rostov-na-Donu,Russia,RU,47.23135,39.723284,1052000.0,1013134.0
+115,Turquie,admin,Gaziantep,Turkey,TR,37.059444,37.3825,1044000.0,842524.0
+116,Arabie Saoudite,admin,Medina,Saudi Arabia,SA,24.468611,39.614167,1010000.0,1010000.0
+117,Syrie,admin,Homs,Syria,SY,34.726818,36.723391,1005000.0,775404.0
+118,Viet Nam,admin,Đà Nẵng,Vietnam,VN,16.074806,108.223958,1000000.0,887069.0
+119,Yémen,admin,Aden,Yemen,YE,12.779444,45.036667,1000000.0,550602.0
+120,Iran,admin,Ahvāz,Iran,IR,31.312381,48.677175,996000.0,841145.0
+121,Iraq,admin,Dihok,Iraq,IQ,36.867089,42.988446,986000.0,255000.0
+122,Iran,admin,Qom,Iran,IR,34.6401,50.8764,973000.0,893956.0
+123,Philippines,admin,General Santos,Philippines,PH,6.112778,125.171667,950530.0,538086.0
+124,Viet Nam,admin,Huế,Vietnam,VN,16.461901,107.595458,950000.0,340000.0
+125,Philippines,admin,Bacolod,Philippines,PH,10.6677,122.9533,949354.0,511820.0
+126,Corée du Sud,,Song-mal,"Korea, South",KR,37.418611,127.132778,942000.0,1031935.0
+127,Myanmar,primary,Nay Pyi Taw,Burma,MM,19.745,96.129722,930000.0,194824.0
+128,Iraq,admin,Erbil,Iraq,IQ,36.192573,44.01062,926000.0,665740.0
+129,Turquie,admin,Konya,Turkey,TR,37.871354,32.484636,919000.0,518360.0
+130,Indonésie,,Bogor,Indonesia,ID,-6.594444,106.789167,918000.0,800000.0
+131,Jordanie,admin,Az Zarqā’,Jordan,JO,32.072754,36.08796,894691.0,792665.0
+132,Turquie,minor,Tarsus,Turkey,TR,36.91766,34.892773,894318.0,238276.0
+133,Mongolie,primary,Ulaanbaatar,Mongolia,MN,47.916667,106.916667,885000.0,769612.0
+134,Malaisie,admin,Johor Bahru,Malaysia,MY,1.4655,103.7578,875000.0,802489.0
+135,Iraq,admin,Al Başrah,Iraq,IQ,30.533016,47.797466,870000.0,870000.0
+136,Kirghizistan,primary,Bishkek,Kyrgyzstan,KG,42.873056,74.600278,837000.0,804212.0
+137,Iran,admin,Kermānshāh,Iran,IR,34.314167,47.065,828313.0,828313.0
+138,Malaisie,,Butterworth,Malaysia,MY,5.399102,100.363818,821652.0,107591.0
+139,Philippines,admin,Cebu City,Philippines,PH,10.311111,123.891667,815000.0,798634.0
+140,Viet Nam,admin,Quy Nhơn,Vietnam,VN,13.768898000000002,109.228563,805290.0,280900.0
+141,Malaisie,,Melaka,Malaysia,MY,2.196,102.2405,788706.0,503127.0
+142,Turquie,admin,Antalya,Turkey,TR,36.908118,30.695565,783000.0,623937.0
+143,Yémen,admin,Al Ḩudaydah,Yemen,YE,14.797812,42.954516,780000.0,475221.0
+144,Corée du Nord,,Hasu-dong,"Korea, North",KP,39.923611,127.575556,773000.0,418341.0
+145,Philippines,admin,Zamboanga City,Philippines,PH,6.910255,122.071715,773000.0,457623.0
+146,Turquie,admin,Trabzon,Turkey,TR,41.005,39.726944,764714.0,230399.0
+147,Laos,primary,Vientiane,Laos,LA,17.966667,102.6,754000.0,570348.0
+148,Corée du Nord,,Hŭngnam,"Korea, North",KP,39.831667,127.61861100000002,751322.0,346082.0
+149,Yémen,admin,Ta‘izz,Yemen,YE,13.579522,44.020908,751000.0,615222.0
+150,Taïwan,,Shangzhuwei,Taiwan,TW,24.056111,120.49,750000.0,236588.0
+151,Taïwan,admin,Hsinchu,Taiwan,TW,24.803611,120.968611,750000.0,415557.0
+152,Ouzbékistan,admin,Namangan,Uzbekistan,UZ,41.0,71.65,750000.0,449200.0
+153,Ouzbékistan,admin,Farg‘ona,Uzbekistan,UZ,40.393333,71.779444,750000.0,214000.0
+154,Philippines,,Dinaga,Philippines,PH,13.65,123.166667,741635.0,174931.0
+155,Afghanistan,admin,Kandahār,Afghanistan,AF,31.613323,65.710126,715542.0,512200.0
+156,Ouzbékistan,admin,Samarqand,Uzbekistan,UZ,39.654167,66.959722,708000.0,596300.0
+157,Malaisie,admin,Ipoh,Malaysia,MY,4.5841,101.0829,673318.0,639136.0
+158,Corée du Nord,admin,Ch’ŏngjin,"Korea, North",KP,41.795556,129.775833,672614.0,327000.0
+159,Iraq,admin,An Najaf,Iraq,IQ,32.025944,44.346246,665552.0,560000.0
+160,Arabie Saoudite,,Aţ Ţā’if,Saudi Arabia,SA,21.270278,40.415833,657282.0,530848.0
+161,Viet Nam,,Hiệp Hòa,Vietnam,VN,10.933333,106.833333,652646.0,652646.0
+162,Jordanie,admin,Irbid,Jordan,JO,32.555556,35.85,650000.0,292040.0
+163,Ouzbékistan,admin,Andijon,Uzbekistan,UZ,40.782056,72.344238,650000.0,323900.0
+164,Sri Lanka,,Colombo,Sri Lanka,LK,6.935,79.84899999999998,648034.0,
+165,Arabie Saoudite,,Al Hufūf,Saudi Arabia,SA,25.364568,49.565323,637389.0,400000.0
+166,Iraq,admin,Kirkuk,Iraq,IQ,35.468056,44.392222,601433.0,508672.0
+167,Iran,admin,Zāhedān,Iran,IR,29.4963,60.8629,598887.0,551980.0
+168,Afghanistan,admin,Jalālābād,Afghanistan,AF,34.426468,70.45153,597971.0,205423.0
+169,Iraq,admin,Al Ḩillah,Iraq,IQ,32.463671999999995,44.41963,594605.0,364700.0
+170,Arabie Saoudite,,Al Ḩillah,Saudi Arabia,SA,23.489454,46.853024,594605.0,594605.0
+171,Viet Nam,,Phú Vinh,Vietnam,VN,18.716667,105.7,593645.0,435208.0
+172,Malaisie,,Kuching,Malaysia,MY,1.416667,110.333333,570407.0,504963.0
+173,Arabie Saoudite,admin,Tabūk,Saudi Arabia,SA,28.399804,36.571505,547957.0,455450.0
+174,Syrie,,Al Kuraydīyah,Syria,SY,35.56852199999999,35.747115,539147.0,340181.0
+175,Malaisie,admin,Kota Kinabalu,Malaysia,MY,5.9749,116.0724,527671.0,457326.0
+176,Iraq,admin,Karbalā’,Iraq,IQ,32.597902000000005,44.016482,510692.0,434450.0
+177,Malaisie,,Kampong Baharu,Malaysia,MY,6.116667,102.216667,505583.0,279316.0
+178,Taïwan,admin,Pingtung,Taiwan,TW,22.671354,120.488142,503530.0,215975.0
+179,Taïwan,admin,Chiayi,Taiwan,TW,23.479167,120.448889,500000.0,274212.0
+180,Taïwan,admin,Keelung,Taiwan,TW,25.128251,121.7419,500000.0,387207.0
+181,Viet Nam,admin,Thành Phố Thái Nguyên,Vietnam,VN,21.59422,105.848172,500000.0,330000.0
+182,Ouzbékistan,,Shahrisabz,Uzbekistan,UZ,39.057778000000006,66.83416700000001,498545.0,57051.0
+183,Syrie,minor,Dūmā,Syria,SY,33.571746999999995,36.402701,496145.0,317679.0
+184,Malaisie,,Shah Alam,Malaysia,MY,3.083333,101.533333,481654.0,481654.0
+185,Afghanistan,admin,Herāt,Afghanistan,AF,34.348167,62.199673,481009.0,397456.0
+186,Kazakhstan,admin,Shymkent,Kazakhstan,KZ,42.3,69.6,465392.0,414032.0
+187,Philippines,admin,Iligan,Philippines,PH,8.230833,124.236111,464599.0,464599.0
+188,Syrie,admin,Ḩamāh,Syria,SY,35.13179,36.757834,460602.0,418990.0
+189,Afghanistan,admin,Mazār-e Sharīf,Afghanistan,AF,36.709041,67.110866,458151.0,272714.0
+190,Kazakhstan,admin,Qaraghandy,Kazakhstan,KZ,49.8,73.1,451800.0,304747.0
+191,Iraq,admin,An Nāşirīyah,Iraq,IQ,31.057993,46.257262,451547.0,400249.0
+192,Myanmar,admin,Mawlamyine,Burma,MM,16.490514,97.628248,438861.0,361637.0
+193,Tadjikistan,admin,Khŭjand,Tajikistan,TJ,40.28256,69.622155,437684.0,144865.0
+194,Corée du Nord,,Sunch’ŏn,"Korea, North",KP,39.431667,125.932778,400629.0,400629.0
+195,Arabie Saoudite,admin,Buraydah,Saudi Arabia,SA,26.325986,43.974966,398581.0,391336.0
+196,Thaïlande,admin,Chiang Mai,Thailand,TH,18.790376,98.984683,397211.0,200952.0
+197,Kirghizistan,admin,Osh,Kyrgyzstan,KG,40.515062,72.80826400000002,391277.0,200000.0
+198,Thaïlande,admin,Samut Prakan,Thailand,TH,13.600417000000002,100.596778,388920.0,388920.0
+199,Ouzbékistan,admin,Qarshi,Uzbekistan,UZ,38.858333,65.8,386361.0,222898.0
+200,Arabie Saoudite,admin,Ḩā’il,Saudi Arabia,SA,27.521876,41.690732,385257.0,385257.0
+201,Kazakhstan,admin,Taraz,Kazakhstan,KZ,42.9,71.366667,358153.0,307294.0
+202,Ouzbékistan,,Qatog‘on,Uzbekistan,UZ,40.509566,70.962529,350000.0,192500.0
+203,Kazakhstan,primary,Astana,Kazakhstan,KZ,51.166666,71.45,345604.0,325021.0
+204,Corée du Nord,minor,Kaesŏng,"Korea, North",KP,37.970833,126.554444,338155.0,272512.0
+205,Thaïlande,admin,Nakhon Ratchasima,Thailand,TH,14.971596,102.08255,334984.0,208781.0
+206,Corée du Nord,admin,Wŏnsan,"Korea, North",KP,39.15277800000001,127.443611,329207.0,315643.0
+207,Kazakhstan,admin,Pavlodar,Kazakhstan,KZ,52.283333,76.966666,329002.0,303506.0
+208,Kazakhstan,admin,Öskemen,Kazakhstan,KZ,49.966666,82.6,319067.0,249634.0
+209,Thaïlande,minor,Hat Yai,Thailand,TH,7.008359,100.476682,317954.0,191696.0
+210,Tadjikistan,admin,Qŭrghonteppa,Tajikistan,TJ,37.833994,68.781858,311574.0,65000.0
+211,Kazakhstan,,Semey,Kazakhstan,KZ,50.426749,80.266694,311353.0,292780.0
+212,Syrie,admin,Dayr az Zawr,Syria,SY,35.33389000000001,40.141813,309141.0,242565.0
+213,Azerbaïdjan,admin,Gəncə,Azerbaijan,AZ,40.682778000000006,46.360556,303268.0,300131.0
+214,Kazakhstan,admin,Qyzylorda,Kazakhstan,KZ,44.85,65.5,300000.0,126519.0
+215,Corée du Nord,admin,Kanggye,"Korea, North",KP,40.969465,126.585231,299514.0,209530.0
+216,Corée du Nord,admin,Sinŭiju,"Korea, North",KP,40.100556,124.398056,288112.0,46356.0
+217,Myanmar,admin,Bago,Burma,MM,17.335214,96.481351,284318.0,244376.0
+218,Azerbaïdjan,admin,Sumqayıt,Azerbaijan,AZ,40.589722,49.668611,279159.0,265150.0
+219,Thaïlande,admin,Ubon Ratchathani,Thailand,TH,15.23844,104.848659,273893.0,122533.0
+220,Myanmar,,Myeik,Burma,MM,12.439537,98.60028,266720.0,173298.0
+221,Kazakhstan,admin,Aqtöbe,Kazakhstan,KZ,50.3,57.183333,262457.0,258529.0
+222,Tadjikistan,minor,Konibodom,Tajikistan,TJ,40.294144,70.431224,259876.0,50359.0
+223,Afghanistan,admin,Kunduz,Afghanistan,AF,36.728955,68.857001,259809.0,161902.0
+224,Thaïlande,admin,Nonthaburi,Thailand,TH,13.862167,100.513417,258550.0,258550.0
+225,Yémen,admin,Al Mukallā,Yemen,YE,14.542481,49.124244,258132.0,130029.0
+226,Thaïlande,admin,Khon Kaen,Thailand,TH,16.446710999999997,102.832999,251056.0,147579.0
+227,Kirghizistan,admin,Jalal-Abad,Kyrgyzstan,KG,40.93333300000001,73.0,248899.0,75700.0
+228,Thaïlande,admin,Udon Thani,Thailand,TH,17.415667000000006,102.785889,247231.0,231153.0
+229,Ouzbékistan,,Kattaqo‘rg‘on,Uzbekistan,UZ,39.898889,66.256111,247113.0,59382.0
+230,Myanmar,admin,Pathein,Burma,MM,16.779188,94.732123,237089.0,194940.0
+231,Ouzbékistan,admin,Jizzax,Uzbekistan,UZ,40.115833,67.84222199999999,235352.0,152642.0
+232,Yémen,admin,Ibb,Yemen,YE,13.940771,44.177343,234837.0,234837.0
+233,Thaïlande,admin,Nakhon Si Thammarat,Thailand,TH,8.433333,99.966667,232335.0,120836.0
+234,Myanmar,,Monywa,Burma,MM,22.108561,95.135834,226222.0,182011.0
+235,Sri Lanka,,Dehiwala,Sri Lanka,LK,6.84,79.87100000000002,219827.0,
+236,Afghanistan,,Ṯaghar,Afghanistan,AF,36.152481,68.737086,218748.0,108449.0
+237,Yémen,admin,Ḩajjah,Yemen,YE,15.694247,43.605821,208287.0,43549.0
+238,Afghanistan,admin,Lashkar Gāh,Afghanistan,AF,31.593817,64.37161400000001,201546.0,201546.0
+239,Afghanistan,admin,Maīmanah,Afghanistan,AF,35.921337,64.784058,199795.0,199795.0
+240,Yémen,admin,Dhamār,Yemen,YE,14.542742,44.40514500000001,191259.0,191259.0
+241,Sri Lanka,,Moratuwa,Sri Lanka,LK,6.773,79.882,185031.0,
+242,Myanmar,,Hinthada,Burma,MM,17.649435999999994,95.457055,180728.0,134947.0
+243,Afghanistan,minor,Balkh,Afghanistan,AF,36.756352,66.897196,179969.0,114883.0
+244,Myanmar,admin,Sittwe,Burma,MM,20.146241,92.898346,179032.0,177743.0
+245,Syrie,admin,Ar Raqqah,Syria,SY,35.952829,39.007879,177636.0,173565.0
+246,Liban,admin,Sidon,Lebanon,LB,33.559932,35.375636,173894.0,173894.0
+247,Sri Lanka,,Jaffna,Sri Lanka,LK,9.668,80.007,169102.0,
+248,Syrie,admin,Ţarţūs,Syria,SY,34.889022,35.886586,162980.0,115769.0
+249,Cambodge,admin,Battambang,Cambodia,KH,13.102713,103.198215,154773.0,150444.0
+250,Yémen,minor,Zabīd,Yemen,YE,14.1951,43.315181,152504.0,52590.0
+251,Syrie,admin,Dar‘ā,Syria,SY,32.618889,36.102134,146481.0,97969.0
+252,Jordanie,admin,As Salţ,Jordan,JO,32.039167,35.727222,140689.0,80189.0
+253,Sri Lanka,,Negombo,Sri Lanka,LK,7.207999999999998,79.836,137223.0,
+254,Sri Lanka,,Pita Kotte,Sri Lanka,LK,6.891,79.90100000000002,118179.0,
+255,Sri Lanka,,Sri Jayewardenepura Kotte,Sri Lanka,LK,6.882999999999999,79.907,115826.0,
+256,Tadjikistan,minor,Kŭlob,Tajikistan,TJ,37.914585,69.784544,115164.0,78786.0
+257,Kirghizistan,,Tokmok,Kyrgyzstan,KG,42.841939,75.301487,112860.0,63047.0
+258,Sri Lanka,,Kandy,Sri Lanka,LK,7.291,80.634,111701.0,
+259,Cambodge,admin,Siem Reap,Cambodia,KH,13.361793,103.860556,109398.0,85000.0
+260,Sri Lanka,,Trincomalee,Sri Lanka,LK,8.578,81.229,108420.0,
+261,Laos,admin,Louangphabang,Laos,LA,19.886006,102.135029,107142.0,47378.0
+262,Laos,admin,Pakxé,Laos,LA,15.120221,105.798979,102775.0,88332.0
+263,Sri Lanka,,Kalmunai,Sri Lanka,LK,7.409,81.835,100171.0,

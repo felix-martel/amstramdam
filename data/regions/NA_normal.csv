@@ -1,0 +1,158 @@
+,admin,capital,city,country,iso2,lat,lng,population,population_proper
+0,Etats-Unis d'Amérique,,New York,United States of America,US,40.76149276,-73.98143112,19040000.0,8008278.0
+1,Mexique,primary,Mexico City,Mexico,MX,19.434167,-99.138611,19028000.0,10811002.0
+2,Etats-Unis d'Amérique,minor,Los Angeles,United States of America,US,34.0522342,-118.24368490000002,12500000.0,3694820.0
+3,Etats-Unis d'Amérique,minor,Chicago,United States of America,US,41.850033,-87.6500523,8990000.0,2841952.0
+4,Etats-Unis d'Amérique,minor,Miami,United States of America,US,25.7742658,-80.1936589,5585000.0,382894.0
+5,Etats-Unis d'Amérique,minor,Philadelphia,United States of America,US,39.952335,-75.16378900000002,5492000.0,1517550.0
+6,Canada,admin,Toronto,Canada,CA,43.666667,-79.416667,5213000.0,3934421.0
+7,Etats-Unis d'Amérique,minor,Dallas,United States of America,US,32.783055600000004,-96.8066667,4798000.0,1211704.0
+8,Etats-Unis d'Amérique,admin,Atlanta,United States of America,US,33.7489954,-84.3879824,4506000.0,422908.0
+9,Etats-Unis d'Amérique,admin,Boston,United States of America,US,42.3584308,-71.05977320000002,4467000.0,589141.0
+10,Etats-Unis d'Amérique,minor,Houston,United States of America,US,29.7632836,-95.3632715,4459000.0,3647574.0
+11,Etats-Unis d'Amérique,primary,Washington,United States of America,US,38.8951118,-77.0363658,4338000.0,552433.0
+12,Mexique,admin,Guadalajara,Mexico,MX,20.666823,-103.391824,4198000.0,1640589.0
+13,Etats-Unis d'Amérique,minor,Detroit,United States of America,US,42.33142700000001,-83.0457538,4101000.0,951270.0
+14,Mexique,admin,Monterrey,Mexico,MX,25.675065,-100.318465,3712000.0,1122874.0
+15,Canada,,Montréal,Canada,CA,45.5,-73.583333,3678000.0,2356556.0
+16,Etats-Unis d'Amérique,admin,Phoenix,United States of America,US,33.4483771,-112.0740373,3551000.0,1321045.0
+17,Etats-Unis d'Amérique,minor,San Francisco,United States of America,US,37.7749295,-122.4194155,3450000.0,732072.0
+18,Etats-Unis d'Amérique,minor,Seattle,United States of America,US,47.6062095,-122.33207079999998,3074000.0,569369.0
+19,Etats-Unis d'Amérique,,Irvine,United States of America,US,33.669464899999994,-117.8231107,3010232.0,212375.0
+20,Etats-Unis d'Amérique,minor,San Diego,United States of America,US,32.7153292,-117.1572551,2916000.0,961141.0
+21,Etats-Unis d'Amérique,minor,Minneapolis,United States of America,US,44.9799654,-93.2638361,2616000.0,367773.0
+22,Etats-Unis d'Amérique,,Brooklyn,United States of America,US,40.65009286,-73.94956366,2565635.0,2565635.0
+23,Etats-Unis d'Amérique,minor,Tampa,United States of America,US,27.9475216,-82.4584279,2314000.0,324465.0
+24,Canada,,Vancouver,Canada,CA,49.25,-123.133333,2313328.0,603502.0
+25,Etats-Unis d'Amérique,admin,Denver,United States of America,US,39.7391536,-104.9847034,2313000.0,1548599.0
+26,Etats-Unis d'Amérique,,Queens,United States of America,US,40.75016214,-73.79744535,2272771.0,2272771.0
+27,Etats-Unis d'Amérique,minor,Baltimore,United States of America,US,39.2903848,-76.6121893,2255000.0,610892.0
+28,Etats-Unis d'Amérique,minor,Saint Louis,United States of America,US,38.62727329999999,-90.1978889,2199000.0,320916.0
+29,Mexique,admin,Puebla,Mexico,MX,19.037926,-98.203457,2195000.0,1392099.0
+30,Cuba,primary,Havana,Cuba,CU,23.131944,-82.36416700000002,2174000.0,1990917.0
+31,République Dominicaine,primary,Santo Domingo,Dominican Republic,DO,18.466667,-69.9,2154000.0,2873.0
+32,Etats-Unis d'Amérique,minor,Fort Lauderdale,United States of America,US,26.1223084,-80.14337859999998,2042042.0,165521.0
+33,Etats-Unis d'Amérique,,Long Beach,United States of America,US,33.7669623,-118.1892348,2036134.0,462257.0
+34,Etats-Unis d'Amérique,minor,Cleveland,United States of America,US,41.4994954,-81.6954088,1890000.0,449514.0
+35,Etats-Unis d'Amérique,minor,Portland,United States of America,US,45.5234515,-122.6762071,1875000.0,540513.0
+36,Etats-Unis d'Amérique,minor,Pittsburgh,United States of America,US,40.4406248,-79.9958864,1838000.0,1232535.0
+37,Etats-Unis d'Amérique,minor,Las Vegas,United States of America,US,36.1749705,-115.137223,1823000.0,478434.0
+38,Etats-Unis d'Amérique,minor,San Bernardino,United States of America,US,34.1083449,-117.2897652,1745000.0,202381.0
+39,Etats-Unis d'Amérique,minor,San Jose,United States of America,US,37.3393857,-121.8949555,1668000.0,894943.0
+40,Etats-Unis d'Amérique,minor,Cincinnati,United States of America,US,39.1146631,-84.52968641,1636000.0,306382.0
+41,Etats-Unis d'Amérique,,Manhattan,United States of America,US,40.78346165,-73.96618566,1619090.0,1619090.0
+42,Etats-Unis d'Amérique,admin,Sacramento,United States of America,US,38.5815719,-121.4943996,1604000.0,467898.0
+43,Mexique,,Tijuana,Mexico,MX,32.502697999999995,-117.003714,1553000.0,1376457.0
+44,République Dominicaine,admin,Santiago,Dominican Republic,DO,19.451703,-70.69703,1550753.0,1391262.0
+45,Mexique,admin,Toluca,Mexico,MX,19.287311,-99.644979,1531000.0,505881.0
+46,Etats-Unis d'Amérique,minor,Oakland,United States of America,US,37.8043722,-122.27080259999998,1510271.0,395817.0
+47,Etats-Unis d'Amérique,minor,Virginia Beach,United States of America,US,36.8529263,-75.977985,1491000.0,263951.0
+48,Mexique,minor,León de los Aldama,Mexico,MX,21.129079,-101.673741,1488000.0,1114626.0
+49,Etats-Unis d'Amérique,minor,San Antonio,United States of America,US,29.4241219,-98.4936282,1473000.0,1256810.0
+50,Etats-Unis d'Amérique,,Kansas City,United States of America,US,39.0997266,-94.5785667,1469000.0,441545.0
+51,Etats-Unis d'Amérique,minor,Fort Worth,United States of America,US,32.725409,-97.3208496,1440454.0,741206.0
+52,Etats-Unis d'Amérique,admin,Indianapolis,United States of America,US,39.7683765,-86.15804229999998,1436000.0,773283.0
+53,Etats-Unis d'Amérique,,The Bronx,United States of America,US,40.84992814,-73.86617942,1408473.0,1408473.0
+54,Etats-Unis d'Amérique,minor,Milwaukee,United States of America,US,43.0389025,-87.9064736,1388000.0,579180.0
+55,Etats-Unis d'Amérique,minor,Orlando,United States of America,US,28.5383355,-81.3792365,1350000.0,207970.0
+56,Mexique,,Ciudad Juárez,Mexico,MX,31.733333,-106.483333,1343000.0,1343000.0
+57,Panama,primary,Panama City,Panama,PA,8.966667,-79.533333,1281000.0,408168.0
+58,Etats-Unis d'Amérique,admin,Providence,United States of America,US,41.8239891,-71.4128343,1277000.0,50453.0
+59,Etats-Unis d'Amérique,admin,Columbus,United States of America,US,39.9611755,-82.9987942,1270000.0,736836.0
+60,Etats-Unis d'Amérique,minor,West Palm Beach,United States of America,US,26.7153425,-80.0533746,1250000.0,101043.0
+61,Etats-Unis d'Amérique,admin,Raleigh,United States of America,US,35.77209600000001,-78.6386145,1163515.0,416468.0
+62,Etats-Unis d'Amérique,admin,Austin,United States of America,US,30.267153000000004,-97.7430608,1161000.0,678368.0
+63,Canada,primary,Ottawa,Canada,CA,45.416667,-75.7,1145000.0,812129.0
+64,Mexique,,Torreon,Mexico,MX,25.543891,-103.418976,1144000.0,524066.0
+65,Etats-Unis d'Amérique,minor,Birmingham,United States of America,US,33.5206608,-86.80249,1128047.0,212237.0
+66,Canada,,Calgary,Canada,CA,51.083333,-114.083333,1110000.0,915322.0
+67,Mexique,,Ciudad Nezahualcóyotl,Mexico,MX,19.400608,-99.014827,1109363.0,750000.0
+68,Etats-Unis d'Amérique,,Mesa,United States of America,US,33.4222685,-111.8226402,1085394.0,439041.0
+69,Canada,admin,Edmonton,Canada,CA,53.55,-113.5,1058000.0,712391.0
+70,Guatemala,minor,Guatemala,Guatemala,GT,14.633426,-90.516722,1024000.0,994938.0
+71,Mexique,admin,San Luis Potosí,Mexico,MX,22.149825,-100.979161,992000.0,677704.0
+72,Mexique,admin,Mérida,Mexico,MX,20.975368,-89.616959,965000.0,717175.0
+73,Mexique,admin,Querétaro,Mexico,MX,20.600014,-100.399715,961000.0,611785.0
+74,Mexique,admin,Mexicali,Mexico,MX,32.650022,-115.461069,885000.0,587277.0
+75,Mexique,admin,Aguascalientes,Mexico,MX,21.88234,-102.282586,869000.0,658179.0
+76,Mexique,,Tampico,Mexico,MX,22.278170000000006,-97.86772,859419.0,297284.0
+77,Mexique,admin,Cuernavaca,Mexico,MX,18.933725,-99.228488,834001.0,349102.0
+78,Mexique,admin,Culiacán,Mexico,MX,24.790325,-107.387816,809000.0,582469.0
+79,Mexique,admin,Chihuahua,Mexico,MX,28.633333,-106.083333,793000.0,708267.0
+80,Mexique,admin,Saltillo,Mexico,MX,25.423213,-101.005299,754000.0,604573.0
+81,Canada,,Hamilton,Canada,CA,43.256101,-79.857484,721053.0,519949.0
+82,Mexique,minor,Acapulco de Juárez,Mexico,MX,16.870236,-99.868452,715584.0,652136.0
+83,Mexique,admin,Morelia,Mexico,MX,19.70179,-101.183962,644306.0,592797.0
+84,Canada,admin,Winnipeg,Canada,CA,49.883333,-97.166667,632063.0,575313.0
+85,Canada,admin,Québec,Canada,CA,46.8,-71.25,624177.0,528595.0
+86,Mexique,admin,Hermosillo,Mexico,MX,29.102602,-110.977324,595811.0,512935.0
+87,Mexique,,Veracruz,Mexico,MX,19.180954,-96.142901,578963.0,568313.0
+88,Guatemala,admin,Quetzaltenango,Guatemala,GT,14.834722,-91.518056,575263.0,224703.0
+89,Cuba,admin,Santiago de Cuba,Cuba,CU,20.020833,-75.826667,555865.0,446063.0
+90,Mexique,,Cancún,Mexico,MX,21.172361,-86.829546,542043.0,436862.0
+91,Mexique,,Matamoros,Mexico,MX,25.869581,-97.501946,538785.0,364004.0
+92,Mexique,admin,Oaxaca,Mexico,MX,17.065417999999998,-96.723645,530728.0,262566.0
+93,Mexique,admin,Tlaxcala,Mexico,MX,19.319055,-98.19982,503878.0,89795.0
+94,Mexique,,Mazatán,Mexico,MX,29.005032,-110.137853,500000.0,438434.0
+95,Mexique,minor,Reynosa,Mexico,MX,26.080613,-98.28835,498654.0,419340.0
+96,Mexique,admin,Durango,Mexico,MX,24.019419,-104.66069,457140.0,455597.0
+97,Mexique,admin,Xalapa,Mexico,MX,19.54386,-96.92155,452186.0,425148.0
+98,Canada,,Oshawa,Canada,CA,43.9,-78.866667,450963.0,247989.0
+99,Mexique,admin,Villahermosa,Mexico,MX,17.986893,-92.930277,428564.0,362401.0
+100,Canada,,Kitchener,Canada,CA,43.446976,-80.472484,417001.0,409112.0
+101,Mexique,,Gomez Palacio,Mexico,MX,25.569849,-103.495882,399328.0,228577.0
+102,Mexique,,Celaya,Mexico,MX,20.52353,-100.8157,383697.0,305901.0
+103,Mexique,minor,Mazatlán,Mexico,MX,23.2329,-106.4062,368204.0,354717.0
+104,Canada,admin,Halifax,Canada,CA,44.65,-63.6,359111.0,222874.0
+105,Mexique,minor,Orizaba,Mexico,MX,18.851947,-97.099574,355333.0,121348.0
+106,Mexique,,Nuevo Laredo,Mexico,MX,27.484635,-99.522106,349550.0,160755.0
+107,Cuba,admin,Camagüey,Cuba,CU,21.380833,-77.916944,347562.0,295605.0
+108,Canada,,London,Canada,CA,42.983333,-81.25,346765.0,335035.0
+109,Mexique,minor,Irapuato,Mexico,MX,20.676754000000006,-101.356281,339554.0,339554.0
+110,Mexique,admin,Pachuca,Mexico,MX,20.117362,-98.742915,319581.0,302141.0
+111,Canada,,Windsor,Canada,CA,42.301649,-83.030744,319246.0,210891.0
+112,Cuba,admin,Holguín,Cuba,CU,20.887222,-76.263056,319102.0,300177.0
+113,Mexique,admin,Tepic,Mexico,MX,21.509505,-104.895691,318781.0,280592.0
+114,Canada,admin,Victoria,Canada,CA,48.450234,-123.343529,289625.0,251358.0
+115,Mexique,,Ciudad Obregón,Mexico,MX,27.486421000000004,-109.940826,288002.0,258162.0
+116,Mexique,,Coatzacoalcos,Mexico,MX,18.133458,-94.442417,287285.0,230717.0
+117,Mexique,admin,Ciudad Victoria,Mexico,MX,23.741744,-99.145993,274900.0,269923.0
+118,Cuba,admin,Guantánamo,Cuba,CU,20.144444,-75.20916700000002,272801.0,217338.0
+119,Mexique,minor,Uruapan,Mexico,MX,19.411161,-102.05644,264531.0,237308.0
+120,Mexique,minor,Ensenada,Mexico,MX,31.871492,-116.600706,256565.0,220937.0
+121,Mexique,,Poza Rica de Hidalgo,Mexico,MX,20.529054,-97.449662,254481.0,174526.0
+122,Cuba,admin,Santa Clara,Cuba,CU,22.406944,-79.964722,250512.0,219288.0
+123,Mexique,,Zumpango,Mexico,MX,19.796685,-98.985422,250000.0,127988.0
+124,Mexique,minor,Los Mochis,Mexico,MX,25.793024,-108.998075,249047.0,214601.0
+125,Mexique,,Tehuacán,Mexico,MX,18.461476,-97.392821,241429.0,237312.0
+126,République Dominicaine,admin,San Pedro de Macorís,Dominican Republic,DO,18.461557,-69.29718100000001,217899.0,204140.0
+127,République Dominicaine,admin,La Romana,Dominican Republic,DO,18.427335,-68.972849,208437.0,196506.0
+128,Panama,admin,Colón,Panama,PA,9.354507,-79.900109,204000.0,136976.0
+129,Cuba,admin,Las Tunas,Cuba,CU,20.961667,-76.951111,203684.0,156112.0
+130,Canada,,Saskatoon,Canada,CA,52.133333,-106.666667,198958.0,189193.0
+131,Cuba,admin,Bayamo,Cuba,CU,20.374167,-76.64361099999998,192632.0,162614.0
+132,Cuba,admin,Pinar del Río,Cuba,CU,22.416667,-83.696667,186990.0,159618.0
+133,Cuba,admin,Cienfuegos,Cuba,CU,22.146111,-80.435556,186644.0,106455.0
+134,Canada,,Barrie,Canada,CA,44.383333,-79.7,182041.0,119732.0
+135,Canada,admin,Regina,Canada,CA,50.45,-104.616667,176183.0,176183.0
+136,République Dominicaine,admin,La Vega,Dominican Republic,DO,19.222072,-70.529558,163197.0,102426.0
+137,Canada,,Sudbury,Canada,CA,46.5,-80.966667,157857.0,80507.0
+138,République Dominicaine,admin,San Cristóbal,Dominican Republic,DO,18.418631,-70.107913,154040.0,154040.0
+139,République Dominicaine,admin,San Francisco de Macorís,Dominican Republic,DO,19.30099,-70.252586,152538.0,124763.0
+140,Canada,,Abbotsford,Canada,CA,49.05,-122.3,151683.0,151683.0
+141,Cuba,admin,Matanzas,Cuba,CU,23.041111,-81.5775,146733.0,123873.0
+142,Canada,,Sarnia,Canada,CA,42.978417,-82.388177,144172.0,82998.0
+143,Cuba,admin,Ciego de Ávila,Cuba,CU,21.84,-78.761944,142027.0,102660.0
+144,Canada,,Sherbrooke,Canada,CA,45.4,-71.9,139652.0,129447.0
+145,Guatemala,minor,San Luis,Guatemala,GT,16.198889,-89.440278,132470.0,6776.0
+146,Canada,admin,Saint John’s,Canada,CA,47.55,-52.666667,131469.0,99182.0
+147,Cuba,minor,Manzanillo,Cuba,CU,20.341726,-77.12125999999998,128188.0,86678.0
+148,Cuba,admin,Sancti Spíritus,Cuba,CU,21.929722,-79.4425,127069.0,76352.0
+149,Canada,,Kelowna,Canada,CA,49.9,-119.483333,125109.0,95306.0
+150,République Dominicaine,minor,Higüey,Dominican Republic,DO,18.609363,-68.71198100000001,123787.0,123787.0
+151,République Dominicaine,minor,Puerto Plata,Dominican Republic,DO,19.7875,-70.6875,119897.0,119897.0
+152,Canada,,Trois-Rivières,Canada,CA,46.35,-72.55,119693.0,116409.0
+153,Canada,,Kingston,Canada,CA,44.3,-76.56666700000002,114195.0,102400.0
+154,Panama,admin,David,Panama,PA,8.427389,-82.425286,110037.0,82859.0
+155,Guatemala,admin,Escuintla,Guatemala,GT,14.305,-90.785,107638.0,103165.0
+156,Cuba,minor,Palma Soriano,Cuba,CU,20.211297,-75.993616,102826.0,67394.0

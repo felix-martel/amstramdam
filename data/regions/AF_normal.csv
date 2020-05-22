@@ -1,0 +1,200 @@
+,admin,capital,city,country,iso2,lat,lng,population,population_proper
+0,Egypte,primary,Cairo,Egypt,EG,30.07708,31.285909000000004,11893000.0,7734614.0
+1,Nigéria,minor,Lagos,Nigeria,NG,6.454066,3.3946730000000005,9466000.0,1536.0
+2,Congo Kinshasa,primary,Kinshasa,Congo (Kinshasa),CD,-4.327108,15.30717,7843000.0,5565703.0
+3,Angola,primary,Luanda,Angola,AO,-8.836803999999997,13.233173999999998,5172900.0,1951272.0
+4,Soudan,primary,Khartoum,Sudan,SD,15.588056,32.534167,4754000.0,1974647.0
+5,Egypte,admin,Alexandria,Egypt,EG,31.215645,29.955266,4165000.0,3811516.0
+6,Côte d'Ivoire,,Adjamé,Côte D’Ivoire,CI,5.350527,-4.024637,3802000.0,3190395.0
+7,Afrique du Sud,admin,Johannesburg,South Africa,ZA,-26.205171,28.049815,3435000.0,2026469.0
+8,Algérie,primary,Algiers,Algeria,DZ,36.763056,3.0505560000000003,3354000.0,1977663.0
+9,Afrique du Sud,primary,Cape Town,South Africa,ZA,-33.925839,18.423218,3215000.0,2432858.0
+10,Nigéria,admin,Kano,Nigeria,NG,12.002381,8.513160000000001,3140000.0,3140000.0
+11,Ethiopie,primary,Addis Ababa,Ethiopia,ET,9.024325,38.749226,3100000.0,2757729.0
+12,Kenya,primary,Nairobi,Kenya,KE,-1.283333,36.816667,3010000.0,2750547.0
+13,Afrique du Sud,,Benoni,South Africa,ZA,-26.190851,28.311338,2986000.0,605344.0
+14,Tanzanie,primary,Dar es Salaam,Tanzania,TZ,-6.8,39.283333,2930000.0,2698652.0
+15,Afrique du Sud,,Durban,South Africa,ZA,-29.857896000000004,31.029198,2729000.0,2729000.0
+16,Egypte,admin,Al Jīzah,Egypt,EG,30.008079,31.210931,2681863.0,2681863.0
+17,Nigéria,admin,Ibadan,Nigeria,NG,7.377561999999998,3.905907,2628000.0,1814570.0
+18,Tunisie,primary,Tunis,Tunisia,TN,36.806112,10.171078,2412500.0,728453.0
+19,Soudan,,Omdurman,Sudan,SD,15.636110999999998,32.437222,2395159.0,2183698.0
+20,Libye,primary,Tripoli,Libya,LY,32.8925,13.18,2189000.0,229398.0
+21,Cameroun,admin,Douala,Cameroon,CM,4.0469,9.7084,1906000.0,1338082.0
+22,Madagascar,,Ampamantanana,Madagascar,MG,-18.933333,47.533333,1697000.0,1391433.0
+23,Cameroun,primary,Yaoundé,Cameroon,CM,3.866667,11.516667,1611000.0,1060587.0
+24,Nigéria,primary,Abuja,Nigeria,NG,9.083333,7.533333,1576000.0,162135.0
+25,Guinée,primary,Conakry,Guinea,GN,9.509167,-13.712222,1494000.0,1494000.0
+26,Mali,primary,Bamako,Mali,ML,12.65,-8.0,1494000.0,1297281.0
+27,Mozambique,primary,Maputo,Mozambique,MZ,-25.965278,32.589167,1446000.0,1191613.0
+28,Nigéria,admin,Kaduna,Nigeria,NG,10.526413,7.438795,1442000.0,940593.0
+29,Ouganda,,Kawaala,Uganda,UG,0.338863,32.554064000000004,1420000.0,1353189.0
+30,Congo Kinshasa,admin,Lubumbashi,Congo (Kinshasa),CD,-11.671453,27.479161,1352000.0,876634.0
+31,Afrique du Sud,primary,Pretoria,South Africa,ZA,-25.706944,28.229444,1338000.0,1338000.0
+32,Zambie,primary,Lusaka,Zambia,ZM,-15.416667000000002,28.283333,1328000.0,1267440.0
+33,Congo Kinshasa,admin,Mbuji-Mayi,Congo (Kinshasa),CD,-6.134238,23.610154,1295000.0,874761.0
+34,Nigéria,admin,Benin City,Nigeria,NG,6.338153,5.625749,1190000.0,668026.0
+35,Libye,admin,Benghazi,Libya,LY,32.117664000000005,20.129275,1180000.0,582374.0
+36,Burkina Faso,primary,Ouagadougou,Burkina Faso,BF,12.370278,-1.524722,1149000.0,835457.0
+37,Angola,admin,Huambo,Angola,AO,-12.776111,15.739167000000002,1100000.0,872000.0
+38,Somalie,primary,Mogadishu,Somalia,SO,2.046193,45.33407,1100000.0,875388.0
+39,Nigéria,minor,Ikare,Nigeria,NG,7.525913,5.753417,1099931.0,700000.0
+40,Afrique du Sud,,Vereeniging,South Africa,ZA,-26.673133,27.926147,1074000.0,474681.0
+41,Afrique du Sud,,Port Elizabeth,South Africa,ZA,-33.917988,25.570066,1021000.0,640054.0
+42,Nigéria,admin,Port Harcourt,Nigeria,NG,4.7774230000000015,7.013404,1020000.0,1020000.0
+43,Tchad,primary,N’Djamena,Chad,TD,12.108502,15.048173,989000.0,681387.0
+44,Nigéria,minor,Ogbomoso,Nigeria,NG,8.133725,4.240144,951000.0,239127.0
+45,Niger,primary,Niamey,Niger,NE,13.516667000000002,2.116667,915000.0,742791.0
+46,Nigéria,minor,Aba,Nigeria,NG,5.106576,7.366667,897560.0,851210.0
+47,Kenya,admin,Mombasa,Kenya,KE,-4.054655,39.663588,882000.0,799668.0
+48,Algérie,admin,Oran,Algeria,DZ,35.691111,-0.641667,798000.0,645984.0
+49,Congo Kinshasa,admin,Kananga,Congo (Kinshasa),CD,-5.896241000000002,22.416588,765000.0,463546.0
+50,Afrique du Sud,admin,Pietermaritzburg,South Africa,ZA,-29.616785,30.39278,750845.0,490951.0
+51,Tanzanie,admin,Moshi,Tanzania,TZ,-3.35,37.333333,721018.0,206728.0
+52,Egypte,admin,Ismailia,Egypt,EG,30.604272,32.272252,656135.0,284813.0
+53,Congo Kinshasa,admin,Kikwit,Congo (Kinshasa),CD,-5.041748,18.819516,637736.0,294210.0
+54,Egypte,admin,Port Said,Egypt,EG,31.256541,32.284115,623864.0,500000.0
+55,Egypte,admin,Luxor,Egypt,EG,25.695858,32.643592,609248.0,487896.0
+56,Algérie,admin,Constantine,Algeria,DZ,36.365,6.614722,605179.0,450097.0
+57,Egypte,admin,Sūhāj,Egypt,EG,26.556952000000006,31.694785,600000.0,209419.0
+58,Egypte,admin,Al Manşūrah,Egypt,EG,31.036373,31.380691,600000.0,480494.0
+59,Congo Kinshasa,admin,Kisangani,Congo (Kinshasa),CD,0.5152800000000001,25.190987,578470.0,539158.0
+60,Côte d'Ivoire,admin,Bouaké,Côte D’Ivoire,CI,7.6938460000000015,-5.030307,567481.0,454821.0
+61,Mozambique,,Matola,Mozambique,MZ,-25.829167,32.457221999999994,543907.0,462829.0
+62,Mozambique,admin,Beira,Mozambique,MZ,-19.843611,34.838889,530604.0,483789.0
+63,Algérie,admin,Blida,Algeria,DZ,36.470039,2.827699,511348.0,265000.0
+64,Egypte,admin,Suez,Egypt,EG,29.973714,32.526267,508335.0,488125.0
+65,Algérie,admin,Annaba,Algeria,DZ,36.9,7.766667,503524.0,206570.0
+66,Egypte,admin,Al Minyā,Egypt,EG,28.109884,30.750299,500000.0,227150.0
+67,Tanzanie,admin,Mwanza,Tanzania,TZ,-2.516667,32.9,493944.0,436801.0
+68,Soudan,admin,Port Sudan,Sudan,SD,19.615484,37.203107,489725.0,489725.0
+69,Ethiopie,,Nazrēt,Ethiopia,ET,8.55,39.266667,476892.0,213995.0
+70,Afrique du Sud,primary,Bloemfontein,South Africa,ZA,-29.121065,26.214003,463064.0,456669.0
+71,Tunisie,admin,Sfax,Tunisia,TN,34.740556,10.760278,453050.0,277278.0
+72,Algérie,admin,Chlef,Algeria,DZ,36.165253,1.334523,449167.0,449167.0
+73,Cameroun,admin,Bamenda,Cameroon,CM,5.9597050000000005,10.145974,445299.0,393835.0
+74,Cameroun,admin,Garoua,Cameroon,CM,9.301425,13.397707,436899.0,293974.0
+75,Congo Kinshasa,admin,Bukavu,Congo (Kinshasa),CD,-2.490765,28.84281,436779.0,225389.0
+76,Congo Kinshasa,,Likasi,Congo (Kinshasa),CD,-10.983031,26.738395,434408.0,422414.0
+77,Afrique du Sud,,Welkom,South Africa,ZA,-27.986442,26.706612,431944.0,126079.0
+78,Congo Kinshasa,admin,Kolwezi,Congo (Kinshasa),CD,-10.716667,25.4725,418000.0,418000.0
+79,Zambie,,Kitwe,Zambia,ZM,-12.79614,28.247672,404901.0,400914.0
+80,Tanzanie,admin,Zanzibar,Tanzania,TZ,-6.166667,39.18333300000001,403658.0,373220.0
+81,Ouganda,admin,Mbale,Uganda,UG,1.074804,34.177352,402368.0,91800.0
+82,Soudan,admin,Kassala,Sudan,SD,15.458728,36.389684,401477.0,339521.0
+83,Zambie,admin,Ndola,Zambia,ZM,-12.958672,28.636593,396339.0,394518.0
+84,Kenya,admin,Kisumu,Kenya,KE,-0.10221,34.761714000000005,395615.0,216479.0
+85,Soudan,admin,El Obeid,Sudan,SD,13.181934,30.221872,393311.0,269424.0
+86,Soudan,admin,Nyala,Sudan,SD,12.048882,24.880694,392373.0,392373.0
+87,Mozambique,admin,Nampula,Mozambique,MZ,-15.119722,39.264722,388526.0,383845.0
+88,Libye,admin,Mişrātah,Libya,LY,32.375352,15.092543,386120.0,216200.0
+89,Algérie,admin,Bejaïa,Algeria,DZ,36.75587,5.084332,384937.0,164103.0
+90,Kenya,admin,Nakuru,Kenya,KE,-0.283333,36.066667,364727.0,259903.0
+91,Burkina Faso,admin,Bobo-Dioulasso,Burkina Faso,BF,11.177154,-4.297901,360106.0,331964.0
+92,Kenya,,Eldoret,Kenya,KE,0.520356,35.269925,353381.0,218446.0
+93,Soudan,,Kūstī,Sudan,SD,13.166667000000002,32.666667,345068.0,203858.0
+94,Tanzanie,admin,Arusha,Tanzania,TZ,-3.366667,36.68333300000001,341136.0,320074.0
+95,Congo Kinshasa,,Beni,Congo (Kinshasa),CD,0.491133,29.473059000000006,332903.0,89648.0
+96,Soudan,admin,Wad Medani,Sudan,SD,14.392270000000002,33.528040000000004,332714.0,284367.0
+97,Burundi,primary,Bujumbura,Burundi,BI,-3.3822,29.3644,331700.0,331700.0
+98,Tunisie,,Hammam Sousse,Tunisia,TN,35.860904,10.603131,327004.0,164123.0
+99,Cameroun,admin,Maroua,Cameroon,CM,10.590946,14.315925,319941.0,201371.0
+100,Madagascar,minor,Antsirabe,Madagascar,MG,-19.866965,47.039352,307921.0,307921.0
+101,Ouganda,admin,Jinja,Uganda,UG,0.4244439999999999,33.204167,301619.0,89700.0
+102,Tanzanie,admin,Mbeya,Tanzania,TZ,-8.9,33.45,291649.0,232062.0
+103,Cameroun,admin,Bafoussam,Cameroon,CM,5.477752,10.417591,290768.0,290768.0
+104,Algérie,admin,Batna,Algeria,DZ,35.555278,6.178611,280798.0,258136.0
+105,Algérie,admin,Sétif,Algeria,DZ,36.191121,5.4137330000000015,274744.0,274744.0
+106,Libye,admin,Tobruk,Libya,LY,32.083611,23.976389,263527.0,121052.0
+107,Mozambique,admin,Chimoio,Mozambique,MZ,-19.116389,33.483333,256936.0,228141.0
+108,Côte d'Ivoire,,Déraouan,Côte D’Ivoire,CI,6.890867,-6.423196,255168.0,215652.0
+109,Soudan,admin,El Fasher,Sudan,SD,13.616389000000002,25.356389,252609.0,189203.0
+110,Ethiopie,admin,Dire Dawa,Ethiopia,ET,9.593056,41.866111,252279.0,248372.0
+111,Tanzanie,admin,Morogoro,Tanzania,TZ,-6.816667,37.666667,250902.0,234535.0
+112,Ouganda,admin,Arua,Uganda,UG,3.0201290000000003,30.911052,250000.0,59400.0
+113,Somalie,admin,Kismaayo,Somalia,SO,-0.358173,42.545365,234852.0,134951.0
+114,Niger,admin,Maradi,Niger,NE,13.5,7.101744,232555.0,163487.0
+115,Cameroun,admin,Ngaoundéré,Cameroon,CM,7.316667,13.583332999999998,231357.0,37288.0
+116,Niger,admin,Zinder,Niger,NE,13.804869,8.988371,230358.0,191424.0
+117,Algérie,admin,Tlemcen,Algeria,DZ,34.878333000000005,-1.315,229777.0,132341.0
+118,Mali,admin,Sikasso,Mali,ML,11.3135,-5.6697,225753.0,144786.0
+119,Tanzanie,admin,Tanga,Tanzania,TZ,-5.066667,39.1,224876.0,209435.0
+120,Guinée,admin,Guéckédou,Guinea,GN,8.5625,-10.1325,221715.0,221715.0
+121,Tunisie,admin,Gabès,Tunisia,TN,33.881457,10.098196000000002,219517.0,110075.0
+122,Tanzanie,primary,Dodoma,Tanzania,TZ,-6.183333,35.75,218269.0,180541.0
+123,Cameroun,admin,Bertoua,Cameroon,CM,4.5833330000000005,13.683333,218111.0,88462.0
+124,Cameroun,,Limbe,Cameroon,CM,4.0242,9.2149,212474.0,72106.0
+125,Côte d'Ivoire,admin,San-Pédro,Côte D’Ivoire,CI,4.748508,-6.636301,210273.0,196751.0
+126,Madagascar,admin,Toamasina,Madagascar,MG,-18.151349,49.408139,210226.0,206373.0
+127,Botswana,primary,Gaborone,Botswana,BW,-24.646389000000006,25.911944,208411.0,159243.0
+128,Angola,,Lobito,Angola,AO,-12.351905,13.546392,207932.0,133534.0
+129,Ethiopie,admin,Bahir Dar,Ethiopia,ET,11.6,37.383333,206748.0,168899.0
+130,Côte d'Ivoire,primary,Yamoussoukro,Côte D’Ivoire,CI,6.820548,-5.276741,206499.0,194530.0
+131,Cameroun,,Edéa,Cameroon,CM,3.8,10.133333,203149.0,15864.0
+132,Libye,admin,Al Khums,Libya,LY,32.648613,14.261909,201943.0,183061.0
+133,Soudan,admin,Gedaref,Sudan,SD,14.035832999999998,35.384444,201282.0,201282.0
+134,Libye,,Ḩārat az Zāwiyah,Libya,LY,32.763056,12.715,200000.0,186123.0
+135,Zambie,admin,Kasama,Zambia,ZM,-10.212889,31.180842,200000.0,113000.0
+136,Tchad,admin,Bongor,Chad,TD,10.280556,15.372222,193941.0,30518.0
+137,Zambie,admin,Kabwe,Zambia,ZM,-14.443217,28.451743,188979.0,188355.0
+138,Mozambique,admin,Quelimane,Mozambique,MZ,-17.878611,36.888333,188964.0,169101.0
+139,Somalie,,Jamaame,Somalia,SO,0.06968300000000001,42.744972,185270.0,128577.0
+140,Madagascar,admin,Fianarantsoa,Madagascar,MG,-21.447807,47.088401,184184.0,167227.0
+141,Ethiopie,,Desē,Ethiopia,ET,11.133333,39.633333,183802.0,136056.0
+142,Zambie,,Chingola,Zambia,ZM,-12.528968,27.883818,182015.0,148564.0
+143,Libye,admin,Zuwārah,Libya,LY,32.931203000000004,12.081992,180310.0,67386.0
+144,Côte d'Ivoire,admin,Korhogo,Côte D’Ivoire,CI,9.458031,-5.629608,177711.0,167359.0
+145,Ouganda,,Old Entebbe,Uganda,UG,0.028056,32.445278,175128.0,79700.0
+146,Ethiopie,admin,Harar,Ethiopia,ET,9.313866,42.118151,174994.0,147306.0
+147,Libye,admin,Al Marj,Libya,LY,32.487976,20.831744,169540.0,85315.0
+148,Tchad,admin,Sagh,Chad,TD,9.1429,18.3923,169196.0,102528.0
+149,Guinée,admin,Nzérékoré,Guinea,GN,7.747222,-8.823889,168121.0,132728.0
+150,Zambie,admin,Livingstone,Zambia,ZM,-17.841939,25.85425,165480.0,109203.0
+151,Tanzanie,admin,Kigoma,Tanzania,TZ,-4.876944,29.626667,164268.0,164268.0
+152,Tunisie,,Zarzis,Tunisia,TN,33.503981,11.112155,159161.0,79316.0
+153,Tchad,admin,Abéché,Chad,TD,13.816667,20.816667,158317.0,74188.0
+154,Tchad,admin,Moundou,Chad,TD,8.566667,16.083333,156705.0,135167.0
+155,Ethiopie,,Gonder,Ethiopia,ET,12.6,37.466667,156230.0,153914.0
+156,Madagascar,admin,Mahajanga,Madagascar,MG,-15.713935,46.315858,154657.0,135660.0
+157,Zambie,,Mufulira,Zambia,ZM,-12.54982,28.240711,153624.0,120500.0
+158,Zambie,,Luanshya,Zambia,ZM,-13.136671,28.416611,151993.0,113365.0
+159,Angola,admin,Benguela,Angola,AO,-12.578333,13.407222,151226.0,132808.0
+160,Kenya,,Kitale,Kenya,KE,1.015725,35.006217,150495.0,75123.0
+161,Ouganda,admin,Tororo,Uganda,UG,0.692991,34.180853000000006,150000.0,43700.0
+162,Côte d'Ivoire,admin,Man,Côte D’Ivoire,CI,7.4125130000000015,-7.55383,146974.0,139341.0
+163,Ouganda,admin,Gulu,Uganda,UG,2.774569,32.29899,146858.0,142003.0
+164,Libye,admin,Gharyān,Libya,LY,32.172222,13.020278,146810.0,85219.0
+165,Kenya,,Machakos,Kenya,KE,-1.516667,37.266667,144925.0,31971.0
+166,Tunisie,admin,Kairouan,Tunisia,TN,35.678102,10.096333,144522.0,119794.0
+167,Libye,admin,Ajdābiyā,Libya,LY,30.755454,20.226255,143833.0,134358.0
+168,Guinée,admin,Labé,Guinea,GN,11.316667,-12.283333,140575.0,58649.0
+169,Tunisie,admin,Bizerte,Tunisia,TN,37.274423,9.87391,139843.0,115268.0
+170,Ouganda,admin,Lira,Uganda,UG,2.235,32.909721999999995,135445.0,119323.0
+171,Ethiopie,admin,Āwasa,Ethiopia,ET,7.05,38.466667,133097.0,133097.0
+172,Angola,admin,Namibe,Angola,AO,-15.196110999999998,12.152222,132900.0,123361.0
+173,Mozambique,admin,Tete,Mozambique,MZ,-16.156389,33.586667,129316.0,115050.0
+174,Mozambique,admin,Xai-Xai,Mozambique,MZ,-25.051944,33.644167,128805.0,127366.0
+175,Ethiopie,,Jīma,Ethiopia,ET,7.666666999999999,36.833333,128306.0,128306.0
+176,Côte d'Ivoire,minor,Divo,Côte D’Ivoire,CI,5.83739,-5.357229,127867.0,127867.0
+177,Tunisie,admin,Gafsa,Tunisia,TN,34.425,8.784167,126803.0,81232.0
+178,Angola,admin,Malanje,Angola,AO,-9.544722,16.345278,125856.0,87046.0
+179,Angola,admin,Lubango,Angola,AO,-14.916667000000002,13.5,125632.0,102541.0
+180,Côte d'Ivoire,admin,Gagnoa,Côte D’Ivoire,CI,6.131933999999998,-5.950601,123184.0,99192.0
+181,Mali,admin,Ségou,Mali,ML,13.4317,-6.2157,122952.0,92552.0
+182,Mozambique,,Maxixe,Mozambique,MZ,-23.859722,35.34722199999999,119868.0,105895.0
+183,Niger,,Agadez,Niger,NE,16.973333,7.991111,117770.0,88561.0
+184,Guinée,admin,Kindia,Guinea,GN,10.066667,-12.85,117062.0,69960.0
+185,Mali,admin,Gao,Mali,ML,16.271667,-0.044722000000000005,116967.0,57978.0
+186,Guinée,admin,Boké,Guinea,GN,10.933333,-14.3,116270.0,116270.0
+187,Niger,admin,Tahoua,Niger,NE,14.8888,5.2692,115956.0,80425.0
+188,Mozambique,admin,Inhambane,Mozambique,MZ,-23.865,35.383333,115776.0,73884.0
+189,Madagascar,admin,Toliara,Madagascar,MG,-23.352798,43.669974,115319.0,97237.0
+190,Tunisie,admin,Nabeul,Tunisia,TN,36.456058,10.73763,115149.0,115149.0
+191,Ethiopie,,Giyon,Ethiopia,ET,8.533333,37.983333,114534.0,38394.0
+192,Angola,admin,Cuito,Angola,AO,-12.383333,16.933332999999998,114286.0,113624.0
+193,Guinée,admin,Kankan,Guinea,GN,10.383333,-9.3,114009.0,106906.0
+194,Somalie,admin,Jawhar,Somalia,SO,2.780868,45.500484,111308.0,62000.0
+195,Côte d'Ivoire,,Soubré,Côte D’Ivoire,CI,5.785556,-6.608333,108933.0,58492.0
+196,Mali,admin,Mopti,Mali,ML,14.489094,-4.1928269999999985,108456.0,78083.0
+197,Mali,minor,Koutiala,Mali,ML,12.391726,-5.4642089999999985,104927.0,99353.0
+198,Niger,minor,Arlit,Niger,NE,18.736944,7.385278,100000.0,80000.0

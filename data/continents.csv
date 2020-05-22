@@ -1,0 +1,263 @@
+,continent,country,continent_name
+0,AS,AF,Asie
+1,EU,AL,Europe
+2,AN,AQ,Antarctique
+3,AF,DZ,Afrique
+4,OC,AS,Océanie
+5,EU,AD,Europe
+6,AF,AO,Afrique
+7,NA,AG,Amérique du Nord
+8,EU,AZ,Europe
+9,AS,AZ,Asie
+10,SA,AR,Amérique du Sud
+11,OC,AU,Océanie
+12,EU,AT,Europe
+13,NA,BS,Amérique du Nord
+14,AS,BH,Asie
+15,AS,BD,Asie
+16,EU,AM,Europe
+17,AS,AM,Asie
+18,NA,BB,Amérique du Nord
+19,EU,BE,Europe
+20,NA,BM,Amérique du Nord
+21,AS,BT,Asie
+22,SA,BO,Amérique du Sud
+23,EU,BA,Europe
+24,AF,BW,Afrique
+25,AN,BV,Antarctique
+26,SA,BR,Amérique du Sud
+27,NA,BZ,Amérique du Nord
+28,AS,IO,Asie
+29,OC,SB,Océanie
+30,NA,VG,Amérique du Nord
+31,AS,BN,Asie
+32,EU,BG,Europe
+33,AS,MM,Asie
+34,AF,BI,Afrique
+35,EU,BY,Europe
+36,AS,KH,Asie
+37,AF,CM,Afrique
+38,NA,CA,Amérique du Nord
+39,AF,CV,Afrique
+40,NA,KY,Amérique du Nord
+41,AF,CF,Afrique
+42,AS,LK,Asie
+43,AF,TD,Afrique
+44,SA,CL,Amérique du Sud
+45,AS,CN,Asie
+46,AS,TW,Asie
+47,AS,CX,Asie
+48,AS,CC,Asie
+49,SA,CO,Amérique du Sud
+50,AF,KM,Afrique
+51,AF,YT,Afrique
+52,AF,CG,Afrique
+53,AF,CD,Afrique
+54,OC,CK,Océanie
+55,NA,CR,Amérique du Nord
+56,EU,HR,Europe
+57,NA,CU,Amérique du Nord
+58,EU,CY,Europe
+59,AS,CY,Asie
+60,EU,CZ,Europe
+61,AF,BJ,Afrique
+62,EU,DK,Europe
+63,NA,DM,Amérique du Nord
+64,NA,DO,Amérique du Nord
+65,SA,EC,Amérique du Sud
+66,NA,SV,Amérique du Nord
+67,AF,GQ,Afrique
+68,AF,ET,Afrique
+69,AF,ER,Afrique
+70,EU,EE,Europe
+71,EU,FO,Europe
+72,SA,FK,Amérique du Sud
+73,AN,GS,Antarctique
+74,OC,FJ,Océanie
+75,EU,FI,Europe
+76,EU,AX,Europe
+77,EU,FR,Europe
+78,SA,GF,Amérique du Sud
+79,OC,PF,Océanie
+80,AN,TF,Antarctique
+81,AF,DJ,Afrique
+82,AF,GA,Afrique
+83,EU,GE,Europe
+84,AS,GE,Asie
+85,AF,GM,Afrique
+86,AS,PS,Asie
+87,EU,DE,Europe
+88,AF,GH,Afrique
+89,EU,GI,Europe
+90,OC,KI,Océanie
+91,EU,GR,Europe
+92,NA,GL,Amérique du Nord
+93,NA,GD,Amérique du Nord
+94,NA,GP,Amérique du Nord
+95,OC,GU,Océanie
+96,NA,GT,Amérique du Nord
+97,AF,GN,Afrique
+98,SA,GY,Amérique du Sud
+99,NA,HT,Amérique du Nord
+100,AN,HM,Antarctique
+101,EU,VA,Europe
+102,NA,HN,Amérique du Nord
+103,AS,HK,Asie
+104,EU,HU,Europe
+105,EU,IS,Europe
+106,AS,IN,Asie
+107,AS,ID,Asie
+108,AS,IR,Asie
+109,AS,IQ,Asie
+110,EU,IE,Europe
+111,AS,IL,Asie
+112,EU,IT,Europe
+113,AF,CI,Afrique
+114,NA,JM,Amérique du Nord
+115,AS,JP,Asie
+116,EU,KZ,Europe
+117,AS,KZ,Asie
+118,AS,JO,Asie
+119,AF,KE,Afrique
+120,AS,KP,Asie
+121,AS,KR,Asie
+122,AS,KW,Asie
+123,AS,KG,Asie
+124,AS,LA,Asie
+125,AS,LB,Asie
+126,AF,LS,Afrique
+127,EU,LV,Europe
+128,AF,LR,Afrique
+129,AF,LY,Afrique
+130,EU,LI,Europe
+131,EU,LT,Europe
+132,EU,LU,Europe
+133,AS,MO,Asie
+134,AF,MG,Afrique
+135,AF,MW,Afrique
+136,AS,MY,Asie
+137,AS,MV,Asie
+138,AF,ML,Afrique
+139,EU,MT,Europe
+140,NA,MQ,Amérique du Nord
+141,AF,MR,Afrique
+142,AF,MU,Afrique
+143,NA,MX,Amérique du Nord
+144,EU,MC,Europe
+145,AS,MN,Asie
+146,EU,MD,Europe
+147,EU,ME,Europe
+148,NA,MS,Amérique du Nord
+149,AF,MA,Afrique
+150,AF,MZ,Afrique
+151,AS,OM,Asie
+152,AF,,Afrique
+153,OC,NR,Océanie
+154,AS,NP,Asie
+155,EU,NL,Europe
+156,NA,AN,Amérique du Nord
+157,NA,CW,Amérique du Nord
+158,NA,AW,Amérique du Nord
+159,NA,SX,Amérique du Nord
+160,NA,BQ,Amérique du Nord
+161,OC,NC,Océanie
+162,OC,VU,Océanie
+163,OC,NZ,Océanie
+164,NA,NI,Amérique du Nord
+165,AF,NE,Afrique
+166,AF,NG,Afrique
+167,OC,NU,Océanie
+168,OC,NF,Océanie
+169,EU,NO,Europe
+170,OC,MP,Océanie
+171,OC,UM,Océanie
+172,NA,UM,Amérique du Nord
+173,OC,FM,Océanie
+174,OC,MH,Océanie
+175,OC,PW,Océanie
+176,AS,PK,Asie
+177,NA,PA,Amérique du Nord
+178,OC,PG,Océanie
+179,SA,PY,Amérique du Sud
+180,SA,PE,Amérique du Sud
+181,AS,PH,Asie
+182,OC,PN,Océanie
+183,EU,PL,Europe
+184,EU,PT,Europe
+185,AF,GW,Afrique
+186,AS,TL,Asie
+187,NA,PR,Amérique du Nord
+188,AS,QA,Asie
+189,AF,RE,Afrique
+190,EU,RO,Europe
+191,EU,RU,Europe
+192,AS,RU,Asie
+193,AF,RW,Afrique
+194,NA,BL,Amérique du Nord
+195,AF,SH,Afrique
+196,NA,KN,Amérique du Nord
+197,NA,AI,Amérique du Nord
+198,NA,LC,Amérique du Nord
+199,NA,MF,Amérique du Nord
+200,NA,PM,Amérique du Nord
+201,NA,VC,Amérique du Nord
+202,EU,SM,Europe
+203,AF,ST,Afrique
+204,AS,SA,Asie
+205,AF,SN,Afrique
+206,EU,RS,Europe
+207,AF,SC,Afrique
+208,AF,SL,Afrique
+209,AS,SG,Asie
+210,EU,SK,Europe
+211,AS,VN,Asie
+212,EU,SI,Europe
+213,AF,SO,Afrique
+214,AF,ZA,Afrique
+215,AF,ZW,Afrique
+216,EU,ES,Europe
+217,AF,SS,Afrique
+218,AF,EH,Afrique
+219,AF,SD,Afrique
+220,SA,SR,Amérique du Sud
+221,EU,SJ,Europe
+222,AF,SZ,Afrique
+223,EU,SE,Europe
+224,EU,CH,Europe
+225,AS,SY,Asie
+226,AS,TJ,Asie
+227,AS,TH,Asie
+228,AF,TG,Afrique
+229,OC,TK,Océanie
+230,OC,TO,Océanie
+231,NA,TT,Amérique du Nord
+232,AS,AE,Asie
+233,AF,TN,Afrique
+234,EU,TR,Europe
+235,AS,TR,Asie
+236,AS,TM,Asie
+237,NA,TC,Amérique du Nord
+238,OC,TV,Océanie
+239,AF,UG,Afrique
+240,EU,UA,Europe
+241,EU,MK,Europe
+242,AF,EG,Afrique
+243,EU,GB,Europe
+244,EU,GG,Europe
+245,EU,JE,Europe
+246,EU,IM,Europe
+247,AF,TZ,Afrique
+248,NA,US,Amérique du Nord
+249,NA,VI,Amérique du Nord
+250,AF,BF,Afrique
+251,SA,UY,Amérique du Sud
+252,AS,UZ,Asie
+253,SA,VE,Amérique du Sud
+254,OC,WF,Océanie
+255,OC,WS,Océanie
+256,AS,YE,Asie
+257,AF,ZM,Afrique
+258,OC,XX,Océanie
+259,AS,XE,Asie
+260,AS,XD,Asie
+261,AS,XS,Asie

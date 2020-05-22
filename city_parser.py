@@ -1,19 +1,24 @@
+from collections import defaultdict
+
 from geo import Point
 import geo
 import random
 import pandas as pd
 import numpy as np
+
+
 COUNTRY_CODE_FILES = "data/country_codes.txt"
+REGION_CODE_FILES = "data/region_codes.txt"
 
 
-def read_countries():
-    with open(COUNTRY_CODE_FILES, "r", encoding="utf8") as f:
+def read_codes(fname):
+    with open(fname, "r", encoding="utf8") as f:
         def read_line(l):
             country, code = l.rstrip().split("\t")
             return country, code
 
         countries = {country: code for country, code in map(read_line, f.read().split("\n"))}
-    return countries
+    return countries, {code: country for country, code in countries.items()}
 
 def read_region(name):
     with open(f"data/{name}_codes.txt", "r", encoding="utf8") as f:
@@ -24,22 +29,72 @@ REGION_NAMES = {
     "noram": "Amérique du Nord"
 }
 
-COUNTRY_CODES = read_countries()
-REV_COUNTRY_CODES = {code: country for country, code in COUNTRY_CODES.items()}
+COUNTRY_CODES, REV_COUNTRY_CODES = read_codes(COUNTRY_CODE_FILES)
+REGION_CODES, REV_REGION_CODES = read_codes(REGION_CODE_FILES)
 
-REGIONS = {
+OLD_REGIONS = {
     region_id: dict(name=region_name, codes=read_region(region_id), limit_size=500, method="from_country_codes") for region_id, region_name in REGION_NAMES.items()
 }
-SPECIALS = {
-    "world": dict(name="Monde entier", file="data/places.world.csv", use_hint=True),
-    **REGIONS,
-    "france_hard": dict(name="France (difficile)", file="data/places.france.csv"),
-    "france_easy": dict(name="France (facile)", file="data/all/FR.csv", use_hint=True),
-}
-COUNTRIES = {code: dict(name=country, file=f"data/all/{code}.csv", limit_size=1000, use_hint=True) for country, code in COUNTRY_CODES.items()}
+REGIONS = {}
 
-# All available GameMaps
-MAPS = {**SPECIALS, **COUNTRIES}
+
+for code, region in REV_REGION_CODES.items():
+    for difficulty, name in zip(["easy", "normal", "hard"], ["facile", "normal", "difficile"]):
+        region_name = f"{region} ({name})"
+        region_id = f"{code}_{difficulty}"
+        if region_id == "NA_hard":
+            limit_size = 1500
+        else:
+            limit_size = None
+        REGIONS[region_id] = dict(name=region_name, file=f"data/regions/{region_id}.csv", use_hint=True, limit_size=limit_size)
+
+
+GROUP_EASY = "Facile"
+GROUP_HARD = "Difficile"
+GROUP_GOD = "Impitoyable"
+GROUP_COUNTRIES = "Par pays"
+
+def make_params(map_id, map_name, file, use_hint=True, limit_size=None, **params):
+    return dict(map_id=map_id, params=dict(name=map_name, file=file, use_hint=use_hint, limit_size=limit_size))
+
+def make_region_params(code, level):
+    return make_params(f"{code}_{level}", REV_REGION_CODES[code], f"data/regions/{code}_{level}.csv")
+
+def make_country_params(code):
+    return make_params(code, REV_COUNTRY_CODES[code], f"data/all/{code}.csv", limit_size=1000)
+
+GROUPED = [
+    dict(group=None, maps=[
+        make_params("world", "Monde entier", "data/places.world.csv"),
+        make_params("world_capitals", "Capitales", "data/world_capitals.csv"),
+        make_params("world_capitals-no-hint", "Capitales (sans pays)", "data/world_capitals.csv", use_hint=False),
+    ]),
+    dict(group=GROUP_EASY, maps=[
+        make_params("france_easy", "France", "data/all/FR.csv"),
+        *(make_region_params(code, "easy") for code in REV_REGION_CODES)
+    ]),
+    dict(group=GROUP_HARD, maps=[
+        make_params("france_hard", "France", "data/places.france.csv"),
+        *(make_region_params(code, "normal") for code in REV_REGION_CODES)
+    ]),
+    dict(group=GROUP_GOD, maps=[make_region_params(code, "hard") for code in REV_REGION_CODES]),
+    dict(group=GROUP_COUNTRIES, maps=[make_country_params(code) for code in REV_COUNTRY_CODES])
+]
+
+MAPS = {item["map_id"]: dict(group=G["group"], **item["params"])  for G in GROUPED for item in G["maps"]}
+
+
+# SPECIALS = {
+#     "world": dict(name="Monde entier", file="data/places.world.csv", use_hint=True),
+#     "france_easy": dict(name="France (facile)", file="data/all/FR.csv", use_hint=True, ),
+#     "france_hard": dict(name="France (difficile)", file="data/places.france.csv",),
+#     **REGIONS,
+# }
+#
+# COUNTRIES = {code: dict(name=country, file=f"data/all/{code}.csv", limit_size=1000, use_hint=True) for country, code in COUNTRY_CODES.items()}
+#
+# # All available GameMaps
+# MAPS = {**SPECIALS, **COUNTRIES}
 
 
 def reaccent(name):
@@ -64,7 +119,7 @@ def clean_city(city):
 
 
 class GameMap:
-    def __init__(self, name, places, lons, lats, hints=None, ranks=None):
+    def __init__(self, name, places, lons, lats, hints=None, ranks=None, group=None):
         self.name = name
         self.places = places
         self.lons = lons
@@ -73,6 +128,9 @@ class GameMap:
         self.ranks = ranks if ranks is not None else [0] * len(self.places)
         self.bbox = None
         self.distance = self.get_distance()
+        if group is None:
+            group = "__default__"
+        self.group = group
 
     def ranking_available(self):
         return len(set(self.ranks)) > 1
@@ -85,17 +143,17 @@ class GameMap:
         return f"{self.name} ({len(self.places)} villes)"
 
     @classmethod
-    def from_file(cls, name, file, use_hint=False, limit_size=None):
+    def from_file(cls, name, file, use_hint=False, limit_size=None, group=None):
         df = pd.read_csv(file, nrows=limit_size)
         ranks = None
         if "population" in df.columns:
             ranks = np.argsort(-df.population.fillna(0))
         return cls(name, places=df.city, lons=df.lng, lats=df.lat,
                    ranks=ranks,
-                   hints=df.admin if use_hint else None)
+                   hints=df.admin if use_hint else None, group=group)
 
     @classmethod
-    def from_files(cls, name, files, use_hint=True, limit_size=None, max_per_country=None):
+    def from_files(cls, name, files, use_hint=True, limit_size=None, group=None):
         df = None
         for country, file in files:
             pdf = pd.read_csv(file, nrows=limit_size)
@@ -111,7 +169,7 @@ class GameMap:
         ranks = np.argsort(-df.population)
         return cls(name, places=df.city, lons=df.lng, lats=df.lat,
                    ranks=ranks,
-                   hints=df.admin if use_hint else None)
+                   hints=df.admin if use_hint else None, group=group)
 
     @classmethod
     def from_country_codes(cls, name, codes, **params):
@@ -119,9 +177,9 @@ class GameMap:
         return cls.from_files(name, files, **params)
 
     @classmethod
-    def from_country(cls, country, use_hint=False, limit_size=None):
+    def from_country(cls, country, use_hint=False, limit_size=None, group=None):
         code = COUNTRY_CODES[country]
-        return cls.from_file(country, f"data/all/{code}.csv", use_hint, limit_size)
+        return cls.from_file(country, f"data/all/{code}.csv", use_hint, limit_size, group=group)
 
     @classmethod
     def from_name(cls, name):

@@ -4,7 +4,7 @@ from collections import defaultdict, Counter
 import pandas as pd
 
 from game import GameRun, load_cities
-from city_parser import GameMap, SPECIALS, COUNTRIES
+from city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
 from datetime import datetime, timedelta
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
@@ -36,6 +36,8 @@ available_names = set(NAMES)
 global_player_list = set()
 
 def get_all_datasets():
+    return GROUPED
+
     data = []
     for map_id, special in SPECIALS.items():
         data.append(dict(

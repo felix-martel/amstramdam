@@ -1,0 +1,400 @@
+,admin,capital,city,country,iso2,lat,lng,population,population_proper
+0,Russie,primary,Moscow,Russia,RU,55.752222,37.615556,10452000.0,10452000.0
+1,Turquie,admin,Istanbul,Turkey,TR,41.011046,28.957798,10061000.0,9945610.0
+2,France,primary,Paris,France,FR,48.866667,2.333333,9904000.0,11177.0
+3,Royaume-Uni,primary,London,United Kingdom,GB,51.514248,-0.093145,8567000.0,7421209.0
+4,Espagne,primary,Madrid,Spain,ES,40.41275200000001,-3.707721,5567000.0,50437.0
+5,Espagne,admin,Barcelona,Spain,ES,41.398371,2.1741,4920000.0,1581595.0
+6,Russie,admin,Saint Petersburg,Russia,RU,59.89444399999999,30.264167,4553000.0,3493212.0
+7,Turquie,primary,Ankara,Turkey,TR,39.911652,32.840305,3716000.0,3307379.0
+8,Allemagne,primary,Berlin,Germany,DE,52.51666700000001,13.4,3406000.0,3094014.0
+9,Italie,primary,Rome,Italy,IT,41.9,12.483333,3339000.0,35452.0
+10,Grèce,primary,Athens,Greece,GR,37.983333,23.733333,3242000.0,729137.0
+11,Italie,admin,Milan,Italy,IT,45.466667,9.2,2945000.0,1306661.0
+12,Allemagne,admin,Stuttgart,Germany,DE,48.782343,9.180819,2944700.0,606588.0
+13,Allemagne,minor,Frankfurt,Germany,DE,50.11552,8.684167,2895000.0,679664.0
+14,Portugal,primary,Lisbon,Portugal,PT,38.716667,-9.133333,2812000.0,517802.0
+15,Pologne,admin,Katowice,Poland,PL,50.258415,19.027545,2746000.0,308724.0
+16,Ukraine,primary,Kiev,Ukraine,UA,50.43333300000001,30.516667,2709000.0,1662508.0
+17,Turquie,admin,İzmir,Turkey,TR,38.412726,27.138376,2587000.0,2322818.0
+18,Autriche,primary,Vienna,Austria,AT,48.2,16.366667,2400000.0,1731000.0
+19,Allemagne,minor,Mannheim,Germany,DE,49.496706,8.479547,2362000.0,313174.0
+20,Royaume-Uni,admin,Birmingham,United Kingdom,GB,52.466667,-1.916667,2285000.0,984333.0
+21,Italie,admin,Naples,Italy,IT,40.833333,14.25,2250000.0,988972.0
+22,Royaume-Uni,admin,Manchester,United Kingdom,GB,53.5,-2.216667,2230000.0,395515.0
+23,Azerbaïdjan,primary,Baku,Azerbaijan,AZ,40.39527800000001,49.882222,2122300.0,1892000.0
+24,Roumanie,primary,Bucharest,Romania,RO,44.43333300000001,26.1,1942000.0,1742194.0
+25,Biélorussie,primary,Minsk,Belarus,BY,53.9,27.566667,1805000.0,1577138.0
+26,Allemagne,admin,Hamburg,Germany,DE,53.575323,10.01534,1757000.0,1739117.0
+27,Belgique,primary,Brussels,Belgium,BE,50.833333,4.3333330000000005,1743000.0,1019022.0
+28,Allemagne,minor,Essen,Germany,DE,51.45657,7.012282000000001,1742135.0,573468.0
+29,Pologne,primary,Warsaw,Poland,PL,52.25,21.0,1707000.0,1702139.0
+30,Hongrie,primary,Budapest,Hungary,HU,47.5,19.083333,1679000.0,1679000.0
+31,Italie,admin,Turin,Italy,IT,45.05,7.666666999999999,1652000.0,865263.0
+32,Royaume-Uni,admin,Leeds,United Kingdom,GB,53.8,-1.583333,1529000.0,455123.0
+33,Italie,admin,Florence,Italy,IT,43.766667,11.25,1500000.0,371517.0
+34,Turquie,admin,Bursa,Turkey,TR,40.195593,29.06013,1492000.0,1359089.0
+35,Ukraine,admin,Kharkiv,Ukraine,UA,49.980814,36.252718,1461000.0,1215127.0
+36,France,admin,Lyon,France,FR,45.748457,4.846711,1423000.0,472317.0
+37,Pays-Bas,primary,The Hague,Netherlands,NL,52.083333,4.3,1406000.0,501725.0
+38,France,admin,Marseille,France,FR,43.285413,5.37606,1400000.0,794811.0
+39,Russie,admin,Novosibirsk,Russia,RU,55.0415,82.9346,1389000.0,1037201.0
+40,Portugal,,Picotos,Portugal,PT,41.192402,-8.619816,1337000.0,249633.0
+41,Russie,admin,Yekaterinburg,Russia,RU,56.8519,60.6122,1313000.0,1227976.0
+42,Turquie,admin,Adana,Turkey,TR,37.001667,35.32888900000001,1293000.0,1197890.0
+43,Royaume-Uni,admin,Sheffield,United Kingdom,GB,53.36666700000001,-1.5,1292900.0,552700.0
+44,Russie,admin,Nizhniy Novgorod,Russia,RU,56.326944,44.0075,1278000.0,1214926.0
+45,Allemagne,minor,Duisburg,Germany,DE,51.432469,6.765161,1276757.0,488005.0
+46,Allemagne,admin,Munich,Germany,DE,48.15,11.583333,1275000.0,1260391.0
+47,Suède,primary,Stockholm,Sweden,SE,59.333333,18.05,1264000.0,1253309.0
+48,Suisse,admin,Geneva,Switzerland,CH,46.195602,6.148113,1240000.0,192385.0
+49,Allemagne,admin,Düsseldorf,Germany,DE,51.228304,6.793849000000002,1220000.0,592393.0
+50,Espagne,admin,Sevilla,Spain,ES,37.382826,-5.973167,1212045.0,703021.0
+51,Kazakhstan,admin,Almaty,Kazakhstan,KZ,43.256667,76.928611,1209000.0,983512.0
+52,Bulgarie,primary,Sofia,Bulgaria,BG,42.68333300000001,23.316667,1185000.0,874827.0
+53,Royaume-Uni,admin,Glasgow,United Kingdom,GB,55.833333,-4.25,1160000.0,610268.0
+54,Russie,admin,Samara,Russia,RU,53.200065,50.150002,1137000.0,856190.0
+55,Russie,admin,Omsk,Russia,RU,55.0,73.4,1135000.0,1043403.0
+56,Finlande,primary,Helsinki,Finland,FI,60.17555600000001,24.934167,1115000.0,558457.0
+57,Russie,admin,Kazan’,Russia,RU,55.78874,49.122144,1115000.0,912270.0
+58,Suisse,admin,Zürich,Switzerland,CH,47.366667,8.55,1108000.0,341730.0
+59,Serbie,primary,Belgrade,Serbia,RS,44.818611,20.468056,1099000.0,1099000.0
+60,Russie,admin,Chelyabinsk,Russia,RU,55.154015,61.42915,1091000.0,946604.0
+61,Danemark,primary,Copenhagen,Denmark,DK,55.666667,12.583333,1085000.0,1085000.0
+62,Irlande,primary,Dublin,Ireland,IE,53.333056000000006,-6.248889,1059000.0,968976.0
+63,Russie,admin,Rostov-na-Donu,Russia,RU,47.23135,39.723284,1052000.0,1013134.0
+64,Ukraine,admin,Dnipro,Ukraine,UA,48.459298,35.038647999999995,1050000.0,848849.0
+65,France,admin,Lille,France,FR,50.63297100000001,3.058585,1044000.0,228328.0
+66,Turquie,admin,Gaziantep,Turkey,TR,37.059444,37.3825,1044000.0,842524.0
+67,Pays-Bas,primary,Amsterdam,Netherlands,NL,52.35,4.916667,1031000.0,741636.0
+68,Russie,admin,Ufa,Russia,RU,54.785167,56.045621,1018000.0,920756.0
+69,Pays-Bas,minor,Rotterdam,Netherlands,NL,51.916667,4.5,1005000.0,598199.0
+70,Allemagne,,Cologne,Germany,DE,50.93333300000001,6.95,1004000.0,963395.0
+71,Russie,,Perm’,Russia,RU,58.00928199999999,56.284063,997000.0,851308.0
+72,Ukraine,admin,Odesa,Ukraine,UA,46.463934,30.738551,991000.0,704001.0
+73,Ukraine,admin,Donets’k,Ukraine,UA,47.991664,37.775928,988000.0,760275.0
+74,Russie,admin,Volgograd,Russia,RU,48.71939,44.501835,984000.0,619655.0
+75,Italie,minor,Salerno,Italy,IT,40.68333300000001,14.783333,954265.0,139579.0
+76,France,,Nice,France,FR,43.713644,7.259519999999998,927000.0,338620.0
+77,Russie,admin,Krasnoyarsk,Russia,RU,56.018393,92.867174,925000.0,302210.0
+78,Belgique,minor,Antwerp,Belgium,BE,51.213886,4.401514,920000.0,459805.0
+79,Turquie,admin,Konya,Turkey,TR,37.871354,32.484636,919000.0,518360.0
+80,Albanie,primary,Tirana,Albania,AL,41.3275,19.818889,895350.0,421286.0
+81,Turquie,minor,Tarsus,Turkey,TR,36.91766,34.892773,894318.0,238276.0
+82,Royaume-Uni,admin,Newcastle upon Tyne,United Kingdom,GB,54.98805600000001,-1.619444,882000.0,192382.0
+83,Espagne,minor,Bilbao,Spain,ES,43.260919,-2.938764,875552.0,353187.0
+84,Italie,admin,Palermo,Italy,IT,38.116667,13.366667,863000.0,672175.0
+85,France,admin,Toulouse,France,FR,43.599516,1.433188,847000.0,433055.0
+86,Russie,admin,Voronezh,Russia,RU,51.672035,39.184301,844000.0,295469.0
+87,Russie,admin,Saratov,Russia,RU,51.540556,46.008611,843000.0,786173.0
+88,Norvège,primary,Oslo,Norway,NO,59.916667,10.75,835000.0,580000.0
+89,Suisse,admin,Basel,Switzerland,CH,47.558395,7.573271000000001,830000.0,170635.0
+90,Grèce,admin,Thessaloníki,Greece,GR,40.643615,22.930864,828000.0,354290.0
+91,Portugal,admin,Braga,Portugal,PT,41.550323,-8.420052,826833.0,181819.0
+92,Royaume-Uni,admin,Nottingham,United Kingdom,GB,52.966667,-1.166667,825600.0,305700.0
+93,Royaume-Uni,admin,Liverpool,United Kingdom,GB,53.416667,-3.0,811000.0,468945.0
+94,Espagne,admin,Valencia,Spain,ES,39.466667,-0.366667,808000.0,805304.0
+95,Ukraine,admin,L’viv,Ukraine,UA,49.840661,24.030451,803880.0,717803.0
+96,France,admin,Bordeaux,France,FR,44.840439,-0.5805,803000.0,231844.0
+97,Ukraine,admin,Zaporizhzhya,Ukraine,UA,47.822892,35.190314,788000.0,413557.0
+98,Turquie,admin,Antalya,Turkey,TR,36.908118,30.695565,783000.0,623937.0
+99,Allemagne,minor,Wuppertal,Germany,DE,51.270268,7.167553,776525.0,349470.0
+100,Allemagne,admin,Saarbrücken,Germany,DE,49.235396,6.9816460000000005,770001.0,175741.0
+101,Turquie,admin,Trabzon,Turkey,TR,41.005,39.726944,764714.0,230399.0
+102,Pologne,admin,Łódź,Poland,PL,51.75,19.466667,758000.0,758000.0
+103,Pologne,admin,Kraków,Poland,PL,50.057531,19.980216,756000.0,755050.0
+104,Belgique,minor,Liège,Belgium,BE,50.638674,5.570228,749110.0,196496.0
+105,Lettonie,primary,Riga,Latvia,LV,56.95,24.1,742572.0,705033.0
+106,Pologne,admin,Gdańsk,Poland,PL,54.36085,18.658291,740000.0,455830.0
+107,Allemagne,,Marienberg,Germany,DE,49.486021,11.086156,737304.0,499237.0
+108,Allemagne,admin,Bremen,Germany,DE,53.073789,8.826754,724909.0,546501.0
+109,Croatie,primary,Zagreb,Croatia,HR,45.8,16.0,722526.0,698966.0
+110,Allemagne,admin,Hannover,Germany,DE,52.38497,9.737141,722490.0,515140.0
+111,Bosnie-Herzégovine,primary,Sarajevo,Bosnia And Herzegovina,BA,43.85,18.383333,696731.0,628902.0
+112,Moldavie,primary,Chisinau,Moldova,MD,47.005556,28.8575,688134.0,635994.0
+113,Allemagne,minor,Bonn,Germany,DE,50.73438,7.095485000000001,680543.0,313125.0
+114,Italie,minor,Catania,Italy,IT,37.5,15.1,674542.0,291274.0
+115,Pologne,minor,Bytom,Poland,PL,50.348017,18.932822,662247.0,189186.0
+116,Ukraine,,Kryvyy Rih,Ukraine,UA,47.911299,33.453925,652380.0,490907.0
+117,Russie,admin,Krasnodar,Russia,RU,45.044843,38.976029,649851.0,552532.0
+118,Espagne,admin,Zaragoza,Spain,ES,41.64531,-0.884861,649404.0,448507.0
+119,Italie,admin,Genoa,Italy,IT,44.416667,8.95,647497.0,601951.0
+120,Turquie,admin,Diyarbakır,Turkey,TR,37.913629,40.217213,644763.0,636410.0
+121,Russie,admin,Ul’yanovsk,Russia,RU,54.32824100000001,48.38657,640680.0,502427.0
+122,Pays-Bas,admin,Utrecht,Netherlands,NL,52.093813,5.119095,640000.0,316448.0
+123,Pologne,admin,Wrocław,Poland,PL,51.1,17.033333,634893.0,610049.0
+124,Russie,admin,Izhevsk,Russia,RU,56.849756000000006,53.204479000000006,631038.0,591422.0
+125,Pologne,admin,Poznań,Poland,PL,52.416667,16.966667,623997.0,570352.0
+126,Royaume-Uni,admin,Southend-on-Sea,United Kingdom,GB,51.533333,0.7,618386.0,173600.0
+127,Allemagne,admin,Dresden,Germany,DE,51.048562,13.745794,617515.0,486854.0
+128,Allemagne,admin,Wiesbaden,Germany,DE,50.082582,8.249322,617126.0,272432.0
+129,Turquie,admin,Samsun,Turkey,TR,41.286667,36.33,609339.0,538106.0
+130,Russie,admin,Yaroslavl’,Russia,RU,57.61977,39.85536,606730.0,535578.0
+131,Russie,admin,Barnaul,Russia,RU,53.360556,83.763611,599579.0,539843.0
+132,Turquie,admin,Kayseri,Turkey,TR,38.732222,35.485278,592840.0,531591.0
+133,Allemagne,minor,Dortmund,Germany,DE,51.514942,7.465997,588462.0,588462.0
+134,Russie,admin,Vladivostok,Russia,RU,43.1211,131.9226,587022.0,586212.0
+135,Russie,admin,Irkutsk,Russia,RU,52.297778,104.296389,586695.0,557955.0
+136,Russie,admin,Khabarovsk,Russia,RU,48.482715,135.083793,579000.0,546411.0
+137,Russie,admin,Makhachkala,Russia,RU,42.976378,47.502356,554981.0,497959.0
+138,Royaume-Uni,admin,Bristol,United Kingdom,GB,51.45,-2.583333,553528.0,430713.0
+139,Espagne,minor,Málaga,Spain,ES,36.726666,-4.434802,550058.0,528705.0
+140,Allemagne,minor,Leipzig,Germany,DE,51.34419000000001,12.386504,542529.0,504971.0
+141,Lituanie,primary,Vilnius,Lithuania,LT,54.683333,25.316667,542366.0,507029.0
+142,Suède,,Glöstorp,Sweden,SE,57.75,11.933333,537797.0,504084.0
+143,France,admin,Rouen,France,FR,49.43333300000001,1.083333,532559.0,110276.0
+144,Turquie,admin,Eskişehir,Turkey,TR,39.776667,30.520556,514869.0,466420.0
+145,Ukraine,admin,Mykolayiv,Ukraine,UA,46.965909,31.997403,510840.0,194995.0
+146,Pologne,minor,Gliwice,Poland,PL,50.297612,18.676583,507670.0,198835.0
+147,Royaume-Uni,admin,Edinburgh,United Kingdom,GB,55.95,-3.2,504966.0,435791.0
+148,Royaume-Uni,,Brighton,United Kingdom,GB,50.833333,-0.15,503008.0,139001.0
+149,Royaume-Uni,admin,Bradford,United Kingdom,GB,53.783333,-1.75,501700.0,293717.0
+150,Italie,admin,Bari,Italy,IT,41.133333,16.85,500577.0,316532.0
+151,Italie,admin,Bologna,Italy,IT,44.483333,11.333333,488172.0,371217.0
+152,Ukraine,,Mariupol’,Ukraine,UA,47.105705,37.533086,481626.0,351244.0
+153,Biélorussie,admin,Horad Homyel’,Belarus,BY,52.441667,30.983333,480951.0,463724.0
+154,Turquie,admin,Kocaeli,Turkey,TR,40.766944,29.916944,466504.0,300611.0
+155,Grèce,minor,Piraeus,Greece,GR,37.961389,23.638889,466065.0,175697.0
+156,Kazakhstan,admin,Shymkent,Kazakhstan,KZ,42.3,69.6,465392.0,414032.0
+157,Turquie,admin,Malatya,Turkey,TR,38.350183,38.316669,461574.0,441805.0
+158,Royaume-Uni,admin,Leicester,United Kingdom,GB,52.63333299999999,-1.133333,457983.0,339239.0
+159,Royaume-Uni,admin,Sunderland,United Kingdom,GB,54.91194399999999,-1.383333,452934.0,177965.0
+160,Ukraine,admin,Luhans’k,Ukraine,UA,48.56704600000001,39.31706,452000.0,365862.0
+161,Kazakhstan,admin,Qaraghandy,Kazakhstan,KZ,49.8,73.1,451800.0,304747.0
+162,Royaume-Uni,,Belfast,United Kingdom,GB,54.6,-5.933333,450406.0,274770.0
+163,Turquie,admin,Şanlıurfa,Turkey,TR,37.16708,38.793919,449549.0,413266.0
+164,Belgique,minor,Gent,Belgium,BE,51.05,3.716667,444336.0,231493.0
+165,Royaume-Uni,admin,Portsmouth,United Kingdom,GB,50.766667,-1.083333,442252.0,205100.0
+166,France,admin,Strasbourg,France,FR,48.600381,7.787355000000002,439972.0,274845.0
+167,France,admin,Nantes,France,FR,47.216509,-1.5523790000000002,438537.0,277269.0
+168,Royaume-Uni,admin,Bournemouth,United Kingdom,GB,50.716667,-1.883333,426945.0,163600.0
+169,Allemagne,minor,Heidelberg,Germany,DE,49.404123,8.683733,426590.0,143345.0
+170,Slovaquie,primary,Bratislava,Slovakia,SK,48.15,17.116667,423737.0,373687.0
+171,Turquie,admin,Erzurum,Turkey,TR,39.908611,41.276944,420691.0,362917.0
+172,Royaume-Uni,admin,Middlesbrough,United Kingdom,GB,54.572778,-1.162778,416042.0,142707.0
+173,France,minor,Metz,France,FR,49.115461,6.175875,409186.0,123914.0
+174,Pologne,admin,Szczecin,Poland,PL,53.439531,14.593891,407811.0,372672.0
+175,Espagne,admin,Murcia,Spain,ES,37.987041,-1.130042,406807.0,329838.0
+176,Ukraine,admin,Khmel’nyts’kyy,Ukraine,UA,49.421608,26.996529,398346.0,245840.0
+177,Pays-Bas,minor,Eindhoven,Netherlands,NL,51.45,5.466667,398053.0,209620.0
+178,Ukraine,,Horlivka,Ukraine,UA,48.335761,38.05325,396885.0,278550.0
+179,France,,Grenoble,France,FR,45.171546,5.722387,388574.0,158552.0
+180,Espagne,minor,Granada,Spain,ES,37.178354,-3.5992010000000003,388290.0,238248.0
+181,Royaume-Uni,admin,Coventry,United Kingdom,GB,52.416667,-1.55,388271.0,308313.0
+182,Royaume-Uni,admin,Southampton,United Kingdom,GB,50.9,-1.4,384417.0,384417.0
+183,Ukraine,admin,Sevastopol’,Ukraine,UA,44.58828,33.5224,379200.0,314465.0
+184,Espagne,,Vigo,Spain,ES,42.232823,-8.722636999999999,378952.0,292745.0
+185,Allemagne,minor,Karlsruhe,Germany,DE,49.009365,8.40444,377487.0,283799.0
+186,Ukraine,,Makiyivka,Ukraine,UA,48.047816,37.925764,376610.0,261155.0
+187,Turquie,admin,Kahramanmaraş,Turkey,TR,37.584705,36.926405,376045.0,373446.0
+188,Espagne,admin,Palma,Spain,ES,39.574337,2.655222,375773.0,264129.0
+189,Lituanie,admin,Kaunas,Lithuania,LT,54.90271600000001,23.909613,374643.0,353046.0
+190,Turquie,admin,Denizli,Turkey,TR,37.774167,29.0875,372344.0,313238.0
+191,Turquie,admin,Van,Turkey,TR,38.494565,43.383231,371713.0,280811.0
+192,Espagne,minor,A Coruña,Spain,ES,43.366609,-8.406812,370610.0,242619.0
+193,Royaume-Uni,admin,Reading,United Kingdom,GB,51.43333300000001,-1.0,369804.0,145700.0
+194,Biélorussie,admin,Horad Mahilyow,Belarus,BY,53.91388900000001,30.336389,369200.0,317854.0
+195,Pologne,admin,Bydgoszcz,Poland,PL,53.127062,18.019987,366452.0,365992.0
+196,Pologne,admin,Lublin,Poland,PL,51.25,22.566667,360044.0,355958.0
+197,Allemagne,minor,Augsburg,Germany,DE,48.371538,10.898514,358989.0,259196.0
+198,Kazakhstan,admin,Taraz,Kazakhstan,KZ,42.9,71.366667,358153.0,307294.0
+199,Ukraine,admin,Simferopol’,Ukraine,UA,44.957186,34.110787,358108.0,253657.0
+200,France,,Toulon,France,FR,43.117705,5.941712,357693.0,168701.0
+201,Ukraine,admin,Vinnytsya,Ukraine,UA,49.232776,28.480968,352115.0,347139.0
+202,Pays-Bas,,Haarlemmerliede,Netherlands,NL,52.388873,4.687978,349957.0,147590.0
+203,Autriche,admin,Linz,Austria,AT,48.3,14.3,349161.0,181162.0
+204,Italie,minor,Verona,Italy,IT,45.45,11.0,347459.0,253208.0
+205,Kazakhstan,primary,Astana,Kazakhstan,KZ,51.166666,71.45,345604.0,325021.0
+206,Belgique,minor,Charleroi,Belgium,BE,50.409473,4.452483,345367.0,200132.0
+207,Biélorussie,admin,Horad Vitsyebsk,Belarus,BY,55.1925,30.194444,342700.0,323937.0
+208,Bulgarie,admin,Plovdiv,Bulgaria,BG,42.15,24.75,340494.0,297685.0
+209,Espagne,,Santa María de Gracia,Spain,ES,28.466667,-16.266667,336061.0,222190.0
+210,Espagne,,Gijón,Spain,ES,43.535731,-5.661519,335972.0,271452.0
+211,Allemagne,minor,Bielefeld,Germany,DE,52.028332,8.542002,331906.0,291573.0
+212,Kazakhstan,admin,Pavlodar,Kazakhstan,KZ,52.283333,76.966666,329002.0,303506.0
+213,France,minor,Montpellier,France,FR,43.61092,3.87723,327254.0,248252.0
+214,Roumanie,admin,Iaşi,Romania,RO,47.166667,27.6,325914.0,325914.0
+215,Espagne,admin,Valladolid,Spain,ES,41.655181,-4.72372,322304.0,276443.0
+216,Espagne,minor,Córdoba,Spain,ES,37.89155,-4.772748,321376.0,279648.0
+217,Ukraine,admin,Kherson,Ukraine,UA,46.655814,32.6178,320477.0,236680.0
+218,Kazakhstan,admin,Öskemen,Kazakhstan,KZ,49.966666,82.6,319067.0,249634.0
+219,Ukraine,admin,Poltava,Ukraine,UA,49.593727,34.540733,317847.0,286588.0
+220,Biélorussie,,Hrodna,Belarus,BY,53.7559,23.832,317365.0,254369.0
+221,Roumanie,admin,Cluj-Napoca,Romania,RO,46.766667,23.6,316748.0,282141.0
+222,Espagne,minor,Alicante,Spain,ES,38.34619,-0.487722,315863.0,276827.0
+223,Roumanie,admin,Timişoara,Romania,RO,45.749444,21.227222,315053.0,304097.0
+224,Slovénie,primary,Ljubljana,Slovenia,SI,46.055278,14.514444,314807.0,255115.0
+225,Italie,minor,Pescara,Italy,IT,42.466667,14.216667,314789.0,116286.0
+226,Pologne,minor,Gdynia,Poland,PL,54.5,18.55,314664.0,253730.0
+227,Bulgarie,admin,Varna,Bulgaria,BG,43.216667,27.916667,312770.0,178274.0
+228,Allemagne,minor,Koblenz,Germany,DE,50.353573,7.5788350000000015,312633.0,107319.0
+229,Kazakhstan,,Semey,Kazakhstan,KZ,50.426749,80.266694,311353.0,292780.0
+230,Roumanie,admin,Galaţi,Romania,RO,45.45,28.05,311156.0,294087.0
+231,Roumanie,admin,Braşov,Romania,RO,45.633333,25.583333,311044.0,276088.0
+232,Ukraine,admin,Chernihiv,Ukraine,UA,51.505507,31.284875,307684.0,279629.0
+233,Turquie,admin,Hatay,Turkey,TR,36.206551,36.157225,305564.0,305564.0
+234,Roumanie,admin,Craiova,Romania,RO,44.316667,23.8,304142.0,298145.0
+235,Roumanie,admin,Constanţa,Romania,RO,44.18333300000001,28.65,303399.0,266826.0
+236,Azerbaïdjan,admin,Gəncə,Azerbaijan,AZ,40.682778000000006,46.360556,303268.0,300131.0
+237,Royaume-Uni,,Sutton on Hull,United Kingdom,GB,53.783333,-0.31666700000000003,302296.0,292501.0
+238,Turquie,admin,Batman,Turkey,TR,37.88737800000001,41.132208,302074.0,250601.0
+239,Biélorussie,admin,Brest,Belarus,BY,52.097548,23.687751,300715.0,232835.0
+240,Kazakhstan,admin,Qyzylorda,Kazakhstan,KZ,44.85,65.5,300000.0,126519.0
+241,Ukraine,admin,Chernivtsi,Ukraine,UA,48.291488,25.940341,298251.0,236250.0
+242,Turquie,minor,İskenderun,Turkey,TR,36.587185,36.173468,297943.0,159965.0
+243,Ukraine,admin,Cherkasy,Ukraine,UA,49.428536,32.06207,297568.0,273821.0
+244,Ukraine,admin,Sumy,Ukraine,UA,50.921597,34.800294,294456.0,285146.0
+245,Pologne,admin,Białystok,Poland,PL,53.13333299999999,23.15,291855.0,285590.0
+246,Italie,admin,Cagliari,Italy,IT,39.216667,9.116667,291511.0,164249.0
+247,Turquie,admin,Sakarya,Turkey,TR,40.780556,30.403333,286787.0,286787.0
+248,Espagne,minor,Cádiz,Spain,ES,36.515789,-6.279692,283157.0,24708.0
+249,Ukraine,admin,Zhytomyr,Ukraine,UA,50.264868,28.676691,282192.0,274970.0
+250,Azerbaïdjan,admin,Sumqayıt,Azerbaijan,AZ,40.589722,49.668611,279159.0,265150.0
+251,Suisse,primary,Bern,Switzerland,CH,46.916667,7.466667,275329.0,121631.0
+252,Espagne,admin,Pamplona,Spain,ES,42.814075,-1.641153,274545.0,193166.0
+253,Royaume-Uni,admin,Blackpool,United Kingdom,GB,53.816667,-3.05,272792.0,143101.0
+254,Italie,admin,Venice,Italy,IT,45.438611,12.326667,270816.0,270816.0
+255,Suède,admin,Malmö,Sweden,SE,55.6,13.0,269349.0,261548.0
+256,France,,Nancy,France,FR,48.69211,6.1877559999999985,268976.0,105334.0
+257,Suisse,admin,Lausanne,Switzerland,CH,46.533333,6.666667,265702.0,116751.0
+258,France,,Saint-Étienne,France,FR,45.435382,4.391051,265684.0,176280.0
+259,Autriche,admin,Graz,Austria,AT,47.066667,15.45,263234.0,222326.0
+260,Kazakhstan,admin,Aqtöbe,Kazakhstan,KZ,50.3,57.183333,262457.0,258529.0
+261,Finlande,admin,Tampere,Finland,FI,61.5,23.75,259279.0,202687.0
+262,Ukraine,admin,Rivne,Ukraine,UA,50.623079,26.22743,255106.0,251416.0
+263,Italie,minor,Messina,Italy,IT,38.18333300000001,15.566667,252026.0,196069.0
+264,Italie,minor,Como,Italy,IT,45.783333,9.083333,250000.0,84876.0
+265,Italie,minor,Caserta,Italy,IT,41.066667,14.333332999999998,250000.0,79488.0
+266,Serbie,admin,Niš,Serbia,RS,43.323356,21.901779,250000.0,210888.0
+267,Suisse,admin,Lucerne,Switzerland,CH,47.083333,8.266667,250000.0,77491.0
+268,France,,Melun,France,FR,48.545699,2.653562,249432.0,38953.0
+269,Hongrie,admin,Miskolc,Hungary,HU,48.1,20.783333,247757.0,172637.0
+270,Pologne,admin,Rzeszów,Poland,PL,50.037246,22.004949,245686.0,158382.0
+271,France,,Le Havre,France,FR,49.5,0.13333299999999998,242124.0,185972.0
+272,Danemark,minor,Aarhus,Denmark,DK,56.153423,10.22553,237551.0,227100.0
+273,Kazakhstan,admin,Qostanay,Kazakhstan,KZ,53.216666,63.63333299999999,236901.0,210000.0
+274,Slovaquie,admin,Košice,Slovakia,SK,48.713946,21.258084,236563.0,184070.0
+275,France,,Tours,France,FR,47.394836,0.7039770000000001,236096.0,141621.0
+276,Espagne,admin,Oviedo,Spain,ES,43.363223,-5.853128,235651.0,211398.0
+277,France,minor,Clermont-Ferrand,France,FR,45.779657,3.086281,233050.0,138681.0
+278,Roumanie,admin,Ploieşti,Romania,RO,44.95,26.016667,232542.0,228851.0
+279,Hongrie,admin,Debrecen,Hungary,HU,47.533333,21.633333,231286.0,204124.0
+280,Kazakhstan,admin,Petropavl,Kazakhstan,KZ,54.866666,69.15,228238.0,200920.0
+281,Serbie,admin,Novi Sad,Serbia,RS,45.259272,19.829056,225457.0,215400.0
+282,Espagne,,Zuazo de Vitoria,Spain,ES,42.839797,-2.722069,224578.0,173641.0
+283,Bosnie-Herzégovine,admin,Banja Luka,Bosnia And Herzegovina,BA,44.778422,17.193865,221738.0,221106.0
+284,Biélorussie,minor,Babruysk,Belarus,BY,53.1384,29.2214,220517.0,205126.0
+285,France,admin,Orléans,France,FR,47.902891,1.903887,217301.0,124149.0
+286,Pays-Bas,admin,Groningen,Netherlands,NL,53.216667,6.55,216688.0,181194.0
+287,Italie,admin,Trieste,Italy,IT,45.648611,13.78,216035.0,211184.0
+288,Pologne,admin,Kielce,Poland,PL,50.873686,20.630266,215733.0,208598.0
+289,France,,Mulhouse,France,FR,47.738082,7.347932000000001,215454.0,111430.0
+290,Croatie,admin,Split,Croatia,HR,43.513889,16.455833,214741.0,176314.0
+291,Roumanie,admin,Oradea,Romania,RO,47.066667,21.933333,213830.0,206614.0
+292,Norvège,admin,Bergen,Norway,NO,60.391111,5.324722,213585.0,187194.0
+293,Roumanie,admin,Brăila,Romania,RO,45.266667,27.983333,213569.0,213569.0
+294,Kazakhstan,admin,Oral,Kazakhstan,KZ,51.233333,51.366667,209788.0,200000.0
+295,France,admin,Rennes,France,FR,48.111981,-1.674291,209375.0,199284.0
+296,Espagne,admin,Santander,Spain,ES,43.464722,-3.804444,208763.0,183288.0
+297,Autriche,admin,Salzburg,Austria,AT,47.8,13.033333,206279.0,150269.0
+298,Portugal,admin,Funchal,Portugal,PT,32.633333,-16.9,204767.0,100847.0
+299,Italie,minor,Pisa,Italy,IT,43.716667,10.383333,203336.0,89694.0
+300,Italie,minor,Taranto,Italy,IT,40.476111,17.229722,202033.0,95581.0
+301,Espagne,,Cartagena,Spain,ES,37.605121,-0.986232,201274.0,131279.0
+302,Italie,minor,Bergamo,Italy,IT,45.68333300000001,9.716667,200000.0,121316.0
+303,Roumanie,admin,Bacău,Romania,RO,46.566667,26.9,199668.0,171396.0
+304,France,,Reims,France,FR,49.25,4.033333,196565.0,159313.0
+305,Bulgarie,admin,Burgas,Bulgaria,BG,42.506058,27.46781,195966.0,152542.0
+306,Lituanie,admin,Klaipėda,Lithuania,LT,55.70888000000001,21.143121,192307.0,190361.0
+307,France,minor,Caen,France,FR,49.197188,-0.326822,190099.0,110624.0
+308,Irlande,admin,Cork,Ireland,IE,51.898611,-8.495833,188907.0,136797.0
+309,Hongrie,admin,Szeged,Hungary,HU,46.25,20.166667,187765.0,164883.0
+310,Pologne,admin,Olsztyn,Poland,PL,53.779949,20.494162,186670.0,171803.0
+311,Hongrie,admin,Pécs,Hungary,HU,46.075363,18.232845,186262.0,156649.0
+312,Espagne,,Marbella,Spain,ES,36.510485,-4.885745,186131.0,120008.0
+313,Bulgarie,admin,Ruse,Bulgaria,BG,43.856389,25.970833,184270.0,156238.0
+314,Espagne,,Mataró,Spain,ES,41.542113,2.444503,183293.0,116359.0
+315,Kazakhstan,admin,Atyraū,Kazakhstan,KZ,47.116667,51.883333,182753.0,158413.0
+316,Italie,minor,Reggio di Calabria,Italy,IT,38.1,15.65,180353.0,177716.0
+317,Italie,minor,Treviso,Italy,IT,45.666667,12.245,177309.0,80144.0
+318,Hongrie,admin,Nyíregyháza,Hungary,HU,47.95,21.716667,176880.0,116298.0
+319,Finlande,admin,Turku,Finland,FI,60.45,22.283333,175945.0,174940.0
+320,Italie,minor,Modena,Italy,IT,44.666667,10.916667,175502.0,174567.0
+321,Norvège,admin,Stavanger,Norway,NO,58.966667,5.75,173132.0,100866.0
+322,Serbie,admin,Kragujevac,Serbia,RS,44.010876,20.909029,171197.0,147473.0
+323,Roumanie,admin,Piteşti,Romania,RO,44.85,24.866667,171021.0,167669.0
+324,Croatie,admin,Rijeka,Croatia,HR,45.343056,14.409167000000002,170992.0,141172.0
+325,Kazakhstan,,Temirtaū,Kazakhstan,KZ,50.054938,72.96464300000002,170600.0,163787.0
+326,Roumanie,admin,Arad,Romania,RO,46.18333300000001,21.316667,169065.0,149611.0
+327,Biélorussie,minor,Baranavichy,Belarus,BY,53.1327,26.0139,168772.0,144257.0
+328,Albanie,admin,Elbasan,Albania,AL,41.1125,20.082222,165010.0,100903.0
+329,Bosnie-Herzégovine,,Heca,Bosnia And Herzegovina,BA,44.243257,17.900481,164423.0,138353.0
+330,Grèce,admin,Pátra,Greece,GR,38.244444,21.734444,163360.0,155799.0
+331,Bosnie-Herzégovine,minor,Mostar,Bosnia And Herzegovina,BA,43.343333,17.808056,163067.0,104518.0
+332,Danemark,minor,Odense,Denmark,DK,55.393475,10.394935,158222.0,145931.0
+333,Moldavie,admin,Tiraspol,Moldova,MD,46.842744,29.629086,157000.0,117194.0
+334,Albanie,admin,Shkodër,Albania,AL,42.0675,19.513056,155767.0,88245.0
+335,Roumanie,admin,Sibiu,Romania,RO,45.8,24.15,155565.0,151894.0
+336,Biélorussie,minor,Horad Barysaw,Belarus,BY,54.2279,28.505,155389.0,100000.0
+337,Autriche,admin,Innsbruck,Austria,AT,47.266667,11.4,155214.0,112467.0
+338,Moldavie,admin,Bălţi,Moldova,MD,47.763138,27.929317,151355.0,118690.0
+339,Roumanie,admin,Târgu-Mureş,Romania,RO,46.55,24.566667,149433.0,146863.0
+340,Norvège,admin,Trondheim,Norway,NO,63.416667,10.416667,147139.0,141533.0
+341,Belgique,minor,Brugge,Belgium,BE,51.210933,3.225971,146469.0,116709.0
+342,Monténégro,,Potkrajnica,Montenegro,ME,42.451667,19.303611,145850.0,136473.0
+343,Bosnie-Herzégovine,minor,Tuzla,Bosnia And Herzegovina,BA,44.538419,18.667091,144334.0,142486.0
+344,Hongrie,admin,Székesfehérvár,Hungary,HU,47.195503,18.4096,144319.0,101600.0
+345,Bulgarie,admin,Stara Zagora,Bulgaria,BG,42.432778000000006,25.641944,143431.0,113200.0
+346,Albanie,admin,Durrës,Albania,AL,41.323056,19.441389,142432.0,122034.0
+347,Pays-Bas,admin,Arnhem,Netherlands,NL,51.979818,5.925636,141674.0,141674.0
+348,Grèce,admin,Irákleio,Greece,GR,35.338082,25.133029,137154.0,131654.0
+349,Finlande,admin,Oulu,Finland,FI,65.016667,25.466667,136752.0,128618.0
+350,Roumanie,admin,Baia Mare,Romania,RO,47.666667,23.583333,136553.0,132707.0
+351,Hongrie,admin,Győr,Hungary,HU,47.687281,17.637616,136081.0,128265.0
+352,Biélorussie,minor,Orsha,Belarus,BY,54.5081,30.4172,135206.0,125347.0
+353,Pays-Bas,admin,’s-Hertogenbosch,Netherlands,NL,51.70019600000001,5.306806,134520.0,134520.0
+354,Lituanie,,Vijoliai,Lithuania,LT,55.954889,23.282076,133528.0,130587.0
+355,Suède,admin,Uppsala,Sweden,SE,59.85,17.633333,133117.0,127734.0
+356,Pologne,admin,Opole,Poland,PL,50.67211500000001,17.925325,131412.0,127676.0
+357,Roumanie,admin,Buzău,Romania,RO,45.15,26.833333000000003,130954.0,130698.0
+358,Biélorussie,minor,Pinsk,Belarus,BY,52.1229,26.0951,130777.0,110900.0
+359,Kazakhstan,admin,Kökshetaū,Kazakhstan,KZ,53.283333,69.4,128873.0,124444.0
+360,Grèce,admin,Lárisa,Greece,GR,39.636889,22.417611,128758.0,111487.0
+361,Kazakhstan,,Ekibastuz,Kazakhstan,KZ,51.723714,75.322869,127868.0,121470.0
+362,Pologne,minor,Elbląg,Poland,PL,54.1522,19.408841,127558.0,121106.0
+363,Lituanie,,Paežerys I,Lithuania,LT,55.759514,24.409858,127405.0,117395.0
+364,Pays-Bas,admin,Leeuwarden,Netherlands,NL,53.20139,5.8085879999999985,125778.0,91424.0
+365,Kazakhstan,,Rudnyy,Kazakhstan,KZ,52.972903,63.116772,124000.0,84471.0
+366,Pays-Bas,admin,Maastricht,Netherlands,NL,50.85,5.683333,122378.0,122378.0
+367,Danemark,,Skalborg,Denmark,DK,57.001634,9.887863,122219.0,101616.0
+368,Bulgarie,admin,Pleven,Bulgaria,BG,43.416667,24.616667,118675.0,102216.0
+369,Pologne,admin,Zielona Góra,Poland,PL,51.939345,15.505772,118433.0,109298.0
+370,Portugal,admin,Setúbal,Portugal,PT,38.533333,-8.9,117974.0,117110.0
+371,Roumanie,admin,Botoşani,Romania,RO,47.75,26.666667,114783.0,111935.0
+372,Slovénie,admin,Maribor,Slovenia,SI,46.554722,15.646667,114228.0,89056.0
+373,Hongrie,admin,Kecskemét,Hungary,HU,46.9,19.783333,113895.0,109847.0
+374,Roumanie,admin,Satu Mare,Romania,RO,47.8,22.883333,112490.0,112490.0
+375,Biélorussie,minor,Mazyr,Belarus,BY,52.0495,29.2456,112137.0,89735.0
+376,Pays-Bas,admin,Zwolle,Netherlands,NL,52.505751,6.085822,111805.0,111805.0
+377,Lettonie,admin,Daugavpils,Latvia,LV,55.88333299999999,26.533333,111564.0,108375.0
+378,Grèce,,Áno Vólos,Greece,GR,39.379361,22.981806,110632.0,84425.0
+379,Hongrie,admin,Szombathely,Hungary,HU,47.233333,16.616667,109518.0,79534.0
+380,Hongrie,admin,Szolnok,Hungary,HU,47.18333300000001,20.2,109261.0,75474.0
+381,Hongrie,admin,Kaposvár,Hungary,HU,46.366667,17.8,108528.0,67746.0
+382,Roumanie,admin,Râmnicu Vâlcea,Romania,RO,45.1,24.366667,107558.0,107558.0
+383,Pologne,minor,Koszalin,Poland,PL,54.193589,16.184916,107450.0,107450.0
+384,Luxembourg,primary,Luxembourg,Luxembourg,LU,49.611667,6.13,107260.0,76684.0
+385,Suède,admin,Västerås,Sweden,SE,59.61666700000001,16.55,107194.0,93179.0
+386,Portugal,,Copeira,Portugal,PT,40.176915,-8.424017999999998,106582.0,89131.0
+387,Roumanie,admin,Drobeta-Turnu Severin,Romania,RO,44.631944,22.656111,106578.0,102346.0
+388,Belgique,admin,Namur,Belgium,BE,50.469923,4.82577,106284.0,88027.0
+389,Roumanie,,Scheia,Romania,RO,47.65,26.233333,105796.0,87935.0
+390,Suisse,,Lugano,Switzerland,CH,46.009279,8.955575999999997,105388.0,26365.0
+391,Roumanie,admin,Focşani,Romania,RO,45.7,27.183333,105112.0,80161.0
+392,Bosnie-Herzégovine,minor,Prijedor,Bosnia And Herzegovina,BA,44.97991,16.714012,104858.0,36347.0
+393,Kazakhstan,,Zhezqazghan,Kazakhstan,KZ,47.783333,67.766667,104357.0,104357.0
+394,Roumanie,admin,Piatra Neamţ,Romania,RO,46.916667,26.333333000000003,102688.0,102688.0
+395,Pologne,,Twierdza Grudziadz,Poland,PL,53.5,18.75,102443.0,99486.0
+396,Biélorussie,minor,Maladzyechna,Belarus,BY,54.3167,26.854,101300.0,90810.0
+397,Biélorussie,,Lida,Belarus,BY,53.88333299999999,25.299722,100216.0,98036.0
+398,Serbie,admin,Subotica,Serbia,RS,46.100972,19.668233,100000.0,93408.0

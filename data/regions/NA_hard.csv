@@ -1,0 +1,719 @@
+,admin,capital,city,country,iso2,lat,lng,population,population_proper
+0,Etats-Unis d'Amérique,,New York,United States of America,US,40.76149276,-73.98143112,19040000.0,8008278.0
+1,Mexique,primary,Mexico City,Mexico,MX,19.434167,-99.138611,19028000.0,10811002.0
+2,Etats-Unis d'Amérique,minor,Los Angeles,United States of America,US,34.0522342,-118.24368490000002,12500000.0,3694820.0
+3,Etats-Unis d'Amérique,minor,Chicago,United States of America,US,41.850033,-87.6500523,8990000.0,2841952.0
+4,Etats-Unis d'Amérique,minor,Miami,United States of America,US,25.7742658,-80.1936589,5585000.0,382894.0
+5,Etats-Unis d'Amérique,minor,Philadelphia,United States of America,US,39.952335,-75.16378900000002,5492000.0,1517550.0
+6,Canada,admin,Toronto,Canada,CA,43.666667,-79.416667,5213000.0,3934421.0
+7,Etats-Unis d'Amérique,minor,Dallas,United States of America,US,32.783055600000004,-96.8066667,4798000.0,1211704.0
+8,Etats-Unis d'Amérique,admin,Atlanta,United States of America,US,33.7489954,-84.3879824,4506000.0,422908.0
+9,Etats-Unis d'Amérique,admin,Boston,United States of America,US,42.3584308,-71.05977320000002,4467000.0,589141.0
+10,Etats-Unis d'Amérique,minor,Houston,United States of America,US,29.7632836,-95.3632715,4459000.0,3647574.0
+11,Etats-Unis d'Amérique,primary,Washington,United States of America,US,38.8951118,-77.0363658,4338000.0,552433.0
+12,Mexique,admin,Guadalajara,Mexico,MX,20.666823,-103.391824,4198000.0,1640589.0
+13,Etats-Unis d'Amérique,minor,Detroit,United States of America,US,42.33142700000001,-83.0457538,4101000.0,951270.0
+14,Mexique,admin,Monterrey,Mexico,MX,25.675065,-100.318465,3712000.0,1122874.0
+15,Canada,,Montréal,Canada,CA,45.5,-73.583333,3678000.0,2356556.0
+16,Etats-Unis d'Amérique,admin,Phoenix,United States of America,US,33.4483771,-112.0740373,3551000.0,1321045.0
+17,Etats-Unis d'Amérique,minor,San Francisco,United States of America,US,37.7749295,-122.4194155,3450000.0,732072.0
+18,Etats-Unis d'Amérique,minor,Seattle,United States of America,US,47.6062095,-122.33207079999998,3074000.0,569369.0
+19,Etats-Unis d'Amérique,,Irvine,United States of America,US,33.669464899999994,-117.8231107,3010232.0,212375.0
+20,Etats-Unis d'Amérique,minor,San Diego,United States of America,US,32.7153292,-117.1572551,2916000.0,961141.0
+21,Etats-Unis d'Amérique,minor,Minneapolis,United States of America,US,44.9799654,-93.2638361,2616000.0,367773.0
+22,Etats-Unis d'Amérique,,Brooklyn,United States of America,US,40.65009286,-73.94956366,2565635.0,2565635.0
+23,Etats-Unis d'Amérique,minor,Tampa,United States of America,US,27.9475216,-82.4584279,2314000.0,324465.0
+24,Canada,,Vancouver,Canada,CA,49.25,-123.133333,2313328.0,603502.0
+25,Etats-Unis d'Amérique,admin,Denver,United States of America,US,39.7391536,-104.9847034,2313000.0,1548599.0
+26,Etats-Unis d'Amérique,,Queens,United States of America,US,40.75016214,-73.79744535,2272771.0,2272771.0
+27,Etats-Unis d'Amérique,minor,Baltimore,United States of America,US,39.2903848,-76.6121893,2255000.0,610892.0
+28,Etats-Unis d'Amérique,minor,Saint Louis,United States of America,US,38.62727329999999,-90.1978889,2199000.0,320916.0
+29,Mexique,admin,Puebla,Mexico,MX,19.037926,-98.203457,2195000.0,1392099.0
+30,Cuba,primary,Havana,Cuba,CU,23.131944,-82.36416700000002,2174000.0,1990917.0
+31,République Dominicaine,primary,Santo Domingo,Dominican Republic,DO,18.466667,-69.9,2154000.0,2873.0
+32,Etats-Unis d'Amérique,minor,Fort Lauderdale,United States of America,US,26.1223084,-80.14337859999998,2042042.0,165521.0
+33,Etats-Unis d'Amérique,,Long Beach,United States of America,US,33.7669623,-118.1892348,2036134.0,462257.0
+34,Etats-Unis d'Amérique,minor,Cleveland,United States of America,US,41.4994954,-81.6954088,1890000.0,449514.0
+35,Etats-Unis d'Amérique,minor,Portland,United States of America,US,45.5234515,-122.6762071,1875000.0,540513.0
+36,Etats-Unis d'Amérique,minor,Pittsburgh,United States of America,US,40.4406248,-79.9958864,1838000.0,1232535.0
+37,Etats-Unis d'Amérique,minor,Las Vegas,United States of America,US,36.1749705,-115.137223,1823000.0,478434.0
+38,Etats-Unis d'Amérique,minor,San Bernardino,United States of America,US,34.1083449,-117.2897652,1745000.0,202381.0
+39,Etats-Unis d'Amérique,minor,San Jose,United States of America,US,37.3393857,-121.8949555,1668000.0,894943.0
+40,Etats-Unis d'Amérique,minor,Cincinnati,United States of America,US,39.1146631,-84.52968641,1636000.0,306382.0
+41,Etats-Unis d'Amérique,,Manhattan,United States of America,US,40.78346165,-73.96618566,1619090.0,1619090.0
+42,Etats-Unis d'Amérique,admin,Sacramento,United States of America,US,38.5815719,-121.4943996,1604000.0,467898.0
+43,Mexique,,Tijuana,Mexico,MX,32.502697999999995,-117.003714,1553000.0,1376457.0
+44,République Dominicaine,admin,Santiago,Dominican Republic,DO,19.451703,-70.69703,1550753.0,1391262.0
+45,Mexique,admin,Toluca,Mexico,MX,19.287311,-99.644979,1531000.0,505881.0
+46,Etats-Unis d'Amérique,minor,Oakland,United States of America,US,37.8043722,-122.27080259999998,1510271.0,395817.0
+47,Etats-Unis d'Amérique,minor,Virginia Beach,United States of America,US,36.8529263,-75.977985,1491000.0,263951.0
+48,Mexique,minor,León de los Aldama,Mexico,MX,21.129079,-101.673741,1488000.0,1114626.0
+49,Etats-Unis d'Amérique,minor,San Antonio,United States of America,US,29.4241219,-98.4936282,1473000.0,1256810.0
+50,Etats-Unis d'Amérique,,Kansas City,United States of America,US,39.0997266,-94.5785667,1469000.0,441545.0
+51,Etats-Unis d'Amérique,minor,Fort Worth,United States of America,US,32.725409,-97.3208496,1440454.0,741206.0
+52,Etats-Unis d'Amérique,admin,Indianapolis,United States of America,US,39.7683765,-86.15804229999998,1436000.0,773283.0
+53,Etats-Unis d'Amérique,,The Bronx,United States of America,US,40.84992814,-73.86617942,1408473.0,1408473.0
+54,Etats-Unis d'Amérique,minor,Milwaukee,United States of America,US,43.0389025,-87.9064736,1388000.0,579180.0
+55,Etats-Unis d'Amérique,minor,Orlando,United States of America,US,28.5383355,-81.3792365,1350000.0,207970.0
+56,Mexique,,Ciudad Juárez,Mexico,MX,31.733333,-106.483333,1343000.0,1343000.0
+57,Panama,primary,Panama City,Panama,PA,8.966667,-79.533333,1281000.0,408168.0
+58,Etats-Unis d'Amérique,admin,Providence,United States of America,US,41.8239891,-71.4128343,1277000.0,50453.0
+59,Etats-Unis d'Amérique,admin,Columbus,United States of America,US,39.9611755,-82.9987942,1270000.0,736836.0
+60,Etats-Unis d'Amérique,minor,West Palm Beach,United States of America,US,26.7153425,-80.0533746,1250000.0,101043.0
+61,Etats-Unis d'Amérique,admin,Raleigh,United States of America,US,35.77209600000001,-78.6386145,1163515.0,416468.0
+62,Etats-Unis d'Amérique,admin,Austin,United States of America,US,30.267153000000004,-97.7430608,1161000.0,678368.0
+63,Canada,primary,Ottawa,Canada,CA,45.416667,-75.7,1145000.0,812129.0
+64,Mexique,,Torreon,Mexico,MX,25.543891,-103.418976,1144000.0,524066.0
+65,Etats-Unis d'Amérique,minor,Birmingham,United States of America,US,33.5206608,-86.80249,1128047.0,212237.0
+66,Canada,,Calgary,Canada,CA,51.083333,-114.083333,1110000.0,915322.0
+67,Mexique,,Ciudad Nezahualcóyotl,Mexico,MX,19.400608,-99.014827,1109363.0,750000.0
+68,Etats-Unis d'Amérique,,Mesa,United States of America,US,33.4222685,-111.8226402,1085394.0,439041.0
+69,Etats-Unis d'Amérique,minor,Memphis,United States of America,US,35.1495343,-90.0489801,1081000.0,426687.0
+70,Canada,admin,Edmonton,Canada,CA,53.55,-113.5,1058000.0,712391.0
+71,Etats-Unis d'Amérique,minor,Norfolk,United States of America,US,36.8468146,-76.2852183,1047869.0,242803.0
+72,Guatemala,minor,Guatemala,Guatemala,GT,14.633426,-90.516722,1024000.0,994938.0
+73,Etats-Unis d'Amérique,,Bridgeport,United States of America,US,41.1670412,-73.2048348,1018000.0,139090.0
+74,Etats-Unis d'Amérique,minor,Buffalo,United States of America,US,42.8864468,-78.8783689,1016000.0,279557.0
+75,Etats-Unis d'Amérique,minor,Charlotte,United States of America,US,35.2270869,-80.8431268,995000.0,892149.0
+76,Mexique,admin,San Luis Potosí,Mexico,MX,22.149825,-100.979161,992000.0,677704.0
+77,Etats-Unis d'Amérique,minor,Jacksonville,United States of America,US,30.3321838,-81.655651,988000.0,821907.0
+78,Etats-Unis d'Amérique,admin,Salt Lake City,United States of America,US,40.7607794,-111.89104740000002,966000.0,178026.0
+79,Mexique,admin,Mérida,Mexico,MX,20.975368,-89.616959,965000.0,717175.0
+80,Mexique,admin,Querétaro,Mexico,MX,20.600014,-100.399715,961000.0,611785.0
+81,Etats-Unis d'Amérique,minor,Louisville,United States of America,US,38.2542376,-85.759407,948000.0,243639.0
+82,Etats-Unis d'Amérique,minor,Tulsa,United States of America,US,36.157929,-96.01655809,946962.0,391906.0
+83,Etats-Unis d'Amérique,admin,Hartford,United States of America,US,41.7637111,-72.6850932,913000.0,124019.0
+84,Etats-Unis d'Amérique,admin,Richmond,United States of America,US,37.5537575,-77.4602617,912000.0,190886.0
+85,Etats-Unis d'Amérique,minor,Albuquerque,United States of America,US,35.0844909,-106.6511367,898642.0,552804.0
+86,Mexique,admin,Mexicali,Mexico,MX,32.650022,-115.461069,885000.0,587277.0
+87,Etats-Unis d'Amérique,minor,Omaha,United States of America,US,41.2586096,-95.937792,877110.0,408958.0
+88,Etats-Unis d'Amérique,admin,Nashville,United States of America,US,36.1658899,-86.7844432,877000.0,530852.0
+89,Etats-Unis d'Amérique,admin,Albany,United States of America,US,42.65257929999999,-73.7562317,870716.0,97856.0
+90,Mexique,admin,Aguascalientes,Mexico,MX,21.88234,-102.282586,869000.0,658179.0
+91,Mexique,,Tampico,Mexico,MX,22.278170000000006,-97.86772,859419.0,297284.0
+92,Etats-Unis d'Amérique,minor,New Haven,United States of America,US,41.3081527,-72.9281578,846766.0,569000.0
+93,Mexique,admin,Cuernavaca,Mexico,MX,18.933725,-99.228488,834001.0,349102.0
+94,Etats-Unis d'Amérique,minor,Tucson,United States of America,US,32.2217429,-110.926479,823000.0,518907.0
+95,Mexique,admin,Culiacán,Mexico,MX,24.790325,-107.387816,809000.0,582469.0
+96,Etats-Unis d'Amérique,,Saint Petersburg,United States of America,US,27.7708606,-82.67926609999998,800313.0,246316.0
+97,Mexique,admin,Chihuahua,Mexico,MX,28.633333,-106.083333,793000.0,708267.0
+98,Etats-Unis d'Amérique,admin,Oklahoma City,United States of America,US,35.4715076,-97.54021069,788000.0,532950.0
+99,Etats-Unis d'Amérique,admin,Honolulu,United States of America,US,21.3069444,-157.8583333,786000.0,371657.0
+100,Etats-Unis d'Amérique,minor,New Orleans,United States of America,US,29.9546482,-90.075072,785000.0,269857.0
+101,Etats-Unis d'Amérique,minor,Dayton,United States of America,US,39.7589478,-84.1916069,773000.0,159134.0
+102,Etats-Unis d'Amérique,minor,Rochester,United States of America,US,43.1547845,-77.6155568,755000.0,211354.0
+103,Mexique,admin,Saltillo,Mexico,MX,25.423213,-101.005299,754000.0,604573.0
+104,Etats-Unis d'Amérique,minor,El Paso,United States of America,US,31.758719800000005,-106.4869314,753000.0,563662.0
+105,Etats-Unis d'Amérique,,Stamford,United States of America,US,41.0534302,-73.53873409999999,746920.0,122643.0
+106,Etats-Unis d'Amérique,admin,Saint Paul,United States of America,US,44.9444101,-93.0932742,734854.0,285068.0
+107,Etats-Unis d'Amérique,,Grand Prairie,United States of America,US,32.7459645,-96.9977846,724777.0,365438.0
+108,Etats-Unis d'Amérique,,Lowell,United States of America,US,42.633424700000006,-71.3161718,723629.0,106519.0
+109,Canada,,Hamilton,Canada,CA,43.256101,-79.857484,721053.0,519949.0
+110,Etats-Unis d'Amérique,minor,Tacoma,United States of America,US,47.2528769,-122.4442906,719868.0,200678.0
+111,Mexique,minor,Acapulco de Juárez,Mexico,MX,16.870236,-99.868452,715584.0,652136.0
+112,Etats-Unis d'Amérique,minor,Akron,United States of America,US,41.08144470000001,-81.51900529999998,703200.0,199110.0
+113,Etats-Unis d'Amérique,minor,Stockton,United States of America,US,37.9577016,-121.29077959999998,685306.0,291707.0
+114,Etats-Unis d'Amérique,minor,Syracuse,United States of America,US,43.0481221,-76.1474244,662577.0,145170.0
+115,Etats-Unis d'Amérique,minor,Knoxville,United States of America,US,35.96063839999999,-83.9207392,655400.0,178874.0
+116,Mexique,admin,Morelia,Mexico,MX,19.70179,-101.183962,644306.0,592797.0
+117,Canada,admin,Winnipeg,Canada,CA,49.883333,-97.166667,632063.0,575313.0
+118,Etats-Unis d'Amérique,,Pasadena,United States of America,US,29.6910625,-95.2091006,628492.0,149043.0
+119,Etats-Unis d'Amérique,,San Mateo,United States of America,US,37.56299170000001,-122.3255254,626406.0,97207.0
+120,Canada,admin,Québec,Canada,CA,46.8,-71.25,624177.0,528595.0
+121,Etats-Unis d'Amérique,minor,Fresno,United States of America,US,36.74772720000001,-119.7723661,616353.0,465183.0
+122,Etats-Unis d'Amérique,,Oceanside,United States of America,US,33.1958696,-117.3794834,609854.0,183095.0
+123,Mexique,admin,Hermosillo,Mexico,MX,29.102602,-110.977324,595811.0,512935.0
+124,Etats-Unis d'Amérique,,Gary,United States of America,US,41.5933696,-87.3464271,591180.0,80294.0
+125,Etats-Unis d'Amérique,minor,Sarasota,United States of America,US,27.3364347,-82.5306527,589959.0,52488.0
+126,Etats-Unis d'Amérique,,Aurora,United States of America,US,39.7294319,-104.8319195,587540.0,276393.0
+127,Etats-Unis d'Amérique,minor,Covington,United States of America,US,39.08367120000001,-84.50855370000002,585489.0,40640.0
+128,Mexique,,Veracruz,Mexico,MX,19.180954,-96.142901,578963.0,568313.0
+129,Etats-Unis d'Amérique,minor,Joliet,United States of America,US,41.525031,-88.0817252,578460.0,147433.0
+130,Guatemala,admin,Quetzaltenango,Guatemala,GT,14.834722,-91.518056,575263.0,224703.0
+131,Cuba,admin,Santiago de Cuba,Cuba,CU,20.020833,-75.826667,555865.0,446063.0
+132,Mexique,,Cancún,Mexico,MX,21.172361,-86.829546,542043.0,436862.0
+133,Mexique,,Matamoros,Mexico,MX,25.869581,-97.501946,538785.0,364004.0
+134,Etats-Unis d'Amérique,minor,Grand Rapids,United States of America,US,42.9633599,-85.6680863,535829.0,188040.0
+135,Mexique,admin,Oaxaca,Mexico,MX,17.065417999999998,-96.723645,530728.0,262566.0
+136,Etats-Unis d'Amérique,admin,Harrisburg,United States of America,US,40.2737002,-76.8844179,528892.0,49528.0
+137,Etats-Unis d'Amérique,minor,Vancouver,United States of America,US,45.6387281,-122.6614861,525802.0,161791.0
+138,Mexique,admin,Tlaxcala,Mexico,MX,19.319055,-98.19982,503878.0,89795.0
+139,Mexique,,Mazatán,Mexico,MX,29.005032,-110.137853,500000.0,438434.0
+140,Etats-Unis d'Amérique,,Glendale,United States of America,US,33.538652299999995,-112.1859866,500000.0,226721.0
+141,Mexique,minor,Reynosa,Mexico,MX,26.080613,-98.28835,498654.0,419340.0
+142,Etats-Unis d'Amérique,minor,Allentown,United States of America,US,40.6084305,-75.4901833,496442.0,105519.0
+143,Etats-Unis d'Amérique,,Berkeley,United States of America,US,37.87159260000001,-122.272747,496356.0,100158.0
+144,Etats-Unis d'Amérique,minor,Colorado Springs,United States of America,US,38.8338816,-104.8213634,493654.0,360890.0
+145,Etats-Unis d'Amérique,minor,Everett,United States of America,US,47.9789848,-122.2020794,486903.0,96993.0
+146,Etats-Unis d'Amérique,,Staten Island,United States of America,US,40.58328072,-74.14981238,470728.0,470728.0
+147,Etats-Unis d'Amérique,minor,Toledo,United States of America,US,41.6639383,-83.555212,469924.0,306974.0
+148,Mexique,admin,Durango,Mexico,MX,24.019419,-104.66069,457140.0,455597.0
+149,Mexique,admin,Xalapa,Mexico,MX,19.54386,-96.92155,452186.0,425148.0
+150,Canada,,Oshawa,Canada,CA,43.9,-78.866667,450963.0,247989.0
+151,Etats-Unis d'Amérique,minor,Bakersfield,United States of America,US,35.3732921,-119.0187125,443129.0,291389.0
+152,Etats-Unis d'Amérique,minor,Laredo,United States of America,US,27.506407,-99.5075421,434768.0,210769.0
+153,Mexique,admin,Villahermosa,Mexico,MX,17.986893,-92.930277,428564.0,362401.0
+154,Etats-Unis d'Amérique,admin,Baton Rouge,United States of America,US,30.4507462,-91.154551,422072.0,223349.0
+155,Etats-Unis d'Amérique,minor,Springfield,United States of America,US,42.1014831,-72.589811,421780.0,152227.0
+156,Canada,,Kitchener,Canada,CA,43.446976,-80.472484,417001.0,409112.0
+157,Etats-Unis d'Amérique,minor,Charleston,United States of America,US,32.776565600000005,-79.93092159999998,411940.0,96650.0
+158,Etats-Unis d'Amérique,,Miami Beach,United States of America,US,25.790654,-80.1300455,407750.0,89326.0
+159,Etats-Unis d'Amérique,minor,Wichita,United States of America,US,37.6922361,-97.3375448,401843.0,355244.0
+160,Mexique,,Gomez Palacio,Mexico,MX,25.569849,-103.495882,399328.0,228577.0
+161,Etats-Unis d'Amérique,minor,Columbia,United States of America,US,38.95170529999999,-92.3340724,398093.0,91415.0
+162,Etats-Unis d'Amérique,admin,Columbia,United States of America,US,34.0007104,-81.0348144,398093.0,116278.0
+163,Etats-Unis d'Amérique,,Metairie,United States of America,US,29.984092200000006,-90.1528519,394206.0,146136.0
+164,Etats-Unis d'Amérique,,Palm Springs,United States of America,US,33.8302961,-116.54529209999998,390115.0,42807.0
+165,Etats-Unis d'Amérique,,Elgin,United States of America,US,42.0372487,-88.2811895,389514.0,98586.0
+166,Etats-Unis d'Amérique,minor,Greensboro,United States of America,US,36.0726355,-79.79197540000001,388887.0,231769.0
+167,Mexique,,Celaya,Mexico,MX,20.52353,-100.8157,383697.0,305901.0
+168,Etats-Unis d'Amérique,admin,Des Moines,United States of America,US,41.6005448,-93.6091064,380655.0,193180.0
+169,Etats-Unis d'Amérique,,South Ogden,United States of America,US,41.1918886,-111.9713304,377224.0,78324.0
+170,Mexique,minor,Mazatlán,Mexico,MX,23.2329,-106.4062,368204.0,354717.0
+171,Etats-Unis d'Amérique,minor,Hampton,United States of America,US,37.0298687,-76.3452218,366766.0,146437.0
+172,Etats-Unis d'Amérique,admin,Trenton,United States of America,US,40.2170534,-74.7429385,366513.0,84913.0
+173,Etats-Unis d'Amérique,,Arlington,United States of America,US,32.735687,-97.1080656,365438.0,365438.0
+174,Etats-Unis d'Amérique,,McAllen,United States of America,US,26.203407100000003,-98.2300124,364004.0,122578.0
+175,Etats-Unis d'Amérique,minor,Saint Charles,United States of America,US,38.78394,-90.4812298,360485.0,65794.0
+176,Canada,admin,Halifax,Canada,CA,44.65,-63.6,359111.0,222874.0
+177,Etats-Unis d'Amérique,minor,Provo,United States of America,US,40.2338438,-111.6585337,356712.0,105764.0
+178,Mexique,minor,Orizaba,Mexico,MX,18.851947,-97.099574,355333.0,121348.0
+179,Etats-Unis d'Amérique,minor,Greenville,United States of America,US,34.8526176,-82.3940105,350954.0,55559.0
+180,Etats-Unis d'Amérique,,Aurora,United States of America,US,41.7605849,-88.3200715,350000.0,197899.0
+181,Etats-Unis d'Amérique,,Evanston,United States of America,US,42.0411414,-87.69005870000002,350000.0,74486.0
+182,Mexique,,Nuevo Laredo,Mexico,MX,27.484635,-99.522106,349550.0,160755.0
+183,Etats-Unis d'Amérique,minor,Spokane,United States of America,US,47.6587803,-117.4260466,347705.0,197262.0
+184,Cuba,admin,Camagüey,Cuba,CU,21.380833,-77.916944,347562.0,295605.0
+185,Canada,,London,Canada,CA,42.983333,-81.25,346765.0,335035.0
+186,Mexique,minor,Irapuato,Mexico,MX,20.676754000000006,-101.356281,339554.0,339554.0
+187,Etats-Unis d'Amérique,,Boise City,United States of America,US,43.5991149,-116.23060490000002,338071.0,145987.0
+188,Etats-Unis d'Amérique,admin,Boise,United States of America,US,43.6135002,-116.2034505,338071.0,145987.0
+189,Etats-Unis d'Amérique,,Anaheim,United States of America,US,33.8352932,-117.9145036,336265.0,336265.0
+190,Etats-Unis d'Amérique,minor,Salem,United States of America,US,42.51954,-70.8967155,335509.0,42455.0
+191,Etats-Unis d'Amérique,minor,Sanford,United States of America,US,28.8005484,-81.2731203,333460.0,45289.0
+192,Etats-Unis d'Amérique,minor,Reno,United States of America,US,39.5296329,-119.8138027,328585.0,202142.0
+193,Etats-Unis d'Amérique,admin,Madison,United States of America,US,43.07305170000001,-89.4012302,327447.0,224625.0
+194,Etats-Unis d'Amérique,minor,Santa Ana,United States of America,US,33.7455731,-117.8678338,324528.0,324528.0
+195,Etats-Unis d'Amérique,minor,Modesto,United States of America,US,37.6390972,-120.9968782,323386.0,216008.0
+196,Mexique,admin,Pachuca,Mexico,MX,20.117362,-98.742915,319581.0,302141.0
+197,Canada,,Windsor,Canada,CA,42.301649,-83.030744,319246.0,210891.0
+198,Cuba,admin,Holguín,Cuba,CU,20.887222,-76.263056,319102.0,300177.0
+199,Mexique,admin,Tepic,Mexico,MX,21.509505,-104.895691,318781.0,280592.0
+200,Etats-Unis d'Amérique,minor,Youngstown,United States of America,US,41.0997803,-80.6495194,311990.0,77540.0
+201,Etats-Unis d'Amérique,minor,Durham,United States of America,US,35.99403289999999,-78.898619,309495.0,204734.0
+202,Etats-Unis d'Amérique,minor,Fort Wayne,United States of America,US,41.1306041,-85.1288597,299871.0,229715.0
+203,Etats-Unis d'Amérique,minor,Riverside,United States of America,US,33.9533487,-117.3961564,297554.0,297554.0
+204,Etats-Unis d'Amérique,minor,Flint,United States of America,US,43.0125274,-83.6874562,295212.0,117258.0
+205,Canada,admin,Victoria,Canada,CA,48.450234,-123.343529,289625.0,251358.0
+206,Mexique,,Ciudad Obregón,Mexico,MX,27.486421000000004,-109.940826,288002.0,258162.0
+207,Etats-Unis d'Amérique,minor,Worcester,United States of America,US,42.26259320000001,-71.8022934,287365.0,177216.0
+208,Mexique,,Coatzacoalcos,Mexico,MX,18.133458,-94.442417,287285.0,230717.0
+209,Etats-Unis d'Amérique,,Bartlett,United States of America,US,35.2045329,-89.8739753,286423.0,43264.0
+210,Etats-Unis d'Amérique,minor,Winston-Salem,United States of America,US,36.0998596,-80.24421600000002,281683.0,193300.0
+211,Etats-Unis d'Amérique,minor,Newark,United States of America,US,40.735657,-74.1723667,280123.0,280123.0
+212,Etats-Unis d'Amérique,admin,Lansing,United States of America,US,42.732535,-84.55553470000002,279952.0,117691.0
+213,Etats-Unis d'Amérique,minor,Corpus Christi,United States of America,US,27.8005828,-97.396381,277454.0,222501.0
+214,Mexique,admin,Ciudad Victoria,Mexico,MX,23.741744,-99.145993,274900.0,269923.0
+215,Cuba,admin,Guantánamo,Cuba,CU,20.144444,-75.20916700000002,272801.0,217338.0
+216,Etats-Unis d'Amérique,admin,Little Rock,United States of America,US,34.7464809,-92.2895948,270893.0,184217.0
+217,Etats-Unis d'Amérique,minor,Ann Arbor,United States of America,US,42.2708716,-83.72632940000003,265976.0,113810.0
+218,Etats-Unis d'Amérique,,Melbourne,United States of America,US,28.0836269,-80.6081089,265414.0,76326.0
+219,Etats-Unis d'Amérique,minor,Lexington,United States of America,US,38.04979960000001,-84.45854849999998,264578.0,225366.0
+220,Mexique,minor,Uruapan,Mexico,MX,19.411161,-102.05644,264531.0,237308.0
+221,Etats-Unis d'Amérique,minor,Augusta,United States of America,US,33.4709702,-81.97483790000003,262332.0,43459.0
+222,Etats-Unis d'Amérique,minor,Naples,United States of America,US,26.1420358,-81.7948103,262306.0,21498.0
+223,Etats-Unis d'Amérique,,Lakeville,United States of America,US,44.6496868,-93.24272,261308.0,50994.0
+224,Etats-Unis d'Amérique,minor,Anchorage,United States of America,US,61.2180556,-149.90027780000003,260283.0,243853.0
+225,Etats-Unis d'Amérique,,Plano,United States of America,US,33.0198431,-96.6988856,259841.0,259841.0
+226,Etats-Unis d'Amérique,minor,Canton,United States of America,US,40.7989473,-81.378447,258660.0,78160.0
+227,Etats-Unis d'Amérique,,Henderson,United States of America,US,36.0396988,-114.9819368,257729.0,257729.0
+228,Etats-Unis d'Amérique,minor,Chattanooga,United States of America,US,35.0456297,-85.3096801,257589.0,155554.0
+229,Mexique,minor,Ensenada,Mexico,MX,31.871492,-116.600706,256565.0,220937.0
+230,Etats-Unis d'Amérique,minor,Rockford,United States of America,US,42.2711311,-89.09399520000002,255978.0,152765.0
+231,Etats-Unis d'Amérique,minor,Davenport,United States of America,US,41.5236437,-90.5776367,255738.0,100827.0
+232,Mexique,,Poza Rica de Hidalgo,Mexico,MX,20.529054,-97.449662,254481.0,174526.0
+233,Etats-Unis d'Amérique,minor,Mobile,United States of America,US,30.6943566,-88.04305409999998,253466.0,190274.0
+234,Etats-Unis d'Amérique,admin,Jackson,United States of America,US,32.298757300000005,-90.1848103,250902.0,176696.0
+235,Cuba,admin,Santa Clara,Cuba,CU,22.406944,-79.964722,250512.0,219288.0
+236,Mexique,,Zumpango,Mexico,MX,19.796685,-98.985422,250000.0,127988.0
+237,Etats-Unis d'Amérique,,Coral Springs,United States of America,US,26.271192,-80.27060440000002,250000.0,121096.0
+238,Etats-Unis d'Amérique,minor,Waukesha,United States of America,US,43.0116784,-88.2314813,249912.0,68112.0
+239,Mexique,minor,Los Mochis,Mexico,MX,25.793024,-108.998075,249047.0,214601.0
+240,Etats-Unis d'Amérique,minor,Shreveport,United States of America,US,32.50650231,-93.76941098,248053.0,200145.0
+241,Etats-Unis d'Amérique,minor,Jersey City,United States of America,US,40.7281575,-74.0776417,247597.0,247597.0
+242,Etats-Unis d'Amérique,admin,Lincoln,United States of America,US,40.8000011,-96.6669599,246220.0,242072.0
+243,Etats-Unis d'Amérique,minor,Eugene,United States of America,US,44.0520691,-123.08675359999998,245158.0,145208.0
+244,Etats-Unis d'Amérique,,Chula Vista,United States of America,US,32.6400541,-117.0841955,243916.0,243916.0
+245,Etats-Unis d'Amérique,minor,Fayetteville,United States of America,US,35.0526641,-78.87835849999998,243306.0,124775.0
+246,Mexique,,Tehuacán,Mexico,MX,18.461476,-97.392821,241429.0,237312.0
+247,Etats-Unis d'Amérique,minor,South Bend,United States of America,US,41.68338129999999,-86.2500066,239822.0,103760.0
+248,Mexique,,Monclova,Mexico,MX,26.906871,-101.420565,236244.0,195764.0
+249,Etats-Unis d'Amérique,,Chandler,United States of America,US,33.3061605,-111.8412502,236123.0,236123.0
+250,Mexique,admin,Zacatecas,Mexico,MX,22.769005,-102.571563,234481.0,118562.0
+251,Etats-Unis d'Amérique,minor,Pensacola,United States of America,US,30.421309,-87.2169149,234384.0,56255.0
+252,Etats-Unis d'Amérique,minor,Santa Rosa,United States of America,US,38.4404675,-122.7144314,231792.0,155118.0
+253,Etats-Unis d'Amérique,admin,Salem,United States of America,US,44.9428975,-123.0350963,229010.0,146922.0
+254,Etats-Unis d'Amérique,minor,Fort Collins,United States of America,US,40.5852602,-105.084423,228385.0,129252.0
+255,Etats-Unis d'Amérique,minor,Fort Pierce,United States of America,US,27.446705600000005,-80.3256056,228245.0,37723.0
+256,Etats-Unis d'Amérique,,Garland,United States of America,US,32.912624,-96.6388833,226876.0,226876.0
+257,Etats-Unis d'Amérique,,Lancaster,United States of America,US,34.6980406,-118.1367393,225799.0,225799.0
+258,Etats-Unis d'Amérique,minor,Kissimmee,United States of America,US,28.291955699999995,-81.40757099999998,225494.0,63685.0
+259,Etats-Unis d'Amérique,,Hialeah,United States of America,US,25.8575963,-80.2781057,224669.0,224669.0
+260,Mexique,admin,Colima,Mexico,MX,19.249972,-103.727137,223287.0,127235.0
+261,Etats-Unis d'Amérique,minor,Chesapeake,United States of America,US,36.8190369,-76.2749399,222209.0,222209.0
+262,Mexique,minor,Tapachula,Mexico,MX,14.903853,-92.257493,221521.0,197961.0
+263,Etats-Unis d'Amérique,admin,Tallahassee,United States of America,US,30.4382559,-84.2807329,221222.0,153583.0
+264,Mexique,,Córdoba,Mexico,MX,18.885845,-96.931253,220563.0,134403.0
+265,Etats-Unis d'Amérique,,West York,United States of America,US,39.9525985,-76.7513566,218010.0,39587.0
+266,Etats-Unis d'Amérique,minor,Columbus,United States of America,US,32.4609764,-84.9877094,217980.0,186470.0
+267,République Dominicaine,admin,San Pedro de Macorís,Dominican Republic,DO,18.461557,-69.29718100000001,217899.0,204140.0
+268,Etats-Unis d'Amérique,,Scottsdale,United States of America,US,33.5092103,-111.8990327,217385.0,217385.0
+269,Etats-Unis d'Amérique,,North Las Vegas,United States of America,US,36.1988592,-115.1175013,216961.0,216961.0
+270,Etats-Unis d'Amérique,,Daytona Beach,United States of America,US,29.2108147,-81.02283309999999,216890.0,64661.0
+271,Etats-Unis d'Amérique,,Irving,United States of America,US,32.814017699999994,-96.9488945,216290.0,216290.0
+272,Mexique,,Zamora,Mexico,MX,19.985501,-102.283875,214947.0,124916.0
+273,Etats-Unis d'Amérique,,Fremont,United States of America,US,37.54826970000001,-121.9885719,214089.0,214089.0
+274,Etats-Unis d'Amérique,minor,Lubbock,United States of America,US,33.5778631,-101.8551665,213300.0,211387.0
+275,Etats-Unis d'Amérique,minor,Huntsville,United States of America,US,34.730368799999994,-86.5861037,212733.0,158216.0
+276,Etats-Unis d'Amérique,minor,Springfield,United States of America,US,37.215326,-93.2982436,210939.0,150443.0
+277,Etats-Unis d'Amérique,minor,Lancaster,United States of America,US,40.0378755,-76.3055144,209489.0,209489.0
+278,Etats-Unis d'Amérique,,Gilbert,United States of America,US,33.3528264,-111.789027,208453.0,208453.0
+279,République Dominicaine,admin,La Romana,Dominican Republic,DO,18.427335,-68.972849,208437.0,196506.0
+280,Etats-Unis d'Amérique,minor,Arlington,United States of America,US,38.8903896,-77.0841446,207627.0,207627.0
+281,Mexique,admin,Campeche,Mexico,MX,19.843857,-90.525535,205212.0,202885.0
+282,Panama,admin,Colón,Panama,PA,9.354507,-79.900109,204000.0,136976.0
+283,Cuba,admin,Las Tunas,Cuba,CU,20.961667,-76.951111,203684.0,156112.0
+284,Etats-Unis d'Amérique,minor,Appleton,United States of America,US,44.2619309,-88.4153847,203665.0,70112.0
+285,Mexique,,Minatitlan,Mexico,MX,17.999253,-94.554412,201902.0,150895.0
+286,Etats-Unis d'Amérique,minor,Waukegan,United States of America,US,42.3636331,-87.84479379999998,200000.0,89078.0
+287,Canada,,Saskatoon,Canada,CA,52.133333,-106.666667,198958.0,189193.0
+288,Etats-Unis d'Amérique,minor,Green Bay,United States of America,US,44.519159,-88.019826,198611.0,101012.0
+289,Etats-Unis d'Amérique,admin,Montgomery,United States of America,US,32.366805199999995,-86.2999689,198325.0,190658.0
+290,Etats-Unis d'Amérique,minor,Roanoke,United States of America,US,37.2709704,-79.9414267,198171.0,91168.0
+291,Etats-Unis d'Amérique,,Oxnard,United States of America,US,34.1975048,-119.17705159999998,197899.0,197899.0
+292,Mexique,minor,Salamanca,Mexico,MX,20.57196,-101.191544,197524.0,138614.0
+293,Etats-Unis d'Amérique,,Manchester,United States of America,US,42.99563970000001,-71.4547891,196566.0,109877.0
+294,Etats-Unis d'Amérique,,Fontana,United States of America,US,34.0922335,-117.435048,196069.0,196069.0
+295,Etats-Unis d'Amérique,,Yonkers,United States of America,US,40.9312099,-73.8987469,195976.0,195976.0
+296,Etats-Unis d'Amérique,,Moreno Valley,United States of America,US,33.937517,-117.23059440000002,193365.0,193365.0
+297,Mexique,,Ciudad Madero,Mexico,MX,22.272282,-97.83623,192736.0,138087.0
+298,Cuba,admin,Bayamo,Cuba,CU,20.374167,-76.64361099999998,192632.0,162614.0
+299,Etats-Unis d'Amérique,,Glendale,United States of America,US,34.1425078,-118.255075,191719.0,191719.0
+300,Etats-Unis d'Amérique,minor,Gainesville,United States of America,US,29.6516344,-82.3248262,191097.0,125684.0
+301,Etats-Unis d'Amérique,,Huntington Beach,United States of America,US,33.660297,-117.9992265,189992.0,189992.0
+302,Mexique,admin,La Paz,Mexico,MX,24.144373,-110.300501,189767.0,171485.0
+303,Etats-Unis d'Amérique,minor,Fort Myers,United States of America,US,26.640628000000003,-81.87230840000002,188606.0,53015.0
+304,Mexique,,Puerto Vallarta,Mexico,MX,20.611251,-105.233465,187134.0,180804.0
+305,Cuba,admin,Pinar del Río,Cuba,CU,22.416667,-83.696667,186990.0,159618.0
+306,Mexique,minor,San Cristóbal de las Casas,Mexico,MX,16.731757,-92.64126,186661.0,128996.0
+307,Cuba,admin,Cienfuegos,Cuba,CU,22.146111,-80.435556,186644.0,106455.0
+308,Etats-Unis d'Amérique,minor,Kalamazoo,United States of America,US,42.2917069,-85.5872286,183381.0,74138.0
+309,Mexique,admin,Chilpancingo,Mexico,MX,17.550599,-99.505783,182387.0,165250.0
+310,Canada,,Barrie,Canada,CA,44.383333,-79.7,182041.0,119732.0
+311,Etats-Unis d'Amérique,minor,Amarillo,United States of America,US,35.2219971,-101.8312969,181766.0,175286.0
+312,Etats-Unis d'Amérique,minor,Santa Barbara,United States of America,US,34.4208305,-119.6981901,181632.0,88410.0
+313,Etats-Unis d'Amérique,minor,Brownsville,United States of America,US,25.9017472,-97.4974838,181399.0,168015.0
+314,Etats-Unis d'Amérique,minor,Newport News,United States of America,US,36.9787588,-76.428003,180719.0,180719.0
+315,Etats-Unis d'Amérique,minor,Savannah,United States of America,US,32.0835407,-81.0998342,180187.0,131510.0
+316,Etats-Unis d'Amérique,minor,Erie,United States of America,US,42.1292241,-80.085059,178182.0,99801.0
+317,Mexique,minor,Nogales,Mexico,MX,31.314631,-110.94683,178097.0,20707.0
+318,Mexique,,Teziutlan,Mexico,MX,19.8173,-97.35992,177796.0,70819.0
+319,Etats-Unis d'Amérique,minor,Denton,United States of America,US,33.2148412,-97.1330683,176930.0,100975.0
+320,Etats-Unis d'Amérique,,Santa Clarita,United States of America,US,34.3916641,-118.542586,176320.0,176320.0
+321,Canada,admin,Regina,Canada,CA,50.45,-104.616667,176183.0,176183.0
+322,Etats-Unis d'Amérique,,Wahiawa,United States of America,US,21.5003965,-158.019972,174766.0,15906.0
+323,Etats-Unis d'Amérique,,Waterbury,United States of America,US,41.55815250000001,-73.0514966,174236.0,174236.0
+324,Etats-Unis d'Amérique,minor,Evansville,United States of America,US,37.9747644,-87.55584820000001,174102.0,115474.0
+325,Etats-Unis d'Amérique,,Overland Park,United States of America,US,38.9822282,-94.6707917,173372.0,173372.0
+326,Etats-Unis d'Amérique,,West Peoria,United States of America,US,40.6925376,-89.627877,172308.0,112936.0
+327,Etats-Unis d'Amérique,minor,Poughkeepsie,United States of America,US,41.7003713,-73.92097009999998,170996.0,30345.0
+328,Etats-Unis d'Amérique,,Garden Grove,United States of America,US,33.7739053,-117.9414477,170883.0,170883.0
+329,Etats-Unis d'Amérique,minor,Cedar Rapids,United States of America,US,42.0083328,-91.6440683,170621.0,128056.0
+330,Etats-Unis d'Amérique,minor,Waco,United States of America,US,31.549333,-97.1466695,167347.0,118967.0
+331,Etats-Unis d'Amérique,minor,Rock Island,United States of America,US,41.5094771,-90.5787477,165728.0,38383.0
+332,Etats-Unis d'Amérique,,Rancho Cucamonga,United States of America,US,34.1063989,-117.5931084,165269.0,165269.0
+333,Etats-Unis d'Amérique,,Port Saint Lucie,United States of America,US,27.2939333,-80.35032829999999,164603.0,164603.0
+334,Etats-Unis d'Amérique,,Ontario,United States of America,US,34.0633443,-117.6508876,163924.0,163924.0
+335,République Dominicaine,admin,La Vega,Dominican Republic,DO,19.222072,-70.529558,163197.0,102426.0
+336,Etats-Unis d'Amérique,minor,Fargo,United States of America,US,46.8771863,-96.7898034,162842.0,92103.0
+337,Etats-Unis d'Amérique,,Tempe,United States of America,US,33.414768,-111.9093095,161719.0,161719.0
+338,Etats-Unis d'Amérique,minor,Wilmington,United States of America,US,39.7459467,-75.5465889,161560.0,70851.0
+339,Etats-Unis d'Amérique,minor,Wilmington,United States of America,US,34.2257256,-77.9447102,161560.0,92424.0
+340,Mexique,,Ciudad Lázaro Cárdenas,Mexico,MX,17.970661,-102.221243,160087.0,84001.0
+341,Etats-Unis d'Amérique,minor,Wilkes-Barre,United States of America,US,41.2459149,-75.88130749999998,158913.0,40736.0
+342,Etats-Unis d'Amérique,minor,Lafayette,United States of America,US,30.2240897,-92.0198427,158214.0,112197.0
+343,Canada,,Sudbury,Canada,CA,46.5,-80.966667,157857.0,80507.0
+344,Etats-Unis d'Amérique,admin,Olympia,United States of America,US,47.0378741,-122.9006951,156984.0,44916.0
+345,Etats-Unis d'Amérique,minor,Salinas,United States of America,US,36.6777372,-121.6555013,156784.0,148691.0
+346,Etats-Unis d'Amérique,minor,Scranton,United States of America,US,41.408969,-75.66241219999998,156196.0,73206.0
+347,Mexique,minor,Ciudad del Carmen,Mexico,MX,18.64774,-91.824235,156195.0,141308.0
+348,Etats-Unis d'Amérique,minor,Sioux Falls,United States of America,US,43.5499749,-96.700327,155724.0,140336.0
+349,Etats-Unis d'Amérique,,Pembroke Pines,United States of America,US,26.0031465,-80.223937,154750.0,154750.0
+350,Mexique,admin,Chetumal,Mexico,MX,18.514126,-88.303813,154517.0,134412.0
+351,Etats-Unis d'Amérique,,Peoria,United States of America,US,33.5805955,-112.2373779,154065.0,154065.0
+352,République Dominicaine,admin,San Cristóbal,Dominican Republic,DO,18.418631,-70.107913,154040.0,154040.0
+353,Etats-Unis d'Amérique,,Niagara Falls,United States of America,US,43.0944999,-79.05671109999999,153134.0,82000.0
+354,Etats-Unis d'Amérique,,Elk Grove,United States of America,US,38.4087993,-121.3716178,153015.0,153015.0
+355,Etats-Unis d'Amérique,,Palmdale,United States of America,US,34.5794343,-118.11646129999998,152750.0,152750.0
+356,République Dominicaine,admin,San Francisco de Macorís,Dominican Republic,DO,19.30099,-70.252586,152538.0,124763.0
+357,Etats-Unis d'Amérique,,Corona,United States of America,US,33.8752935,-117.5664384,152374.0,152374.0
+358,Canada,,Abbotsford,Canada,CA,49.05,-122.3,151683.0,151683.0
+359,Etats-Unis d'Amérique,minor,Fayetteville,United States of America,US,36.0625795,-94.1574263,151671.0,64864.0
+360,Etats-Unis d'Amérique,minor,Paterson,United States of America,US,40.9167654,-74.171811,151205.0,151205.0
+361,Etats-Unis d'Amérique,,Coral Gables,United States of America,US,25.72149,-80.2683838,150000.0,47401.0
+362,Etats-Unis d'Amérique,minor,Edinburg,United States of America,US,26.3017374,-98.1633433,150000.0,79147.0
+363,Etats-Unis d'Amérique,,National City,United States of America,US,32.6781085,-117.0991967,150000.0,58582.0
+364,Etats-Unis d'Amérique,minor,Schenectady,United States of America,US,42.8142432,-73.93956870000002,149255.0,60280.0
+365,Etats-Unis d'Amérique,,Elkhart,United States of America,US,41.6819935,-85.9766671,149190.0,51400.0
+366,Etats-Unis d'Amérique,,Pomona,United States of America,US,34.0552886,-117.7522793,149058.0,149058.0
+367,Etats-Unis d'Amérique,minor,Santa Cruz,United States of America,US,36.9741171,-122.0307963,148444.0,54617.0
+368,Etats-Unis d'Amérique,minor,Independence,United States of America,US,39.0911161,-94.4155068,148102.0,113288.0
+369,Mexique,minor,San Juan del Río,Mexico,MX,20.38886,-99.995769,147559.0,118173.0
+370,Cuba,admin,Matanzas,Cuba,CU,23.041111,-81.5775,146733.0,123873.0
+371,Etats-Unis d'Amérique,minor,Bryan,United States of America,US,30.6743643,-96.3699632,146692.0,69621.0
+372,Etats-Unis d'Amérique,,Vallejo,United States of America,US,38.1040864,-122.25663670000002,146289.0,120446.0
+373,Etats-Unis d'Amérique,minor,Kansas City,United States of America,US,39.1141708,-94.627457,145786.0,145786.0
+374,Etats-Unis d'Amérique,,Torrance,United States of America,US,33.83584920000001,-118.3406288,145438.0,145438.0
+375,Etats-Unis d'Amérique,,Pasadena,United States of America,US,34.1477849,-118.1445155,144618.0,144618.0
+376,Etats-Unis d'Amérique,,Hayward,United States of America,US,37.6688205,-122.0807964,144186.0,144186.0
+377,Canada,,Sarnia,Canada,CA,42.978417,-82.388177,144172.0,82998.0
+378,Etats-Unis d'Amérique,minor,Urbana,United States of America,US,40.1105875,-88.2072697,144074.0,39511.0
+379,Etats-Unis d'Amérique,,Escondido,United States of America,US,33.1192068,-117.086421,143911.0,143911.0
+380,Etats-Unis d'Amérique,minor,Belleville,United States of America,US,38.5200504,-89.98399350000003,143900.0,40919.0
+381,Etats-Unis d'Amérique,,Lakewood,United States of America,US,39.7047095,-105.08137340000002,142980.0,142980.0
+382,Etats-Unis d'Amérique,minor,Asheville,United States of America,US,35.60094520000001,-82.554015,142755.0,68795.0
+383,Cuba,admin,Ciego de Ávila,Cuba,CU,21.84,-78.761944,142027.0,102660.0
+384,Etats-Unis d'Amérique,,Naperville,United States of America,US,41.7858629,-88.1472893,141853.0,141853.0
+385,Etats-Unis d'Amérique,minor,Ocala,United States of America,US,29.1871986,-82.14009229999998,141382.0,49558.0
+386,Etats-Unis d'Amérique,,Hollywood,United States of America,US,26.0112014,-80.1494901,140768.0,140768.0
+387,Etats-Unis d'Amérique,,Sunnyvale,United States of America,US,37.3688301,-122.0363496,140081.0,140081.0
+388,Etats-Unis d'Amérique,minor,Binghamton,United States of America,US,42.0986867,-75.9179738,139895.0,45480.0
+389,Etats-Unis d'Amérique,,Mesquite,United States of America,US,32.7667955,-96.5991593,139824.0,139824.0
+390,Canada,,Sherbrooke,Canada,CA,45.4,-71.9,139652.0,129447.0
+391,Mexique,,Ejido Piedras Negras,Mexico,MX,28.723359,-100.56696,139619.0,134971.0
+392,Etats-Unis d'Amérique,,Killeen,United States of America,US,31.1171194,-97.7277959,137919.0,103009.0
+393,Etats-Unis d'Amérique,,Orange,United States of America,US,33.787794500000004,-117.8531119,136416.0,136416.0
+394,Etats-Unis d'Amérique,,New Bedford,United States of America,US,41.6362152,-70.934205,136082.0,94083.0
+395,Etats-Unis d'Amérique,,South Portland,United States of America,US,43.6414716,-70.2408811,135866.0,63142.0
+396,Etats-Unis d'Amérique,,Cary,United States of America,US,35.79154000000001,-78.78111690000001,135234.0,135234.0
+397,Etats-Unis d'Amérique,,Fullerton,United States of America,US,33.8702924,-117.92533799999998,135161.0,135161.0
+398,Etats-Unis d'Amérique,admin,Springfield,United States of America,US,39.80171710000001,-89.64371070000001,134715.0,115975.0
+399,Etats-Unis d'Amérique,,Warren,United States of America,US,42.49982,-83.005486,134056.0,134056.0
+400,Etats-Unis d'Amérique,,West Lafayette,United States of America,US,40.4258686,-86.9080655,133977.0,62231.0
+401,Etats-Unis d'Amérique,minor,Fredericksburg,United States of America,US,38.30318370000001,-77.46053990000001,133134.0,20562.0
+402,Etats-Unis d'Amérique,minor,Clarksville,United States of America,US,36.5297706,-87.35945290000002,132536.0,111694.0
+403,Etats-Unis d'Amérique,,Cape Coral,United States of America,US,26.5628537,-81.94953309999998,132489.0,102286.0
+404,Etats-Unis d'Amérique,minor,Caldwell,United States of America,US,43.6629384,-116.6873596,132476.0,34330.0
+405,Guatemala,minor,San Luis,Guatemala,GT,16.198889,-89.440278,132470.0,6776.0
+406,Etats-Unis d'Amérique,admin,Topeka,United States of America,US,39.0483336,-95.6780371,132091.0,121570.0
+407,Etats-Unis d'Amérique,minor,Racine,United States of America,US,42.7261309,-87.78285229999999,131654.0,79263.0
+408,Canada,admin,Saint John’s,Canada,CA,47.55,-52.666667,131469.0,99182.0
+409,Etats-Unis d'Amérique,minor,McKinney,United States of America,US,33.1976164,-96.6152693,131117.0,131117.0
+410,Etats-Unis d'Amérique,,Sterling Heights,United States of America,US,42.5803122,-83.0302033,129699.0,129699.0
+411,Etats-Unis d'Amérique,,West Valley City,United States of America,US,40.691613200000006,-112.0010501,129480.0,129480.0
+412,Etats-Unis d'Amérique,minor,Bloomington,United States of America,US,40.4842027,-88.9936873,128979.0,70706.0
+413,Cuba,minor,Manzanillo,Cuba,CU,20.341726,-77.12125999999998,128188.0,86678.0
+414,Etats-Unis d'Amérique,minor,Alexandria,United States of America,US,38.8048356,-77.0469214,127273.0,127273.0
+415,Cuba,admin,Sancti Spíritus,Cuba,CU,21.929722,-79.4425,127069.0,76352.0
+416,Etats-Unis d'Amérique,,Bremerton,United States of America,US,47.5673176,-122.63263909999998,126820.0,37259.0
+417,Etats-Unis d'Amérique,,Thousand Oaks,United States of America,US,34.1705609,-118.8375937,126683.0,126683.0
+418,Etats-Unis d'Amérique,,East Los Angeles,United States of America,US,34.0239015,-118.17201570000002,126496.0,126496.0
+419,Etats-Unis d'Amérique,minor,Olathe,United States of America,US,38.8813958,-94.8191285,125872.0,125872.0
+420,Etats-Unis d'Amérique,minor,Greeley,United States of America,US,40.42331420000001,-104.7091322,125410.0,86875.0
+421,Canada,,Kelowna,Canada,CA,49.9,-119.483333,125109.0,95306.0
+422,Etats-Unis d'Amérique,minor,Elizabeth,United States of America,US,40.6639916,-74.2107006,124969.0,124969.0
+423,Etats-Unis d'Amérique,,Monterey,United States of America,US,36.6002378,-121.8946761,124288.0,30307.0
+424,Etats-Unis d'Amérique,,Simi Valley,United States of America,US,34.2694474,-118.781482,124237.0,124237.0
+425,Etats-Unis d'Amérique,minor,Spartanburg,United States of America,US,34.949567200000004,-81.93204820000003,124126.0,37992.0
+426,Etats-Unis d'Amérique,admin,Charleston,United States of America,US,38.3498195,-81.6326235,123799.0,50427.0
+427,République Dominicaine,minor,Higüey,Dominican Republic,DO,18.609363,-68.71198100000001,123787.0,123787.0
+428,Etats-Unis d'Amérique,,Bellevue,United States of America,US,47.610377,-122.2006786,122363.0,122363.0
+429,Etats-Unis d'Amérique,minor,Boulder,United States of America,US,40.0149856,-105.2705456,122274.0,91521.0
+430,Etats-Unis d'Amérique,,Concord,United States of America,US,37.9779777,-122.0310733,122067.0,122067.0
+431,Etats-Unis d'Amérique,,Miramar,United States of America,US,25.9873137,-80.23227059999998,122041.0,122041.0
+432,Etats-Unis d'Amérique,minor,Visalia,United States of America,US,36.3302284,-119.2920585,121968.0,107431.0
+433,Etats-Unis d'Amérique,minor,Saginaw,United States of America,US,43.4194699,-83.9508068,121379.0,57536.0
+434,Etats-Unis d'Amérique,minor,Tuscaloosa,United States of America,US,33.2098407,-87.5691735,121373.0,79816.0
+435,Etats-Unis d'Amérique,,Southaven,United States of America,US,34.9889818,-90.0125913,121268.0,38578.0
+436,Etats-Unis d'Amérique,minor,New Albany,United States of America,US,38.28562470000001,-85.8241312,120625.0,36138.0
+437,Etats-Unis d'Amérique,,Beaver Falls,United States of America,US,40.7520097,-80.3192295,120125.0,9504.0
+438,République Dominicaine,minor,Puerto Plata,Dominican Republic,DO,19.7875,-70.6875,119897.0,119897.0
+439,Canada,,Trois-Rivières,Canada,CA,46.35,-72.55,119693.0,116409.0
+440,Etats-Unis d'Amérique,,Carrollton,United States of America,US,32.9537349,-96.8902816,119097.0,119097.0
+441,Etats-Unis d'Amérique,,Roseville,United States of America,US,38.7521235,-121.28800590000002,118788.0,118788.0
+442,Etats-Unis d'Amérique,,Thornton,United States of America,US,39.8680412,-104.9719243,118772.0,118772.0
+443,Etats-Unis d'Amérique,minor,Petersburg,United States of America,US,37.2279279,-77.4019267,118577.0,33740.0
+444,Etats-Unis d'Amérique,,Surprise,United States of America,US,33.6305938,-112.333216,117517.0,117517.0
+445,Etats-Unis d'Amérique,,Frisco,United States of America,US,33.1506744,-96.8236116,116989.0,116989.0
+446,Etats-Unis d'Amérique,,Santa Clara,United States of America,US,37.354108,-121.9552356,116468.0,116468.0
+447,Etats-Unis d'Amérique,,South Yuba City,United States of America,US,39.1165591,-121.6391332,116217.0,52432.0
+448,Mexique,minor,Navojoa,Mexico,MX,27.070284,-109.443716,116093.0,116093.0
+449,Etats-Unis d'Amérique,minor,Columbia,United States of America,US,35.6150716,-87.03528309999999,116091.0,33641.0
+450,Etats-Unis d'Amérique,minor,Murfreesboro,United States of America,US,35.8456213,-86.39027,115774.0,84700.0
+451,Etats-Unis d'Amérique,minor,Macon,United States of America,US,32.8406946,-83.6324022,115592.0,94273.0
+452,Etats-Unis d'Amérique,minor,Las Cruces,United States of America,US,32.3123157,-106.7783374,115167.0,80184.0
+453,Etats-Unis d'Amérique,minor,Peoria,United States of America,US,40.6936488,-89.58898640000002,115007.0,115007.0
+454,Mexique,,Ciudad Valles,Mexico,MX,21.996314,-99.01093,114964.0,109504.0
+455,Mexique,minor,Delicias,Mexico,MX,28.192864,-105.471128,114783.0,102969.0
+456,Etats-Unis d'Amérique,,Spring Hill,United States of America,US,28.476885,-82.52546099999998,114697.0,69078.0
+457,Etats-Unis d'Amérique,minor,Abilene,United States of America,US,32.4487364,-99.7331439,114247.0,101769.0
+458,Canada,,Kingston,Canada,CA,44.3,-76.56666700000002,114195.0,102400.0
+459,Etats-Unis d'Amérique,minor,Norman,United States of America,US,35.22651420000001,-97.46326079,113525.0,113525.0
+460,Etats-Unis d'Amérique,,El Monte,United States of America,US,34.068620700000004,-118.0275667,113475.0,113475.0
+461,Etats-Unis d'Amérique,minor,Saint Cloud,United States of America,US,45.56079860000001,-94.1624895,112794.0,59154.0
+462,Etats-Unis d'Amérique,minor,Tyler,United States of America,US,32.351260100000005,-95.3010624,112245.0,90878.0
+463,Mexique,admin,Guanajuato,Mexico,MX,21.018268,-101.256979,112200.0,78364.0
+464,Etats-Unis d'Amérique,minor,Pueblo,United States of America,US,38.2544472,-104.609141,112195.0,104293.0
+465,Etats-Unis d'Amérique,,Downey,United States of America,US,33.9400143,-118.1325688,111772.0,111772.0
+466,Etats-Unis d'Amérique,minor,Beaumont,United States of America,US,30.0860459,-94.1018461,111485.0,103426.0
+467,Mexique,minor,Manzanillo,Mexico,MX,19.04993,-104.315426,110735.0,59738.0
+468,Etats-Unis d'Amérique,,Santa Maria,United States of America,US,34.95303370000001,-120.4357191,110705.0,85480.0
+469,Etats-Unis d'Amérique,,Harlingen,United States of America,US,26.1906306,-97.6961026,110339.0,63159.0
+470,Etats-Unis d'Amérique,minor,Athens,United States of America,US,33.960947999999995,-83.3779358,110301.0,45734.0
+471,Panama,admin,David,Panama,PA,8.427389,-82.425286,110037.0,82859.0
+472,Etats-Unis d'Amérique,,Costa Mesa,United States of America,US,33.6411316,-117.9186689,109960.0,109960.0
+473,Etats-Unis d'Amérique,,Inglewood,United States of America,US,33.9616801,-118.3531311,109673.0,109673.0
+474,Mexique,,Tuxpilla,Mexico,MX,20.916667,-97.416667,109049.0,8331.0
+475,Etats-Unis d'Amérique,,Winter Haven,United States of America,US,28.0222435,-81.7328568,108932.0,27938.0
+476,Etats-Unis d'Amérique,minor,Medford,United States of America,US,42.3265153,-122.8755949,108525.0,69638.0
+477,Etats-Unis d'Amérique,minor,Rochester,United States of America,US,44.0216306,-92.4698992,108511.0,96355.0
+478,Etats-Unis d'Amérique,minor,Clearwater,United States of America,US,27.9658533,-82.8001026,107685.0,107685.0
+479,Guatemala,admin,Escuintla,Guatemala,GT,14.305,-90.785,107638.0,103165.0
+480,Mexique,minor,Escuintla,Mexico,MX,15.321243,-92.659453,107638.0,8989.0
+481,Etats-Unis d'Amérique,,Miami Gardens,United States of America,US,25.9420377,-80.2456045,107167.0,107167.0
+482,Etats-Unis d'Amérique,,San Buenaventura,United States of America,US,34.267504200000005,-119.2548257,106433.0,106433.0
+483,Etats-Unis d'Amérique,,Arvada,United States of America,US,39.8027644,-105.0874842,106433.0,106433.0
+484,Etats-Unis d'Amérique,,Westminster,United States of America,US,39.8366528,-105.03720459999998,106114.0,106114.0
+485,Etats-Unis d'Amérique,,West Covina,United States of America,US,34.0686208,-117.93895259999998,106098.0,106098.0
+486,Etats-Unis d'Amérique,minor,Odessa,United States of America,US,31.8456816,-102.3676431,106054.0,91256.0
+487,Etats-Unis d'Amérique,,Gresham,United States of America,US,45.4981757,-122.4314796,105594.0,105594.0
+488,Etats-Unis d'Amérique,,Norwalk,United States of America,US,33.9022367,-118.081733,105549.0,105549.0
+489,Mexique,,El Fresno,Mexico,MX,23.161149,-102.828838,105488.0,99771.0
+490,Etats-Unis d'Amérique,,Carlsbad,United States of America,US,33.158093300000004,-117.3505939,105328.0,105328.0
+491,Etats-Unis d'Amérique,minor,Fairfield,United States of America,US,38.2493581,-122.0399663,105321.0,105321.0
+492,Etats-Unis d'Amérique,minor,Cambridge,United States of America,US,42.375097,-71.10560790000002,105162.0,105162.0
+493,Etats-Unis d'Amérique,minor,Utica,United States of America,US,43.1009031,-75.2326641,105150.0,58590.0
+494,Etats-Unis d'Amérique,minor,Billings,United States of America,US,45.783285600000006,-108.5006904,104552.0,99751.0
+495,Etats-Unis d'Amérique,,High Point,United States of America,US,35.9556924,-80.0053176,104371.0,104371.0
+496,Etats-Unis d'Amérique,minor,Grand Junction,United States of America,US,39.0638705,-108.5506486,104214.0,45938.0
+497,Etats-Unis d'Amérique,minor,Lynchburg,United States of America,US,37.4137536,-79.1422464,103893.0,65269.0
+498,Etats-Unis d'Amérique,,West Jordan,United States of America,US,40.6096698,-111.9391031,103712.0,103712.0
+499,Etats-Unis d'Amérique,,Richmond,United States of America,US,37.9357576,-122.3477486,103701.0,103701.0
+500,Etats-Unis d'Amérique,,Brandon,United States of America,US,27.937801,-82.2859247,103483.0,103483.0
+501,Etats-Unis d'Amérique,,Murrieta,United States of America,US,33.553914299999995,-117.2139232,103466.0,103466.0
+502,Mexique,,Heroica Guaymas,Mexico,MX,27.91928,-110.897551,103449.0,65544.0
+503,Etats-Unis d'Amérique,,Burbank,United States of America,US,34.18083920000001,-118.30896609999998,103340.0,103340.0
+504,Etats-Unis d'Amérique,,Palm Bay,United States of America,US,28.03446210000001,-80.5886646,103190.0,103190.0
+505,Cuba,minor,Palma Soriano,Cuba,CU,20.211297,-75.993616,102826.0,67394.0
+506,Etats-Unis d'Amérique,,Kennewick,United States of America,US,46.2112458,-119.1372338,102504.0,62158.0
+507,Etats-Unis d'Amérique,,Antioch,United States of America,US,38.0049214,-121.805789,102372.0,102372.0
+508,Etats-Unis d'Amérique,minor,Council Bluffs,United States of America,US,41.2619444,-95.8608333,101805.0,58764.0
+509,Etats-Unis d'Amérique,minor,Monroe,United States of America,US,32.5093109,-92.1193012,101724.0,51625.0
+510,Etats-Unis d'Amérique,minor,Wichita Falls,United States of America,US,33.91370850000001,-98.4933873,101212.0,93646.0
+511,Etats-Unis d'Amérique,,North Muskegon,United States of America,US,43.2561251,-86.26756,101177.0,40112.0
+512,Etats-Unis d'Amérique,,Daly City,United States of America,US,37.7057657,-122.4619166,101123.0,101123.0
+513,Etats-Unis d'Amérique,,Centennial,United States of America,US,39.579155,-104.8769227,100377.0,100377.0
+514,Etats-Unis d'Amérique,minor,Bloomington,United States of America,US,39.165325,-86.5263857,100310.0,71253.0
+515,Etats-Unis d'Amérique,,Temecula,United States of America,US,33.4936391,-117.1483648,100097.0,100097.0
+516,Etats-Unis d'Amérique,minor,Panama City,United States of America,US,30.1588129,-85.6602058,100072.0,37633.0
+517,Etats-Unis d'Amérique,,Round Rock,United States of America,US,30.508255100000003,-97.678896,99887.0,99887.0
+518,Etats-Unis d'Amérique,,Pompano Beach,United States of America,US,26.2378597,-80.1247667,99845.0,99845.0
+519,Etats-Unis d'Amérique,minor,Bellingham,United States of America,US,48.7595529,-122.4882249,99662.0,73469.0
+520,Etats-Unis d'Amérique,,Columbia,United States of America,US,39.2403841,-76.8394184,99615.0,99615.0
+521,Etats-Unis d'Amérique,,El Cajon,United States of America,US,32.7947731,-116.9625269,99478.0,99478.0
+522,Canada,,Thunder Bay,Canada,CA,48.4,-89.233333,99334.0,97374.0
+523,Etats-Unis d'Amérique,minor,Yakima,United States of America,US,46.6020711,-120.5058987,99287.0,88405.0
+524,Etats-Unis d'Amérique,,Richardson,United States of America,US,32.9481789,-96.7297206,99223.0,99223.0
+525,Etats-Unis d'Amérique,minor,Kenosha,United States of America,US,42.5847425,-87.8211854,99218.0,99218.0
+526,Etats-Unis d'Amérique,,Rialto,United States of America,US,34.1064001,-117.3703235,99171.0,99171.0
+527,Etats-Unis d'Amérique,,Broken Arrow,United States of America,US,36.0565467,-95.81460259,98850.0,98850.0
+528,Etats-Unis d'Amérique,minor,Saint George,United States of America,US,37.10414760000001,-113.5841233,98638.0,61338.0
+529,Etats-Unis d'Amérique,minor,Iowa City,United States of America,US,41.6611277,-91.5301683,98516.0,64170.0
+530,Etats-Unis d'Amérique,minor,Midland,United States of America,US,31.9973456,-102.0779147,98501.0,97782.0
+531,Etats-Unis d'Amérique,minor,Waterloo,United States of America,US,42.4927641,-92.3429631,98347.0,65836.0
+532,Etats-Unis d'Amérique,,Dearborn,United States of America,US,42.3222599,-83.1763145,98153.0,98153.0
+533,Etats-Unis d'Amérique,,North Charleston,United States of America,US,32.8546197,-79.9748103,97471.0,97471.0
+534,Etats-Unis d'Amérique,,Lakeland,United States of America,US,28.0394654,-81.9498042,97422.0,97422.0
+535,Etats-Unis d'Amérique,,Livonia,United States of America,US,42.36837,-83.3527097,96942.0,96942.0
+536,Mexique,,Guasavito,Mexico,MX,25.552978,-108.43501100000002,96860.0,68449.0
+537,Etats-Unis d'Amérique,,Compton,United States of America,US,33.8958492,-118.2200712,96455.0,96455.0
+538,Etats-Unis d'Amérique,,New London,United States of America,US,41.3556539,-72.0995209,96178.0,26294.0
+539,Etats-Unis d'Amérique,minor,Merced,United States of America,US,37.3021633,-120.48296770000002,96091.0,72619.0
+540,Etats-Unis d'Amérique,minor,Redding,United States of America,US,40.5865396,-122.3916754,96058.0,91685.0
+541,Etats-Unis d'Amérique,,Chico,United States of America,US,39.7284945,-121.8374777,95888.0,70565.0
+542,Etats-Unis d'Amérique,,Clovis,United States of America,US,36.8252277,-119.7029194,95631.0,95631.0
+543,Etats-Unis d'Amérique,minor,Portsmouth,United States of America,US,36.8354258,-76.29827420000002,95535.0,95535.0
+544,Etats-Unis d'Amérique,,Lewisville,United States of America,US,33.046233,-96.994174,95290.0,95290.0
+545,Etats-Unis d'Amérique,,Rock Hill,United States of America,US,34.9248667,-81.02507840000001,94564.0,59766.0
+546,Etats-Unis d'Amérique,,South Gate,United States of America,US,33.954737,-118.2120161,94396.0,94396.0
+547,Mexique,minor,Lagos de Moreno,Mexico,MX,21.356657,-101.937681,94127.0,84677.0
+548,Etats-Unis d'Amérique,minor,Fort Smith,United States of America,US,35.38592420000001,-94.3985475,93988.0,81985.0
+549,Etats-Unis d'Amérique,,College Station,United States of America,US,30.627977,-96.3344068,93857.0,93857.0
+550,Etats-Unis d'Amérique,,Sandy Springs,United States of America,US,33.92426879999999,-84.37853790000001,93853.0,93853.0
+551,Etats-Unis d'Amérique,,The Woodlands,United States of America,US,30.1579935,-95.4893845,93847.0,93847.0
+552,Etats-Unis d'Amérique,,Vista,United States of America,US,33.2000368,-117.2425355,93834.0,93834.0
+553,Etats-Unis d'Amérique,minor,Brockton,United States of America,US,42.08343350000001,-71.0183787,93810.0,93810.0
+554,Etats-Unis d'Amérique,,South Burlington,United States of America,US,44.4669941,-73.1709604,93807.0,38601.0
+555,Etats-Unis d'Amérique,,Mission Viejo,United States of America,US,33.6000233,-117.6719953,93305.0,93305.0
+556,Etats-Unis d'Amérique,minor,Lawrence,United States of America,US,38.9716689,-95.2352501,92726.0,83314.0
+557,Etats-Unis d'Amérique,admin,Santa Fe,United States of America,US,35.686975200000006,-105.937799,92681.0,69205.0
+558,Etats-Unis d'Amérique,minor,Greenville,United States of America,US,35.612661,-77.3663538,92565.0,70757.0
+559,Etats-Unis d'Amérique,minor,Yuma,United States of America,US,32.725324900000004,-114.624397,92489.0,84316.0
+560,Etats-Unis d'Amérique,,Vacaville,United States of America,US,38.3565773,-121.9877444,92428.0,92428.0
+561,Etats-Unis d'Amérique,,Kent,United States of America,US,47.38093350000001,-122.2348431,92411.0,92411.0
+562,Etats-Unis d'Amérique,,Quincy,United States of America,US,42.25287720000001,-71.0022705,92271.0,92271.0
+563,Mexique,,Ciudad Guzmán,Mexico,MX,19.704663,-103.461702,92161.0,88799.0
+564,Etats-Unis d'Amérique,,Davie,United States of America,US,26.0628665,-80.2331038,91992.0,91992.0
+565,Etats-Unis d'Amérique,minor,Lawton,United States of America,US,34.6126328,-98.41411359,91752.0,79839.0
+566,Etats-Unis d'Amérique,,Carson,United States of America,US,33.8314058,-118.2820165,91714.0,91714.0
+567,Etats-Unis d'Amérique,minor,Hillsboro,United States of America,US,45.5228939,-122.989827,91611.0,91611.0
+568,Etats-Unis d'Amérique,,Lee's Summit,United States of America,US,38.9108408,-94.3821724,91364.0,91364.0
+569,Mexique,,Tecomán,Mexico,MX,18.947664000000003,-103.900403,91321.0,79579.0
+570,Etats-Unis d'Amérique,,Pearland,United States of America,US,29.5635666,-95.2860474,91252.0,91252.0
+571,Etats-Unis d'Amérique,,South Sioux City,United States of America,US,42.4738831,-96.4136407,90932.0,83248.0
+572,Etats-Unis d'Amérique,,Renton,United States of America,US,47.4828776,-122.21706609999998,90927.0,90927.0
+573,Mexique,,Cuauhtémoc,Mexico,MX,28.408842,-106.863193,90835.0,79100.0
+574,Canada,,Moncton,Canada,CA,46.09652,-64.79757,90635.0,87467.0
+575,Etats-Unis d'Amérique,,Lynn,United States of America,US,42.466763,-70.94949390000002,90329.0,90329.0
+576,Etats-Unis d'Amérique,,Sparks,United States of America,US,39.5349112,-119.7526886,90264.0,90264.0
+577,Etats-Unis d'Amérique,,Hesperia,United States of America,US,34.4263886,-117.3008784,90173.0,90173.0
+578,République Dominicaine,admin,Barahona,Dominican Republic,DO,18.20854,-71.10077199999998,90128.0,77160.0
+579,Etats-Unis d'Amérique,,Beaverton,United States of America,US,45.487062,-122.8037102,89803.0,89803.0
+580,Etats-Unis d'Amérique,,Spokane Valley,United States of America,US,47.6732281,-117.2393748,89755.0,89755.0
+581,Etats-Unis d'Amérique,,Santa Monica,United States of America,US,34.01945429999999,-118.4911912,89736.0,89736.0
+582,Etats-Unis d'Amérique,,Westminster,United States of America,US,33.759183,-118.0067271,89701.0,89701.0
+583,Etats-Unis d'Amérique,,Hickory,United States of America,US,35.7331878,-81.3411974,89462.0,40334.0
+584,Etats-Unis d'Amérique,,Federal Way,United States of America,US,47.3223221,-122.3126222,89306.0,89306.0
+585,Etats-Unis d'Amérique,,Fall River,United States of America,US,41.7014912,-71.1550451,88857.0,88857.0
+586,Etats-Unis d'Amérique,minor,Toms River,United States of America,US,39.9537291,-74.1979192,88791.0,88791.0
+587,Etats-Unis d'Amérique,minor,Albany,United States of America,US,31.5785074,-84.155741,88766.0,75794.0
+588,Etats-Unis d'Amérique,,Roswell,United States of America,US,34.0231553,-84.3615928,88346.0,88346.0
+589,Etats-Unis d'Amérique,,Orem,United States of America,US,40.2968979,-111.69464750000002,88328.0,88328.0
+590,Etats-Unis d'Amérique,minor,San Angelo,United States of America,US,31.4637723,-100.4370375,88256.0,86339.0
+591,Etats-Unis d'Amérique,minor,Reading,United States of America,US,40.3356483,-75.9268747,88082.0,88082.0
+592,Etats-Unis d'Amérique,,State College,United States of America,US,40.793395,-77.8600013,87926.0,41835.0
+593,Etats-Unis d'Amérique,minor,Charlottesville,United States of America,US,38.0293059,-78.4766781,87925.0,34703.0
+594,Canada,,Saint John,Canada,CA,45.230798,-66.095316,87857.0,54449.0
+595,Etats-Unis d'Amérique,,Rio Rancho,United States of America,US,35.233375,-106.6644716,87521.0,87521.0
+596,Etats-Unis d'Amérique,,Sandy,United States of America,US,40.5702641,-111.8525129,87461.0,87461.0
+597,Etats-Unis d'Amérique,minor,La Crosse,United States of America,US,43.8013556,-91.2395807,87381.0,51818.0
+598,Etats-Unis d'Amérique,,Lehigh Acres,United States of America,US,26.604600800000004,-81.65278506,86784.0,86784.0
+599,Etats-Unis d'Amérique,minor,Nashua,United States of America,US,42.7653662,-71.467566,86494.0,86494.0
+600,Etats-Unis d'Amérique,,Germantown,United States of America,US,39.173162100000006,-77.2716502,86395.0,86395.0
+601,Etats-Unis d'Amérique,,Longmont,United States of America,US,40.1672069,-105.1019275,86270.0,86270.0
+602,Mexique,minor,Agua Prieta,Mexico,MX,31.330706,-109.548756,86083.0,68446.0
+603,Etats-Unis d'Amérique,minor,Vero Beach,United States of America,US,27.6386434,-80.39727359999998,86039.0,17262.0
+604,Etats-Unis d'Amérique,,Baytown,United States of America,US,29.735504700000003,-94.9774274,86034.0,67341.0
+605,Guatemala,admin,Huehuetenango,Guatemala,GT,15.319722,-91.470833,85992.0,79426.0
+606,Etats-Unis d'Amérique,,Homestead,United States of America,US,25.4687224,-80.4775569,85967.0,35379.0
+607,Etats-Unis d'Amérique,,Norwalk,United States of America,US,41.1175966,-73.4078968,85603.0,85603.0
+608,Etats-Unis d'Amérique,minor,Muncie,United States of America,US,40.1933767,-85.3863599,85449.0,65327.0
+609,Etats-Unis d'Amérique,minor,Huntington,United States of America,US,38.41924960000001,-82.445154,85396.0,48518.0
+610,Etats-Unis d'Amérique,,Whittier,United States of America,US,33.97917929999999,-118.032844,85331.0,85331.0
+611,Etats-Unis d'Amérique,,Newport Beach,United States of America,US,33.6189101,-117.9289469,85186.0,85186.0
+612,Etats-Unis d'Amérique,,Deltona,United States of America,US,28.9005446,-81.2636738,85182.0,85182.0
+613,Etats-Unis d'Amérique,,Newton,United States of America,US,42.3370414,-71.2092214,85146.0,85146.0
+614,Etats-Unis d'Amérique,,Plantation,United States of America,US,26.1275862,-80.23310359999998,84955.0,84955.0
+615,Etats-Unis d'Amérique,,San Leandro,United States of America,US,37.7249296,-122.1560768,84950.0,84950.0
+616,Canada,,Nanaimo,Canada,CA,49.15,-123.916667,84905.0,80491.0
+617,Etats-Unis d'Amérique,minor,Duluth,United States of America,US,46.7832731,-92.1065787,84800.0,79253.0
+618,Etats-Unis d'Amérique,minor,Suffolk,United States of America,US,36.7282054,-76.5835621,84585.0,84585.0
+619,Etats-Unis d'Amérique,minor,Springfield,United States of America,US,39.9242266,-83.80881720000002,84576.0,64325.0
+620,Etats-Unis d'Amérique,,Sunrise,United States of America,US,26.1339746,-80.1130998,84439.0,84439.0
+621,Etats-Unis d'Amérique,,Sunrise,United States of America,US,26.16729736,-80.29498291,84439.0,84439.0
+622,Etats-Unis d'Amérique,,Boca Raton,United States of America,US,26.3586885,-80.08309840000003,84392.0,84392.0
+623,Etats-Unis d'Amérique,,Hawthorne,United States of America,US,33.9164032,-118.3525748,84293.0,84293.0
+624,Etats-Unis d'Amérique,,West Alton,United States of America,US,38.8650488,-90.2226109,84276.0,30496.0
+625,Etats-Unis d'Amérique,,Allen,United States of America,US,33.1031744,-96.6705503,84246.0,84246.0
+626,Etats-Unis d'Amérique,,Slidell,United States of America,US,30.2751945,-89.7811745,84239.0,27799.0
+627,Etats-Unis d'Amérique,,Clifton,United States of America,US,40.8584328,-74.16375529999998,84136.0,84136.0
+628,Etats-Unis d'Amérique,,Westland,United States of America,US,42.324204,-83.400211,84094.0,84094.0
+629,Etats-Unis d'Amérique,,Cicero,United States of America,US,41.8455878,-87.7539448,83891.0,83891.0
+630,Etats-Unis d'Amérique,minor,Lake Charles,United States of America,US,30.226594899999995,-93.2173759,83821.0,70309.0
+631,Etats-Unis d'Amérique,minor,Sault Sainte Marie,United States of America,US,46.4952997,-84.34531690000001,83805.0,16542.0
+632,Etats-Unis d'Amérique,,San Marcos,United States of America,US,33.1433723,-117.1661449,83781.0,83781.0
+633,Canada,,Peterborough,Canada,CA,44.3,-78.333333,83627.0,75877.0
+634,Etats-Unis d'Amérique,,League City,United States of America,US,29.5074538,-95.0949303,83560.0,83560.0
+635,Etats-Unis d'Amérique,,Victorville,United States of America,US,34.536106700000005,-117.2911565,83496.0,83496.0
+636,Etats-Unis d'Amérique,,Citrus Heights,United States of America,US,38.7071247,-121.2810611,83301.0,83301.0
+637,Etats-Unis d'Amérique,,Alhambra,United States of America,US,34.095287,-118.1270146,83089.0,83089.0
+638,Etats-Unis d'Amérique,,Tracy,United States of America,US,37.7396513,-121.4252227,82922.0,82922.0
+639,Etats-Unis d'Amérique,,Bloomington,United States of America,US,44.840798,-93.2982799,82893.0,82893.0
+640,Etats-Unis d'Amérique,minor,Ogden,United States of America,US,41.223,-111.9738304,82825.0,82825.0
+641,Etats-Unis d'Amérique,minor,Sioux City,United States of America,US,42.4999942,-96.4003069,82684.0,82684.0
+642,Etats-Unis d'Amérique,,Warwick,United States of America,US,41.700101,-71.4161671,82672.0,82672.0
+643,Guatemala,admin,Chimaltenango,Guatemala,GT,14.661110999999998,-90.819444,82370.0,82370.0
+644,Etats-Unis d'Amérique,minor,Gulfport,United States of America,US,30.367419800000004,-89.0928155,82165.0,71127.0
+645,Etats-Unis d'Amérique,,Hoover,United States of America,US,33.405386699999994,-86.81137820000002,81619.0,81619.0
+646,Etats-Unis d'Amérique,,Parma,United States of America,US,41.40477420000001,-81.72290859999998,81601.0,81601.0
+647,Etats-Unis d'Amérique,,Nampa,United States of America,US,43.57735551,-116.5779202,81557.0,81557.0
+648,Etats-Unis d'Amérique,,Edmond,United States of America,US,35.6567797,-97.50187849,81405.0,81405.0
+649,Etats-Unis d'Amérique,admin,Annapolis,United States of America,US,38.9784453,-76.4921829,81300.0,36252.0
+650,Mexique,,Salina Cruz,Mexico,MX,16.197501000000006,-95.202188,81063.0,73648.0
+651,Etats-Unis d'Amérique,,Champaign,United States of America,US,40.1164205,-88.2433829,81055.0,81055.0
+652,Mexique,,Ciudad Mante,Mexico,MX,22.743043,-98.973903,79981.0,76618.0
+653,Canada,,Saint-Jérôme,Canada,CA,45.766667,-74.0,78439.0,54948.0
+654,Canada,,Red Deer,Canada,CA,52.266667,-113.8,74857.0,73593.0
+655,République Dominicaine,minor,Bonao,Dominican Republic,DO,18.936874,-70.409226,73269.0,73269.0
+656,République Dominicaine,admin,San Juan,Dominican Republic,DO,18.805884,-71.229907,72950.0,72950.0
+657,Mexique,,Tamazunchale,Mexico,MX,21.259926,-98.789351,72685.0,21532.0
+658,Canada,,Lethbridge,Canada,CA,49.7,-112.833333,70617.0,58571.0
+659,Guatemala,admin,Totonicapán,Guatemala,GT,14.911667,-91.361111,69734.0,69734.0
+660,Mexique,minor,Ríoverde,Mexico,MX,21.931146,-99.994879,69613.0,48854.0
+661,Cuba,minor,Güines,Cuba,CU,22.837268,-82.026409,68935.0,45955.0
+662,Canada,,Kamloops,Canada,CA,50.666667,-120.333333,68714.0,68628.0
+663,Cuba,admin,Artemisa,Cuba,CU,22.816667,-82.75944399999999,68073.0,23976.0
+664,Mexique,,Matehuala,Mexico,MX,23.648243,-100.643337,67717.0,59532.0
+665,République Dominicaine,minor,Baní,Dominican Republic,DO,18.279644,-70.331845,66709.0,66709.0
+666,Cuba,minor,Morón,Cuba,CU,22.107736,-78.626672,66060.0,49043.0
+667,Canada,,Prince George,Canada,CA,53.916667,-122.766667,65558.0,62707.0
+668,Guatemala,admin,Cobán,Guatemala,GT,15.470833,-90.370833,65194.0,53375.0
+669,Guatemala,admin,Mazatenango,Guatemala,GT,14.534167000000002,-91.503333,64652.0,44132.0
+670,Mexique,minor,Ciudad Hidalgo,Mexico,MX,19.692697,-100.554449,64154.0,54993.0
+671,Cuba,minor,Colón,Cuba,CU,22.72064,-80.90491800000002,63882.0,17472.0
+672,Canada,,Medicine Hat,Canada,CA,50.033333,-110.683333,63138.0,53626.0
+673,Panama,,Balboa,Panama,PA,8.95,-79.56666700000002,62882.0,62882.0
+674,Mexique,,Guamúchil,Mexico,MX,25.459776,-108.075297,62695.0,59276.0
+675,Cuba,minor,Sagua la Grande,Cuba,CU,22.806667,-80.075556,62073.0,19432.0
+676,République Dominicaine,minor,Moca,Dominican Republic,DO,19.393521,-70.525977,61834.0,61834.0
+677,Canada,,Drummondville,Canada,CA,45.883333,-72.483333,59489.0,54123.0
+678,République Dominicaine,minor,Azua,Dominican Republic,DO,18.453192,-70.73490100000002,59139.0,59139.0
+679,Mexique,minor,Linares,Mexico,MX,24.859088,-99.56551,57731.0,46968.0
+680,Mexique,minor,Heroica Caborca,Mexico,MX,30.718253000000004,-112.158217,57357.0,52896.0
+681,Guatemala,admin,Puerto Barrios,Guatemala,GT,15.727778,-88.594444,56605.0,53150.0
+682,Cuba,minor,Placetas,Cuba,CU,22.311837,-79.654402,55408.0,14538.0
+683,Mexique,,Nuevo Casas Grandes,Mexico,MX,30.422983,-107.909475,54826.0,51356.0
+684,Cuba,,Nuevitas,Cuba,CU,21.545853,-77.26504399999997,54022.0,39570.0
+685,Canada,,Chicoutimi,Canada,CA,48.45,-71.06666700000002,53940.0,53940.0
+686,Mexique,minor,San Pedro de Las Colonias,Mexico,MX,25.756019,-102.983845,53688.0,53688.0
+687,Cuba,minor,Banes,Cuba,CU,20.961164,-75.721999,53104.0,42387.0
+688,Canada,admin,Fredericton,Canada,CA,45.910648,-66.658649,52337.0,36713.0
+689,Canada,,Chilliwack,Canada,CA,49.166667,-121.95,51942.0,51942.0
+690,Guatemala,admin,Jutiapa,Guatemala,GT,14.291667000000002,-89.895833,50681.0,34332.0
+691,Canada,,North Bay,Canada,CA,46.3,-79.45,50170.0,41807.0
+692,Canada,,Shawinigan-Sud,Canada,CA,46.528557,-72.751453,49161.0,34342.0
+693,Canada,,Cornwall,Canada,CA,45.016667,-74.733333,48821.0,46382.0
+694,Mexique,,Valladolid,Mexico,MX,20.689967000000006,-88.202155,48479.0,39663.0
+695,République Dominicaine,admin,Mao,Dominican Republic,DO,19.55186,-71.078133,48297.0,48297.0
+696,Mexique,minor,Ciudad de Huajuapam de León,Mexico,MX,17.807872,-97.779561,47844.0,35689.0
+697,Mexique,,Autlán,Mexico,MX,19.79905,-104.357751,47669.0,42155.0
+698,Mexique,minor,Progreso,Mexico,MX,21.283064000000003,-89.661232,47124.0,20661.0
+699,Panama,admin,Santiago,Panama,PA,8.100366000000001,-80.97216800000002,45955.0,45355.0
+700,Guatemala,admin,Jalapa,Guatemala,GT,14.634722,-89.988889,45834.0,45834.0
+701,Guatemala,admin,Sololá,Guatemala,GT,14.772222,-91.183333,45373.0,45373.0
+702,Canada,,Joliette,Canada,CA,46.034,-73.441,45361.0,34772.0
+703,République Dominicaine,minor,Salcedo,Dominican Republic,DO,19.377619,-70.41762,45299.0,45299.0
+704,Panama,,Puerto Chitré,Panama,PA,7.983333,-80.4,44082.0,43966.0
+705,Canada,,Belleville,Canada,CA,44.166667,-77.383333,43990.0,43990.0
+706,République Dominicaine,,El Pino,Dominican Republic,DO,18.883333,-71.666667,43894.0,27908.0
+707,Mexique,minor,Santo Domingo Tehuantepec,Mexico,MX,16.318534,-95.247662,42776.0,37389.0
+708,Cuba,minor,San Antonio de los Baños,Cuba,CU,22.890183,-82.500988,42724.0,32628.0
+709,Mexique,,Morelos,Mexico,MX,25.176891,-99.830307,42640.0,37694.0
+710,Mexique,,Cabo San Lucas,Mexico,MX,22.89055,-109.91638600000002,42601.0,36384.0
+711,Canada,admin,Charlottetown,Canada,CA,46.238225,-63.139481,42402.0,31293.0
+712,Mexique,minor,Tizimín,Mexico,MX,21.142681,-88.151009,41993.0,40652.0
+713,République Dominicaine,minor,Cotuí,Dominican Republic,DO,19.052716,-70.149392,41641.0,41641.0
+714,Guatemala,admin,Chiquimula,Guatemala,GT,14.8,-89.545833,41521.0,41521.0
+715,Canada,,Victoriaville,Canada,CA,46.063106,-71.958802,41500.0,34426.0
+716,Canada,,Grande Prairie,Canada,CA,55.166667,-118.8,41462.0,40845.0
+717,Guatemala,admin,Salamá,Guatemala,GT,15.102778,-90.318056,40000.0,40000.0
