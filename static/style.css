@@ -402,6 +402,10 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   /*border-right: 1px solid lightgray;*/
 }
 
+#mapid.inverted .leaflet-tile-pane img {
+  filter: invert(1);
+}
+
 #game-creator .fieldset {
     margin: 10px 0;
 

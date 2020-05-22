@@ -25,7 +25,13 @@ var hintContainer = $("target");
     var LEADERBOARD = [];
     var autozoomCheckbox = $("autozoom-check");
     var newMessageWhileHidden = false;
+    var invertModeButton = $("colinvert-check");
+
     autozoomCheckbox.checked = readAutozoom();
+    invertModeButton.checked = readInverted();
+    if (invertModeButton.checked){
+        $("mapid").classList.add("inverted");
+    }
     if (!readChatVisibility()){
         $("chat-box").classList.add("hidden");
     }
@@ -499,6 +505,13 @@ var hintContainer = $("target");
         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamAutozoom\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         return cookieValue !== "0";
     }
+    function storeInverted(value){
+        document.cookie = `amstramdamInverted=${+value}`;
+    }
+    function readInverted(value){
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamInverted\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        return cookieValue !== "0";
+    }
     function storeChatVisibility(value){
         document.cookie = `amstramdamChatVisible=${+value}`;
     }
@@ -603,6 +616,17 @@ var hintContainer = $("target");
 
         autozoomCheckbox.addEventListener("change", () => {
             storeAutozoom(autozoomCheckbox.checked);
+        });
+        invertModeButton.addEventListener("change", () => {
+            storeInverted(invertModeButton.checked);
+            $("mapid").classList.toggle("inverted");
+            //
+            // if (invertModeButton.checked){
+            //     $("mapid").classList.add("inverted");
+            // }
+            // else {
+            //     $("mapid").classList.remove("inverted");
+            // }
         });
 
         /* CHAT SUPPORT */
