@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: visible;
+    overflow: auto;
       z-index: 1001;
   }
 
@@ -13,11 +13,17 @@
         display: none;
     }
 
+    #curr-score:before {
+        content: "+";
+        display: inline-block;
+    }
+
   #popup {
+      position: relative;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: auto;
+      /*right: 0;*/
+      /*bottom: auto;*/
     transform: none;
       width: auto;
       -webkit-box-sizing: border-box;
@@ -25,7 +31,7 @@
       box-sizing: border-box;
       min-height: 100%;
     z-index: 1002;
-      min-height: 0;
+      /*min-height: 0;*/
 }
   #popup .popup-main {
       display: flex;
@@ -67,26 +73,86 @@
   .column {
       position: fixed;
       top: -5px;
-    left: -5px;
+    left: auto;
     right: -5px;
       bottom: auto;
+      width: auto;
   }
+
+  .box {
+      padding: 10px;
+
+  }
+
+  .collective-results ul {
+      margin: 0;
+      margin-top: 5px;
+      display: inline-block;
+  }
+
+
+  .nav a {
+      display: none;
+  }
+
 
   .box .self {
       display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
       border: none;
+      padding-bottom: 0;
   }
+
+  .score {
+      border: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .box .score {
+      margin-top: 0;
+  }
+
+
 
   #main-info-box {
-      position: fixed;
-    top: -5px;
-    left: -5px;
-    right: -5px;
+      /*position: fixed;*/
+    /*top: -5px;*/
+    /*left: -5px;*/
+    /*right: -5px;*/
+      text-align: right;
+
+      background-color: transparent;
+      color: red;
+      border:none;
+      margin: 0;
+      padding-bottom: 0;
+
   }
 
+  /*.total-score {*/
+      /*text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;*/
+  /*}*/
+
+  #player-name {
+      color: white;
+      background-color: red;
+      margin-right: 9px;
+      padding: 1px 5px;
+
+  }
+  #player-name.name:after {
+      color: transparent;
+      display: none;
+  }
+
+  #current-results li {
+      background-color: blue;
+      color: white;
+      padding: 1px 5px;
+  }
   #main-info-box.toggled .self {
       display: none;
   }
@@ -97,6 +163,19 @@
 
   .controls button:disabled {
       display: none;
+  }
+
+  .controls button:not(:disabled) {
+      position: fixed;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      background-color: white;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-color: red;
+      color: red;
+      border-width: 2px;
   }
 
   .right-corner {
@@ -120,13 +199,20 @@
 
   #game-sharing-link {
       right: 0;
+      display: none;
   }
 
 #results {
-    position: fixed;
-    top: -25px;
-    left: -5px;
-    right: -5px;
+    /*position: fixed;*/
+    /*top: -20px;*/
+    /*left: 0;*/
+    /*right: 0;*/
+
+    background-color: transparent;
+    color: blue;
+    border: none;
+    text-align: right;
+    padding-top:0;
 }
 
 #results .title, #results .deets, #results .distance {
@@ -134,7 +220,7 @@
 }
 
 #left-column-display.with-results #main-info-box {
-    display: none;
+    /*display: none;*/
 }
 
 }
