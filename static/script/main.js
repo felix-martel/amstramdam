@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return document.getElementById(identifier);
     };
     
-    $("sharing-link").innerHTML = window.location.href.replace("https://", "").replace("www", "");
+    $("sharing-link").innerHTML = window.location.href.replace("https://", "").replace("www.", "");
     const blinkContainer = $("blink-wrapper");
     //const audioBeep = $("beep");
 var hintContainer = $("target");
