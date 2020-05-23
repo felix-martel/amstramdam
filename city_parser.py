@@ -1,4 +1,5 @@
 from collections import defaultdict
+from parser import ParserError
 
 from geo import Point
 import geo
@@ -52,10 +53,25 @@ for code, region in REV_REGION_CODES.items():
 GROUP_EASY = "Facile"
 GROUP_HARD = "Difficile"
 GROUP_GOD = "Impitoyable"
+GROUP_HISTORIC = "Historique"
 GROUP_COUNTRIES = "Par pays"
 
+historic_names = {
+    # "Tout": "all_filtered",
+    # "XXème siècle": "1900_handpicked",
+    # "Depuis 1900": "1900_filtered",
+    "Seconde guerre mondiale": "ww2_filtered",
+    "Première guerre mondiale": "ww1_sorted",
+    "Guerres napoléoniennes": "napoleonic_wars_sorted",
+    # "Rome antique": "rome_sorted",
+}
+
 def make_params(map_id, map_name, file, use_hint=True, limit_size=None, **params):
-    return dict(map_id=map_id, params=dict(name=map_name, file=file, use_hint=use_hint, limit_size=limit_size))
+    return dict(map_id=map_id, params=dict(name=map_name, file=file, use_hint=use_hint, limit_size=limit_size, **params))
+
+def make_historic_params(name):
+    map_id = historic_names[name]
+    return make_params(map_id, name, f"data/historic/{map_id}.csv", method="from_historic")
 
 def make_region_params(code, level):
     return make_params(f"{code}_{level}", REV_REGION_CODES[code], f"data/regions/{code}_{level}.csv")
@@ -68,6 +84,7 @@ GROUPED = [
         make_params("world", "Monde entier", "data/places.world.csv"),
         make_params("world_capitals", "Capitales", "data/world_capitals.csv"),
         make_params("world_capitals-no-hint", "Capitales (sans pays)", "data/world_capitals.csv", use_hint=False),
+        make_params("XX", "Evénements du XXème siècle", "data/historic/1900_handpicked.csv", use_hint=False),
     ]),
     dict(group=GROUP_EASY, maps=[
         make_params("france_easy", "France", "data/all/FR.csv"),
@@ -78,6 +95,9 @@ GROUPED = [
         *(make_region_params(code, "normal") for code in REV_REGION_CODES)
     ]),
     dict(group=GROUP_GOD, maps=[make_region_params(code, "hard") for code in REV_REGION_CODES]),
+    # dict(group=GROUP_HISTORIC, maps=[
+    #     make_params("XX", "XXème siècle", "data/historic/1900_handpicked.csv", use_hint=False),
+    #     *(make_historic_params(name) for name in historic_names)]),
     dict(group=GROUP_COUNTRIES, maps=[make_country_params(code) for code in REV_COUNTRY_CODES])
 ]
 
@@ -151,6 +171,39 @@ class GameMap:
         return cls(name, places=df.city, lons=df.lng, lats=df.lat,
                    ranks=ranks,
                    hints=df.admin if use_hint else None, group=group)
+
+    @classmethod
+    def from_historic(cls, name, file, limit_size=None, group=None, use_hint=True, sep=None):
+        try:
+            df = pd.read_csv(file, nrows=limit_size)
+        except Exception:
+            df = pd.read_csv(file, nrows=limit_size, sep=";")
+
+        ranks = None
+        if "popularity" in df.columns:
+            if "keep" in df.columns:
+                ranks = [int(x) for x in np.lexsort((-df.keep, -df.popularity))]
+            else:
+                ranks = np.argsort(-df.popularity)
+            print(ranks[:10])
+            # ranks = np.argsort(how)
+        def get_name(name, date):
+            if not date or not isinstance(date, str):
+                return str(name)
+            if "-" in date:
+                year = date.split("-")[0]
+            elif "/" in date:
+                year = date.split("/")[-1]
+            else:
+                return str(name)
+            if year in name:
+                return str(name)
+            return f"{name} ({year})"
+        if "date" in df:
+            places = [get_name(name, date) for name, date in zip(df.label, df.date)]
+        else:
+            places = df.label.astype(str)
+        return cls(name, places=places, lons=df.lon.astype(float), lats=df.lat.astype(float), ranks=ranks, group=group)
 
     @classmethod
     def from_files(cls, name, files, use_hint=True, limit_size=None, group=None):
