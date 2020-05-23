@@ -1,5 +1,5 @@
 ,fact,coords,year,location,country,lon,lat,city,lng
-0,Premier vol motorisé,"36° 05′ 50″ N, 75° 42′ 44″ W",1903,Kitty Hawk,USA,-75.71222222222222,36.09722222222222,Premier vol motorisé (1903),-75.71222222222222
+0,Premier vol des frères Wright,"36° 05′ 50″ N, 75° 42′ 44″ W",1903,Kitty Hawk,USA,-75.71222222222222,36.09722222222222,Premier vol des frères Wright (1903),-75.71222222222222
 1,Théorie de la relativité restreinte,"46° 56′ 57″ N, 7° 26′ 50″ E",1905,Berne,Suisse,7.447222222222223,46.94916666666666,Théorie de la relativité restreinte (1905),7.447222222222223
 2,Guerre des Boers,"26° 40′ 25″ S, 27° 55′ 55″ E",1902,,Transvaal,27.931944444444447,-26.67361111111111,Guerre des Boers (1902),27.931944444444447
 3,Guerre russo-japonaise,"38° 48′ 00″ N, 121° 14′ 00″ E",1904,"Port-Arthur, Mandchourie",,121.23333333333333,38.8,Guerre russo-japonaise (1904),121.23333333333333
@@ -12,7 +12,7 @@
 11,Bataille de la Somme,"50° 00′ 56″ N, 2° 41′ 51″ E",1916,Somme,France,2.6975000000000002,50.01555555555556,Bataille de la Somme (1916),2.6975000000000002
 12,Dardanelles,"40° 22′ 02″ N, 26° 27′ 18″ E",1915,Péninsule de Gallipoli,Empire ottoman,26.455,40.367222222222225,Dardanelles (1915),26.455
 13,Armistice de 1918,"49° 25′ 38″ N, 2° 54′ 23″ E",1918,Rethondes,France,2.906388888888889,49.42722222222222,Armistice de 1918,2.906388888888889
-15,Révolution d'Octobre,"59° 56′ 25″ N, 30° 18′ 50″ E",1917,Petrograd,Russie,30.31388888888889,59.94027777777777,Révolution d'Octobre (1917),30.31388888888889
+15,Prise du Palais d'Hiver,"59° 56′ 25″ N, 30° 18′ 50″ E",1917,Petrograd,Russie,30.31388888888889,59.94027777777777,Prise du Palais d'Hiver (1917),30.31388888888889
 16,Massacre de Nankin,"32° 03′ 00″ N, 118° 46′ 00″ E",1937,Nankin,Chine,118.76666666666667,32.05,Massacre de Nankin (1937),118.76666666666667
 17,Création du Parti fasciste par Mussolini,"41° 53′ 19″ N, 12° 29′ 12″ E",1921,Rome,Italie,12.486666666666666,41.88861111111111,Création du Parti fasciste par Mussolini (1921),12.486666666666666
 18,Bombardement de Guernica,"43° 19′ 00″ N, 2° 40′ 00″ W",1937,Guernica,Espagne,-2.6666666666666665,43.31666666666667,Bombardement de Guernica (1937),-2.6666666666666665
@@ -38,8 +38,8 @@
 45,Débarquement de la baie des Cochons,"22° 13′ 00″ N, 81° 10′ 00″ W",1961,Baie des Cochons,Cuba,-81.16666666666667,22.216666666666665,Débarquement de la baie des Cochons (1961),-81.16666666666667
 46,Exécution de Che Guevara,"18° 47′ 00″ S, 64° 13′ 00″ W",1967,La Higuera,Bolivie,-64.21666666666667,-18.783333333333335,Exécution de Che Guevara (1967),-64.21666666666667
 47,Lancement de Spoutnik 1,"45° 57′ 53″ N, 63° 18′ 18″ E",1957,Baïkonour,URSS,63.305,45.96472222222223,Lancement de Spoutnik 1 (1957),63.305
-48,Premier humain sur la Lune,"28° 27′ 00″ N, 80° 32′ 00″ W",1969,Cap Canaveral,USA,-80.53333333333333,28.45,Premier humain sur la Lune (1969),-80.53333333333333
-49,Assassinat de MLK,"35° 07′ 03″ N, 89° 58′ 16″ W",1968,Memphis,USA,-89.97111111111111,35.1175,Assassinat de MLK (1968),-89.97111111111111
+48,Décollage d'Apollo 11,"28° 27′ 00″ N, 80° 32′ 00″ W",1969,Cap Canaveral,USA,-80.53333333333333,28.45,Décollage d'Apollo 11 (1969),-80.53333333333333
+49,Assassinat de Martin Luther King,"35° 07′ 03″ N, 89° 58′ 16″ W",1968,Memphis,USA,-89.97111111111111,35.1175,Assassinat de Martin Luther King (1968),-89.97111111111111
 50,Boycott de Rosa Parks,"32° 21′ 42″ N, 86° 16′ 45″ W",1955,Montgomery,USA,-86.27916666666667,32.361666666666665,Boycott de Rosa Parks (1955),-86.27916666666667
 51,Coup d'État des Colonels,"37° 58′ 00″ N, 23° 43′ 00″ E",1967,Athènes,Grèce,23.716666666666665,37.96666666666667,Coup d'État des Colonels (1967),23.716666666666665
 52,Révolution iranienne,"35° 48′ 39″ N, 51° 28′ 18″ E",1979,Téhéran,Iran,51.47166666666667,35.81083333333333,Révolution iranienne (1979),51.47166666666667
@@ -62,11 +62,11 @@
 71,Attentat du Petit-Clamart contre De Gaulle,"48° 46′ 44″ N, 2° 14′ 07″ E",1962,Clamart,France,2.2352777777777777,48.778888888888886,Attentat du Petit-Clamart contre De Gaulle (1962),2.2352777777777777
 72,Bataille d'Alger,"36° 46′ 34″ N, 3° 03′ 36″ E",1957,Alger,Algérie,3.0599999999999996,36.77611111111111,Bataille d'Alger (1957),3.0599999999999996
 75,Putsch de la Brasserie,"48° 07′ 49″ N, 11° 35′ 31″ E",1923,Munich,Allemagne,11.591944444444445,48.13027777777778,Putsch de la Brasserie (1923),11.591944444444445
-78,Fondation du Bauhaus (Weimar),"50° 58′ 59″ N, 11° 19′ 01″ E",1919,Weimar,Allemagne,11.316944444444443,50.98305555555556,Fondation du Bauhaus (Weimar) (1919),11.316944444444443
-80,Premier essai atomique du Projet Manhattan,"33° 40′ 38″ N, 106° 28′ 31″ W",1945,Alamogordo,USA,-106.47527777777778,33.67722222222222,Premier essai atomique du Projet Manhattan (1945),-106.47527777777778
-81,Découverte de la structure de l'ADN (Cambridge),"52° 12′ 33,35″ N, 0° 05′ 31,24″ E",1953,Cambridge,USA,0.091944,52.209167,Découverte de la structure de l'ADN (Cambridge) (1953),0.091944
+78,Fondation du Bauhaus,"50° 58′ 59″ N, 11° 19′ 01″ E",1919,Weimar,Allemagne,11.316944444444443,50.98305555555556,Fondation du Bauhaus (1919),11.316944444444443
+80,Premier essai atomique,"33° 40′ 38″ N, 106° 28′ 31″ W",1945,Alamogordo,USA,-106.47527777777778,33.67722222222222,Premier essai atomique (1945),-106.47527777777778
+81,Découverte de la structure de l'ADN,"52° 12′ 33,35″ N, 0° 05′ 31,24″ E",1953,Cambridge,USA,0.091944,52.209167,Découverte de la structure de l'ADN (1953),0.091944
 82,Création de la Ford Motor Company,"42° 22′ 09″ N, 83° 03′ 56″ W",1903,Detroit,USA,-83.06555555555555,42.369166666666665,Création de la Ford Motor Company (1903),-83.06555555555555
-83,Premier essai du TGV (Belfort),"47° 38′ 17″ N, 6° 51′ 46″ E",1972,Belfort,France,6.862777777777778,47.63805555555555,Premier essai du TGV (Belfort) (1972),6.862777777777778
+83,Premier essai du TGV,"47° 38′ 17″ N, 6° 51′ 46″ E",1972,Belfort,France,6.862777777777778,47.63805555555555,Premier essai du TGV (1972),6.862777777777778
 84,Accords du Latran,"41° 53′ 19″ N, 12° 29′ 12″ E",1929,Rome,Italie,12.486666666666666,41.88861111111111,Accords du Latran (1929),12.486666666666666
 85,Départ de la Croisière Jaune,"33° 53′ 23″ N, 35° 30′ 01″ E",1931,Beyrouth,Liban,35.500277777777775,33.88972222222222,Départ de la Croisière Jaune (1931),35.500277777777775
 86,Guerre du Rif,"35° 00′ N, 4° 00′ W",1921-1926,Rif,Maroc,-4.0,35.0,Guerre du Rif (1921-1926),-4.0
