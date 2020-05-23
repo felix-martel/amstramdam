@@ -325,6 +325,7 @@ var hintContainer = $("target");
         socket.on("game-launched", (data) => {
             console.debug("Received: game launched");
             hideResults();
+            clearMap();
             gameLaunched = true;
             gameLauncher.disabled = true;
             startWaitTimer({duration: 3, label: TEXTS.beforeGameStart});
