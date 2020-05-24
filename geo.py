@@ -27,6 +27,9 @@ class Point(object):
     def __hash__(self):
         return hash(tuple(self))
 
+    def to_JSON(self):
+        return dict(lon=self.lon, lat=self.lat)
+
     @classmethod
     def from_latlon(cls, lat, lon):
         return cls(lon, lat)

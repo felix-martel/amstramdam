@@ -21,7 +21,7 @@ def create_game(*args, **kwargs):
         name = f"{name}_{disambig[name]}"
 
     assert name not in MANAGER
-    MANAGER[name] = Game(*args, **kwargs)
+    MANAGER[name] = Game(name, *args, **kwargs)
 
     return name, MANAGER[name]
 
@@ -49,7 +49,7 @@ def get_public_games():
 def relaunch_game(name, **kwargs):
     old_game = MANAGER[name]
     params = {**old_game.get_params(), **kwargs}
-    MANAGER[name] = Game(**params)
+    MANAGER[name] = Game(old_game.name, **params)
     return MANAGER[name]
 
 def exists(name):

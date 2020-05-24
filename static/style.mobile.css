@@ -215,6 +215,10 @@
     padding-top:0;
 }
 
+#popup table .player-score-deets {
+    display: none;
+}
+
 #results .title, #results .deets, #results .distance {
     display: none;
 }

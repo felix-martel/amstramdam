@@ -65,9 +65,10 @@ def get_cities(map):
     return load_cities(map["fname"], map["min-pop"])
 
 class Game:
-    def __init__(self, players=None, n_run=20, time_param=5, dist_param=None,
+    def __init__(self, name, players=None, n_run=20, time_param=5, dist_param=None,
                  difficulty=1, is_public=False, creation_date=None,
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
+        self.name = name
         self.map_name = map
         map = GameMap.from_name(self.map_name)
         self.map_display_name = map.name
@@ -105,7 +106,16 @@ class Game:
             creation_date = datetime.now()
         self.date_created = creation_date
         self.launched = False
+        self.__id_counter = len(self.players)
         # self.run_in_progress = False
+
+    def get_new_id(self):
+        curr_id = self.__id_counter
+        self.__id_counter += 1
+        return str(curr_id)
+
+    def generate_player_name(self):
+        return f"{self.name}_{self.get_new_id()}"
 
     def get_params(self):
         return dict(
@@ -141,23 +151,40 @@ class Game:
 Multigeo {'Public' if self.is_public else 'Private'} Game
 Map: {self.map_display_name}
 Difficulty: {100.*self.difficulty:.0f}%
-Players: {', '.join(self.players)}
+Players: {self.print_pseudos()}
 Places: {', '.join([p[0][0] for p in self.places])}
 Run: {self.curr_run_id+1}/{self.n_run}
 ---"""
 
+    def generate_new_pseudo(self):
+        if self.available_names:
+            return self.available_names.pop()
+        else:
+            return random.choice(list(NAMES))
 
-    def add_player(self, name=None):
+    def print_pseudos(self):
+        pseudos = []
+        for player in self.players:
+            pseudo = self.get_pseudo(player)
+            if pseudo and pseudo != player:
+                pseudos.append(f"{player} ({pseudo})")
+            else:
+                pseudos.append(player)
+        return ", ".join(pseudos)
+
+    def add_player(self, name=None, pseudo=None):
         if name is not None:
             assert name not in self.global_player_list, f"Name '{name}' already exists"
             # assert name not in self.players, f"Name '{name}' already exists"
-            if name in self.available_names:
-                self.available_names.remove(name)
         else:
-            name = self.available_names.pop()
+            name = self.generate_player_name() # self.available_names.pop()
         self.players.add(name)
+        if pseudo is None:
+            pseudo = self.generate_new_pseudo()
+        self.add_pseudo(name, pseudo)
         self.global_player_list.add(name)
-        return name
+
+        return name, pseudo
 
     def add_pseudo(self, name, pseudo):
         if name not in self.players:
@@ -208,8 +235,34 @@ Run: {self.curr_run_id+1}/{self.n_run}
     def on_game_end(self):
         print("Game ended!")
 
+    def places_as_json(self):
+        return [dict(location=place[0], hint=place[1], lon=point.lon, lat=point.lat) for place, point in self.places]
+
     def get_final_results(self):
-        return dict(records=self.records, scores=self.scores, places=self.places)
+        results = dict()
+        distances = defaultdict(list)
+        durations = defaultdict(list)
+        for recs in self.records:
+            for rec in recs:
+                player = rec["player"]
+                distances[player].append(rec["dist"])
+                durations[player].append(rec["delta"])
+        #for player in self.players:
+        #    results[player] = dict(
+        #        player=player,
+        #        dist=sum(distances.get(player, []))/self.n_run,
+        #        delta=sum(durations.get(player, []))/self.n_run,
+        #        score=self.scores.get(player, 0)
+        #    )
+
+        results = [dict(
+                player=player,
+                dist=sum(distances.get(player, []))/self.n_run,
+                delta=sum(durations.get(player, []))/self.n_run,
+                score=self.scores.get(player, 0)
+            ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
+
+        return dict(records=self.records, scores=self.scores, places=self.places_as_json(), summary=results)
 
     def end(self):
         rec = self.current.records

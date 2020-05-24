@@ -310,6 +310,7 @@ input[type=range]:focus::-webkit-slider-thumb {
   left: -20px;
   right: -20px;
   bottom: -20px;
+  background-color: black;
 }
 
 h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
@@ -479,11 +480,25 @@ a, a:visited, a:active, a:link {
 #popup table {
   width: 100%;
   font-size: 1.5em;
+  vertical-align: center;
+}
+
+#popup table .player-score-deets {
+  font-size: 0.6em;
+}
+
+#popup table .player-score-deets .fas {
+  color: lightgray;
+  margin-right: 5px;
 }
 
 #popup button {
   margin: 0 auto;
   margin-top: 15px;
+}
+
+.fa-crown.first-place {
+  color: gold;
 }
 
 button {

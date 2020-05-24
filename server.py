@@ -27,6 +27,7 @@ parser.add_argument("-t", "--threading", help="Use threading lib instead of even
 parser.add_argument("-l", "--log", help="Add eventlet loggger", action="store_true")
 args = parser.parse_args()
 
+
 DEBUG = args.debug
 is_local = os.environ.get("IS_HEROKU") != "1"
 
@@ -118,6 +119,7 @@ def init_game(data):
     game_name = session["game"]
     player = session.get("player", "unknown")
     print(f"Receive <event:connection[to={game_name}> from <player:{player}>")
+    print(data)
     if not manager.exists(game_name):
         print(f"Game <game:{game_name}> doesnt exist")
         del session["game"]
@@ -126,18 +128,30 @@ def init_game(data):
 
     join_room(game_name)
     game = manager.get_game(game_name)
+    if "pseudo" in data and data["pseudo"]:
+        pseudo = data["pseudo"]
+    else:
+        pseudo = None
     if "player" in session:
         player = session["player"]
         print(f"Receive <event:connection> from existing player <player:{player}>")
         if player not in game.players:
-            game.add_player(player)
+            game.add_player(player, pseudo)
     else:
-        player = game.add_player()
+        player, pseudo = game.add_player(pseudo=pseudo)
         session["player"] = player
 
-    print(f"Player <{player}> connected to game <{game_name}>", end=" ")
-    emit("init", dict(player=player, launched=game.launched))
-    emit("new-player", dict(player=player, leaderboard=game.get_current_leaderboard(), pseudos=game.pseudos), broadcast=True, room=game_name)
+    print(f"Player <{player}> connected to game <{game_name}> with pseudo <{pseudo}>")
+
+    print(game)
+    print(game.pseudos)
+    emit("init", dict(player=player, launched=game.launched, pseudo=pseudo, pseudos=game.pseudos))
+    emit("new-player", dict(
+            player=player,
+            pseudo=pseudo,
+            leaderboard=game.get_current_leaderboard(),
+            pseudos=game.pseudos),
+         broadcast=True, room=game_name)
 
 def safe_cancel(timer):
     if not timer:
@@ -178,7 +192,10 @@ def terminate_game(game_name):
     if game is None or not game.done:
         return
     socketio.emit("game-end",
-                  dict(leaderboard=game.get_current_leaderboard()), json=True, broadcast=True,
+                  dict(
+                      leaderboard=game.get_current_leaderboard(),
+                      full=game.get_final_results(),
+                  ), json=True, broadcast=True,
                   room=game_name)
 
     # game = Game(players=set(game.players), n_run=N_RUNS, map=game.map_name)
@@ -243,7 +260,6 @@ def launch_run(game_name, run_id):
 def launch_game():
     game_name = session["game"]
     game = manager.get_game(game_name)
-    print(game)
     game.launch() # GameRun(players)
     emit("game-launched", broadcast=True, room=game_name)
 
@@ -315,3 +331,4 @@ if __name__ == '__main__':
         kwargs["port"] = 443
 
     socketio.run(app, **kwargs)
+

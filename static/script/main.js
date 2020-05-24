@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("sharing-link").innerHTML = window.location.href.replace("https://", "").replace("www.", "");
     const blinkContainer = $("blink-wrapper");
     //const audioBeep = $("beep");
-var hintContainer = $("target");
+    var hintContainer = $("target");
     var playerName = $("player-name");
     var playerList = $("player-list");
     var scorer = $("total-score");
@@ -203,6 +203,21 @@ var hintContainer = $("target");
        $("final-results").innerHTML = table;
        $("popup-container").hidden = false;
      }
+     function fullShowResults(results){
+         let table = "";
+         results.forEach((el, i) => {
+             var crown = (i === 0) ? " <i class='fas fa-crown first-place'></i>" : "";
+             table += `<tr>
+                    <td class="rank">${i+1}</td>
+                    <td class="player-name">${getPlayerName(el.player)}${crown}</td>
+                    <td class="player-score-deets"><i class="fas fa-ruler"></i>${Math.round(el.dist)}km</td>
+                    <td class="player-score-deets"><i class="fas fa-clock"></i>${Math.round(100*el.delta)/100}s</td>
+                    <td class="player-score">${el.score}pts</td>
+                </tr>`
+         });
+       $("final-results").innerHTML = table;
+       $("popup-container").hidden = false;
+     }
      function hideResults(){
        $("popup-container").hidden = true;
      }
@@ -309,8 +324,9 @@ var hintContainer = $("target");
             rejectUnauthorized: !params.debug,
         });
         socket.on('connect', function() {
-            console.debug("Connecting...");
-            socket.emit('connection', {data: 'I\'m connected!'});
+            var pseudo = getPseudoFromCookie();
+            console.debug("Connecting... Current pseudo is", pseudo);
+            socket.emit('connection', {data: 'I\'m connected!', pseudo: pseudo});
         });
         socket.on('disconnect', function() {
             console.debug("Disconnecting...");
@@ -334,7 +350,7 @@ var hintContainer = $("target");
            console.debug("Game ended!");
            LEADERBOARD = data.leaderboard;
            updatePlayerList();
-           showResults();
+           fullShowResults(data.full.summary);
            gameLaunched = false;
         });
         socket.on("marker", function(data){
@@ -403,15 +419,11 @@ var hintContainer = $("target");
             stCounter.start();
         });
         socket.on("init", (data)=> {
-            console.debug(`You're now connected as <${data.player}>`);
-            var pseudo = getPseudoFromCookie();
+            console.debug(`You're now connected as <${data.pseudo}> (id=${data.player})`);
             PLAYER = data.player;
             updatePseudos(data.pseudos);
-            if (pseudo) {
-                console.debug(PLAYER, "has requested a new pseudo", pseudo);
-                socket.emit("name-change", {name: pseudo});
-                addPseudo(PLAYER, pseudo);
-            }
+            //addPseudo(PLAYER, data.pseudo);
+
             playerName.innerHTML = getPlayerName(PLAYER);
             playerName.contentEditable = true;
             gameLaunched = data.launched;
@@ -424,8 +436,9 @@ var hintContainer = $("target");
             updatePseudos(data.pseudos);
         })
         socket.on("new-player", (data) => {
-            console.debug("Welcome", data.player);
+            console.debug(`Welcome ${data.pseudo} (id=${data.player})`);
             LEADERBOARD = data.leaderboard;
+            updatePseudos(data.pseudos);
             updatePlayerList();
         });
         socket.on("player-left", (data) => {
@@ -590,7 +603,6 @@ var hintContainer = $("target");
     }
     function onMapClick(e) {
         if (!runLaunched || hasAnswered){
-            //console.debug("Can't click, clickable=false");
             return
         }
         let coords = e.latlng;
@@ -599,8 +611,6 @@ var hintContainer = $("target");
                 lat: coords.lat,
                 player: PLAYER
             };
-        //console.debug(PLAYER);
-        //console.debug(data);
         addMarker(coords.lat, coords.lng, getPlayerName(PLAYER));
         socket.emit("guess", data);
         hasAnswered = true;
@@ -621,13 +631,6 @@ var hintContainer = $("target");
         invertModeButton.addEventListener("change", () => {
             storeInverted(invertModeButton.checked);
             $("mapid").classList.toggle("inverted");
-            //
-            // if (invertModeButton.checked){
-            //     $("mapid").classList.add("inverted");
-            // }
-            // else {
-            //     $("mapid").classList.remove("inverted");
-            // }
         });
 
         /* CHAT SUPPORT */
