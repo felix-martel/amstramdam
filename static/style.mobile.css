@@ -215,6 +215,10 @@
     padding-top:0;
 }
 
+#popup table {
+    font-size: 1.1em;
+}
+
 #popup table .player-score-deets {
     display: none;
 }
