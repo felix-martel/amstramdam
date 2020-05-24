@@ -505,6 +505,40 @@ button {
   /*font-family: "Courier Prime", monospace;*/
 }
 
+.high-score {
+  padding-top: 5px;
+  color: gray;
+}
+
+.high-score-notif {
+  margin-top: 0;
+  font-style: italic;
+  color: gray;
+}
+
+
+#high-score-diff.no-score {
+  display: none;
+}
+#high-score-diff.pos-score {
+  color: green;
+}
+#high-score-diff.neg-score {
+  color: orangered;
+}
+.high-score-notif.no-score {
+  display: none;
+}
+
+
+.high-score.no-score {
+  display: none;
+}
+
+.high-score .fas {
+  color: gold;
+}
+
 
 
 .column {

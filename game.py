@@ -149,7 +149,7 @@ class GameRun:
         res = dict(dist=dist, delta=delta, score=score, msg=msg,
                    guess=dict(lon=guess[0], lat=guess[1]),
                    answer=dict(lon=ref[0], lat=ref[1], name=main_name),
-                   player=player, st=st, sd=sd
+                   player=player, st=st, sd=sd,
                    )
         self.records.append(res)
         self.dones[player] = True

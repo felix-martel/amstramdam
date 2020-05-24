@@ -9,6 +9,10 @@
       z-index: 1001;
   }
 
+    .high-score {
+        display: none;
+    }
+
     #chat-toggle-button {
         display: none;
     }

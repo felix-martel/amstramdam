@@ -119,7 +119,6 @@ def init_game(data):
     game_name = session["game"]
     player = session.get("player", "unknown")
     print(f"Receive <event:connection[to={game_name}> from <player:{player}>")
-    print(data)
     if not manager.exists(game_name):
         print(f"Game <game:{game_name}> doesnt exist")
         del session["game"]
@@ -142,10 +141,9 @@ def init_game(data):
         session["player"] = player
 
     print(f"Player <{player}> connected to game <{game_name}> with pseudo <{pseudo}>")
-
-    print(game)
-    print(game.pseudos)
-    emit("init", dict(player=player, launched=game.launched, pseudo=pseudo, pseudos=game.pseudos))
+    emit("init", dict(player=player, launched=game.launched, pseudo=pseudo,
+            game=game.map_name, runs=game.n_run, diff=game.difficulty,
+                      pseudos=game.pseudos))
     emit("new-player", dict(
             player=player,
             pseudo=pseudo,
@@ -204,7 +202,7 @@ def terminate_game(game_name):
 def end_game(game_name, run_id):
     # global game
     game = manager.get_game(game_name)
-    if game is None or game.curr_run_id != run_id:
+    if game is None or game.curr_run_id != run_id or game.done:
         return
     print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
     with app.test_request_context('/'):
@@ -261,7 +259,7 @@ def launch_game():
     game_name = session["game"]
     game = manager.get_game(game_name)
     game.launch() # GameRun(players)
-    emit("game-launched", broadcast=True, room=game_name)
+    emit("game-launched", dict(game=game.map_name, runs=game.n_run, diff=game.difficulty), json=True, broadcast=True, room=game_name)
 
     wait_and_run(3, launch_run, game_name, game.curr_run_id)
     #launch_run(game_name, game.curr_run_id)
@@ -299,8 +297,10 @@ def process_guess(data):
     game = manager.get_game(game_name)
 
     player = data["player"]
+    print("Receiving guess from", player)
     lon, lat = data["lon"], data["lat"]
     res, done = game.current.process_answer((lon, lat), player)
+    res["total_score"] = game.scores[player] + res["score"] # We need to add res["score"] between game.scores isn't updated yet
     emit("log", f"Player <{player}> has scored {res['score']} points", broadcast=True, room=game_name)
     emit("new-guess", dict(player=player, dist=res["dist"], delta=res["delta"], score=res["score"]),
          broadcast=True, room=game_name)

@@ -23,10 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     var PLAYERS = [];
     var PSEUDOS = {};
     var LEADERBOARD = [];
+    var nRuns;
+    var currRun = 0;
     var autozoomCheckbox = $("autozoom-check");
     var newMessageWhileHidden = false;
     var invertModeButton = $("colinvert-check");
-
+    var highScore;
+    var deltaHighScore;
+    var gameName;
     autozoomCheckbox.checked = readAutozoom();
     invertModeButton.checked = readInverted();
     if (invertModeButton.checked){
@@ -188,20 +192,13 @@ document.addEventListener("DOMContentLoaded", () => {
          LEADERBOARD.forEach(el => {
              if (el.player === PLAYER){
                  scorer.innerHTML = el.score;
+                 displayDiffWithHighScore(el.score);
                  playerList.innerHTML += `<li><i><span class="pname">${getPlayerName(el.player)}*</span><span class="pscore">${el.score} pts</span></i></li>`
              }
              else {
                 playerList.innerHTML += `<li><span class="pname">${getPlayerName(el.player)}</span><span class="pscore">${el.score} pts</span></li>`
              }
          });
-     }
-     function showResults(){
-         let table = "";
-       LEADERBOARD.forEach((el, i) => {
-           table += `<tr><td class="rank">${i+1}</td><td class="player-name">${getPlayerName(el.player)}</td><td class="player-score">${el.score}pts</td></tr>`
-       });
-       $("final-results").innerHTML = table;
-       $("popup-container").hidden = false;
      }
      function fullShowResults(results){
          let table = "";
@@ -219,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
        $("popup-container").hidden = false;
      }
      function hideResults(){
+        $("new-highscore-notif").classList.add("no-score");
        $("popup-container").hidden = true;
      }
      function displayGameBox(hint, currRun, totalRun){
@@ -342,6 +340,12 @@ document.addEventListener("DOMContentLoaded", () => {
             console.debug("Received: game launched");
             hideResults();
             clearMap();
+            gameName = [data.game, data.runs, data.diff].join("_");
+            highScore = getHighscore(gameName);
+            deltaHighScore = highScore / data.runs;
+            hideDiffWithHighScore();
+            console.debug("Your score for game", gameName, "is", highScore);
+
             gameLaunched = true;
             gameLauncher.disabled = true;
             startWaitTimer({duration: 3, label: TEXTS.beforeGameStart});
@@ -350,8 +354,23 @@ document.addEventListener("DOMContentLoaded", () => {
            console.debug("Game ended!");
            LEADERBOARD = data.leaderboard;
            updatePlayerList();
-           fullShowResults(data.full.summary);
-           gameLaunched = false;
+
+           var selfResults = data.full["summary"].find(rec => (rec.player === PLAYER));
+           if (selfResults){
+               var latestScore = selfResults.score;
+               if ((latestScore && !highScore) || latestScore >= highScore){
+                   console.debug("You have a new high score:", latestScore);
+                   saveHighscore(gameName, latestScore);
+                   highScore = latestScore;
+                   displayHighscore();
+                   hideDiffWithHighScore();
+                   $("new-highscore-notif").classList.remove("no-score");
+               }
+               gameLaunched = false;
+           }
+
+           fullShowResults(data.full["summary"]);
+
         });
         socket.on("marker", function(data){
             var name = data.name || "";
@@ -368,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hasAnswered = false;
             //$("results").hidden = true;
             displayGameBox(data.hint, data.current, data.total);
-
+            currRun = data.current+1;
             /*gameBox.hidden = true;
             $("results").hidden = true;
             $("run-current").innerHTML = data.current+1;
@@ -387,12 +406,41 @@ document.addEventListener("DOMContentLoaded", () => {
             //console.debug(data);
             addGuessEntry(data.player, data.dist);
         });
+        function displayDiffWithHighScore(currScore){
+
+            var diffDisplayer = $("high-score-diff");
+            if (highScore && currScore !== false && typeof currScore !== "undefined" && gameLaunched){
+                const theoricalHighScore = currRun * deltaHighScore;
+                const deltaWithHighScore = Math.round(currScore - theoricalHighScore);
+
+                if (deltaWithHighScore >= 0){
+                    diffDisplayer.innerHTML = "+" + deltaWithHighScore;
+                    diffDisplayer.classList = "pos-score";
+                }
+                else {
+                    diffDisplayer.innerHTML = deltaWithHighScore;
+                    diffDisplayer.classList = "neg-score";
+                }
+            }
+            else {
+                diffDisplayer.classList = "no-score";
+                diffDisplayer.innerHTML = "";
+            }
+        }
+        function hideDiffWithHighScore(){
+            var diffDisplayer = $("high-score-diff");
+            diffDisplayer.classList = "no-score";
+            diffDisplayer.innerHTML = "";
+        }
+
         socket.on("score", (data) => {
             addMarker(data.answer.lat, data.answer.lon, data.answer.name, "blue");
             makeAnimatedCircle(data.answer.lat, data.answer.lon, data.dist, "red");
-            scorer.innerHTML = data.score;
+            scorer.innerHTML = data.total_score;
             const dist = Math.round(data.dist);
             const score = Math.round(data.score);
+            displayDiffWithHighScore(data.total_score);
+
 
             $("answer-name").innerHTML = data.answer.name;
             $("main-disp-dist").innerHTML = 0; //dist; // Math.round(data.dist);
@@ -426,6 +474,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             playerName.innerHTML = getPlayerName(PLAYER);
             playerName.contentEditable = true;
+
+            gameName = [data.game, data.runs, data.diff].join("_");
+            highScore = getHighscore(gameName);
+            deltaHighScore = highScore / data.runs;
+            displayHighscore();
+            hideDiffWithHighScore();
+
+            console.debug("High score for game", gameName, ":", highScore);
+
             gameLaunched = data.launched;
             if (gameLaunched) {
                 gameLauncher.disabled = true;
@@ -501,6 +558,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.clearTimeout(comeBackToPreviousZoom)
             }
         }
+    }
+    function encodeGameName(gameName){
+        return encodeURIComponent("amstram__" + gameName + "__score");
+    }
+    function saveHighscore(gameName, score, neverExpire=false){
+        gameName = encodeGameName(gameName);
+        var expires =  neverExpire ? ";max-age=31536000" : "";
+        document.cookie = gameName + "=" + score + expires;
+    }
+    function getHighscore(gameName){
+        gameName = encodeGameName(gameName);
+        var cookieValue = document.cookie.split(gameName+"=");
+        if (cookieValue.length < 2){
+            return false
+        }
+        var score = parseInt(cookieValue[cookieValue.length-1].split(";")[0]);
+        if (!score){
+            return false
+        }
+        return score
+    }
+    function clearHighscore(gameName){
+        saveHighscore(gameName, "", true);
     }
     function savePseudoToCookie(value){
         value = encodeURIComponent(value);
@@ -597,10 +677,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-    function sendMessage(){
-        let data = {};
-        socket.emit("json", {data: data});
-    }
     function onMapClick(e) {
         if (!runLaunched || hasAnswered){
             return
@@ -687,6 +763,19 @@ document.addEventListener("DOMContentLoaded", () => {
         $("chat-box").classList.add("hidden");
         storeChatVisibility("0");
     });
+
+    function displayHighscore(){
+        var highScoreContainer = $("high-score-container");
+        var highScoreDisplay = $("high-score");
+
+        if (!highScore){
+            highScoreContainer.classList.add("no-score");
+        }
+        else {
+            highScoreDisplay.innerHTML = highScore;
+            highScoreContainer.classList.remove("no-score");
+        }
+    }
 
     map.on('click', onMapClick);
 });
