@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
      var map = L.map('mapid', {
          // zoomSnap: 0,
          scrollWheelZoom: params.allow_zoom || isMobile,
+         doubleClickZoom: params.allow_zoom || isMobile,
      }); //.setView(currGame.center, currGame.zoom);
     map.fitBounds(params.bbox);
      function mobileCheck() {

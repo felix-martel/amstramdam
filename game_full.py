@@ -1,4 +1,5 @@
 import random
+import string
 from collections import defaultdict, Counter
 
 import pandas as pd
@@ -6,6 +7,7 @@ import pandas as pd
 from game import GameRun, load_cities
 from city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
 from datetime import datetime, timedelta
+import random
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
     NAMES = {line.rstrip() for line in f}
@@ -111,9 +113,10 @@ class Game:
         # self.run_in_progress = False
 
     def get_new_id(self):
-        curr_id = self.__id_counter
-        self.__id_counter += 1
-        return str(curr_id)
+        return ''.join(random.choices(string.ascii_lowercase + string.ascii_uppercase + string.digits, k=16))
+        # curr_id = self.__id_counter
+        # self.__id_counter += 1
+        # return str(curr_id)
 
     def generate_player_name(self):
         return f"{self.name}_{self.get_new_id()}"
@@ -174,15 +177,17 @@ Run: {self.curr_run_id+1}/{self.n_run}
 
     def add_player(self, name=None, pseudo=None):
         if name is not None:
-            assert name not in self.global_player_list, f"Name '{name}' already exists"
+            assert name not in self.global_player_list and name not in self.players, f"Name '{name}' already exists"
             # assert name not in self.players, f"Name '{name}' already exists"
         else:
-            name = self.generate_player_name() # self.available_names.pop()
+            name = self.generate_player_name()
+            while name in self.players:
+                name = self.generate_player_name() # self.available_names.pop()
         self.players.add(name)
+        self.global_player_list.add(name)
         if pseudo is None:
             pseudo = self.generate_new_pseudo()
         self.add_pseudo(name, pseudo)
-        self.global_player_list.add(name)
 
         return name, pseudo
 
