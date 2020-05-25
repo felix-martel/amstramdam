@@ -71,7 +71,7 @@ Score: +{score} pts
 class GameRun:
     SCORE_MULTIPLIER = 1000
 
-    def __init__(self, players, place, forbidden=None, dist_param=None, time_param=None, duration=None):
+    def __init__(self, players, place, forbidden=None, dist_param=None, time_param=None, duration=None, non_linear=False):
         self.players = players
         self.scores =  defaultdict(float)
         self.messages = defaultdict(str)
@@ -88,6 +88,7 @@ class GameRun:
         self.start = None
         self.dones = defaultdict(lambda:False)
         self.callback = None
+        self.non_linear = non_linear
 
     def display(self):
         (city, hint), _ = self.place
@@ -102,8 +103,18 @@ class GameRun:
     def time_score(self, delta):
         return max(0, 1 - (delta / self.time_param))
 
-    def dist_score(self, dist):
-        return self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.dist_param))
+    def non_linear_bonus(self, dist):
+        # Max bonus as a fraction of the score multiplier (so +200 bonus for a 0km distance with the standard 1000km)
+        t = 0.2 * self.SCORE_MULTIPLIER
+        # Last n kilometers for the non-linear bonus
+        g = 0.2 * self.dist_param
+        return (t / g**2) * max(0, g - dist)**2
+
+    def dist_score(self, dist, non_linear=None):
+        s = self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.dist_param))
+        if (non_linear == True) or self.non_linear:
+            return s + self.non_linear_bonus(dist)
+        return s
 
     @property
     def results(self):

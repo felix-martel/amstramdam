@@ -80,15 +80,21 @@ def create_new_game():
         "public": False,
         **request.form
     }
-    ints = ["duration", "runs", "wait_time", "difficulty"]
-    for k in ints:
-        params[k] = int(params[k])
-    params["public"] = bool(params["public"])
+    converts = [
+        (int, ["duration", "runs", "wait_time", "difficulty"]),
+        (bool, ["public", "zoom"])
+    ]
+    for convert, keys in converts:
+        for key in keys:
+            params[key] = convert(params[key])
+
     params["difficulty"] /= 100
+    print(params)
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],
                                      is_public=params["public"],
+                                     allow_zoom=params["zoom"],
                                      map=params["map"], wait_time=params["wait_time"])
     print(manager.get_status())
 
@@ -106,6 +112,7 @@ def serve_game(name):
             map=game.map_name,
             wait_time=game.wait_time,
             bbox=game.bbox,
+            allow_zoom=game.allow_zoom,
             duration=game.duration)
         return render_template("main.html", game_name=name, params=params, debug=DEBUG or is_local)
 

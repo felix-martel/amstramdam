@@ -66,7 +66,7 @@ def get_cities(map):
 
 class Game:
     def __init__(self, name, players=None, n_run=20, time_param=5, dist_param=None,
-                 difficulty=1, is_public=False, creation_date=None,
+                 difficulty=1, is_public=False, creation_date=None, allow_zoom=False,
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.name = name
         self.map_name = map
@@ -86,12 +86,13 @@ class Game:
         self.players = set(players)
         self.places = map.sample(self.n_run, self.difficulty) # random.sample(get_cities(map), self.n_run)
         self.duration = duration
-        self.runs = [GameRun(self.players, place, dist_param=self.dist_param, time_param=self.time_param, duration=duration)
+        self.runs = [GameRun(self.players, place, dist_param=self.dist_param, time_param=self.time_param, duration=duration, non_linear=not allow_zoom)
                      for place in self.places]
         names = list(NAMES - self.players)
         random.shuffle(names)
         self.global_player_list = global_player_list
         self.available_names = available_names # set(names)
+        self.allow_zoom = allow_zoom
         self.wait_time = wait_time
         self.records = [] # defaultdict(list)
         self.scores = defaultdict(int)
@@ -130,10 +131,9 @@ class Game:
             wait_time=self.wait_time,
             difficulty=self.difficulty,
             is_public=self.is_public,
-            creation_date=self.date_created
+            creation_date=self.date_created,
+            allow_zoom=self.allow_zoom,
         )
-
-
 
     @property
     def curr_run_id(self):
