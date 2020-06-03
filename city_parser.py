@@ -50,7 +50,7 @@ for code, region in REV_REGION_CODES.items():
         REGIONS[region_id] = dict(name=region_name, file=f"data/regions/{region_id}.csv", use_hint=True, limit_size=limit_size)
 
 
-GROUP_FOOD = "Spécialités"
+GROUP_FOOD = "Spécial France"
 GROUP_EASY = "Facile"
 GROUP_HARD = "Difficile"
 GROUP_GOD = "Impitoyable"
@@ -88,6 +88,7 @@ GROUPED = [
         make_params("XX", "Evénements du XXème siècle", "data/historic/1900_handpicked.csv", use_hint=False),
     ]),
     dict(group=GROUP_FOOD, maps=[
+        make_params("region_fr", "Régions naturelles", "data/france.region.csv", use_hint=False, harshness=0.75),
         make_params("aoc_fr", "Spécialités françaises", "data/food/food.csv", use_hint=False),
         make_params("cheese_fr", "Fromages de France", "data/food/cheese.csv", use_hint=False),
         make_params("wine_fr", "Vins de France", "data/food/wine.csv", use_hint=False),
