@@ -625,7 +625,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.keyCode === 13){
             playerName.blur();
         }
-        if (playerName.innerHTML.length >= 20){
+        if (playerName.innerHTML.length >= 30){
             e.preventDefault();
         }
     });

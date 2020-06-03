@@ -1,0 +1,134 @@
+,city,classification,type,admin,lng,lat
+0,Vin d'Anjou,1.0,Vin,Pays de la Loire,-0.5444628980837812,47.25873460593125
+1,Anjou Brissac,1.0,Vin,Pays de la Loire,-0.484584915233,47.40011602
+2,Anjou Villages,1.0,Vin,Pays de la Loire,-0.6200896587868,47.27239780231999
+3,Anjou gamay,1.0,Vin,Pays de la Loire,-0.7118093691769285,47.308145512721424
+4,Anjou-Coteaux de la Loire,1.0,Vin,Pays de la Loire,-0.8166864308374999,47.3754013736
+5,Arbois,0.0,Vin,Franche-Comté,5.796378432279999,46.91686188325
+6,Bandol,0.0,Vin,Provence-Alpes-Côte d'Azur,5.770170653516666,43.2126084502
+7,Beaujolais,0.0,Vin,Rhône-Alpes,4.600285340116667,46.014536738983345
+8,Beaujolais La Chapelle-de-Guinchay,1.0,Vin,Bourgogne,4.7607553867400005,46.2183395706
+9,Beaujolais Le Perréon,1.0,Vin,Rhône-Alpes,4.58011470441,46.069613382200004
+10,Beaujolais Les Ardillats,1.0,Vin,Rhône-Alpes,4.53644652924,46.188747563199996
+11,Beaujolais Villages,1.0,Vin,Rhône-Alpes,4.6257722067966665,46.158900171999996
+12,Beaumes de Venise,0.0,Vin,Provence-Alpes-Côte d'Azur,5.06883398959,44.144844139300005
+13,Bergerac,1.0,Vin,Aquitaine,0.3362349461673333,44.913596777266676
+14,Hautes Côtes de Beaune,1.0,Vin,Bourgogne,4.67620707547,46.9575762678
+15,Hautes Côtes de Nuits,1.0,Vin,Bourgogne,4.8760250024900005,47.1826265714
+16,Bourgogne Passe-tout-grains,1.0,Vin,Bourgogne,4.631632771902856,46.455455316321434
+17,Bourgogne aligoté,0.0,Vin,Bourgogne,4.666878016964444,46.72305484057778
+18,Bourgogne mousseux,1.0,Vin,Bourgogne,4.631632771902856,46.455455316321434
+19,Bourgueil,1.0,Vin,Centre,0.215361451048,47.250958732700006
+20,Bugey,1.0,Vin,Rhône-Alpes,5.42801696363,46.009187877600006
+21,Bugey Cerdon,1.0,Vin,Rhône-Alpes,5.42801696363,46.009187877600006
+22,Béarn,1.0,Vin,Aquitaine,-0.853283494968,43.441442284
+23,Cabardès,1.0,Vin,Languedoc-Roussillon,2.37506698668,43.358319448500005
+24,Cadillac,1.0,Vin,Aquitaine,-0.397019832374,44.71728104899999
+25,Cahors,0.0,Vin,Midi-Pyrénées,1.1472613313,44.4210869463
+26,Chablis,0.0,Vin,Bourgogne,3.76931059079,47.8433599438
+27,Champagne,0.0,Vin,Picardie,3.897491567021613,48.87163584617098
+28,Cheverny,1.0,Vin,Centre,1.3044545593999999,47.5035507545
+29,Chinon,1.0,Vin,Centre,0.318297609774,47.125459835550004
+30,Chénas,1.0,Vin,Bourgogne,4.7607553867400005,46.2183395706
+31,Corbières,0.0,Vin,Languedoc-Roussillon,2.99265326968,42.9660377916
+32,Corrèze vin de paille,1.0,Vin,Limousin,1.71908951558,44.9831181613
+33,Costières de Nîmes,0.0,Vin,Languedoc-Roussillon,4.24246060862,43.658597596099995
+34,Coteaux Bourguignons,1.0,Vin,Bourgogne,4.631632771902856,46.455455316321434
+35,Coteaux champenois,1.0,Vin,Picardie,3.897491567021613,48.87163584617098
+36,Coteaux d'Aix-en-Provence,1.0,Vin,Provence-Alpes-Côte d'Azur,5.164523065395,43.642617830175006
+37,Coteaux d'Ancenis,1.0,Vin,Pays de la Loire,-1.2416085389433331,47.32715235026666
+38,Coteaux de Saumur,1.0,Vin,Pays de la Loire,-0.1665105909233,47.1457093249
+39,Coteaux de l'Aubance,1.0,Vin,Pays de la Loire,-0.484584915233,47.40011602
+40,Coteaux du Giennois,1.0,Vin,Bourgogne,2.93434517824,47.4852979363
+41,Coteaux du Layon,1.0,Vin,Pays de la Loire,-0.4890251440863334,47.2037287548
+42,Coteaux du Loir,1.0,Vin,Pays de la Loire,0.5820422063390001,47.730368641700004
+43,Coteaux du Lyonnais,1.0,Vin,Rhône-Alpes,4.7123892929,45.8104377668
+44,Coteaux du Quercy,1.0,Vin,Midi-Pyrénées,1.4548791676100001,44.3804715298
+45,Coteaux du Vendômois,1.0,Vin,Centre,0.800216357559,47.75922947915
+46,Coteaux varois en Provence,1.0,Vin,Provence-Alpes-Côte d'Azur,6.011450308093335,43.38893316486668
+47,Crozes-Hermitage,0.0,Vin,Rhône-Alpes,4.85709493142,45.018656471099995
+48,Crémant de Bordeaux,0.0,Vin,Aquitaine,-0.2783144136210704,44.85690134567082
+49,Crémant de Bourgogne,0.0,Vin,Bourgogne,4.631632771902856,46.455455316321434
+50,Crémant de Limoux,0.0,Vin,Languedoc-Roussillon,2.1714951084966665,43.016585808
+51,Crémant de Loire,0.0,Vin,Centre,-0.2965112363180217,47.249147646747815
+52,Crémant du Jura,0.0,Vin,Franche-Comté,5.604826555926364,46.76261720309999
+53,Côte roannaise,1.0,Vin,Rhône-Alpes,3.859132578945,46.17911361705
+54,Côtes d'Auvergne,1.0,Vin,Auvergne,3.171739775138,45.688992107980006
+55,Côtes de Bergerac,1.0,Vin,Aquitaine,0.3362349461673333,44.913596777266676
+56,Côtes de Bordeaux Cadillac,1.0,Vin,Aquitaine,-0.397019832374,44.71728104899999
+57,Côtes de Bordeaux Castillon,1.0,Vin,Aquitaine,0.005596600767710001,44.9144882685
+58,Côtes de Bordeaux Sainte-Foy,1.0,Vin,Aquitaine,0.20863246897,44.784087909549996
+59,Côtes de Bordeaux-Saint-Macaire,1.0,Vin,Aquitaine,-0.216934173908,44.582132462299995
+60,Côtes de Duras,1.0,Vin,Aquitaine,0.331517448954,44.649775849099996
+61,Côtes de Millau,1.0,Vin,Midi-Pyrénées,2.952110038775,44.110641552450005
+62,Côtes de Provence Fréjus,1.0,Vin,Provence-Alpes-Côte d'Azur,6.563751683685,43.48829095585
+63,Côtes de Provence Notre-Dame des Anges,1.0,Vin,Provence-Alpes-Côte d'Azur,6.399620468336001,43.367108507379996
+64,Côtes de Provence Pierrefeu,1.0,Vin,Provence-Alpes-Côte d'Azur,6.035016792372001,43.14014123388
+65,Côtes de Provence Sainte-Victoire,1.0,Vin,Provence-Alpes-Côte d'Azur,5.50819253944,43.51969141359999
+66,Côtes de Provence la Londe,1.0,Vin,Provence-Alpes-Côte d'Azur,6.167767513029999,43.16622104175
+67,Côtes du Jura,1.0,Vin,Franche-Comté,5.6064354447366656,46.729878568166654
+68,Côtes du Rhône,1.0,Vin,Rhône-Alpes,4.809709957258,44.3774692191
+69,Côtes du Roussillon,1.0,Vin,Languedoc-Roussillon,2.7286829323150004,42.61335033225
+70,Côtes du Vivarais,1.0,Vin,Languedoc-Roussillon,4.4652453763099995,44.31306015649999
+71,Duché d'Uzès,1.0,Vin,Languedoc-Roussillon,4.383092733466,44.018018044159994
+72,Entraygues - Le Fel,1.0,Vin,Midi-Pyrénées,2.51772189007,44.6696449626
+73,Entre-deux-Mers,0.0,Vin,Aquitaine,-0.14330971790848002,44.684506794399994
+74,Fiefs Vendéens Brem,1.0,Vin,Pays de la Loire,-1.3233024354944,46.51770922568
+75,Fiefs Vendéens Mareuil,1.0,Vin,Pays de la Loire,-1.3233024354944,46.51770922568
+76,Fiefs Vendéens Pissotte,1.0,Vin,Pays de la Loire,-1.3233024354944,46.51770922568
+77,Fiefs Vendéens Vix,1.0,Vin,Pays de la Loire,-1.3233024354944,46.51770922568
+78,Fiefs Vendéens Chantonnay,1.0,Vin,Pays de la Loire,-1.3233024354944,46.51770922568
+79,Fitou,0.0,Vin,Languedoc-Roussillon,2.99265326968,42.9660377916
+80,Fronsac,1.0,Vin,Aquitaine,-0.316177006649,44.9377237217
+81,Gaillac,1.0,Vin,Midi-Pyrénées,1.8835893708200002,44.035064151049994
+82,Grand Roussillon,1.0,Vin,Languedoc-Roussillon,2.8659668777775003,42.66381155025
+83,Graves,1.0,Vin,Aquitaine,-0.6106810059969999,44.77459841305
+84,Grignan-les-Adhémar,1.0,Vin,Rhône-Alpes,4.791819286433333,44.3821223618
+85,Gros Plant du Pays nantais,1.0,Vin,Pays de la Loire,-1.4325761600409999,47.17940570112499
+86,Haut-Médoc,1.0,Vin,Aquitaine,-0.6757576022225,44.93372353625
+87,Haut-Poitou,1.0,Vin,Poitou-Charentes,0.140781690742,46.69480664859999
+88,L'Etoile,1.0,Vin,Franche-Comté,5.53394517039,46.7160513036
+89,La Livinière,1.0,Vin,Languedoc-Roussillon,2.63272340257,43.3372267899
+90,Languedoc,1.0,Vin,Languedoc-Roussillon,2.8852866036435296,43.210980156800005
+91,Languedoc blanc,1.0,Vin,Languedoc-Roussillon,2.8355169512433336,43.210143578377775
+92,Les Baux de Provence,0.0,Vin,Provence-Alpes-Côte d'Azur,4.80218162499,43.745808725
+93,Limoux,1.0,Vin,Languedoc-Roussillon,2.1714951084966665,43.016585808
+94,Luberon,1.0,Vin,Provence-Alpes-Côte d'Azur,5.57832746488,43.748236409624994
+95,Maine-Anjou,1.0,Vin,Poitou-Charentes,-0.8416587128139302,47.479130215748995
+96,Malepère,1.0,Vin,Languedoc-Roussillon,2.035389133376667,43.17856811526668
+97,Minervois,0.0,Vin,Languedoc-Roussillon,2.6899364547699998,43.31747133849999
+98,Montravel,1.0,Vin,Aquitaine,0.26255994274300004,44.880919053999996
+99,Muscadet Coteaux de la Loire,1.0,Vin,Pays de la Loire,-1.2416085389433331,47.32715235026666
+100,Muscadet Côtes de Grandlieu,1.0,Vin,Pays de la Loire,-1.61892772081,47.03816811394999
+101,Muscadet Sèvre et Maine Goulaine,1.0,Vin,Pays de la Loire,-1.3266943427133333,47.204485160933345
+102,Muscadet Sèvre et Maine Le Pallet,1.0,Vin,Pays de la Loire,-1.347677858745,47.158114007799995
+103,Muscat de Rivesaltes,1.0,Vin,Languedoc-Roussillon,2.8659668777775003,42.66381155025
+104,Mâcon La Roche-Vineuse,1.0,Vin,Bourgogne,4.74854768422,46.351023591499995
+105,Mâcon Mancey,1.0,Vin,Bourgogne,4.787067781319999,46.555934895200004
+106,Mâcon Saint-Gengoux-le-National,1.0,Vin,Bourgogne,4.60125621922,46.460697868900006
+107,Mâcon Villages,1.0,Vin,Bourgogne,4.751698462243999,46.398990669899995
+108,Mâconnais,1.0,Vin,Bourgogne,4.783920819437999,46.461118242320005
+109,Médoc,0.0,Vin,Aquitaine,-0.8104232044116667,45.13533756836667
+110,Petit Chablis,1.0,Vin,Bourgogne,3.76931059079,47.8433599438
+111,Pic Saint-Loup,0.0,Vin,Languedoc-Roussillon,3.832108485175,43.732348308199995
+112,Pineau des Charentes,0.0,Vin,Poitou-Charentes,-0.6154420370588316,45.85043352494832
+113,Pouligny-Saint-Pierre,1.0,Vin,Centre,1.1001322116399999,46.6346200347
+114,Premières Côtes de Bordeaux,1.0,Vin,Aquitaine,-0.397019832374,44.71728104899999
+115,Rivesaltes,1.0,Vin,Languedoc-Roussillon,2.8659668777775003,42.66381155025
+116,Rosé de Loire,1.0,Vin,Centre,-0.343352636054025,47.249530101435006
+117,Rosé des Riceys,1.0,Vin,Champagne-Ardenne,4.369500963319999,47.9874878792
+118,Roussette de Savoie,0.0,Vin,Rhône-Alpes,5.919259885760001,45.56826282905
+119,Roussette du Bugey,0.0,Vin,Rhône-Alpes,5.42801696363,46.009187877600006
+120,Saint-Sardos,1.0,Vin,Midi-Pyrénées,1.14613239704,43.7897007314
+121,Saumur,1.0,Vin,Pays de la Loire,-0.1665105909233,47.1457093249
+122,Saumur Puy-Notre-Dame,1.0,Vin,Pays de la Loire,-0.2378024694773333,47.161499179333326
+123,Saumur mousseux,1.0,Vin,Pays de la Loire,-0.2519009689150625,47.172780956800004
+124,Savennières,1.0,Vin,Pays de la Loire,-0.7087388110930001,47.3814407983
+125,Terrasses du Larzac,0.0,Vin,Languedoc-Roussillon,3.38710687452,43.69577524979999
+126,Touraine,1.0,Vin,Centre,0.4610884120650001,47.21271208345
+127,Touraine Chenonceaux,1.0,Vin,Centre,0.9923969776639999,47.34896993
+128,Valençay,1.0,Vin,Centre,1.6833767115966665,46.86735292174444
+129,Ventoux,1.0,Vin,Provence-Alpes-Côte d'Azur,5.1107474797600005,44.0343313036
+130,Vin de Corse,1.0,Vin,Corse,8.933559706719999,42.631545095999996
+131,Vin de Savoie Abymes,1.0,Vin,Rhône-Alpes,5.992295020199999,45.4923770493
+132,Vin de Savoie Apremont,1.0,Vin,Rhône-Alpes,5.992295020199999,45.4923770493

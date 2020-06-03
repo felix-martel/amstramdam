@@ -50,6 +50,7 @@ for code, region in REV_REGION_CODES.items():
         REGIONS[region_id] = dict(name=region_name, file=f"data/regions/{region_id}.csv", use_hint=True, limit_size=limit_size)
 
 
+GROUP_FOOD = "Spécialités"
 GROUP_EASY = "Facile"
 GROUP_HARD = "Difficile"
 GROUP_GOD = "Impitoyable"
@@ -86,12 +87,17 @@ GROUPED = [
         make_params("world_capitals-no-hint", "Capitales (sans pays)", "data/world_capitals.csv", use_hint=False),
         make_params("XX", "Evénements du XXème siècle", "data/historic/1900_handpicked.csv", use_hint=False),
     ]),
+    dict(group=GROUP_FOOD, maps=[
+        make_params("aoc_fr", "Spécialités françaises", "data/food/food.csv", use_hint=False),
+        make_params("cheese_fr", "Fromages de France", "data/food/cheese.csv", use_hint=False),
+        make_params("wine_fr", "Vins de France", "data/food/wine.csv", use_hint=False),
+    ]),
     dict(group=GROUP_EASY, maps=[
         make_params("france_easy", "France", "data/all/FR.csv"),
         *(make_region_params(code, "easy") for code in REV_REGION_CODES)
     ]),
     dict(group=GROUP_HARD, maps=[
-        make_params("france_hard", "France", "data/places.france.csv"),
+        make_params("france_hard", "France", "data/places.france.csv", use_hint=False),
         *(make_region_params(code, "normal") for code in REV_REGION_CODES)
     ]),
     dict(group=GROUP_GOD, maps=[make_region_params(code, "hard") for code in REV_REGION_CODES]),
@@ -139,7 +145,7 @@ def clean_city(city):
 
 
 class GameMap:
-    def __init__(self, name, places, lons, lats, hints=None, ranks=None, group=None):
+    def __init__(self, name, places, lons, lats, hints=None, ranks=None, group=None, harshness=0.7):
         self.name = name
         self.places = places
         self.lons = lons
@@ -147,6 +153,7 @@ class GameMap:
         self.hints = hints if hints is not None else [""] * len(self.places)
         self.ranks = ranks if ranks is not None else [0] * len(self.places)
         self.bbox = None
+        self.distance_harshness = harshness
         self.distance = self.get_distance()
         if group is None:
             group = "__default__"
@@ -163,14 +170,14 @@ class GameMap:
         return f"{self.name} ({len(self.places)} villes)"
 
     @classmethod
-    def from_file(cls, name, file, use_hint=False, limit_size=None, group=None):
+    def from_file(cls, name, file, use_hint=False, limit_size=None, group=None, **params):
         df = pd.read_csv(file, nrows=limit_size)
         ranks = None
         if "population" in df.columns:
             ranks = np.argsort(-df.population.fillna(0))
         return cls(name, places=df.city, lons=df.lng, lats=df.lat,
                    ranks=ranks,
-                   hints=df.admin if use_hint else None, group=group)
+                   hints=df.admin if use_hint else None, group=group, **params)
 
     @classmethod
     def from_historic(cls, name, file, limit_size=None, group=None, use_hint=True, sep=None):
@@ -283,7 +290,9 @@ class GameMap:
         p2 = Point.from_latlon(*corner2)
         dist = geo.distance(p1, p2)
 
-        return round(dist**0.7)
+        dist_param = round(dist**self.distance_harshness)
+        print(self.name, dist_param)
+        return dist_param
 
     def build_list(self, difficulty=1):
         if not self.ranking_available():
