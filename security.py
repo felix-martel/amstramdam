@@ -25,5 +25,9 @@ csp = {
         "unpkg.com",
         "*.fontawesome.com",
         "fonts.googleapis.com"
+    ],
+    "connect-src": [
+        "'self'",
+        "*.fontawesome.com"
     ]
 }
