@@ -612,14 +612,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function readInverted(value){
         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamInverted\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        return cookieValue !== "0";
+        return (cookieValue !== "0") && (cookieValue !== "");
     }
     function storeChatVisibility(value){
         document.cookie = `amstramdamChatVisible=${+value}`;
     }
     function readChatVisibility(value){
         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)amstramdamChatVisible\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        return cookieValue !== "0";
+        return (cookieValue !== "0") && (cookieValue !== "");
     }
     playerName.addEventListener("keydown", (e) => {
         if (e.keyCode === 13){
