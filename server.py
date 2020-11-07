@@ -335,7 +335,7 @@ if __name__ == '__main__':
     if is_local:
         kwargs["certfile"] = certfile
         kwargs["keyfile"] = keyfile
-        kwargs["port"] = 1025 #443
+        kwargs["port"] = 443
 
     socketio.run(app, **kwargs)
 
