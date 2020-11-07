@@ -8,9 +8,9 @@ from .utils import safe_cancel
 def init_game(data):
     game_name = session["game"]
     player = session.get("player", "unknown")
-    print(f"Receive <event:connection[to={game_name}> from <player:{player}>")
+    print(f"Receive <event:connection[to={game_name}]> from <player:{player}>")
     if not manager.exists(game_name):
-        print(f"Game <game:{game_name}> doesnt exist")
+        print(f"Game <game:{game_name}> does not exist")
         del session["game"]
         emit("redirect", dict(url=url_for("serve_main")), json=True)
         # return redirect(url_for("serve_main"))

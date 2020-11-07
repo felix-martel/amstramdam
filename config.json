@@ -1,0 +1,9 @@
+{
+  "hosts": [
+    "multigeo.herokuapp.com",
+    "amstramdam.com"
+  ],
+  "verbose": false,
+  "allowHTTP": false,
+  "async": "eventlet"
+}

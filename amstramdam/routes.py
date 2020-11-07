@@ -1,4 +1,4 @@
-from amstramdam import app, manager, is_local
+from amstramdam import app, manager, IS_LOCAL
 from .city_parser import GameMap, MAPS
 from flask import render_template, jsonify, request, session, redirect, url_for
 
@@ -62,4 +62,4 @@ def serve_game(name):
             bbox=game.bbox,
             allow_zoom=game.allow_zoom,
             duration=game.duration)
-        return render_template("main.html", game_name=name, params=params, debug=is_local)
+        return render_template("main.html", game_name=name, params=params, debug=IS_LOCAL)

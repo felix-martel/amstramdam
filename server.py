@@ -1,4 +1,4 @@
-from amstramdam import app, socketio, is_local
+from amstramdam import app, socketio, IS_LOCAL
 import os
 from argparse import ArgumentParser
 
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     port = os.environ.get("PORT", 80)
     kwargs = dict(host= '0.0.0.0', port=port)
 
-    if is_local:
+    if IS_LOCAL:
         kwargs["certfile"] = certfile
         kwargs["keyfile"] = keyfile
         kwargs["port"] = 443
