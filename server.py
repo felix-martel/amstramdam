@@ -6,6 +6,7 @@ Associated with conda env 'tdc'
 """
 
 import os
+import json
 from collections import defaultdict
 import argparse
 
@@ -15,7 +16,7 @@ from flask_talisman import Talisman
 
 from city_parser import GameMap, MAPS
 import game_manager as manager
-from security import csp
+
 
 
 import eventlet
@@ -44,6 +45,8 @@ debug_params = dict(engineio_logger=True, logger=True) if is_local and args.log 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(",")[0]
 
+with open("csp.json", "r", encoding="utf8") as fp:
+    csp = json.load(fp)
 
 Talisman(app, content_security_policy=csp,
     content_security_policy_nonce_in=['script-src'], force_https=True)
