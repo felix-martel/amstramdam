@@ -1,8 +1,7 @@
-import random
 import time
 import pandas as pd
 
-from collections import defaultdict, Counter
+from collections import defaultdict
 from .geo import Point, distance
 
 def reaccent(name):
@@ -21,7 +20,6 @@ def load_cities(fname="data/places.world.csv", min_pop=0):
     def clean_city(city):
         if city.isupper():
             return reaccent(city)
-            # return city[0] + city[1:].lower()
         return city
     df = pd.read_csv(fname)
     if "country" not in df.columns:
@@ -35,37 +33,12 @@ def load_cities(fname="data/places.world.csv", min_pop=0):
         df = df[df.population > min_pop]
     return {((clean_city(city), country), Point(lon, lat)) for city, country, lon, lat in zip(df.name, df.country, df.lon, df.lat)}
 
-# CITIES = load_cities()
-#
-# OLD_CITIES = {
-#     (("Paris", "France"), Point(2.3488, 48.8534)),
-#     (("Lyon", "France"), Point(4.85, 45.75))
-# }
 
 MSG_TEMPLATE = """Distance: {dist:.1f}km (+{sd:.0f} pts)
 Time: {delta:.2f}s (+{st:.0f} pts)
 
 Score: +{score} pts
 """
-
-#class PlayerList:
-#    def __init__(self):
-#        self.players = ["charles", "georges", "valery", "francois", "jacques", "nicolas", "hollandouille", "emmanuel"]
-#        self.currents = Counter()
-#
-#    def new(self):
-#        player = random.choice(self.players)
-#        self.currents[player] += 1
-#        return f"{player}_{self.currents[player]}"
-#
-#def generate_id():
-#    return random.randint(1, 1000)
-#
-#def random_city(forbidden=None):
-#    if forbidden is None:
-#        forbidden = set()
-#    city, loc = random.choice(list(CITIES - forbidden))
-#    return city, loc
 
 class GameRun:
     SCORE_MULTIPLIER = 1000

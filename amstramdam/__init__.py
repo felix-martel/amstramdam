@@ -12,7 +12,7 @@ from flask_socketio import SocketIO
 from flask_talisman import Talisman
 
 from .city_parser import GameMap, MAPS
-import amstramdam.game_manager as manager
+import amstramdam.game.manager as manager
 
 import eventlet
 eventlet.monkey_patch(socket=False)
@@ -48,11 +48,12 @@ Talisman(app,
          )
 
 # Init SocketIO
-debug_params = dict(engineio_logger=True, logger=True) if IS_LOCAL and CONF["verbose"] else {}
+logger = IS_LOCAL and CONF["verbose"]
 socketio = SocketIO(app,
                     async_mode=CONF["async"],
                     cors_allowed_origins=valid_hosts,
-                    **debug_params
+                    engineio_logger=logger,
+                    logger=logger,
                     )
 
 timers = defaultdict(int)

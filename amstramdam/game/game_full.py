@@ -5,7 +5,7 @@ from collections import defaultdict, Counter
 import pandas as pd
 
 from .game import GameRun, load_cities
-from .city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
+from amstramdam.city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
 from datetime import datetime, timedelta
 import random
 

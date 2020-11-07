@@ -1,7 +1,4 @@
-from collections import defaultdict
-from parser import ParserError
-
-from .geo import Point, distance
+from amstramdam.game.geo import Point, distance
 
 import random
 import pandas as pd
