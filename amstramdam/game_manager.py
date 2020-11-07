@@ -1,6 +1,6 @@
 from collections import Counter
 
-from game_full import Game, get_all_datasets
+from .game_full import Game, get_all_datasets
 import random
 from unidecode import unidecode
 

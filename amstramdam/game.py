@@ -3,8 +3,7 @@ import time
 import pandas as pd
 
 from collections import defaultdict, Counter
-from geo import Point
-import geo
+from .geo import Point, distance
 
 def reaccent(name):
     name = name.lower()
@@ -144,7 +143,7 @@ class GameRun:
 
         (main_name, hint), ref = self.place
         delta = time.time() - self.start
-        dist = geo.distance(ref, guess)
+        dist = distance(ref, guess)
 
         sd = self.dist_score(dist)
         st = sd * self.time_score(delta)

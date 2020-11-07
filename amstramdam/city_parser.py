@@ -1,8 +1,8 @@
 from collections import defaultdict
 from parser import ParserError
 
-from geo import Point
-import geo
+from .geo import Point, distance
+
 import random
 import pandas as pd
 import numpy as np
@@ -289,7 +289,7 @@ class GameMap:
 
         p1 = Point.from_latlon(*corner1)
         p2 = Point.from_latlon(*corner2)
-        dist = geo.distance(p1, p2)
+        dist = distance(p1, p2)
 
         dist_param = round(dist**self.distance_harshness)
         print(self.name, dist_param)
