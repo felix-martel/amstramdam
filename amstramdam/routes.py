@@ -3,6 +3,8 @@ from .city_parser import GameMap, MAPS
 from flask import render_template, jsonify, request, session, redirect, url_for
 
 DATASETS = manager.get_all_datasets()
+
+
 @app.route("/")
 def serve_main():
     return render_template("lobby.html", datasets=DATASETS, games=manager.get_public_games())
@@ -15,6 +17,7 @@ def get_dataset_geometry(dataset):
     else:
         data = GameMap.from_name(dataset).get_geometry()
     return jsonify(data)
+
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
@@ -47,6 +50,7 @@ def create_new_game():
     print(manager.get_status())
 
     return redirect(url_for("serve_game", name=name))
+
 
 @app.route("/game/<name>")
 def serve_game(name):
