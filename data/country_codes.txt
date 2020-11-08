@@ -1,10 +1,10 @@
-Afghanistan	AF
+Afghanistan	AFG
 Afrique du Sud	ZA
 Albanie	AL
 Algérie	DZ
 Allemagne	DE
 Angola	AO
-Arabie Saoudite	SA
+Arabie Saoudite	SAU
 Argentine	AR
 Australie	AU
 Autriche	AT
@@ -69,7 +69,7 @@ Mongolie	MN
 Monténégro	ME
 Mozambique	MZ
 Myanmar	MM
-Namibie	NA
+Namibie	NAM
 Niger	NE
 Nigéria	NG
 Norvège	NO
