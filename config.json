@@ -5,5 +5,6 @@
   ],
   "verbose": false,
   "allowHTTP": false,
-  "async": "eventlet"
+  "async": "eventlet",
+  "datasets": "datasets.json"
 }
