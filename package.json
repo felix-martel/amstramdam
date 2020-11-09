@@ -1,0 +1,26 @@
+{
+  "name": "amstramdam",
+  "version": "1.0.0",
+  "description": "*Le jeu original est accessible ici : [jeux-geographiques.com](https://www.jeux-geographiques.com/)*",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felix-martel/amstramdam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felix-martel/amstramdam/issues"
+  },
+  "homepage": "https://github.com/felix-martel/amstramdam#readme"
+}
