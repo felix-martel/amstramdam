@@ -21,7 +21,10 @@ if __name__ == '__main__':
 
     if args.debug:
         kwargs["debug"] = True
-        name, game = manager.create_game(n_run=3, duration=5, map="world", wait_time=4, is_public=True, force_name="__debug__")
+        name, game = manager.create_game(n_run=3,
+                                         is_permanent=True, duration=5,
+                                         map="world", wait_time=4, is_public=True,
+                                         force_name="__debug__")
         print("Live-reloading enabled, debug game created at https://localhost/game/__debug__")
-
+        print(manager.get_public_games())
     socketio.run(app, **kwargs)
