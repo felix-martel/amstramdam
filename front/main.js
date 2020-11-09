@@ -1,18 +1,14 @@
 import {CountUp} from "countup.js";
+import Countdown from "./ui/countdown";
+
 import io from "socket.io-client";
 
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 
-//const io = require("socket.io");
-//const L = require("leaflet");
-console.log("io version:", io);
+import {$} from "./common/utils";
 
 document.addEventListener("DOMContentLoaded", () => {
-    function $(identifier){
-        return document.getElementById(identifier);
-    }
-
     console.log(params);
     
     $("sharing-link").innerHTML = window.location.href.replace("https://", "").replace("www.", "");
@@ -43,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     var highScore;
     var deltaHighScore;
     var gameName;
+    const runCountdown = new Countdown("countdown-animation", params.duration);
+
     autozoomCheckbox.checked = readAutozoom();
     invertModeButton.checked = readInverted();
     if (invertModeButton.checked){
@@ -120,36 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function addPseudo(player, name){
         PSEUDOS[player] = name;
         updatePlayerList();
-    }
-
-    var countdownInterval;
-    const countdownAnimationElements = ["wrapper", "left", "right"];
-    function endCountdown(){
-        $("countdown-animation-wrapper").hidden = true;
-        countdownAnimationElements.forEach(c => {
-            let id = `countdown-animation-${c}`;
-            let el = $(id);
-            // console.debug(id);
-            // console.debug(el);
-            el.setAttribute("data-anim", "");
-        });
-    }
-    function startCountdown(){
-        clearInterval(countdownInterval);
-        $("countdown-animation-wrapper").hidden = false;
-        countdownAnimationElements.forEach(c => {
-            let id = `countdown-animation-${c}`;
-            let el = $(id);
-            // console.debug(id);
-            // console.debug(el);
-            el.setAttribute("data-anim", `base ${c}`);
-        });
-        $("countdown-animation-wrapper").style.animationDelay = String(params.duration/2) + "s";
-        $("countdown-animation-left").style.animationDuration = String(params.duration) + "s";
-        $("countdown-animation-right").style.animationDuration = String(params.duration/2) + "s";
-        countdownInterval = setInterval(() => {
-            endCountdown();
-        }, params.duration*1000);
     }
 
     let franceZoom = 6;
@@ -402,7 +370,8 @@ document.addEventListener("DOMContentLoaded", () => {
             clearMap();
             clearGuessEntries();
             hideRunResults();
-            startCountdown();
+            runCountdown.start();
+
             hasAnswered = false;
             //$("results").hidden = true;
             displayGameBox(data.hint, data.current, data.total);
@@ -523,7 +492,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updatePlayerList();
         });
         socket.on("run-end", (data) => {
-            endCountdown();
+            runCountdown.end();
             runLaunched = false;
             window.clearInterval(blinkInterval);
             window.clearTimeout(blinkTimeout);
