@@ -1,4 +1,4 @@
-from amstramdam import app, socketio, IS_LOCAL
+from amstramdam import app, manager, socketio, IS_LOCAL
 import os
 from argparse import ArgumentParser
 
@@ -21,6 +21,7 @@ if __name__ == '__main__':
 
     if args.debug:
         kwargs["debug"] = True
-        print("Live-reloading enabled")
+        name, game = manager.create_game(n_run=3, duration=5, map="world", wait_time=4, is_public=True, force_name="__debug__")
+        print("Live-reloading enabled, debug game created at https://localhost/game/__debug__")
 
     socketio.run(app, **kwargs)

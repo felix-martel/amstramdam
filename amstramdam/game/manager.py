@@ -11,14 +11,20 @@ with open("data/game_names.txt", "r", encoding="utf8", errors="ignore") as f:
 disambig = Counter()
 MANAGER = dict()
 
-def create_game(*args, **kwargs):
-    names = list(VALID_GAME_NAMES - MANAGER.keys())
-    if names:
-        name = random.choice(names)
+def create_game(*args, force_name=None, **kwargs):
+    if force_name is not None:
+        name = force_name
+        if name in MANAGER:
+            disambig[name] += 1
+            name = f"{name}_{disambig[name]}"
     else:
-        name = random.choice(list(VALID_GAME_NAMES))
-        disambig[name] += 1
-        name = f"{name}_{disambig[name]}"
+        names = list(VALID_GAME_NAMES - MANAGER.keys())
+        if names:
+            name = random.choice(names)
+        else:
+            name = random.choice(list(VALID_GAME_NAMES))
+            disambig[name] += 1
+            name = f"{name}_{disambig[name]}"
 
     assert name not in MANAGER
     MANAGER[name] = Game(name, *args, **kwargs)
