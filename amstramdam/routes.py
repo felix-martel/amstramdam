@@ -1,21 +1,22 @@
-from amstramdam import app, manager, IS_LOCAL
-from .city_parser import GameMap, MAPS
+from amstramdam import app, manager, dataloader, IS_LOCAL
 from flask import render_template, jsonify, request, session, redirect, url_for
-
-DATASETS = manager.get_all_datasets()
 
 
 @app.route("/")
 def serve_main():
-    return render_template("lobby.html", datasets=DATASETS, games=manager.get_public_games())
+    return render_template("lobby.html",
+                           datasets=dataloader.datasets,
+                           games=manager.get_public_games())
 
 
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
-    if dataset not in MAPS:
+    try:
+        data = dataloader.load(dataset).get_geometry()
+    except KeyError as e:
+        print(f"ERROR: No dataset named '{dataset}' found.")
+        print(e)
         data = {}
-    else:
-        data = GameMap.from_name(dataset).get_geometry()
     return jsonify(data)
 
 

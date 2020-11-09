@@ -3,12 +3,7 @@ import glob
 
 import bidict
 
-from amstramdam import CONF
 from .game_map import GameMap
-
-
-with open(CONF["datasets"], "r", encoding="utf8") as _fp:
-    DATASETS = json.load(_fp)
 
 
 def read_codes(*filenames, check_unicity=True):
@@ -58,7 +53,8 @@ class Dataloader(object):
             map_params = self.flattened[name].copy()
             attr = map_params.pop("method", "from_file")
             return getattr(GameMap, attr)(**map_params, **params)
-        return GameMap(name, **params)
+        #return GameMap(name, **params)
+        raise KeyError(name)
 
     @property
     def n_groups(self):
@@ -99,6 +95,8 @@ class Dataloader(object):
             for map_ in _maps:
                 file_pattern = map_.pop("file")
                 pref, suff = file_pattern.split("*") if "*" in file_pattern else ("", "")
-                maps.extend(process_map(fn, map_, pref, suff) for fn in glob.glob(file_pattern))
+                unsorted_maps = [process_map(fn, map_, pref, suff) for fn in glob.glob(file_pattern)]
+                sorted_maps = sorted(unsorted_maps, key=lambda m: m["name"])
+                maps.extend(sorted_maps)
             datasets.append(dict(group=group, maps=maps))
         return datasets

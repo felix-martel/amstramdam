@@ -11,8 +11,8 @@ from flask import Flask
 from flask_socketio import SocketIO
 from flask_talisman import Talisman
 
-from .city_parser import GameMap, MAPS
 import amstramdam.game.manager as manager
+from .datasets import Dataloader
 
 import eventlet
 eventlet.monkey_patch(socket=False)
@@ -55,6 +55,9 @@ socketio = SocketIO(app,
                     engineio_logger=logger,
                     logger=logger,
                     )
+
+# Load available datasets
+dataloader = Dataloader(CONF["datasets"])
 
 timers = defaultdict(int)
 

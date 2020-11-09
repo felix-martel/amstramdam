@@ -57,12 +57,12 @@
                              {% for dataGroup in datasets %}
                                 {% if loop.index0 == 0 %}
                                     {% for dataset in dataGroup.maps %}
-                                        <option value="{{dataset.map_id}}">{{ dataset.params.name}}</option>
+                                        <option value="{{dataset.map_id}}">{{ dataset.name}}</option>
                                     {% endfor %}}
                                 {% else %}
                                     <optgroup label="{{ dataGroup.group}}">
                                         {% for dataset in dataGroup.maps %}
-                                            <option value="{{dataset.map_id}}">{{ dataset.params.name}}</option>
+                                            <option value="{{dataset.map_id}}">{{ dataset.name}}</option>
                                         {% endfor %}}
                                     </optgroup>
                                 {% endif %}
