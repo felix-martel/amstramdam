@@ -50,7 +50,7 @@ def iter_games(purge=True):
 
 def get_public_games():
     return [dict(name=name, map=game.map_display_name, players=len(game.players), difficulty=game.difficulty) for name, game in iter_games()
-            if game.is_public and len(game.players) > 0] # Dirty fix for the case 'route to /game/xxx then socket io fails'
+            if game.is_public and (len(game.players) > 0 or game.is_permanent)] # Dirty fix for the case 'route to /game/xxx then socket io fails'
 
 def relaunch_game(name, **kwargs):
     old_game = MANAGER[name]

@@ -68,12 +68,14 @@ def get_cities(map):
 
 class Game:
     def __init__(self, name, players=None, n_run=20, time_param=5, dist_param=None,
+                 is_permanent=False,
                  difficulty=1, is_public=False, creation_date=None, allow_zoom=False,
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.name = name
         self.map_name = map
         map = GameMap.from_name(self.map_name)
         self.map_display_name = map.name
+        self.is_permanent = is_permanent
         if dist_param is None:
             dist_param = map.get_distance()
         self.bbox = map.bounding_box()
@@ -134,6 +136,7 @@ class Game:
             wait_time=self.wait_time,
             difficulty=self.difficulty,
             is_public=self.is_public,
+            is_permanent=self.is_permanent,
             creation_date=self.date_created,
             allow_zoom=self.allow_zoom,
         )
@@ -230,6 +233,8 @@ Run: {self.curr_run_id+1}/{self.n_run}
 
     def is_expired(self, hours=6):
         """Kwargs must be valid arguments for timedelta"""
+        if self.is_permanent:
+            return False
         expiration_date = self.date_created + timedelta(seconds=3600*hours)
         return len(self.players) == 0 and expiration_date < datetime.now()
 

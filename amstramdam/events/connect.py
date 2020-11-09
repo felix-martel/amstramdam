@@ -56,7 +56,7 @@ def leave_game():
 
     print(f"<{player}> disconnected!")
 
-    if not game.players:
+    if not game.players and not game.is_permanent:
         manager.remove_game(game_name)
         close_room(game_name)
         safe_cancel(timers[game_name])
