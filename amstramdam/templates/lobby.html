@@ -5,32 +5,20 @@
     <meta property="og:title" content="am·stram·dam" />
     <meta property="og:description" content="«à l’endroit où les rives du fleuve perdent leur mine souriante, où monts et rochers avec leurs ruines fantastiques de vieux bourgs prennent un air hautain, plus sauvage, plus grave et plus majestueux, on découvre, pareille à une légende lugubre de l’ancien temps, la vieille et sombre ville de Bacharach.»" />
     <meta property="og:image" content="{{ url_for('static',filename='background.png') }}" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>am·stram·dam</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,900&display=swap" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./static/style.css">
     <link rel="stylesheet" href="./static/style.mobile.css">
     <link rel="stylesheet" href="./static/timer.css">
     <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
     <script src="{{ url_for('static', filename='script/lobby.js') }}"></script>
 </head>
 <body>
 <div class="main">
     <div id="game-sharing-link" style="z-index: 1002;">
-        <a href="https://github.com/felix-martel/multigeo"  target="_blank">À propos</a>
-        <a href="https://github.com/felix-martel/multigeo/issues" target="_blank">Signaler un bug</a>
+        <a href="https://github.com/felix-martel/amstramdam"  target="_blank">À propos</a>
+        <a href="https://github.com/felix-martel/amstramdam/issues" target="_blank">Signaler un bug</a>
         <span style="color: white;">Demandez l'original : </span>
         <a href="https://www.jeux-geographiques.com/"  target="_blank">Jeux-Géographiques.com</a>
     </div>
