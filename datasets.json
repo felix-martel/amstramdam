@@ -1,10 +1,11 @@
 [
   {
+    "group": null,
     "maps": [
       {
         "map_id": "world",
         "name": "Monde entier",
-        "file": "data/places.worlds.csv"
+        "file": "data/places.world.csv"
       },
       {
         "map_id": "world_capitals",
@@ -64,8 +65,8 @@
         "file": "data/all/FR.csv"
       },
       {
-        "map_id": "*_easy",
-        "name": "*",
+        "map_id": "<id>_easy",
+        "name": "<name>",
         "file": "data/regions/*_easy.csv"
       }
     ]
