@@ -3,6 +3,7 @@ import string
 from collections import defaultdict, Counter
 
 import pandas as pd
+import numpy as np
 
 from game import GameRun, load_cities
 from city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
@@ -260,10 +261,15 @@ Run: {self.curr_run_id+1}/{self.n_run}
         #        score=self.scores.get(player, 0)
         #    )
 
+        def summary(values):
+            if not values:
+                return "-"
+            return np.median(values)
+
         results = [dict(
                 player=player,
-                dist=sum(distances.get(player, []))/self.n_run,
-                delta=sum(durations.get(player, []))/self.n_run,
+                dist=summary(distances.get(player, [])),
+                delta=summary(durations.get(player, [])),
                 score=self.scores.get(player, 0)
             ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
 

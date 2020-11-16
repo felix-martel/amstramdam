@@ -210,14 +210,24 @@ document.addEventListener("DOMContentLoaded", () => {
      }
      function fullShowResults(results){
          let table = "";
+         function prettify(value, unit){
+             if (value === "-") {
+                 return "-";
+             } else {
+                 const roundingFactor = (unit === "s") ? 100 : 1;
+                 let roundedValue = Math.round(value * roundingFactor) / roundingFactor;
+                 roundedValue = String(roundedValue).replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/gm, ' ').replace(".", ",");
+                 return roundedValue + " " + unit;
+             }
+         }
          results.forEach((el, i) => {
              var crown = (i === 0) ? " <i class='fas fa-crown first-place'></i>" : "";
              table += `<tr>
                     <td class="rank">${i+1}</td>
                     <td class="player-name">${getPlayerName(el.player)}${crown}</td>
-                    <td class="player-score-deets"><i class="fas fa-ruler"></i>${Math.round(el.dist)}km</td>
-                    <td class="player-score-deets"><i class="fas fa-clock"></i>${Math.round(100*el.delta)/100}s</td>
-                    <td class="player-score">${el.score}pts</td>
+                    <td class="player-score-deets"><i class="fas fa-ruler"></i>${prettify(el.dist, "km")}</td>
+                    <td class="player-score-deets"><i class="fas fa-clock"></i>${prettify(el.delta, "s")}</td>
+                    <td class="player-score">${prettify(el.score, "pts")}</td>
                 </tr>`
          });
        $("final-results").innerHTML = table;
