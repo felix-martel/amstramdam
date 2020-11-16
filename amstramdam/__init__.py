@@ -37,7 +37,18 @@ valid_hosts = ["https://"+h for h in hosts]
 
 # Init Flask app
 print(f"Creating app... (local={IS_LOCAL})")
-app = Flask(__name__)
+
+
+class CustomFlask(Flask):
+    jinja_options = Flask.jinja_options.copy()
+    jinja_options.update(dict(
+        variable_start_string='[[',
+        variable_end_string=']]',
+    ))
+
+
+app = CustomFlask(__name__)
+#app = Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
 
 # Init Talisman for HTTP headers

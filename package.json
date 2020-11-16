@@ -5,10 +5,14 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "@vue/compiler-sfc": "^3.0.2",
     "countup.js": "^2.0.7",
     "leaflet": "^1.7.1",
     "socket.io": "^3.0.1",
-    "socket.io-client": "^2.2.0"
+    "socket.io-client": "^2.2.0",
+    "vue": "^3.0.2",
+    "vue-loader": "^16.0.0-rc.1",
+    "vuex": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
@@ -19,7 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
 <meta property="og:title" content="am·stram·dam" />
 <meta property="og:description" content="«à l’endroit où les rives du fleuve perdent leur mine souriante, où monts et rochers avec leurs ruines fantastiques de vieux bourgs prennent un air hautain, plus sauvage, plus grave et plus majestueux, on découvre, pareille à une légende lugubre de l’ancien temps, la vieille et sombre ville de Bacharach.»" />
-<meta property="og:image" content="{{ url_for('static',filename='background.png') }}" />
+<meta property="og:image" content="[[ url_for('static',filename='background.png') ]]" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>am·stram·dam</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 {#    <script src="https//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>#}
-    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='style.mobile.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='timer.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
-    <link rel="icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="[[ url_for('static',filename='style.css') ]]">
+    <link rel="stylesheet" href="[[ url_for('static',filename='style.mobile.css') ]]">
+    <link rel="stylesheet" href="[[ url_for('static',filename='timer.css') ]]">
+    <link rel="shortcut icon" href="[[ url_for('static',filename='favicon.ico') ]]" type="image/x-icon">
+    <link rel="icon" href="[[ url_for('static',filename='favicon.ico') ]]" type="image/x-icon">
 {#    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"#}
 {#   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="#}
 {#   crossorigin=""/>#}
@@ -23,158 +23,17 @@
 {#   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="#}
 {#   crossorigin=""></script>#}
 {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>#}
-   {# <script src="{{ url_for('static',filename='countUp.js') }}"></script>#}
+   {# <script src="[[ url_for('static',filename='countUp.js') ]]"></script>#}
     <script src="https://kit.fontawesome.com/0b60c47224.js" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" charset="utf-8" nonce="{{ csp_nonce() }}">
-        const params = {{ params | tojson }};
+    <script type="text/javascript" charset="utf-8" nonce="[[ csp_nonce() ]]">
+        const params = [[ params | tojson ]];
     </script>
-    <script src="{{ url_for('static', filename='script/main.js') }}"></script>
+    <script src="[[ url_for('static', filename='script/main.js') ]]"></script>
 </head>
 <body>
-<div class="blink-wrapper off" id="blink-wrapper">
-    <div class="blink-item" id="left"></div>
-    <div class="blink-item" id="right"></div>
-    <div class="blink-item" id="top"></div>
-    <div class="blink-item" id="bottom"></div>
+<div id="amstramdam">
+
 </div>
-<div class="main">
-    <div id="game-sharing-link">Inviter des amis: <u id="sharing-link"></u>
-        <span class="option-bar">
-            <input type="checkbox" name="autozoom" checked id="autozoom-check"><label for="autozoom">Autozoom</label>
-            <input type="checkbox" name="colinvert" id="colinvert-check"><label for="colinvert">Mode inversé</label>
-        </span>
-    </div>
-    <div class="popup-container" id="popup-container" hidden>
-        <div id="mask">
-
-        </div>
-        <div id="popup" class="box">
-            <div class="popup-left">
-                <div class="box no-border" id="chat-box-popup">
-                <div class="inner-chat">
-
-                    <div class="messages-wrapper">
-                        <div id="chat-messages-popup" class="chat-messages">
-
-                        </div>
-
-                    </div>
-                    <div class="input">
-                        <textarea name="chat-input" id="chat-input-popup" class="chat-input" placeholder="Envoyez un message"></textarea>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popup-main">
-                <h2 class="blue">Partie terminée</h2>
-                <h4 class="high-score-notif no-score" id="new-highscore-notif">C'est votre meilleur score !</h4>
-            <table id="final-results">
-
-            </table>
-            <button id="relaunch-from-popup">Nouvelle partie</button>
-            <div style="margin-top:15px;">
-                <a  href="/">
-                    Retour à l'accueil
-                </a>
-            </div>
-            </div>
-
-        </div>
-    </div>
-        <div class="column" id="left-column-display">
-
-
-    <div class="box" id="main-info-box">
-        <div class="nav">
-            <a href="/">Accueil</a>
-        </div>
-      <div class="self">
-      <div class="name" id="player-name">Non connecté</div>
-        <div class="total-score"><span id="total-score">0</span> pts</div>
-          <div class="high-score no-score" id="high-score-container">
-            <i class="fas fa-trophy"></i>
-            <span id="high-score">0</span>pts
-              <span id="high-score-diff" class="no-score"></span>
-          </div>
-      </div>
-
-      <div class="ranking">
-        <ul id="player-list">
-        </ul>
-        <div class="controls">
-          <button id="launch">Commencer</button>
-            <i class="fas fa-comments" id="chat-toggle-button"></i>
-          <!--<button id="restart">Restart</button>-->
-        </div>
-      </div>
-    </div>
-
-            <div class="box" id="chat-box">
-                <i id="close-chatbox" class="fas fa-times"></i>
-                <div class="inner-chat">
-                    <div class="messages-wrapper">
-                        <div id="chat-messages" class="chat-messages">
-
-                        </div>
-
-                    </div>
-                    <div class="input">
-                        <textarea name="chat-input" id="chat-input" class="chat-input" placeholder="Envoyez un message"></textarea>
-                    </div>
-                </div>
-            </div>
-
-
-      <div class="box" id="results" hidden>
-          <div class="individual-results">
-              <div id="answer-name" class="title"></div>
-      <div class="distance"><span id="main-disp-dist">0</span> km</div>
-      <div class="deets">
-        <div class="score-dist"><i id="disp-dist">0</i> km = <i id="disp-score-dist">0</i> pts</div>
-        <div class="score-time"><i id="disp-time">0</i>s = <i id="disp-score-time">0</i> pts</div>
-          </div>
-
-      </div>
-
-      <div class="score">
-          <span id="curr-score">0</span> pts
-      </div>
-
-          <div class="collective-results">
-                    <ul id="current-results">
-
-                    </ul>
-              </div>
-    </div>
-    </div>
-
-    <div class="right-corner" id="game-box" hidden>
-        <div class="game-info box" id="display-hint">
-            <span class="run-info">
-                <span id="run-current">0</span>/<span id="run-total">0</span>
-            </span>
-            <span id="target"></span>
-            <div class="progress-container">
-                <div class="progress-inner">
-                <div class="wrapper" id="countdown-animation-wrapper" data-anim="base wrapper">
-                  <div class="circle" id="countdown-animation-left" data-anim="base left"></div>
-                  <div class="circle" id="countdown-animation-right" data-anim="base right"></div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="box hidden" id="display-timer">
-            <span class="timer-text">
-                <span id="timer-legend">Prochaine manche dans </span><span id="run-timer"></span>...</span>
-        </div>
-    </div>
-
-    <div id="mapid"></div>
-    <!--<audio id="beep" hidden src="{{ url_for('static',filename='bip.mp3') }}"></audio>-->
-</div>
-
-
 </body>
 </html>

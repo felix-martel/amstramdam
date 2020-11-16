@@ -32,3 +32,11 @@ export function GET(url) {
         req.send(null);
     }))
 }
+
+export const NamingMixin = {
+    methods: {
+        getPlayerName (id) {
+            return this.$store.state.pseudos[id] || id;
+        }
+    }
+}
