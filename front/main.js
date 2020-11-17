@@ -9,7 +9,7 @@ import initStore from './store';
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import SocketIOPlugin from "./socket";
-import {NamingMixin} from "./common/utils";
+import {NamingMixin, EventRegistrationMixin} from "./common/utils";
 //import {$} from "./common/utils";
 
 
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     app.use(istore);
     app.use(SocketIOPlugin, socket);
     app.mixin(NamingMixin);
+    app.mixin(EventRegistrationMixin);
 
     app.mount('#amstramdam');
 });

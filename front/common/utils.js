@@ -40,3 +40,31 @@ export const NamingMixin = {
         }
     }
 }
+
+/**
+ * Register custom handler for socketio events when defining a component. Example:
+ * export default {
+ *     data () {
+ *         return {
+ *             connected: false
+ *         }
+ *     },
+ *     events: {
+ *         'connect': function () {
+ *             this.connected = true
+ *         }
+ *     }
+ * }
+ * @type {{created(): void}}
+ */
+export const EventRegistrationMixin = {
+    created() {
+        const hasSocketIO = (typeof this.$socketOn!== "undefined");
+        const hasEvents = (typeof this.$options.events !== "undefined");
+        if (hasSocketIO && hasEvents) {
+            for (const [event, handler] of Object.entries(this.$options.events)) {
+                this.$socketOn(event, handler.bind(this));
+            }
+        }
+    }
+}
