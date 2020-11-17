@@ -10,6 +10,13 @@ const LAYERS = {
     bwSSL: 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
 };
 
+const CREDITS = `Map tiles by <a href="http://stamen.com">Stamen Design</a>,
+under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.
+Data by <a href="http://openstreetmap.org">OpenStreetMap</a>,
+under <a href="http://www.openstreetmap.org/copyright">ODbL</a> and
+<a href="https://simplemaps.com/data/world-cities">World Cities Database</a>
+under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`;
+
 
 function getIcon(color="red", extraClass="", opacity=0.8){
     const markerHtmlStyles = `
@@ -28,11 +35,12 @@ function getIcon(color="red", extraClass="", opacity=0.8){
 }
 
 
+
 const defaultView = {
         center: [23.7, 7.6],
         zoom: 1
     };
 
 export {
-    LAYERS, getIcon, defaultView
+    LAYERS, CREDITS, getIcon, defaultView
 }
