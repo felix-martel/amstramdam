@@ -48,29 +48,7 @@
       <div class="column" id="left-column-display">
         <score-box></score-box>
         <chat-box :hidden="!panelVisibility.chatBox"></chat-box>
-
-
-        <div class="box" id="results" hidden>
-          <div class="individual-results">
-            <div id="answer-name" class="title"></div>
-            <div class="distance"><span id="main-disp-dist">0</span> km</div>
-            <div class="deets">
-              <div class="score-dist"><i id="disp-dist">0</i> km = <i id="disp-score-dist">0</i> pts</div>
-              <div class="score-time"><i id="disp-time">0</i>s = <i id="disp-score-time">0</i> pts</div>
-            </div>
-
-          </div>
-
-          <div class="score">
-            <span id="curr-score">0</span> pts
-          </div>
-
-          <div class="collective-results">
-            <ul id="current-results">
-
-            </ul>
-          </div>
-        </div>
+        <result-box :hidden="!panelVisibility.resultBox"></result-box>
       </div>
 
         <div class="right-corner" id="game-box" hidden>
@@ -94,8 +72,8 @@
                     <span id="timer-legend">Prochaine manche dans </span><span id="run-timer"></span>...</span>
             </div>
         </div>
-
-        <div id="mapid"></div>
+      <map-container></map-container>
+<!--        <div id="mapid"></div>-->
         <!--<audio id="beep" hidden src="[[ url_for('static',filename='bip.mp3') ]]"></audio>-->
     </div>
   </div>
@@ -104,13 +82,17 @@
 //import store from "./store"
 import scoreBox from "./panels/scoreBox.vue";
 import chatBox from "./panels/chatBox.vue";
+import resultBox from "./panels/resultBox.vue";
 import gameFooter from "./ui/footer.vue";
+import Map from "./ui/map.vue";
 
 export default {
     components: {
       'score-box': scoreBox,
       "chat-box": chatBox,
+      "result-box": resultBox,
       "game-footer": gameFooter,
+      "map-container": Map
     },
     data () {
       return {
@@ -126,22 +108,56 @@ export default {
   },
 
     created () {
-      console.log("'mainGamePage' mounted.");
-      console.log(this.$store.state.params);
-      this.$socketOn("connect", () => {
+      const gameParams = Object.assign({}, this.$store.state.params);
+      console.log("Game params:", gameParams);
+    },
+
+    events: {
+      "connect": function () {
         let pseudo; // TODO: read from cookie
         console.debug("Connecting... Current pseudo is", pseudo);
         this.$socketEmit("connection", {data: "connected", pseudo: pseudo});
-      })
+      },
 
-      this.$socketOn("log", data => console.log(data));
+      "log": function (data) {
+        console.log(data);
+      },
 
-      this.$socketOn("init", data => {
+      "init": function (data) {
         console.debug(`You're now connected as <${data.pseudo}> (id=${data.player})`);
         this.$store.commit("updatePseudos", data.pseudos);
         this.$store.commit("setPlayer", data.player);
-      })
-    },
+      },
+
+      "new-player": function ({leaderboard, pseudos}) {
+        this.$store.commit("updatePseudos", pseudos);
+        this.$store.commit("updateLeaderboard", leaderboard);
+      },
+
+      "run-end": function (data) {
+        this.$store.commit("updateLeaderboard", data.leaderboard);
+      },
+
+      "player-left": function ({player, leaderboard}) {
+        console.debug("Bye,", player);
+        this.$store.commit("updateLeaderboard", leaderboard);
+      },
+
+      "score": function (data){
+        // TODO: store correct answer and add marker + circle
+        this.$store.commit("setLastRun", {
+          score: Math.round(data.score),
+          distance: Math.round(data.dist),
+          sdistance: Math.round(dataLsd),
+          delay: Math.round(data.delta * 100) / 100,
+          sdelay: Math.round(data.st)
+        });
+      },
+
+      "new-guess": function ({player, dist}) {
+        this.$store.commit("addGuess", {name: player, distance: Math.round(dist)});
+      }
+    }
 }
 </script>
 <style>
