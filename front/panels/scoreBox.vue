@@ -15,6 +15,10 @@
 
     <div class="ranking">
       <ul id="player-list">
+        <li v-for="el in leaderboard">
+          <span class="pname">{{ getPlayerName(el.player) }}</span>
+          <span class="pscore">{{el.score}} pts</span>
+        </li>
       </ul>
       <div class="controls">
         <button id="launch" @click="launchGame">Commencer</button>
@@ -27,6 +31,8 @@
   </div>
 </template>
 <script>
+import {mapState} from "vuex";
+
 export default {
   methods: {
     launchGame(e) {
@@ -67,7 +73,9 @@ export default {
 
     unreadMessages () {
       return this.$store.state.chat.unread;
-    }
+    },
+
+    ...mapState(["leaderboard"])
   }
 }
 </script>
