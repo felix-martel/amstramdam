@@ -1,4 +1,7 @@
 import {createStore} from "vuex";
+import constants from "./common/constants";
+
+const STATUS = constants.status;
 
 function initScore(params) {
     return createStore({
@@ -18,9 +21,15 @@ function initScore(params) {
                     // Panel visibility
                     chatBox: false,
                     scoreBox: true,
-                    resultBox: true,
-                    hintBox: true,
+                    resultBox: false,
+                    hintBox: false, // deprecated
                     resultPopup: false,
+                    state: {
+                        duration: -1,
+                        transition: false,
+                        hint: false,
+                        message: "",
+                    },
                 },
                 score: {
                     total: 0,
@@ -29,8 +38,12 @@ function initScore(params) {
                 },
                 game: {
                     launched: false,
+                    hasAnswered: false,
                     currentRun: 0,
+                    currentPlace: "Paris",
+                    currentHint: "France",
                     nRuns: undefined,
+                    status: STATUS.NOT_LAUNCHED,
                 },
                 chat: {
                     messages: [],
@@ -59,13 +72,26 @@ function initScore(params) {
             },
 
             autozoom(state, getters){
-                return state.playerParams.autozoom && getters.isMobile;
+                return state.playerParams.autozoom && !getters.isMobile;
             }
         },
 
         mutations: {
             updatePseudos (state, pseudos) {
                 state.pseudos = pseudos;
+            },
+
+            incrementRun(state) {
+                state.game.currentRun += 1;
+            },
+
+            setHint(state, {place, hint}) {
+                state.game.currentPlace = place;
+                state.game.currentHint = hint;
+            },
+
+            setTotalRuns(state, n) {
+                state.game.nRuns = n;
             },
 
             updateLeaderboard (state, leaderboard) {
@@ -112,11 +138,114 @@ function initScore(params) {
             clearGuesses(state) {
                 state.guesses = []
             },
+
+            setGameLaunched(state) {
+                state.game.launched = true;
+            },
+
+            setGameNotLaunched(state) {
+                state.game.launched = false;
+            },
+
+            setGameStatus(state, status){
+                console.debug("New game status", status);
+                state.game.status = status;
+            },
+
+            startTransitionState(state, {message, duration=-1}) {
+                state.ui.state.transition = true;
+                state.ui.state.hint = false;
+                state.ui.state.duration = duration;
+                state.ui.state.message = message;
+            },
+
+            startHintState(state) {
+                state.ui.state.transition = false;
+                state.ui.state.hint = true;
+                state.ui.state.duration = state.params.duration;
+            },
+
+            displayResultBox(state) {
+                state.ui.resultBox = true;
+            },
+
+            hideResultBox(state) {
+                state.ui.resultBox = false;
+            },
+
+            answerSubmitted(state) {
+                state.game.hasAnswered = true;
+            },
+
+            answerRemoved(state) {
+                state.game.hasAnswered = false;
+            },
+
+            startHiddenState(state, duration=-1) {
+                state.ui.state.transition = false;
+                state.ui.state.hint = false;
+                state.ui.state.duration = duration;
+            },
         },
 
         actions: {
             toggleChatBox({state, commit}) {
                 commit(state.ui.chatBox ? "hideChatBox" : "showChatBox")
+            },
+
+            startRun({state, commit}, {hint, runs}) {
+                commit("startHintState");
+                commit("hideResultBox");
+                commit("answerRemoved");
+                commit("clearGuesses");
+
+                commit("setTotalRuns", runs);
+                commit("incrementRun");
+                commit("setHint", {place: hint});
+            },
+
+            setGameStatus({state, commit, dispatch}, data) {
+                let status, payload;
+                if (typeof data === "string") {
+                    status = data;
+                    payload = undefined;
+                }
+                else {
+                    status = data.status;
+                    payload = data.payload;
+                }
+                const stat = constants.status;
+                commit("setGameStatus", status);
+                switch (status) {
+                    case stat.NOT_LAUNCHED:
+                        // do something
+                        commit("setGameNotLaunched");
+                        commit("startHiddenState");
+                        break;
+                    case stat.LAUNCHING:
+                        console.log("Launching...");
+                        commit("setGameLaunched");
+                        commit("startTransitionState", {
+                            message: "Début de partie dans ",
+                            duration: 3,
+                        });
+                        break;
+                    case stat.RUNNING:
+                        dispatch("startRun", {hint: payload.hint, runs: payload.total});
+                        break;
+                    case stat.CORRECTION:
+                        commit("startTransitionState", {
+                            message: "Prochaine manche dans ",
+                            duration: state.params.wait_time,
+                        })
+                        commit("updateLeaderboard", payload.leaderboard);
+                        commit("displayResultBox");
+                        break;
+                    case stat.STOPPING:
+                        break;
+                    case stat.FINISHED:
+                        break;
+                }
             }
         }
     })
