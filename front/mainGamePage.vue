@@ -51,26 +51,8 @@
         <result-box :hidden="!panelVisibility.resultBox"></result-box>
       </div>
 
-        <div class="right-corner" id="game-box" hidden>
-            <div class="game-info box" id="display-hint">
-                <span class="run-info">
-                    <span id="run-current">0</span>/<span id="run-total">0</span>
-                </span>
-                <span id="target"></span>
-                <div class="progress-container">
-                    <div class="progress-inner">
-                    <div class="wrapper" id="countdown-animation-wrapper" data-anim="base wrapper">
-                      <div class="circle" id="countdown-animation-left" data-anim="base left"></div>
-                      <div class="circle" id="countdown-animation-right" data-anim="base right"></div>
-                    </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="box hidden" id="display-timer">
-                <span class="timer-text">
-                    <span id="timer-legend">Prochaine manche dans </span><span id="run-timer"></span>...</span>
-            </div>
+        <div class="right-corner" id="game-box">
+            <game-state-box></game-state-box>
         </div>
       <map-container></map-container>
 <!--        <div id="mapid"></div>-->
@@ -84,7 +66,9 @@ import scoreBox from "./panels/scoreBox.vue";
 import chatBox from "./panels/chatBox.vue";
 import resultBox from "./panels/resultBox.vue";
 import gameFooter from "./ui/footer.vue";
+import gameStateBox from "./panels/gameStateBox.vue";
 import Map from "./ui/map.vue";
+import constants from "./common/constants";
 
 export default {
     components: {
@@ -92,6 +76,7 @@ export default {
       "chat-box": chatBox,
       "result-box": resultBox,
       "game-footer": gameFooter,
+      "game-state-box": gameStateBox,
       "map-container": Map
     },
     data () {
@@ -134,8 +119,26 @@ export default {
         this.$store.commit("updateLeaderboard", leaderboard);
       },
 
+      "game-launched": function (data) {
+        // TODO: retrieve high score
+        console.debug("Received <game-launched>");
+        const {game, runs, diff} = data;
+
+        this.$store.dispatch("setGameStatus", constants.status.LAUNCHING);
+      },
+
+      "run-start": function (data) {
+        this.$store.dispatch("setGameStatus", {
+          status: constants.status.RUNNING,
+          payload: data,
+        });
+      },
+
       "run-end": function (data) {
-        this.$store.commit("updateLeaderboard", data.leaderboard);
+        this.$store.dispatch("setGameStatus", {
+          status: constants.status.CORRECTION,
+          payload: data
+        });
       },
 
       "player-left": function ({player, leaderboard}) {
@@ -148,7 +151,7 @@ export default {
         this.$store.commit("setLastRun", {
           score: Math.round(data.score),
           distance: Math.round(data.dist),
-          sdistance: Math.round(dataLsd),
+          sdistance: Math.round(data.sd),
           delay: Math.round(data.delta * 100) / 100,
           sdelay: Math.round(data.st)
         });
