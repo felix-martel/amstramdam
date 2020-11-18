@@ -4,7 +4,11 @@ export default {
             socketClient.on(event, handler);
         }
         app.config.globalProperties.$socketEmit = (event, data) => {
-            socketClient.emit(event, data);
+            if (typeof data === "undefined") {
+                socketClient.emit(event);
+            } else {
+                socketClient.emit(event, data);
+            }
         }
         console.log("Added `$socketOn` and `$socketEmit` to app!")
     }
