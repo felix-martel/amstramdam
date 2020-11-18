@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import constants from "../common/constants";
 import {LAYERS, CREDITS, getIcon} from "../common/map";
+import {mapState} from "vuex";
 
 export default {
   data() {
@@ -20,16 +21,20 @@ export default {
   mounted() {
     console.log("Map created");
     this.canvas = L.map("mapid", {
-         scrollWheelZoom: this.params.allow_zoom || this.isMobile,
-         doubleClickZoom: this.params.allow_zoom || this.isMobile,
+         scrollWheelZoom: true, //this.params.allow_zoom || this.isMobile,
+         doubleClickZoom: true, //this.params.allow_zoom || this.isMobile,
     });
     this.canvas.fitBounds(this.params.bbox);
+    const normalZoom = this.canvas.getZoom();
+    const maxZoom = this.isMobile ? 18 : (normalZoom + 1);
+    this.canvas.setMaxZoom(maxZoom);
     this.map = L.tileLayer(LAYERS.bwSSL, {
       zoomControl: false,
       attribution: CREDITS,
       // minZoom: currGame.zoom,
     });
     this.map.addTo(this.canvas);
+    this.canvas.on("click", this.submitGuess);
   },
 
   computed: {
@@ -37,12 +42,36 @@ export default {
       return this.$store.getters.isMobile;
     },
 
-    params () {
-      return this.$store.state.params;
-    }
+    isRunning () {
+      return this.gameStatus === constants.status.RUNNING;
+    },
+
+    autozoomActivated () {
+      return this.$store.getters.autozoom;
+    },
+
+    ...mapState({
+      params: state => state.params,
+      gameLaunched: state => state.game.launched,
+      hasAnswered: state => state.game.hasAnswered,
+      playerId: state => state.playerId,
+      gameStatus: state => state.game.status,
+    })
   },
 
   methods: {
+    submitGuess(e) {
+      if (!this.isRunning || this.hasAnswered) { return ;}
+      const coords = e.latlng;
+      const data = {
+        lon: coords.lng,
+        lat: coords.lat,
+        player: this.playerId,
+      };
+      this.addMarker(data.lat, data.lon, this.getPlayerName(this.playerId), constants.colors.SELF);
+      this.$socketEmit("guess", data);
+      this.$store.commit("answerSubmitted");
+    },
     drawCircle({lat, lon, radius, color, onEnd}) {
       // 1: initialize circle
       const circle = L.circle([lat, lon], {
@@ -70,7 +99,7 @@ export default {
 
       return circle;
     },
-    drawCirclePromise({lat, lon, radius, color}) {
+    drawCirclePromise(lat, lon, radius, color) {
       return new Promise(resolve => {
         // 1: initialize circle
         const circle = L.circle([lat, lon], {
@@ -87,7 +116,7 @@ export default {
         const interval = setInterval(() => {
           let currentRadius = circle.getRadius();
           if (currentRadius < finalRadius){
-            circle.setRadius(currentRadius * step);
+            circle.setRadius(currentRadius + step);
           } else {
             clearInterval(interval);
             resolve(circle);
@@ -114,9 +143,9 @@ export default {
       //         });
       //     })
       //   });
-      const circles = data.results.map(rec => {
+      const circles = results.map(rec => {
         const color = (rec.player === this.$store.state.playerId) ? constants.colors.SELF : constants.colors.BASE;
-        return this.drawCirclePromise(answer.lon, answer.lat, rec.dist, color)
+        return this.drawCirclePromise(answer.lat, answer.lon, rec.dist, color)
             .then(circle => {
               const marker = this.addMarker(rec.guess.lat, rec.guess.lon, this.getPlayerName(rec.player), color);
               answers.addLayer(marker);
@@ -127,10 +156,13 @@ export default {
       })
     },
     autoZoomOnResults(answers, results) {
-      if (!this.$store.getters.autozoom || (results.length === 0)) { return }
+      console.log("Autozoom", this.autozoomActivated);
+      if (!this.autozoomActivated || (results.length === 0)) { return }
       const refState = this.getMapState();
+      //this.canvas.setMaxZoom(18);
       const bounds = answers.getBounds().pad(0.5);
-      this.canvas.flyToBounds(bounds, {duration: constants.animations.map.duration});
+      this.canvas.flyToBounds(bounds, {
+        duration: constants.animations.map.duration, maxZoom: 18});
       window.setTimeout(() => {
         this.setMapState(refState);
       }, 1000 * (this.params.wait_time - 2 * constants.animations.map.duration - constants.animations.map.deltaPad))
@@ -144,7 +176,7 @@ export default {
     },
     setMapState({center, zoom, maxZoom}){
       this.canvas.flyTo(center, zoom, {duration: constants.animations.map.duration});
-      this.canvas.setMaxZoom(maxZoom);
+      //this.canvas.setMaxZoom(maxZoom);
     },
     clearMap(){
       this.canvas.eachLayer(layer => {
@@ -159,6 +191,15 @@ export default {
     "run-end": function (data) {
       this.clearMap();
       this.displayResults(data.answer, data.results);
+    },
+
+    "run-start": function() {
+      this.clearMap();
+    },
+
+    "score": function ({answer, dist}) {
+      this.addMarker(answer.lat, answer.lon, answer.name, constants.colors.TRUE);
+      this.drawCirclePromise(answer.lat, answer.lon, dist, constants.colors.SELF);
     }
   }
 }
