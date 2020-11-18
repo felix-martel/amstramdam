@@ -10,4 +10,12 @@ export default {
             deltaPad: 0.5,
         },
     },
+    status: {
+        NOT_LAUNCHED: "not-launched",
+        LAUNCHING: "before-start",
+        RUNNING: "running",
+        CORRECTION: "correction",
+        STOPPING: "before-stop",
+        FINISHED: "finished",
+    }
 }
