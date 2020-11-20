@@ -11,6 +11,7 @@ import L from "leaflet";
 import SocketIOPlugin from "./socket";
 import {NamingMixin, EventRegistrationMixin} from "./common/utils";
 //import {$} from "./common/utils";
+import popup from "./components/popup.vue";
 
 
 
@@ -19,11 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
         rejectUnauthorized: false, // !params.debug,
     });
     const app = createApp(AmstramdamApp)
+
+    // Setup plugins
     const istore = initStore(params);
     app.use(istore);
     app.use(SocketIOPlugin, socket);
+
+    // Register mixins
     app.mixin(NamingMixin);
     app.mixin(EventRegistrationMixin);
 
+    // Register components
+    app.component("popup", popup);
+
+    // Mount!
     app.mount('#amstramdam');
 });
