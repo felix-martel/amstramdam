@@ -19,11 +19,13 @@ eventlet.monkey_patch(socket=False)
 
 # Read environment variables
 IS_LOCAL = os.environ.get("IS_HEROKU") != "1"
+NO_SSL = os.environ.get("NO_SSL") == "1"
 SECRET_KEY = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(",")[0]
 
 # Load configuration file
 with open("config.json", "r", encoding="utf8") as fp:
     CONF = json.load(fp)
+CONF["allowHTTP"] = CONF["allowHTTP"] or NO_SSL
 
 # Load Content Security Policy
 with open("csp.json", "r", encoding="utf8") as fp:
@@ -34,6 +36,8 @@ hosts += ["www." + name for name in hosts]
 if IS_LOCAL:
     hosts += ["127.0.0.1", "localhost"]
 valid_hosts = ["https://"+h for h in hosts]
+if CONF["allowHTTP"]:
+    valid_hosts += ["http://"+h for h in hosts]
 
 # Init Flask app
 print(f"Creating app... (local={IS_LOCAL})")
