@@ -3,7 +3,6 @@ geopy~=2.0.0
 Flask~=1.1.2
 Flask-SocketIO
 flask-talisman
-numpy
 pandas~=1.1.4
 unidecode~=1.1.1
 eventlet~=0.29.1
