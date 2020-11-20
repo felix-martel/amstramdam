@@ -3,23 +3,10 @@
     <div class="nav">
       <a href="/">Accueil</a><span></span>
     </div>
-    <div class="self">
-      <div class="name" id="player-name">{{ playerName || 'Non connecté'}}</div>
-      <div class="total-score"><span id="total-score">{{ score }}</span> pts</div>
-      <div class="high-score no-score" id="high-score-container">
-        <i class="fas fa-trophy"></i>
-        <span id="high-score">{{ highScore }}</span>pts
-        <span id="high-score-diff" class="no-score">{{ diffScore }}</span>
-      </div>
-    </div>
+    <score-box-self></score-box-self>
 
     <div class="ranking">
-      <ul id="player-list">
-        <li v-for="el in leaderboard">
-          <span class="pname">{{ getPlayerName(el.player) }}</span>
-          <span class="pscore">{{el.score}} pts</span>
-        </li>
-      </ul>
+      <score-box-ranking></score-box-ranking>
       <div class="controls">
         <button id="launch" @click="launchGame">Commencer</button>
         <i class="fas fa-comments"
@@ -32,8 +19,14 @@
 </template>
 <script>
 import {mapState} from "vuex";
+import scoreBoxSelf from "./scoreBoxSelf.vue";
+import scoreBoxRanking from "./scoreBoxRanking.vue";
 
 export default {
+  components: {
+    "score-box-self": scoreBoxSelf,
+    "score-box-ranking": scoreBoxRanking,
+  },
   methods: {
     launchGame(e) {
       console.log("Launch");

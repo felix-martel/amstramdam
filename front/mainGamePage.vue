@@ -62,11 +62,11 @@
 </template>
 <script>
 //import store from "./store"
-import scoreBox from "./panels/scoreBox.vue";
-import chatBox from "./panels/chatBox.vue";
-import resultBox from "./panels/resultBox.vue";
+import scoreBox from "./panels/scoreBox/scoreBox.vue";
+import chatBox from "./panels/chatBox/chatBox.vue";
+import resultBox from "./panels/resultBox/resultBox.vue";
 import gameFooter from "./ui/footer.vue";
-import gameStateBox from "./panels/gameStateBox.vue";
+import gameStateBox from "./panels/hintBox/gameStateBox.vue";
 import Map from "./ui/map.vue";
 import constants from "./common/constants";
 
@@ -159,6 +159,11 @@ export default {
 
       "new-guess": function ({player, dist}) {
         this.$store.commit("addGuess", {name: player, distance: Math.round(dist)});
+      },
+
+      "new-name": function({change, pseudos}) {
+        console.log(`Player <${change.player}> has a new nickname: "${change.pseudo}"`);
+        this.$store.commit("updatePseudos", pseudos);
       }
     }
 }

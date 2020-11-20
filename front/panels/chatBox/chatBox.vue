@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import chatInner from "../components/chatInner.vue";
+import chatInner from "../../components/chatInner.vue";
 
 export default {
   components: {
