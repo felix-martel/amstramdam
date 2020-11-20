@@ -5,6 +5,12 @@
       <span class="pscore">{{el.score}} pts</span>
     </li>
   </ul>
+<!--  <table>-->
+<!--    <tr v-for="el in leaderboard">-->
+<!--      <td class="pname">{{ getPlayerName(el.player) }}</td>-->
+<!--      <td class="pscore">{{ el.score }} pts</td>-->
+<!--    </tr>-->
+<!--  </table>-->
 </template>
 
 <script>
@@ -19,5 +25,19 @@ export default {
 </script>
 
 <style scoped>
+ul {
+  width: 100%;
+  margin: 10px 0;
+}
 
+li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pscore {
+  color: gray;
+}
 </style>
