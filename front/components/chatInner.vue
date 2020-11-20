@@ -2,10 +2,10 @@
   <div class="inner-chat">
     <div class="messages-wrapper">
       <div id="chat-messages" class="chat-messages">
-        <div class="chat-message" v-for="msg in messages">
-          <span class="chat-author">{{ getPlayerName(msg.author) }}</span>
-          <span class="chat-message-content">{{ msg.message }}</span>
-        </div>
+
+        <chat-message v-for="msg in messages"
+                      :author-id="msg.author"
+                      :content="msg.message"></chat-message>
       </div>
 
     </div>
@@ -21,7 +21,12 @@
 
 
 <script>
+import chatMessage from "./chatMessage.vue";
+
 export default {
+  components: {
+    "chat-message": chatMessage
+  },
   data () {
     return {
       message: "",
@@ -54,3 +59,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+textarea {
+  font-size: 0.9em;
+}
+</style>

@@ -58,8 +58,11 @@ export default {
         return Math.round(this.score - currHigh);
     },
 
+    score() {
+      return this.$store.getters.selfScore;
+    },
+
     ...mapState({
-      score: state => state.score.total,
       highScore: state => state.score.high,
     })
   },

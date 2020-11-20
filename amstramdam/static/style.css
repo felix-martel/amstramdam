@@ -216,10 +216,10 @@ option:checked {
       margin-right: 15px;
     font-style: italic;
 }
-.chat-author:after {
-  content: ":";
-  display: inline;
-}
+/*.chat-author:after {*/
+/*  content: ":";*/
+/*  display: inline;*/
+/*}*/
 .chat-input {
     resize: none;
     border: none;

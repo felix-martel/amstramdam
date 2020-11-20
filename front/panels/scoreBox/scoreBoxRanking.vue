@@ -1,21 +1,19 @@
 <template>
   <ul id="player-list">
-    <li v-for="el in leaderboard">
-      <span class="pname">{{ getPlayerName(el.player) }}</span>
-      <span class="pscore">{{el.score}} pts</span>
-    </li>
+    <transition-group name="leaderboard-change" tag="ul">
+      <li v-for="el in leaderboard" :key="el.player">
+        <span class="pname">{{ getPlayerName(el.player) }}</span>
+        <span class="pscore">{{ el.score }} pts</span>
+      </li>
+    </transition-group>
   </ul>
-<!--  <table>-->
-<!--    <tr v-for="el in leaderboard">-->
-<!--      <td class="pname">{{ getPlayerName(el.player) }}</td>-->
-<!--      <td class="pscore">{{ el.score }} pts</td>-->
-<!--    </tr>-->
-<!--  </table>-->
 </template>
 
 <script>
+import AnimatedCount from "../../components/animatedCount.vue";
 export default {
   name: "scoreBoxRanking",
+  components: {AnimatedCount},
   computed: {
     leaderboard () {
       return this.$store.state.leaderboard;
@@ -39,5 +37,14 @@ li {
 
 .pscore {
   color: gray;
+  text-align: right;
+}
+
+.pname {
+  text-align: left;
+}
+
+.leaderboard-change-move {
+  transition: transform 1s;
 }
 </style>

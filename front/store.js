@@ -74,6 +74,14 @@ function initScore(params) {
 
             autozoom(state, getters){
                 return state.playerParams.autozoom && !getters.isMobile;
+            },
+
+            selfScore(state) {
+                const selfResult = state.leaderboard.find(rec => (rec.player === state.playerId));
+                if (selfResult) {
+                    return selfResult.score || 0
+                }
+                return 0
             }
         },
 
@@ -151,6 +159,14 @@ function initScore(params) {
                 // state.ui.resultBox = true;
             },
 
+            clearLastRun(state){
+                state.lastRun.score = 0;
+                state.lastRun.distance = 0;
+                state.lastRun.sdistance = 0;
+                state.lastRun.delay = 0;
+                state.lastRun.sdelay = 0;
+            },
+
             addGuess(state, {name, distance}) {
                 state.guesses.push({name, distance});
                 // state.ui.resultBox = true;
@@ -219,6 +235,7 @@ function initScore(params) {
                 commit("hideResultBox");
                 commit("answerRemoved");
                 commit("clearGuesses");
+                commit("clearLastRun");
 
                 commit("setTotalRuns", runs);
                 commit("incrementRun");
@@ -253,6 +270,7 @@ function initScore(params) {
                     case stat.LAUNCHING:
                         console.log("Launching...");
                         commit("setGameLaunched");
+                        commit("hideResultBox");
                         commit("startTransitionState", {
                             message: "Début de partie dans ",
                             duration: 3,

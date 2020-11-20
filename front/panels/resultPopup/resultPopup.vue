@@ -2,19 +2,8 @@
   <popup :visible="visible">
     <i class="close fas fa-times" @click="close"></i>
     <div class="popup-left">
-      <div class="box no-border" id="chat-box-popup">
-        <div class="inner-chat">
-
-          <div class="messages-wrapper">
-            <div id="chat-messages-popup" class="chat-messages">
-
-            </div>
-
-          </div>
-          <div class="input">
-            <textarea name="chat-input" id="chat-input-popup" class="chat-input" placeholder="Envoyez un message"></textarea>
-          </div>
-        </div>
+      <div class="chat">
+        <chat-inner></chat-inner>
       </div>
     </div>
     <div class="popup-main">
@@ -25,7 +14,7 @@
         C'est votre meilleur score !
       </h4>
       <result-table :leaderboard="leaderboard"></result-table>
-      <button id="relaunch-from-popup">Nouvelle partie</button>
+      <button id="relaunch-from-popup" @click="relaunch">Nouvelle partie</button>
       <div style="margin-top:15px;">
         <a  href="/">
           Retour à l'accueil
@@ -41,11 +30,13 @@ import resultTable from "./resultTable.vue";
 import {mapState} from "vuex";
 import constants from "../../common/constants";
 import {goToHash} from "../../common/utils";
+import chatInner from "../../components/chatInner.vue";
 
 export default {
   components: {
     "popup": Popup,
     "result-table": resultTable,
+    "chat-inner": chatInner,
   },
   computed: {
     latestScore: function() {
@@ -77,6 +68,10 @@ export default {
     close: function(){
       //this.$store.commit("hideResultPopup");
       goToHash(" ");
+    },
+
+    relaunch: function() {
+      this.$socketEmit("launch");
     }
   }
 }
@@ -94,5 +89,19 @@ export default {
 }
 .close:hover {
   color: blue;
+}
+
+.popup-left {
+
+  position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 0;
+    width: 180px;
+    border-right: 1px solid lightgray;
+    margin-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 </style>
