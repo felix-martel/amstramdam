@@ -93,6 +93,10 @@ function initScore(params) {
                 state.pseudos = pseudos;
             },
 
+            resetCurrenRun (state) {
+                state.game.currentRun = 0;
+            },
+
             setGameResults(state, results) {
                 state.game.results = results;
             },
@@ -294,6 +298,7 @@ function initScore(params) {
                         commit("clearGuesses");
                         commit("clearLastRun");
                         commit("resetHighScore");
+                        commit("resetCurrenRun");
                         commit("startTransitionState", {
                             message: "Début de partie dans ",
                             duration: 3,

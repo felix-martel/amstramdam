@@ -8,7 +8,9 @@
       <div class="high-score" id="high-score-container" v-if="highScore">
         <i class="fas fa-trophy"></i>
         <span id="high-score">{{ highScore }}</span>pts
-        <span id="high-score-diff" v-if="diffScore">{{ diffScore }}</span>
+        <span id="high-score-diff"
+              v-if="diffScore"
+              :class="diffScoreClass">{{ diffScore }}</span>
       </div>
     </div>
 </template>
@@ -16,6 +18,7 @@
 <script>
 import {mapState} from "vuex";
 import {CookieHandler} from "../../common/cookie";
+import constants from "../../common/constants";
 
 export default {
   name: "scoreBoxSelf",
@@ -51,11 +54,20 @@ export default {
     },
     diffScore() {
       const game = this.$store.state.game;
-        if (!this.highScore || (typeof this.score === "undefined") || !game.launched || !game.nRuns){
+        if (!this.highScore || (typeof this.score === "undefined") || !game.launched){
           return ""
         }
-        const currHigh = (this.highScore / game.nRuns) * game.currentRun;
+        const currHigh = (this.highScore / game.nRuns) * this.currentRun;
         return Math.round(this.score - currHigh);
+    },
+
+    diffScoreClass() {
+      return this.diffScore > 0 ? "pos-score" : "neg-score";
+    },
+
+    currentRun() {
+      const run = this.$store.state.game.currentRun;
+      return (this.status === constants.status.CORRECTION) ? run : (run - 1);
     },
 
     score() {
@@ -64,6 +76,7 @@ export default {
 
     ...mapState({
       highScore: state => state.score.high,
+      status: state => state.game.status,
     })
   },
 
