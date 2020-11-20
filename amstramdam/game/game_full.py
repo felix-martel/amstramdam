@@ -199,6 +199,11 @@ Run: {self.curr_run_id+1}/{self.n_run}
             print(f"Ignored unknown player '{name}'")
         self.pseudos[name] = pseudo
 
+    def request_pseudo(self, name):
+        pseudo = self.generate_new_pseudo()
+        self.add_pseudo(name, pseudo)
+        return pseudo
+
     def remove_pseudo(self, name):
         if name in self.pseudos:
             del self.pseudos[name]
