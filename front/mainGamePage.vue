@@ -33,6 +33,7 @@ import Map from "./ui/map.vue";
 import constants from "./common/constants";
 import ResultPopup from "./panels/resultPopup/resultPopup.vue";
 import {goToHash} from "./common/utils";
+import {CookieHandler, IntCookieHandler} from "./common/cookie";
 
 export default {
     components: {
@@ -49,6 +50,7 @@ export default {
         demo: "demo",
         params: {},
         visibleResults: false,
+        highscoreCookie: undefined,
       }
     },
 
@@ -78,12 +80,32 @@ export default {
 
       routeToMain: function() {
         goToHash(" ");
-      }
+      },
+
+    updateHighScore(results) {
+        const res = results.find(rec => (rec.player === this.$store.state.playerId));
+        if (!res) { return }
+        const latestScore = res.score;
+        const currentHighScore = this.$store.state.score.high;
+        if (!currentHighScore
+          || (latestScore && latestScore > currentHighScore)) {
+          // new high score!
+          this.$store.commit("setNewHighScore", latestScore);
+          console.log("New high score", latestScore);
+          this.highscoreCookie.write(latestScore);
+        }
+    },
   },
 
     created () {
       const gameParams = Object.assign({}, this.$store.state.params);
       console.log("Game params:", gameParams);
+      this.highscoreCookie = new IntCookieHandler("amstramdam-" + gameParams.map);
+      const highScore = this.highscoreCookie.read();
+      if (highScore){
+        console.log("Read high score from cookie", highScore);
+        this.$store.commit("setHighScore", highScore);
+      }
 
       this.route();
 
@@ -144,6 +166,7 @@ export default {
           payload: data,
         });
         this.routeToResults();
+        this.updateHighScore(data.leaderboard);
       },
 
       "player-left": function ({player, leaderboard}) {

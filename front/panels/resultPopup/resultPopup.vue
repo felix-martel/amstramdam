@@ -51,17 +51,13 @@ export default {
       return this.status === constants.status.FINISHED ? "Partie terminée" : "Partie en cours..."
     },
 
-    newHighScore: function() {
-      return (!this.highScore && this.status === constants.status.FINISHED)
-          || (this.latestScore && this.latestScore > this.highScore);
-    },
-
     ...mapState({
       visible: state => state.ui.resultPopup,
       results: state => state.game.results,
       highScore: state => state.score.high,
       leaderboard: state => state.leaderboard,
       status: state => state.game.status,
+      newHighScore: state => state.score.beaten,
     })
   },
   methods: {

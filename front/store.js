@@ -34,12 +34,15 @@ function initScore(params) {
                 score: {
                     total: 0,
                     last: 0,
-                    high: undefined
+                    high: undefined,
+                    newHigh: undefined,
+                    beaten: false,
                 },
                 game: {
                     launched: false,
                     hasAnswered: false,
                     currentRun: 0,
+                    lastRun: -1,
                     currentPlace: "Paris",
                     currentHint: "France",
                     nRuns: undefined,
@@ -115,6 +118,23 @@ function initScore(params) {
             setHint(state, {place, hint}) {
                 state.game.currentPlace = place;
                 state.game.currentHint = hint;
+            },
+
+            setNewHighScore(state, score) {
+                state.score.newHigh = score;
+                state.score.beaten = true;
+            },
+
+            resetHighScore(state) {
+                if (state.score.beaten) {
+                    state.score.high = state.score.newHigh;
+                    state.score.newHigh = undefined;
+                    state.score.beaten = false
+                }
+            },
+
+            setHighScore(state, score) {
+                state.score.high = score;
             },
 
             setTotalRuns(state, n) {
@@ -271,6 +291,9 @@ function initScore(params) {
                         console.log("Launching...");
                         commit("setGameLaunched");
                         commit("hideResultBox");
+                        commit("clearGuesses");
+                        commit("clearLastRun");
+                        commit("resetHighScore");
                         commit("startTransitionState", {
                             message: "Début de partie dans ",
                             duration: 3,

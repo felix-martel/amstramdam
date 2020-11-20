@@ -5,10 +5,10 @@
         {{ playerName || 'Non connecté'}}
       </div>
       <div class="total-score"><span id="total-score">{{ score }}</span> pts</div>
-      <div class="high-score no-score" id="high-score-container">
+      <div class="high-score" id="high-score-container" v-if="highScore">
         <i class="fas fa-trophy"></i>
         <span id="high-score">{{ highScore }}</span>pts
-        <span id="high-score-diff" class="no-score">{{ diffScore }}</span>
+        <span id="high-score-diff" v-if="diffScore">{{ diffScore }}</span>
       </div>
     </div>
 </template>
@@ -51,7 +51,7 @@ export default {
     },
     diffScore() {
       const game = this.$store.state.game;
-        if (!this.highScore || (typeof this.score === "undefined") || !game.launched){
+        if (!this.highScore || (typeof this.score === "undefined") || !game.launched || !game.nRuns){
           return ""
         }
         const currHigh = (this.highScore / game.nRuns) * game.currentRun;
