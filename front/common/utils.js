@@ -68,3 +68,9 @@ export const EventRegistrationMixin = {
         }
     }
 }
+
+export function goToHash (url, state = {}) {
+    history.pushState(state, '', url);
+    const popStateEvent = new PopStateEvent('popstate', { state: state });
+    dispatchEvent(popStateEvent);
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="popup-container" id="popup-container" :hidden="visible">
+  <div class="popup-container" id="popup-container" :hidden="!visible">
     <div id="mask">
 
     </div>

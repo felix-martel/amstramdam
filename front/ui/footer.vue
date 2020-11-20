@@ -21,7 +21,10 @@
     },
 
     created() {
-      this.url = window.location.href.replace("https://", "").replace("www.", "");
+      this.url = window.location.href
+          .replace("https://", "")
+          .replace("www.", "")
+          .replace(window.location.hash, "");
     },
 
     methods: {

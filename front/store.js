@@ -44,6 +44,7 @@ function initScore(params) {
                     currentHint: "France",
                     nRuns: undefined,
                     status: STATUS.NOT_LAUNCHED,
+                    results: [],
                 },
                 chat: {
                     messages: [],
@@ -80,6 +81,24 @@ function initScore(params) {
             updatePseudos (state, pseudos) {
                 state.pseudos = pseudos;
             },
+
+            setGameResults(state, results) {
+                state.game.results = results;
+            },
+
+            displayResultPopup(state) {
+                state.ui.resultPopup = true;
+            },
+
+            hideResultPopup(state) {
+                state.ui.resultPopup = false;
+            },
+
+
+            toggleResultPopup(state) {
+                state.ui.resultPopup = !state.ui.resultPopup;
+            },
+
 
             incrementRun(state) {
                 state.game.currentRun += 1;
@@ -204,6 +223,13 @@ function initScore(params) {
                 commit("setHint", {place: hint});
             },
 
+            endGame({state, commit}, {leaderboard}) {
+                commit("updateLeaderboard", leaderboard);
+                //commit("setGameResults", full.results.summary);
+                commit("displayResultPopup");
+                // TODO: process high score
+            },
+
             setGameStatus({state, commit, dispatch}, data) {
                 let status, payload;
                 if (typeof data === "string") {
@@ -234,8 +260,11 @@ function initScore(params) {
                         dispatch("startRun", {hint: payload.hint, runs: payload.total});
                         break;
                     case stat.CORRECTION:
+                        const message = payload.done ?
+                            constants.transitionText.beforeGameEnd :
+                            constants.transitionText.beforeNewRun;
                         commit("startTransitionState", {
-                            message: "Prochaine manche dans ",
+                            message: message,
                             duration: state.params.wait_time,
                         })
                         commit("updateLeaderboard", payload.leaderboard);
@@ -244,6 +273,7 @@ function initScore(params) {
                     case stat.STOPPING:
                         break;
                     case stat.FINISHED:
+                        dispatch("endGame", payload);
                         break;
                 }
             }
