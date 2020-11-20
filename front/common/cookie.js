@@ -57,7 +57,7 @@ export class BooleanCookieHandler extends CookieHandler {
     }
 }
 
-export class IntCookieHandler {
+export class IntCookieHandler extends CookieHandler {
     decode (value) {
         return parseInt(value)
     }
