@@ -3,6 +3,7 @@ import string
 from collections import defaultdict, Counter
 
 import pandas as pd
+import numpy as np
 
 from .game import GameRun, load_cities
 from amstramdam.city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
@@ -106,6 +107,7 @@ class Game:
         pseudos = {k: v for k, v in pseudos.items() if k in self.players}
         self.done = False
         self.pseudos = pseudos
+        self.metrics = dict(distance=defaultdict(list), delay=defaultdict(list))
 
         if creation_date is None:
             creation_date = datetime.now()
@@ -262,13 +264,6 @@ Run: {self.curr_run_id+1}/{self.n_run}
                 player = rec["player"]
                 distances[player].append(rec["dist"])
                 durations[player].append(rec["delta"])
-        #for player in self.players:
-        #    results[player] = dict(
-        #        player=player,
-        #        dist=sum(distances.get(player, []))/self.n_run,
-        #        delta=sum(durations.get(player, []))/self.n_run,
-        #        score=self.scores.get(player, 0)
-        #    )
 
         results = [dict(
                 player=player,
@@ -279,9 +274,17 @@ Run: {self.curr_run_id+1}/{self.n_run}
 
         return dict(records=self.records, scores=self.scores, places=self.places_as_json(), summary=results)
 
+    def add_run_records(self, recs):
+        self.records.append(recs)
+        for rec in recs:
+            player = rec["player"]
+            self.metrics["distance"][player].append(rec["dist"])
+            self.metrics["delay"][player].append(rec["delta"])
+
     def end(self):
-        rec = self.current.records
-        self.records.append(rec)
+        recs = self.current.records
+        self.add_run_records(recs)
+
         for player in self.players:
             self.scores[player] += self.current.scores[player]
         self.curr_run_id += 1
@@ -292,11 +295,30 @@ Run: {self.curr_run_id+1}/{self.n_run}
         #self.current_run.launch()
         return self.current, self.done
 
+    def safe_median(self, values):
+        if not values:
+            return "-"
+        return np.median(values)
+
+    def avg_distance(self, player):
+        return self.safe_median(self.metrics["distance"].get(player, []))
+
+    def avg_delta(self, player):
+        return self.safe_median(self.metrics["delay"].get(player, []))
+
     @property
     def n_players(self):
         return len(self.players)
 
+    def get_player_score(self, player):
+        return dict(
+            player=player,
+            score=self.scores[player],
+            dist=self.avg_distance(player),
+            delta=self.avg_delta(player)
+        )
+
     def get_current_leaderboard(self):
         """Players with their scores, ranked by decreasing scores"""
-        return list(sorted([dict(player=player, score=self.scores[player]) for player in self.players],
+        return list(sorted([self.get_player_score(player) for player in self.players],
                            key=lambda t:-t["score"]))
