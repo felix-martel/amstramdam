@@ -3,22 +3,23 @@
     <div class="individual-results">
       <div id="answer-name" class="title"></div>
       <div class="distance">
-        <span id="main-disp-dist">{{ lastRun.distance }}</span> km
+<!--        <span id="main-disp-dist">{{ lastRun.distance }}</span> km-->
+        <count :value="lastRun.distance"></count> km
       </div>
       <div class="deets">
         <div class="score-dist">
-          <i id="disp-dist">{{ lastRun.distance }}</i> km =
-          <i id="disp-score-dist">{{ lastRun.sdistance}}</i> pts
+          <count :value="lastRun.distance"></count> km =
+          <count :value="lastRun.sdistance"></count> pts
         </div>
         <div class="score-time">
-          <i id="disp-time">{{ lastRun.delay }}</i>s =
-          <i id="disp-score-time">{{ lastRun.sdelay}}</i> pts
+          <count :value="lastRun.delay"></count> s =
+          <count :value="lastRun.sdelay"></count> pts
         </div>
       </div>
     </div>
 
     <div class="score">
-      <span id="curr-score">{{ lastRun.score }}</span> pts
+      <count :value="lastRun.score"></count> pts
     </div>
 
     <div class="collective-results">
@@ -34,8 +35,15 @@
 
 <script>
 import {mapState} from "vuex";
+import animatedCount from "../../components/animatedCount.vue";
 
 export default {
+  components: {
+    "count": animatedCount,
+  },
+  created() {
+    console.log(this.lastRun.distance)
+  },
   computed: {
     ...mapState({
       totalScore: state => state.score.total,

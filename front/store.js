@@ -148,10 +148,12 @@ function initScore(params) {
                 state.lastRun.sdistance = sdistance;
                 state.lastRun.delay = delay;
                 state.lastRun.sdelay = sdelay;
+                // state.ui.resultBox = true;
             },
 
             addGuess(state, {name, distance}) {
                 state.guesses.push({name, distance});
+                // state.ui.resultBox = true;
             },
 
             clearGuesses(state) {

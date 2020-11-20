@@ -12,7 +12,7 @@
       <div class="column" id="left-column-display">
         <score-box></score-box>
         <chat-box :hidden="!panelVisibility.chatBox"></chat-box>
-        <result-box :hidden="!panelVisibility.resultBox"></result-box>
+        <result-box v-if="panelVisibility.resultBox"></result-box>
       </div>
 
       <div class="right-corner" id="game-box">
@@ -160,6 +160,7 @@ export default {
           delay: Math.round(data.delta * 100) / 100,
           sdelay: Math.round(data.st)
         });
+        this.$store.commit("displayResultBox");
       },
 
       "new-guess": function ({player, dist}) {
