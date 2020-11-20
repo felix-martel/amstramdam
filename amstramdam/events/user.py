@@ -4,7 +4,8 @@ from flask_socketio import emit
 
 def is_valid_pseudo(name):
     # TODO: implement checks?
-    return True
+    name = str(name)
+    return len(name) > 0
 
 
 @socketio.on("chat:send")
@@ -26,6 +27,8 @@ def update_pseudo(data):
     pseudo = data["name"]
     if is_valid_pseudo(pseudo):
         game.add_pseudo(player, pseudo)
+    else:
+        pseudo = game.request_pseudo(player)
     emit("new-name", dict(change=dict(player=player, pseudo=pseudo), pseudos=game.pseudos),
          room=game_name, broadcast=True, json=True)
 
