@@ -20,15 +20,19 @@ export class CookieHandler {
     }
 
     read() {
-        const value = document.cookie
+        let value = document.cookie
           .split('; ')
           .find(row => row.startsWith(this.name+"="))
-          .split('=')[1];
+        if (typeof value === "undefined") {
+            return undefined;
+        }
+        value = value.split('=')[1];
         return this.decode(value);
     }
 
     remove(){
         // TODO
+        document.cookie = this.name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT";
     }
 
     exists() {
