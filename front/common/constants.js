@@ -17,5 +17,10 @@ export default {
         CORRECTION: "correction",
         STOPPING: "before-stop",
         FINISHED: "finished",
-    }
+    },
+    transitionText: {
+         beforeNewRun: "Prochaine manche dans ",
+         beforeGameEnd: "Partie finie, palmarès dans ",
+         beforeGameStart: "Début de partie dans "
+     }
 }
