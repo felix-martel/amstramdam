@@ -2,7 +2,7 @@
   <div class="box" id="display-timer">
     <span class="timer-text">
       <span id="timer-legend">{{ message }}</span>
-      <span id="run-timer">{{ countdown }}</span>...
+      <span id="run-timer">{{ count }}</span>...
     </span>
   </div>
 </template>
@@ -18,17 +18,31 @@ export default {
   data () {
     return {
       countdown: undefined,
+      count: undefined,
+    }
+  },
+
+  methods: {
+    start(duration){
+      this.count = duration;
+      this.countdown = window.setInterval(() => {
+      this.count -= 1;
+      if (this.count <= 0) {
+        window.clearInterval(this.countdown);
+      }
+    }, 1000);
     }
   },
 
   mounted() {
-    this.countdown = this.duration;
-    const interval = window.setInterval(() => {
-      this.countdown -= 1;
-      if (this.countdown <= 0) {
-        window.clearInterval(interval);
-      }
-    }, 1000);
+    this.start(this.duration);
+  },
+
+  watch:{
+    duration(newValue){
+      window.clearInterval(this.countdown);
+      this.start(newValue);
+    }
   },
 
   computed: {

@@ -9,6 +9,8 @@ from .game import GameRun, load_cities
 from amstramdam.city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
 from datetime import datetime, timedelta
 import random
+import amstramdam.game.status as status
+
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
     NAMES = {line.rstrip() for line in f}
@@ -113,6 +115,7 @@ class Game:
             creation_date = datetime.now()
         self.date_created = creation_date
         self.launched = False
+        self.status = status.NOT_LAUNCHED
         self.__id_counter = len(self.players)
         # self.run_in_progress = False
 
@@ -236,7 +239,12 @@ Run: {self.curr_run_id+1}/{self.n_run}
 
     def launch(self):
         self.launched = True
+        self.status = status.LAUNCHING
         return self.current #.launch()
+
+    def launch_run(self, *args, **kwargs):
+        self.status = status.RUNNING
+        return self.current.launch(*args, **kwargs)
 
     def is_expired(self, hours=6):
         """Kwargs must be valid arguments for timedelta"""
@@ -282,6 +290,8 @@ Run: {self.curr_run_id+1}/{self.n_run}
             self.metrics["delay"][player].append(rec["delta"])
 
     def end(self):
+        self.status = status.CORRECTION
+
         recs = self.current.records
         self.add_run_records(recs)
 
@@ -294,6 +304,41 @@ Run: {self.curr_run_id+1}/{self.n_run}
             return results, self.done
         #self.current_run.launch()
         return self.current, self.done
+
+    def terminate(self):
+        self.status = status.FINISHED
+    #
+    #
+    # def get_state_as_json(self):
+    #     s = self.status
+    #     game = dict(
+    #         name=self.map_name,
+    #         runs=self.n_run,
+    #         current=self.curr_run_id,
+    #         diff=self.difficulty
+    #     )
+    #     if s == status.NOT_LAUNCHED:
+    #         # 'init'
+    #         d = dict(
+    #             game=game,
+    #             pseudos=self.pseudos
+    #         )
+    #     elif s == status.LAUNCHING:
+    #         d = dict(
+    #             game=game
+    #         )
+    #     elif s == status.RUNNING:
+    #         d = dict(
+    #             hint=self.current.display(),
+    #             game=game
+    #         )
+    #     elif s == status.CORRECTION:
+    #         d = dict(
+    #             game=game,
+    #             answer=dict(
+    #
+    #             )
+    #         )
 
     def safe_median(self, values):
         if not values:

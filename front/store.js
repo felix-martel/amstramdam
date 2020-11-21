@@ -40,7 +40,9 @@ function initScore(params) {
                 },
                 game: {
                     launched: false,
+                    done: false,
                     hasAnswered: false,
+                    resultsReceived: false,
                     currentRun: 0,
                     lastRun: -1,
                     currentPlace: "Paris",
@@ -115,6 +117,11 @@ function initScore(params) {
             },
 
 
+            setCurrentRun(state, n) {
+                state.game.currentRun = n;
+            },
+
+
             incrementRun(state) {
                 state.game.currentRun += 1;
             },
@@ -180,10 +187,12 @@ function initScore(params) {
                 state.lastRun.sdistance = sdistance;
                 state.lastRun.delay = delay;
                 state.lastRun.sdelay = sdelay;
+                state.game.resultsReceived = true;
                 // state.ui.resultBox = true;
             },
 
             clearLastRun(state){
+                state.game.resultsReceived = false;
                 state.lastRun.score = 0;
                 state.lastRun.distance = 0;
                 state.lastRun.sdistance = 0;
@@ -209,7 +218,6 @@ function initScore(params) {
             },
 
             setGameStatus(state, status){
-                console.debug(`New game status: <${status}>`);
                 state.game.status = status;
             },
 
@@ -247,6 +255,14 @@ function initScore(params) {
                 state.ui.state.hint = false;
                 state.ui.state.duration = duration;
             },
+
+            emptyLeaderboard(state) {
+                state.leaderboard.forEach(item => {
+                    item.score = 0;
+                    item.dist = 0;
+                    item.delta = 0;
+                });
+            }
         },
 
         actions: {
@@ -330,7 +346,140 @@ function initScore(params) {
                         dispatch("endGame", payload);
                         break;
                 }
-            }
+            },
+
+            updateStatus({state, commit, dispatch}, {status, payload}) {
+                // console.log(`Update status: <${status}>`);
+                const s = constants.status;
+                const actions = {
+                    [s.NOT_LAUNCHED]: "setNotLaunched",
+                    [s.LAUNCHING]: "setLaunching",
+                    [s.RUNNING]: "setRunning",
+                    [s.CORRECTION]: "setCorrection",
+                    [s.FINISHED]: "setFinished",
+                }
+                if (status in actions) {
+                    dispatch(actions[status], payload);
+                    commit("setGameStatus", status);
+                } else {
+                    console.warn(`Received invalid status: <${status}>`);
+                }
+            },
+
+            setNotLaunched({state, commit, dispatch}, payload) {
+                // Not sure this should exist, because we will never trigger
+                // a <update-status:not-launched> event (we would trigger a
+                // 'init' instead...
+            },
+
+            /**
+             * Remove all traces of previous run:
+             * - remove guesses from other players
+             * - remove own results + scoring details
+             * - clear map
+             */
+            clearAndHideResults({commit, state}) {
+                // TODO: visibility of resultBox should be computed from hasAnswered and hasGuesses
+                commit("hideResultBox");
+                commit("clearGuesses");
+                commit("clearLastRun");
+                state.game.hasAnswered = false;
+            },
+
+            setLaunching({state, commit, dispatch},
+                         {game, runs, diff}) {
+                state.game.currentRun = 1;
+                state.game.nRuns = runs;
+                state.game.launched = true;
+
+                dispatch("clearAndHideResults");
+                commit("emptyLeaderboard");
+                commit("resetHighScore");
+                commit("hideResultPopup");
+
+                commit("startTransitionState", {
+                    message: "Début de partie dans ",
+                    duration: 3,
+                });
+            },
+
+            /**
+             * Start a new run:
+             * - Remove traces from previous run (clear map...)
+             * - Set new hint and new run number
+             * - Display them
+             * - Start the timer
+             *
+             * @param hint: new run's hint
+             * @param current: new run number
+             * @param total: total run number
+             */
+            setRunning({state, commit, dispatch}, {hint, current, total}) {
+                dispatch("clearAndHideResults");
+
+                commit("setTotalRuns", total); // TODO: this should be set once (on init)
+                commit("setCurrentRun", current + 1);
+                commit("setHint", {place: hint});
+                commit("startHintState");
+            },
+
+            /**
+             * Start the correction step:
+             * - Clear timer
+             * - Display new message ("Run ended, next run in ...")
+             * - Add guesses from other player (and display them?)
+             * - Start timer for the correction step
+             * - Update leaderboard with this run's scores
+             *
+             * @param results
+             * @param answer
+             * @param leaderboard
+             * @param done
+             * @param payload
+             */
+            setCorrection({state, commit, dispatch},
+                          {results, answer, leaderboard, done}) {
+                state.game.done = done;
+                const message = done ?
+                    constants.transitionText.beforeGameEnd :
+                    constants.transitionText.beforeNewRun;
+                commit("startTransitionState", {
+                    message: message,
+                    duration: state.params.wait_time,
+                });
+                commit("updateLeaderboard", leaderboard);
+                commit("displayResultBox");
+            },
+
+            /**
+             * Enter the finished state:
+             * - Get the final leaderboard
+             * - Get the final score for this game
+             * - Set the game to 'not launched' (=> set 'launchable' to true)
+             * - Disable answers?
+             * - Display results popup
+             * - (future) Display game summary
+             *
+             * @param leaderboard
+             */
+            setFinished({state, commit, dispatch}, {leaderboard}) {
+                commit("updateLeaderboard", leaderboard);
+                commit("displayResultPopup");
+                state.game.hasAnswered = false;
+            },
+
+            initialize({state, commit, dispatch},
+                       {player, pseudos, current, runs, launched, leaderboard}) {
+                state.pseudos = pseudos;
+                state.playerId = player;
+                state.game.currentRun = current + 1;
+                state.game.nRuns = runs;
+                state.leaderboard = leaderboard;
+                state.launched = launched;
+                commit("startHiddenState");
+
+                state.game.launched = launched;
+            },
         }
     })
 }

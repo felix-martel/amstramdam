@@ -12,7 +12,7 @@
           <count :value="lastRun.sdistance"></count> pts
         </div>
         <div class="score-time">
-          <count :value="lastRun.delay"></count> s =
+          <count :value="lastRun.delay" float="true"></count> s =
           <count :value="lastRun.sdelay"></count> pts
         </div>
       </div>

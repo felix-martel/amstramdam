@@ -65,9 +65,17 @@ export default {
       return this.diffScore > 0 ? "pos-score" : "neg-score";
     },
 
+    trueCurrentRun() {
+      return this.$store.state.game.currentRun;
+    },
+
+    nRuns(){
+      return this.$store.state.game.nRuns;
+    },
+
     currentRun() {
       const run = this.$store.state.game.currentRun;
-      return (this.status === constants.status.CORRECTION) ? run : (run - 1);
+      return (this.status === constants.status.CORRECTION  || this.status === constants.status.FINISHED) ? run : (run - 1);
     },
 
     score() {

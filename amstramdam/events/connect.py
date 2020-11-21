@@ -31,13 +31,15 @@ def init_game(data):
         session["player"] = player
 
     print(f"Player <{player}> connected to game <{game_name}> with pseudo <{pseudo}>")
+    leaderboard = game.get_current_leaderboard()
     emit("init", dict(player=player, launched=game.launched, pseudo=pseudo,
-            game=game.map_name, runs=game.n_run, diff=game.difficulty,
+            game=game.map_name, current=game.curr_run_id, runs=game.n_run, diff=game.difficulty,
+                      leaderboard=leaderboard,
                       pseudos=game.pseudos))
     emit("new-player", dict(
             player=player,
             pseudo=pseudo,
-            leaderboard=game.get_current_leaderboard(),
+            leaderboard=leaderboard,
             pseudos=game.pseudos),
          broadcast=True, room=game_name)
 

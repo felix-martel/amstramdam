@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     launchGame(e) {
-      console.log("Launch");
       e.preventDefault();
       e.stopPropagation();
       if (!this.$store.state.game.launched) {

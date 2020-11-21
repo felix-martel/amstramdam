@@ -12,7 +12,7 @@
       <div class="column" id="left-column-display">
         <score-box></score-box>
         <chat-box :hidden="!panelVisibility.chatBox"></chat-box>
-        <result-box v-if="panelVisibility.resultBox"></result-box>
+        <result-box v-if="showResults"></result-box>
       </div>
 
       <div class="right-corner" id="game-box">
@@ -32,8 +32,9 @@ import gameStateBox from "./panels/hintBox/gameStateBox.vue";
 import Map from "./ui/map.vue";
 import constants from "./common/constants";
 import ResultPopup from "./panels/resultPopup/resultPopup.vue";
-import {goToHash} from "./common/utils";
+import {goToHash, unproxify} from "./common/utils";
 import {CookieHandler, IntCookieHandler} from "./common/cookie";
+import {mapState} from "vuex";
 
 export default {
     components: {
@@ -57,7 +58,16 @@ export default {
   computed: {
       panelVisibility () {
         return this.$store.state.ui;
+      },
+
+    ...mapState({
+      showResults: state => {
+        return ((state.game.status === constants.status.FINISHED)
+            || (state.game.status === constants.status.CORRECTION)
+            || ((state.game.status === constants.status.RUNNING)
+                && (state.game.resultsReceived || state.guesses.length > 0)))
       }
+    })
   },
 
   methods: {
@@ -98,7 +108,7 @@ export default {
   },
 
     created () {
-      const gameParams = Object.assign({}, this.$store.state.params);
+      const gameParams = unproxify(this.$store.state.params);
       console.log("Game params:", gameParams);
       this.highscoreCookie = new IntCookieHandler("amstramdam-" + gameParams.map);
       const highScore = this.highscoreCookie.read();
@@ -127,11 +137,13 @@ export default {
 
       "init": function (data) {
         console.debug(`You're now connected as <${data.pseudo}> (id=${data.player})`);
-        this.$store.commit("updatePseudos", data.pseudos);
-        this.$store.commit("setPlayer", data.player);
+        // this.$store.commit("updatePseudos", data.pseudos);
+        // this.$store.commit("setPlayer", data.player);
+        this.$store.dispatch("initialize", data);
       },
 
-      "new-player": function ({leaderboard, pseudos}) {
+      "new-player": function ({player, leaderboard, pseudos}) {
+        if (player === this.$store.playerId) { return }
         this.$store.commit("updatePseudos", pseudos);
         this.$store.commit("updateLeaderboard", leaderboard);
       },
@@ -139,7 +151,7 @@ export default {
       "game-launched": function (data) {
         // TODO: retrieve high score
         console.debug("Received <game-launched>");
-        this.routeToMain();
+        //this.routeToMain();
         const {game, runs, diff} = data;
 
         this.$store.dispatch("setGameStatus", {
@@ -167,7 +179,7 @@ export default {
           status: constants.status.FINISHED,
           payload: data,
         });
-        this.routeToResults();
+        //this.routeToResults();
         this.updateHighScore(data.leaderboard);
       },
 
@@ -195,7 +207,11 @@ export default {
       "new-name": function({change, pseudos}) {
         console.log(`Player <${change.player}> has a new nickname: "${change.pseudo}"`);
         this.$store.commit("updatePseudos", pseudos);
-      }
+      },
+
+      "status-update": function(data) {
+        this.$store.dispatch("updateStatus", data);
+      },
     }
 }
 </script>

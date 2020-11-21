@@ -125,6 +125,7 @@ export default {
       });
     },
     addMarker(lat, lon, label, color=constants.color.BASE){
+      // TODO: change getIcon code (label is nto displayed)
       const marker = L.marker([lat, lon], {icon: getIcon(color, label)});
       marker.addTo(this.canvas);
       return marker
@@ -194,6 +195,15 @@ export default {
 
     "run-start": function() {
       this.clearMap();
+    },
+
+    "status-update": function({status, payload}) {
+      if (status === constants.status.CORRECTION){
+        this.clearMap();
+        this.displayResults(payload.answer, payload.results);
+      } else if (status === constants.status.RUNNING || status === constants.status.LAUNCHING) {
+          this.clearMap();
+      }
     },
 
     "score": function ({answer, dist}) {

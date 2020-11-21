@@ -8,6 +8,10 @@ import {CountUp} from "countup.js";
 export default {
   props: {
     value: Number,
+    float: {
+      default: false,
+      type: Boolean,
+    },
   },
   data () {
     return {
@@ -15,11 +19,16 @@ export default {
     }
   },
   mounted() {
-    this.counter = new CountUp(this.$el, this.value, {separator: ""});
+    this.counter = new CountUp(this.$el, this.value, {
+      separator: "",
+      decimal: ",",
+      decimalPlaces: this.float ? 2 : 0,
+    });
     this.counter.start();
+    // this.counter.update(this.value);
   },
   watch: {
-    value: function(oldValue, newValue) {
+    value: function(newValue, oldValue) {
       this.counter.update(newValue);
     }
   }

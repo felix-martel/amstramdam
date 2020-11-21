@@ -74,3 +74,7 @@ export function goToHash (url, state = {}) {
     const popStateEvent = new PopStateEvent('popstate', { state: state });
     dispatchEvent(popStateEvent);
 }
+
+export function unproxify (obj) {
+    return Object.assign({}, obj);
+}
