@@ -183,6 +183,12 @@ export default {
       "status-update": function(data) {
         this.$store.dispatch("updateStatus", data);
       },
+
+      "chat:new": function(data){
+        if (data.author !== this.$store.state.playerId){
+          this.$store.commit("addMessage", data);
+        }
+      }
     }
 }
 </script>

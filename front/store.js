@@ -87,6 +87,14 @@ function initScore(params) {
                     return selfResult.score || 0
                 }
                 return 0
+            },
+
+            finalScore(state, getters){
+                if (state.game.status === constants.status.FINISHED) {
+                    return getters.selfScore;
+                } else {
+                    return undefined;
+                }
             }
         },
 
@@ -166,7 +174,18 @@ function initScore(params) {
             },
 
             addMessage (state, {author, message}) {
-                state.chat.messages.push({author, message, time: Date.now()});
+                const last = state.chat.messages[state.chat.messages.length - 1];
+                if (last && last.author === author){
+                    last.messages.push(message)
+                }
+                else {
+                    state.chat.messages.push({
+                        author: author,
+                        messages: [message],
+                        time: Date.now(),
+                    })
+                }
+                // state.chat.messages.push({author, message, time: Date.now()});
                 if (!state.ui.chatBox){
                     state.chat.unread = true;
                 }

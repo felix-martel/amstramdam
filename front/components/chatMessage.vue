@@ -1,7 +1,9 @@
 <template>
   <div class="chat-message">
     <span class="chat-author">{{ author }}</span><br/>
-    <span class="chat-message-content">{{ content }}</span>
+    <div class="chat-message-content">
+      <div class="chat-message-content" v-for="msg in messages">{{ msg }}</div>
+    </div>
   </div>
 </template>
 
@@ -10,7 +12,7 @@ export default {
 name: "chatMessage",
   props: {
     authorId: String,
-    content: String
+    messages: String
   },
   computed: {
     author() {

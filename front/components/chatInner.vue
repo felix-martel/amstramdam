@@ -5,7 +5,7 @@
 
         <chat-message v-for="msg in messages"
                       :author-id="msg.author"
-                      :content="msg.message"></chat-message>
+                      :messages="msg.messages"></chat-message>
       </div>
 
     </div>
@@ -38,13 +38,13 @@ export default {
     }
   },
   mounted () {
-    this.$socketOn("chat:new", this.processNewMessage);
+    //this.$socketOn("chat:new", this.processNewMessage);
   },
   methods: {
     processNewMessage (data) {
-      if (data.author !== this.$store.state.playerId){
-        this.$store.commit("addMessage", data);
-      }
+      // if (data.author !== this.$store.state.playerId){
+      //   this.$store.commit("addMessage", data);
+      // }
     },
 
     sendMessage() {
