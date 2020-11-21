@@ -142,7 +142,10 @@ export default {
         this.routeToMain();
         const {game, runs, diff} = data;
 
-        this.$store.dispatch("setGameStatus", constants.status.LAUNCHING);
+        this.$store.dispatch("setGameStatus", {
+          status: constants.status.LAUNCHING,
+          payload: data
+        });
       },
 
       "run-start": function (data) {
@@ -160,7 +163,6 @@ export default {
       },
 
       "game-end": function(data){
-        console.log(data);
         this.$store.dispatch("setGameStatus", {
           status: constants.status.FINISHED,
           payload: data,

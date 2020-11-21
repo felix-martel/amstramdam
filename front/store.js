@@ -209,7 +209,7 @@ function initScore(params) {
             },
 
             setGameStatus(state, status){
-                console.debug("New game status", status);
+                console.debug(`New game status: <${status}>`);
                 state.game.status = status;
             },
 
@@ -266,6 +266,16 @@ function initScore(params) {
                 commit("setHint", {place: hint});
             },
 
+            resetState({state, commit}, data) {
+                commit("hideResultBox");
+                commit("clearGuesses");
+                commit("clearLastRun");
+                commit("resetHighScore");
+                commit("resetCurrenRun");
+                console.log(data)
+                //commit("updateLeaderboard", []);
+            },
+
             endGame({state, commit}, {leaderboard}) {
                 commit("updateLeaderboard", leaderboard);
                 //commit("setGameResults", full.results.summary);
@@ -294,11 +304,7 @@ function initScore(params) {
                     case stat.LAUNCHING:
                         console.log("Launching...");
                         commit("setGameLaunched");
-                        commit("hideResultBox");
-                        commit("clearGuesses");
-                        commit("clearLastRun");
-                        commit("resetHighScore");
-                        commit("resetCurrenRun");
+                        dispatch("resetState", payload);
                         commit("startTransitionState", {
                             message: "Début de partie dans ",
                             duration: 3,

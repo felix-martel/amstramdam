@@ -42,7 +42,6 @@ export default {
     "count": animatedCount,
   },
   created() {
-    console.log(this.lastRun.distance)
   },
   computed: {
     ...mapState({

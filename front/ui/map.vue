@@ -156,7 +156,6 @@ export default {
       })
     },
     autoZoomOnResults(answers, results) {
-      console.log("Autozoom", this.autozoomActivated);
       if (!this.autozoomActivated || (results.length === 0)) { return }
       const refState = this.getMapState();
       //this.canvas.setMaxZoom(18);
