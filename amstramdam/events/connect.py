@@ -37,11 +37,10 @@ def init_game(data):
                       leaderboard=leaderboard,
                       pseudos=game.pseudos))
     emit("new-player", dict(
-            player=player,
-            pseudo=pseudo,
-            leaderboard=leaderboard,
-            pseudos=game.pseudos),
-         broadcast=True, room=game_name)
+        player=player,
+        pseudo=pseudo,
+        score=game.get_player_score(player)
+    ), broadcast=True, room=game_name)
 
 
 

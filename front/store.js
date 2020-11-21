@@ -264,6 +264,14 @@ function initScore(params) {
                 });
             },
 
+            addPlayer(state, {player, pseudo, score}) {
+                if (state.leaderboard.find(item => item.player === player)) {
+                    return
+                }
+                state.leaderboard.push(score);
+                state.pseudos[player] = pseudo;
+            },
+
             removePlayer(state, playerId) {
                 const i = state.leaderboard.findIndex(rec => rec.player === playerId);
                 if (i > 0) {

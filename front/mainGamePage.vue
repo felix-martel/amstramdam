@@ -142,10 +142,9 @@ export default {
         this.$store.dispatch("initialize", data);
       },
 
-      "new-player": function ({player, leaderboard, pseudos}) {
+      "new-player": function ({player, pseudo, score}) {
         if (player === this.$store.playerId) { return }
-        this.$store.commit("updatePseudos", pseudos);
-        this.$store.commit("updateLeaderboard", leaderboard);
+        this.$store.commit("addPlayer", {player, pseudo, score});
       },
 
       "game-launched": function (data) {
