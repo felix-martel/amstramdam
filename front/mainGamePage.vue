@@ -137,40 +137,12 @@ export default {
 
       "init": function (data) {
         console.debug(`You're now connected as <${data.pseudo}> (id=${data.player})`);
-        // this.$store.commit("updatePseudos", data.pseudos);
-        // this.$store.commit("setPlayer", data.player);
         this.$store.dispatch("initialize", data);
       },
 
       "new-player": function ({player, pseudo, score}) {
         if (player === this.$store.playerId) { return }
         this.$store.commit("addPlayer", {player, pseudo, score});
-      },
-
-      "game-launched": function (data) {
-        // TODO: retrieve high score
-        console.debug("Received <game-launched>");
-        //this.routeToMain();
-        const {game, runs, diff} = data;
-
-        this.$store.dispatch("setGameStatus", {
-          status: constants.status.LAUNCHING,
-          payload: data
-        });
-      },
-
-      "run-start": function (data) {
-        this.$store.dispatch("setGameStatus", {
-          status: constants.status.RUNNING,
-          payload: data,
-        });
-      },
-
-      "run-end": function (data) {
-        this.$store.dispatch("setGameStatus", {
-          status: constants.status.CORRECTION,
-          payload: data
-        });
       },
 
       "game-end": function(data){
