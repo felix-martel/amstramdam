@@ -54,7 +54,7 @@ def leave_game():
     game = manager.get_game(game_name)
     game.remove_player(player)
     leave_room(game_name)
-    emit("player-left", dict(player=player, leaderboard=game.get_current_leaderboard()), broadcast=True, room=game_name)
+    emit("player-left", dict(player=player), broadcast=True, room=game_name)
 
     print(f"<{player}> disconnected!")
 

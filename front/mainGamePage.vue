@@ -183,9 +183,9 @@ export default {
         this.updateHighScore(data.leaderboard);
       },
 
-      "player-left": function ({player, leaderboard}) {
-        console.debug("Bye,", player);
-        this.$store.commit("updateLeaderboard", leaderboard);
+      "player-left": function ({player}) {
+        console.debug("Bye,", this.getPlayerName(player));
+        this.$store.commit("removePlayer", player);
       },
 
       "score": function (data){

@@ -262,6 +262,16 @@ function initScore(params) {
                     item.dist = 0;
                     item.delta = 0;
                 });
+            },
+
+            removePlayer(state, playerId) {
+                const i = state.leaderboard.findIndex(rec => rec.player === playerId);
+                if (i > 0) {
+                    state.leaderboard.splice(i, 1);
+                }
+                if (playerId in state.pseudos){
+                    delete[state.pseudos[playerId]];
+                }
             }
         },
 
