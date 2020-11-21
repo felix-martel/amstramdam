@@ -205,8 +205,7 @@ export default {
       },
 
       "new-name": function({player, pseudo}) {
-        console.log(`Player <${player}> has a new nickname: "${pseudo}"`);
-        // this.$store.commit("updatePseudos", pseudos);
+        console.debug(`Player <${player}> has a new nickname: "${pseudo}"`);
         this.$store.commit("renamePlayer", {id: player, pseudo: pseudo});
       },
 
