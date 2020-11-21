@@ -204,9 +204,10 @@ export default {
         this.$store.commit("addGuess", {name: player, distance: Math.round(dist)});
       },
 
-      "new-name": function({change, pseudos}) {
-        console.log(`Player <${change.player}> has a new nickname: "${change.pseudo}"`);
-        this.$store.commit("updatePseudos", pseudos);
+      "new-name": function({player, pseudo}) {
+        console.log(`Player <${player}> has a new nickname: "${pseudo}"`);
+        // this.$store.commit("updatePseudos", pseudos);
+        this.$store.commit("renamePlayer", {id: player, pseudo: pseudo});
       },
 
       "status-update": function(data) {

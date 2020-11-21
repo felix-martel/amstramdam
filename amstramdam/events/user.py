@@ -29,6 +29,6 @@ def update_pseudo(data):
         game.add_pseudo(player, pseudo)
     else:
         pseudo = game.request_pseudo(player)
-    emit("new-name", dict(change=dict(player=player, pseudo=pseudo), pseudos=game.pseudos),
+    emit("new-name", dict(player=player, pseudo=pseudo),
          room=game_name, broadcast=True, json=True)
 

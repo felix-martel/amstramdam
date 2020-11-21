@@ -272,7 +272,11 @@ function initScore(params) {
                 if (playerId in state.pseudos){
                     delete[state.pseudos[playerId]];
                 }
-            }
+            },
+
+            renamePlayer(state, {id, pseudo}) {
+              state.pseudos[id] = pseudo;
+            },
         },
 
         actions: {
