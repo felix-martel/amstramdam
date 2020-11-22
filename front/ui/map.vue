@@ -14,7 +14,10 @@ export default {
     return {
       canvas: undefined,
       map: undefined,
-      groundTruth: undefined,
+      groundTruth: undefined, // deprecated
+      answers: undefined,
+      hasGroundTruth: false,
+      hasOwnGuess: false,
     }
   },
 
@@ -68,7 +71,8 @@ export default {
         lat: coords.lat,
         player: this.playerId,
       };
-      this.addMarker(data.lat, data.lon, this.getPlayerName(this.playerId), constants.colors.SELF);
+      //this.addMarker(data.lat, data.lon, this.getPlayerName(this.playerId), constants.colors.SELF);
+      this.addOwnMarker(data);
       this.$socketEmit("guess", data);
       this.$store.commit("answerSubmitted");
     },
@@ -125,37 +129,60 @@ export default {
       });
     },
     addMarker(lat, lon, label, color=constants.color.BASE){
-      // TODO: change getIcon code (label is nto displayed)
+      if (typeof this.answers === "undefined"){
+        this.answers = L.featureGroup().addTo(this.canvas);
+      }
       const marker = L.marker([lat, lon], {icon: getIcon(color, label)});
-      marker.addTo(this.canvas);
+      // marker.addTo(this.canvas);
+      this.answers.addLayer(marker);
       return marker
     },
+    createMarker(lat, lon, label, color=constants.color.BASE){
+      return L.marker([lat, lon], {icon: getIcon(color, label)});
+    },
+
+    addOwnMarker({lon, lat}){
+      this.hasOwnGuess = true;
+      const marker = this.createMarker(lat, lon, this.getPlayerName(this.playerId), constants.colors.SELF);
+      if (typeof this.answers === "undefined"){
+        this.answers = L.featureGroup().addTo(this.canvas);
+      }
+      this.answers.addLayer(marker);
+      console.log("Added own guess");
+    },
+
+    addTrueMarker({lon, lat, name}) {
+      this.hasGroundTruth = true;
+      const marker = this.createMarker(lat, lon, name, constants.colors.TRUE);
+      if (typeof this.answers === "undefined"){
+        this.answers = L.featureGroup().addTo(this.canvas);
+      }
+      this.answers.addLayer(marker);
+      console.log("Added ground truth");
+    },
+
     displayResults(answer, results){
-      const trueAnswer = this.addMarker(answer.lat, answer.lon, answer.name, constants.colors.TRUE);
-      const answers = L.featureGroup([trueAnswer]).addTo(this.canvas);
-      // const circles = data.results.map(rec => {
-      //   return new Promise(resolve => {
-      //     const color = (rec.player === this.$store.state.playerId) ? constants.colors.SELF : constants.colors.BASE;
-      //     this.drawCirclePromise(answer.lon, answer.lat, rec.dist, color)
-      //         .then(circle => {
-      //           const marker = this.addMarker(rec.guess.lat, rec.guess.lon, this.getPlayerName(rec.player), color);
-      //           answers.addLayer(marker);
-      //           resolve();
-      //         });
-      //     })
-      //   });
+      if (!this.hasGroundTruth) {
+        this.addTrueMarker(answer);
+      }
       const circles = results.map(rec => {
-        const color = (rec.player === this.$store.state.playerId) ? constants.colors.SELF : constants.colors.BASE;
+        const isSelf = (rec.player === this.$store.state.playerId)
+        if (isSelf && this.hasOwnGuess) {
+          return Promise.resolve();
+        }
+        const color = isSelf ? constants.colors.SELF : constants.colors.BASE;
         return this.drawCirclePromise(answer.lat, answer.lon, rec.dist, color)
             .then(circle => {
-              const marker = this.addMarker(rec.guess.lat, rec.guess.lon, this.getPlayerName(rec.player), color);
-              answers.addLayer(marker);
+              const marker = this.createMarker(rec.guess.lat, rec.guess.lon, this.getPlayerName(rec.player), color);
+              if (isSelf) {this.hasOwnGuess = true;}
+              this.answers.addLayer(marker);
             });
-      })
+      });
       Promise.all(circles).then(() => {
-        this.autoZoomOnResults(answers, results);
+        this.autoZoomOnResults(this.answers, results);
       })
     },
+
     disableZoom(){
       this.canvas.scrollWheelZoom.disable();
       this.canvas.doubleClickZoom.disable();
@@ -204,7 +231,10 @@ export default {
         if (layer !== this.map) {
           this.canvas.removeLayer(layer);
         }
-      })
+      });
+      this.hasGroundTruth = false;
+      this.hasOwnGuess = false;
+      this.answers = undefined;
     }
   },
 
@@ -220,7 +250,7 @@ export default {
 
     "status-update": function({status, payload}) {
       if (status === constants.status.CORRECTION){
-        this.clearMap();
+        // this.clearMap();
         this.displayResults(payload.answer, payload.results);
       } else if (status === constants.status.RUNNING || status === constants.status.LAUNCHING) {
           this.clearMap();
@@ -228,7 +258,8 @@ export default {
     },
 
     "score": function ({answer, dist}) {
-      this.addMarker(answer.lat, answer.lon, answer.name, constants.colors.TRUE);
+      // this.addMarker(answer.lat, answer.lon, answer.name, constants.colors.TRUE);
+      this.addTrueMarker(answer);
       this.drawCirclePromise(answer.lat, answer.lon, dist, constants.colors.SELF);
     }
   }

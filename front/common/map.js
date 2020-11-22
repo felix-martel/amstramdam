@@ -17,8 +17,61 @@ under <a href="http://www.openstreetmap.org/copyright">ODbL</a> and
 <a href="https://simplemaps.com/data/world-cities">World Cities Database</a>
 under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`;
 
+function jitter(X, Y, amount=15){
+    x = 2* (Math.random()-0.5);
+    y = Math.sqrt(1 - Math.pow(x, 2));
+    if (Math.random() > 0.5){
+        y = -y;
+    }
+    x = Math.round(X * (1 + Math.random()*x));
+    y = Math.round(Y * (1 + Math.random()*y));
+    return [x, y];
+}
 
-function getIcon(color="red", extraClass="", opacity=0.8){
+function getIcon(color="red", name="", labelOnly=false, random=false){
+        const iconColor = labelOnly ? "transparent" : color;
+        const markerHtmlStyles = `
+          background: ${iconColor};
+          width: 10px;
+          height: 10px;
+          display: block;
+          border-radius: 5px;`;
+        var inner;
+        if (name) {
+            let x = 15;
+            let y = 15;
+            if (random){
+                x = 2* (Math.random()-0.5);
+                y = Math.sqrt(1 - Math.pow(x, 2));
+                if (Math.random() > 0.5){
+                    y = -y;
+                }
+                x = Math.round((15 + 15*Math.random())*x);
+                y = Math.round((15 + 15*Math.random())*y);
+            }
+            const labelStyle = `
+            background-color: ${color};
+            color: white;
+            padding: 3px;
+            top: ${x}px;
+            left: ${y}px;
+            position: absolute;
+            font-family: "Roboto", monospace;
+            `;
+            inner = `<span class="icon-label" style="${labelStyle}">${name}</span>`;
+        }
+        else {
+            inner = "";
+        }
+
+        return L.divIcon({
+            className: "my-custom-pin",
+            iconAnchor: [5, 5],
+            html: `<span class="icon" style="${markerHtmlStyles}">${inner}</span>`
+        })
+    }
+
+function oldGetIcon(color="red", extraClass="", opacity=0.8){
     const markerHtmlStyles = `
       background: ${color};
       width: 6px;
