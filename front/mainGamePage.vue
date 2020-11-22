@@ -1,11 +1,6 @@
 <template>
   <div>
-    <div class="blink-wrapper off" id="blink-wrapper">
-      <div class="blink-item" id="left"></div>
-      <div class="blink-item" id="right"></div>
-      <div class="blink-item" id="top"></div>
-      <div class="blink-item" id="bottom"></div>
-    </div>
+    <blink-component v-if="blinking"></blink-component>
     <div class="main">
       <game-footer></game-footer>
       <result-popup></result-popup>
@@ -35,6 +30,7 @@ import ResultPopup from "./panels/resultPopup/resultPopup.vue";
 import {goToHash, unproxify} from "./common/utils";
 import {CookieHandler, IntCookieHandler} from "./common/cookie";
 import {mapState} from "vuex";
+import blinkComponent from "./components/blinkComponent.vue";
 
 export default {
     components: {
@@ -45,6 +41,7 @@ export default {
       "game-state-box": gameStateBox,
       "map-container": Map,
       "result-popup": ResultPopup,
+      "blink-component": blinkComponent,
     },
     data () {
       return {
@@ -66,7 +63,8 @@ export default {
             || (state.game.status === constants.status.CORRECTION)
             || ((state.game.status === constants.status.RUNNING)
                 && (state.game.resultsReceived || state.guesses.length > 0)))
-      }
+      },
+      blinking: state => state.ui.blinking,
     })
   },
 

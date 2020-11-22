@@ -30,6 +30,8 @@ function initScore(params) {
                         hint: false,
                         message: "",
                     },
+                    blinking: false,
+                    blinkTimeout: undefined,
                 },
                 score: {
                     total: 0,
@@ -304,6 +306,21 @@ function initScore(params) {
             renamePlayer(state, {id, pseudo}) {
               state.pseudos[id] = pseudo;
             },
+
+            startRunTimer(state) {
+                const blinkDelay = 3; // in seconds
+                state.ui.blinkTimeout = window.setTimeout(() => {
+                    state.ui.blinking = true;
+                }, (state.params.duration-blinkDelay) * 1000)
+            },
+
+            stopRunTimer(state) {
+                if (typeof state.ui.blinkTimeout !== "undefined") {
+                    window.clearTimeout(state.ui.blinkTimeout);
+                    state.ui.blinkTimeout = undefined;
+                }
+                state.ui.blinking = false;
+            }
         },
 
         actions: {
@@ -450,6 +467,7 @@ function initScore(params) {
              * - Set new hint and new run number
              * - Display them
              * - Start the timer
+             * - Start the blink timer
              *
              * @param hint: new run's hint
              * @param current: new run number
@@ -462,6 +480,7 @@ function initScore(params) {
                 commit("setCurrentRun", current + 1);
                 commit("setHint", {place: hint});
                 commit("startHintState");
+                commit("startRunTimer");
             },
 
             /**
@@ -471,6 +490,7 @@ function initScore(params) {
              * - Add guesses from other player (and display them?)
              * - Start timer for the correction step
              * - Update leaderboard with this run's scores
+             * - Stop the blinking
              *
              * @param results
              * @param answer
@@ -480,6 +500,7 @@ function initScore(params) {
              */
             setCorrection({state, commit, dispatch},
                           {results, answer, leaderboard, done}) {
+                commit("stopRunTimer");
                 state.game.done = done;
                 const message = done ?
                     constants.transitionText.beforeGameEnd :
