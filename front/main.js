@@ -12,7 +12,7 @@ import SocketIOPlugin from "./socket";
 import {NamingMixin, EventRegistrationMixin} from "./common/utils";
 //import {$} from "./common/utils";
 import popup from "./components/popup.vue";
-
+import {CookieHandler, BooleanCookieHandler, IntCookieHandler, CookiePlugin} from "./common/cookie";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const istore = initStore(params);
     app.use(istore);
     app.use(SocketIOPlugin, socket);
+    app.use(CookiePlugin, {
+        pseudo: new CookieHandler("amstramdam-pseudo"),
+        highScore: new IntCookieHandler("amstramdam-" + params.map)
+    });
 
     // Register mixins
     app.mixin(NamingMixin);

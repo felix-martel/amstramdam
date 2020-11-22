@@ -24,14 +24,14 @@ export default {
   name: "scoreBoxSelf",
   data () {
     return {
-      pseudoCache: new CookieHandler("amstramdam-pseudo"),
+      //pseudoCache: new CookieHandler("amstramdam-pseudo"),
     }
   },
   created() {
-    const storedPseudo = this.pseudoCache.read();
-    if (storedPseudo){
-      this.playerName = storedPseudo;
-    }
+    // const storedPseudo = this.pseudoCache.read();
+    // if (storedPseudo){
+    //   this.playerName = storedPseudo;
+    // }
   },
   computed: {
     playerName: {
@@ -43,9 +43,9 @@ export default {
         const newPseudo = value.trim();
         this.$socketEmit("name-change", {name: newPseudo});
         if (newPseudo){
-          this.pseudoCache.write(newPseudo);
+          this.$cookie.pseudo.write(newPseudo);
         } else {
-          this.pseudoCache.remove();
+          this.$cookie.pseudo.remove();
         }
       }
     },

@@ -97,6 +97,15 @@ function initScore(params) {
                 } else {
                     return undefined;
                 }
+            },
+
+            newHighScore(state, getters){
+                const final = getters.finalScore;
+                const high = state.score.high;
+                return (typeof final !== "undefined" && (
+                    typeof high === "undefined"
+                    || final > high
+                ));
             }
         },
 
@@ -152,6 +161,7 @@ function initScore(params) {
                     state.score.newHigh = undefined;
                     state.score.beaten = false
                 }
+                //
             },
 
             setHighScore(state, score) {
@@ -346,7 +356,6 @@ function initScore(params) {
                 commit("clearLastRun");
                 commit("resetHighScore");
                 commit("resetCurrenRun");
-                console.log(data)
                 //commit("updateLeaderboard", []);
             },
 
@@ -407,7 +416,6 @@ function initScore(params) {
             },
 
             updateStatus({state, commit, dispatch}, {status, payload}) {
-                // console.log(`Update status: <${status}>`);
                 const s = constants.status;
                 const actions = {
                     [s.NOT_LAUNCHED]: "setNotLaunched",
@@ -444,15 +452,21 @@ function initScore(params) {
                 state.game.hasAnswered = false;
             },
 
+            resetHighScore({state, commit, getters}) {
+                if (getters.newHighScore){
+                    state.score.high = getters.finalScore;
+                }
+            },
+
             setLaunching({state, commit, dispatch},
                          {game, runs, diff}) {
                 state.game.currentRun = 1;
                 state.game.nRuns = runs;
                 state.game.launched = true;
 
+                dispatch("resetHighScore");
                 dispatch("clearAndHideResults");
                 commit("emptyLeaderboard");
-                commit("resetHighScore");
                 commit("hideResultPopup");
 
                 commit("startTransitionState", {

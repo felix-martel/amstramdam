@@ -27,7 +27,7 @@
 <script>
 import Popup from "../../components/popup.vue";
 import resultTable from "./resultTable.vue";
-import {mapState} from "vuex";
+import {mapState, mapGetters} from "vuex";
 import constants from "../../common/constants";
 import {goToHash} from "../../common/utils";
 import chatInner from "../../components/chatInner.vue";
@@ -57,8 +57,12 @@ export default {
       highScore: state => state.score.high,
       leaderboard: state => state.leaderboard,
       status: state => state.game.status,
-      newHighScore: state => state.score.beaten,
-    })
+    }),
+
+    ...mapGetters([
+      "newHighScore",
+      "finalScore",
+    ]),
   },
   methods: {
     close: function(){
@@ -68,6 +72,15 @@ export default {
 
     relaunch: function() {
       this.$socketEmit("launch");
+    }
+  },
+
+  watch: {
+    newHighScore(value) {
+      if (value) {
+        console.log("New high score", this.finalScore, "!");
+        this.$cookie.highScore.write(this.finalScore);
+      }
     }
   }
 }

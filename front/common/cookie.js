@@ -82,3 +82,7 @@ export class BooleanSettingHandler {
         this.store.commit("updateParams", {key: this.name, value: value});
     }
 }
+
+export function CookiePlugin (app, cookies = {}) {
+        app.config.globalProperties.$cookie = cookies;
+    }
