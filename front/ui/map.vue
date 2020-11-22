@@ -21,8 +21,8 @@ export default {
   mounted() {
     console.log("Map created");
     this.canvas = L.map("mapid", {
-         scrollWheelZoom: true, //this.params.allow_zoom || this.isMobile,
-         doubleClickZoom: true, //this.params.allow_zoom || this.isMobile,
+         scrollWheelZoom: this.params.allow_zoom || this.isMobile,
+         doubleClickZoom: this.params.allow_zoom || this.isMobile,
     });
     this.canvas.fitBounds(this.params.bbox);
     const normalZoom = this.canvas.getZoom();
@@ -156,15 +156,29 @@ export default {
         this.autoZoomOnResults(answers, results);
       })
     },
+    disableZoom(){
+      this.canvas.scrollWheelZoom.disable();
+      this.canvas.doubleClickZoom.disable();
+    },
+
+    enableZoom() {
+      this.canvas.scrollWheelZoom.enable();
+      this.canvas.doubleClickZoom.enable();
+    },
+
     autoZoomOnResults(answers, results) {
       if (!this.autozoomActivated || (results.length === 0)) { return }
+      // Store current map view
       const refState = this.getMapState();
-      //this.canvas.setMaxZoom(18);
+      // Disable zoom events (which allows us to unset max zoom)
+      this.disableZoom();
+      this.canvas.setMaxZoom(18);
       const bounds = answers.getBounds().pad(0.5);
       this.canvas.flyToBounds(bounds, {
-        duration: constants.animations.map.duration, maxZoom: 18});
+        duration: constants.animations.map.duration});
       window.setTimeout(() => {
         this.setMapState(refState);
+
       }, 1000 * (this.params.wait_time - 2 * constants.animations.map.duration - constants.animations.map.deltaPad))
     },
     getMapState(){
@@ -172,11 +186,18 @@ export default {
           center: this.canvas.getCenter(),
           zoom: this.canvas.getZoom(),
           maxZoom: this.canvas.getMaxZoom(),
+          zoomAllowed: this.canvas.scrollWheelZoom.enabled(),
         };
     },
-    setMapState({center, zoom, maxZoom}){
-      this.canvas.flyTo(center, zoom, {duration: constants.animations.map.duration});
-      //this.canvas.setMaxZoom(maxZoom);
+    setMapState({center, zoom, maxZoom, zoomAllowed}){
+      const duration = constants.animations.map.duration;
+      this.canvas.flyTo(center, zoom, {duration: duration});
+      // Wait for the end of the flight...
+      window.setTimeout(() => {
+        // ...then re-enable zoom and set max zoom
+        if (maxZoom) {this.canvas.setMaxZoom(maxZoom);}
+        if (zoomAllowed) {this.enableZoom();}
+      }, duration*1000);
     },
     clearMap(){
       this.canvas.eachLayer(layer => {
