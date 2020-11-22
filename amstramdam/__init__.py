@@ -35,12 +35,12 @@ hosts = CONF["hosts"]
 hosts += ["www." + name for name in hosts]
 if IS_LOCAL:
     hosts += ["127.0.0.1", "localhost"]
-valid_hosts = ["https://"+h for h in hosts]
+valid_hosts = [] # ["https://"+h for h in hosts]
 if CONF["allowHTTP"]:
     valid_hosts += ["http://"+h for h in hosts]
 
 # Init Flask app
-print(f"Creating app... (local={IS_LOCAL})")
+print(f"Creating app... (local={IS_LOCAL}, HTTP allowed={CONF['allowHTTP']})")
 
 
 class CustomFlask(Flask):
@@ -59,7 +59,7 @@ app.config['SECRET_KEY'] = SECRET_KEY
 Talisman(app,
          content_security_policy=csp,
          content_security_policy_nonce_in=['script-src'],
-         force_https=CONF["allowHTTP"]
+         force_https=not CONF["allowHTTP"]
          )
 
 # Init SocketIO
