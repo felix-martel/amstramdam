@@ -64,4 +64,56 @@ export default {
 textarea {
   font-size: 0.9em;
 }
+
+.inner-chat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  top: 0;
+  overflow:hidden;
+}
+
+.chat-messages {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+  box-sizing: border-box;
+}
+
+.inner-chat .input {
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  height: 50px;
+}
+
+
+.chat-input {
+    resize: none;
+    border: none;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.chat-input:focus {
+  outline: none;
+}
+.chat-input:hover {
+  /*border-color: gray;*/
+}
+
+.messages-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 50px;
+  box-sizing: border-box;
+  overflow: auto;
+}
 </style>

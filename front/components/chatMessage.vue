@@ -23,8 +23,15 @@ name: "chatMessage",
 </script>
 
 <style scoped>
+.chat-message {
+    text-align: left;
+    padding: 5px 10px;
+}
+
 .chat-author {
   font-size: 0.8em;
   color: gray;
+      margin-right: 15px;
+    font-style: italic;
 }
 </style>
