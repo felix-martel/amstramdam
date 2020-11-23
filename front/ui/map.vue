@@ -26,6 +26,10 @@ export default {
     this.canvas = L.map("mapid", {
          scrollWheelZoom: this.params.allow_zoom || this.isMobile,
          doubleClickZoom: this.params.allow_zoom || this.isMobile,
+          zoomControl: false,
+        boxZoom: false,
+      //maxBounds: [[-90, -360], [90, 360]],
+      worldCopyJump: true,
     });
     this.canvas.fitBounds(this.params.bbox);
     const normalZoom = this.canvas.getZoom();
@@ -265,3 +269,30 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  #mapid {
+    height: 100%;
+    background-color: black;
+  cursor: crosshair;
+}
+
+.my-custom-pin {
+  opacity: 1;
+  transition: 0.2s ease-in opacity;
+}
+.my-custom-pin.hidden {
+  opacity: 0;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon-label {
+  position: absolute;
+  /*top: -10px;
+  left: 20px;*/
+  white-space: nowrap;
+}
+</style>

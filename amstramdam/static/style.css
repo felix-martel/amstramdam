@@ -58,34 +58,11 @@ option:checked {
 }
 
 
-#mapid {
-    height: 100%;
-    background-color: black;
-  cursor: crosshair;
-}
 
-#mapid .leaflet-control-zoom, #leaflet .leaflet-control-zoom {
-    display: none;
-}
 
-.my-custom-pin {
-  opacity: 1;
-  transition: 0.2s ease-in opacity;
-}
-.my-custom-pin.hidden {
-  opacity: 0;
-}
 
-.icon {
-  position: relative;
-}
 
-.icon-label {
-  position: absolute;
-  /*top: -10px;
-  left: 20px;*/
-  white-space: nowrap;
-}
+
 
 .fa-icon {
   display: inline-block;
