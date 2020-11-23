@@ -4,6 +4,16 @@ import L from "leaflet";
 import {$, GET} from "./common/utils";
 import {LAYERS, getIcon, defaultView} from "./common/map";
 
+import {createApp} from "vue";
+import AmstramdamLobby from "./mainLobbyPage.vue";
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const app = createApp(AmstramdamLobby);
+//     app.mount("#amstramdam-lobby");
+//
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
     const difficultySlider = $("diff-level");
     const gameNameInput = $("game-name");
