@@ -102,5 +102,34 @@ export default {
 </script>
 
 <style scoped>
+.self {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
 
+.self .name {
+
+}
+
+.self .total-score {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.high-score {
+  padding-top: 5px;
+  color: gray;
+}
+
+
+#high-score-diff.no-score {
+  display: none;
+}
+#high-score-diff.pos-score {
+  color: green;
+}
+#high-score-diff.neg-score {
+  color: orangered;
+}
 </style>

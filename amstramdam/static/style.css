@@ -450,10 +450,6 @@ button {
   /*font-family: "Courier Prime", monospace;*/
 }
 
-.high-score {
-  padding-top: 5px;
-  color: gray;
-}
 
 .high-score-notif {
   margin-top: 0;
@@ -462,15 +458,6 @@ button {
 }
 
 
-#high-score-diff.no-score {
-  display: none;
-}
-#high-score-diff.pos-score {
-  color: green;
-}
-#high-score-diff.neg-score {
-  color: orangered;
-}
 .high-score-notif.no-score {
   display: none;
 }
@@ -529,32 +516,6 @@ button {
   font-style: italic;
 }
 
-.box .self {
-  padding-bottom: 10px;
-  border-bottom: 1px solid lightgray;
-}
-
-.box .self .name {
-
-}
-
-.box .self .total-score {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.box .ranking ul {
-  list-style: none;
-  padding: 0;
-}
-
-.box .ranking .pname {
-  margin-right: 10px;
-}
-
-.box .ranking .pscore {
-  font-style: italic;
-}
 
 
 

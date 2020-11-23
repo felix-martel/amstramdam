@@ -23,28 +23,34 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  width: 100%;
-  margin: 10px 0;
-}
+  ul {
+    width: 100%;
+    margin: 10px 0;
+    list-style: none;
+    padding: 0;
+  }
 
-li {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
-.pscore {
-  color: gray;
-  text-align: right;
-}
+  .pscore {
+    color: gray;
+    text-align: right;
+    font-style: italic;
+    white-space: nowrap;
+  }
 
-.pname {
-  text-align: left;
-}
+  .pname {
+    text-align: left;
+    margin-right: 10px;
+  }
 
-.leaderboard-change-move {
-  transition: transform 1s;
-}
+  .leaderboard-change-move {
+    transition: transform 1s;
+  }
 </style>
