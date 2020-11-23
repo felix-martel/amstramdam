@@ -108,9 +108,6 @@ option:checked {
   overflow-y: auto;
 }
 
-.controls {
-  position: relative;
-}
 
 #close-chatbox {
     position: absolute;
@@ -125,27 +122,6 @@ option:checked {
   color: blue;
 }
 
-#chat-toggle-button {
-    position: absolute;
-    top: 2px;
-    right: 0;
-  color: blue;
-  cursor:pointer;
-}
-#chat-toggle-button.unread-message:after {
-  display: block;
-  width: 6px;
-  height:6px;
-  border-radius: 3px;
-  background: red;
-  content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-#chat-toggle-button:hover {
-    color: #000085;
-}
 
 
 .popup-main {
@@ -409,15 +385,6 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   margin-bottom: 35px;
 }
 
-.nav {
-  text-align: left;
-  margin-bottom: 15px;
-  margin-top: -10px;
-  color: blue;
-}
-.nav a, .nav a:visited, .nav a:active, .nav a:link {
-  color: blue;
-}
 
 a, a:visited, a:active, a:link {
   color: blue !important;

@@ -71,3 +71,42 @@ export default {
   }
 }
 </script>
+<style scoped>
+  .nav {
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    color: blue;
+  }
+  .nav a, .nav a:visited, .nav a:active, .nav a:link {
+    color: blue;
+  }
+
+
+  .controls {
+    position: relative;
+  }
+
+
+  #chat-toggle-button {
+      position: absolute;
+      top: 2px;
+      right: 0;
+    color: blue;
+    cursor:pointer;
+  }
+  #chat-toggle-button.unread-message:after {
+    display: block;
+    width: 6px;
+    height:6px;
+    border-radius: 3px;
+    background: red;
+    content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+  #chat-toggle-button:hover {
+      color: #000085;
+  }
+</style>
