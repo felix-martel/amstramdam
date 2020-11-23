@@ -41,7 +41,19 @@ export default {
 </script>
 
 <style scoped>
+.game-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .run-info {
   margin-right: 10px;
+}
+
+#target {
+  color: blue;
+  font-size: 2em;
+  font-weight: bold;
 }
 </style>

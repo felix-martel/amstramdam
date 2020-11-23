@@ -76,11 +76,7 @@ option:checked {
   display: none;
 }
 
-#run-timer {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: blue;
-}
+
 
 /* CHAT */
 #chat-box {
@@ -472,11 +468,7 @@ button {
 }
 
 
-.game-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 
 
 .progress-container {
@@ -492,11 +484,7 @@ button {
   width: 18px;
 
 }
-#target {
-  color: blue;
-  font-size: 2em;
-  font-weight: bold;
-}
+
 
 .score {
   padding-bottom: 10px;

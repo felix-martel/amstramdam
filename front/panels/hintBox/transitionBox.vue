@@ -54,5 +54,9 @@ export default {
 </script>
 
 <style scoped>
-
+#run-timer {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: blue;
+}
 </style>
