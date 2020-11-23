@@ -87,6 +87,29 @@ export default {
 </script>
 
 <style scoped>
+
+/** POPUP LAYOUT **/
+
+.popup-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 0;
+  width: 180px;
+  border-right: 1px solid lightgray;
+  margin-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+.popup-main {
+  margin-left: 200px;
+}
+
+/** ELEMENTS **/
+
 .close {
     position: absolute;
     top: 7px;
@@ -100,17 +123,14 @@ export default {
   color: blue;
 }
 
-.popup-left {
+.high-score-notif {
+  margin-top: 0;
+  font-style: italic;
+  color: gray;
+}
 
-  position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    min-height: 0;
-    width: 180px;
-    border-right: 1px solid lightgray;
-    margin-bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+#relaunch-from-popup {
+  margin: 0 auto;
+  margin-top: 15px;
 }
 </style>

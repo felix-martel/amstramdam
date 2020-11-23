@@ -25,5 +25,9 @@ export default {
 </script>
 
 <style scoped>
-
+table {
+  width: 100%;
+  font-size: 1.5em;
+  vertical-align: center;
+}
 </style>

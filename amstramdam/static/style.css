@@ -120,9 +120,6 @@ option:checked {
 
 
 
-.popup-main {
-  margin-left: 200px;
-}
 .inner-chat {
     position: absolute;
     bottom: 0;
@@ -418,45 +415,6 @@ a, a:visited, a:active, a:link {
   }
 }
 
-#popup table {
-  width: 100%;
-  font-size: 1.5em;
-  vertical-align: center;
-}
-
-#popup table .player-score-deets {
-  font-size: 0.6em;
-}
-
-#popup table .player-score-deets .fas {
-  color: lightgray;
-  margin-right: 5px;
-}
-
-#popup button {
-  margin: 0 auto;
-  margin-top: 15px;
-}
-
-.fa-crown.first-place {
-  color: gold;
-}
-
-button {
-  /*font-family: "Courier Prime", monospace;*/
-}
-
-
-.high-score-notif {
-  margin-top: 0;
-  font-style: italic;
-  color: gray;
-}
-
-
-.high-score-notif.no-score {
-  display: none;
-}
 
 
 .high-score.no-score {
@@ -464,12 +422,9 @@ button {
 }
 
 .high-score .fas {
+  /* TODO: move to scoreBoxSelf */
   color: gold;
 }
-
-
-
-
 
 .progress-container {
   display: inline-flex;

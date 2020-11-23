@@ -58,5 +58,16 @@ export default {
 </script>
 
 <style scoped>
+.player-score-deets {
+  font-size: 0.6em;
+}
 
+.player-score-deets .fas {
+  color: lightgray;
+  margin-right: 5px;
+}
+
+.fa-crown.first-place {
+  color: gold;
+}
 </style>
