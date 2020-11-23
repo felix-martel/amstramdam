@@ -37,5 +37,44 @@ export default {
 </script>
 
 <style scoped>
+.blink-wrapper {
+  z-index: 1000;
 
+}
+
+.blink-item {
+  position: fixed;
+  background-color: blue;
+  opacity: 1;
+  transition: 0.1s ease-in-out;
+  z-index: 10;
+}
+.off .blink-item {
+  opacity: 0;
+}
+
+#top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+#left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+}
+#right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+}
+#bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
 </style>
