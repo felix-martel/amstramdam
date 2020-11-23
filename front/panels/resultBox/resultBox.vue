@@ -52,3 +52,38 @@ export default {
   }
 }
 </script>
+<style scoped>
+.title {
+  font-size: 1.1em;
+}
+
+.distance {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.deets {
+  margin-top: 10px;
+}
+
+.score {
+  margin-top: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.collective-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.collective-results .pname {
+  margin-right: 10px;
+}
+
+.collective-results .pscore {
+  font-style: italic;
+}
+</style>
