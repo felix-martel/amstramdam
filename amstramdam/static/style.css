@@ -415,17 +415,6 @@ a, a:visited, a:active, a:link {
   }
 }
 
-
-
-.high-score.no-score {
-  display: none;
-}
-
-.high-score .fas {
-  /* TODO: move to scoreBoxSelf */
-  color: gold;
-}
-
 .progress-container {
   display: inline-flex;
   position: relative;

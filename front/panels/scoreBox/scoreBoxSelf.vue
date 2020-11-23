@@ -6,7 +6,7 @@
       </div>
       <div class="total-score"><span id="total-score">{{ score }}</span> pts</div>
       <div class="high-score" id="high-score-container" v-if="highScore">
-        <i class="fas fa-trophy"></i>
+        <i class="fas fa-trophy high-score-icon"></i>
         <span id="high-score">{{ highScore }}</span>pts
         <span id="high-score-diff"
               v-if="diffScore"
@@ -120,6 +120,11 @@ export default {
 .high-score {
   padding-top: 5px;
   color: gray;
+}
+
+.high-score-icon  {
+  color: gold;
+  margin-right: 5px;
 }
 
 
