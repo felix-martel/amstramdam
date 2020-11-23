@@ -36,16 +36,6 @@ option:checked {
   display: none;
 }
 
-
-
-/* CHAT */
-
-
-
-
-
-
-
 #title {
   position: relative;
   font-style: italic;
@@ -246,37 +236,12 @@ a, a:visited, a:active, a:link {
   color: blue !important;
 }
 
-#mask {
-  background-color: black;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.8;
-  z-index: 1001;
-}
-
-
-#popup {
-   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 800px;
-  transform: translate(-50%, -50%);
-  z-index: 1002;
-  overflow: hidden;
-  /*min-height: 400px;*/
-}
 
 
 
 
-@media screen and (max-width: 800px) {
-  #popup {
-    width: 100%;
-  }
-}
+
+
 
 .progress-container {
   display: inline-flex;
