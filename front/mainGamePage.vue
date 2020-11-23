@@ -24,7 +24,7 @@ import chatBox from "./panels/chatBox/chatBox.vue";
 import resultBox from "./panels/resultBox/resultBox.vue";
 import gameFooter from "./ui/footer.vue";
 import gameStateBox from "./panels/hintBox/gameStateBox.vue";
-import Map from "./ui/map.vue";
+import Map from "./map/map.vue";
 import constants from "./common/constants";
 import ResultPopup from "./panels/resultPopup/resultPopup.vue";
 import {goToHash, unproxify} from "./common/utils";
