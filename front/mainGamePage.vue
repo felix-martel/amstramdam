@@ -196,5 +196,18 @@ export default {
 }
 </script>
 <style>
+.column {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+    z-index: 1000;
+  width: 250px;
+}
 
+.right-corner {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
 </style>
