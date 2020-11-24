@@ -28,7 +28,12 @@ function jitter(X, Y, amount=15){
     return [x, y];
 }
 
-function getIcon(color="red", name="", labelOnly=false, random=false){
+function getIcon(color= "red",
+                 name= "",
+                 {labelOnly = false,
+                     random = false,
+                 extraClasses = []
+                 } = {}){
         const iconColor = labelOnly ? "transparent" : color;
         const markerHtmlStyles = `
           background: ${iconColor};
@@ -63,11 +68,12 @@ function getIcon(color="red", name="", labelOnly=false, random=false){
         else {
             inner = "";
         }
+        const classes = extraClasses.join(" ");
 
         return L.divIcon({
             className: "my-custom-pin",
             iconAnchor: [5, 5],
-            html: `<span class="icon" style="${markerHtmlStyles}">${inner}</span>`
+            html: `<span class="icon ${classes}" style="${markerHtmlStyles}">${inner}</span>`
         })
     }
 

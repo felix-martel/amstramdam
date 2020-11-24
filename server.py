@@ -23,7 +23,9 @@ if __name__ == '__main__':
         kwargs["debug"] = True
         name, game = manager.create_game(n_run=3,
                                          is_permanent=True, duration=5,
-                                         map="world", wait_time=4, is_public=True,
+                                         map="world", wait_time=4,
+                                         is_public=True,
+                                         allow_zoom=True,
                                          force_name="__debug__")
         for _ in range(3):
             game.add_player(pseudo=None)

@@ -78,3 +78,21 @@ export function goToHash (url, state = {}) {
 export function unproxify (obj) {
     return Object.assign({}, obj);
 }
+
+export function geoJitter(lonlatObject, {how="gaussian", lonFactor=10, latFactor=5}={}) {
+    const rand = (how === "gaussian") ? (() => {
+        // Gaussian N(0, 1)
+        let u = 0, v = 0;
+        while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
+        while(v === 0) v = Math.random();
+        return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
+    }) : (() => {
+        // Uniform U(-1, +1)
+        return 2 * (Math.random() - 0.5);
+    });
+    return {
+        //...lonlatObject,
+        lon: lonlatObject.lon + lonFactor * rand(),
+        lat: lonlatObject.lat + latFactor * rand(),
+    }
+}

@@ -72,8 +72,8 @@ export default {
     },
 
 
-    createMarker({lat, lon}, label, color=constants.colors.BASE){
-      return L.marker([lat, lon], {icon: getIcon(color, label)});
+    createMarker({lat, lon}, label, color=constants.colors.BASE, options){
+      return L.marker([lat, lon], {icon: getIcon(color, label, options)});
     },
 
     drawAnimatedCircle({lat, lon}, radius, color, timestep=5) {

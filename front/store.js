@@ -538,9 +538,10 @@ function initScore(params) {
              *
              * @param leaderboard
              */
-            setFinished({state, commit, dispatch}, {leaderboard}) {
+            setFinished({state, commit, dispatch}, {leaderboard, full}) {
                 commit("updateLeaderboard", leaderboard);
                 commit("displayResultPopup");
+                console.log(full);
                 state.game.hasAnswered = false;
             },
 
