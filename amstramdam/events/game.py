@@ -79,8 +79,11 @@ def process_guess(data):
     # global duration_thread
     game_name = session["game"]
     game = manager.get_game(game_name)
+    player = session.get("player")
+    if player is None:
+        return
 
-    player = data["player"]
+    #player = data["player"]
     print("Receiving guess from", player)
     lon, lat = data["lon"], data["lat"]
     res, done = game.current.process_answer((lon, lat), player)
