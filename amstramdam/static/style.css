@@ -168,6 +168,10 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   left: 5px;
 }
 
+#player-name:hover[contenteditable="true"]::after {
+  color: gray;
+}
+
 /*
 .game-panel-container:after {
     display:inline-block;
