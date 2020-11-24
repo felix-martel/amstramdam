@@ -540,6 +540,8 @@ function initScore(params) {
              */
             setFinished({state, commit, dispatch}, {leaderboard, full}) {
                 state.game.launched = false;
+                state.ui.state.hint = false;
+                state.ui.state.transition = false;
                 commit("updateLeaderboard", leaderboard);
                 commit("displayResultPopup");
                 console.log(full);

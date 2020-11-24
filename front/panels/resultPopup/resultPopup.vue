@@ -14,7 +14,10 @@
         C'est votre meilleur score !
       </h4>
       <result-table :leaderboard="leaderboard"></result-table>
-      <button id="relaunch-from-popup" @click="relaunch">Nouvelle partie</button>
+      <div class="popup-buttons">
+        <button @click="close">Voir la correction</button>
+        <button id="relaunch-from-popup" @click="relaunch">Nouvelle partie</button>
+      </div>
       <div style="margin-top:15px;">
         <a  href="/">
           Retour à l'accueil
@@ -129,8 +132,12 @@ export default {
   color: gray;
 }
 
-#relaunch-from-popup {
+.popup-buttons {
   margin: 0 auto;
   margin-top: 15px;
+}
+
+.popup-buttons button {
+  margin-right: 10px;
 }
 </style>

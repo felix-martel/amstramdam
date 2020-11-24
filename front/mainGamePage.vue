@@ -59,8 +59,7 @@ export default {
 
     ...mapState({
       showResults: state => {
-        return ((state.game.status === constants.status.FINISHED)
-            || (state.game.status === constants.status.CORRECTION)
+        return ((state.game.status === constants.status.CORRECTION)
             || ((state.game.status === constants.status.RUNNING)
                 && (state.game.resultsReceived || state.guesses.length > 0)))
       },
