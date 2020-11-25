@@ -1,10 +1,11 @@
 {
   "hosts": [
     "multigeo.herokuapp.com",
+    "amstramdam-debug.herokuapp.com",
     "amstramdam.com"
   ],
   "verbose": false,
-  "disableSSL": false,
+  "disableSSL": true,
   "async": "eventlet",
   "datasets": "datasets.json"
 }

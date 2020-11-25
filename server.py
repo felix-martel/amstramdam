@@ -9,13 +9,11 @@ keyfile ="extra/certif.key"
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("-d", "--debug", help="Enable live-reloading", action="store_true")
-    parser.add_argument("--nossl", help="Disable HTTPS", action="store_true")
     args = parser.parse_args()
 
     port = os.environ.get("PORT", 80)
     kwargs = dict(host= '0.0.0.0', port=port)
 
-    print("no ssl", CONF["disableSSL"])
     if IS_LOCAL and not CONF["disableSSL"]:
         kwargs["certfile"] = certfile
         kwargs["keyfile"] = keyfile
@@ -33,4 +31,5 @@ if __name__ == '__main__':
             game.add_player(pseudo=None)
         print("Live-reloading enabled, debug game created at https://localhost/game/__debug__")
         print(manager.get_public_games())
+
     socketio.run(app, **kwargs)
