@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging"
 # Load configuration file
 with open("config.json", "r", encoding="utf8") as fp:
     CONF = json.load(fp)
-CONF["allowHTTP"] = CONF["allowHTTP"] or NO_SSL
+CONF["disableSSL"] = CONF["disableSSL"] or NO_SSL
 
 # Load Content Security Policy
 with open("csp.json", "r", encoding="utf8") as fp:
@@ -36,11 +36,11 @@ hosts += ["www." + name for name in hosts]
 if IS_LOCAL:
     hosts += ["127.0.0.1", "localhost"]
 valid_hosts = [] # ["https://"+h for h in hosts]
-if CONF["allowHTTP"]:
+if CONF["disableSSL"]:
     valid_hosts += ["http://"+h for h in hosts]
 
 # Init Flask app
-print(f"Creating app... (local={IS_LOCAL}, HTTP allowed={CONF['allowHTTP']})")
+print(f"Creating app... (local={IS_LOCAL}, HTTP allowed={CONF['disableSSL']})")
 
 
 class CustomFlask(Flask):
@@ -59,7 +59,7 @@ app.config['SECRET_KEY'] = SECRET_KEY
 Talisman(app,
          content_security_policy=csp,
          content_security_policy_nonce_in=['script-src'],
-         force_https=not CONF["allowHTTP"]
+         force_https=not CONF["disableSSL"]
          )
 
 # Init SocketIO

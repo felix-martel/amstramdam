@@ -1,4 +1,4 @@
-from amstramdam import app, manager, socketio, IS_LOCAL
+from amstramdam import app, manager, socketio, IS_LOCAL, CONF
 import os
 from argparse import ArgumentParser
 
@@ -9,12 +9,14 @@ keyfile ="extra/certif.key"
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("-d", "--debug", help="Enable live-reloading", action="store_true")
+    parser.add_argument("--nossl", help="Disable HTTPS", action="store_true")
     args = parser.parse_args()
 
     port = os.environ.get("PORT", 80)
     kwargs = dict(host= '0.0.0.0', port=port)
 
-    if IS_LOCAL:
+    print("no ssl", CONF["disableSSL"])
+    if IS_LOCAL and not CONF["disableSSL"]:
         kwargs["certfile"] = certfile
         kwargs["keyfile"] = keyfile
         kwargs["port"] = 443
