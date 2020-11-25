@@ -1,12 +1,14 @@
 <template>
   <div class="inner-chat">
     <div class="messages-wrapper">
-      <div id="chat-messages" class="chat-messages">
+        <div id="chat-messages" class="chat-messages">
 
         <chat-message v-for="msg in messages"
+                      :message="msg"
                       :author-id="msg.author"
                       :messages="msg.messages"></chat-message>
       </div>
+
 
     </div>
     <div class="input">
@@ -22,14 +24,16 @@
 
 <script>
 import chatMessage from "./chatMessage.vue";
-
+import scrollable from "./scrollable.vue";
 export default {
   components: {
-    "chat-message": chatMessage
+    "chat-message": chatMessage,
+    "scrollable": scrollable,
   },
   data () {
     return {
       message: "",
+      currentScroll: 0,
     }
   },
   computed: {
@@ -55,6 +59,10 @@ export default {
       this.$store.commit("addMessage", payload);
       this.$socketEmit("chat:send", this.message);
       this.message = "";
+    },
+
+    scroll () {
+
     }
   }
 }

@@ -17,6 +17,7 @@ function initScore(params) {
                     autozoom: true,
                     inverted: false
                 },
+                firstLaunch: true,
                 ui: {
                     // Panel visibility
                     chatBox: false,
@@ -32,6 +33,7 @@ function initScore(params) {
                     },
                     blinking: false,
                     blinkTimeout: undefined,
+                    notificationEnabled: false,
                 },
                 score: {
                     total: 0,
@@ -187,12 +189,15 @@ function initScore(params) {
 
             addMessage (state, {author, message}) {
                 const last = state.chat.messages[state.chat.messages.length - 1];
-                if (last && last.author === author){
+                if (last
+                    && last.type === constants.chatItemTypes.MESSAGE
+                    && last.author === author){
                     last.messages.push(message)
                 }
                 else {
                     state.chat.messages.push({
                         author: author,
+                        type: constants.chatItemTypes.MESSAGE,
                         messages: [message],
                         time: Date.now(),
                     })
@@ -200,6 +205,16 @@ function initScore(params) {
                 // state.chat.messages.push({author, message, time: Date.now()});
                 if (!state.ui.chatBox){
                     state.chat.unread = true;
+                }
+            },
+
+            addNotification (state, data) {
+                if (state.ui.notificationEnabled) {
+                    state.chat.messages.push({
+                        type: constants.chatItemTypes.NOTIFICATION,
+                        time: Date.now(),
+                        content: data
+                    });
                 }
             },
 
@@ -459,11 +474,16 @@ function initScore(params) {
             },
 
             setLaunching({state, commit, dispatch},
-                         {game, runs, diff}) {
+                         {game, runs, diff, by}) {
                 state.game.currentRun = 1;
                 state.game.nRuns = runs;
                 state.game.launched = true;
 
+                commit("addNotification", {
+                    type: (state.firstLaunch ? constants.chatItemTypes.NOTIF_LAUNCH
+                        :constants.chatItemTypes.NOTIF_RELAUNCH),
+                    from: by,
+                });
                 dispatch("resetHighScore");
                 dispatch("clearAndHideResults");
                 commit("emptyLeaderboard");
@@ -473,6 +493,7 @@ function initScore(params) {
                     message: "Début de partie dans ",
                     duration: 3,
                 });
+                state.firstLaunch = false;
             },
 
             /**
@@ -495,6 +516,10 @@ function initScore(params) {
                 commit("setHint", {place: hint});
                 commit("startHintState");
                 commit("startRunTimer");
+                commit("addNotification", {
+                    type: constants.chatItemTypes.NOTIF_NEW_HINT,
+                    hint
+                })
             },
 
             /**
@@ -544,6 +569,13 @@ function initScore(params) {
                 state.ui.state.transition = false;
                 commit("updateLeaderboard", leaderboard);
                 commit("displayResultPopup");
+                if (leaderboard.length > 0){
+                    commit("addNotification", {
+                        type: constants.chatItemTypes.NOTIF_WINNER,
+                        player: leaderboard[0].player,
+                        score: leaderboard[0].score,
+                    });
+                }
                 console.log(full);
                 state.game.hasAnswered = false;
             },

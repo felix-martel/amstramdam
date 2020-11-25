@@ -22,5 +22,14 @@ export default {
          beforeNewRun: "Prochaine manche dans ",
          beforeGameEnd: "Partie finie, palmarès dans ",
          beforeGameStart: "Début de partie dans "
-     }
+     },
+    chatItemTypes: {
+        MESSAGE: "message",
+        NOTIFICATION: "notification",
+        NOTIF_NEW_SCORE: "notif-new-score",
+        NOTIF_LAUNCH: "notif-launch",
+        NOTIF_RELAUNCH: "notif-relaunch",
+        NOTIF_WINNER: "notif-winner",
+        NOTIF_NEW_HINT: "notif-new-hint",
+    }
 }

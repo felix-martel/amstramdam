@@ -64,9 +64,13 @@ def launch_run(game_name, run_id):
 @socketio.on("launch")
 def launch_game():
     game_name = session["game"]
+    player = session.get("player")
+    if player is None:
+        return
+
     game = manager.get_game(game_name)
     game.launch() # GameRun(players)
-    payload = dict(game=game.map_name, runs=game.n_run, diff=game.difficulty)
+    payload = dict(game=game.map_name, runs=game.n_run, diff=game.difficulty, by=player)
     emit("status-update",
          dict(status=game.status, payload=payload),
          json=True, broadcast=True, room=game_name)

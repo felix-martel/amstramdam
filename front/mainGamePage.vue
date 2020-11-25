@@ -122,6 +122,10 @@ export default {
       window.addEventListener("popstate", event => {
         this.route();
       })
+
+      for (let i=0; i<10;i++){
+        this.$store.commit("addMessage", {author: "Jean", message: "test"});
+      }
     },
 
     events: {
@@ -173,8 +177,15 @@ export default {
         this.$store.commit("displayResultBox");
       },
 
-      "new-guess": function ({player, dist}) {
+      "new-guess": function ({player, dist, score}) {
         this.$store.commit("addGuess", {name: player, distance: Math.round(dist)});
+        if (score > 0) {
+          this.$store.commit("addNotification", {
+            type: constants.chatItemTypes.NOTIF_NEW_SCORE,
+            player,
+            score
+          });
+        }
       },
 
       "new-name": function({player, pseudo}) {
