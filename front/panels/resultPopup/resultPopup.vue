@@ -104,6 +104,14 @@ export default {
   margin-bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
+
+  resize: horizontal;
+  background-color: white;
+  transition: width 0.2s ease;
+}
+
+.popup-left:hover, .popup-left:focus {
+  width: 220px;
 }
 
 
