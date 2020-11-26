@@ -1,6 +1,6 @@
 from amstramdam import app, manager, dataloader, IS_LOCAL, CONF
 from flask import render_template, jsonify, request, session, redirect, url_for
-
+from amstramdam.game.params_handler import merge_params
 
 @app.route("/")
 def serve_main():
@@ -28,26 +28,9 @@ def get_dataset_geometry(dataset):
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
-    params = {
-        "map": "world",
-        "duration": "10",
-        "zoom": False,
-        "runs": 10,
-        "wait_time": 10,
-        "difficulty": 100,
-        "public": False,
-        **request.form
-    }
-    converts = [
-        (int, ["duration", "runs", "wait_time", "difficulty"]),
-        (bool, ["public", "zoom"])
-    ]
-    for convert, keys in converts:
-        for key in keys:
-            params[key] = convert(params[key])
-
-    params["difficulty"] /= 100
+    params = merge_params(request.form)
     print(params)
+
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],

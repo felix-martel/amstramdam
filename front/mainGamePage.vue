@@ -161,6 +161,11 @@ export default {
         this.updateHighScore(data.leaderboard);
       },
 
+      "game-change": function ({name, url, map_name, player}) {
+        console.log(`Player '${this.getPlayerName(player)} created a new game at ${url}`);
+        window.location = url;
+      },
+
       "player-left": function ({player}) {
         console.debug("Bye,", this.getPlayerName(player));
         this.$store.commit("removePlayer", player);

@@ -44,6 +44,7 @@ def init_game(data):
 
 
 
+
 @socketio.on('disconnect')
 def leave_game():
     if "player" not in session:

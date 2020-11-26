@@ -13,13 +13,12 @@
         <div class="new-game game-panel">
             <h2>Créer une partie</h2>
             <game-creator :datasets="datasets"
-                          :map="map"
-                          :difficulty="difficulty"
                           :action="formAction"
                           @map-change="getPoints"
                           @difficulty-change="setDifficulty"
                           @launch="launchGame"
-            ></game-creator>
+            >
+            </game-creator>
         </div>
         <div class="vsep padded"></div>
         <div class="existing-game game-panel">

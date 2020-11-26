@@ -1,6 +1,8 @@
 from amstramdam import app, socketio, manager
-from flask import session
+from flask import session, url_for
 from flask_socketio import emit
+from amstramdam.game.params_handler import merge_params
+
 
 def is_valid_pseudo(name):
     # TODO: implement checks?
@@ -30,5 +32,27 @@ def update_pseudo(data):
     else:
         pseudo = game.request_pseudo(player)
     emit("new-name", dict(player=player, pseudo=pseudo),
+         room=game_name, broadcast=True, json=True)
+
+@socketio.on("request-game-change")
+def change_game(data):
+    game_name = session["game"]
+    player = session.get("player")
+    if player is None:
+        return
+
+    params = merge_params(data)
+    print(params)
+    new_game_name, game = manager.create_game(n_run=params["runs"],
+                                     duration=params["duration"],
+                                     difficulty=params["difficulty"],
+                                     is_public=params["public"],
+                                     allow_zoom=params["zoom"],
+                                     map=params["map"], wait_time=params["wait_time"])
+    url = url_for("serve_game", name=new_game_name)
+    print(url)
+    print(manager.get_status())
+
+    emit("game-change", dict(name=new_game_name, url=url, map_name=params["map"], player=player),
          room=game_name, broadcast=True, json=True)
 

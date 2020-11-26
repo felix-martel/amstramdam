@@ -7,22 +7,39 @@
       </div>
     </div>
     <div class="popup-main">
-      <h2 class="blue">
-        {{ title }}
-      </h2>
-      <h4 class="high-score-notif" id="new-highscore-notif" v-if="newHighScore">
-        C'est votre meilleur score !
-      </h4>
-      <result-table :leaderboard="leaderboard"></result-table>
-      <div class="popup-buttons">
-        <button @click="close">Voir la correction</button>
-        <button id="relaunch-from-popup" @click="relaunch">Nouvelle partie</button>
-      </div>
-      <div style="margin-top:15px;">
-        <a  href="/">
-          Retour à l'accueil
-        </a>
-      </div>
+      <template v-if="gameCreatorMode">
+        <h2 class="blue">
+          Changer de partie
+        </h2>
+        <div class="creator-wrapper">
+          <game-creator
+            :datasets="datasets"
+            :action="{'method': 'emit'}"
+            @launch="createNewGame"
+          >
+            <button @click="closeCreator">Annuler</button>
+          </game-creator>
+        </div>
+      </template>
+      <template v-else>
+        <h2 class="blue">
+          {{ title }}
+        </h2>
+        <h4 class="high-score-notif" id="new-highscore-notif" v-if="newHighScore">
+          C'est votre meilleur score !
+        </h4>
+        <result-table :leaderboard="leaderboard"></result-table>
+        <div class="popup-buttons">
+          <button @click="close">Voir la correction</button>
+          <button id="relaunch-from-popup" @click="relaunch">Nouvelle partie</button>
+          <button @click="openCreator">Changer de partie</button>
+        </div>
+        <div style="margin-top:15px;">
+          <a  href="/">
+            Retour à l'accueil
+          </a>
+        </div>
+      </template>
     </div>
   </popup>
 </template>
@@ -32,14 +49,23 @@ import Popup from "../../components/popup.vue";
 import resultTable from "./resultTable.vue";
 import {mapState, mapGetters} from "vuex";
 import constants from "../../common/constants";
-import {goToHash} from "../../common/utils";
+import {GET, goToHash} from "../../common/utils";
 import chatInner from "../../components/chatInner.vue";
+import GameCreator from "../../lobby/gameCreator.vue";
 
 export default {
   components: {
+    GameCreator,
     "popup": Popup,
     "result-table": resultTable,
     "chat-inner": chatInner,
+  },
+  data() {
+    return {
+      datasets: [
+        {map_id: undefined, name: "Chargement..."}
+      ],
+    }
   },
   computed: {
     latestScore: function() {
@@ -56,6 +82,7 @@ export default {
 
     ...mapState({
       visible: state => state.ui.resultPopup,
+      gameCreatorMode: state => state.ui.showGameCreator,
       results: state => state.game.results,
       highScore: state => state.score.high,
       leaderboard: state => state.leaderboard,
@@ -67,6 +94,11 @@ export default {
       "finalScore",
     ]),
   },
+  mounted() {
+    GET("/datasets").then(datasets => {
+      this.datasets = datasets;
+    });
+  },
   methods: {
     close: function(){
       //this.$store.commit("hideResultPopup");
@@ -75,7 +107,20 @@ export default {
 
     relaunch: function() {
       this.$socketEmit("launch");
-    }
+    },
+
+    openCreator: function() {
+      this.$store.commit("showGameCreator");
+    },
+
+    closeCreator: function() {
+      this.$store.commit("hideGameCreator");
+    },
+
+    createNewGame: function (data) {
+      console.log("Requesting game change", data);
+      this.$socketEmit("request-game-change", data);
+    },
   },
 
   watch: {
@@ -145,7 +190,11 @@ export default {
   margin-top: 15px;
 }
 
-.popup-buttons button {
+.popup-buttons button{
   margin-right: 10px;
+}
+
+.creator-wrapper button {
+  margin-left: 10px;
 }
 </style>

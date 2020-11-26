@@ -24,7 +24,8 @@ function initScore(params) {
                     scoreBox: true,
                     resultBox: false,
                     hintBox: false, // deprecated
-                    resultPopup: false,
+                    resultPopup: false, // false
+                    showGameCreator: false, // false
                     state: {
                         duration: -1,
                         transition: false,
@@ -119,6 +120,14 @@ function initScore(params) {
 
             resetCurrenRun (state) {
                 state.game.currentRun = 0;
+            },
+
+            showGameCreator(state) {
+                state.ui.showGameCreator = true;
+            },
+
+            hideGameCreator(state) {
+                state.ui.showGameCreator = false;
             },
 
             setGameResults(state, results) {
@@ -478,7 +487,6 @@ function initScore(params) {
                 state.game.currentRun = 1;
                 state.game.nRuns = runs;
                 state.game.launched = true;
-
                 commit("addNotification", {
                     type: (state.firstLaunch ? constants.chatItemTypes.NOTIF_LAUNCH
                         :constants.chatItemTypes.NOTIF_RELAUNCH),
@@ -488,6 +496,7 @@ function initScore(params) {
                 dispatch("clearAndHideResults");
                 commit("emptyLeaderboard");
                 commit("hideResultPopup");
+                state.ui.showGameCreator = false;
 
                 commit("startTransitionState", {
                     message: "Début de partie dans ",
@@ -585,6 +594,7 @@ function initScore(params) {
                 state.playerId = player;
                 state.game.currentRun = current + 1;
                 state.game.nRuns = runs;
+                // state.ui.showGameCreator = false;
                 state.leaderboard = leaderboard;
                 state.launched = launched;
                 commit("startHiddenState");

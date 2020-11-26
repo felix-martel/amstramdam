@@ -53,4 +53,8 @@ export default {
   .leaderboard-change-move {
     transition: transform 1s;
   }
+
+
+
+
 </style>

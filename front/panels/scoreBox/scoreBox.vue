@@ -116,4 +116,10 @@ export default {
 #chat-toggle-button:hover {
   color: #000085;
 }
+
+@media screen and (max-width: 600px) {
+    #launch:not(:disabled) {
+      z-index: 1001;
+    }
+}
 </style>

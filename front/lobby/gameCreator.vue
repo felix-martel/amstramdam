@@ -14,7 +14,7 @@
         <label for="diff-level">Niveau de difficulté</label>
         <div class="slidecontainer">
           <input
-              type="range" min="1" max="100" :value="difficulty*100" @change="difficultyChange"
+              type="range" min="1" max="100" v-model="difficulty" @change="difficultyChange"
               class="slider" id="diff-level" name="difficulty">
         </div>
 
@@ -38,9 +38,12 @@
 <!--          </div>-->
         </collapsible-div>
       <div class="buttons">
-      <button @click="submit" id="new-game-button" type="submit">
-        C'est parti
-      </button>
+        <div class="left-buttons">
+          <button @click="submit" id="new-game-button" type="submit">
+            C'est parti
+          </button>
+            <slot></slot>
+        </div>
         <a class="low-key" @click="showOptions = !showOptions">
           {{ showOptions ? "Moins d'options" : "Plus d'options" }}
         </a>
@@ -74,8 +77,8 @@ export default {
 
   props: {
     datasets: Array,
-    difficulty: Number,
-    map: String,
+    //difficulty: Number,
+    //map: String,
     action: {
       type: Object,
       default: {
@@ -88,6 +91,8 @@ export default {
   data () {
     return {
       runs: 10,
+      map: undefined,
+      difficulty: 100,
       duration: 10,
       waitDuration: 7,
       allowZoom: true,
@@ -103,18 +108,19 @@ export default {
       },
       set(value){
         this.$emit("map-change", value);
+        this.map = value;
       }
     },
 
     gameParams() {
       return {
         map: this.currentMap,
-        difficulty: 100*this.difficulty,
-        nRuns: this.nRuns,
+        difficulty: this.difficulty,
+        runs: this.nRuns,
         duration: this.duration,
         wait_time: this.waitDuration,
         zoom: this.allowZoom,
-        isPublic: this.isPublic,
+        public: this.isPublic,
       }
     }
   },
