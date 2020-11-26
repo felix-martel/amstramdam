@@ -96,7 +96,7 @@ input[type=range]:focus::-webkit-slider-thumb {
 .map-container {
   height: 220px;
   width: 100%;
-  background-color: black;
+  /*background-color: black;*/
   position: relative;
 }
 
@@ -208,7 +208,16 @@ a, a:visited, a:active, a:link {
   color: blue !important;
 }
 
+a.low-key, a.low-key:visited, a.low-key:active, a.low-key:link {
+  color: gray !important;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9em;
+}
 
+a.low-key:hover {
+  color: #2d2d2d !important;
+}
 
 
 

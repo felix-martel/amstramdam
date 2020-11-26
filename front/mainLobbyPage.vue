@@ -26,8 +26,7 @@
         </div>
       </div>
 
-      <div class="map-container">
-<!--        <div id="leaflet"></div>-->
+      <div class="map-container" :class="{'loading': loading}">
         <div class="map-container-inner">
           <dataset-display :difficulty="difficulty" :points="points"></dataset-display>
 
@@ -59,6 +58,7 @@ export default {
       datasets: datasets,
       map: "",
       points: [],
+      loading: true,
       difficulty: 1,
       formAction: {
         method: "post",
@@ -69,9 +69,11 @@ export default {
 
   methods: {
     getPoints(map) {
+      this.loading = true;
         this.map = map;
         GET(`/points/${map}`).then(data => {
           this.points = data.points;
+          this.loading = false;
         });
     },
 
@@ -92,7 +94,6 @@ export default {
 .map-container {
   height: 220px;
   width: 100%;
-  background-color: black;
   position: relative;
 }
 
@@ -102,6 +103,14 @@ export default {
   left: -20px;
   right: -20px;
   bottom: -20px;
-
+  background-color: black;
+  /*transition: opacity 1.2s ease-in;*/
 }
+
+.loading .map-container-inner {
+  /*opacity: 0.2;*/
+  /*transition: opacity 1.2s ease-in;*/
+}
+
+
 </style>

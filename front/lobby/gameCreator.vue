@@ -6,18 +6,7 @@
         <label for="map-selector">Carte</label>
         <map-selector :datasets="datasets" v-model="currentMap"></map-selector>
       </div>
-      <div class="fieldset">
-        <label for="n-runs-input">Manches</label>
-        <input type="number" name="runs" id="n-runs-input" v-model="runs">
-      </div>
-      <div class="fieldset">
-        <label for="wait-input">Durée entre les manches</label>
-        <input type="number" name="wait_time" id="wait-input" v-model="waitDuration">
-      </div>
-      <div class="fieldset">
-        <label for="zoom-checkbox">Zoom autorisé</label>
-        <input id="zoom-checkbox" v-model="allowZoom" name="zoom" type="checkbox">
-      </div>
+
       <div class="fieldset">
         <label for="public-checkbox">Partie publique</label>
         <input id="public-checkbox" v-model="isPublic" name="public" type="checkbox">
@@ -29,7 +18,26 @@
               type="range" min="1" max="100" :value="difficulty*100" @change="difficultyChange"
               class="slider" id="diff-level" name="difficulty">
         </div>
+
       </div>
+      <collapsible-div hide="Moins d'options" show="Plus d'options">
+          <div class="fieldset">
+            <label for="n-runs-input">Manches</label>
+            <input type="number" name="runs" id="n-runs-input" v-model="runs">
+          </div>
+          <div class="fieldset">
+            <label for="duration-input">Durée d'une manche</label>
+            <input type="number" name="duration" id="duration-input" v-model="duration">
+          </div>
+          <div class="fieldset">
+            <label for="wait-input">Durée entre les manches</label>
+            <input type="number" name="wait_time" id="wait-input" v-model="waitDuration">
+          </div>
+<!--          <div class="fieldset">-->
+<!--            <label for="zoom-checkbox">Zoom autorisé</label>-->
+<!--            <input id="zoom-checkbox" v-model="allowZoom" name="zoom" type="checkbox">-->
+<!--          </div>-->
+        </collapsible-div>
       <button @click="submit" id="new-game-button" type="submit">
         C'est parti
       </button>
@@ -40,6 +48,7 @@
 <script>
 import vSelect from 'vue-select'
 import MapSelector from "./mapSelector.vue";
+import CollapsibleDiv from "../components/collapsibleDiv.vue";
 
 /**
  * Form can be submitted in two ways:
@@ -52,6 +61,7 @@ import MapSelector from "./mapSelector.vue";
  */
 export default {
   components: {
+    CollapsibleDiv,
     MapSelector,
     "v-select": vSelect,
   },
@@ -124,5 +134,7 @@ export default {
 </script>
 
 <style scoped>
-
+#new-game-button {
+  margin-top: 25px;
+}
 </style>
