@@ -1,8 +1,8 @@
 const path = require("path");
 const VueLoader = require('vue-loader');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: {
     lobby: "./front/lobby.js",
     main: "./front/main.js"
@@ -13,7 +13,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue: "vue/dist/vue.runtime.esm-bundler.js"
+      vue: "vue/dist/vue.runtime.esm-bundler" + (process.env.NODE_ENV === "production" ? ".prod.js" : ".js")
     }
   },
   module: {
@@ -40,5 +40,10 @@ module.exports = {
   plugins: [
       new VueLoader.VueLoaderPlugin(),
   ],
-  devtool: 'inline-source-map',
+  optimization: {
+    minimize: true,
+    minimizer: [
+        new CssMinimizerPlugin(),
+    ]
+  }
 }

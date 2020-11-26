@@ -109,8 +109,7 @@ export default {
     created () {
       const gameParams = unproxify(this.$store.state.params);
       console.log("Game params:", gameParams);
-      // this.highscoreCookie = new IntCookieHandler("amstramdam-" + gameParams.map);
-      // const highScore = this.highscoreCookie.read();
+
       const highScore = this.$cookie.highScore.read();
       if (highScore){
         console.log("Read high score from cookie", highScore);
@@ -122,9 +121,10 @@ export default {
       window.addEventListener("popstate", event => {
         this.route();
       })
-
-      for (let i=0; i<10;i++){
-        this.$store.commit("addMessage", {author: "Jean", message: "test"});
+      if (this.$store.state.debug) {
+        for (let i=0; i<10;i++){
+          this.$store.commit("addMessage", {author: "Jean", message: "test"});
+        }
       }
     },
 

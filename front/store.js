@@ -66,7 +66,8 @@ function initScore(params) {
                     delay: 0,
                     sdelay: 0
                 },
-                guesses: []
+                guesses: [],
+                debug: process.env.NODE_ENV === "development"
             }
         },
 
