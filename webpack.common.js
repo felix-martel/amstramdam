@@ -13,7 +13,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue: "vue/dist/vue.runtime.esm-bundler" + (process.env.NODE_ENV === "production" ? ".prod.js" : ".js")
+      vue: "vue/dist/vue.runtime.esm-bundler.js",// + (process.env.NODE_ENV === "production" ? ".prod.js" : ".js")
     }
   },
   module: {
