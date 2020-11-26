@@ -1,2 +1,2 @@
-release: ./release.sh
+release: bash ./release.sh
 web: python server.py
