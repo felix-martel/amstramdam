@@ -28,7 +28,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
-    "watch": "webpack --watch --config webpack.dev.js"
+    "watch": "webpack --watch --config webpack.dev.js",
+    "heroku-cleanup": "rm -r front"
   },
   "repository": {
     "type": "git",
@@ -40,5 +41,9 @@
   "bugs": {
     "url": "https://github.com/felix-martel/amstramdam/issues"
   },
-  "homepage": "https://github.com/felix-martel/amstramdam#readme"
+  "homepage": "https://github.com/felix-martel/amstramdam#readme",
+  "engines": {
+    "node": "15.x",
+    "npm": "6.x"
+  }
 }

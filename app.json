@@ -1,5 +1,12 @@
 {
-  "name": "Multigeo",
+  "name": "Amstramdam",
   "description": "An online multiplayer game",
-  "buildpacks": "heroky/python"
+  "buildpacks": [
+    {
+      "url": "heroku/node"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
 }
