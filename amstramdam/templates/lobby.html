@@ -12,118 +12,119 @@
     <link rel="stylesheet" href="./static/style.mobile.css">
     <link rel="stylesheet" href="./static/timer.css">
     <link rel="shortcut icon" href="[[ url_for('static',filename='favicon.ico') ]]" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0b60c47224.js" crossorigin="anonymous"></script>
     <script src="[[ url_for('static', filename='script/lobby.js') ]]"></script>
 </head>
 <body>
-<!--    <div id="amstramdam-lobby"></div>-->
-<div class="main">
-    <div id="game-sharing-link" style="z-index: 1002;">
-        <a href="https://github.com/felix-martel/amstramdam"  target="_blank">À propos</a>
-        <a href="https://github.com/felix-martel/amstramdam/issues" target="_blank">Signaler un bug</a>
-        <span style="color: white;">Demandez l'original : </span>
-        <a href="https://www.jeux-geographiques.com/"  target="_blank">Jeux-Géographiques.com</a>
-    </div>
-    <div class="popup-container" id="popup-container">
-        <div id="mask">
+    <div id="amstramdam-lobby"></div>
+<!--<div class="main">-->
+<!--    <div id="game-sharing-link" style="z-index: 1002;">-->
+<!--        <a href="https://github.com/felix-martel/amstramdam"  target="_blank">À propos</a>-->
+<!--        <a href="https://github.com/felix-martel/amstramdam/issues" target="_blank">Signaler un bug</a>-->
+<!--        <span style="color: white;">Demandez l'original : </span>-->
+<!--        <a href="https://www.jeux-geographiques.com/"  target="_blank">Jeux-Géographiques.com</a>-->
+<!--    </div>-->
+<!--    <div class="popup-container" id="popup-container">-->
+<!--        <div id="mask">-->
 
-        </div>
-        <div id="popup" class="box popup-top">
-            <div class="main-title">
-                <h1 class="blue">
-                    <span id="title">am·stram·dam</span>
-                </h1>
-                <div><i>Localiser les villes sur la carte, le plus rapidement possible</i></div>
-            </div>
-            <div class="game-panel-container">
+<!--        </div>-->
+<!--        <div id="popup" class="box popup-top">-->
+<!--            <div class="main-title">-->
+<!--                <h1 class="blue">-->
+<!--                    <span id="title">am·stram·dam</span>-->
+<!--                </h1>-->
+<!--                <div><i>Localiser les villes sur la carte, le plus rapidement possible</i></div>-->
+<!--            </div>-->
+<!--            <div class="game-panel-container">-->
 
-            <div class="new-game game-panel">
-                <h2>Nouvelle partie</h2>
-                <form id="game-creator" action="/new" method="post">
-                    {# [[datasets]] #}
-                    <div class="fieldset">
-                        <label for="map-selector">Carte</label>
-                        <select name="map" id="map-selector">
-                             {% for dataGroup in datasets %}
-                                {% if loop.index0 == 0 %}
-                                    {% for dataset in dataGroup.maps %}
-                                        <option value="[[dataset.map_id]]">[[ dataset.name]]</option>
-                                    {% endfor %}
-                                {% else %}
-                                    <optgroup label="[[ dataGroup.group]]">
-                                        {% for dataset in dataGroup.maps %}
-                                            <option value="[[dataset.map_id]]">[[ dataset.name]]</option>
-                                        {% endfor %}
-                                    </optgroup>
-                                {% endif %}
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <div class="fieldset">
-                        <label for="n-runs-input">Manches</label>
-                        <input type="number" name="runs" id="n-runs-input" value="10">
-                    </div>
-                    <!--<div class="fieldset">
-                        <label for="min-dist-input">Min. distance</label>
-                    <input type="number" name="min-dist-input" id="min-dist-input" value="200">
-                    </div>-->
-                    <!--<div class="fieldset">
-                        <label for="duration-input">Durée d'une manche</label>
-                    <input type="number" name="duration" id="duration-input" value="10">
-                    </div>-->
-                    <div class="fieldset">
-                        <label for="wait-input">Durée entre les manches</label>
-                    <input type="number" name="wait_time" id="wait-input" value="7">
-                    </div>
-                    <div class="fieldset">
-                        <label for="zoom-checkbox">Zoom autorisé</label>
-                        <input id="zoom-checkbox" checked name="zoom" type="checkbox">
-                    </div>
-                    <div class="fieldset">
-                        <label for="public-checkbox">Partie publique</label>
-                        <input id="public-checkbox" checked name="public" type="checkbox">
-                    </div>
-                    <div class="fieldset">
-                        <label for="diff-level">Niveau de difficulté</label>
-                        <div class="slidecontainer">
-                            <input type="range" min="1" max="100" value="100" class="slider" id="diff-level" name="difficulty">
-                        </div>
-                    </div>
-                    <button type="submit" id="new-game-button">
-                        C'est parti
-                    </button>
-                </form>
-            </div>
-                <div class="vsep padded"></div>
-            <div class="existing-game game-panel">
-                <h2>Rejoindre</h2>
-                <div>
-                    <i>Entrez le nom d'une partie existante :</i>
-                </div>
-                <input type="text" id="game-name"  size="15">
-                <button id="join-game-button">
-                    Rejoindre
-                </button>
+<!--            <div class="new-game game-panel">-->
+<!--                <h2>Nouvelle partie</h2>-->
+<!--                <form id="game-creator" action="/new" method="post">-->
+<!--                    {# [[datasets]] #}-->
+<!--                    <div class="fieldset">-->
+<!--                        <label for="map-selector">Carte</label>-->
+<!--                        <select name="map" id="map-selector">-->
+<!--                             {% for dataGroup in datasets %}-->
+<!--                                {% if loop.index0 == 0 %}-->
+<!--                                    {% for dataset in dataGroup.maps %}-->
+<!--                                        <option value="[[dataset.map_id]]">[[ dataset.name]]</option>-->
+<!--                                    {% endfor %}-->
+<!--                                {% else %}-->
+<!--                                    <optgroup label="[[ dataGroup.group]]">-->
+<!--                                        {% for dataset in dataGroup.maps %}-->
+<!--                                            <option value="[[dataset.map_id]]">[[ dataset.name]]</option>-->
+<!--                                        {% endfor %}-->
+<!--                                    </optgroup>-->
+<!--                                {% endif %}-->
+<!--                            {% endfor %}-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div class="fieldset">-->
+<!--                        <label for="n-runs-input">Manches</label>-->
+<!--                        <input type="number" name="runs" id="n-runs-input" value="10">-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;<div class="fieldset">-->
+<!--                        <label for="min-dist-input">Min. distance</label>-->
+<!--                    <input type="number" name="min-dist-input" id="min-dist-input" value="200">-->
+<!--                    </div>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<div class="fieldset">-->
+<!--                        <label for="duration-input">Durée d'une manche</label>-->
+<!--                    <input type="number" name="duration" id="duration-input" value="10">-->
+<!--                    </div>&ndash;&gt;-->
+<!--                    <div class="fieldset">-->
+<!--                        <label for="wait-input">Durée entre les manches</label>-->
+<!--                    <input type="number" name="wait_time" id="wait-input" value="7">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset">-->
+<!--                        <label for="zoom-checkbox">Zoom autorisé</label>-->
+<!--                        <input id="zoom-checkbox" checked name="zoom" type="checkbox">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset">-->
+<!--                        <label for="public-checkbox">Partie publique</label>-->
+<!--                        <input id="public-checkbox" checked name="public" type="checkbox">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset">-->
+<!--                        <label for="diff-level">Niveau de difficulté</label>-->
+<!--                        <div class="slidecontainer">-->
+<!--                            <input type="range" min="1" max="100" value="100" class="slider" id="diff-level" name="difficulty">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <button type="submit" id="new-game-button">-->
+<!--                        C'est parti-->
+<!--                    </button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--                <div class="vsep padded"></div>-->
+<!--            <div class="existing-game game-panel">-->
+<!--                <h2>Rejoindre</h2>-->
+<!--                <div>-->
+<!--                    <i>Entrez le nom d'une partie existante :</i>-->
+<!--                </div>-->
+<!--                <input type="text" id="game-name"  size="15">-->
+<!--                <button id="join-game-button">-->
+<!--                    Rejoindre-->
+<!--                </button>-->
 
-                    <h4>Parties publiques</h4>
-                <div class="game-list">
-                    {% for game in games %}
-                    <div class="game-item">
-                        <a href="/game/[[game.name]]">[[game.name | trim]]</a>
-                        <span class="game-infos">[[game.map]]·
-                            difficulté [[100*game.difficulty|round|int]]% ·
-                            [[game.players]] joueur{% if game.players > 1 %}s{% endif %}
-                        </span>
-                    </div>
-                {% endfor %}
-                </div>
-            </div>
-            </div>
+<!--                    <h4>Parties publiques</h4>-->
+<!--                <div class="game-list">-->
+<!--                    {% for game in games %}-->
+<!--                    <div class="game-item">-->
+<!--                        <a href="/game/[[game.name]]">[[game.name | trim]]</a>-->
+<!--                        <span class="game-infos">[[game.map]]·-->
+<!--                            difficulté [[100*game.difficulty|round|int]]% ·-->
+<!--                            [[game.players]] joueur{% if game.players > 1 %}s{% endif %}-->
+<!--                        </span>-->
+<!--                    </div>-->
+<!--                {% endfor %}-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            </div>-->
 
-            <div class="map-container">
-                <div id="leaflet"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--            <div class="map-container">-->
+<!--                <div id="leaflet"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 </body>
 </html>

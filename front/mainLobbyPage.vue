@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <footer></footer>
-    <popup>
+    <footer-box></footer-box>
+    <popup :visible="true">
       <div class="main-title">
         <h1 class="blue">
           <span id="title">am·stram·dam</span>
@@ -15,27 +15,7 @@
         </div>
         <div class="vsep padded"></div>
         <div class="existing-game game-panel">
-          <h2>Rejoindre</h2>
-          <div>
-            <i>Entrez le nom d'une partie existante :</i>
-          </div>
-          <input type="text" id="game-name"  size="15">
-          <button id="join-game-button">
-            Rejoindre
-          </button>
-
-          <h4>Parties publiques</h4>
-          <div class="game-list">
-            {% for game in games %}
-            <div class="game-item">
-              <a href="/game/[[game.name]]">[[game.name | trim]]</a>
-              <span class="game-infos">[[game.map]]·
-                            difficulté [[100*game.difficulty|round|int]]% ·
-                            [[game.players]] joueur{% if game.players > 1 %}s{% endif %}
-                        </span>
-            </div>
-            {% endfor %}
-          </div>
+          <game-joiner></game-joiner>
         </div>
       </div>
 
@@ -50,10 +30,12 @@
 import footer from "./lobby/footer.vue";
 import popup from "./components/popup.vue";
 import gameCreator from "./lobby/gameCreator.vue";
+import GameJoiner from "./lobby/gameJoiner/gameJoiner.vue";
 
 export default {
   components: {
-    "footer": footer,
+    GameJoiner,
+    "footer-box": footer,
     "popup": popup,
     "game-creator": gameCreator,
   },

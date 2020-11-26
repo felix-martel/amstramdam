@@ -33,7 +33,7 @@ name: "popup",
 
 
 #popup {
-   position: fixed;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 800px;

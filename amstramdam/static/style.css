@@ -131,18 +131,9 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
   margin-top: 0 !important;
 }
 
-.game-list .game-item {
-  margin: 2px 0;
-}
-
 .vsep {
   background-color: lightgray;
   width: 1px;
-}
-
-.game-list {
-  max-height: 200px;
-  overflow-y: auto;
 }
 
 
