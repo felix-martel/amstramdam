@@ -1,5 +1,6 @@
 <template>
   <div class="box" id="display-timer">
+    <run-indicator :light="true"></run-indicator>
     <span class="timer-text">
       <span id="timer-legend">{{ message }}</span>
       <span id="run-timer">{{ count }}</span>...
@@ -9,8 +10,10 @@
 
 <script>
 import {mapState} from "vuex";
+import RunIndicator from "./RunIndicator.vue";
 
 export default {
+  components: {RunIndicator},
   props: {
     duration: Number
   },

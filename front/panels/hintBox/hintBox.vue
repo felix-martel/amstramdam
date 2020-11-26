@@ -1,10 +1,6 @@
 <template>
   <div class="game-info box" id="display-hint">
-    <span class="run-info">
-        <span id="run-current">{{ currentRun }}</span>
-      /
-      <span id="run-total">{{ totalRuns }}</span>
-    </span>
+    <runIndicator/>
     <span id="target">
       {{ hint }}
     </span>
@@ -15,9 +11,11 @@
 <script>
 import {mapState} from "vuex";
 import radialCountdown from "../../components/radialCountdown.vue";
+import RunIndicator from "./RunIndicator.vue";
 
 export default {
   components: {
+    RunIndicator,
     'radial-countdown': radialCountdown,
   },
   computed: {
@@ -45,10 +43,6 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.run-info {
-  margin-right: 10px;
 }
 
 #target {
