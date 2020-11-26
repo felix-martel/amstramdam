@@ -1,4 +1,4 @@
-from amstramdam import app, manager, dataloader, IS_LOCAL
+from amstramdam import app, manager, dataloader, IS_LOCAL, CONF
 from flask import render_template, jsonify, request, session, redirect, url_for
 
 
@@ -65,6 +65,7 @@ def serve_game(name):
             map=game.map_name,
             wait_time=game.wait_time,
             bbox=game.bbox,
+            ssl_disabled=CONF["disableSSL"],
             allow_zoom=game.allow_zoom,
             duration=game.duration)
         return render_template("main.html", game_name=name, params=params, debug=IS_LOCAL)
