@@ -18,7 +18,9 @@ import {CookieHandler, BooleanCookieHandler, IntCookieHandler, CookiePlugin} fro
 document.addEventListener("DOMContentLoaded", () => {
     const rejectUnauthorized = !params.debug && !params.ssl_disabled;
     console.log("reject unauthorized", rejectUnauthorized);
-    const socket = io({
+    const protocol = params.ssl_disabled ? "ws" : "wss";
+    const url = `${protocol}://${window.location.host}`; // "ws://" + window.location.host;//.replace("https://", "http://");
+    const socket = io(url, {
         rejectUnauthorized: rejectUnauthorized,
     });
     const app = createApp(AmstramdamApp)
