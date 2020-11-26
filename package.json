@@ -30,7 +30,7 @@
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
     "watch": "webpack --watch --config webpack.dev.js",
-    "heroku-cleanup": "rm -r front"
+    "heroku-cleanup": "rm -r front && rm -r node_modules"
   },
   "repository": {
     "type": "git",
