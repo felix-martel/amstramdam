@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("reject unauthorized", rejectUnauthorized);
     const protocol = params.ssl_disabled ? "ws" : "wss";
     const url = `${protocol}://${window.location.host}`; // "ws://" + window.location.host;//.replace("https://", "http://");
-    const socket = io(url, {
-        rejectUnauthorized: rejectUnauthorized,
+    const socket = io({
+        rejectUnauthorized: true,
     });
     const app = createApp(AmstramdamApp)
 

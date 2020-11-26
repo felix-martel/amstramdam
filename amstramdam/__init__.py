@@ -55,8 +55,6 @@ app = CustomFlask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
 
 # Init Talisman for HTTP headers
-print("SSL disabled :", CONF["disableSSL"])
-
 Talisman(app,
          content_security_policy=csp,
          content_security_policy_nonce_in=['script-src'],
