@@ -10,7 +10,7 @@ def terminate_game(game_name):
     game.terminate()
     payload = dict(
                       leaderboard=game.get_current_leaderboard(),
-                      full=game.get_final_results(),
+                      full=game.get_final_results(), # TODO: remove useless data
                   )
     socketio.emit("status-update",
                   dict(status=game.status, payload=payload), json=True, broadcast=True,

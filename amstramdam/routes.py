@@ -5,12 +5,15 @@ from flask import render_template, jsonify, request, session, redirect, url_for
 @app.route("/")
 def serve_main():
     return render_template("lobby.html",
-                           datasets=dataloader.datasets,
-                           games=manager.get_public_games())
+                           datasets=dataloader.datasets)
 
 @app.route("/games")
 def get_public_games():
     return jsonify(manager.get_public_games())
+
+@app.route("/datasets")
+def get_all_datasets():
+    return jsonify(dataloader.datasets)
 
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):

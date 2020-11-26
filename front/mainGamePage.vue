@@ -98,7 +98,6 @@ export default {
           || (latestScore && latestScore > currentHighScore)) {
           // new high score!
           this.$store.commit("setNewHighScore", latestScore);
-          console.log("New high score", latestScore);
           //
           // this.highscoreCookie.write(latestScore);
           this.$cookie.highScore.write(latestScore);
@@ -108,11 +107,12 @@ export default {
 
     created () {
       const gameParams = unproxify(this.$store.state.params);
-      console.log("Game params:", gameParams);
+      if (this.$store.state.debug){
+        console.debug("Game params:", gameParams);
+      }
 
       const highScore = this.$cookie.highScore.read();
       if (highScore){
-        console.log("Read high score from cookie", highScore);
         this.$store.commit("setHighScore", highScore);
       }
 
@@ -133,6 +133,7 @@ export default {
         // let pseudo; // TODO: read from cookie
         let pseudo = this.$cookie.pseudo.read();
         if (!pseudo) { pseudo = undefined}
+
         console.debug("Connecting... Current pseudo is", pseudo);
         this.$socketEmit("connection", {data: "connected", pseudo: pseudo});
       },

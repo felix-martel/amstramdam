@@ -1,6 +1,5 @@
 <template>
   <div class="game-creator">
-    <h2>Nouvelle partie</h2>
     <form id="game-creator" :action="action.url" :method="action.method">
       <div class="fieldset">
         <label for="map-selector">Carte</label>

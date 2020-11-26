@@ -19,7 +19,6 @@ export default {
     leaderboard: Array,
   },
   mounted() {
-    console.log(this.leaderboard)
   }
 }
 </script>

@@ -10,6 +10,5 @@ export default {
                 socketClient.emit(event, data);
             }
         }
-        console.log("Added `$socketOn` and `$socketEmit` to app!")
     }
 }

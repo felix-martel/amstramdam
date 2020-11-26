@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h2>Rejoindre</h2>
+
     <div>
       <i>Entrez le nom d'une partie existante :</i>
     </div>

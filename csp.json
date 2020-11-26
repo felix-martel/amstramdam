@@ -10,7 +10,7 @@
     "'self'",
     "*.cloudflare.com",
     "unpkg.com",
-    "*.fontawesome.com",
+    "kit.fontawesome.com",
     "fontawesome.com"
   ],
   "img-src": [

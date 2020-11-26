@@ -401,7 +401,6 @@ function initScore(params) {
                         commit("startHiddenState");
                         break;
                     case stat.LAUNCHING:
-                        console.log("Launching...");
                         commit("setGameLaunched");
                         dispatch("resetState", payload);
                         commit("startTransitionState", {
@@ -577,7 +576,6 @@ function initScore(params) {
                         score: leaderboard[0].score,
                     });
                 }
-                console.log(full);
                 state.game.hasAnswered = false;
             },
 

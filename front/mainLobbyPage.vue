@@ -11,6 +11,7 @@
       <div class="game-panel-container">
 
         <div class="new-game game-panel">
+            <h2>Créer une partie</h2>
             <game-creator :datasets="datasets"
                           :map="map"
                           :difficulty="difficulty"
@@ -22,6 +23,7 @@
         </div>
         <div class="vsep padded"></div>
         <div class="existing-game game-panel">
+          <h2>Rejoindre une partie</h2>
           <game-joiner></game-joiner>
         </div>
       </div>
