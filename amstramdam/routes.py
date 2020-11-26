@@ -8,6 +8,9 @@ def serve_main():
                            datasets=dataloader.datasets,
                            games=manager.get_public_games())
 
+@app.route("/games")
+def get_public_games():
+    return jsonify(manager.get_public_games())
 
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
