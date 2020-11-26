@@ -1,8 +1,5 @@
 <template>
 <div class="collapsible">
-  <div>
-    <a class="low-key" @click="toggle">{{ collapsed ? show : hide }}</a>
-  </div>
   <div ref="container" :style="{height: currentHeight}" class="collapsible-inner">
     <slot></slot>
   </div>
@@ -13,29 +10,16 @@
 export default {
 name: "collapsibleDiv",
   props: {
-    show: {
-      type: String,
-      default: "Voir plus",
-    },
-    hide: {
-      type: String,
-      default: "Voir moins",
-    },
-    initial: {
-      type: Boolean,
-      default: true
-    }
+    collapsed: Boolean
   },
 
   data() {
     return {
-      collapsed: undefined,
       height: 0,
     }
   },
 
   created() {
-    this.collapsed = this.initial;
   },
 
   mounted() {
@@ -49,17 +33,6 @@ name: "collapsibleDiv",
   },
 
   methods: {
-    collapse() {
-      this.collapsed = true;
-    },
-
-    uncollapse() {
-      this.collapsed = false;
-    },
-
-    toggle() {
-      this.collapsed = !this.collapsed;
-    },
 
     computeHeight() {
       const container = this.$refs.container;

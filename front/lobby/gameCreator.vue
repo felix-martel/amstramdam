@@ -20,7 +20,7 @@
         </div>
 
       </div>
-      <collapsible-div hide="Moins d'options" show="Plus d'options">
+      <collapsible-div :collapsed="!showOptions">
           <div class="fieldset">
             <label for="n-runs-input">Manches</label>
             <input type="number" name="runs" id="n-runs-input" v-model="runs">
@@ -38,9 +38,14 @@
 <!--            <input id="zoom-checkbox" v-model="allowZoom" name="zoom" type="checkbox">-->
 <!--          </div>-->
         </collapsible-div>
+      <div class="buttons">
       <button @click="submit" id="new-game-button" type="submit">
         C'est parti
       </button>
+        <a class="low-key" @click="showOptions = !showOptions">
+          {{ showOptions ? "Moins d'options" : "Plus d'options" }}
+        </a>
+      </div>
     </form>
   </div>
 </template>
@@ -88,6 +93,7 @@ export default {
       waitDuration: 7,
       allowZoom: true,
       isPublic: true,
+      showOptions: false,
     }
   },
 
@@ -134,7 +140,12 @@ export default {
 </script>
 
 <style scoped>
-#new-game-button {
+
+.buttons {
+      display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
   margin-top: 25px;
 }
 </style>
