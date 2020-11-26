@@ -27,19 +27,12 @@ export default {
   ],
 
   mounted() {
-    console.log("Map created");
     this.initialize("mapid", {
-      allowZoom: this.params.allow_zoom || this.isMobile,
+      allowZoom: true, // this.params.allow_zoom || this.isMobile,
       bounds: this.params.bbox,
       maxZoom: canvas => (this.isMobile ? 18 : (canvas.getZoom() + 1))
     });
     this.canvas.on("click", this.submitGuess);
-    // this.enableZoom();
-    // this.canvas.setMaxZoom(18);
-    // const fakesum = this.generateFakeSummary(summary.places);
-    // console.log(fakesum);
-    // this.displayGameSummary(fakesum);
-    //this.displayGameSummary(summary2);
   },
 
   computed: {
@@ -95,7 +88,6 @@ export default {
       - circles from ground truth to guesse (1 per run and per player)
       TODO: when this is settled, remove extra lines and clean the code
        */
-      console.log("displaying summary", records.length);
       const trueCoords = L.latLng(lat, lon);
       const truth = this.createMarker({lon, lat}, location, constants.colors.TRUE,
           {extraClasses: ["summary-icon", "truth-icon"]});
@@ -215,7 +207,6 @@ export default {
         this.answers = L.featureGroup().addTo(this.canvas);
       }
       this.answers.addLayer(marker);
-      console.log("Added own guess");
     },
 
     addTrueMarker({lon, lat, name}) {
@@ -228,7 +219,6 @@ export default {
         this.answers = L.featureGroup().addTo(this.canvas);
       }
       this.answers.addLayer(marker);
-      console.log("Added ground truth");
     },
 
     displayResults(answer, results){
