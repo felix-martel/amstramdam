@@ -28,6 +28,10 @@
   ],
   "connect-src": [
     "'self'",
+    "http://amstramdam-debug.herokuapp.com",
+    "https://amstramdam-debug.herokuapp.com",
+    "ws://amstramdam-debug.herokuapp.com",
+    "wss://amstramdam-debug.herokuapp.com",
     "*.fontawesome.com"
   ]
 }
