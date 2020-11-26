@@ -5,7 +5,7 @@
     "amstramdam.com"
   ],
   "verbose": false,
-  "disableSSL": true,
+  "disableSSL": false,
   "async": "eventlet",
   "datasets": "datasets.json"
 }
