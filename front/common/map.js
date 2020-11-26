@@ -100,6 +100,11 @@ const defaultView = {
         zoom: 1
     };
 
+const defaultBounds = [
+    [66.95, 179.2166],
+    [-54.2806, -178.1583]
+];
+
 export {
-    LAYERS, CREDITS, getIcon, defaultView
+    LAYERS, CREDITS, getIcon, defaultView, defaultBounds
 }

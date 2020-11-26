@@ -96,3 +96,12 @@ export function geoJitter(lonlatObject, {how="gaussian", lonFactor=10, latFactor
         lat: lonlatObject.lat + latFactor * rand(),
     }
 }
+
+
+export const VueSelectCompatibilityPlugin = {
+    install: (app) => {
+        app.config.globalProperties.$on = function(e) {
+            console.log(e);
+        }
+    }
+}

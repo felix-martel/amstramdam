@@ -6,7 +6,7 @@
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import constants from "../common/constants";
-import {LAYERS, CREDITS, defaultView, getIcon} from "../common/map";
+import {LAYERS, CREDITS, defaultView, defaultBounds, getIcon} from "../common/map";
 export default {
   data() {
     return {
@@ -38,14 +38,14 @@ export default {
      */
     initialize(identifier, {
       allowZoom = true,
-      bounds = defaultView,
+      bounds = defaultBounds,
       credits = CREDITS,
       maxZoom = 18,
       tiles = LAYERS.bwSSL,
       extraCanvasParams = {},
       extraTileParams = {},
-    }) {
-      this.canvas = L.map("mapid", {
+    } = {}) {
+      this.canvas = L.map(identifier, {
         scrollWheelZoom: allowZoom,
         doubleClickZoom: allowZoom,
         zoomControl: false,

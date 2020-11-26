@@ -11,7 +11,14 @@
       <div class="game-panel-container">
 
         <div class="new-game game-panel">
-            <game-creator :datasets="datasets"></game-creator>
+            <game-creator :datasets="datasets"
+                          :map="map"
+                          :difficulty="difficulty"
+                          :action="formAction"
+                          @map-change="getPoints"
+                          @difficulty-change="setDifficulty"
+                          @launch="launchGame"
+            ></game-creator>
         </div>
         <div class="vsep padded"></div>
         <div class="existing-game game-panel">
@@ -20,7 +27,11 @@
       </div>
 
       <div class="map-container">
-        <div id="leaflet"></div>
+<!--        <div id="leaflet"></div>-->
+        <div class="map-container-inner">
+          <dataset-display :difficulty="difficulty" :points="points"></dataset-display>
+
+        </div>
       </div>
     </popup>
   </div>
@@ -31,9 +42,12 @@ import footer from "./lobby/footer.vue";
 import popup from "./components/popup.vue";
 import gameCreator from "./lobby/gameCreator.vue";
 import GameJoiner from "./lobby/gameJoiner/gameJoiner.vue";
+import {GET} from "./common/utils.js";
+import DatasetDisplay from "./lobby/datasetDisplay.vue";
 
 export default {
   components: {
+    DatasetDisplay,
     GameJoiner,
     "footer-box": footer,
     "popup": popup,
@@ -42,12 +56,52 @@ export default {
 
   data() {
     return {
-      datasets: []
+      datasets: datasets,
+      map: "",
+      points: [],
+      difficulty: 1,
+      formAction: {
+        method: "post",
+        url: "/new",
+      }
     }
-  }
+  },
+
+  methods: {
+    getPoints(map) {
+        this.map = map;
+        GET(`/points/${map}`).then(data => {
+          this.points = data.points;
+        });
+    },
+
+    setDifficulty(diff) {
+      this.difficulty = diff;
+    },
+
+    launchGame(params){
+
+    }
+  },
+
+
 }
 </script>
 
 <style scoped>
+.map-container {
+  height: 220px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
 
+.map-container-inner {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+
+}
 </style>
