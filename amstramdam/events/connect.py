@@ -34,6 +34,7 @@ def init_game(data):
     leaderboard = game.get_current_leaderboard()
     emit("init", dict(player=player, launched=game.launched, pseudo=pseudo,
             game=game.map_name, current=game.curr_run_id, runs=game.n_run, diff=game.difficulty,
+                      game_name=game.map_display_name,
                       leaderboard=leaderboard,
                       pseudos=game.pseudos))
     emit("new-player", dict(

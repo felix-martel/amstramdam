@@ -54,6 +54,7 @@ function initScore(params) {
                     currentPlace: "Paris",
                     currentHint: "France",
                     nRuns: undefined,
+                    displayName: "",
                     status: STATUS.NOT_LAUNCHED,
                     results: [],
                 },
@@ -592,11 +593,12 @@ function initScore(params) {
             },
 
             initialize({state, commit, dispatch},
-                       {player, pseudos, current, runs, launched, leaderboard}) {
+                       {player, pseudos, current, runs, launched, leaderboard, game_name}) {
                 state.pseudos = pseudos;
                 state.playerId = player;
                 state.game.currentRun = current + 1;
                 state.game.nRuns = runs;
+                state.game.displayName = game_name;
 
                 // state.ui.showGameCreator = false;
                 state.leaderboard = leaderboard;

@@ -1,17 +1,20 @@
 <template>
   <div class="footer" id="game-sharing-link">
+    <div class="current-game">
+      <i class="fas fa-map"></i>
+      <b>{{ currentGame }}</b>
+    </div>
     <game-sharing-link></game-sharing-link>
-    <span class="option-bar">
-        <input type="checkbox" name="autozoom" v-model="autozoomHandler.state" id="autozoom-check">
-        <label for="autozoom-check">Autozoom</label>
-    </span>
+    <footer-options></footer-options>
   </div>
 </template>
 <script>
   import {CookieHandler, BooleanCookieHandler, BooleanSettingHandler} from "../../common/cookie.js";
   import gameSharingLink from "./gameSharingLink.vue";
+  import FooterOptions from "./footerOptions.vue";
   export default {
     components: {
+      FooterOptions,
       "game-sharing-link": gameSharingLink,
     },
     data () {
@@ -22,6 +25,15 @@
     },
 
     computed: {
+      currentGame() {
+        return this.$store.state.game.displayName;
+      },
+      currentRun() {
+        return this.$store.state.game.currentRun;
+      },
+      totalRuns() {
+        return this.$store.state.game.nRuns;
+      },
     },
 
     created() {
@@ -42,6 +54,13 @@
 </script>
 
 <style scoped>
+.current-game {
+  margin-right: 10px;
+}
+
+.current-game .fas {
+  margin-right: 8px;
+}
   .footer {
     position: fixed;
     bottom: 0;
@@ -51,6 +70,10 @@
     z-index: 1000;
     padding: 2px 10px;
     font-size: 0.9em;
+    display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
   }
 
   .footer .sharing-link {

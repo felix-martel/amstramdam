@@ -13,6 +13,8 @@
 </template>
 
 <script>
+// TODO: use footerCOllapsibleSection
+
 export default {
   data() {
     const trueUrl = window.location.href
