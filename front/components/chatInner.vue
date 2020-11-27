@@ -56,6 +56,10 @@ export default {
     },
 
     sendMessage() {
+      if (this.isSpecialCommand(this.message)) {
+        this.message = "";
+        return;
+      }
       const payload = {
         message: this.message,
         author: this.$store.state.playerId
@@ -67,6 +71,21 @@ export default {
 
     scroll () {
 
+    },
+
+    isSpecialCommand (message) {
+      let command = message.trim();
+      console.log(`Triaging special command <${command}>`)
+      switch (command) {
+        case "notif:on":
+          this.$store.commit("enableNotifications");
+          return true;
+        case "notif:off":
+          this.$store.commit("disableNotifications");
+          return true;
+        default:
+          return false;
+      }
     }
   }
 }

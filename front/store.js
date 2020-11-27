@@ -230,6 +230,14 @@ function initScore(params) {
                 }
             },
 
+            enableNotifications (state) {
+                state.ui.notificationEnabled = true;
+            },
+
+            disableNotifications (state) {
+                state.ui.notificationEnabled = false;
+            },
+
             hideChatBox(state) {
                 state.ui.chatBox = false;
             },
