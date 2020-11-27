@@ -125,11 +125,6 @@ export default {
       window.addEventListener("popstate", event => {
         this.route();
       })
-      if (this.$store.state.debug) {
-        for (let i=0; i<10;i++){
-          this.$store.commit("addMessage", {author: "Jean", message: "test"});
-        }
-      }
     },
 
     events: {
