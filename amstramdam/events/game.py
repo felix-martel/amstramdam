@@ -70,7 +70,7 @@ def launch_game():
 
     game = manager.get_game(game_name)
     game.launch() # GameRun(players)
-    payload = dict(game=game.map_name, runs=game.n_run, diff=game.difficulty, by=player)
+    payload = dict(game=game.map_name, runs=game.n_run, diff=game.difficulty, by=player, small_scale=game.small_scale)
     emit("status-update",
          dict(status=game.status, payload=payload),
          json=True, broadcast=True, room=game_name)

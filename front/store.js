@@ -46,6 +46,7 @@ function initScore(params) {
                 game: {
                     launched: false,
                     done: false,
+                    small: false,
                     hasAnswered: false,
                     resultsReceived: false,
                     currentRun: 0,
@@ -483,10 +484,12 @@ function initScore(params) {
             },
 
             setLaunching({state, commit, dispatch},
-                         {game, runs, diff, by}) {
+                         {game, runs, diff, by, small_scale}) {
                 state.game.currentRun = 1;
                 state.game.nRuns = runs;
                 state.game.launched = true;
+                state.game.small = small_scale;
+
                 commit("addNotification", {
                     type: (state.firstLaunch ? constants.chatItemTypes.NOTIF_LAUNCH
                         :constants.chatItemTypes.NOTIF_RELAUNCH),
@@ -594,6 +597,7 @@ function initScore(params) {
                 state.playerId = player;
                 state.game.currentRun = current + 1;
                 state.game.nRuns = runs;
+
                 // state.ui.showGameCreator = false;
                 state.leaderboard = leaderboard;
                 state.launched = launched;

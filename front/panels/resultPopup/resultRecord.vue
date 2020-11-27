@@ -17,6 +17,7 @@
 
 <script>
 import constants from "../../common/constants";
+import {formatDistance} from "../../common/format.js";
 
 export default {
   props: {
@@ -43,7 +44,8 @@ export default {
     },
 
     distance: function () {
-      return this.formatNumber(this.record.dist, "km");
+      return formatDistance(this.record.dist, this.useMeters).toString();
+      // return this.formatNumber(this.record.dist, "km");
     },
 
     score: function () {
@@ -52,6 +54,10 @@ export default {
 
     delay: function () {
       return this.formatNumber(this.record.delta, "s", 2);
+    },
+
+    useMeters: function() {
+      return this.$store.state.game.small;
     }
   }
 }

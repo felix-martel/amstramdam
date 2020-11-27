@@ -100,3 +100,4 @@ class Dataloader(object):
                 maps.extend(sorted_maps)
             datasets.append(dict(group=group, maps=maps))
         return datasets
+

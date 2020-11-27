@@ -53,14 +53,23 @@ class GameMap:
         return f"{self.name} ({len(self.places)} villes)"
 
     @classmethod
-    def from_file(cls, name, file, use_hint=False, limit_size=None, group=None, **params):
+    def from_file(cls, name, file, use_hint=False, limit_size=None, group=None,
+                  col_place="city",
+                  col_lon="lng",
+                  col_lat="lat",
+                  col_rank="population",
+                  col_hint="admin",
+                  reverse_rank=False,
+                  **params):
+        print("Loading", name, ". With hint ?", use_hint, col_hint)
         df = pd.read_csv(file, nrows=limit_size)
         ranks = None
-        if "population" in df.columns:
-            ranks = np.argsort(-df.population.fillna(0))
-        return cls(name, places=df.city, lons=df.lng, lats=df.lat,
+        if col_rank in df.columns:
+            fac = 1 if reverse_rank else -1
+            ranks = np.argsort(fac * df[col_rank].fillna(0))
+        return cls(name, places=df[col_place], lons=df[col_lon], lats=df[col_lat],
                    ranks=ranks,
-                   hints=df.admin if use_hint else None, group=group, **params)
+                   hints=df[col_hint] if use_hint else None, group=group, **params)
 
     @classmethod
     def from_historic(cls, name, file, limit_size=None, group=None, use_hint=True, sep=None):
@@ -173,7 +182,7 @@ class GameMap:
         p2 = Point.from_latlon(*corner2)
         dist = distance(p1, p2)
 
-        dist_param = round(dist**self.distance_harshness)
+        dist_param = dist**self.distance_harshness
         print(self.name, dist_param)
         return dist_param
 

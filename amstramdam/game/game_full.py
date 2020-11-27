@@ -7,6 +7,7 @@ import numpy as np
 
 from .game import GameRun, load_cities
 from amstramdam.city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
+from ..datasets import dataloader
 from datetime import datetime, timedelta
 import random
 import amstramdam.game.status as status
@@ -76,7 +77,7 @@ class Game:
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.name = name
         self.map_name = map
-        map = GameMap.from_name(self.map_name)
+        map = dataloader.load(self.map_name) #GameMap.from_name(self.map_name)
         self.map_display_name = map.name
         self.is_permanent = is_permanent
         if dist_param is None:
@@ -87,6 +88,7 @@ class Game:
         self.n_run = n_run
         self.dist_param = dist_param
         self.time_param = time_param
+        self.small_scale = (dist_param < 15) # When the characteristic distance is below 15km, the game is considered 'small-scale'
         self.__curr_run_id = 0
         if players is None:
             players = set()

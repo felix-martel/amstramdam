@@ -4,11 +4,11 @@
       <div id="answer-name" class="title"></div>
       <div class="distance">
 <!--        <span id="main-disp-dist">{{ lastRun.distance }}</span> km-->
-        <count :value="lastRun.distance"></count> km
+        <count :value="lastRunDistance.distance" :unit="lastRunDistance.unit" :float="lastRunDistance.float"></count>
       </div>
       <div class="deets">
         <div class="score-dist">
-          <count :value="lastRun.distance"></count> km =
+          <count :value="lastRunDistance.distance" :unit="lastRunDistance.unit" :float="lastRunDistance.float"></count> =
           <count :value="lastRun.sdistance"></count> pts
         </div>
         <div class="score-time">
@@ -26,7 +26,7 @@
       <ul id="current-results">
         <li v-for="guess in guesses">
           <span class="pname">{{ getPlayerName(guess.name) }}</span>
-          <span class="pscore">{{ guess.distance }}km</span>
+          <span class="pscore">{{ asDistance(guess.distance) }}</span>
         </li>
       </ul>
     </div>
@@ -36,6 +36,7 @@
 <script>
 import {mapState} from "vuex";
 import animatedCount from "../../components/animatedCount.vue";
+import {formatDistance} from "../../common/format.js";
 
 export default {
   components: {
@@ -48,7 +49,18 @@ export default {
       totalScore: state => state.score.total,
       lastRun: state => state.lastRun,
       guesses: state => state.guesses,
-    })
+      useMeters: state => state.game.small,
+    }),
+
+    lastRunDistance() {
+      return formatDistance(this.lastRun.distance, this.useMeters);
+    }
+  },
+
+  methods: {
+    asDistance(d) {
+      return formatDistance(d, this.useMeters).toString();
+    }
   }
 }
 </script>

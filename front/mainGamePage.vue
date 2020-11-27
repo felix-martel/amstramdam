@@ -175,7 +175,7 @@ export default {
         // TODO: store correct answer and add marker + circle
         this.$store.commit("setLastRun", {
           score: Math.round(data.score),
-          distance: Math.round(data.dist),
+          distance: data.dist,
           sdistance: Math.round(data.sd),
           delay: Math.round(data.delta * 100) / 100,
           sdelay: Math.round(data.st)
@@ -184,7 +184,7 @@ export default {
       },
 
       "new-guess": function ({player, dist, score}) {
-        this.$store.commit("addGuess", {name: player, distance: Math.round(dist)});
+        this.$store.commit("addGuess", {name: player, distance: dist});
         if (score > 0) {
           this.$store.commit("addNotification", {
             type: constants.chatItemTypes.NOTIF_NEW_SCORE,

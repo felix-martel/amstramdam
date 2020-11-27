@@ -5,12 +5,14 @@
       {
         "map_id": "world",
         "name": "Monde entier",
-        "file": "data/places.world.csv"
+        "file": "data/places.world.csv",
+        "use_hint": true
       },
       {
         "map_id": "world_capitals",
         "name": "Capitales du monde",
-        "file": "data/world_capitals.csv"
+        "file": "data/world_capitals.csv",
+        "use_hint": true
       },
       {
         "map_id": "world_capitals-no-hint",
@@ -52,6 +54,15 @@
         "map_id": "wine_fr",
         "name": "Vins de France",
         "file": "data/food/wine.csv",
+        "use_hint": false
+      },
+      {
+        "map_id": "paris_subway",
+        "name": "Métro parisien",
+        "file": "data/misc/metro.paris.csv",
+        "col_place": "place",
+        "col_hint":  "arr",
+        "col_rank": "transit",
         "use_hint": false
       }
     ]
