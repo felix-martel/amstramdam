@@ -1,5 +1,5 @@
 <template>
-    <footer-collapsible-section :collapsed="collapsed">
+  <footer-collapsible-section :collapsed="collapsed">
     <template v-slot:control>
       <span class="sharer" @click="toggleView">
       {{ message }}
@@ -7,10 +7,10 @@
     </template>
     <template v-slot:content>
       <a ref="link"
-       :class="{copied: copied}"
-       class="sharing-link"
-       :href="trueUrl"
-       @click.prevent="copyUrlToClipboard">{{ trueUrl }}</a>
+         :class="{copied: copied, 'link-collapsed': collapsed}"
+         class="sharing-link"
+         :href="trueUrl"
+         @click.prevent="copyUrlToClipboard">{{ trueUrl }}</a>
     </template>
   </footer-collapsible-section>
 </template>
@@ -44,12 +44,13 @@ export default {
       // this.$refs.link.select();
       document.execCommand("copy");
       this.copied = true;
+      const duration = 0.6
       window.setTimeout(() => {
         this.copied = false;
-      }, 2*1000);
+      }, duration*1000);
       this.timeout = this.startTimeout(() => {
         this.hideLink();
-      }, 3*1000);
+      }, (duration + 0.3) *1000);
     },
 
     clearTimeout() {
@@ -114,20 +115,20 @@ a.sharing-link:hover {
 }
 
 
-div:not(.collapsed) a.sharing-link:after {
+a.sharing-link:not(.link-collapsed):after {
   display: block;
   content: "Lien copié !";
   background-color: black;
   padding: 5px 10px;
   position: absolute;
   top: -10px;
-  right: 50%;
+  left: 50%;
   opacity: 0;
   font-size: 0.8em;
   transition: all 0.2s ease-in;
 }
 
-div:not(.collapsed) a.sharing-link.copied:after {
+a.sharing-link:not(.link-collapsed).copied:after {
   top: -25px;
   opacity: 1;
   transition: all 0.2s ease-out;
