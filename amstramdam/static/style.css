@@ -13,6 +13,16 @@ button:hover:not(:disabled) {
   color: blue;
 }
 
+button.main-button {
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+button.cancel-button:hover:not(:disabled) {
+  border-color: red;
+  color: red;
+}
+
 input, select {
   border: 1px solid lightgray;
   padding: 5px 10px;

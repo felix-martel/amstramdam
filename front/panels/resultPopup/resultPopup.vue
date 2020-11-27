@@ -17,7 +17,7 @@
             :action="{'method': 'emit'}"
             @launch="createNewGame"
           >
-            <button @click="closeCreator">Annuler</button>
+            <button class="cancel-button" @click="closeCreator">Annuler</button>
           </game-creator>
         </div>
       </template>
@@ -31,11 +31,11 @@
         <result-table :leaderboard="leaderboard"></result-table>
         <div class="popup-buttons">
           <button @click="close">Voir la correction</button>
-          <button id="relaunch-from-popup" @click="relaunch">Nouvelle partie</button>
-          <button @click="openCreator">Changer de partie</button>
+          <button id="relaunch-from-popup" @click="relaunch" class="main-button">Nouvelle partie</button>
+          <button @click="openCreator">Changer de carte</button>
         </div>
         <div style="margin-top:15px;">
-          <a  href="/">
+          <a  href="/" class="low-key">
             Retour à l'accueil
           </a>
         </div>
