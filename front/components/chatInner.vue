@@ -75,7 +75,6 @@ export default {
 
     isSpecialCommand (message) {
       let command = message.trim();
-      console.log(`Triaging special command <${command}>`)
       switch (command) {
         case "notif:on":
           this.$store.commit("enableNotifications");
