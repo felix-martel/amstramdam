@@ -7,7 +7,9 @@
       </div>
 
       <div class="fieldset">
-        <label for="public-checkbox">Partie publique</label>
+        <label for="public-checkbox"
+          data-tooltip="La partie apparaîtra dans la liste des parties publiques"
+        >Partie publique</label>
         <input id="public-checkbox" v-model="isPublic" name="public" type="checkbox">
       </div>
       <div class="fieldset">

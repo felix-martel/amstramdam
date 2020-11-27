@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div @keyup.alt.enter.prevent="showChatBox">
     <blink-component v-if="blinking"></blink-component>
     <div class="main">
       <game-footer></game-footer>
       <result-popup></result-popup>
       <div class="column" id="left-column-display">
         <score-box></score-box>
-        <chat-box :hidden="!panelVisibility.chatBox"></chat-box>
+        <chat-box v-if="panelVisibility.chatBox"></chat-box>
         <result-box v-if="showResults"></result-box>
       </div>
 
@@ -88,6 +88,10 @@ export default {
       routeToMain: function() {
         goToHash(" ");
       },
+
+    showChatBox: function() {
+      this.$store.commit("showChatBox");
+    },
 
     updateHighScore(results) {
         const res = results.find(rec => (rec.player === this.$store.state.playerId));

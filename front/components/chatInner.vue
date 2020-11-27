@@ -14,8 +14,10 @@
     <div class="input">
         <textarea name="chat-input"
                   id="chat-input"
+                  ref="chatInput"
                   class="chat-input"
                   @keyup.enter="sendMessage"
+                  @keyup.esc="$emit('close')"
                   placeholder="Envoyez un message" v-model="message"></textarea>
     </div>
   </div>
@@ -30,6 +32,7 @@ export default {
     "chat-message": chatMessage,
     "scrollable": scrollable,
   },
+  emit: ["close"],
   data () {
     return {
       message: "",
@@ -43,6 +46,7 @@ export default {
   },
   mounted () {
     //this.$socketOn("chat:new", this.processNewMessage);
+    this.$refs.chatInput.focus();
   },
   methods: {
     processNewMessage (data) {

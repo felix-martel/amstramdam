@@ -1,7 +1,7 @@
 <template>
   <div class="box" id="chat-box">
     <i id="close-chatbox" class="fas fa-times" @click="hideSelf"></i>
-    <inner-chat></inner-chat>
+    <inner-chat @close="hideSelf"></inner-chat>
   </div>
 </template>
 <script>
