@@ -282,7 +282,33 @@ Run: {self.curr_run_id+1}/{self.n_run}
                 score=self.scores.get(player, 0)
             ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
 
-        return dict(records=self.records, scores=self.scores, places=self.places_as_json(), summary=results)
+        final_results = dict(records=self.get_filtered_records(),
+                             #scores=self.scores,
+                             places=self.places_as_json(),
+                             #summary=results
+                             )
+        return final_results
+
+    def get_filtered_records(self, keys=None):
+        """
+        `self.records` contains a lot of information. This function filters it by keeping only the keys specified in
+        `keys`. If not provided, `keys = ["guess", "player"]`, which are necessary for the final summary display.
+        `self.records` contains, per each run, one record dict per player with the following keys:
+        - guess (guess.lon, guess.lat): coordinates of the player's guess for this run
+        - answer (answer.lon, answer.lat, answer.name): coordinates of the ground truth for this run
+        - dist: distance between guess and ground truth
+        - delta: player's answering time
+        - score: points awarded to the player for this run
+        - msg: a human-readable message describing the player's result for this run
+        - player: player id
+        - st: time bonus
+        - sd: distance bonus (time bonus + distance bonus = score)
+        See output of `GameRun.process_answer` for details.
+        """
+        if keys is None:
+            keys = ["guess", "player"]
+        records = [[{k: rec[k] for k in keys} for rec in recs] for recs in self.records]
+        return records
 
     def add_run_records(self, recs):
         self.records.append(recs)
