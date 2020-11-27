@@ -2,7 +2,8 @@
   "hosts": [
     "multigeo.herokuapp.com",
     "amstramdam-debug.herokuapp.com",
-    "amstramdam.com"
+    "amstramdam.com",
+    "dev.amstramdam.com"
   ],
   "verbose": false,
   "disableSSL": false,
