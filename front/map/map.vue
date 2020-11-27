@@ -19,6 +19,7 @@ export default {
       groundTruth: undefined,
       ownGuess: undefined,
       shaded: false,
+      precorrectionState: undefined,
     }
   },
 
@@ -66,6 +67,21 @@ export default {
   },
 
   methods: {
+    startCorrectionMode(summary) {
+      this.precorrectionState = this.getMapState();
+      // Allow unrestricted zoom during correction
+      this.enableZoom();
+      this.canvas.setMaxZoom(18);
+      this.displayGameSummary(summary);
+    },
+
+    endCorrection() {
+      // Come back to the state prior to correction (incl. zoom)
+      if (typeof this.precorrectionState !== "undefined") {
+        this.setMapState(this.precorrectionState, constants.animations.map.duration);
+      }
+      this.precorrectionState = undefined;
+    },
 
     displayGameSummary({places, records}){
       this.clearMap();
@@ -283,8 +299,10 @@ export default {
         this.displayResults(payload.answer, payload.results);
       } else if (status === constants.status.RUNNING || status === constants.status.LAUNCHING) {
           this.clearMap();
+          if (status === constants.status.LAUNCHING) this.endCorrection();
       } else if (status === constants.status.FINISHED){
-        this.displayGameSummary(payload.full);
+        //this.displayGameSummary(payload.full);
+        this.startCorrectionMode(payload.full);
       }
     },
 
