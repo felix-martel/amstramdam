@@ -13,11 +13,12 @@
         <input id="public-checkbox" v-model="isPublic" name="public" type="checkbox">
       </div>
       <div class="fieldset">
-        <label for="diff-level">Niveau de difficulté</label>
+        <label for="diff-level">Difficulté</label>
         <div class="slidecontainer">
           <input
               type="range" min="1" max="100" v-model="difficulty" @change="difficultyChange"
-              class="slider" id="diff-level" name="difficulty">
+              class="slider diff-slider" id="diff-level" name="difficulty">
+          <span class="diff-counter">{{ difficulty }}%</span>
         </div>
 
       </div>
@@ -162,10 +163,22 @@ export default {
 <style scoped>
 
 .buttons {
-      display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 25px;
 }
+
+.diff-slider {
+  vertical-align: middle;
+}
+
+.diff-counter {
+  display: inline-block;
+  min-width: 40px;
+  text-align: right;
+  margin-left: 10px;
+}
+
 </style>
