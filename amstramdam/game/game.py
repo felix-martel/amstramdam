@@ -43,7 +43,9 @@ Score: +{score} pts
 class GameRun:
     SCORE_MULTIPLIER = 1000
 
-    def __init__(self, players, place, forbidden=None, dist_param=None, time_param=None, duration=None, non_linear=False):
+    def __init__(self, players, place, forbidden=None, dist_param=None, time_param=None, duration=None,
+                 precision_mode=False,
+                 non_linear=False):
         self.players = players
         self.scores =  defaultdict(float)
         self.messages = defaultdict(str)
@@ -55,6 +57,7 @@ class GameRun:
         self.time_param = 5 if time_param is None else time_param
         self.dist_param = 500 if dist_param is None else dist_param
         self.duration = 10 if duration is None else duration
+        self.precision_mode = precision_mode
 
         self.place = place
         self.start = None
@@ -73,6 +76,7 @@ class GameRun:
         return self.display()
 
     def time_score(self, delta):
+        if self.precision_mode: return 0
         return max(0, 1 - (delta / self.time_param))
 
     def non_linear_bonus(self, dist):

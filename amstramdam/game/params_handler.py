@@ -6,6 +6,7 @@ DEFAULT_PARAMS = {
     "wait_time": 10,
     "difficulty": 100,
     "public": False,
+    "precision_mode": False,
 }
 
 def merge_params(params, defaults=None):
@@ -21,7 +22,7 @@ def merge_params(params, defaults=None):
     }
     converts = [
         (int, ["duration", "runs", "wait_time", "difficulty"]),
-        (bool, ["public", "zoom"])
+        (bool, ["public", "zoom", "precision_mode"])
     ]
     for convert, keys in converts:
         for key in keys:

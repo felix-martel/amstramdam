@@ -11,7 +11,7 @@
           <count :value="lastRunDistance.distance" :unit="lastRunDistance.unit" :float="lastRunDistance.float"></count> =
           <count :value="lastRun.sdistance"></count> pts
         </div>
-        <div class="score-time">
+        <div class="score-time" v-if="!precisionMode">
           <count :value="lastRun.delay" float="true"></count> s =
           <count :value="lastRun.sdelay"></count> pts
         </div>
@@ -50,6 +50,7 @@ export default {
       lastRun: state => state.lastRun,
       guesses: state => state.guesses,
       useMeters: state => state.game.small,
+      precisionMode: state => state.params.precision_mode,
     }),
 
     lastRunDistance() {

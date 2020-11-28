@@ -72,7 +72,7 @@ def get_cities(map):
 
 class Game:
     def __init__(self, name, players=None, n_run=20, time_param=5, dist_param=None,
-                 is_permanent=False,
+                 is_permanent=False, precision_mode=False,
                  difficulty=1, is_public=False, creation_date=None, allow_zoom=False,
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.name = name
@@ -88,20 +88,21 @@ class Game:
         self.n_run = n_run
         self.dist_param = dist_param
         self.time_param = time_param
+        self.precision_mode = precision_mode
         self.small_scale = (dist_param < 15) # When the characteristic distance is below 15km, the game is considered 'small-scale'
         self.__curr_run_id = 0
+        self.allow_zoom = allow_zoom
         if players is None:
             players = set()
         self.players = set(players)
         self.places = map.sample(self.n_run, self.difficulty) # random.sample(get_cities(map), self.n_run)
         self.duration = duration
-        self.runs = [GameRun(self.players, place, dist_param=self.dist_param, time_param=self.time_param, duration=duration, non_linear=not allow_zoom)
+        self.runs = [GameRun(self.players, place, **self.get_run_params())
                      for place in self.places]
         names = list(NAMES - self.players)
         random.shuffle(names)
         self.global_player_list = global_player_list
         self.available_names = available_names # set(names)
-        self.allow_zoom = allow_zoom
         self.wait_time = wait_time
         self.records = [] # defaultdict(list)
         self.scores = defaultdict(int)
@@ -130,6 +131,11 @@ class Game:
     def generate_player_name(self):
         return f"{self.name}_{self.get_new_id()}"
 
+    def get_run_params(self):
+        return dict(dist_param=self.dist_param, time_param=self.time_param,
+                    precision_mode=self.precision_mode,
+                    duration=self.duration, non_linear=not self.allow_zoom)
+
     def get_params(self):
         return dict(
             players=set(self.players),
@@ -146,6 +152,7 @@ class Game:
             is_permanent=self.is_permanent,
             creation_date=self.date_created,
             allow_zoom=self.allow_zoom,
+            precision_mode=self.precision_mode,
         )
 
     @property

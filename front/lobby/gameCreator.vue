@@ -34,6 +34,12 @@
             <label for="wait-input">Durée entre les manches</label>
             <input type="number" name="wait_time" id="wait-input" v-model="waitDuration">
           </div>
+          <div class="fieldset">
+            <label for="precision_mode">Mode Précision
+              <help-tooltip :content="tooltips.precision_mode" position="top right"></help-tooltip>
+            </label>
+            <input type="checkbox" name="precision_mode" id="precision_mode" v-model="precisionMode">
+          </div>
 <!--          <div class="fieldset">-->
 <!--            <label for="zoom-checkbox">Zoom autorisé</label>-->
 <!--            <input id="zoom-checkbox" v-model="allowZoom" name="zoom" type="checkbox">-->
@@ -58,6 +64,7 @@
 import vSelect from 'vue-select'
 import MapSelector from "./mapSelector.vue";
 import CollapsibleDiv from "../components/collapsibleDiv.vue";
+import HelpTooltip from "../components/helpTooltip.vue";
 
 /**
  * Form can be submitted in two ways:
@@ -70,6 +77,7 @@ import CollapsibleDiv from "../components/collapsibleDiv.vue";
  */
 export default {
   components: {
+    HelpTooltip,
     CollapsibleDiv,
     MapSelector,
     "v-select": vSelect,
@@ -100,6 +108,10 @@ export default {
       allowZoom: true,
       isPublic: true,
       showOptions: false,
+      precisionMode: false,
+    tooltips: {
+      "precision_mode": "En mode Précision, le temps n'est pas pris en compte dans le calcul du score"
+    }
     }
   },
 
@@ -123,6 +135,7 @@ export default {
         wait_time: this.waitDuration,
         zoom: this.allowZoom,
         public: this.isPublic,
+        precision_mode: this.precisionMode
       }
     }
   },

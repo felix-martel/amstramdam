@@ -36,6 +36,7 @@ def create_new_game():
                                      difficulty=params["difficulty"],
                                      is_public=params["public"],
                                      allow_zoom=params["zoom"],
+                                     precision_mode=params["precision_mode"],
                                      map=params["map"], wait_time=params["wait_time"])
     print(manager.get_status())
 
@@ -56,5 +57,6 @@ def serve_game(name):
             bbox=game.bbox,
             ssl_disabled=CONF["disableSSL"],
             allow_zoom=game.allow_zoom,
+            precision_mode=game.precision_mode,
             duration=game.duration)
         return render_template("main.html", game_name=name, params=params, debug=IS_LOCAL)
