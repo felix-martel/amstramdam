@@ -2,7 +2,7 @@
   <ul id="player-list">
     <transition-group name="leaderboard-change" tag="ul">
       <li v-for="el in leaderboard" :key="el.player">
-        <span class="pname" :class="{'self': el.player === self}">{{ getPlayerName(el.player) }}</span>
+        <span class="pname" :class="{'self': (el.player === self) && (leaderboard.length > 1)}">{{ getPlayerName(el.player) }}</span>
         <span class="pscore">{{ el.score }} pts</span>
       </li>
     </transition-group>
