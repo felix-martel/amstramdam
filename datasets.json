@@ -65,7 +65,7 @@
         "col_lon": "lon",
         "col_rank": "transit",
         "use_hint": true,
-        "harshness": 0.5
+        "harshness": 0.3
       }
     ]
   },
