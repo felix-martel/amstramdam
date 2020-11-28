@@ -25,9 +25,10 @@ export default {
 <style scoped>
 #chat-box {
   position: relative;
-  min-height: 200px;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  box-sizing: border-box;
 
 }
 

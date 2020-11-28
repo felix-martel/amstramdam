@@ -5,8 +5,14 @@
       <game-footer></game-footer>
       <result-popup></result-popup>
       <div class="column" id="left-column-display">
-        <score-box></score-box>
-        <chat-box v-if="panelVisibility.chatBox"></chat-box>
+        <div id="left-corner">
+          <score-box></score-box>
+          <transition name="slide">
+            <div id="chat-box-container"  v-if="panelVisibility.chatBox">
+              <chat-box></chat-box>
+            </div>
+          </transition>
+        </div>
         <result-box v-if="showResults"></result-box>
       </div>
 
@@ -211,12 +217,36 @@ export default {
 }
 </script>
 <style>
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.15s ease-out;
+}
+
+.slide-enter-from,
+.slide-leave-to  {
+  transform: translateX(-250px);
+  opacity: 0.5;
+}
+
 .column {
   position: fixed;
   top: 20px;
   left: 20px;
     z-index: 1000;
   width: 250px;
+}
+
+#left-corner {
+  position: relative;
+}
+
+#chat-box-container {
+  position: absolute;
+  top: 0;
+  left: 270px;
+  width: 250px;
+  bottom: 0;
+  z-index: -1;
 }
 
 .right-corner {

@@ -2,20 +2,27 @@
   <div class="box" id="main-info-box">
     <div class="nav">
       <a href="/">Accueil</a><span></span>
+      <i class="fas fa-comments"
+         id="chat-toggle-button"
+         :class="{'unread-message': unreadMessages}"
+         @click="toggleChatBox"></i>
     </div>
     <score-box-self></score-box-self>
 
     <div class="ranking">
       <score-box-ranking></score-box-ranking>
       <div class="controls">
+        <button v-if="canViewResults"
+          @click="openResultPopup"
+          >
+          Résultats
+        </button>
         <button id="launch"
+                v-if="!launched"
                 @click="launchGame"
                 :disabled="launched"
-        >Commencer</button>
-        <i class="fas fa-comments"
-           id="chat-toggle-button"
-           :class="{'unread-message': unreadMessages}"
-           @click="toggleChatBox"></i>
+        >{{ launchButtonLabel }}
+        </button>
       </div>
     </div>
   </div>
@@ -24,6 +31,7 @@
 import {mapState} from "vuex";
 import scoreBoxSelf from "./scoreBoxSelf.vue";
 import scoreBoxRanking from "./scoreBoxRanking.vue";
+import constants from "../../common/constants.js";
 
 export default {
   components: {
@@ -41,10 +49,20 @@ export default {
 
     toggleChatBox() {
       this.$store.dispatch("toggleChatBox");
-    }
+    },
+
+    openResultPopup() {
+        if (this.canViewResults){
+            this.$store.commit("hideGameCreator");
+            this.$store.commit("displayResultPopup");
+        }
+      }
   },
 
   computed: {
+    launchButtonLabel() {
+      return this.$store.state.firstLaunch ? "Commencer" : "Recommencer"
+    },
     score () {
       return this.$store.state.score.total
     },
@@ -73,6 +91,9 @@ export default {
     unreadMessages () {
       return this.$store.state.chat.unread;
     },
+    canViewResults() {
+      return this.$store.state.game.status === constants.status.FINISHED
+    },
 
     ...mapState(["leaderboard"])
   }
@@ -94,11 +115,14 @@ export default {
   position: relative;
 }
 
+.controls button {
+  margin-right: 5px;
+}
 
 #chat-toggle-button {
   position: absolute;
-  top: 2px;
-  right: 0;
+  top: 15px;
+  right: 19px;
   color: blue;
   cursor:pointer;
 }

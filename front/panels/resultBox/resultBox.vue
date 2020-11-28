@@ -90,6 +90,11 @@ export default {
 .collective-results ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
+}
+
+.collective-results li:last-of-type {
+  margin-bottom: 0;
 }
 
 .collective-results .pname {
