@@ -61,9 +61,11 @@
         "name": "Métro parisien",
         "file": "data/misc/metro.paris.csv",
         "col_place": "place",
-        "col_hint":  "arr",
+        "col_hint":  "ligne",
+        "col_lon": "lon",
         "col_rank": "transit",
-        "use_hint": false
+        "use_hint": true,
+        "harshness": 0.5
       }
     ]
   },

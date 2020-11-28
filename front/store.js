@@ -24,8 +24,8 @@ function initScore(params) {
                     scoreBox: true,
                     resultBox: false,
                     hintBox: false, // deprecated
-                    resultPopup: false, // false
-                    showGameCreator: false, // false
+                    resultPopup: false,
+                    showGameCreator: false,
                     state: {
                         duration: -1,
                         transition: false,
@@ -51,8 +51,8 @@ function initScore(params) {
                     resultsReceived: false,
                     currentRun: 0,
                     lastRun: -1,
-                    currentPlace: "Paris",
-                    currentHint: "France",
+                    currentPlace: "",
+                    currentHint: "",
                     nRuns: undefined,
                     displayName: "",
                     status: STATUS.NOT_LAUNCHED,
