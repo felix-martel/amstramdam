@@ -250,20 +250,27 @@ h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
 
 
 a, a:visited, a:active, a:link {
-  color: blue !important;
+  color: blue;
 }
 
 a.low-key, a.low-key:visited, a.low-key:active, a.low-key:link {
-  color: gray !important;
+  color: gray;
   cursor: pointer;
   text-decoration: underline;
   font-size: 0.9em;
 }
 
 a.low-key:hover {
-  color: #2d2d2d !important;
+  color: #2d2d2d;
 }
 
+.leaflet-control-attribution a,
+.leaflet-control-attribution a:visited,
+.leaflet-control-attribution a:active,
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:link {
+  color: blue;
+}
 
 
 
