@@ -67,27 +67,46 @@ option:checked {
     /* letter-spacing: 0.3em;*/
 }
 
-/*[data-tooltip] {*/
-/*  position: relative;*/
-/*}*/
 
-/*[data-tooltip]:hover:after {*/
-/*  display: block;*/
-/*  content: attr(data-tooltip);*/
-/*  background-color: black;*/
-/*  padding: 5px 10px;*/
-/*  position: absolute;*/
-/*  bottom: 100%;*/
-/*  right: 50%;*/
-/*  color: white;*/
-/*  font-size: 0.8em;*/
-/*  transition: all 0.2s ease-in;*/
-/*  max-width: 300px;*/
-/*}*/
+.ams-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  transition: opacity 0.2s ease-in;
+  position: relative;
+}
 
+.ams-icon.hidden {
+  opacity: 0;
+}
 
+.ams-icon .icon-label {
+  color: white;
+  padding: 3px;
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  white-space: nowrap;
+  background-color: inherit;
+}
 
+.ams-icon.purple {
+  background-color: purple;
+}
 
+.ams-icon.red {
+  background-color: red;
+}
+
+.ams-icon.transparent {
+  background-color: transparent;
+}
+
+.ams-icon.light {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 
 .fa-icon {

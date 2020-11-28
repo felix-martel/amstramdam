@@ -10,6 +10,7 @@ import L from "leaflet";
 import constants from "../common/constants";
 import {mapState} from "vuex";
 import mapBaseMixin from "./mapBaseMixin.vue";
+import {summary2, generateFakeSummary} from "../common/debug.js";
 
 export default {
   data() {
@@ -152,7 +153,7 @@ export default {
         const isSelf = (record.player === "Player_1") || (record.player === this.playerId);
         const color = (isSelf ? constants.colors.SELF : constants.colors.BASE);
         const marker = this.createMarker(record.guess, isSelf ? "Vous" : "", color);
-        const lightMarker = this.createMarker(record.guess, "", "black", {extraClasses: ["light-icon"]});
+        const lightMarker = this.createMarker(record.guess, "", "black", {extraClasses: ["light"]});
         const guessCoords = L.latLng(record.guess.lat, record.guess.lon);
 
         const line = L.polyline(
@@ -328,25 +329,6 @@ export default {
 </style>
 <style>
 
-.my-custom-pin {
-  opacity: 1;
-  transition: 0.2s ease-in opacity;
-}
-.my-custom-pin.hidden {
-  opacity: 0;
-}
-
-.icon {
-  position: relative;
-}
-
-.icon-label {
-  position: absolute;
-  /*top: -10px;
-  left: 20px;*/
-  white-space: nowrap;
-}
-
 .shaded .truth-icon:not(:hover) {
   /*opacity: 0!important;*/
   background-color: rgba(0, 0, 0, 0.2) !important;
@@ -361,15 +343,4 @@ export default {
   background-color: blue !important;
   opacity: 1 !important;
 }
-
-.light-icon {
-  opacity: 0.2;
-}
-
-.shaded .light-icon {
-  /*opacity: 0;*/
-}
-/*.shaded .icon-label:not(:hover), .shaded .icon:not(:hover) {*/
-/*  opacity: 0.2 !important;*/
-/*}*/
 </style>

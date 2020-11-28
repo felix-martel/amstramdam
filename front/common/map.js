@@ -30,69 +30,24 @@ function jitter(X, Y, amount=15){
     return [x, y];
 }
 
+
 function getIcon(color= "red",
                  name= "",
-                 {labelOnly = false,
+                 {
+                     labelOnly = false,
                      random = false,
-                 extraClasses = []
+                     extraClasses = [],
+                     small = false,
                  } = {}){
-        const iconColor = labelOnly ? "transparent" : color;
-        const markerHtmlStyles = `
-          background: ${iconColor};
-          width: 10px;
-          height: 10px;
-          display: block;
-          border-radius: 5px;`;
-        var inner;
-        if (name) {
-            let x = 15;
-            let y = 15;
-            if (random){
-                x = 2* (Math.random()-0.5);
-                y = Math.sqrt(1 - Math.pow(x, 2));
-                if (Math.random() > 0.5){
-                    y = -y;
-                }
-                x = Math.round((15 + 15*Math.random())*x);
-                y = Math.round((15 + 15*Math.random())*y);
-            }
-            const labelStyle = `
-            background-color: ${color};
-            color: white;
-            padding: 3px;
-            top: ${x}px;
-            left: ${y}px;
-            position: absolute;
-            font-family: "Roboto", monospace;
-            `;
-            inner = `<span class="icon-label" style="${labelStyle}">${name}</span>`;
-        }
-        else {
-            inner = "";
-        }
-        const classes = extraClasses.join(" ");
-
-        return L.divIcon({
-            className: "my-custom-pin",
-            iconAnchor: [5, 5],
-            html: `<span class="icon ${classes}" style="${markerHtmlStyles}">${inner}</span>`
-        })
-    }
-
-function oldGetIcon(color="red", extraClass="", opacity=0.8){
-    const markerHtmlStyles = `
-      background: ${color};
-      width: 6px;
-      height: 6px;
-      display: block;
-      border-radius: 3px;`;
-
+    const iconColor = labelOnly ? "transparent" : color;
+    const html = name ?  `<span class="icon-label">${name}</span>` : "";
+    const className = extraClasses.concat(["ams-icon", iconColor]).join(" ");
+    const iconSize = small ? 5 : 10;
     return L.divIcon({
-        className: "my-custom-pin",
-        iconAnchor: [3, 3],
-        html: `<span class="icon ${extraClass}" style="${markerHtmlStyles}"></span>`
+        className,
+        iconSize,
+        html
     })
-
 }
 
 

@@ -34,12 +34,15 @@ export default {
       // this.datapoints.clearLayers();
       if (points.length === 0) { return }
       points.forEach(point => {
-        const options = (point.rank > this.maxRank) ? {extraClasses: ["hidden"]} : {};
+        //const options = (point.rank > this.maxRank) ? {extraClasses: ["hidden"]} : {};
         const [lat, lon] = point.coords;
         const marker = this.createMarker({lat, lon},
             "",
             constants.colors.TRUE,
-            options,
+            {
+              small: true,
+              extraClasses: (point.rank > this.maxRank) ? ["hidden"] : []
+            },
         )
         marker.rank = point.data.rank;
         this.datapoints.addLayer(marker);

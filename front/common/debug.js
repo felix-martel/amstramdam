@@ -42,3 +42,5 @@ function generateFakeRunSummary(place, players=6){
   }
   return recs;
 }
+
+export {summary2, generateFakeRunSummary, generateFakeSummary}
