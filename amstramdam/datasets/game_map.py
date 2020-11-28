@@ -53,7 +53,7 @@ class GameMap:
         return f"{self.name} ({len(self.places)} villes)"
 
     @classmethod
-    def from_file(cls, name, file, use_hint=False, limit_size=None, group=None,
+    def from_file(cls, name, file, use_hint=True, limit_size=None, group=None,
                   col_place="city",
                   col_lon="lng",
                   col_lat="lat",
