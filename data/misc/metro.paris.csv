@@ -60,7 +60,7 @@
 "http://fr.dbpedia.org/resource/Cardinal_Lemoine_(métro_de_Paris)","Cardinal Lemoine",1206,2.3512,48.8471,"10","5",1715926
 "http://fr.dbpedia.org/resource/Louise_Michel_(métro_de_Paris)","Louise Michel",2913,2.28807,48.8893,"3","",3594105
 "http://fr.dbpedia.org/resource/La_Muette_(métro_de_Paris)","La Muette",1711,2.27372,48.8577,"9","16",4206204
-"http://fr.dbpedia.org/resource/Censier_-_Daubenton_(métro_de_Paris)","Censier - Daubenton",1204,2.35177,48.8406,"10, 7","5",3777857
+"http://fr.dbpedia.org/resource/Censier_-_Daubenton_(métro_de_Paris)","Censier - Daubenton",1204,2.35177,48.8406,"7","5",3777857
 "http://fr.dbpedia.org/resource/Stalingrad_(métro_de_Paris)","Stalingrad",22,2.36582,48.8843,"2, 5, 7","10",7588899
 "http://fr.dbpedia.org/resource/Mirabeau_(métro_de_Paris)","Mirabeau",712,2.27171,48.8467,"10","16",1420987
 "http://fr.dbpedia.org/resource/Ségur_(métro_de_Paris)","Ségur",204,2.30685,48.8474,"10","7",1604694
@@ -107,7 +107,7 @@
 "http://fr.dbpedia.org/resource/Javel_-_André_Citroën_(métro_de_Paris)","Javel - André Citroën",1614,2.27872,48.8462,"10","15",2565099
 "http://fr.dbpedia.org/resource/Lamarck_-_Caulaincourt_(métro_de_Paris)","Lamarck - Caulaincourt",2012,2.33869,48.8898,"12","18",3154666
 "http://fr.dbpedia.org/resource/Gare_d'Austerlitz_(métro_de_Paris)","Gare d'Austerlitz",907,2.36497,48.8426,"10, 5","5",8375268
-"http://fr.dbpedia.org/resource/Porte_d'Italie_(métro_de_Paris)","Porte d'Italie",14,2.36081,48.8192,"10, 7","13",2486263
+"http://fr.dbpedia.org/resource/Porte_d'Italie_(métro_de_Paris)","Porte d'Italie",14,2.36081,48.8192,"7","13",2486263
 "http://fr.dbpedia.org/resource/Porte_de_Bagnolet_(métro_de_Paris)","Porte de Bagnolet",2304,2.40728,48.8646,"3","20",4487998
 "http://fr.dbpedia.org/resource/Pernety_(métro_de_Paris)","Pernety",402,2.31851,48.8342,"13","14",3348989
 "http://fr.dbpedia.org/resource/Porte_de_Saint-Cloud_(métro_de_Paris)","Porte de Saint-Cloud",703,2.25696,48.8381,"10, 9","16",5284078
@@ -245,7 +245,7 @@
 "http://fr.dbpedia.org/resource/Cambronne_(métro_de_Paris)","Cambronne",202,2.30294,48.8475,"6","15",3097164
 "http://fr.dbpedia.org/resource/Louvre_-_Rivoli_(métro_de_Paris)","Louvre - Rivoli",112,2.34028,48.8611,"1","http://fr.dbpedia.org/resource/1er_arrondissement_de_Paris",2650897
 "http://fr.dbpedia.org/resource/Palais_Royal_-_Musée_du_Louvre_(métro_de_Paris)","Palais Royal - Musée du Louvre",1102,2.33582,48.8628,"1, 7","1",9385220
-"http://fr.dbpedia.org/resource/Place_Monge_(métro_de_Paris)","Place Monge",1205,2.35228,48.8436,"10, 7","5",3057167
+"http://fr.dbpedia.org/resource/Place_Monge_(métro_de_Paris)","Place Monge",1205,2.35228,48.8436,"7","5",3057167
 "http://fr.dbpedia.org/resource/Châtillon_-_Montrouge_(métro_de_Paris)","Châtillon - Montrouge",27,2.30183,48.8105,"13, 15","",6246622
 "http://fr.dbpedia.org/resource/Gaîté_(métro_de_Paris)","Gaîté",4,2.32264,48.8387,"13","14",3165824
 "http://fr.dbpedia.org/resource/Chardon-Lagache_(métro_de_Paris)","Chardon-Lagache",711,2.26621,48.8451,"10","16",651234
@@ -257,7 +257,7 @@
 "http://fr.dbpedia.org/resource/Belleville_(métro_de_Paris)","Belleville",24,2.37695,48.8721,"11, 2","10",11558246
 "http://fr.dbpedia.org/resource/George_V_(métro_de_Paris)","George V",1808,2.30046,48.872,"1","http://fr.dbpedia.org/resource/8e_arrondissement_de_Paris",6302761
 "http://fr.dbpedia.org/resource/Porte_Dauphine_(métro_de_Paris)","Porte Dauphine",1702,2.27677,48.8715,"2","16",2890496
-"http://fr.dbpedia.org/resource/Les_Gobelins_(métro_de_Paris)","Les Gobelins",1413,2.35225,48.8364,"10, 7","5",3835783
+"http://fr.dbpedia.org/resource/Les_Gobelins_(métro_de_Paris)","Les Gobelins",1413,2.35225,48.8364,"7","5",3835783
 "http://fr.dbpedia.org/resource/Opéra_(métro_de_Paris)","Opéra",605,2.33235,48.8706,"3, 7, 8","2",12269711
 "http://fr.dbpedia.org/resource/Assemblée_nationale_(métro_de_Paris)","Assemblée nationale",10,2.32113,48.8607,"12","7",1138571
 "http://fr.dbpedia.org/resource/Daumesnil_(métro_de_Paris)","Daumesnil",13,2.39579,48.8396,"6, 8","12",5195589
@@ -265,7 +265,7 @@
 "http://fr.dbpedia.org/resource/Mairie_d'Ivry_(métro_de_Paris)","Mairie d'Ivry",26,2.38339,48.8111,"7","",2907554
 "http://fr.dbpedia.org/resource/Porte_d'Auteuil_(métro_de_Paris)","Porte d'Auteuil",707,2.25875,48.848,"10","16",687237
 "http://fr.dbpedia.org/resource/Mairie_de_Montrouge_(métro_de_Paris)","Mairie de Montrouge","à renseigner",2.31954,48.8181,"4","",2916681
-"http://fr.dbpedia.org/resource/Tolbiac_(métro_de_Paris)","Tolbiac",1410,2.35768,48.8267,"10, 7","13",3582639
+"http://fr.dbpedia.org/resource/Tolbiac_(métro_de_Paris)","Tolbiac",1410,2.35768,48.8267,"7","13",3582639
 "http://fr.dbpedia.org/resource/Place_de_Clichy_(métro_de_Paris)","Place de Clichy",3113,2.32762,48.8838,"13, 2","8",9356430
 "http://fr.dbpedia.org/resource/Basilique_de_Saint-Denis_(métro_de_Paris)","Basilique de Saint-Denis",1915,2.36085,48.9381,"13","",5393138
 "http://fr.dbpedia.org/resource/Château_Rouge_(métro_de_Paris)","Château Rouge",21,2.34955,48.8867,"4","18",6874733
@@ -287,7 +287,7 @@
 "http://fr.dbpedia.org/resource/Dugommier_(métro_de_Paris)","Dugommier",13,2.38996,48.839,"6","12",2674338
 "http://fr.dbpedia.org/resource/Corvisart_(métro_de_Paris)","Corvisart",1415,2.35051,48.8298,"5, 6","13",2622998
 "http://fr.dbpedia.org/resource/Porte_de_Vanves_(métro_de_Paris)","Porte de Vanves",2702,2.30588,48.8279,"13","14",4464578
-"http://fr.dbpedia.org/resource/Maison_Blanche_(métro_de_Paris)","Maison Blanche",1409,2.35853,48.8222,"10, 7","13",2122847
+"http://fr.dbpedia.org/resource/Maison_Blanche_(métro_de_Paris)","Maison Blanche",1409,2.35853,48.8222,"7","13",2122847
 "http://fr.dbpedia.org/resource/Brochant_(métro_de_Paris)","Brochant",3008,2.3197,48.8909,"13","17",3492868
 "http://fr.dbpedia.org/resource/Villejuif_-_Paul_Vaillant-Couturier_(métro_de_Paris)","Villejuif - Paul Vaillant-Couturier",26,2.36825,48.796,"7","",2261934
 "http://fr.dbpedia.org/resource/Église_de_Pantin_(métro_de_Paris)","Église de Pantin",3,2.41292,48.8936,"5, 9","",3693931
