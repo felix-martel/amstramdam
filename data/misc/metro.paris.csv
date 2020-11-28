@@ -36,7 +36,7 @@
 "http://fr.dbpedia.org/resource/Anatole_France_(métro_de_Paris)","Anatole France",2914,2.28554,48.892,"3","",3866326
 "http://fr.dbpedia.org/resource/École_Militaire_(métro_de_Paris)","École Militaire",10,2.30674,48.8551,"8","7",4443503
 "http://fr.dbpedia.org/resource/Jacques_Bonsergent_(métro_de_Paris)","Jacques Bonsergent",804,2.36061,48.8712,"5","10",2727155
-"http://fr.dbpedia.org/resource/Bercy_(métro_de_Paris)","Bercy",13,2.37958,48.8404,"6","12",5473870
+"http://fr.dbpedia.org/resource/Bercy_(métro_de_Paris)","Bercy",13,2.37958,48.8404,"6, 14","12",5473870
 "http://fr.dbpedia.org/resource/Porte_de_Versailles_(métro_de_Paris)","Porte de Versailles",1606,2.28784,48.8323,"12","http://fr.dbpedia.org/resource/15e_arrondissement_de_Paris",6238822
 "http://fr.dbpedia.org/resource/Porte_de_Clignancourt_(métro_de_Paris)","Porte de Clignancourt",20,2.34478,48.8973,"4","18",8699614
 "http://fr.dbpedia.org/resource/Nationale_(métro_de_Paris)","Nationale",1411,2.36272,48.8332,"6","13",2710907
@@ -56,7 +56,7 @@
 "http://fr.dbpedia.org/resource/Porte_de_Clichy_(métro_de_Paris)","Porte de Clichy",30,2.31365,48.8943,"13","17",4021254
 "http://fr.dbpedia.org/resource/Rambuteau_(métro_de_Paris)","Rambuteau",8,2.35391,48.862,"11","3",4498414
 "http://fr.dbpedia.org/resource/Franklin_D._Roosevelt_(métro_de_Paris)","Franklin D. Roosevelt",1807,2.30831,48.8693,"1, 9","http://fr.dbpedia.org/resource/8e_arrondissement_de_Paris",11890240
-"http://fr.dbpedia.org/resource/Madeleine_(métro_de_Paris)","Madeleine",10,2.32516,48.8701,"12, 8","http://fr.dbpedia.org/resource/8e_arrondissement_de_Paris",7475264
+"http://fr.dbpedia.org/resource/Madeleine_(métro_de_Paris)","Madeleine",10,2.32516,48.8701,"12, 8, 14","http://fr.dbpedia.org/resource/8e_arrondissement_de_Paris",7475264
 "http://fr.dbpedia.org/resource/Cardinal_Lemoine_(métro_de_Paris)","Cardinal Lemoine",1206,2.3512,48.8471,"10","5",1715926
 "http://fr.dbpedia.org/resource/Louise_Michel_(métro_de_Paris)","Louise Michel",2913,2.28807,48.8893,"3","",3594105
 "http://fr.dbpedia.org/resource/La_Muette_(métro_de_Paris)","La Muette",1711,2.27372,48.8577,"9","16",4206204
