@@ -19,7 +19,7 @@
     </div>
 
     <div class="score">
-      <count :value="lastRun.score"></count> pts
+      <count :prefix="isMobile ? '+ ' : ''" :value="lastRun.score"></count> pts
     </div>
 
     <div class="collective-results">
@@ -103,5 +103,39 @@ export default {
 
 .collective-results .pscore {
   font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  .collective-results ul {
+    margin: 0;
+    margin-top: 5px;
+    display: inline-block;
+  }
+
+  .score {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #current-results li {
+    background-color: blue;
+    color: white;
+    padding: 1px 5px;
+  }
+
+  #results {
+    background-color: transparent;
+    color: blue;
+    border: none;
+    text-align: right;
+    padding-top:0;
+  }
+
+  /*.last-score:before {*/
+  /*      content: "+";*/
+  /*      display: inline-block;*/
+
+  /*}*/
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <popup :visible="visible">
     <i class="close fas fa-times" @click="close"></i>
-    <div class="popup-left">
+    <div class="popup-left" v-if="!isMobile">
       <div class="chat">
         <chat-inner></chat-inner>
       </div>
@@ -196,5 +196,18 @@ export default {
 
 .creator-wrapper button {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #popup .popup-main {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      margin: 0;
+  }
+
+  #popup.popup-top {
+      justify-content: start;
+  }
 }
 </style>

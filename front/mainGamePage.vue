@@ -2,7 +2,7 @@
   <div @keyup.alt.enter.prevent="showChatBox">
     <blink-component v-if="blinking"></blink-component>
     <div class="main">
-      <game-footer></game-footer>
+      <game-footer v-if="!isMobile"></game-footer>
       <result-popup></result-popup>
       <div class="column" id="left-column-display">
         <div id="left-corner">
@@ -254,5 +254,31 @@ export default {
   top: 15px;
   right: 15px;
   z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    position: fixed;
+    top: -5px;
+    left: auto;
+    right: -5px;
+    bottom: auto;
+    width: auto;
+  }
+
+  .right-corner {
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    top: auto;
+  }
+
+  .right-corner .box {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+  }
 }
 </style>

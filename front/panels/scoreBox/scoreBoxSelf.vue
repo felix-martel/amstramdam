@@ -137,4 +137,32 @@ export default {
 #high-score-diff.neg-score {
   color: orangered;
 }
+
+@media screen and (max-width: 600px) {
+  #player-name {
+    color: white;
+    background-color: red;
+    margin-right: 9px;
+    padding: 1px 5px;
+
+  }
+
+  #player-name.name:after {
+    color: transparent;
+    display: none;
+  }
+
+  .box .self {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .high-score {
+    display: none;
+  }
+}
 </style>

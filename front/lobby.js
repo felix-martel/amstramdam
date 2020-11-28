@@ -6,14 +6,14 @@ import {LAYERS, getIcon, defaultView} from "./common/map";
 
 import {createApp} from "vue";
 import AmstramdamLobby from "./mainLobbyPage.vue";
-import mobileDetectionPlugin from "./plugins/mobileDetectionPlugin.js";
+import {MobileDetectionMixin} from "./plugins/mobileDetectionPlugin.js";
 
 const USE_VUE = true;
 
 if (USE_VUE) {
     document.addEventListener("DOMContentLoaded", () => {
         const app = createApp(AmstramdamLobby);
-        app.use(mobileDetectionPlugin);
+        app.mixin(MobileDetectionMixin);
 
         app.mount("#amstramdam-lobby");
     });

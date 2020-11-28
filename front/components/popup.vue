@@ -48,4 +48,24 @@ name: "popup",
     width: 100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  #mask {
+    display: none;
+  }
+
+  #popup {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin-bottom: 0;
+    /*z-index: 1002;*/
+  }
+}
 </style>

@@ -13,7 +13,7 @@ import {NamingMixin, EventRegistrationMixin} from "./common/utils";
 //import {$} from "./common/utils";
 import popup from "./components/popup.vue";
 import {CookieHandler, BooleanCookieHandler, IntCookieHandler, CookiePlugin} from "./common/cookie";
-
+import {MobileDetectionMixin} from "./plugins/mobileDetectionPlugin.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const rejectUnauthorized = !params.debug && !params.ssl_disabled;
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Register mixins
     app.mixin(NamingMixin);
     app.mixin(EventRegistrationMixin);
+    app.mixin(MobileDetectionMixin);
 
     // Register components
     app.component("popup", popup);

@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="map-container" :class="{'loading': loading}">
+      <div class="map-container" :class="{'loading': loading}" v-if="!isMobile">
         <div class="map-container-inner">
           <dataset-display :difficulty="difficulty" :points="points"></dataset-display>
 

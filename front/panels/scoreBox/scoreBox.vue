@@ -142,8 +142,47 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-    #launch:not(:disabled) {
-      z-index: 1001;
-    }
+  .nav {
+    display: none;
+  }
+
+  #launch:not(:disabled) {
+    z-index: 1001;
+  }
+
+  .controls button:disabled {
+    display: none;
+  }
+
+  .controls button:not(:disabled) {
+    position: fixed;
+    bottom: 20px;
+    left:50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-color: red;
+    color: red;
+    border-width: 2px;
+  }
+
+
+  #main-info-box {
+    text-align: right;
+    background-color: transparent;
+    color: red;
+    border:none;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  #main-info-box.toggled .self {
+    display: none;
+  }
+
+  #main-info-box:not(.toggled) #player-list {
+    display: none;
+  }
 }
 </style>

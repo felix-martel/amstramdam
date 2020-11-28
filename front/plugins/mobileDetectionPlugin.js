@@ -4,10 +4,18 @@ function detectMobile() {
     return check;
 }
 
-export default {
+export const mobileDetectionPlugin = {
     install: app => {
         const isMobile = detectMobile()
         app.config.globalProperties.$mobile = isMobile;
         console.debug(isMobile ? "Mobile detected" : "Desktop detected");
+    }
+}
+
+export const MobileDetectionMixin = {
+    computed: {
+        isMobile() {
+            return window.matchMedia("(max-width: 600px)").matches;
+        }
     }
 }

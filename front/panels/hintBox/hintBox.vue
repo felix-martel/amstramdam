@@ -1,5 +1,11 @@
 <template>
   <div class="game-info box" id="display-hint">
+    <div class="countdown-container">
+      <linear-countdown :duration="runDuration" class="countdown"
+                        progress="rgba(255, 255, 255, 0.3)"
+                        v-if="isMobile"
+                        :background="'blue'"></linear-countdown>
+    </div>
     <runIndicator/>
     <span id="target">
 <!--      {{ customHint.station }}-->
@@ -7,7 +13,7 @@
         {{ hint.main }}
         <paris-subway-line v-if="currentMap === 'paris_subway'" :line="hint.extra.line"></paris-subway-line>
     </span>
-    <radial-countdown :duration="runDuration"></radial-countdown>
+    <radial-countdown :duration="runDuration" v-if="!isMobile"></radial-countdown>
   </div>
 </template>
 
@@ -16,9 +22,11 @@ import {mapState} from "vuex";
 import radialCountdown from "../../components/radialCountdown.vue";
 import RunIndicator from "./RunIndicator.vue";
 import ParisSubwayLine from "./customHintDisplay/parisSubwayLine.vue";
+import LinearCountdown from "../../components/linearCountdown.vue";
 
 export default {
   components: {
+    LinearCountdown,
     ParisSubwayLine,
     RunIndicator,
     'radial-countdown': radialCountdown,
@@ -76,10 +84,20 @@ export default {
 </script>
 
 <style scoped>
+.countdown-container {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  left: 0;
+  height: 5px;
+  z-index: 1;
+}
+
 .game-info {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 
 #target {
@@ -177,5 +195,9 @@ export default {
   background-color: #62259D;
 }
 
-
+@media screen and (max-width: 600px) {
+  .box {
+    border: none;
+  }
+}
 </style>

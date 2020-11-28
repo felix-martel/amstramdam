@@ -16,7 +16,11 @@ export default {
     unit: {
       type: String,
       default: ""
-    }
+    },
+    prefix: {
+      type: String,
+      default: ""
+    },
   },
   data () {
     return {
@@ -28,6 +32,7 @@ export default {
       separator: "",
       decimal: ",",
       decimalPlaces: this.float ? 2 : 0,
+      prefix: this.prefix,
     });
     this.counter.start();
     // this.counter.update(this.value);
