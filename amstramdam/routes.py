@@ -5,7 +5,7 @@ from amstramdam.game.params_handler import merge_params
 @app.route("/")
 def serve_main():
     return render_template("lobby.html",
-                           datasets=dataloader.datasets)
+                           datasets=dataloader.datasets, games=manager.get_public_games())
 
 @app.route("/games")
 def get_public_games():

@@ -17,6 +17,8 @@ under <a href="http://www.openstreetmap.org/copyright">ODbL</a> and
 <a href="https://simplemaps.com/data/world-cities">World Cities Database</a>
 under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`;
 
+const CREDITS_SHORT = `Credits: <a href="http://stamen.com">Stamen</a> and <a href="https://github.com/felix-martel/amstramdam">more</a>`;
+
 function jitter(X, Y, amount=15){
     x = 2* (Math.random()-0.5);
     y = Math.sqrt(1 - Math.pow(x, 2));
@@ -106,5 +108,5 @@ const defaultBounds = [
 ];
 
 export {
-    LAYERS, CREDITS, getIcon, defaultView, defaultBounds
+    LAYERS, CREDITS, CREDITS_SHORT, getIcon, defaultView, defaultBounds
 }

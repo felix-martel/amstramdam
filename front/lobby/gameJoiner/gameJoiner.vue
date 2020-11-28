@@ -26,7 +26,7 @@ export default {
   name: "gameJoiner",
   data() {
     return {
-      games: [],
+      games: typeof games === "undefined" ? [] : games,
       retries: 0,
       interval: undefined,
       targetGame: "",
@@ -35,7 +35,7 @@ export default {
   },
   components: {GameList},
   created() {
-    this.retrievePublicGames();
+    // this.retrievePublicGames();
     this.waitThenUpdate();
   },
 

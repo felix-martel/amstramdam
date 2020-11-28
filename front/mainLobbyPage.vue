@@ -57,6 +57,7 @@ export default {
   data() {
     return {
       datasets: datasets,
+      games: games,
       map: "",
       points: [],
       loading: true,
@@ -71,11 +72,12 @@ export default {
   methods: {
     getPoints(map) {
       this.loading = true;
-        this.map = map;
-        GET(`/points/${map}`).then(data => {
-          this.points = data.points;
-          this.loading = false;
-        });
+      this.map = map;
+      this.points = [];
+      GET(`/points/${map}`).then(data => {
+        this.points = data.points;
+        this.loading = false;
+      });
     },
 
     setDifficulty(diff) {
