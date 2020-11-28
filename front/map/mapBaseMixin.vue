@@ -50,6 +50,7 @@ export default {
         doubleClickZoom: allowZoom,
         zoomControl: false,
         boxZoom: false,
+        bounceAtZoomLimits: false,
         //worldCopyJump: true,
         ...extraCanvasParams
       });
