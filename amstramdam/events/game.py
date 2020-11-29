@@ -12,17 +12,23 @@ def terminate_game(game_name):
                       leaderboard=game.get_current_leaderboard(),
                       full=game.get_final_results(), # TODO: remove useless data
                   )
-    socketio.emit("status-update",
-                  dict(status=game.status, payload=payload), json=True, broadcast=True,
-                  room=game_name)
-    manager.relaunch_game(game_name)
+    with app.test_request_context("/"):
+        status = game.status
+        print(f"Ending game <{game_name}> (emitting <event:status-update> with status={status})")
+        print(payload)
+        socketio.emit("status-update",
+                      dict(status=status, payload=payload),
+                      json=True,
+                      broadcast=True,
+                      room=game_name)
+        manager.relaunch_game(game_name)
 
 def end_game(game_name, run_id):
     # global game
     game = manager.get_game(game_name)
     if game is None or game.curr_run_id != run_id or game.done:
         return
-    print(f"\n--\nEnding run {game.curr_run_id+1}\n--\n")
+    print(f"\Ending run {game.curr_run_id+1}")
     with app.test_request_context('/'):
         # 1: get current place
         (city_name, hint), (lon, lat) = game.current.place
@@ -48,7 +54,7 @@ def launch_run(game_name, run_id):
     game = manager.get_game(game_name)
     if game is None or game.curr_run_id != run_id:
         return
-    print(f"--\nLaunching run {game.curr_run_id+1} for game <{game_name}>\n--")
+    print(f"Launching run {game.curr_run_id+1} for game <{game_name}>")
     with app.test_request_context('/'):
         hint = game.launch_run()
         payload = dict(hint=hint, current=game.curr_run_id, total=game.n_run)
@@ -98,7 +104,7 @@ def process_guess(data):
     emit("score", res, json=True)
     if done:
         try:
-            print(f"--\nInterrupting run {game.curr_run_id+1}\n--")
+            print(f"Interrupting run {game.curr_run_id+1}\n")
             safe_cancel(timers[game_name])
         except AttributeError:
             pass

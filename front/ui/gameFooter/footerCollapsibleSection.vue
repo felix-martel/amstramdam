@@ -35,7 +35,6 @@ export default {
       const width = getComputedStyle(el).width;
       // el.style.display = "inline-block";
       el.style.maxWidth = 0;
-      console.log("Computed width:", width);
       return width;
     }
   }

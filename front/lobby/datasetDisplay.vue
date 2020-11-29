@@ -1,5 +1,5 @@
 <template>
-  <div id="dataset-display"></div>
+  <div id="dataset-display" :data-size="nPoints"></div>
 </template>
 
 <script>
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       datapoints: undefined,
+      nPoints: 0,
     }
   },
   watch: {
@@ -33,9 +34,11 @@ export default {
       // }
       // this.datapoints.clearLayers();
       if (points.length === 0) { return }
+      let n = 0;
       points.forEach(point => {
         //const options = (point.rank > this.maxRank) ? {extraClasses: ["hidden"]} : {};
         const [lat, lon] = point.coords;
+        if (point.rank <= this.maxRank) n++;
         const marker = this.createMarker({lat, lon},
             "",
             constants.colors.TRUE,
@@ -47,18 +50,22 @@ export default {
         marker.rank = point.data.rank;
         this.datapoints.addLayer(marker);
       });
+      this.nPoints = n;
       this.canvas.flyToBounds(this.datapoints.getBounds());
     },
 
     difficulty(diff) {
       if (this.datapoints) {
+        let n = 0;
         this.datapoints.eachLayer(point => {
           if (point.rank > this.maxRank) {
             point._icon.classList.add("hidden");
           } else {
             point._icon.classList.remove("hidden");
+            n ++;
           }
-        })
+        });
+        this.nPoints = n;
       }
     }
   },
@@ -89,5 +96,12 @@ export default {
   height: 100%;
   width: 100%;
   background-color: black;
+}
+
+#dataset-display:after {
+  content: attr(data-size);
+  display: inline-block;
+  position: absolute;
+  color: red;
 }
 </style>

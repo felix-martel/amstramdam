@@ -298,6 +298,7 @@ export default {
     },
 
     "status-update": function({status, payload}) {
+      console.debug("map@status-change", status);
       if (status === constants.status.CORRECTION){
         this.displayResults(payload.answer, payload.results);
       } else if (status === constants.status.RUNNING || status === constants.status.LAUNCHING) {
