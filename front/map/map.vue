@@ -11,6 +11,7 @@ import constants from "../common/constants";
 import {mapState} from "vuex";
 import mapBaseMixin from "./mapBaseMixin.vue";
 import {summary2, generateFakeSummary} from "../common/debug.js";
+import {CREDITS, CREDITS_SHORT} from "../common/map.js";
 
 export default {
   data() {
@@ -32,15 +33,16 @@ export default {
     this.initialize("mapid", {
       allowZoom: true, // this.params.allow_zoom || this.isMobile,
       bounds: this.params.bbox,
-      maxZoom: canvas => (this.isMobile ? 18 : (canvas.getZoom() + 1))
+      maxZoom: canvas => (this.isMobile ? 18 : (canvas.getZoom() + 1)),
+      credits: this.isNarrow ? CREDITS_SHORT : CREDITS,
     });
     this.canvas.on("click", this.submitGuess);
   },
 
   computed: {
-    isMobile () {
-      return this.$store.getters.isMobile;
-    },
+    // isMobile () {
+    //   return this.$store.getters.isMobile;
+    // },
 
     isRunning () {
       return this.gameStatus === constants.status.RUNNING;

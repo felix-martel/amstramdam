@@ -170,6 +170,10 @@ export default {
   margin-top: 25px;
 }
 
+.slidecontainer {
+  white-space: nowrap;
+}
+
 .diff-slider {
   vertical-align: middle;
 }

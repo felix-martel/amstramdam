@@ -46,6 +46,7 @@ name: "popup",
 @media screen and (max-width: 800px) {
   #popup {
     width: 100%;
+    box-sizing: border-box;
   }
 }
 

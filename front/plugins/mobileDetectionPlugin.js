@@ -16,6 +16,10 @@ export const MobileDetectionMixin = {
     computed: {
         isMobile() {
             return window.matchMedia("(max-width: 600px)").matches;
+        },
+
+        isNarrow() {
+            return window.matchMedia("(max-width: 800px)").matches;
         }
     }
 }
