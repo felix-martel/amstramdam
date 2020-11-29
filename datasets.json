@@ -90,7 +90,8 @@
       {
         "map_id": "france_hard",
         "name": "France",
-        "file": "data/places.france.csv"
+        "file": "data/places.france.csv",
+        "use_hint": false
       },
       {
         "map_id": "<id>_normal",
