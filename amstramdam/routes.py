@@ -15,10 +15,20 @@ def get_public_games():
 def get_all_datasets():
     return jsonify(dataloader.datasets)
 
+@app.route("/builder")
+def serve_builder():
+    if IS_LOCAL:
+        return render_template("builder.html", datasets=dataloader.datasets)
+    return redirect(url_for("serve_main"))
+
+
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
     try:
-        data = dataloader.load(dataset).get_geometry()
+        labels = request.args.get("labels") == "true"
+        print(request.form.get("labels"))
+        print(request.form)
+        data = dataloader.load(dataset).get_geometry(labels=labels)
     except KeyError as e:
         print(f"ERROR: No dataset named '{dataset}' found.")
         print(e)

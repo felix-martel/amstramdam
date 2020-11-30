@@ -164,8 +164,12 @@ class GameMap:
             ]
         return self.bbox
 
-    def get_geometry(self):
-        points = [{"coords": [lat, lon], "data": dict(rank=p)} for lat, lon, p in zip(self.lats, self.lons, self.ranks)]
+    def get_geometry(self, labels=False):
+        points = [{"coords": [lat, lon], "data": dict(rank=p)}
+                  for lat, lon, p in zip(self.lats, self.lons, self.ranks)]
+        if labels:
+            for i, label in enumerate(self.places):
+                points[i]["data"]["name"] = label
         min_rank = min(self.ranks)
         max_rank = max(self.ranks)
         bbox = self.bounding_box()
