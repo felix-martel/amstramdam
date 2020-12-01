@@ -18,6 +18,12 @@ Installation:
 pip install -r requirements.txt
 ```
 
+Création d'un certificat SSL auto-signé pour développer localement en HTTPS (nécessite OpenSSL) : 
+```
+mkdir extra
+openssl req -x509 -newkey rsa:4096 -keyout extra/certif.key -out extra/certif.crt -days 365 -nodes
+```
+
 Lancement du serveur 
 ```
 python server.py [--debug] [--threading]

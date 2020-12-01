@@ -2,3 +2,5 @@
 __pycache__
 img.jpg
 extra
+env/
+node_modules/

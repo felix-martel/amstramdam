@@ -1,0 +1,309 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  background: transparent;
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
+
+button:hover:not(:disabled) {
+  border-color: blue;
+  color: blue;
+}
+
+button.main-button {
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+button.cancel-button:hover:not(:disabled) {
+  border-color: red;
+  color: red;
+}
+
+input, select {
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
+
+input:hover, select:hover {
+  border-color: blue;
+}
+
+input:focus, input:active, select:focus, select:active {
+  outline: none;
+}
+
+option:checked {
+  background-color: blue;
+
+}
+
+
+#game-box .box.hidden {
+  display: none;
+}
+
+#title {
+  position: relative;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#title:after {
+  display: block;
+  content: "beta";
+  color: red;
+  /*font-family: "Courier Prime", monospace;*/
+  position: absolute;
+  left:100%;
+    top: 0;
+    font-size: 0.4em;
+    font-style: normal;
+    /* font-weight: normal; */
+    text-transform: uppercase;
+    /* letter-spacing: 0.3em;*/
+}
+
+
+.ams-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  transition: opacity 0.2s ease-in;
+  position: relative;
+}
+
+.ams-icon.hidden {
+  opacity: 0;
+}
+
+.ams-icon .icon-label {
+  color: white;
+  padding: 3px;
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  white-space: nowrap;
+  background-color: inherit;
+}
+
+.ams-icon.purple {
+  background-color: purple;
+}
+
+.ams-icon.red {
+  background-color: red;
+}
+
+.ams-icon.transparent {
+  background-color: transparent;
+}
+
+.ams-icon.light {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.fa-icon {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slider {
+  height: 5px;
+  border-radius: 2px;
+}
+
+input[type=range]:hover::-webkit-slider-thumb {
+  background: blue !important;
+  color: blue;
+  border-color: blue;
+  -webkit-appearance: none !important;
+}
+
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background: blue !important;
+  color: blue;
+  border-color: blue;
+  -webkit-appearance: none !important;
+}
+
+
+.map-container {
+  height: 220px;
+  width: 100%;
+  /*background-color: black;*/
+  position: relative;
+}
+
+
+
+
+#leaflet {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-color: black;
+}
+
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue {
+  color: blue;
+  margin: 15px 0;
+}
+
+
+
+.game-panel-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+#join-game-button {
+  margin-top: 0 !important;
+}
+
+.vsep {
+  background-color: lightgray;
+  width: 1px;
+}
+
+
+.game-panel {
+  text-align: left;
+  width: 40%;
+}
+
+#player-name[contenteditable="true"]::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: lightgray;
+  content: "\f304"; /**/
+
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+  font-size: 0.7em;
+  position: relative;
+  left: 5px;
+}
+
+#player-name:hover[contenteditable="true"]::after {
+  color: gray;
+}
+
+/*
+.game-panel-container:after {
+    display:inline-block;
+    width:100%;
+    content:'';
+}*/
+
+.new-game {
+  /*padding-right: 25px;*/
+  /*border-right: 1px solid lightgray;*/
+}
+
+#mapid.inverted .leaflet-tile-pane img {
+  filter: invert(1);
+}
+
+#game-creator .fieldset {
+    margin: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+#game-creator .fieldset input[type="number"] {
+  width: 40px;
+}
+
+.main {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  background: black;
+}
+
+.main-title {
+  margin-bottom: 35px;
+}
+
+
+a, a:visited, a:active, a:link {
+  color: blue;
+}
+
+a.low-key, a.low-key:visited, a.low-key:active, a.low-key:link {
+  color: gray;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9em;
+}
+
+a.low-key:hover {
+  color: #2d2d2d;
+}
+
+.leaflet-control-attribution a,
+.leaflet-control-attribution a:visited,
+.leaflet-control-attribution a:active,
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:link {
+  color: blue;
+}
+
+
+
+
+
+.progress-container {
+  display: inline-flex;
+  position: relative;
+  padding: 0 10px;
+  height: 20px;
+  width: 20px;
+
+}
+.progress-inner {
+  height: 18px;
+  width: 18px;
+
+}
+
+
+
+
+
+
+.box {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  /*z-index: 1000;*/
+  border: 5px solid blue;
+}
+
+.box.no-border {
+  border: none;
+}

@@ -1,0 +1,31 @@
+,city,lat,lng,country,iso2,admin,capital,population,population_proper
+0,Windhoek,-22.57,17.083610999999998,Namibia,,Khomas,primary,268132.0,262796.0
+1,Rundu,-17.933332999999998,19.766667,Namibia,,Kavango East,admin,58172.0,28798.0
+2,Walvisbaai,-22.9575,14.505278,Namibia,,Erongo,,52058.0,46951.0
+3,Swakopmund,-22.683332999999998,14.533332999999999,Namibia,,Erongo,admin,29491.0,25047.0
+4,Rehoboth,-23.316667000000002,17.083333,Namibia,,Hardap,,25219.0,21377.0
+5,Ongwediva,-17.783333,15.766667000000002,Namibia,,Oshana,,25032.0,9654.0
+6,Katima Mulilo,-17.5,24.266667,Namibia,,Zambezi,admin,25027.0,18470.0
+7,Otjiwarongo,-20.45,16.65,Namibia,,Otjozondjupa,admin,24815.0,21224.0
+8,Grootfontein,-19.566667000000002,18.116667,Namibia,,Otjozondjupa,,24099.0,14200.0
+9,Okahandja,-21.983333,16.916667,Namibia,,Otjozondjupa,,20879.0,18503.0
+10,Keetmanshoop,-26.583333000000003,18.133333,Namibia,,//Karas,admin,18039.0,15608.0
+11,Gobabis,-22.45,18.966667,Namibia,,Omaheke,admin,16321.0,16321.0
+12,Lüderitz,-26.648056,15.159444,Namibia,,//Karas,,15137.0,13295.0
+13,Tsumeb,-19.233333,17.716667,Namibia,,Oshikoto,admin,14959.0,12190.0
+14,Mariental,-24.633333,17.966667,Namibia,,Hardap,admin,13380.0,11960.0
+15,Oshikango,-17.4,15.883332999999999,Namibia,,Ohangwena,,12423.0,2658.0
+16,Omaruru,-21.433332999999998,15.933333,Namibia,,Erongo,,11547.0,11547.0
+17,Bethanie,-26.483333000000002,17.15,Namibia,,//Karas,,10363.0,5881.0
+18,Usakos,-22.0,15.6,Namibia,,Erongo,,9147.0,1640.0
+19,Oranjemund,-28.55,16.433332999999998,Namibia,,//Karas,,8496.0,5950.0
+20,Karibib,-21.933332999999998,15.833332999999998,Namibia,,Erongo,,6898.0,6898.0
+21,Outjo,-20.116667,16.15,Namibia,,Kunene,,6557.0,6170.0
+22,Karasburg,-28.016666999999998,18.75,Namibia,,//Karas,,6054.0,4089.0
+23,Opuwo,-18.066667000000002,13.85,Namibia,,Kunene,admin,4857.0,4857.0
+24,Otavi,-19.65,17.333333,Namibia,,Otjozondjupa,,4562.0,4562.0
+25,Maltahöhe,-24.833333,16.983333,Namibia,,Hardap,,2329.0,2329.0
+26,Outapi,-17.5,14.983332999999998,Namibia,,Omusati,admin,,
+27,Oshakati,-17.783333,15.683333,Namibia,,Oshana,admin,,
+28,Nkurenkuru,-17.616667,18.6,Namibia,,Kavango West,admin,,
+29,Eenhana,-17.466667,16.333333,Namibia,,Ohangwena,admin,,

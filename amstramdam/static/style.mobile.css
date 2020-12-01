@@ -1,0 +1,97 @@
+@media screen and (max-width: 600px) {
+  /*#popup-container {*/
+  /*  position: fixed;*/
+  /*  top: 0;*/
+  /*  left: 0;*/
+  /*  right: 0;*/
+  /*  bottom: 0;*/
+  /*  overflow: auto;*/
+  /*    z-index: 1001;*/
+  /*}*/
+    .main {
+        overflow-y: scroll;
+    }
+
+
+  #popup .popup-main {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      margin: 0;
+  }
+
+  #popup.popup-top {
+      justify-content: start;
+  }
+
+  #chat-box, #chat-box-popup {
+      display: none;
+  }
+
+  .game-panel-container {
+      flex-wrap: wrap;
+  }
+
+  .game-panel {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+  }
+
+  .vsep {
+    width: 100%;
+    margin-top: 20px;
+      margin-bottom: 5px;
+    height: 1px;
+  }
+
+
+
+  .box {
+      padding: 10px;
+  }
+
+
+
+
+
+
+
+  /*.total-score {*/
+      /*text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;*/
+  /*}*/
+
+
+
+
+
+
+  .leaflet-control-attribution {
+      display: none;
+  }
+
+  /*#game-sharing-link {*/
+  /*    right: 0;*/
+  /*    display: none;*/
+  /*}*/
+
+
+
+#popup table {
+    font-size: 1.1em;
+}
+
+#popup table .player-score-deets {
+    display: none;
+}
+
+#results .title, #results .deets, #results .distance {
+    display: none;
+}
+
+#left-column-display.with-results #main-info-box {
+    /*display: none;*/
+}
+
+}

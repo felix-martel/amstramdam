@@ -1,0 +1,124 @@
+[
+  {
+    "group": null,
+    "maps": [
+      {
+        "map_id": "world_capitals",
+        "name": "Capitales du monde",
+        "file": "data/world_capitals.csv",
+        "use_hint": true
+      },
+      {
+        "map_id": "world",
+        "name": "Villes du monde",
+        "file": "data/places.world.csv",
+        "use_hint": true
+      },
+      {
+        "map_id": "world_capitals-no-hint",
+        "name": "Capitales (sans pays)",
+        "file": "data/world_capitals.csv",
+        "use_hint": false
+      },
+      {
+        "map_id": "XX",
+        "name": "Evénements du XXème siècle",
+        "file": "data/historic/1900_handpicked.csv",
+        "use_hint": false
+      }
+    ]
+  },
+  {
+    "group": "France",
+    "maps": [
+      {
+        "map_id": "region_fr",
+        "name": "Régions naturelles",
+        "file": "data/france.region.csv",
+        "use_hint": false,
+        "harshness": 0.75
+      },
+      {
+        "map_id": "aoc_fr",
+        "name": "Spécialités françaises",
+        "file": "data/food/food.csv",
+        "use_hint": false
+      },
+      {
+        "map_id": "cheese_fr",
+        "name": "Fromages de France",
+        "file": "data/food/cheese.csv",
+        "use_hint": false
+      },
+      {
+        "map_id": "wine_fr",
+        "name": "Vins de France",
+        "file": "data/food/wine.csv",
+        "use_hint": false
+      },
+      {
+        "map_id": "paris_subway",
+        "name": "Métro parisien",
+        "file": "data/misc/metro.paris.csv",
+        "col_place": "place",
+        "col_hint":  "ligne",
+        "col_lon": "lon",
+        "col_rank": "transit",
+        "use_hint": true,
+        "harshness": 0.3
+      }
+    ]
+  },
+  {
+    "group": "Facile",
+    "maps": [
+      {
+        "map_id": "france_easy",
+        "name": "France",
+        "file": "data/all/FR.csv"
+      },
+      {
+        "map_id": "<id>_easy",
+        "name": "<name>",
+        "file": "data/regions/*_easy.csv"
+      }
+    ]
+  },
+  {
+    "group": "Difficile",
+    "maps": [
+      {
+        "map_id": "france_hard",
+        "name": "France",
+        "file": "data/places.france.csv",
+        "use_hint": false
+      },
+      {
+        "map_id": "<id>_normal",
+        "name": "<name>",
+        "file": "data/regions/*_normal.csv"
+      }
+    ]
+  },
+  {
+    "group": "Impitoyable",
+    "maps": [
+      {
+        "map_id": "<id>_hard",
+        "name": "<name>",
+        "file": "data/regions/*_hard.csv"
+      }
+    ]
+  },
+  {
+    "group": "Par pays",
+    "maps": [
+      {
+        "map_id": "<id>",
+        "name": "<name>",
+        "file": "data/all/*.csv",
+        "limit_size": 1000
+      }
+    ]
+  }
+]
