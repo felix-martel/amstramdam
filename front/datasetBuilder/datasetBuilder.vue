@@ -81,7 +81,7 @@ export default {
         {scale: 2, name: "Pays"},
       ],
       selected: [undefined, undefined],
-      selectedGroups: "01234",
+      selectedGroups: "0123456",
       datasets: [datasets[5]],
     }
   },
@@ -158,6 +158,11 @@ export default {
     },
 
     select(scale, index) {
+      if ((this.selected[0] === scale) && (this.selected[1] === index)) {
+        this.selected = [undefined, undefined];
+        this.selectedGroups = "0123456";
+        return;
+      }
       this.selected = [scale, index];
       this.selectedGroups = ""
       const minGid = scale;
@@ -292,7 +297,8 @@ button.selected {
 }
 
 #map[data-group*="5"] .ams-icon.g5 {
-  display: none;
+  opacity: 0.6;
+  background-color: gray;
 }
 
 /*.world-0 .ams-icon:not(.g1) {*/
