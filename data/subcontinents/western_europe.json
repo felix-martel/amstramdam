@@ -1,0 +1,40 @@
+{
+  "name": "Europe de l'Ouest",
+  "scale": "continent",
+  "col_hint": "country_name",
+  "filters": [
+    {
+      "column": "iso2",
+      "values": [
+        "AD",
+        "AT",
+        "BE",
+        "DK",
+        "FI",
+        "FR",
+        "JE",
+        "IM",
+        "GB",
+        "GG",
+        "DE",
+        "GI",
+        "GR",
+        "VA",
+        "IS",
+        "IE",
+        "IT",
+        "LI",
+        "LU",
+        "MT",
+        "MC",
+        "NL",
+        "NO",
+        "PT",
+        "SM",
+        "ES",
+        "SE",
+        "CH"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Océanie",
+  "filters": [
+    {
+      "column": "iso2",
+      "values": [
+        "AS", "AU", "SB", "CK", "FJ", "PF", "KI", "GU", "NR", "NC", "VU", "NZ", "NU", "NF", "MP", "UM", "FM", "MH",
+        "PW", "PG", "PN", "TK", "TO", "TV", "WF", "WS", "XX"
+      ]
+    }
+  ]
+}

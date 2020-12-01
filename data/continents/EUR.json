@@ -1,0 +1,14 @@
+{
+  "filters": [
+    {
+      "column": "iso2",
+      "values": [
+        "AL", "AD", "AT", "AM", "BE", "BA", "BG", "BY", "HR", "CY", "CZ",
+        "DK", "EE", "FO", "FI", "AX", "FR", "GE", "JE", "IM", "GB", "GG",
+        "DE", "GI", "GR", "VA", "HU", "IS", "IE", "IT", "LV", "LI", "LT",
+        "LU", "MT", "MC", "MD", "ME", "NL", "NO", "PL", "PT", "RO", "SM",
+        "RS", "SK", "SI", "ES", "SJ", "SE", "CH", "UA", "MK"
+      ]
+    }
+  ]
+}

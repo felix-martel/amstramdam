@@ -1,0 +1,122 @@
+# Countries
+Afghanistan	AFG
+Afrique du Sud	ZA
+Albanie	AL
+Algérie	DZ
+Allemagne	DE
+Angola	AO
+Arabie Saoudite	SAU
+Argentine	AR
+Australie	AU
+Autriche	AT
+Azerbaïdjan	AZ
+Biélorussie	BY
+Belgique	BE
+Bolivie	BO
+Bosnie-Herzégovine	BA
+Botswana	BW
+Brésil	BR
+Bulgarie	BG
+Burkina Faso	BF
+Burundi	BI
+Cambodge	KH
+Cameroun	CM
+Canada	CA
+Chili	CL
+Chine	CN
+Colombie	CO
+Congo Kinshasa	CD
+Corée du Sud	KR
+Corée du Nord	KP
+Côte d'Ivoire	CI
+Croatie	HR
+Cuba	CU
+Danemark	DK
+République Dominicaine	DO
+Egypte	EG
+Equateur	EC
+Espagne	ES
+Etats-Unis d'Amérique	US
+Ethiopie	ET
+Finlande	FI
+France	FR
+Grèce	GR
+Guatemala	GT
+Guinée	GN
+Hongrie	HU
+Inde	IN
+Indonésie	ID
+Iran	IR
+Iraq	IQ
+Irlande	IE
+Italie	IT
+Japon	JP
+Jordanie	JO
+Kazakhstan	KZ
+Kenya	KE
+Kirghizistan	KG
+Laos	LA
+Lettonie	LV
+Liban	LB
+Libye	LY
+Lituanie	LT
+Luxembourg	LU
+Madagascar	MG
+Malaisie	MY
+Mali	ML
+Mexique	MX
+Moldavie	MD
+Mongolie	MN
+Monténégro	ME
+Mozambique	MZ
+Myanmar	MM
+Namibie	NAM
+Niger	NE
+Nigéria	NG
+Norvège	NO
+Nouvelle-Zélande	NZ
+Ouganda	UG
+Ouzbékistan	UZ
+Pakistan	PK
+Panama	PA
+Paraguay	PY
+Pays-Bas	NL
+Pérou	PE
+Philippines	PH
+Pologne	PL
+Portugal	PT
+Syrie	SY
+Roumanie	RO
+Royaume-Uni	GB
+Russie	RU
+Serbie	RS
+Slovaquie	SK
+Slovénie	SI
+Somalie	SO
+Soudan	SD
+Sri Lanka	LK
+Suède	SE
+Suisse	CH
+Tadjikistan	TJ
+Taïwan	TW
+Tanzanie	TZ
+Tchad	TD
+Thaïlande	TH
+Tunisie	TN
+Turquie	TR
+Ukraine	UA
+Uruguay	UY
+Venezuela	VE
+Viet Nam	VN
+Yémen	YE
+Zambie	ZM
+# Continents
+Afrique	AFR
+Asie	ASI
+Amérique du Nord	NAM
+Amérique du Sud	SAM
+Europe	EUR
+Océanie	OCE
+Antarctique	ANT
+# Other
+Monde entier	WORLD

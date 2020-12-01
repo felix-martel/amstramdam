@@ -58,7 +58,7 @@ export default {
     return {
       datasets: datasets,
       games: games,
-      map: "",
+      map: {map_id: ""},
       points: [],
       loading: true,
       difficulty: 1,
@@ -74,7 +74,7 @@ export default {
       this.loading = true;
       this.map = map;
       this.points = [];
-      GET(`/points/${map}`).then(data => {
+      GET(`/points/${map.map_id}`).then(data => {
         this.points = data.points;
         this.loading = false;
       });

@@ -1,5 +1,0 @@
-Asie	AS
-Europe	EU
-Afrique	AF
-Amérique du Nord	NA
-Amérique du Sud	SA

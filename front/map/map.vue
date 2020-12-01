@@ -36,6 +36,7 @@ export default {
       maxZoom: canvas => (this.isMobile ? 18 : (canvas.getZoom() + 1)),
       credits: this.isNarrow ? CREDITS_SHORT : CREDITS,
     });
+    this.canvas.on("mousedown", this.ctrlClickMap);
     this.canvas.on("click", this.submitGuess);
   },
 
@@ -194,6 +195,13 @@ export default {
       })
     },
 
+    ctrlClickMap(e){
+      if (e.originalEvent.ctrlKey) {
+        this.submitGuess(e);
+        e.originalEvent.preventDefault();
+      }
+    },
+
     submitGuess(e) {
       const coords = e.latlng;
       const data = {
@@ -298,7 +306,6 @@ export default {
     },
 
     "status-update": function({status, payload}) {
-      console.debug("map@status-change", status);
       if (status === constants.status.CORRECTION){
         this.displayResults(payload.answer, payload.results);
       } else if (status === constants.status.RUNNING || status === constants.status.LAUNCHING) {

@@ -26,8 +26,6 @@ def serve_builder():
 def get_dataset_geometry(dataset):
     try:
         labels = request.args.get("labels") == "true"
-        print(request.form.get("labels"))
-        print(request.form)
         data = dataloader.load(dataset).get_geometry(labels=labels)
     except KeyError as e:
         print(f"ERROR: No dataset named '{dataset}' found.")
@@ -38,6 +36,7 @@ def get_dataset_geometry(dataset):
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
+    print(request.form)
     params = merge_params(request.form)
     print(params)
 
@@ -45,7 +44,7 @@ def create_new_game():
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],
                                      is_public=params["public"],
-                                     allow_zoom=params["zoom"],
+                                     allow_zoom=False, #params["zoom"],
                                      precision_mode=params["precision_mode"],
                                      map=params["map"], wait_time=params["wait_time"])
     print(manager.get_status())
@@ -66,6 +65,7 @@ def serve_game(name):
             wait_time=game.wait_time,
             bbox=game.bbox,
             ssl_disabled=CONF["disableSSL"],
+            difficulty=game.difficulty,
             allow_zoom=game.allow_zoom,
             precision_mode=game.precision_mode,
             duration=game.duration)

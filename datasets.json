@@ -5,26 +5,45 @@
       {
         "map_id": "world_capitals",
         "name": "Capitales du monde",
-        "file": "data/world_capitals.csv",
-        "use_hint": true
+        "base_file": "data/capitals.world.csv",
+        "col_lon": "lon",
+        "col_hint": "country",
+        "col_place": "city",
+        "default_level": 2,
+        "customLevels": ["Facile", "Moyen", "Difficile"]
       },
       {
-        "map_id": "world",
         "name": "Villes du monde",
-        "file": "data/places.world.csv",
-        "use_hint": true
+        "map_id": "world",
+        "base_file": "data/places.world.csv",
+        "scale": 0,
+        "col_hint": "country_name"
       },
       {
-        "map_id": "world_capitals-no-hint",
-        "name": "Capitales (sans pays)",
-        "file": "data/world_capitals.csv",
-        "use_hint": false
+        "map_id": "europe",
+        "name": "Villes d'Europe",
+        "spec_file": "data/continents/EUR.json",
+        "base_file": "data/places.world.csv",
+        "scale": 1,
+        "col_hint": "country_name"
+      },
+      {
+        "map_id": "france",
+        "name": "Villes de France",
+        "base_file": "data/places.france.csv",
+        "default_level": 2,
+        "weights": [
+          [1], [1, 1, 0.1], [1, 1, 1]
+        ],
+        "use_hint": false,
+        "customLevels": ["Enfantin", "Normal", "Sans pitié"]
       },
       {
         "map_id": "XX",
         "name": "Evénements du XXème siècle",
-        "file": "data/historic/1900_handpicked.csv",
-        "use_hint": false
+        "base_file": "data/historic/XX.csv",
+        "use_hint": false,
+        "available_levels": 1
       }
     ]
   },
@@ -34,79 +53,88 @@
       {
         "map_id": "region_fr",
         "name": "Régions naturelles",
-        "file": "data/france.region.csv",
+        "base_file": "data/france/france.region.csv",
         "use_hint": false,
-        "harshness": 0.75
+        "harshness": 0.75,
+        "available_levels": 1
       },
       {
         "map_id": "aoc_fr",
         "name": "Spécialités françaises",
-        "file": "data/food/food.csv",
-        "use_hint": false
+        "base_file": "data/france/food.csv",
+        "use_hint": false,
+        "available_levels":  1
       },
       {
         "map_id": "cheese_fr",
         "name": "Fromages de France",
-        "file": "data/food/cheese.csv",
-        "use_hint": false
+        "base_file": "data/france/cheese.csv",
+        "use_hint": false,
+        "available_levels":  1
       },
       {
         "map_id": "wine_fr",
         "name": "Vins de France",
-        "file": "data/food/wine.csv",
-        "use_hint": false
+        "base_file": "data/france/wine.csv",
+        "use_hint": false,
+        "available_levels":  1
       },
       {
         "map_id": "paris_subway",
         "name": "Métro parisien",
-        "file": "data/misc/metro.paris.csv",
+        "base_file": "data/france/metro.paris.csv",
         "col_place": "place",
         "col_hint":  "ligne",
         "col_lon": "lon",
         "col_rank": "transit",
         "use_hint": true,
-        "harshness": 0.3
+        "harshness": 0.3,
+        "autorank": {
+          "column": "transit",
+          "reverse": false,
+          "ranks": [40, 100, "all"]
+        },
+        "weights": [
+          [1], [1, 1], [1, 1, 1]
+        ],
+        "default_level": 2,
+        "customLevels": ["Facile", "Normal", "Difficile"]
       }
     ]
   },
   {
-    "group": "Facile",
+    "group": "Capitales",
     "maps": [
-      {
-        "map_id": "france_easy",
-        "name": "France",
-        "file": "data/all/FR.csv"
+       {
+        "map_id": "world_g",
+        "name": "Capitales du monde",
+        "base_file": "data/capitals.world.csv",
+        "col_lon": "lon",
+        "col_hint": "country",
+        "col_place": "city",
+        "default_level": 2
       },
       {
-        "map_id": "<id>_easy",
-        "name": "<name>",
-        "file": "data/regions/*_easy.csv"
+        "map_id": "continent_<id>",
+        "name": "Capitales d'<name>",
+        "base_file": "data/capitals/*.csv",
+        "col_lon": "lon",
+        "col_hint": "country",
+        "col_place": "city",
+        "available_levels": 1
       }
     ]
   },
   {
-    "group": "Difficile",
+    "group": "Par continent",
     "maps": [
       {
-        "map_id": "france_hard",
-        "name": "France",
-        "file": "data/places.france.csv",
-        "use_hint": false
-      },
-      {
-        "map_id": "<id>_normal",
+        "map_id": "<id>_grouped",
         "name": "<name>",
-        "file": "data/regions/*_normal.csv"
-      }
-    ]
-  },
-  {
-    "group": "Impitoyable",
-    "maps": [
-      {
-        "map_id": "<id>_hard",
-        "name": "<name>",
-        "file": "data/regions/*_hard.csv"
+        "spec_file": "data/continents/*.json",
+        "base_file": "data/places.world.csv",
+        "scale": 1,
+        "col_hint": "country_name"
       }
     ]
   },
@@ -114,10 +142,12 @@
     "group": "Par pays",
     "maps": [
       {
-        "map_id": "<id>",
-        "name": "<name>",
-        "file": "data/all/*.csv",
-        "limit_size": 1000
+        "mtype": "__countries__",
+        "map_id": "country_<id>",
+        "country_col": "iso2",
+        "base_file": "data/places.world.csv",
+        "suggested": ["CA", "US", "BE", "IT", "ES", "GB", "DE", "RU", "CN", "DZ", "BR", "CD", "ZA", "JP", "TR"],
+        "customLevels": ["Facile", "Normal", "Difficile"]
       }
     ]
   }

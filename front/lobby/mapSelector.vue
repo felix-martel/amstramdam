@@ -30,17 +30,28 @@ export default {
   emits: ["select", "update:modelValue"],
   methods: {
     updateSelected(e) {
-      this.$emit("update:modelValue", e.target.value);
+      const mid = e.target.value;
+      this.$emit("update:modelValue", this.valueMapper[mid] || mid);
     }
   },
 
   created() {
-    this.$emit("update:modelValue", this.defaultMap.map_id);
+    this.$emit("update:modelValue", this.defaultMap);
   },
 
   computed: {
     defaultMap () {
       return this.datasets[0].maps[0]
+    },
+
+    valueMapper() {
+      const o = {};
+      this.datasets.forEach(group => {
+        group.maps.forEach(dataset => {
+          o[dataset.map_id] = dataset;
+        })
+      })
+      return o;
     }
   },
 }

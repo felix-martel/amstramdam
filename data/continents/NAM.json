@@ -1,0 +1,13 @@
+{
+  "name": "Amérique du Nord",
+  "filters": [
+    {
+      "column": "iso2",
+      "values": [
+        "AG", "BS", "BB", "BM", "BZ", "VG", "CA", "KY", "CR", "CU", "DM", "DO", "SV", "GL", "GD", "GP", "GT", "HT",
+        "HN", "JM", "MQ", "MX", "MS", "AN", "CW", "AW", "SX", "BQ", "NI", "UM", "PA", "PR", "BL", "KN", "AI", "LC",
+        "MF", "PM", "VC", "TT", "TC", "US", "VI"
+      ]
+    }
+  ]
+}

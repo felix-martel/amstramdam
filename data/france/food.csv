@@ -1,0 +1,130 @@
+,city,classification,type,admin,lng,lat
+0,Abondance,0,Fromage,Rhône-Alpes,6.4642346880287995,46.04511005056401
+1,Abricots rouges du Roussillon,0,Autre,Languedoc-Roussillon,2.779033714235,42.65807981465
+2,Ail violet de Cadours,0,Autre,Midi-Pyrénées,1.016499725754,43.68450050144
+3,Vin d'Arbois,0,Vin,Franche-Comté,5.796378432279999,46.91686188325
+4,Armagnac,0,Alcool,Midi-Pyrénées,0.1614620958144286,43.793996013800005
+5,Vin de Bandol,0,Vin,Provence-Alpes-Côte d'Azur,5.770170653516666,43.2126084502
+6,Banon,0,Fromage,Provence-Alpes-Côte d'Azur,5.886612585961873,44.17496656661876
+7,Béa du Roussillon,0,Autre,Languedoc-Roussillon,2.79565359118,42.6776853173
+8,Beaufort,0,Fromage,Rhône-Alpes,6.509076616560625,45.50935585480626
+9,Beaujolais,0,Vin,Rhône-Alpes,4.600285340116667,46.014536738983345
+10,Beaumes de Venise,0,Vin,Provence-Alpes-Côte d'Azur,5.06883398959,44.144844139300005
+11,Beurre Charentes-Poitou,0,Autre,Poitou-Charentes,-0.5598785881868396,46.34822163564572
+12,Beurre de Bresse,0,Autre,Rhône-Alpes,5.194529822338333,46.51816703569168
+13,Bleu d'Auvergne,0,Fromage,Auvergne,2.9476437856194737,45.1740824883921
+14,Bleu de Gex,0,Fromage,Rhône-Alpes,5.824868544093077,46.336614046507705
+15,Bleu des Causses,0,Fromage,Midi-Pyrénées,2.6740896028313053,44.37441595583262
+16,Bleu du Vercors-Sassenage,0,Fromage,Rhône-Alpes,5.2954797814450005,44.9228836635
+17,Bœuf de Charolles,0,Autre,Rhône-Alpes,4.217149235552402,46.512000603924
+18,Bœuf Fin Gras du Mézenc,0,Autre,Rhône-Alpes,4.096033081812728,44.8883075025091
+19,Bordeaux,0,Vin,Aquitaine,-0.2783144136210704,44.85690134567082
+20,Bourgogne aligoté,0,Vin,Bourgogne,4.666878016964444,46.72305484057778
+21,Brie de Meaux,0,Fromage,Champagne-Ardenne,3.3432508553613487,48.70342212160675
+22,Brie de Melun,0,Fromage,Champagne-Ardenne,2.9836462610043246,48.6057167875135
+23,Brocciu,0,Fromage,Corse,9.14601576363,42.527863752100004
+24,Brousse du Rove,0,Fromage,Provence-Alpes-Côte d'Azur,5.489331422456668,43.494200408066675
+25,Cahors,0,Vin,Midi-Pyrénées,1.1472613313,44.4210869463
+26,Calvados Pays d'Auge,0,Alcool,Basse-Normandie,0.2306435385786411,49.08486443220444
+27,Camembert,0,Fromage,Basse-Normandie,-0.5234734740260448,48.95005905462236
+28,Cantal,0,Fromage,Auvergne,2.886211255711,45.34679546053668
+29,Chabichou,0,Fromage,Poitou-Charentes,0.07821368564020714,46.39771030210715
+30,Chablis,0,Vin,Bourgogne,3.76931059079,47.8433599438
+31,Champagne,0,Vin,Picardie,3.897491567021613,48.87163584617098
+32,Chaource,0,Fromage,Champagne-Ardenne,3.8842429703846153,48.15914837965386
+33,Charolais,0,Fromage,Auvergne,4.2252084620279176,46.48872375945
+34,Chasselas de Moissac,0,Autre,Midi-Pyrénées,1.3569697203,44.116876625500005
+35,Châtaigne d'Ardèche,0,Autre,Rhône-Alpes,4.2980193159962505,44.66634387626251
+36,Chavignol,0,Fromage,Centre,2.64925612437,47.24277578127778
+37,Chevrotin,0,Fromage,Rhône-Alpes,6.423176691477141,45.951462825785725
+38,Cidre Cotentin,0,Alcool,Basse-Normandie,-1.41110695708125,49.29546358021249
+39,Cidre de Cornouaille,0,Alcool,Bretagne,-4.055387869815,48.113044098850004
+40,Clairette du Languedoc,0,Alcool,Languedoc-Roussillon,3.38710687452,43.69577524979999
+41,Coco de Paimpol,0,Autre,Bretagne,-3.1655273437050004,48.712261650200006
+42,Cognac,0,Alcool,Poitou-Charentes,-0.6154420370588316,45.85043352494832
+43,Comté,0,Fromage,Rhône-Alpes,6.012493475927113,46.843067089157714
+44,Coppa di Corsica,0,Autre,Corse,9.14601576363,42.527863752100004
+45,Corbières,0,Vin,Languedoc-Roussillon,2.99265326968,42.9660377916
+46,Costières de Nîmes,0,Vin,Languedoc-Roussillon,4.24246060862,43.658597596099995
+47,Crémant de Limoux,0,Vin,Languedoc-Roussillon,2.1714951084966665,43.016585808
+48,Crémant de Loire,0,Vin,Centre,-0.2965112363180217,47.249147646747815
+49,Crème de Bresse,0,Autre,Rhône-Alpes,5.194529822338333,46.51816703569168
+50,Crème d'Isigny,0,Autre,Basse-Normandie,-1.1402613430829474,49.24145489174738
+51,Crozes-Hermitage,0,Vin,Rhône-Alpes,4.85709493142,45.018656471099995
+52,Dinde de Bresse,0,Autre,Rhône-Alpes,5.230853304051818,46.64927896254545
+53,Domfront,0,Alcool,Basse-Normandie,-0.730896568532,48.53794680337499
+54,Eau-de-vie de cidre de Bretagne,0,Alcool,Bretagne,-2.202165563232632,48.03529582332105
+55,Entre-deux-Mers,0,Vin,Aquitaine,-0.14330971790848002,44.684506794399994
+56,Epoisses,0,Fromage,Bourgogne,4.652087112999091,47.444994574127286
+57,Farine de châtaigne,0,Autre,Corse,9.358471820539998,42.424182408200004
+58,Figue de Solliès,0,Autre,Provence-Alpes-Côte d'Azur,6.069655912015,43.144937918466674
+59,Fine de Bourgogne,0,Alcool,Bourgogne,4.631632771902856,46.455455316321434
+60,Fitou,0,Vin,Languedoc-Roussillon,2.99265326968,42.9660377916
+61,Floc de Gascogne,0,Alcool,Midi-Pyrénées,0.1614620958144286,43.793996013800005
+62,Fourme d'Ambert,0,Fromage,Auvergne,3.1763485851554165,45.64073089147916
+63,Fourme de Montbrison,0,Fromage,Rhône-Alpes,3.7865914440750004,45.76559386214999
+64,Haut Armagnac,0,Alcool,Midi-Pyrénées,0.1614620958144286,43.793996013800005
+65,Huile de noix du Périgord,0,Autre,Limousin,1.239837674506793,45.01874401964139
+66,Olive de Nyons,0,Autre,Rhône-Alpes,5.2104511538275,44.333786850625
+67,Huile essentielle de lavande de Haute-Provence,0,Autre,Provence-Alpes-Côte d'Azur,5.858940257021817,44.30989486169697
+68,Jambon du Kintoa,0,Autre,Aquitaine,-0.9518866440880002,43.37155255413333
+69,Jambon noir de Bigorre,0,Autre,Midi-Pyrénées,0.38716681578801504,43.1056820816
+70,Kirsch de Fougerolles,0,Alcool,Franche-Comté,6.401108079839999,47.94371064226665
+71,Laguiole,0,Fromage,Midi-Pyrénées,3.050941413499092,44.67483581488183
+72,Langres,0,Fromage,Champagne-Ardenne,5.350264744551666,47.86463081668334
+73,Lentille verte du Puy,0,Autre,Auvergne,3.8867079130742863,44.99610907512857
+74,Les Baux de Provence,0,Vin,Provence-Alpes-Côte d'Azur,4.80218162499,43.745808725
+75,Livarot,0,Fromage,Basse-Normandie,0.23147413138822384,49.09213859699091
+76,Lonzu,0,Autre,Corse,9.14601576363,42.527863752100004
+77,Lucques du Languedoc,0,Autre,Languedoc-Roussillon,3.2171167243718184,43.512623551672725
+78,Macvin du Jura,0,Alcool,Franche-Comté,5.636944973826998,46.76351996019
+79,Marc de Bourgogne,0,Alcool,Bourgogne,4.631632771902856,46.455455316321434
+80,Marc du Jura,0,Alcool,Franche-Comté,5.637965680395454,46.82832777096364
+81,Maroilles,0,Fromage,Picardie,3.864706688809999,49.94371460471818
+82,Médoc,0,Vin,Aquitaine,-0.8104232044116667,45.13533756836667
+83,Mele di Corsica,0,Autre,Corse,9.14601576363,42.527863752100004
+84,Miel de sapin des Vosges,0,Autre,Franche-Comté,6.677277509978497,48.15282357547251
+85,Minervois,0,Vin,Languedoc-Roussillon,2.6899364547699998,43.31747133849999
+86,Mirabelle de Lorraine,0,Autre,Lorraine,5.869489098904546,48.63260109546365
+87,Mont d'Or,0,Fromage,Franche-Comté,6.480546773479168,46.96768657891668
+88,Morbier,0,Fromage,Franche-Comté,6.053214145071385,46.906221341301006
+89,Moules de bouchot de la baie du Mont-Saint-Michel,0,Autre,Bretagne,-1.7799417213900002,48.597890871000004
+90,Munster,0,Fromage,Alsace,6.707679867284443,48.156234906024075
+91,Muscadet,0,Vin,Pays de la Loire,-1.3890222734435294,47.18281776556471
+92,Muscat du Ventoux,0,Autre,Provence-Alpes-Côte d'Azur,5.1107474797600005,44.0343313036
+93,Neufchâtel,0,Fromage,Haute-Normandie,1.5358503180688892,49.58085496274445
+94,Noix de Grenoble,0,Autre,Rhône-Alpes,5.78727756638282,45.335177804971806
+95,Noix du Périgord,0,Autre,Limousin,1.1999505979781784,45.021088151839294
+96,Oignon doux des Cévennes,0,Autre,Languedoc-Roussillon,3.6252288340499996,43.9886565575
+97,Olive de Nice,0,Autre,Provence-Alpes-Côte d'Azur,7.1351338375074995,43.761802770912496
+98,Olive de Nîmes,0,Autre,Languedoc-Roussillon,4.1040072373,43.92809329582
+99,Ossau-Iraty,0,Fromage,Aquitaine,-0.9518866440880002,43.37155255413333
+100,Palette,0,Autre,Provence-Alpes-Côte d'Azur,5.50819253944,43.51969141359999
+101,Pélardon,0,Fromage,Languedoc-Roussillon,3.6853683233732433,43.935531294335135
+102,Pic Saint-Loup,0,Vin,Languedoc-Roussillon,3.832108485175,43.732348308199995
+103,Picodon,0,Fromage,Rhône-Alpes,4.869157013417254,44.65793952634511
+104,Pineau des Charentes,0,Vin,Poitou-Charentes,-0.6154420370588316,45.85043352494832
+105,Pomme de terre de l'Ile de Ré,0,Autre,Poitou-Charentes,-1.4087648797025,46.20125559907501
+106,Pomme du Limousin,0,Autre,Limousin,1.5026030467900002,45.80217164136667
+107,Pommeau de Bretagne,0,Autre,Bretagne,-2.202165563232632,48.03529582332105
+108,Pommeau de Normandie,0,Alcool,Basse-Normandie,-0.3837361787667432,48.92517075644268
+109,Pommeau du Maine,0,Alcool,Pays de la Loire,-0.7784885622967059,47.97946663378824
+110,Pont-l'Évêque,0,Fromage,Basse-Normandie,-0.5541604388209106,48.94294867253333
+111,Porc noir de Bigorre,0,Autre,Midi-Pyrénées,0.38716681578801504,43.1056820816
+112,Poularde de Bresse,0,Autre,Rhône-Alpes,5.230853304051818,46.64927896254545
+113,Prés-salés de la baie de Somme,0,Autre,Nord-Pas-de-Calais,1.8702414947650001,50.3178080005
+114,Prés-salés du Mont-Saint-Michel,0,Autre,Basse-Normandie,-1.3745192207025003,48.85182202870141
+115,Prisuttu,0,Autre,Corse,9.14601576363,42.527863752100004
+116,Reblochon de Savoie,0,Fromage,Rhône-Alpes,6.466003398707309,46.03852256944617
+117,Rigotte de Condrieu,0,Fromage,Rhône-Alpes,4.5963735837,45.4231203599
+118,Rocamadour,0,Fromage,Midi-Pyrénées,1.4796436140257143,44.729961423435725
+119,Roquefort,0,Fromage,Languedoc-Roussillon,2.8276313944942864,43.97977650931609
+120,Roussette de Savoie,0,Vin,Rhône-Alpes,5.919259885760001,45.56826282905
+121,Roussette du Bugey,0,Vin,Rhône-Alpes,5.42801696363,46.009187877600006
+122,Sainte-Maure de Touraine,0,Fromage,Centre,0.7762948810071002,47.25055645497334
+123,Saint-Nectaire,0,Fromage,Auvergne,3.0020455857186366,45.49891537972273
+124,Salers,0,Fromage,Auvergne,2.65762566782,45.2773189364909
+125,Selles-sur-Cher,0,Fromage,Centre,1.6932758323766668,47.16404917026668
+126,Taureau de Camargue,0,Autre,Provence-Alpes-Côte d'Azur,4.246752433845714,43.71150646908571
+127,Terrasses du Larzac,0,Vin,Languedoc-Roussillon,3.38710687452,43.69577524979999
+128,Tome des Bauges,0,Fromage,Rhône-Alpes,6.095882745271427,45.66762569094286

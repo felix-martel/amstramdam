@@ -5,6 +5,9 @@ import pandas as pd
 import numpy as np
 
 
+ALL_PLACES = "extra/places.grouped.csv"
+
+
 def reaccent(name):
     name = name.lower()
     stopwords = {"en", "le", "la", "les", "d", "de", "du", "des", "sur"}
@@ -70,6 +73,7 @@ class GameMap:
         return cls(name, places=df[col_place], lons=df[col_lon], lats=df[col_lat],
                    ranks=ranks,
                    hints=df[col_hint] if use_hint else None, group=group, **params)
+
 
     @classmethod
     def from_historic(cls, name, file, limit_size=None, group=None, use_hint=True, sep=None):

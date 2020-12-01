@@ -1,4 +1,3 @@
-import random
 import string
 from collections import defaultdict, Counter
 
@@ -6,15 +5,14 @@ import pandas as pd
 import numpy as np
 
 from .game import GameRun, load_cities
-from amstramdam.city_parser import GameMap, GROUPED # SPECIALS, COUNTRIES, GROUPED
 from ..datasets import dataloader
 from datetime import datetime, timedelta
 import random
 import amstramdam.game.status as status
 
-
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
     NAMES = {line.rstrip() for line in f}
+
 
 def choose_countries(df, max_per_country=10, max_rank=1000):
     countries = Counter()
@@ -26,11 +24,12 @@ def choose_countries(df, max_per_country=10, max_rank=1000):
             cities.append({k: row[k] for k in ["name", "country", "lat", "lon", "population"]})
     return pd.DataFrame(cities)
 
+
 def choose_depts(df, max_per_country=10, min_pop=15):
     data = df.to_dict("records")
     countries = Counter()
     cities = []
-    for row in sorted(data, key=lambda p:-p["population"]):
+    for row in sorted(data, key=lambda p: -p["population"]):
         country = row["dept"]
         if country not in countries or (min_pop < row["population"] and countries[country] < max_per_country):
             countries[country] += 1
@@ -41,34 +40,10 @@ def choose_depts(df, max_per_country=10, min_pop=15):
 available_names = set(NAMES)
 global_player_list = set()
 
-def get_all_datasets():
-    return GROUPED
-
-    data = []
-    for map_id, special in SPECIALS.items():
-        data.append(dict(
-            name=map_id,
-            display=special["name"],
-            points=[]
-        ))
-    data.append(dict(is_sep=True))
-    for map_id, special in COUNTRIES.items():
-        data.append(dict(
-            name=map_id,
-            display=special["name"],
-            points=[]
-        ))
-    return data
-   # data = []
-   # for name, dataset in MAPS.items():
-   #     data.append(dict(
-   #         name=name,
-   #         points=[[lat, lon] for _, (lon, lat) in get_cities(dataset)],
-   #     ))
-   # return data
 
 def get_cities(map):
     return load_cities(map["fname"], map["min-pop"])
+
 
 class Game:
     def __init__(self, name, players=None, n_run=20, time_param=5, dist_param=None,
@@ -77,7 +52,7 @@ class Game:
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.name = name
         self.map_name = map
-        map = dataloader.load(self.map_name) #GameMap.from_name(self.map_name)
+        map = dataloader.load(self.map_name)  # GameMap.from_name(self.map_name)
         self.map_display_name = map.name
         self.is_permanent = is_permanent
         if dist_param is None:
@@ -89,22 +64,23 @@ class Game:
         self.dist_param = dist_param
         self.time_param = time_param
         self.precision_mode = precision_mode
-        self.small_scale = (dist_param < 15) # When the characteristic distance is below 15km, the game is considered 'small-scale'
+        self.small_scale = (
+                    dist_param < 15)  # When the characteristic distance is below 15km, the game is considered 'small-scale'
         self.__curr_run_id = 0
         self.allow_zoom = allow_zoom
         if players is None:
             players = set()
         self.players = set(players)
-        self.places = map.sample(self.n_run, self.difficulty) # random.sample(get_cities(map), self.n_run)
+        self.places = map.sample(self.n_run, self.difficulty)  # random.sample(get_cities(map), self.n_run)
         self.duration = duration
         self.runs = [GameRun(self.players, place, **self.get_run_params())
                      for place in self.places]
         names = list(NAMES - self.players)
         random.shuffle(names)
         self.global_player_list = global_player_list
-        self.available_names = available_names # set(names)
+        self.available_names = available_names  # set(names)
         self.wait_time = wait_time
-        self.records = [] # defaultdict(list)
+        self.records = []  # defaultdict(list)
         self.scores = defaultdict(int)
         self.is_public = is_public
         if pseudos is None:
@@ -170,10 +146,10 @@ class Game:
         return f"""---
 Multigeo {'Public' if self.is_public else 'Private'} Game
 Map: {self.map_display_name}
-Difficulty: {100.*self.difficulty:.0f}%
+Difficulty: {100. * self.difficulty:.0f}%
 Players: {self.print_pseudos()}
 Places: {', '.join([p[0][0] for p in self.places])}
-Run: {self.curr_run_id+1}/{self.n_run}
+Run: {self.curr_run_id + 1}/{self.n_run}
 ---"""
 
     def generate_new_pseudo(self):
@@ -199,7 +175,7 @@ Run: {self.curr_run_id+1}/{self.n_run}
         else:
             name = self.generate_player_name()
             while name in self.players:
-                name = self.generate_player_name() # self.available_names.pop()
+                name = self.generate_player_name()  # self.available_names.pop()
         self.players.add(name)
         self.global_player_list.add(name)
         if pseudo is None:
@@ -249,7 +225,7 @@ Run: {self.curr_run_id+1}/{self.n_run}
     def launch(self):
         self.launched = True
         self.status = status.LAUNCHING
-        return self.current #.launch()
+        return self.current  # .launch()
 
     def launch_run(self, *args, **kwargs):
         self.status = status.RUNNING
@@ -259,7 +235,7 @@ Run: {self.curr_run_id+1}/{self.n_run}
         """Kwargs must be valid arguments for timedelta"""
         if self.is_permanent:
             return False
-        expiration_date = self.date_created + timedelta(seconds=3600*hours)
+        expiration_date = self.date_created + timedelta(seconds=3600 * hours)
         return len(self.players) == 0 and expiration_date < datetime.now()
 
     @property
@@ -283,16 +259,16 @@ Run: {self.curr_run_id+1}/{self.n_run}
                 durations[player].append(rec["delta"])
 
         results = [dict(
-                player=player,
-                dist=sum(distances.get(player, []))/self.n_run,
-                delta=sum(durations.get(player, []))/self.n_run,
-                score=self.scores.get(player, 0)
-            ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
+            player=player,
+            dist=sum(distances.get(player, [])) / self.n_run,
+            delta=sum(durations.get(player, [])) / self.n_run,
+            score=self.scores.get(player, 0)
+        ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
 
         final_results = dict(records=self.get_filtered_records(),
-                             #scores=self.scores,
+                             # scores=self.scores,
                              places=self.places_as_json(),
-                             #summary=results
+                             # summary=results
                              )
         return final_results
 
@@ -337,11 +313,12 @@ Run: {self.curr_run_id+1}/{self.n_run}
             self.on_game_end()
             results = self.get_final_results()
             return results, self.done
-        #self.current_run.launch()
+        # self.current_run.launch()
         return self.current, self.done
 
     def terminate(self):
         self.status = status.FINISHED
+
     #
     #
     # def get_state_as_json(self):
@@ -401,4 +378,4 @@ Run: {self.curr_run_id+1}/{self.n_run}
     def get_current_leaderboard(self):
         """Players with their scores, ranked by decreasing scores"""
         return list(sorted([self.get_player_score(player) for player in self.players],
-                           key=lambda t:-t["score"]))
+                           key=lambda t: -t["score"]))

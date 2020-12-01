@@ -1,0 +1,14 @@
+{
+  "name": "Afrique",
+  "filters": [
+    {
+      "column": "iso2",
+      "values": [
+        "DZ", "AO", "BW", "BI", "CM", "CV", "CF", "TD", "KM", "YT", "CG", "CD", "BJ", "GQ", "ET",
+        "ER", "DJ", "GA", "GM", "GH", "GN", "CI", "KE", "LS", "LR", "LY", "MG", "MW", "ML", "MR",
+        "MU", "MA", "MZ", "NE", "NG", "GW", "RE", "RW", "SH", "ST", "SN", "SC", "SL", "SO",  "ZA",
+        "ZW", "SS", "EH", "SD", "SZ", "TG", "TN", "UG", "EG", "TZ", "BF", "ZM"
+      ]
+    }
+  ]
+}

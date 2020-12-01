@@ -158,7 +158,6 @@ export default {
       },
 
       "game-end": function(data){
-        console.log("Received <event:game-end>")
         this.$store.dispatch("setGameStatus", {
           status: constants.status.FINISHED,
           payload: data,
@@ -206,7 +205,6 @@ export default {
       },
 
       "status-update": function(data) {
-        console.debug("main@status-change", data.status);
         this.$store.dispatch("updateStatus", data);
       },
 

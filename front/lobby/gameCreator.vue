@@ -6,21 +6,27 @@
         <map-selector :datasets="datasets" v-model="currentMap"></map-selector>
       </div>
 
+
+      <div class="fieldset diffset" v-if="diffLevels.min !== diffLevels.max">
+        <label>Difficulté</label>
+        <div class="slidecontainer">
+<!--          <input-->
+<!--              type="range" min="1" max="100" v-model="difficulty" @change="difficultyChange"-->
+<!--              class="slider diff-slider" id="diff-level" name="difficulty">-->
+<!--          <span class="diff-counter">{{ difficulty }}%</span>-->
+          <button v-for="(label, level) in diffButtons"
+                  @click.prevent="difficultyChange(level)"
+                  :class="{selected: level === difficulty}">
+            {{ label }}
+          </button>
+          <input type="range" min="0" max="2" v-model="difficulty" name="difficulty" hidden>
+        </div>
+      </div>
       <div class="fieldset">
         <label for="public-checkbox"
           data-tooltip="La partie apparaîtra dans la liste des parties publiques"
         >Partie publique</label>
         <input id="public-checkbox" v-model="isPublic" name="public" type="checkbox">
-      </div>
-      <div class="fieldset">
-        <label for="diff-level">Difficulté</label>
-        <div class="slidecontainer">
-          <input
-              type="range" min="1" max="100" v-model="difficulty" @change="difficultyChange"
-              class="slider diff-slider" id="diff-level" name="difficulty">
-          <span class="diff-counter">{{ difficulty }}%</span>
-        </div>
-
       </div>
       <collapsible-div :collapsed="!showOptions">
           <div class="fieldset">
@@ -66,6 +72,7 @@ import vSelect from 'vue-select'
 import MapSelector from "./mapSelector.vue";
 import CollapsibleDiv from "../components/collapsibleDiv.vue";
 import HelpTooltip from "../components/helpTooltip.vue";
+import {unproxify} from "../common/utils.js";
 
 /**
  * Form can be submitted in two ways:
@@ -102,17 +109,18 @@ export default {
   data () {
     return {
       runs: 10,
-      map: undefined,
-      difficulty: 100,
+      map: {},
+      difficulty: 0,
       duration: 10,
       waitDuration: 7,
       allowZoom: true,
       isPublic: true,
       showOptions: false,
       precisionMode: false,
-    tooltips: {
+      tooltips: {
       "precision_mode": "En mode Précision, le temps n'est pas pris en compte dans le calcul du score"
-    }
+    },
+      defaultDiffButtons: ["Normal", "Difficile", "Déplaisant"],
     }
   },
 
@@ -122,14 +130,18 @@ export default {
         return this.map;
       },
       set(value){
+        // console.log(unproxify(value));
         this.$emit("map-change", value);
         this.map = value;
+        this.difficultyChange(this.map.default_level || 0);
+        // console.log(unproxify(this.map));
+        // console.log(unproxify(this.diffLevels));
       }
     },
 
     gameParams() {
       return {
-        map: this.currentMap,
+        map: this.currentMap.map_id,
         difficulty: this.difficulty,
         runs: this.nRuns,
         duration: this.duration,
@@ -138,6 +150,22 @@ export default {
         public: this.isPublic,
         precision_mode: this.precisionMode
       }
+    },
+
+    diffLevels() {
+      const maxLevel = ((typeof this.map !== "undefined")
+          && (typeof this.map.available_levels !== "undefined")) ? this.map.available_levels - 1 : 3;
+      return {
+        min: 0,
+        max: maxLevel, // this.map.available_levels-1 || 3,
+        // default: this.map.default_level || 0,
+      }
+    },
+
+    diffButtons() {
+      const buttons = (this.map.customLevels && this.map.customLevels.length >= this.diffLevels.max) ?
+          this.map.customLevels : this.defaultDiffButtons
+      return buttons.slice(0, this.diffLevels.max + 1);
     }
   },
 
@@ -146,8 +174,10 @@ export default {
       this.$emit("map-change", map);
     },
 
-    difficultyChange(e) {
-      this.$emit("difficulty-change", parseInt(e.target.value) / 100);
+    difficultyChange(value) {
+      //e.target.value
+      this.difficulty = value;
+      this.$emit("difficulty-change", this.difficulty);
     },
 
     submit(e) {
@@ -185,4 +215,12 @@ export default {
   margin-left: 10px;
 }
 
+.fieldset.diffset {
+  display: flex;
+flex-flow: row nowrap;
+align-items: center;
+}
+button.selected {
+  border-color: gray;
+}
 </style>

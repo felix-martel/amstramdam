@@ -1,6 +1,5 @@
 import random
 from collections import Counter
-from math import floor
 from amstramdam.game.geo import Point, distance
 
 
@@ -24,25 +23,42 @@ class GroupBasedGameMap:
         ]
     ]
 
-    def __init__(self, name, df, scale="country", weights=None, group=None, harshness=0.7, map_id=None,
-                 col_place="city", col_hint="admin", col_lon="lng", col_lat="lat", col_group="group"):
+    def __init__(self, name, df, scale=0, weights=None,
+                available_levels=None, default_level=0,
+                 group=None, harshness=0.7, map_id=None, use_hint=True,
+                 col_place="city", col_hint="admin", col_lon="lng", col_lat="lat", col_group="group",
+                 col_rank="population", **kwargs):
         # Map information
         self.name = name
         self.id = map_id if map_id is not None else f"map<{name.replace(' ', '_')}>"
         self.group = group
 
         # Map data
+        if col_group not in df.columns:
+            # When no group is provided, automatically activate single group mode
+            df[col_group] = 0
+            available_levels = 1
+            default_level = 0
+        if col_hint not in df.columns or not use_hint:
+            df[col_hint] = ""
         self.df = df.rename(columns={
             col_place: "place", col_hint: "hint",
             col_lon: "lon", col_lat: "lat", col_group: "group"})
+        print(self.df.head())
+        print(self.df[["group", "place"]].groupby(by="group").count())
         self.counts = self.df.groupby(by="group").place.count()
 
         # Difficulty settings
-        self.scale = scale
-        self.scale_index = self.scales.index(scale)
+        self.scale_index = scale
         if weights is None:
             weights = self._weights[self.scale_index]
         self.weights = weights
+        if available_levels is None:
+            available_levels = len(self.weights)
+        self.available_levels = available_levels
+        assert default_level < self.available_levels, (f"Can't set default_level={default_level} when "
+                                                       f"only {available_levels} levels are available")
+        self.default_level = default_level
 
         # Geometric information
         self.bbox = None
@@ -93,12 +109,18 @@ class GroupBasedGameMap:
         return dict(dataset=self.name, points=points, bbox=bbox,
                     stats=dict(
                         min_rank=min_rank,
-                        max_rank=max_rank)
+                        max_rank=max_rank,
+                        level=dict(
+                            min=self.scale_index,
+                            max=self.available_levels-1,
+                            current=self.default_level
+                        )
+                    )
                     )
 
     def get_distance(self):
         corner1, corner2 = self.bounding_box()
-
+        print(corner1, corner2)
         p1 = Point.from_latlon(*corner1)
         p2 = Point.from_latlon(*corner2)
         dist = distance(p1, p2)
@@ -113,12 +135,19 @@ class GroupBasedGameMap:
     def sample_many_from_group(self, group, k):
         return list(self.df[self.df.group == group].sample(k).itertuples())
 
-    def sample(self, k, level=0, verbose=True):
+    def sample(self, k, level=None, verbose=True):
+        if level is None:
+            level = self.default_level
+        level = round(level)
+        if level >= self.available_levels:
+            if verbose: print(f"Changed level from {level} to {self.available_levels-1}")
+            level = self.available_levels - 1
+        if level < 0: level = 0
         if verbose: print(f"{self.name} : level = {level}")
         if verbose: print("Weights :", *self.weights)
         if verbose: print("Counts :", *self.counts)
 
-        weights = [w * self.counts[g] for g, w in enumerate(self.weights[floor(level)])]
+        weights = [w * self.counts[g] for g, w in enumerate(self.weights[level])]
         normalized_weights = [w / sum(weights) for w in weights]
         if verbose: print("Weights", ", ".join([f"P(G{g}) = {w:.4f}" for g, w in enumerate(normalized_weights)]))
 

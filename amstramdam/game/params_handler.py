@@ -4,7 +4,7 @@ DEFAULT_PARAMS = {
     "zoom": False,
     "runs": 10,
     "wait_time": 10,
-    "difficulty": 100,
+    "difficulty": 0,
     "public": False,
     "precision_mode": False,
 }
@@ -28,5 +28,4 @@ def merge_params(params, defaults=None):
         for key in keys:
             params[key] = convert(params[key])
 
-    params["difficulty"] /= 100
     return params

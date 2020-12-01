@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     app.use(SocketIOPlugin, socket);
     app.use(CookiePlugin, {
         pseudo: new CookieHandler("amstramdam-pseudo"),
-        highScore: new IntCookieHandler("amstramdam-" + params.map)
+        highScore: new IntCookieHandler( `ams-hs-${params.map}-${params.difficulty}`)
     });
 
     // Register mixins

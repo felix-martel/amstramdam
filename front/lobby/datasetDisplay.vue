@@ -1,5 +1,5 @@
 <template>
-  <div id="dataset-display" :data-size="nPoints"></div>
+  <div id="dataset-display" :data-size="nPoints" :data-selected="difficulty"></div>
 </template>
 
 <script>
@@ -38,13 +38,19 @@ export default {
       points.forEach(point => {
         //const options = (point.rank > this.maxRank) ? {extraClasses: ["hidden"]} : {};
         const [lat, lon] = point.coords;
-        if (point.rank <= this.maxRank) n++;
+        const extraClasses = [];
+        if (point.data.rank <= this.maxRank) {
+          n++;
+        } else {
+          extraClasses.push("hidden");
+        }
+        if (typeof point.data.group !== "undefined") extraClasses.push(`icon-group-${point.data.group}`);
         const marker = this.createMarker({lat, lon},
             "",
             constants.colors.TRUE,
             {
               small: true,
-              extraClasses: (point.rank > this.maxRank) ? ["hidden"] : []
+              extraClasses: extraClasses, // (point.rank > this.maxRank) ? ["hidden"] : []
             },
         )
         marker.rank = point.data.rank;
@@ -54,19 +60,20 @@ export default {
       this.canvas.flyToBounds(this.datapoints.getBounds());
     },
 
-    difficulty(diff) {
-      if (this.datapoints) {
-        let n = 0;
-        this.datapoints.eachLayer(point => {
-          if (point.rank > this.maxRank) {
-            point._icon.classList.add("hidden");
-          } else {
-            point._icon.classList.remove("hidden");
-            n ++;
-          }
-        });
-        this.nPoints = n;
-      }
+    difficulty(diff, old) {
+      console.log(diff, old)
+      // if (this.datapoints) {
+      //   let n = 0;
+      //   this.datapoints.eachLayer(point => {
+      //     if (point.rank > this.maxRank) {
+      //       point._icon.classList.add("hidden");
+      //     } else {
+      //       point._icon.classList.remove("hidden");
+      //       n ++;
+      //     }
+      //   });
+      //   this.nPoints = n;
+      // }
     }
   },
   computed: {
@@ -89,6 +96,24 @@ export default {
 .my-custom-pin.hidden {
   opacity: 0;
 }
+.icon-group-0 {
+  opacity: 1;
+}
+
+.icon-group-1, .icon-group-2 {
+  opacity: 0;
+}
+
+div[data-selected="1"] .icon-group-1,
+div[data-selected="2"] .icon-group-1{
+  opacity: 1;
+}
+
+div[data-selected="2"] .icon-group-2 {
+  opacity: 1;
+}
+
+
 </style>
 
 <style scoped>
