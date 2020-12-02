@@ -42,11 +42,8 @@ def get_dataset_geometry(dataset):
         data = {}
     return jsonify(data)
 
-@app.route("/edit/<dataset>")
+@app.route("/dataset/<dataset>")
 def get_edit_information(dataset):
-    CAN_COMMIT = request.args.get("auth", "_") == os.environ.get("EDITOR_COMMIT_KEY")
-    if not (IS_LOCAL or CAN_COMMIT):
-        return jsonify(message="Invalid access key") #redirect(url_for("serve_main"))
     data = dataloader.load(dataset).get_dataframe_as_json()
     return jsonify(data)
 

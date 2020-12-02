@@ -14,7 +14,7 @@
         >G{{ level}}</button>
       </div>
       <div class="auth-container">
-        <input type="text" v-model="authKey" placeholder="Mot de passe">
+        <input type="password" v-model="authKey" placeholder="Mot de passe">
       </div>
     </div>
     <table>
@@ -194,7 +194,7 @@ export default {
     },
 
     loadPoints(newBaseMap){
-    GET(`/edit/${newBaseMap.map_id}?auth=${this.authKey}`).then(data => {
+    GET(`/dataset/${newBaseMap.map_id}?auth=${this.authKey}`).then(data => {
         this.removeAllLayers();
         this.markers = {};
         this.dataframe = this.createDataFrame(data.points);
