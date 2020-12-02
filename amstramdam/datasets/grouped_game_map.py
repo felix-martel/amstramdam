@@ -190,7 +190,7 @@ class GroupBasedGameMap:
 
     def point_to_places(self, point):
         displayed_hint = (self.extract_place(point), self.extract_hint(point))
-        ground_truth = (self.extract_lon(point), self.extract_lat(point))
+        ground_truth = Point(self.extract_lon(point), self.extract_lat(point))
         return displayed_hint, ground_truth
 
     def sample(self, k, level=None, verbose=False):
