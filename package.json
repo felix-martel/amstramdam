@@ -1,6 +1,6 @@
 {
   "name": "amstramdam",
-  "version": "1.0.0",
+  "version": "2.1.0-beta",
   "description": "*Le jeu original est accessible ici : [jeux-geographiques.com](https://www.jeux-geographiques.com/)*",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
     "watch": "webpack --watch --config webpack.dev.js",
-    "heroku-cleanup": "rm -r front && rm -r node_modules"
+    "heroku-cleanup": "rm -r front && rm -r node_modules && rm -r data/all"
   },
   "repository": {
     "type": "git",
