@@ -7,6 +7,5 @@
    devtool: 'inline-source-map',
      entry: {
        builder: "./front/builder.js",
-       editor: "./front/editor.js"
      }
  });

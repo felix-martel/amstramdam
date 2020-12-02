@@ -5,7 +5,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = {
   entry: {
     lobby: "./front/lobby.js",
-    main: "./front/main.js"
+    main: "./front/main.js",
+    editor: "./front/editor.js",
   },
   output: {
     filename: "[name].js",
