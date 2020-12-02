@@ -21,6 +21,12 @@ def serve_builder():
         return render_template("builder.html", datasets=dataloader.datasets)
     return redirect(url_for("serve_main"))
 
+@app.route("/editor")
+def serve_editor():
+    if IS_LOCAL:
+        return render_template("editor.html", datasets=dataloader.datasets)
+    return redirect(url_for("serve_main"))
+
 
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
