@@ -15,7 +15,6 @@ def terminate_game(game_name):
     with app.test_request_context("/"):
         status = game.status
         print(f"Ending game <{game_name}> (emitting <event:status-update> with status={status})")
-        print(payload)
         socketio.emit("status-update",
                       dict(status=status, payload=payload),
                       json=True,
@@ -28,7 +27,7 @@ def end_game(game_name, run_id):
     game = manager.get_game(game_name)
     if game is None or game.curr_run_id != run_id or game.done:
         return
-    print(f"\Ending run {game.curr_run_id+1}")
+    print(f"Ending run {game.curr_run_id+1}")
     with app.test_request_context('/'):
         # 1: get current place
         (city_name, hint), (lon, lat) = game.current.place
