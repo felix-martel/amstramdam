@@ -3,4 +3,5 @@ __pycache__
 img.jpg
 extra
 env/
+data/cities/not_ready_yet/
 node_modules/
