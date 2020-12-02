@@ -80,6 +80,18 @@
         "available_levels":  1
       },
       {
+        "map_id": "paris_landmarks",
+        "name": "Monuments parisiens",
+        "base_file": "data/cities/Paris.csv",
+        "col_place": "name",
+        "col_lon": "lon",
+        "use_hint": false,
+        "scale": 0,
+        "weights": [
+          [1], [1, 1], [1, 1, 0.6]
+        ]
+      },
+      {
         "map_id": "paris_subway",
         "name": "Métro parisien",
         "base_file": "data/france/metro.paris.csv",
