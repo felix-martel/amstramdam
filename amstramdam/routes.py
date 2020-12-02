@@ -64,8 +64,6 @@ def commit_dataset_change(dataset):
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
-    if not IS_LOCAL:
-        return redirect(url_for("serve_main"))
     params = merge_params(request.form)
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
