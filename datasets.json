@@ -87,6 +87,7 @@
         "col_lon": "lon",
         "use_hint": false,
         "scale": 0,
+        "harshness": 0.25,
         "weights": [
           [1], [1, 1], [1, 1, 0.6]
         ]
