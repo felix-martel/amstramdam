@@ -84,25 +84,33 @@ class GroupBasedGameMap:
             ]
         return self.bbox
 
-    def jsonify_point(self, point, label=False, hint=False):
+    def jsonify_point(self, point, label=False, hint=False, columns=None):
         """
         Convert a `point`, represented as a NamedTuple, to a JSON-ifiable format, ready to be sent over HTTP to the
         client. The JSON-like outpout contains two keys:
         - `coords`, a `[lat, lon]` array of geographic coordinates
         - `data`, extra data attached to the point (e.g its name, rank, group)
         """
+        if columns is None:
+            columns = []
+        additional_data = [(f"col_{k}", k) for k in set(columns) & set(point._fields)]
+        if label:
+            additional_data.append(("name", "place"))
+        if hint:
+            additional_data.append(("hint", "admin"))
         jsonified = dict(
             coords=[point.lat, point.lon],
             data=dict(
                 rank=point.group,
-                group=max(0, point.group - self.scale_index))
+                group=max(0, point.group - self.scale_index),
+                **{name: getattr(point, attr) for name, attr in additional_data}
+            ),
         )
-        if label: jsonified["data"]["name"] = point.place
-        if hint: jsonified["data"]["name"] = point.admin
         return jsonified
 
-    def get_geometry(self, labels=False, max_points=400):
-        points = [self.jsonify_point(p, label=labels) for p in self.df.sample(min(max_points, len(self.df))).itertuples()]
+    def get_geometry(self, max_points=400, **kwargs):
+        samples = self.df.sample(min(max_points, len(self.df))) if max_points > 0 else self.df
+        points = [self.jsonify_point(p, **kwargs) for p in samples.itertuples()]
         min_rank = min(self.df.group)
         max_rank = max(self.df.group)
         bbox = self.bounding_box()
@@ -117,6 +125,14 @@ class GroupBasedGameMap:
                         )
                     )
                     )
+
+    def get_dataframe_as_json(self):
+        filled = self.df.fillna(0)
+        filled["pid"] = filled.index
+        records = list(filled.to_dict("records"))
+        columns = list(filled.columns)
+        bbox = self.bounding_box()
+        return dict(dataset=self.name, points=records, bbox=bbox, columns=columns)
 
     def get_distance(self):
         corner1, corner2 = self.bounding_box()

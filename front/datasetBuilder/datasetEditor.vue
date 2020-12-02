@@ -3,46 +3,30 @@
   <div class="controls box">
     <div class="stats">
       <map-selector :datasets="datasets" v-model="baseMap"></map-selector>
-      <br>
-      {{ nPoints }} points
-      <br>
-      {{ nSelected }} sélectionnés
-    </div>
-    <div class="sliders">
-    <div class="slidecontainer" v-for="(v, i) in thresholds">
-      <span class="group-name">
-        G{{ i }}
-      </span>
-          <input
-              type="range" min="-1" :max="nPoints"
-              :value="thresholds[i]"
-              @input="updateThreshold($event, i)"
-              class="slider diff-slider">
-<!--          <span class="diff-counter">{{ thresholds[i] }}</span>-->
-          <input class="diff-counter" type="number" :value="thresholds[i]"
-              @input="updateThreshold($event, i)">
-        </div>
+      <div class="slidecontainer" v-for="(selected, level) in levels">
+        <button
+            class="group-selector"
+            :class="{'selected': selected}"
+            @click="levels[level] = !levels[level]"
+        >G{{ level}}</button>
+      </div>
     </div>
     <table>
+      <tbody>
       <tr>
-        <td></td>
-        <td v-for="index in indices">G{{index}}</td>
+        <td v-for="column in columns">{{ column }}</td>
       </tr>
-      <tr v-for="o in scales">
-        <td>
-          {{ o.name }}
-        </td>
-        <td v-for="index in indices">
-          <button :disabled="getButton(o.scale, index).disabled"
-                  :class="{'selected': (selected[0] === o.scale) && (selected[1] === index)}"
-                  @click="select(o.scale, index)">
-            {{ getButton(o.scale, index).label }}
-          </button>
+      <tr>
+        <td v-for="column in columns">
+          <input type="text" :value="currentData[column] || ''" :readonly="column === 'pid'"
+                 @input="processChange($event, currentPid, column)">
         </td>
       </tr>
+      </tbody>
     </table>
     <div>
-      <a :href="fileContent" :download="filename">Télécharger</a>
+      <button @click="getChanges">Voir les changements</button>
+      <button @click="createPoint">Nouveau</button>
     </div>
   </div>
   <div id="map" :data-group="selectedGroups">
@@ -57,32 +41,34 @@ import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import constants from "../common/constants";
 import mapBaseMixin from "../map/mapBaseMixin.vue";
-import {GET} from "../common/utils.js";
+import {GET, unproxify} from "../common/utils.js";
 import MapSelector from "../lobby/mapSelector.vue";
+import {getIcon} from "../common/map.js";
 
 export default {
   components: {MapSelector},
   mixins: [mapBaseMixin],
   data() {
-    const thresholds = [
-          1, 4, 15, 20, 30
-      ];
-    const indices = [...thresholds.keys()];
+    const levels = [true, false, false, false, false];
     return {
-      difficulty: 100,
-      thresholds: thresholds,
-      indices: indices,
+      levels: levels,
+      columns: [],
+      currentPoint: {},
       baseMap: {},
-      datapoints: undefined,
       nPoints: 0,
-      scales: [
-        {scale: 0, name: "Monde"},
-        {scale: 1, name: "Continent"},
-        {scale: 2, name: "Pays"},
-      ],
-      selected: [undefined, undefined],
-      selectedGroups: "0123456",
       datasets: datasets,
+      changes: {
+        update: {},
+        create: {}
+      },
+      nChanged: 0,
+      nCreated: 0,
+      markers: {},
+      dataframe: {},
+      focusedMarker: {data: {}},
+      currentPid: undefined,
+      dragging: false,
+      initCoords: undefined
     }
   },
 
@@ -96,107 +82,176 @@ export default {
     });
 
     this.loadPoints(this.baseMap);
+    this.canvas.on("keydown", this.interruptDragging);
   },
 
   methods: {
-    addPoints(points) {
-      if (!points || points.length === 0) return;
-      if (typeof this.datapoints === "undefined") this.datapoints = L.featureGroup().addTo(this.canvas);
-      points.forEach(point => {
-        const [lat, lon] = point.coords;
-        const group = this.findGroup(point.data.rank);
-        const marker = this.createMarker({lat, lon}, point.data.name, `g${group}`);
-        marker.rank = point.data.rank;
-        marker.addTo(this.canvas);
-        this.datapoints.addLayer(marker);
-      });
-      // this.canvas.flyToBounds(this.datapoints.getBounds());
+    emptyMarker() {
+      return {data: {}}
     },
 
-    belongsTo(point, i) {
-      if (i === 0) return point.rank <= this.thresholds[i];
-      return (this.thresholds[i-1] < point.rank) && (point.rank <= this.thresholds[i]);
-    },
-
-    findGroup(rank, thresholds) {
-      if (typeof thresholds === "undefined") thresholds = this.thresholds;
-      for (let i=0; i < thresholds.length; i++){
-        if (rank <= thresholds[i]) return i;
+    renderPoint(pid) {
+      if (!(pid in this.dataframe) ){
+        console.log("Unknown pid", pid);
+        return;
       }
-      return thresholds.length;
+      const data = this.dataframe[pid];
+      const lat = data.lat;
+      const lon = data[this.lonCol]; // <- longitude is sometimes labeled "lon" and sometimes "lng"
+      const group = data.group || 0;
+      const classname = `g${group}`;
+      const name = data[this.labelCol]; // data.place || data.city;
+
+      const marker = L.marker([lat, lon], {draggable: true, icon: getIcon(classname, name)});
+      marker.pid = pid;
+      this.markers[pid] = marker;
+      marker.on("click", this.clickMarker);
+      marker.on("dragstart", this.startDragging);
+      marker.on("dragend", this.endDragging);
+
+      marker.addTo(this.canvas);
+      return marker;
+    },
+
+    startDragging(event) {
+      console.log(`Interrupt dragging P[${event.target.pid}]`);
+      this.currentPid = event.target.pid;
+      this.dragging = true;
+      //
+      // this.focusedMarker = event.target;
+      // const {lat, lng} = this.focusedMarker.getLatLng();
+      // this.initCoords = {lat, lon: lng};
+      // this.dragging = true;
+    },
+
+    interruptDragging(event) {
+      console.log(event);
+      console.log(this.dragging);
+      if (event.originalEvent.key === "Escape" && this.dragging) {
+        console.log(`Interrupt dragging P[${this.currentPid}]`);
+        const marker = this.markers[this.currentPid];
+        const data = this.dataframe[this.currentPid];
+        marker.dragging.disable();
+        marker.setLatLng([data.lat, data[this.lonCol]]);
+        marker.dragging.enable();
+      }
+    },
+
+    endDragging(event) {
+      console.log(`Interrupt dragging P[${event.target.pid}]`);
+      const {lat, lng} = this.markers[this.currentPid].getLatLng();
+      this.dragging = false;
+      this.setValue(lat, this.currentPid, "lat"); // <- false bc marker is already up-to-date
+      this.setValue(lng, this.currentPid, this.lonCol); // <- false bc marker is already up-to-date
+    },
+
+    clickMarker(event) {
+      console.log("Clicked", event.target.pid);
+      this.currentPid = event.target.pid;
+    },
+
+    renderDataframe() {
+      for (let pid in this.dataframe){
+        this.renderPoint(pid);
+      }
+    },
+
+    createDataFrame(points) {
+      if (!points) return {};
+      const dataframe = {};
+      points.forEach(point => {
+        dataframe[point.pid] = point;
+      });
+      return dataframe;
     },
 
     loadPoints(newBaseMap){
-    GET(`/points/${newBaseMap.map_id}?labels=true`).then(data => {
+    GET(`/edit/${newBaseMap.map_id}`).then(data => {
         this.removeAllLayers();
-        if (!data.points) {
-          data.points = [];
-        }
-        this.datapoints = L.featureGroup().addTo(this.canvas);
+        this.markers = {};
+        this.dataframe = this.createDataFrame(data.points);
+        this.columns = data.columns;
         this.nPoints = data.points.length;
         if (data.bbox) {
           this.canvas.fitBounds(data.bbox);
         }
-        this.addPoints(data.points);
+        this.renderDataframe();
       })
     },
 
-    updateThreshold(e, i) {
-      const oldThresholds = [...this.thresholds];
-      this.thresholds[i] = parseInt(e.target.value);
-      if (this.datapoints) {
-        const oldGroup = p => `g${this.findGroup(p.rank, oldThresholds)}`;
-        const newGroup = p => `g${this.findGroup(p.rank, this.thresholds)}`;
-        this.datapoints.eachLayer(point => {
-          point._icon.classList.remove(oldGroup(point))
-          point._icon.classList.add(newGroup(point))
-        });
+    processChange(event, pid, column) {
+      const value = event.target.value.trim();
+      this.setValue(value, pid, column);
+    },
+
+    setValue(value, pid, column) {
+      this.dataframe[pid][column] = value;
+
+      if (pid in this.changes.update) {
+        this.changes.update[pid][column] = value;
+      } else {
+        this.changes.update[pid] = {[column]: value};
+        this.nChanged ++;
+      }
+      this.updateMarker(pid);
+      console.log(`P[${pid}].${column} updated to ${value}`);
+    },
+
+    updateMarker(pid) {
+      if (pid in this.markers) {
+        this.canvas.removeLayer(this.markers[pid])
+        this.markers[pid] = undefined;
+        this.renderPoint(pid);
       }
     },
 
-    getButton(scale, index) {
-      const level = index - scale;
-      return {
-        disabled: level < 0 || level >= 3,
-        label: ["Facile", "Normal", "Difficile"][level] || "Indef.",
-      } ;
+    createPoint() {
+      let pid = Math.max(...Object.keys(this.dataframe)) + 1;
+      console.log(`Creating point with pid=${pid}`);
+      const {lat, lng} = this.canvas.getCenter();
+      const data = {};
+      this.columns.forEach(col => {
+        data[col] = "";
+      });
+      data["lat"] = lat;
+      data[this.lonCol] = lng;
+      data["pid"]  = pid;
+      data[this.labelCol] = "Nouveau point";
+      this.dataframe[pid] = data;
+      this.renderPoint(pid);
+      this.currentPid = pid;
     },
 
-    select(scale, index) {
-      if ((this.selected[0] === scale) && (this.selected[1] === index)) {
-        this.selected = [undefined, undefined];
-        this.selectedGroups = "0123456";
-        return;
-      }
-      this.selected = [scale, index];
-      this.selectedGroups = ""
-      const minGid = scale;
-      const maxGid = Math.min(scale+3, index);
-      console.log("min/max gid", minGid, maxGid);
-      for (let i=0; i <= maxGid; i++) {
-        this.selectedGroups += String(i);
-      }
-      console.log(this.selectedGroups);
-    },
+    getChanges() {
+      console.log(unproxify(this.changes.update))
+    }
 
   },
 
   computed: {
-    nSelected() {
-      return Math.max(...this.thresholds);
+    selectedGroups () {
+      let groups = "";
+      this.levels.forEach((s, i) => {
+        if (s) groups += String(i);
+      })
+      return groups;
     },
 
-    fileContent() {
-      const table = [
-        ["map", "points", "selected", ...this.indices],
-        [this.baseMap, this.nPoints, this.nSelected, ...this.thresholds],
-      ];
-      const content = table.map(line => line.join(";")).join("\n");
-      return "data:text/plain;charset=utf-8," + encodeURIComponent(content);
+    lonCol () {
+      if (this.columns.includes("lng")) return "lng";
+      return "lon";
     },
 
-    filename () {
-      return `selected__${this.baseMap}.txt`
+    labelCol() {
+      return "place";
+    },
+
+    currentData () {
+      if (typeof this.currentPid === "undefined" || !(this.currentPid in this.dataframe)) {
+        return {}
+      } else {
+        return this.dataframe[this.currentPid];
+      }
     }
   },
 
@@ -219,36 +274,45 @@ export default {
 }
 
 #map {
-  /*position: absolute;*/
-  /*top: 0px;*/
-  /*bottom:0;*/
-  /*left: 0;*/
-  /*right:0;*/
   height: 100vh;
   z-index: 1;
+}
+
+table, td {
+  border: 1px solid lightgrey;
+  border-collapse: collapse;
+}
+table {
+  margin: 15px 0;
+}
+td {
+  padding: 5px;
+  max-width: 100px;
+  overflow: hidden;
+  font-size: 0.9em;
 }
 
 #map-element {
   height: 100vh;
   z-index: 1;
 }
+
 .controls {
   position: fixed;
   top: 10px;
   left: 10px;
-  /*width: 250px;*/
   z-index: 2;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
 }
 
-.sliders {
-  margin: 0 15px;
+.stats {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .slidecontainer {
-  white-space: nowrap;
+  margin-left: 10px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .diff-counter {
@@ -274,35 +338,42 @@ button.selected {
 .ams-icon.g4,
 .ams-icon.g5 {
   opacity: 0;
+  display: none;
 }
 
 #map[data-group*="0"] .ams-icon.g0 {
   opacity: 1;
+  display: block;
   background-color: #fd0d0d;
 }
 
 #map[data-group*="1"] .ams-icon.g1 {
   opacity: 1;
+  display: block;
   background-color: red;
 }
 
 #map[data-group*="2"] .ams-icon.g2 {
   opacity: 1;
+  display: block;
   background-color: #d90101;
 }
 
 #map[data-group*="3"] .ams-icon.g3 {
   opacity: 1;
+  display: block;
   background-color: #a70000;
 }
 
 #map[data-group*="4"] .ams-icon.g4 {
   opacity: 1;
+  display: block;
   background-color: #8b0000;
 }
 
 #map[data-group*="5"] .ams-icon.g5 {
   opacity: 0.6;
+  display: block;
   background-color: gray;
 }
 

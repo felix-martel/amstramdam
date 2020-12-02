@@ -31,13 +31,27 @@ def serve_editor():
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
     try:
-        labels = request.args.get("labels") == "true"
-        data = dataloader.load(dataset).get_geometry(labels=labels)
+        args = dict(
+            label=request.args.get("labels") == "true",
+            hint=request.args.get("hint") == "true",
+            columns=request.args["columns"].split(";") if "columns" in request.args else None
+        )
+        if request.args.get("all") == "true":
+            args["max_points"] = -1
+        data = dataloader.load(dataset).get_geometry(**args)
     except KeyError as e:
         print(f"ERROR: No dataset named '{dataset}' found.")
         print(e)
         data = {}
     return jsonify(data)
+
+@app.route("/edit/<dataset>")
+def get_edit_information(dataset):
+    if not IS_LOCAL:
+        return redirect(url_for("serve_main"))
+    data = dataloader.load(dataset).get_dataframe_as_json()
+    return jsonify(data)
+
 
 
 @app.route("/new", methods=["GET", "POST"])
