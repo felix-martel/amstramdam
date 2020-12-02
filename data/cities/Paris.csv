@@ -1,553 +1,587 @@
-"x","name","lon","lat","group"
-"http://fr.dbpedia.org/resource/Cathédrale_Saint-Alexandre-Nevsky_de_Paris","Cathédrale Saint-Alexandre-Nevsky de Paris",2.30197,48.8776,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jacques-Saint-Christophe_de_la_Villette","Église Saint-Jacques-Saint-Christophe de la Villette",2.37964,48.8892,2
-"http://fr.dbpedia.org/resource/Bibliothèque_de_sciences_humaines_et_sociales_Paris_Descartes-CNRS","Bibliothèque de sciences humaines et sociales Paris Descartes-CNRS",2.3325,48.8556,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Odile_de_Paris","Église Sainte-Odile de Paris",2.29297,48.8871,2
-"http://fr.dbpedia.org/resource/Cathédrale_Saint-Étienne_de_Paris","Cathédrale Saint-Étienne de Paris",2.34972,48.8531,2
-"http://fr.dbpedia.org/resource/Médiathèque_du_musée_du_quai_Branly",Musée du Quai Branly,2.2975,48.8608,1
-"http://fr.dbpedia.org/resource/Institut_du_monde_arabe","Institut du monde arabe",2.35694,48.8492,0
-"http://fr.dbpedia.org/resource/Bibliothèque_Sainte-Geneviève","Bibliothèque Sainte-Geneviève",2.34583,48.8469,1
-"http://fr.dbpedia.org/resource/Bibliothèque_Medem","Bibliothèque Medem",2.35896,48.8707,2
-"http://fr.dbpedia.org/resource/Cité_des_sciences_et_de_l'industrie","Cité des sciences et de l'industrie",2.38806,48.8956,0
-"http://fr.dbpedia.org/resource/Bibliothèque_interuniversitaire_de_santé","Bibliothèque interuniversitaire de santé",2.3407,48.8512,3
-"http://fr.dbpedia.org/resource/Cathédrale_grecque_Saint-Étienne_de_Paris","Cathédrale grecque Saint-Étienne de Paris",2.2986,48.8666,2
-"http://fr.dbpedia.org/resource/Bibliothèque_Cujas","Bibliothèque Cujas",2.34513,48.8471,2
-"http://fr.dbpedia.org/resource/Bibliothèque_de_la_Cité_de_l'architecture_et_du_patrimoine","Bibliothèque de la Cité de l'architecture et du patrimoine",2.28956,48.8632,2
-"http://fr.dbpedia.org/resource/Le_Train_bleu_(restaurant)","Le Train bleu (restaurant)",2.37333,48.845,0
-"http://fr.dbpedia.org/resource/Les_Deux_Plateaux",Colonnes de Buren,2.33694,48.8636,0
-"http://fr.dbpedia.org/resource/Église_Saint-Léon_de_Paris","Église Saint-Léon de Paris",2.29633,48.851,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Bonne-Nouvelle_de_Paris","Église Notre-Dame-de-Bonne-Nouvelle de Paris",2.34986,48.8696,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jean-Baptiste_de_Belleville","Église Saint-Jean-Baptiste de Belleville",2.3893,48.8757,2
-"http://fr.dbpedia.org/resource/Chapelle_Saint-Vincent-de-Paul_(Paris)",Chapelle Saint-Vincent-de-Paul,2.32178,48.8489,2
-"http://fr.dbpedia.org/resource/Passerelle_des_Ardennes","Passerelle des Ardennes",2.38462,48.891,2
-"http://fr.dbpedia.org/resource/Viaduc_du_quai_de_la_Rapée","Viaduc du quai de la Rapée",2.36884,48.8444,2
-"http://fr.dbpedia.org/resource/Église_Saint-Luc_de_Paris","Église Saint-Luc de Paris",2.37542,48.8937,2
-"http://fr.dbpedia.org/resource/Chapelle_de_Jésus-Enfant","Chapelle de Jésus-Enfant",2.31838,48.859,2
-"http://fr.dbpedia.org/resource/Cathédrale_des_Trois-Saints-Docteurs_de_Paris","Cathédrale des Trois-Saints-Docteurs de Paris",2.29944,48.8408,2
-"http://fr.dbpedia.org/resource/Chapelle_Saint-Christophe_de_Paris","Chapelle Saint-Christophe de Paris",2.34972,48.8531,2
-"http://fr.dbpedia.org/resource/Pont_de_l'avenue_Daumesnil","Pont de l'avenue Daumesnil",2.4048,48.8362,2
-"http://fr.dbpedia.org/resource/Pont_de_l'avenue_de_Saint-Mandé","Pont de l'avenue de Saint-Mandé",2.40887,48.8444,2
-"http://fr.dbpedia.org/resource/Pont_de_la_place_Balard","Pont de la place Balard",2.2785,48.8366,2
-"http://fr.dbpedia.org/resource/Pont_de_la_rue_Gazan","Pont de la rue Gazan",2.3411,48.8214,2
-"http://fr.dbpedia.org/resource/Pont_de_la_rue_Rottembourg","Pont de la rue Rottembourg",2.4068,48.8385,2
-"http://fr.dbpedia.org/resource/Pont_de_la_rue_de_la_Voûte","Pont de la rue de la Voûte",2.40937,48.8465,2
-"http://fr.dbpedia.org/resource/Pont_de_la_rue_des_Orteaux","Pont de la rue des Orteaux",2.4057,48.8561,2
-"http://fr.dbpedia.org/resource/Église_protestante_unie_de_l'Étoile","Église protestante unie de l'Étoile",2.28695,48.8767,2
-"http://fr.dbpedia.org/resource/Centre_national_d'art_et_de_culture_Georges-Pompidou","Centre national d'art et de culture Georges-Pompidou",2.35241,48.8607,0
-"http://fr.dbpedia.org/resource/Charles_de_Gaulle_-_Étoile_(métro_de_Paris)",Places de l'Étoile,2.29576,48.8744,0
-"http://fr.dbpedia.org/resource/Gare_de_Paris-Saint-Lazare","Gare de Paris-Saint-Lazare",2.32388,48.8763,0
-"http://fr.dbpedia.org/resource/Musée_Jacquemart-André","Musée Jacquemart-André",2.31057,48.8754,1
-"http://fr.dbpedia.org/resource/Musée_Nissim-de-Camondo","Musée Nissim-de-Camondo",2.31278,48.8789,2
-"http://fr.dbpedia.org/resource/Palais_de_la_découverte","Palais de la découverte",2.31078,48.8662,0
-"http://fr.dbpedia.org/resource/Pont_Neuf","Pont Neuf",2.34083,48.8567,0
-"http://fr.dbpedia.org/resource/Synagogue_de_la_rue_Pavée","Synagogue de la rue Pavée",2.36049,48.856,2
-"http://fr.dbpedia.org/resource/Église_Saint-Augustin_de_Paris","Église Saint-Augustin de Paris",2.31914,48.8758,2
-"http://fr.dbpedia.org/resource/Église_Saint-Germain_de_Charonne","Église Saint-Germain de Charonne",2.40397,48.8602,1
-"http://fr.dbpedia.org/resource/Église_Saint-Vincent-de-Paul_de_Paris","Église Saint-Vincent-de-Paul de Paris",2.35183,48.8788,2
-"http://fr.dbpedia.org/resource/Église_Saint-Étienne-du-Mont","Église Saint-Étienne-du-Mont",2.34806,48.8465,2
-"http://fr.dbpedia.org/resource/Église_de_la_Madeleine","Église de la Madeleine",2.32417,48.87,0
-"http://fr.dbpedia.org/resource/Gare_de_Paris-Austerlitz","Gare de Paris-Austerlitz",2.3661,48.8416,0
-"http://fr.dbpedia.org/resource/Gare_de_Paris-Est","Gare de Paris-Est",2.35916,48.8776,1
-"http://fr.dbpedia.org/resource/Gare_de_Paris-Nord","Gare de Paris-Nord",2.35616,48.8816,0
-"http://fr.dbpedia.org/resource/Paris-Gare-de-Lyon","Paris-Gare-de-Lyon",2.3735,48.8448,3
-"http://fr.dbpedia.org/resource/Sainte-Chapelle","Sainte-Chapelle",2.345,48.8553,0
-"http://fr.dbpedia.org/resource/Pont_de_Bir-Hakeim","Pont de Bir-Hakeim",2.28778,48.8556,1
-"http://fr.dbpedia.org/resource/Église_Saint-Eustache_de_Paris","Église Saint-Eustache de Paris",2.34506,48.8633,0
-"http://fr.dbpedia.org/resource/Église_Saint-Pierre_de_Montmartre","Église Saint-Pierre de Montmartre",2.34203,48.8867,2
-"http://fr.dbpedia.org/resource/Maison_de_Balzac","Maison de Balzac",2.28083,48.8553,1
-"http://fr.dbpedia.org/resource/Église_Saint-Laurent_de_Paris","Église Saint-Laurent de Paris",2.35831,48.8748,2
-"http://fr.dbpedia.org/resource/Gare_de_Denfert-Rochereau","Gare de Denfert-Rochereau",2.33264,48.8338,3
-"http://fr.dbpedia.org/resource/Musée_de_la_Contrefaçon","Musée de la Contrefaçon",2.27694,48.8704,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-l'Arche-d'Alliance","Église Notre-Dame-de-l'Arche-d'Alliance",2.30847,48.8367,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-la-Croix_de_Ménilmontant","Église Notre-Dame-de-la-Croix de Ménilmontant",2.38686,48.8685,2
-"http://fr.dbpedia.org/resource/Église_Saint-François-de-Molitor","Église Saint-François-de-Molitor",2.26003,48.8454,1
-"http://fr.dbpedia.org/resource/Église_Saint-Philippe-du-Roule","Église Saint-Philippe-du-Roule",2.31056,48.8734,1
-"http://fr.dbpedia.org/resource/Église_Saint-Thomas-d'Aquin_de_Paris","Église Saint-Thomas-d'Aquin de Paris",2.3275,48.8564,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Champs","Église Notre-Dame-des-Champs",2.32686,48.8432,1
-"http://fr.dbpedia.org/resource/Église_Saint-Roch_de_Paris","Église Saint-Roch de Paris",2.3326,48.8652,1
-"http://fr.dbpedia.org/resource/Abbaye_de_Port-Royal_de_Paris","Abbaye de Port-Royal de Paris",2.33833,48.8386,0
-"http://fr.dbpedia.org/resource/Temple_protestant_de_l'Oratoire_du_Louvre","Temple protestant de l'Oratoire du Louvre",2.34,48.8617,2
-"http://fr.dbpedia.org/resource/Église_Saint-Pierre-de-Chaillot","Église Saint-Pierre-de-Chaillot",2.29847,48.8677,2
-"http://fr.dbpedia.org/resource/Musée_Cognacq-Jay","Musée Cognacq-Jay",2.36139,48.8582,2
-"http://fr.dbpedia.org/resource/Paroisse_Saint-Paul_de_Montmartre","Paroisse Saint-Paul de Montmartre",2.34984,48.8909,2
-"http://fr.dbpedia.org/resource/Cathédrale_arménienne_Saint-Jean-Baptiste_de_Paris","Cathédrale arménienne Saint-Jean-Baptiste de Paris",2.30701,48.8658,2
-"http://fr.dbpedia.org/resource/Église_suédoise_de_Paris","Église suédoise de Paris",2.30306,48.8806,2
-"http://fr.dbpedia.org/resource/Hôpital_Saint-Antoine","Hôpital Saint-Antoine",2.38262,48.8489,2
-"http://fr.dbpedia.org/resource/Hôtel_Raphael","Hôtel Raphael",2.29361,48.8714,3
-"http://fr.dbpedia.org/resource/Passerelle_suspendue_du_parc_des_Buttes-Chaumont",Passerelle suspendue des Buttes-Chaumont,2.3817,48.881,1
-"http://fr.dbpedia.org/resource/Pont_des_Suicidés","Pont des Suicidés",2.383,48.8803,2
-"http://fr.dbpedia.org/resource/Église_évangélique_Saint-Marcel","Église évangélique Saint-Marcel",2.33947,48.841,2
-"http://fr.dbpedia.org/resource/Obélisque_de_la_place_des_Fêtes",Places des Fêtes,2.39447,48.8769,0
-"http://fr.dbpedia.org/resource/Basilique_du_Sacré-Cœur_de_Montmartre","Basilique du Sacré-Cœur de Montmartre",2.34306,48.8869,0
-"http://fr.dbpedia.org/resource/Catacombes_de_Paris","Catacombes de Paris",2.33222,48.8339,0
-"http://fr.dbpedia.org/resource/Musée_de_Cluny","Musée de Cluny",2.34333,48.8506,0
-"http://fr.dbpedia.org/resource/Musée_du_Louvre","Musée du Louvre",2.33578,48.8611,0
-"http://fr.dbpedia.org/resource/Grand_Palais_(Paris)","Grand Palais (Paris)",2.31255,48.8662,0
-"http://fr.dbpedia.org/resource/Musée_Carnavalet","Musée Carnavalet",2.36222,48.8575,0
-"http://fr.dbpedia.org/resource/Petit_Palais","Petit Palais",2.31444,48.8661,1
-"http://fr.dbpedia.org/resource/Pont_Alexandre-III","Pont Alexandre-III",2.31361,48.8636,0
-"http://fr.dbpedia.org/resource/Temple_du_Marais","Temple du Marais",2.36625,48.8533,2
-"http://fr.dbpedia.org/resource/Église_Saint-Germain-l'Auxerrois_de_Paris","Église Saint-Germain-l'Auxerrois de Paris",2.34111,48.8594,0
-"http://fr.dbpedia.org/resource/Église_Saint-Nicolas-du-Chardonnet","Église Saint-Nicolas-du-Chardonnet",2.35028,48.8492,1
-"http://fr.dbpedia.org/resource/Église_Saint-Sulpice_de_Paris","Église Saint-Sulpice de Paris",2.3343,48.8509,0
-"http://fr.dbpedia.org/resource/Église_du_Val-de-Grâce","Église du Val-de-Grâce",2.34198,48.8405,2
-"http://fr.dbpedia.org/resource/Couvent_des_Madelonnettes_(Paris)","Couvent des Madelonnettes (Paris)",2.35889,48.8664,2
-"http://fr.dbpedia.org/resource/Hôpital_de_la_Salpêtrière","Hôpital de la Salpêtrière",2.36407,48.8378,0
-"http://fr.dbpedia.org/resource/Musée_Cernuschi","Musée Cernuschi",2.312,48.88,2
-"http://fr.dbpedia.org/resource/Passerelle_Debilly","Passerelle Debilly",2.29694,48.8625,2
-"http://fr.dbpedia.org/resource/Pont_Marie","Pont Marie",2.3575,48.8528,1
-"http://fr.dbpedia.org/resource/Pont_National_(Paris)","Pont National (Paris)",2.38778,48.8283,1
-"http://fr.dbpedia.org/resource/Pont_Royal_(Paris)","Pont Royal (Paris)",2.33028,48.8608,2
-"http://fr.dbpedia.org/resource/Pont_d'Iéna","Pont d'Iéna",2.29222,48.8597,0
-"http://fr.dbpedia.org/resource/Pont_de_Bercy","Pont de Bercy",2.375,48.8381,0
-"http://fr.dbpedia.org/resource/Pont_de_la_Concorde","Pont de la Concorde",2.31944,48.8636,2
-"http://fr.dbpedia.org/resource/Pont_des_Arts","Pont des Arts",2.3375,48.8583,0
-"http://fr.dbpedia.org/resource/Viaduc_d'Austerlitz","Viaduc d'Austerlitz",2.36778,48.8436,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame_de_Clignancourt","Église Notre-Dame de Clignancourt",2.34503,48.8932,1
-"http://fr.dbpedia.org/resource/Église_Saint-Christophe-de-Javel","Église Saint-Christophe-de-Javel",2.2795,48.8445,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Marguerite_de_Paris","Église Sainte-Marguerite de Paris",2.38111,48.8528,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jean-Baptiste-de-La-Salle","Église Saint-Jean-Baptiste-de-La-Salle",2.3124,48.8412,1
-"http://fr.dbpedia.org/resource/Église_Saint-Pierre-de-Montrouge","Église Saint-Pierre-de-Montrouge",2.32694,48.8286,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Marie_des_Batignolles","Église Sainte-Marie des Batignolles",2.31792,48.8868,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-d'Espérance_de_Paris","Église Notre-Dame-d'Espérance de Paris",2.3745,48.8557,2
-"http://fr.dbpedia.org/resource/Église_Saint-André-de-l'Europe","Église Saint-André-de-l'Europe",2.32583,48.8814,2
-"http://fr.dbpedia.org/resource/Église_Saint-Bernard_de_la_Chapelle","Église Saint-Bernard de la Chapelle",2.3554,48.8861,2
-"http://fr.dbpedia.org/resource/Église_Saint-Denys_de_la_Chapelle","Église Saint-Denys de la Chapelle",2.36,48.8913,2
-"http://fr.dbpedia.org/resource/Église_Saint-François-Xavier_de_Paris","Église Saint-François-Xavier de Paris",2.31333,48.8506,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jean-Baptiste_de_Grenelle","Église Saint-Jean-Baptiste de Grenelle",2.29258,48.8432,2
-"http://fr.dbpedia.org/resource/Église_Saint-Leu-Saint-Gilles_de_Paris","Église Saint-Leu-Saint-Gilles de Paris",2.35006,48.8629,2
-"http://fr.dbpedia.org/resource/Église_Saint-Pierre-du-Gros-Caillou","Église Saint-Pierre-du-Gros-Caillou",2.30525,48.8595,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Geneviève_des_Grandes_Carrières","Église Sainte-Geneviève des Grandes Carrières",2.3341,48.8947,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Hélène_de_Paris","Église Sainte-Hélène de Paris",2.34217,48.8966,2
-"http://fr.dbpedia.org/resource/Église_réformée_de_Port-Royal","Église réformée de Port-Royal",2.34921,48.8362,2
-"http://fr.dbpedia.org/resource/Carrières_des_Capucins","Carrières des Capucins",2.3325,48.8339,2
-"http://fr.dbpedia.org/resource/Maison_de_Victor_Hugo","Maison de Victor Hugo",2.36611,48.8549,1
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-du-Bon-Conseil_de_Paris","Église Notre-Dame-du-Bon-Conseil de Paris",2.34992,48.895,2
-"http://fr.dbpedia.org/resource/Cathédrale_américaine_de_Paris","Cathédrale américaine de Paris",2.30063,48.8675,2
-"http://fr.dbpedia.org/resource/Chapelle_Notre-Dame-de-Consolation_de_Paris","Chapelle Notre-Dame-de-Consolation de Paris",2.30603,48.8656,2
-"http://fr.dbpedia.org/resource/Chapelle_Saint-Bernard-de-Montparnasse","Chapelle Saint-Bernard-de-Montparnasse",2.32122,48.8409,2
-"http://fr.dbpedia.org/resource/Cimetière_des_Juifs_Portugais_de_Paris","Cimetière des Juifs Portugais de Paris",2.37306,48.8867,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Compassion_de_Paris","Église Notre-Dame-de-Compassion de Paris",2.28325,48.8814,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Nazareth_de_Paris","Église Notre-Dame-de-Nazareth de Paris",2.28361,48.8364,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Foyers","Église Notre-Dame-des-Foyers",2.36984,48.8869,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Otages","Église Notre-Dame-des-Otages",2.40305,48.8742,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-du-Rosaire_de_Paris","Église Notre-Dame-du-Rosaire de Paris",2.30796,48.8292,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-du-Travail_de_Paris","Église Notre-Dame-du-Travail de Paris",2.31693,48.8361,2
-"http://fr.dbpedia.org/resource/Église_Saint-Antoine-de-Padoue_de_Paris","Église Saint-Antoine-de-Padoue de Paris",2.29439,48.8298,2
-"http://fr.dbpedia.org/resource/Église_Saint-Charles-de-Monceau","Église Saint-Charles-de-Monceau",2.31258,48.8828,2
-"http://fr.dbpedia.org/resource/Église_Saint-Dominique_de_Paris","Église Saint-Dominique de Paris",2.33503,48.8321,2
-"http://fr.dbpedia.org/resource/Église_Saint-François-d'Assise_de_Paris","Église Saint-François-d'Assise de Paris",2.39153,48.8803,2
-"http://fr.dbpedia.org/resource/Église_Saint-François-de-Sales_de_Paris","Église Saint-François-de-Sales de Paris",2.30494,48.8847,2
-"http://fr.dbpedia.org/resource/Église_Saint-Gabriel_de_Paris","Église Saint-Gabriel de Paris",2.40608,48.8486,2
-"http://fr.dbpedia.org/resource/Église_Saint-Georges_de_la_Villette","Église Saint-Georges de la Villette",2.37475,48.8795,2
-"http://fr.dbpedia.org/resource/Église_Saint-Ignace_de_Paris","Église Saint-Ignace de Paris",2.32628,48.8506,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jean-Bosco_de_Paris","Église Saint-Jean-Bosco de Paris",2.39797,48.8551,2
-"http://fr.dbpedia.org/resource/Église_Saint-Joseph-des-Carmes","Église Saint-Joseph-des-Carmes",2.33033,48.8485,1
-"http://fr.dbpedia.org/resource/Église_Saint-Joseph-des-Nations","Église Saint-Joseph-des-Nations",2.37342,48.869,2
-"http://fr.dbpedia.org/resource/Église_Saint-Joseph-des-Épinettes","Église Saint-Joseph-des-Épinettes",2.32056,48.8936,2
-"http://fr.dbpedia.org/resource/Église_Saint-Martin-des-Champs_de_Paris","Église Saint-Martin-des-Champs de Paris",2.36279,48.8699,2
-"http://fr.dbpedia.org/resource/Église_Saint-Michel_de_Paris","Église Saint-Michel de Paris",2.3245,48.889,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Claire_de_Paris","Église Sainte-Claire de Paris",2.39511,48.8888,1
-"http://fr.dbpedia.org/resource/Église_Saint-Eugène-Sainte-Cécile","Église Saint-Eugène-Sainte-Cécile",2.34714,48.8733,2
-"http://fr.dbpedia.org/resource/Chapelle_Saint-Louis_de_la_Salpêtrière","Chapelle Saint-Louis de la Salpêtrière",2.36182,48.8402,2
-"http://fr.dbpedia.org/resource/Église_Saint-André-des-Arts","Église Saint-André-des-Arts",2.34291,48.8531,1
-"http://fr.dbpedia.org/resource/Pont_Mirabeau","Pont Mirabeau",2.27639,48.8464,0
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Lorette_de_Paris","Église Notre-Dame-de-Lorette de Paris",2.33889,48.8764,1
-"http://fr.dbpedia.org/resource/Église_de_la_Sainte-Trinité_de_Paris","Église de la Sainte-Trinité de Paris",2.3315,48.8769,2
-"http://fr.dbpedia.org/resource/Chapelle_expiatoire","Chapelle expiatoire",2.32278,48.8736,2
-"http://fr.dbpedia.org/resource/Musée_de_l'Homme","Musée de l'Homme",2.28861,48.8628,0
-"http://fr.dbpedia.org/resource/Musée_national_de_la_Marine","Musée national de la Marine",2.2875,48.862,1
-"http://fr.dbpedia.org/resource/Pont_Rouelle","Pont Rouelle",2.28357,48.8523,2
-"http://fr.dbpedia.org/resource/Église_Saint-Denys-du-Saint-Sacrement","Église Saint-Denys-du-Saint-Sacrement",2.3652,48.86,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jean_de_Montmartre","Église Saint-Jean de Montmartre",2.33788,48.8841,2
-"http://fr.dbpedia.org/resource/Basilique_Notre-Dame-du-Perpétuel-Secours","Basilique Notre-Dame-du-Perpétuel-Secours",2.38694,48.8614,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-d'Auteuil","Église Notre-Dame-d'Auteuil",2.26936,48.8472,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Blancs-Manteaux","Église Notre-Dame-des-Blancs-Manteaux",2.35751,48.8588,2
-"http://fr.dbpedia.org/resource/Église_Saint-Jacques-du-Haut-Pas","Église Saint-Jacques-du-Haut-Pas",2.34139,48.8436,2
-"http://fr.dbpedia.org/resource/Église_Saint-Séverin","Église Saint-Séverin",2.34565,48.8521,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Élisabeth-de-Hongrie","Église Sainte-Élisabeth-de-Hongrie",2.36081,48.866,2
-"http://fr.dbpedia.org/resource/Le_Pot_doré","Le Pot doré",2.35169,48.8604,3
-"http://fr.dbpedia.org/resource/Église_Saint-Louis-en-l'Île","Église Saint-Louis-en-l'Île",2.3576,48.8513,1
-"http://fr.dbpedia.org/resource/Basilique_Sainte-Clotilde_de_Paris","Basilique Sainte-Clotilde de Paris",2.31917,48.8583,2
-"http://fr.dbpedia.org/resource/Hôtel_Régina","Hôtel Régina",2.33204,48.8638,3
-"http://fr.dbpedia.org/resource/Maison_européenne_de_la_photographie","Maison européenne de la photographie",2.35913,48.855,1
-"http://fr.dbpedia.org/resource/Église_Saint-Joseph-Artisan_de_Paris","Église Saint-Joseph-Artisan de Paris",2.36753,48.8816,2
-"http://fr.dbpedia.org/resource/Église_Saint-Louis-d'Antin","Église Saint-Louis-d'Antin",2.3283,48.8745,2
-"http://fr.dbpedia.org/resource/Église_Saint-Nicolas-des-Champs","Église Saint-Nicolas-des-Champs",2.35367,48.8656,2
-"http://fr.dbpedia.org/resource/Cloître_et_église_des_Billettes","Cloître et église des Billettes",2.355,48.858,2
-"http://fr.dbpedia.org/resource/Église_Saint-Julien-le-Pauvre_de_Paris","Église Saint-Julien-le-Pauvre de Paris",2.34711,48.852,2
-"http://fr.dbpedia.org/resource/Église_évangélique_allemande_de_Paris","Église évangélique allemande de Paris",2.33111,48.8794,2
-"http://fr.dbpedia.org/resource/Shangri-La_Hotel_Paris","Shangri-La Hotel Paris",2.29323,48.8638,2
-"http://fr.dbpedia.org/resource/Église_réformée_de_l'Annonciation","Église réformée de l'Annonciation",2.28056,48.8619,2
-"http://fr.dbpedia.org/resource/Chapelle_du_Père-Lachaise","Chapelle du Père-Lachaise",2.39287,48.8612,2
-"http://fr.dbpedia.org/resource/Église_réformée_Saint-Jean","Église réformée Saint-Jean",2.30802,48.8575,2
-"http://fr.dbpedia.org/resource/Église_évangélique_de_la_Rédemption_de_Paris","Église évangélique de la Rédemption de Paris",2.33973,48.8738,2
-"http://fr.dbpedia.org/resource/Collégiale_Saint-Marcel_de_Paris","Collégiale Saint-Marcel de Paris",2.35273,48.8368,2
-"http://fr.dbpedia.org/resource/Temple_des_Batignolles","Temple des Batignolles",2.32205,48.8824,2
-"http://fr.dbpedia.org/resource/Église_Saint-Ambroise_de_Paris","Église Saint-Ambroise de Paris",2.37556,48.8611,1
-"http://fr.dbpedia.org/resource/Église_écossaise_de_Paris","Église écossaise de Paris",2.30764,48.8668,2
-"http://fr.dbpedia.org/resource/Viaduc_des_Arts","Viaduc des Arts",2.38125,48.8444,0
-"http://fr.dbpedia.org/resource/Musée_d'art_moderne_de_la_ville_de_Paris","Musée d'art moderne de la ville de Paris",2.29778,48.8644,1
-"http://fr.dbpedia.org/resource/Église_Saint-Médard_de_Paris","Église Saint-Médard de Paris",2.35028,48.8399,1
-"http://fr.dbpedia.org/resource/Cathédrale_Notre-Dame-du-Liban_de_Paris","Cathédrale Notre-Dame-du-Liban de Paris",2.34534,48.844,2
-"http://fr.dbpedia.org/resource/Cent_Quatre_(établissement_culturel)","Cent Quatre (établissement culturel)",2.36989,48.8902,1
-"http://fr.dbpedia.org/resource/Paroisse_Notre-Dame-Joie-des-Affligés-et-Sainte-Geneviève","Paroisse Notre-Dame-Joie-des-Affligés-et-Sainte-Geneviève",2.35156,48.848,2
-"http://fr.dbpedia.org/resource/Temple_protestant_du_Foyer_de_l'Âme","Temple protestant du Foyer de l'Âme",2.36944,48.8558,2
-"http://fr.dbpedia.org/resource/Cadran_solaire_à_fibres_optiques","Cadran solaire à fibres optiques",2.34417,48.8631,3
-"http://fr.dbpedia.org/resource/Le_Jules_Verne","Le Jules Verne",2.2945,48.8582,1
-"http://fr.dbpedia.org/resource/Église_Sainte-Opportune_de_Paris","Église Sainte-Opportune de Paris",2.34734,48.8597,0
-"http://fr.dbpedia.org/resource/Monument_à_la_République","Monument à la République",2.3638,48.8675,3
-"http://fr.dbpedia.org/resource/Prieuré_Saint-Martin-des-Champs","Prieuré Saint-Martin-des-Champs",2.35508,48.866,2
-"http://fr.dbpedia.org/resource/Chevaux_de_Marly","Chevaux de Marly",2.33577,48.8621,1
-"http://fr.dbpedia.org/resource/Passerelle_Alibert","Passerelle Alibert",2.36569,48.8708,2
-"http://fr.dbpedia.org/resource/Passerelle_Bichat","Passerelle Bichat",2.36331,48.8739,2
-"http://fr.dbpedia.org/resource/Passerelle_Richerand","Passerelle Richerand",2.36494,48.8718,2
-"http://fr.dbpedia.org/resource/Passerelle_des_Douanes","Passerelle des Douanes",2.3665,48.8698,2
-"http://fr.dbpedia.org/resource/Pont_de_la_rue_Louis-Blanc","Pont de la rue Louis-Blanc",2.36754,48.8798,2
-"http://fr.dbpedia.org/resource/Pont_tournant_de_la_Grange-aux-Belles","Pont tournant de la Grange-aux-Belles",2.36397,48.8731,1
-"http://fr.dbpedia.org/resource/Pont_tournant_de_la_rue_Dieu","Pont tournant de la rue Dieu",2.36565,48.8709,2
-"http://fr.dbpedia.org/resource/Statue_équestre_de_Louis_XIII","Statue équestre de Louis XIII",2.36553,48.8556,2
-"http://fr.dbpedia.org/resource/Pont_La-Fayette_(Paris)","Pont La-Fayette (Paris)",2.36081,48.8803,2
-"http://fr.dbpedia.org/resource/Passerelle_des_écluses_de_la_Villette","Passerelle des écluses de la Villette",2.37089,48.8837,2
-"http://fr.dbpedia.org/resource/Jardin_des_serres_d'Auteuil","Jardin des serres d'Auteuil",2.25222,48.8469,1
-"http://fr.dbpedia.org/resource/Parc_de_Bagatelle","Parc de Bagatelle",2.24722,48.8714,1
-"http://fr.dbpedia.org/resource/Façade_du_palais_de_la_porte_Dorée",Palais de la Porte Dorée,2.40916,48.835,1
-"http://fr.dbpedia.org/resource/Les_Poings_d'eau","Les Poings d'eau",2.41072,48.8542,3
-"http://fr.dbpedia.org/resource/Synagogue_Adath_Israël","Synagogue Adath Israël",2.37889,48.8556,2
-"http://fr.dbpedia.org/resource/Synagogue_Rashi_(Paris)","Synagogue Rashi (Paris)",2.3474,48.8745,2
-"http://fr.dbpedia.org/resource/Statue_équestre_de_Simón_Bolívar_(Paris)","Statue équestre de Simón Bolívar (Paris)",2.31421,48.8645,2
-"http://fr.dbpedia.org/resource/Porte_Dorée_(métro_de_Paris)",Porte Dorée,2.4061,48.8355,1
-"http://fr.dbpedia.org/resource/Porte_de_Charenton_(métro_de_Paris)",Porte de Charenton,2.4004,48.8328,1
-"http://fr.dbpedia.org/resource/Jardin_d'acclimatation_(Paris)","Jardin d'acclimatation (Paris)",2.26306,48.8775,0
-"http://fr.dbpedia.org/resource/Pagode_de_Vincennes","Pagode de Vincennes",2.4154,48.8285,1
-"http://fr.dbpedia.org/resource/Roseraie_de_Bagatelle","Roseraie de Bagatelle",2.24423,48.8673,1
-"http://fr.dbpedia.org/resource/Statue_équestre_du_Maréchal_Foch","Statue équestre du Maréchal Foch",2.28734,48.8629,2
-"http://fr.dbpedia.org/resource/La_France_renaissante","La France renaissante",2.28783,48.8558,3
-"http://fr.dbpedia.org/resource/Statue_équestre_de_Washington","Statue équestre de Washington",2.29389,48.8647,2
-"http://fr.dbpedia.org/resource/Passerelle_de_la_Grange-aux-Belles","Passerelle de la Grange-aux-Belles",2.36386,48.8732,0
-"http://fr.dbpedia.org/resource/Pont_Eugène-Varlin","Pont Eugène-Varlin",2.36561,48.8776,2
-"http://fr.dbpedia.org/resource/Jardin_des_Plantes_(Paris)","Jardin des Plantes (Paris)",2.35944,48.8439,0
-"http://fr.dbpedia.org/resource/Passerelle_de_la_Moselle",Bassin de la Villette,2.375,48.8862,0
-"http://fr.dbpedia.org/resource/Pont_de_la_rue_de_l'Ourcq","Pont de la rue de l'Ourcq",2.38287,48.8901,2
-"http://fr.dbpedia.org/resource/Synagogue_Don_Isaac_Abravanel","Synagogue Don Isaac Abravanel",2.37625,48.856,2
-"http://fr.dbpedia.org/resource/Viaduc_d'Auteuil","Viaduc d'Auteuil",2.26833,48.8394,1
-"http://fr.dbpedia.org/resource/Église_Sainte-Jeanne-de-Chantal","Église Sainte-Jeanne-de-Chantal",2.25614,48.8387,2
-"http://fr.dbpedia.org/resource/Musée_d'Ennery","Musée d'Ennery",2.28139,48.8717,2
-"http://fr.dbpedia.org/resource/Synagogue_Chivtei_Israël","Synagogue Chivtei Israël",2.38611,48.8436,2
-"http://fr.dbpedia.org/resource/Baiser_Promenade","Baiser Promenade",2.32889,48.8708,3
-"http://fr.dbpedia.org/resource/Canyoneaustrate","Canyoneaustrate",2.38417,48.8339,3
-"http://fr.dbpedia.org/resource/Carolina_(Tommasi)","Carolina (Tommasi)",2.33664,48.857,3
-"http://fr.dbpedia.org/resource/Cascades_de_temps","Cascades de temps",2.34444,48.8714,3
-"http://fr.dbpedia.org/resource/Fers_(sculpture)","Fers (sculpture)",2.31056,48.8828,3
-"http://fr.dbpedia.org/resource/Hommage_au_capitaine_Dreyfus","Hommage au capitaine Dreyfus",2.32877,48.8451,3
-"http://fr.dbpedia.org/resource/L'Oiseau","L'Oiseau",2.35658,48.8417,0
-"http://fr.dbpedia.org/resource/La_Place_des_enfants","La Place des enfants",2.34833,48.8653,3
-"http://fr.dbpedia.org/resource/La_Terre_(Blanchy)","La Terre (Blanchy)",2.39406,48.8688,3
-"http://fr.dbpedia.org/resource/La_Tour_d'exercice","La Tour d'exercice",2.28917,48.8844,3
-"http://fr.dbpedia.org/resource/Le_Cheval","Le Cheval",2.35664,48.8417,3
-"http://fr.dbpedia.org/resource/Le_Cri,_l'Écrit","Le Cri, l'Écrit",2.33917,48.8464,3
-"http://fr.dbpedia.org/resource/Le_Poisson","Le Poisson",2.35672,48.8417,3
-"http://fr.dbpedia.org/resource/Lumière_en_éclats","Lumière en éclats",2.345,48.8761,2
-"http://fr.dbpedia.org/resource/P.I.L.I.","P.I.L.I.",2.325,48.8706,3
-"http://fr.dbpedia.org/resource/Point_de_rencontre_(Signori)","Point de rencontre (Signori)",2.34639,48.8614,3
-"http://fr.dbpedia.org/resource/Pèlerins_des_nuages_et_de_l'eau","Pèlerins des nuages et de l'eau",2.41361,48.8292,3
-"http://fr.dbpedia.org/resource/Ryaba_la_Poule","Ryaba la Poule",2.325,48.8706,3
-"http://fr.dbpedia.org/resource/Le_Génie_de_la_Liberté","Le Génie de la Liberté",2.36917,48.8532,1
-"http://fr.dbpedia.org/resource/Monochrome_for_Paris","Monochrome for Paris",2.3819,48.8297,3
-"http://fr.dbpedia.org/resource/Cimetière_de_la_Villette","Cimetière de la Villette",2.38889,48.8846,2
-"http://fr.dbpedia.org/resource/Bois_de_Vincennes","Bois de Vincennes",2.4333,48.83,0
-"http://fr.dbpedia.org/resource/Cimetière_de_Charonne","Cimetière de Charonne",2.40347,48.8609,2
-"http://fr.dbpedia.org/resource/Gare_de_Lyon_(métro_de_Paris)","Gare de Lyon (métro de Paris)",2.37407,48.8447,0
-"http://fr.dbpedia.org/resource/Jaurès_(métro_de_Paris)","Jaurès (métro de Paris)",2.3702,48.8818,2
-"http://fr.dbpedia.org/resource/Ménilmontant_(métro_de_Paris)","Ménilmontant (métro de Paris)",2.38362,48.8662,2
-"http://fr.dbpedia.org/resource/Parmentier_(métro_de_Paris)","Parmentier (métro de Paris)",2.37438,48.8653,2
-"http://fr.dbpedia.org/resource/Place_des_Vosges","Place des Vosges",2.36549,48.8556,0
-"http://fr.dbpedia.org/resource/Pont_Saint-Michel","Pont Saint-Michel",2.34472,48.8542,2
-"http://fr.dbpedia.org/resource/Pont_au_Change","Pont au Change",2.34667,48.8567,0
-"http://fr.dbpedia.org/resource/Père_Lachaise_(métro_de_Paris)","Père Lachaise (métro de Paris)",2.38739,48.8629,3
-"http://fr.dbpedia.org/resource/Rue_Saint-Maur_(métro_de_Paris)","Rue Saint-Maur (métro de Paris)",2.37945,48.8643,2
-"http://fr.dbpedia.org/resource/Victor_Hugo_(métro_de_Paris)","Victor Hugo (métro de Paris)",2.2852,48.8698,2
-"http://fr.dbpedia.org/resource/Bastille_(métro_de_Paris)","Bastille (métro de Paris)",2.36908,48.8531,0
-"http://fr.dbpedia.org/resource/Gare_du_Nord_(métro_de_Paris)","Gare du Nord (métro de Paris)",2.35493,48.8806,3
-"http://fr.dbpedia.org/resource/Villiers_(métro_de_Paris)","Villiers (métro de Paris)",2.31487,48.8811,2
-"http://fr.dbpedia.org/resource/Zouave_du_pont_de_l'Alma","Zouave du pont de l'Alma",2.30201,48.8638,0
-"http://fr.dbpedia.org/resource/École_de_Chaillot","École de Chaillot",2.29091,48.8631,1
-"http://fr.dbpedia.org/resource/Pont_du_Garigliano","Pont du Garigliano",2.26833,48.8394,1
-"http://fr.dbpedia.org/resource/Pont_levant_de_la_rue_de_Crimée","Pont levant de la rue de Crimée",2.37944,48.8883,2
-"http://fr.dbpedia.org/resource/Hôpital_Cochin","Hôpital Cochin",2.34028,48.8369,1
-"http://fr.dbpedia.org/resource/La_Coupole_(brasserie)","La Coupole (brasserie)",2.32806,48.8424,2
-"http://fr.dbpedia.org/resource/Cimetière_du_Calvaire","Cimetière du Calvaire",2.34179,48.8868,2
-"http://fr.dbpedia.org/resource/Square_René-Le_Gall","Square René-Le Gall",2.34961,48.8324,2
-"http://fr.dbpedia.org/resource/Cimetière_d'Auteuil","Cimetière d'Auteuil",2.25944,48.8411,1
-"http://fr.dbpedia.org/resource/Cimetière_de_Vaugirard","Cimetière de Vaugirard",2.28444,48.8383,2
-"http://fr.dbpedia.org/resource/Église_Saint-Cyrille-Saint-Méthode_de_Paris","Église Saint-Cyrille-Saint-Méthode de Paris",2.40475,48.8603,2
-"http://fr.dbpedia.org/resource/Église_Saint-Éphrem-le-Syriaque","Église Saint-Éphrem-le-Syriaque",2.34778,48.8483,2
-"http://fr.dbpedia.org/resource/Église_des_Saints-Archanges","Église des Saints-Archanges",2.34722,48.8494,2
-"http://fr.dbpedia.org/resource/Chapelle_Sainte-Jeanne-d'Arc_de_Paris","Chapelle Sainte-Jeanne-d'Arc de Paris",2.33921,48.8249,2
-"http://fr.dbpedia.org/resource/Cimetière_de_Bercy","Cimetière de Bercy",2.39764,48.8328,1
-"http://fr.dbpedia.org/resource/Napoléon_en_triomphateur","Napoléon en triomphateur",2.33683,48.8618,3
-"http://fr.dbpedia.org/resource/Azulejo_géométrique","Azulejo géométrique",2.3139,48.8675,3
-"http://fr.dbpedia.org/resource/Grande_fresque_de_la_gare_de_Lyon","Grande fresque de la gare de Lyon",2.37467,48.8448,3
-"http://fr.dbpedia.org/resource/La_Voix_lactée_(Cadieux,_Paris)","La Voix lactée (Cadieux, Paris)",2.3246,48.8747,3
-"http://fr.dbpedia.org/resource/Monument_à_la_mission_Marchand","Monument à la mission Marchand",2.40877,48.8345,3
-"http://fr.dbpedia.org/resource/Bibliothèque_nationale_de_France","Bibliothèque nationale de France",2.37583,48.8336,0
-"http://fr.dbpedia.org/resource/Cimetière_du_Montparnasse","Cimetière du Montparnasse",2.32833,48.8378,0
-"http://fr.dbpedia.org/resource/Cimetière_du_Père-Lachaise","Cimetière du Père-Lachaise",2.39417,48.8619,0
-"http://fr.dbpedia.org/resource/Colonel_Fabien_(métro_de_Paris)","Colonel Fabien (métro de Paris)",2.37116,48.8771,2
-"http://fr.dbpedia.org/resource/Couronnes_(métro_de_Paris)","Couronnes (métro de Paris)",2.37986,48.8695,2
-"http://fr.dbpedia.org/resource/Gare_du_Musée_d'Orsay",Musée d'Orsay,2.32539,48.8603,0
-"http://fr.dbpedia.org/resource/Kléber_(métro_de_Paris)","Kléber (métro de Paris)",2.29312,48.8711,2
-"http://fr.dbpedia.org/resource/Monceau_(métro_de_Paris)","Monceau (métro de Paris)",2.3086,48.8803,2
-"http://fr.dbpedia.org/resource/Mouton-Duvernet_(métro_de_Paris)","Mouton-Duvernet (métro de Paris)",2.3299,48.8314,2
-"http://fr.dbpedia.org/resource/Nation_(métro_de_Paris)","Nation (métro de Paris)",2.39591,48.8485,2
-"http://fr.dbpedia.org/resource/Pont_de_l'Alma","Pont de l'Alma",2.30167,48.8642,0
-"http://fr.dbpedia.org/resource/Porte_Dauphine_(métro_de_Paris)",Porte Dauphine,2.27677,48.8715,0
-"http://fr.dbpedia.org/resource/Richard-Lenoir_(métro_de_Paris)","Richard-Lenoir (métro de Paris)",2.37184,48.8598,2
-"http://fr.dbpedia.org/resource/Rome_(métro_de_Paris)","Rome (métro de Paris)",2.32205,48.8824,2
-"http://fr.dbpedia.org/resource/République_(métro_de_Paris)",Place de la République,2.36381,48.8675,0
-"http://fr.dbpedia.org/resource/Ternes_(métro_de_Paris)","Ternes (métro de Paris)",2.29867,48.8782,2
-"http://fr.dbpedia.org/resource/Wagram_(métro_de_Paris)","Wagram (métro de Paris)",2.30367,48.8841,2
-"http://fr.dbpedia.org/resource/Cimetière_Sainte-Marguerite","Cimetière Sainte-Marguerite",2.38115,48.8531,2
-"http://fr.dbpedia.org/resource/Cimetière_des_Errancis","Cimetière des Errancis",2.31676,48.8808,2
-"http://fr.dbpedia.org/resource/Musée_national_des_arts_asiatiques_-_Guimet","Musée national des arts asiatiques - Guimet",2.29389,48.8653,1
-"http://fr.dbpedia.org/resource/Passerelle_Léopold-Sédar-Senghor","Passerelle Léopold-Sédar-Senghor",2.32472,48.8619,1
-"http://fr.dbpedia.org/resource/Pont_Charles-de-Gaulle","Pont Charles-de-Gaulle",2.37,48.8431,1
-"http://fr.dbpedia.org/resource/Pont_Louis-Philippe","Pont Louis-Philippe",2.35444,48.8539,1
-"http://fr.dbpedia.org/resource/Pont_Saint-Louis","Pont Saint-Louis",2.35222,48.8528,2
-"http://fr.dbpedia.org/resource/Pont_amont","Pont amont",2.38889,48.8267,2
-"http://fr.dbpedia.org/resource/Pont_aval","Pont aval",2.26389,48.835,2
-"http://fr.dbpedia.org/resource/Pont_d'Arcole","Pont d'Arcole",2.35083,48.8558,0
-"http://fr.dbpedia.org/resource/Pont_d'Austerlitz","Pont d'Austerlitz",2.36611,48.845,1
-"http://fr.dbpedia.org/resource/Pont_de_Sully","Pont de Sully",2.35889,48.85,1
-"http://fr.dbpedia.org/resource/Pont_de_Tolbiac","Pont de Tolbiac",2.38194,48.8333,0
-"http://fr.dbpedia.org/resource/Pont_de_l'Archevêché","Pont de l'Archevêché",2.35167,48.8517,1
-"http://fr.dbpedia.org/resource/Pont_de_la_Tournelle","Pont de la Tournelle",2.355,48.8503,2
-"http://fr.dbpedia.org/resource/Pont_des_Invalides","Pont des Invalides",2.31028,48.8644,1
-"http://fr.dbpedia.org/resource/Pont_du_Carrousel","Pont du Carrousel",2.33333,48.86,2
-"http://fr.dbpedia.org/resource/Église_de_Marie-Médiatrice-de-Toutes-les-Grâces","Église de Marie-Médiatrice-de-Toutes-les-Grâces",2.4025,48.8792,2
-"http://fr.dbpedia.org/resource/Basilique_Sainte-Jeanne-d'Arc_de_Paris","Basilique Sainte-Jeanne-d'Arc de Paris",2.36014,48.8915,2
-"http://fr.dbpedia.org/resource/Square_Louis-XIII","Square Louis-XIII",2.36549,48.8556,2
-"http://fr.dbpedia.org/resource/Synagogue_Adas_Yereim","Synagogue Adas Yereim",2.34281,48.8746,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Lourdes_de_Paris","Église Notre-Dame-de-Lourdes de Paris",2.39948,48.8707,2
-"http://fr.dbpedia.org/resource/Musée_des_monuments_français_(1879)","Musée des monuments français (1879)",2.2896,48.8632,2
-"http://fr.dbpedia.org/resource/Chapelle_Notre-Dame-du-Bon-Conseil_de_Paris","Chapelle Notre-Dame-du-Bon-Conseil de Paris",2.3079,48.8488,2
-"http://fr.dbpedia.org/resource/Chapelle_Notre-Dame_du_Saint_Sacrement_de_Paris","Chapelle Notre-Dame du Saint Sacrement de Paris",2.27975,48.862,2
-"http://fr.dbpedia.org/resource/Chapelle_Sainte-Rita_(Paris)","Chapelle Sainte-Rita (Paris)",2.33167,48.8838,2
-"http://fr.dbpedia.org/resource/Paroisse_Saint-Honoré-d'Eylau","Paroisse Saint-Honoré-d'Eylau",2.28608,48.8684,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Grâce-de-Passy","Église Notre-Dame-de-Grâce-de-Passy",2.27999,48.8563,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-l'Assomption-de-Passy","Église Notre-Dame-de-l'Assomption-de-Passy",2.2665,48.8556,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-l'Assomption-des-Buttes-Chaumont","Église Notre-Dame-de-l'Assomption-des-Buttes-Chaumont",2.37833,48.884,2
-"http://fr.dbpedia.org/resource/Église_Notre-Dame-de-la-Salette_de_Paris","Église Notre-Dame-de-la-Salette de Paris",2.30021,48.8339,2
-"http://fr.dbpedia.org/resource/Église_Sainte-Colette-des-Buttes-Chaumont","Église Sainte-Colette-des-Buttes-Chaumont",2.38656,48.8839,2
-"http://fr.dbpedia.org/resource/Église_du_Bon-Pasteur_de_Paris","Église du Bon-Pasteur de Paris",2.39192,48.8565,2
-"http://fr.dbpedia.org/resource/Église_du_Cœur-Eucharistique-de-Jésus","Église du Cœur-Eucharistique-de-Jésus",2.40647,48.8678,2
-"http://fr.dbpedia.org/resource/Georges_Brassens_(Greck)","Georges Brassens (Greck)",2.29889,48.8314,3
-"http://fr.dbpedia.org/resource/L'Âne_(Lalanne)","L'Âne (Lalanne)",2.29889,48.8314,0
-"http://fr.dbpedia.org/resource/Le_Porteur_de_viande","Le Porteur de viande",2.29889,48.8314,3
-"http://fr.dbpedia.org/resource/Les_Taureaux_(Isidore_Bonheur)","Les Taureaux (Isidore Bonheur)",2.29889,48.8314,3
-"http://fr.dbpedia.org/resource/Les_Vautours_(Monard)","Les Vautours (Monard)",2.31582,48.8879,3
-"http://fr.dbpedia.org/resource/Mur_des_vents","Mur des vents",2.34917,48.8661,2
-"http://fr.dbpedia.org/resource/Napoléon_empereur","Napoléon empereur",2.3369,48.8572,2
-"http://fr.dbpedia.org/resource/Cimetière_Sud_de_Saint-Mandé","Cimetière Sud de Saint-Mandé",2.41154,48.8375,2
-"http://fr.dbpedia.org/resource/Le_Travail,_par_l'Industrie_et_le_Commerce,_enrichit_l'Humanité","Le Travail, par l'Industrie et le Commerce, enrichit l'Humanité",2.34231,48.8697,3
-"http://fr.dbpedia.org/resource/Fondation_Deutsch_de_la_Meurthe","Fondation Deutsch de la Meurthe",2.33508,48.8204,2
-"http://fr.dbpedia.org/resource/Petit-Pont_-_Cardinal_Lustiger","Petit-Pont - Cardinal Lustiger",2.34694,48.8533,2
-"http://fr.dbpedia.org/resource/Place_d'Italie_(métro_de_Paris)",Place d'Italie,2.35569,48.8315,0
-"http://fr.dbpedia.org/resource/Pont_Notre-Dame","Pont Notre-Dame",2.34889,48.8564,1
-"http://fr.dbpedia.org/resource/Pont_au_Double","Pont au Double",2.34833,48.8525,2
-"http://fr.dbpedia.org/resource/Boissière_(métro_de_Paris)","Boissière (métro de Paris)",2.29039,48.8674,2
-"http://fr.dbpedia.org/resource/Botzaris_(métro_de_Paris)","Botzaris (métro de Paris)",2.38804,48.8796,2
-"http://fr.dbpedia.org/resource/Bréguet_-_Sabin_(métro_de_Paris)","Bréguet - Sabin (métro de Paris)",2.37009,48.8561,2
-"http://fr.dbpedia.org/resource/Campo-Formio_(métro_de_Paris)","Campo-Formio (métro de Paris)",2.35813,48.835,2
-"http://fr.dbpedia.org/resource/Chardon-Lagache_(métro_de_Paris)","Chardon-Lagache (métro de Paris)",2.26621,48.8451,2
-"http://fr.dbpedia.org/resource/Château_d'Eau_(métro_de_Paris)","Château d'Eau (métro de Paris)",2.35615,48.8729,2
-"http://fr.dbpedia.org/resource/Cité_de_l'architecture_et_du_patrimoine","Cité de l'architecture et du patrimoine",2.28956,48.8632,1
-"http://fr.dbpedia.org/resource/Crimée_(métro_de_Paris)","Crimée (métro de Paris)",2.37707,48.8916,2
-"http://fr.dbpedia.org/resource/Daumesnil_(métro_de_Paris)","Daumesnil (métro de Paris)",2.39579,48.8396,2
-"http://fr.dbpedia.org/resource/Denfert-Rochereau_(métro_de_Paris)","Denfert-Rochereau (métro de Paris)",2.33273,48.8339,0
-"http://fr.dbpedia.org/resource/Institut_national_du_sport,_de_l'expertise_et_de_la_performance","Institut national du sport, de l'expertise et de la performance",2.45361,48.8314,1
-"http://fr.dbpedia.org/resource/Louis_Blanc_(métro_de_Paris)","Louis Blanc (métro de Paris)",2.36484,48.8811,3
-"http://fr.dbpedia.org/resource/Mirabeau_(métro_de_Paris)","Mirabeau (métro de Paris)",2.27171,48.8467,2
-"http://fr.dbpedia.org/resource/Picpus_(métro_de_Paris)","Picpus (métro de Paris)",2.40049,48.8452,2
-"http://fr.dbpedia.org/resource/Porte_d'Auteuil_(métro_de_Paris)",Porte d'Auteuil,2.25875,48.848,1
-"http://fr.dbpedia.org/resource/Pré_Saint-Gervais_(métro_de_Paris)","Pré Saint-Gervais (métro de Paris)",2.39891,48.8803,2
-"http://fr.dbpedia.org/resource/Raspail_(métro_de_Paris)","Raspail (métro de Paris)",2.33061,48.8392,2
-"http://fr.dbpedia.org/resource/Saint-Marcel_(métro_de_Paris)","Saint-Marcel (métro de Paris)",2.36042,48.838,2
-"http://fr.dbpedia.org/resource/Saint-Michel_(métro_de_Paris)","Saint-Michel (métro de Paris)",2.34393,48.8537,2
-"http://fr.dbpedia.org/resource/Église_d'Auteuil_(métro_de_Paris)","Église d'Auteuil (métro de Paris)",2.26902,48.8472,2
-"http://fr.dbpedia.org/resource/Abbaye_de_Penthemont","Abbaye de Penthemont",2.32194,48.8564,2
-"http://fr.dbpedia.org/resource/Pont_de_Grenelle","Pont de Grenelle",2.28,48.8503,1
-"http://fr.dbpedia.org/resource/Cimetière_de_Picpus","Cimetière de Picpus",2.4,48.8439,2
-"http://fr.dbpedia.org/resource/Synagogue_Chasseloup-Laubat","Synagogue Chasseloup-Laubat",2.30486,48.8474,2
-"http://fr.dbpedia.org/resource/Église_Saint-Ferdinand-des-Ternes","Église Saint-Ferdinand-des-Ternes",2.29074,48.8791,2
-"http://fr.dbpedia.org/resource/Chapelle_Notre-Dame-du-Lys","Chapelle Notre-Dame-du-Lys",2.30863,48.8438,2
-"http://fr.dbpedia.org/resource/Cimetière_Valmy","Cimetière Valmy",2.39895,48.8303,2
-"http://fr.dbpedia.org/resource/Le_Botteleur_(Perrin)","Le Botteleur (Perrin)",2.37904,48.862,3
-"http://fr.dbpedia.org/resource/Cimetière_Saint-Louis_de_Paris","Cimetière Saint-Louis de Paris",2.36692,48.8767,2
-"http://fr.dbpedia.org/resource/Twisted_Lamppost_Star","Twisted Lamppost Star",2.40892,48.8645,3
-"http://fr.dbpedia.org/resource/L'Inspiration_du_poète","L'Inspiration du poète",2.33578,48.8611,0
-"http://fr.dbpedia.org/resource/Monument_en_hommage_à_Komitas","Monument en hommage à Komitas",2.30981,48.8644,3
-"http://fr.dbpedia.org/resource/Chasseur_à_pied_(Auguste_Arnaud)","Chasseur à pied (Auguste Arnaud)",2.4554,48.8182,3
-"http://fr.dbpedia.org/resource/Pont_Marchand_(Paris)","Pont Marchand (Paris)",2.34616,48.8568,2
-"http://fr.dbpedia.org/resource/Pont_aux_Meuniers","Pont aux Meuniers",2.34592,48.8569,2
-"http://fr.dbpedia.org/resource/Statue_de_sainte_Catherine_(2e_arrondissement_de_Paris)","Statue de sainte Catherine (2e arrondissement de Paris)",2.34764,48.8685,2
-"http://fr.dbpedia.org/resource/Jardin_tropical_de_Paris","Jardin tropical de Paris",2.466,48.833,1
-"http://fr.dbpedia.org/resource/Passerelle_Simone-de-Beauvoir","Passerelle Simone-de-Beauvoir",2.37806,48.8353,0
-"http://fr.dbpedia.org/resource/1SQMH","1SQMH",2.36889,48.8211,3
-"http://fr.dbpedia.org/resource/Abellio_(Libéraki)","Abellio (Libéraki)",2.35955,48.8484,3
-"http://fr.dbpedia.org/resource/Animal_82","Animal 82",2.35942,48.8484,3
-"http://fr.dbpedia.org/resource/Belt_II","Belt II",2.35957,48.8486,3
-"http://fr.dbpedia.org/resource/Chronos_10","Chronos 10",2.36169,48.8472,3
-"http://fr.dbpedia.org/resource/Consigne_à_vie","Consigne à vie",2.32433,48.8755,3
-"http://fr.dbpedia.org/resource/Cœur_de_gaucho","Cœur de gaucho",2.35913,48.8487,3
-"http://fr.dbpedia.org/resource/Demeurre_1","Demeurre 1",2.36107,48.8476,3
-"http://fr.dbpedia.org/resource/Fiesole_(Etrog)","Fiesole (Etrog)",2.35917,48.8484,3
-"http://fr.dbpedia.org/resource/Harmonie_(Volti)","Harmonie (Volti)",2.35667,48.8656,3
-"http://fr.dbpedia.org/resource/Hautes_Herbes","Hautes Herbes",2.34056,48.86,3
-"http://fr.dbpedia.org/resource/Horizons_suspendus","Horizons suspendus",2.3725,48.8856,3
-"http://fr.dbpedia.org/resource/Hydrophage","Hydrophage",2.35994,48.8482,3
-"http://fr.dbpedia.org/resource/Incubate_Lactate_Perambulate","Incubate Lactate Perambulate",2.30778,48.8269,3
-"http://fr.dbpedia.org/resource/Interpénétration_des_deux_espaces","Interpénétration des deux espaces",2.35949,48.8482,3
-"http://fr.dbpedia.org/resource/L'Arche_(Tual)","L'Arche (Tual)",2.34417,48.8653,3
-"http://fr.dbpedia.org/resource/L'Heure_de_tous","L'Heure de tous",2.32664,48.8758,0
-"http://fr.dbpedia.org/resource/La_Bicyclette_ensevelie","La Bicyclette ensevelie",2.39194,48.8933,0
-"http://fr.dbpedia.org/resource/La_Demeure_10","La Demeure 10",2.38528,48.8331,0
-"http://fr.dbpedia.org/resource/La_Forêt_pétrifiée_(Stahly)","La Forêt pétrifiée (Stahly)",2.35639,48.8481,3
-"http://fr.dbpedia.org/resource/La_Grande_Fenêtre","La Grande Fenêtre",2.36045,48.848,3
-"http://fr.dbpedia.org/resource/Le_Centaure_(César)","Le Centaure (César)",2.32944,48.8519,3
-"http://fr.dbpedia.org/resource/Le_Kiosque_des_noctambules","Le Kiosque des noctambules",2.33611,48.8631,1
-"http://fr.dbpedia.org/resource/Les_Enfants_du_Monde_(Paris)","Les Enfants du Monde (Paris)",2.37944,48.8361,3
-"http://fr.dbpedia.org/resource/Marseille_(César)","Marseille (César)",2.3608,48.8478,3
-"http://fr.dbpedia.org/resource/Mind_Accumulation","Mind Accumulation",2.36145,48.8471,3
-"http://fr.dbpedia.org/resource/Mirage_(Lavier)","Mirage (Lavier)",2.3525,48.8214,3
-"http://fr.dbpedia.org/resource/Murmures","Murmures",2.33528,48.8208,3
-"http://fr.dbpedia.org/resource/Neptune_II","Neptune II",2.36031,48.848,3
-"http://fr.dbpedia.org/resource/Obliques_enrubannées","Obliques enrubannées",2.34722,48.8583,3
-"http://fr.dbpedia.org/resource/Pyegemalion","Pyegemalion",2.34444,48.8617,3
-"http://fr.dbpedia.org/resource/Sculpture_(Niemeyer,_parc_de_Bercy)","Sculpture (Niemeyer, parc de Bercy)",2.38167,48.8372,3
-"http://fr.dbpedia.org/resource/Sculpture_(Pan,_Paris)","Sculpture (Pan, Paris)",2.36166,48.8468,3
-"http://fr.dbpedia.org/resource/Shining_Wings","Shining Wings",2.35926,48.8484,3
-"http://fr.dbpedia.org/resource/Skate_Park","Skate Park",2.35889,48.8186,3
-"http://fr.dbpedia.org/resource/Stèle_(Kirova)","Stèle (Kirova)",2.35966,48.8482,3
-"http://fr.dbpedia.org/resource/Tchaïkovski_(Lévêque)","Tchaïkovski (Lévêque)",2.33389,48.8211,3
-"http://fr.dbpedia.org/resource/Tissignalisation_n°14","Tissignalisation n°14",2.33472,48.8658,3
-"http://fr.dbpedia.org/resource/Vizitor","Vizitor",2.34639,48.8614,3
-"http://fr.dbpedia.org/resource/Vénus_des_Arts","Vénus des Arts",2.33694,48.8553,2
-"http://fr.dbpedia.org/resource/Écoute_(sculpture)","Écoute (sculpture)",2.345,48.8631,3
-"http://fr.dbpedia.org/resource/Énergies_(Trémois)","Énergies (Trémois)",2.34778,48.8619,3
-"http://fr.dbpedia.org/resource/Buste_de_Frédérick_Lemaître","Buste de Frédérick Lemaître",2.36718,48.8689,2
-"http://fr.dbpedia.org/resource/Église_Saint-Séraphin-de-Sarov","Église Saint-Séraphin-de-Sarov",2.30389,48.8428,2
-"http://fr.dbpedia.org/resource/Cimetière_de_la_Trinité","Cimetière de la Trinité",2.35019,48.8645,2
-"http://fr.dbpedia.org/resource/La_République_(Soitoux)","La République (Soitoux)",2.3359,48.8578,3
-"http://fr.dbpedia.org/resource/Passerelle_de_l'Estacade","Passerelle de l'Estacade",2.36083,48.8495,1
-"http://fr.dbpedia.org/resource/Pont_Saint-Charles_(Paris)","Pont Saint-Charles (Paris)",2.34772,48.8529,2
-"http://fr.dbpedia.org/resource/Cimetière_de_Clamart","Cimetière de Clamart",2.3561,48.8389,2
-"http://fr.dbpedia.org/resource/Square_Saint-Lambert","Square Saint-Lambert",2.29694,48.8422,2
-"http://fr.dbpedia.org/resource/Chapelle_Saint-Joseph-de-Cluny","Chapelle Saint-Joseph-de-Cluny",2.33812,48.8351,2
-"http://fr.dbpedia.org/resource/Palais_épiscopal_de_Paris","Palais épiscopal de Paris",2.34972,48.8531,2
-"http://fr.dbpedia.org/resource/Opéra_(métro_de_Paris)",Opéra Garnier,2.33235,48.8706,0
-"http://fr.dbpedia.org/resource/Anvers_(métro_de_Paris)","Anvers (métro de Paris)",2.34485,48.883,1
-"http://fr.dbpedia.org/resource/Barbès_-_Rochechouart_(métro_de_Paris)","Barbès - Rochechouart (métro de Paris)",2.35052,48.8836,0
-"http://fr.dbpedia.org/resource/Louvre_-_Rivoli_(métro_de_Paris)","Louvre - Rivoli (métro de Paris)",2.34028,48.8611,2
-"http://fr.dbpedia.org/resource/Palais_Royal_-_Musée_du_Louvre_(métro_de_Paris)","Palais Royal - Musée du Louvre (métro de Paris)",2.33582,48.8628,2
-"http://fr.dbpedia.org/resource/Gambetta_(métro_de_Paris)","Gambetta (métro de Paris)",2.39845,48.8649,2
-"http://fr.dbpedia.org/resource/Quatre-Septembre_(métro_de_Paris)","Quatre-Septembre (métro de Paris)",2.33663,48.8696,2
-"http://fr.dbpedia.org/resource/Temple_(métro_de_Paris)","Temple (métro de Paris)",2.36059,48.8665,2
-"http://fr.dbpedia.org/resource/Institut_catholique_de_Paris","Institut catholique de Paris",2.32917,48.8481,1
-"http://fr.dbpedia.org/resource/Hôpital_Necker-Enfants_malades","Hôpital Necker-Enfants malades",2.31554,48.845,1
-"http://fr.dbpedia.org/resource/Bibliothèque_Forney","Bibliothèque Forney",2.35908,48.8534,2
-"http://fr.dbpedia.org/resource/Réaumur_-_Sébastopol_(métro_de_Paris)","Réaumur - Sébastopol (métro de Paris)",2.35239,48.8662,2
-"http://fr.dbpedia.org/resource/Tuileries","Tuileries",2.32667,48.8636,1
-"http://fr.dbpedia.org/resource/École_du_Louvre","École du Louvre",2.33222,48.8608,1
-"http://fr.dbpedia.org/resource/Alexandre_Dumas_(métro_de_Paris)","Alexandre Dumas (métro de Paris)",2.39499,48.8562,2
-"http://fr.dbpedia.org/resource/Avron_(métro_de_Paris)","Avron (métro de Paris)",2.39786,48.8519,2
-"http://fr.dbpedia.org/resource/Bibliothèque_historique_de_la_ville_de_Paris","Bibliothèque historique de la ville de Paris",2.3618,48.8571,2
-"http://fr.dbpedia.org/resource/Blanche_(métro_de_Paris)","Blanche (métro de Paris)",2.3337,48.8835,2
-"http://fr.dbpedia.org/resource/Cimetière_de_Belleville","Cimetière de Belleville",2.40015,48.875,1
-"http://fr.dbpedia.org/resource/Cité_(métro_de_Paris)","Cité (métro de Paris)",2.34672,48.8551,0
-"http://fr.dbpedia.org/resource/Musée_des_arts_et_métiers","Musée des arts et métiers",2.35528,48.8661,0
-"http://fr.dbpedia.org/resource/Musée_national_Eugène-Delacroix","Musée national Eugène-Delacroix",2.33555,48.8543,1
-"http://fr.dbpedia.org/resource/Musée_national_d'art_moderne","Musée national d'art moderne",2.35221,48.8605,2
-"http://fr.dbpedia.org/resource/Philippe_Auguste_(métro_de_Paris)","Philippe Auguste (métro de Paris)",2.39094,48.858,2
-"http://fr.dbpedia.org/resource/Pigalle_(métro_de_Paris)",Place Pigalle,2.33757,48.8823,0
-"http://fr.dbpedia.org/resource/Place_de_Clichy_(métro_de_Paris)",Place de Clichy,2.32762,48.8838,0
-"http://fr.dbpedia.org/resource/Saint-Lazare_(métro_de_Paris)","Saint-Lazare (métro de Paris)",2.32619,48.8756,3
-"http://fr.dbpedia.org/resource/Tuileries_(métro_de_Paris)","Tuileries (métro de Paris)",2.33031,48.8645,3
-"http://fr.dbpedia.org/resource/Square_Jean-XXIII","Square Jean-XXIII",2.35139,48.8525,2
-"http://fr.dbpedia.org/resource/Palais_Galliera,_musée_de_la_Mode_de_la_Ville_de_Paris","Palais Galliera, musée de la Mode",2.29667,48.8656,1
-"http://fr.dbpedia.org/resource/Le_Rocher_de_Cancale","Le Rocher de Cancale",2.34715,48.8656,1
-"http://fr.dbpedia.org/resource/Église_Saint-Honoré-d'Eylau_(église_ancienne)","Église Saint-Honoré-d'Eylau (église ancienne)",2.28466,48.8691,2
-"http://fr.dbpedia.org/resource/Église_Saint-Honoré-d'Eylau_(église_nouvelle)","Église Saint-Honoré-d'Eylau (église nouvelle)",2.28608,48.8684,2
-"http://fr.dbpedia.org/resource/Crypte_archéologique_du_parvis_Notre-Dame",Parvis de Notre-Dame,2.3475,48.8536,0
-"http://fr.dbpedia.org/resource/Europe_(métro_de_Paris)","Europe (métro de Paris)",2.32238,48.8788,2
-"http://fr.dbpedia.org/resource/Sentier_(métro_de_Paris)","Sentier (métro de Paris)",2.34639,48.8676,2
-"http://fr.dbpedia.org/resource/Abbesses_(métro_de_Paris)","Abbesses (métro de Paris)",2.33871,48.8844,0
-"http://fr.dbpedia.org/resource/Cadet_(métro_de_Paris)","Cadet (métro de Paris)",2.34488,48.8761,2
-"http://fr.dbpedia.org/resource/Châtelet_(métro_de_Paris)",Place du Châtelet,2.34712,48.8585,1
-"http://fr.dbpedia.org/resource/Pasteur_(métro_de_Paris)","Pasteur (métro de Paris)",2.31268,48.8428,2
-"http://fr.dbpedia.org/resource/Étienne_Marcel_(métro_de_Paris)","Étienne Marcel (métro de Paris)",2.35061,48.8641,2
-"http://fr.dbpedia.org/resource/Bibliothèque_de_l'hôtel_de_ville_de_Paris","Bibliothèque de l'hôtel de ville de Paris",2.35222,48.8564,2
-"http://fr.dbpedia.org/resource/Au_chien_qui_fume","Au chien qui fume",2.34486,48.8613,2
-"http://fr.dbpedia.org/resource/Abbaye_Sainte-Geneviève_de_Paris","Abbaye Sainte-Geneviève de Paris",2.34783,48.8459,0
-"http://fr.dbpedia.org/resource/Hôpital_d'instruction_des_armées_du_Val-de-Grâce","Hôpital d'instruction des armées du Val-de-Grâce",2.34194,48.8408,0
-"http://fr.dbpedia.org/resource/Pont_Masséna","Pont Masséna",2.3825,48.8236,1
-"http://fr.dbpedia.org/resource/Couleur_en_masses","Couleur en masses",2.36056,48.8664,3
-"http://fr.dbpedia.org/resource/De_la_verticale_à_l'oblique","De la verticale à l'oblique",2.38167,48.8944,3
-"http://fr.dbpedia.org/resource/Flore_(Maillol)","Flore (Maillol)",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/Il_faut_se_méfier_des_mots","Il faut se méfier des mots",2.38194,48.8731,3
-"http://fr.dbpedia.org/resource/L'Air","L'Air",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/L'Homme_aux_semelles_devant","L'Homme aux semelles devant",2.36255,48.8509,3
-"http://fr.dbpedia.org/resource/La_Montagne_(Maillol)","La Montagne (Maillol)",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/La_Méditerranée","La Méditerranée",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/La_Nuit_(Maillol)","La Nuit (Maillol)",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/Laudator_Temporis","Laudator Temporis",2.36972,48.8525,3
-"http://fr.dbpedia.org/resource/Le_Grand_Assistant","Le Grand Assistant",2.35586,48.8607,3
-"http://fr.dbpedia.org/resource/Les_Nymphes","Les Nymphes",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/Motifs_d'une_porosité","Motifs d'une porosité",2.3775,48.8811,3
-"http://fr.dbpedia.org/resource/Nozitagne_Lemsebale_F580_368","Nozitagne Lemsebale F580 368",2.35788,48.8593,3
-"http://fr.dbpedia.org/resource/Pomone_(Maillol)","Pomone (Maillol)",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/Rendez-vous_à_l'angle_des_rues_de_Belleville_et_Julien_Lacroix","Rendez-vous à l'angle des rues de Belleville et Julien Lacroix",2.38195,48.8732,3
-"http://fr.dbpedia.org/resource/Vénus_(Maillol)","Vénus (Maillol)",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/Éclats_verts,_jaunes,_rouges","Éclats verts, jaunes, rouges",2.36222,48.8569,3
-"http://fr.dbpedia.org/resource/Castel_(restaurant)","Castel (restaurant)",2.33459,48.852,2
-"http://fr.dbpedia.org/resource/Le_Triomphe_de_la_République","Le Triomphe de la République",2.39594,48.8484,3
-"http://fr.dbpedia.org/resource/Night_and_Day_(Ledgerwood)","Night and Day (Ledgerwood)",2.28944,48.8539,3
-"http://fr.dbpedia.org/resource/Call_&_Response","Call & Response",2.409,48.8471,3
-"http://fr.dbpedia.org/resource/Les_Rochers_dans_le_ciel","Les Rochers dans le ciel",2.38145,48.8259,3
-"http://fr.dbpedia.org/resource/Coup_de_chapeau_II","Coup de chapeau II",2.32833,48.8642,3
-"http://fr.dbpedia.org/resource/Galatea_(Lichtenstein)","Galatea (Lichtenstein)",2.32833,48.8642,3
-"http://fr.dbpedia.org/resource/L'Hommage_à_Cézanne","L'Hommage à Cézanne",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/L'Été_(Maillol)","L'Été (Maillol)",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/La_Baigneuse_aux_bras_levés","La Baigneuse aux bras levés",2.33194,48.8619,3
-"http://fr.dbpedia.org/resource/Passerelle_de_la_Mare","Passerelle de la Mare",2.38861,48.8697,2
-"http://fr.dbpedia.org/resource/La_Ceinture_de_feu","La Ceinture de feu",2.35659,48.8448,3
-"http://fr.dbpedia.org/resource/Pont_Caulaincourt","Pont Caulaincourt",2.332,48.886,1
-"http://fr.dbpedia.org/resource/Musée_d'art_et_d'histoire_du_judaïsme","Musée d'art et d'histoire du judaïsme",2.35528,48.8611,2
-"http://fr.dbpedia.org/resource/Mémorial_de_la_Shoah","Mémorial de la Shoah",2.3562,48.8548,0
-"http://fr.dbpedia.org/resource/(Placé)_sur_un_point_fixe_(Pris)_depuis_un_point_fixe._n°_717","(Placé) sur un point fixe (Pris) depuis un point fixe. n° 717",2.325,48.8653,3
-"http://fr.dbpedia.org/resource/Arbre_des_voyelles","Arbre des voyelles",2.32611,48.8631,3
-"http://fr.dbpedia.org/resource/Arcs_de_cercles_complémentaires","Arcs de cercles complémentaires",2.32278,48.865,3
-"http://fr.dbpedia.org/resource/Column_(Cragg)","Column (Cragg)",2.325,48.8658,3
-"http://fr.dbpedia.org/resource/Comptine_(Rochette)","Comptine (Rochette)",2.32528,48.8633,3
-"http://fr.dbpedia.org/resource/Confidence_(Dezeuze)","Confidence (Dezeuze)",2.3275,48.8631,3
-"http://fr.dbpedia.org/resource/Force_et_Tendresse","Force et Tendresse",2.32833,48.8642,3
-"http://fr.dbpedia.org/resource/From_Boullée_to_Eternity","From Boullée to Eternity",2.28763,48.8327,3
-"http://fr.dbpedia.org/resource/Grand_Commandement_blanc","Grand Commandement blanc",2.3225,48.8642,3
-"http://fr.dbpedia.org/resource/Grande_Femme_II","Grande Femme II",2.32472,48.8639,3
-"http://fr.dbpedia.org/resource/Hommage_à_Charlie_Parker","Hommage à Charlie Parker",2.37889,48.8289,3
-"http://fr.dbpedia.org/resource/L'Ami_de_personne","L'Ami de personne",2.32778,48.8642,3
-"http://fr.dbpedia.org/resource/L'Escalier_des_signes_et_des_nombres","L'Escalier des signes et des nombres",2.37667,48.8297,3
-"http://fr.dbpedia.org/resource/L'Échiquier,_grand","L'Échiquier, grand",2.32639,48.8633,3
-"http://fr.dbpedia.org/resource/La_Foule_(Mason)","La Foule (Mason)",2.32472,48.8653,3
-"http://fr.dbpedia.org/resource/La_Grande_Musicienne","La Grande Musicienne",2.32472,48.8639,3
-"http://fr.dbpedia.org/resource/La_Pluie_de_citations","La Pluie de citations",2.37667,48.8297,3
-"http://fr.dbpedia.org/resource/Le_Bel_costumé","Le Bel costumé",2.32361,48.8656,3
-"http://fr.dbpedia.org/resource/Le_Défenseur_du_temps","Le Défenseur du temps",2.35261,48.8625,3
-"http://fr.dbpedia.org/resource/Le_Monde_en_marche_(Chalon)","Le Monde en marche (Chalon)",2.35929,48.8768,3
-"http://fr.dbpedia.org/resource/Manus_Ultimus","Manus Ultimus",2.32778,48.8636,3
-"http://fr.dbpedia.org/resource/Microbe_vu_à_travers_un_tempérament","Microbe vu à travers un tempérament",2.32472,48.8639,3
-"http://fr.dbpedia.org/resource/Personnage_III","Personnage III",2.32528,48.8644,3
-"http://fr.dbpedia.org/resource/Primo_Piano_II","Primo Piano II",2.32472,48.8639,3
-"http://fr.dbpedia.org/resource/Reclining_Figure","Reclining Figure",2.32361,48.8639,3
-"http://fr.dbpedia.org/resource/Standing_Woman","Standing Woman",2.32778,48.8636,3
-"http://fr.dbpedia.org/resource/The_Welcoming_Hands","The Welcoming Hands",2.32278,48.8653,3
+,x,name,lon,lat,group
+0,http://fr.dbpedia.org/resource/Cathédrale_Saint-Alexandre-Nevsky_de_Paris,Cathédrale Saint-Alexandre-Nevsky de Paris,2.3019700000000003,48.8776,2
+1,http://fr.dbpedia.org/resource/Église_Saint-Jacques-Saint-Christophe_de_la_Villette,Église Saint-Jacques-Saint-Christophe de la Villette,2.37964,48.8892,2
+2,http://fr.dbpedia.org/resource/Bibliothèque_de_sciences_humaines_et_sociales_Paris_Descartes-CNRS,Bibliothèque de sciences humaines et sociales Paris Descartes-CNRS,2.3325,48.8556,2
+3,http://fr.dbpedia.org/resource/Église_Sainte-Odile_de_Paris,Église Sainte-Odile de Paris,2.29297,48.8871,2
+4,http://fr.dbpedia.org/resource/Cathédrale_Saint-Étienne_de_Paris,Cathédrale Saint-Étienne de Paris,2.34972,48.8531,2
+5,http://fr.dbpedia.org/resource/Médiathèque_du_musée_du_quai_Branly,Musée du Quai Branly,2.2975,48.8608,1
+6,http://fr.dbpedia.org/resource/Institut_du_monde_arabe,Institut du monde arabe,2.3573139893679596,48.84891007172301,0
+7,http://fr.dbpedia.org/resource/Bibliothèque_Sainte-Geneviève,Bibliothèque Sainte-Geneviève,2.34583,48.8469,1
+8,http://fr.dbpedia.org/resource/Bibliothèque_Medem,Bibliothèque Medem,2.35896,48.8707,2
+9,http://fr.dbpedia.org/resource/Cité_des_sciences_et_de_l'industrie,Cité des sciences et de l'industrie,2.38806,48.8956,0
+10,http://fr.dbpedia.org/resource/Bibliothèque_interuniversitaire_de_santé,Bibliothèque interuniversitaire de santé,2.3407,48.8512,3
+11,http://fr.dbpedia.org/resource/Cathédrale_grecque_Saint-Étienne_de_Paris,Cathédrale grecque Saint-Étienne de Paris,2.2986,48.8666,2
+12,http://fr.dbpedia.org/resource/Bibliothèque_Cujas,Panthéon,2.3461619332519894,48.846184240635516,0
+13,http://fr.dbpedia.org/resource/Bibliothèque_de_la_Cité_de_l'architecture_et_du_patrimoine,Bibliothèque de la Cité de l'architecture et du patrimoine,2.28956,48.8632,2
+14,http://fr.dbpedia.org/resource/Le_Train_bleu_(restaurant),Le Train bleu (restaurant),2.37333,48.845,0
+15,http://fr.dbpedia.org/resource/Les_Deux_Plateaux,Colonnes de Buren,2.337114063899089,48.86356477979144,1
+16,http://fr.dbpedia.org/resource/Église_Saint-Léon_de_Paris,Église Saint-Léon de Paris,2.29633,48.851000000000006,2
+17,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Bonne-Nouvelle_de_Paris,Église Notre-Dame-de-Bonne-Nouvelle de Paris,2.34986,48.8696,2
+18,http://fr.dbpedia.org/resource/Église_Saint-Jean-Baptiste_de_Belleville,Église Saint-Jean-Baptiste de Belleville,2.3893,48.8757,2
+19,http://fr.dbpedia.org/resource/Chapelle_Saint-Vincent-de-Paul_(Paris),Chapelle Saint-Vincent-de-Paul,2.32178,48.8489,2
+20,http://fr.dbpedia.org/resource/Passerelle_des_Ardennes,Passerelle des Ardennes,2.38462,48.89100000000001,2
+21,http://fr.dbpedia.org/resource/Viaduc_du_quai_de_la_Rapée,Viaduc du quai de la Rapée,2.36884,48.8444,2
+22,http://fr.dbpedia.org/resource/Église_Saint-Luc_de_Paris,Église Saint-Luc de Paris,2.37542,48.8937,2
+23,http://fr.dbpedia.org/resource/Chapelle_de_Jésus-Enfant,Chapelle de Jésus-Enfant,2.31838,48.859,2
+24,http://fr.dbpedia.org/resource/Cathédrale_des_Trois-Saints-Docteurs_de_Paris,Cathédrale des Trois-Saints-Docteurs de Paris,2.29944,48.8408,2
+25,http://fr.dbpedia.org/resource/Chapelle_Saint-Christophe_de_Paris,Chapelle Saint-Christophe de Paris,2.34972,48.8531,2
+26,http://fr.dbpedia.org/resource/Pont_de_l'avenue_Daumesnil,Pont de l'avenue Daumesnil,2.4048,48.8362,2
+27,http://fr.dbpedia.org/resource/Pont_de_l'avenue_de_Saint-Mandé,Pont de l'avenue de Saint-Mandé,2.4088700000000003,48.8444,2
+28,http://fr.dbpedia.org/resource/Pont_de_la_place_Balard,Pont de la place Balard,2.2785,48.8366,2
+29,http://fr.dbpedia.org/resource/Pont_de_la_rue_Gazan,Pont de la rue Gazan,2.3411,48.8214,2
+30,http://fr.dbpedia.org/resource/Pont_de_la_rue_Rottembourg,Pont de la rue Rottembourg,2.4068,48.8385,2
+31,http://fr.dbpedia.org/resource/Pont_de_la_rue_de_la_Voûte,Pont de la rue de la Voûte,2.40937,48.8465,2
+32,http://fr.dbpedia.org/resource/Pont_de_la_rue_des_Orteaux,Pont de la rue des Orteaux,2.4057,48.8561,2
+33,http://fr.dbpedia.org/resource/Église_protestante_unie_de_l'Étoile,Église protestante unie de l'Étoile,2.28695,48.8767,2
+34,http://fr.dbpedia.org/resource/Centre_national_d'art_et_de_culture_Georges-Pompidou,Centre Pompidou,2.3524586724195062,48.86046075650949,0
+35,http://fr.dbpedia.org/resource/Charles_de_Gaulle_-_Étoile_(métro_de_Paris),Arc de Triomphe,2.2950589041442093,48.87378810487419,0
+36,http://fr.dbpedia.org/resource/Gare_de_Paris-Saint-Lazare,Gare Saint-Lazare,2.325094246179664,48.87687223092266,0
+37,http://fr.dbpedia.org/resource/Musée_Jacquemart-André,Musée Jacquemart-André,2.31057,48.8754,1
+38,http://fr.dbpedia.org/resource/Musée_Nissim-de-Camondo,Musée Nissim-de-Camondo,2.31278,48.8789,2
+39,http://fr.dbpedia.org/resource/Palais_de_la_découverte,Palais de la découverte,2.31078,48.8662,0
+40,http://fr.dbpedia.org/resource/Pont_Neuf,Pont Neuf,2.340822858832774,48.85652772456201,0
+41,http://fr.dbpedia.org/resource/Synagogue_de_la_rue_Pavée,Synagogue de la rue Pavée,2.36049,48.856,2
+42,http://fr.dbpedia.org/resource/Église_Saint-Augustin_de_Paris,Église Saint-Augustin de Paris,2.31914,48.8758,2
+43,http://fr.dbpedia.org/resource/Église_Saint-Germain_de_Charonne,Église Saint-Germain de Charonne,2.40397,48.8602,1
+44,http://fr.dbpedia.org/resource/Église_Saint-Vincent-de-Paul_de_Paris,Église Saint-Vincent-de-Paul de Paris,2.35183,48.8788,2
+45,http://fr.dbpedia.org/resource/Église_Saint-Étienne-du-Mont,Église Saint-Étienne-du-Mont,2.34806,48.8465,2
+46,http://fr.dbpedia.org/resource/Église_de_la_Madeleine,Église de la Madeleine,2.3244583116720112,48.87001660446582,0
+47,http://fr.dbpedia.org/resource/Gare_de_Paris-Austerlitz,Gare de Paris-Austerlitz,2.3661,48.8416,0
+48,http://fr.dbpedia.org/resource/Gare_de_Paris-Est,Gare de Paris-Est,2.3594856262207036,48.87700802436548,1
+49,http://fr.dbpedia.org/resource/Gare_de_Paris-Nord,Gare du Nord,2.355568536307833,48.88071419229505,0
+50,http://fr.dbpedia.org/resource/Paris-Gare-de-Lyon,Paris-Gare-de-Lyon,2.3735,48.8448,3
+51,http://fr.dbpedia.org/resource/Sainte-Chapelle,Sainte-Chapelle,2.345,48.8553,0
+52,http://fr.dbpedia.org/resource/Pont_de_Bir-Hakeim,Pont de Bir-Hakeim,2.28778,48.8556,1
+53,http://fr.dbpedia.org/resource/Église_Saint-Eustache_de_Paris,Église Saint-Eustache,2.345179462236367,48.86339934702512,0
+54,http://fr.dbpedia.org/resource/Église_Saint-Pierre_de_Montmartre,Église Saint-Pierre de Montmartre,2.34203,48.8867,2
+55,http://fr.dbpedia.org/resource/Maison_de_Balzac,Maison de Balzac,2.28083,48.8553,1
+56,http://fr.dbpedia.org/resource/Église_Saint-Laurent_de_Paris,Église Saint-Laurent de Paris,2.35831,48.8748,2
+57,http://fr.dbpedia.org/resource/Gare_de_Denfert-Rochereau,Gare de Denfert-Rochereau,2.33264,48.8338,3
+58,http://fr.dbpedia.org/resource/Musée_de_la_Contrefaçon,Musée de la Contrefaçon,2.27694,48.8704,2
+59,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-l'Arche-d'Alliance,Église Notre-Dame-de-l'Arche-d'Alliance,2.30847,48.8367,2
+60,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-la-Croix_de_Ménilmontant,Église Notre-Dame-de-la-Croix de Ménilmontant,2.38686,48.8685,2
+61,http://fr.dbpedia.org/resource/Église_Saint-François-de-Molitor,Église Saint-François-de-Molitor,2.26003,48.8454,1
+62,http://fr.dbpedia.org/resource/Église_Saint-Philippe-du-Roule,Église Saint-Philippe-du-Roule,2.31056,48.8734,1
+63,http://fr.dbpedia.org/resource/Église_Saint-Thomas-d'Aquin_de_Paris,Église Saint-Thomas-d'Aquin de Paris,2.3275,48.8564,2
+64,http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Champs,Église Notre-Dame-des-Champs,2.32686,48.8432,1
+65,http://fr.dbpedia.org/resource/Église_Saint-Roch_de_Paris,Église Saint-Roch de Paris,2.3326,48.8652,1
+66,http://fr.dbpedia.org/resource/Abbaye_de_Port-Royal_de_Paris,Abbaye de Port-Royal,2.33833,48.8386,0
+67,http://fr.dbpedia.org/resource/Temple_protestant_de_l'Oratoire_du_Louvre,Temple protestant de l'Oratoire du Louvre,2.34,48.8617,2
+68,http://fr.dbpedia.org/resource/Église_Saint-Pierre-de-Chaillot,Église Saint-Pierre-de-Chaillot,2.29847,48.8677,2
+69,http://fr.dbpedia.org/resource/Musée_Cognacq-Jay,Musée Cognacq-Jay,2.36139,48.8582,2
+70,http://fr.dbpedia.org/resource/Paroisse_Saint-Paul_de_Montmartre,Paroisse Saint-Paul de Montmartre,2.34984,48.8909,2
+71,http://fr.dbpedia.org/resource/Cathédrale_arménienne_Saint-Jean-Baptiste_de_Paris,Cathédrale arménienne Saint-Jean-Baptiste de Paris,2.30701,48.8658,2
+72,http://fr.dbpedia.org/resource/Église_suédoise_de_Paris,Église suédoise de Paris,2.30306,48.8806,2
+73,http://fr.dbpedia.org/resource/Hôpital_Saint-Antoine,Hôpital Saint-Antoine,2.38262,48.8489,2
+74,http://fr.dbpedia.org/resource/Hôtel_Raphael,Hôtel Raphael,2.29361,48.8714,3
+75,http://fr.dbpedia.org/resource/Passerelle_suspendue_du_parc_des_Buttes-Chaumont,Passerelle suspendue des Buttes-Chaumont,2.3817,48.881,1
+76,http://fr.dbpedia.org/resource/Pont_des_Suicidés,Pont des Suicidés,2.383,48.8803,2
+77,http://fr.dbpedia.org/resource/Église_évangélique_Saint-Marcel,Église évangélique Saint-Marcel,2.33947,48.841,2
+78,http://fr.dbpedia.org/resource/Obélisque_de_la_place_des_Fêtes,Place des Fêtes,2.39447,48.8769,0
+79,http://fr.dbpedia.org/resource/Basilique_du_Sacré-Cœur_de_Montmartre,Basilique du Sacré-Cœur de Montmartre,2.343048038622802,48.88678078583062,0
+80,http://fr.dbpedia.org/resource/Catacombes_de_Paris,Catacombes de Paris,2.3317945003509526,48.83372121308479,4
+81,http://fr.dbpedia.org/resource/Musée_de_Cluny,Musée de Cluny,2.34333,48.8506,0
+82,http://fr.dbpedia.org/resource/Musée_du_Louvre,Musée du Louvre,2.335868149337408,48.86100189147065,0
+83,http://fr.dbpedia.org/resource/Grand_Palais_(Paris),Grand Palais,2.31255,48.8662,0
+84,http://fr.dbpedia.org/resource/Musée_Carnavalet,Musée Carnavalet,2.36222,48.8575,0
+85,http://fr.dbpedia.org/resource/Petit_Palais,Petit Palais,2.3144400000000003,48.8661,1
+86,http://fr.dbpedia.org/resource/Pont_Alexandre-III,Pont Alexandre-III,2.31361,48.8636,0
+87,http://fr.dbpedia.org/resource/Temple_du_Marais,Temple du Marais,2.36625,48.8533,2
+88,http://fr.dbpedia.org/resource/Église_Saint-Germain-l'Auxerrois_de_Paris,Église Saint-Germain-l'Auxerrois,2.3413158266860727,48.859462975475914,0
+89,http://fr.dbpedia.org/resource/Église_Saint-Nicolas-du-Chardonnet,Église Saint-Nicolas-du-Chardonnet,2.35028,48.8492,1
+90,http://fr.dbpedia.org/resource/Église_Saint-Sulpice_de_Paris,Église Saint-Sulpice de Paris,2.3348733213468225,48.85097681177112,0
+91,http://fr.dbpedia.org/resource/Église_du_Val-de-Grâce,Église du Val-de-Grâce,2.34198,48.8405,2
+92,http://fr.dbpedia.org/resource/Couvent_des_Madelonnettes_(Paris),Couvent des Madelonnettes (Paris),2.35889,48.8664,2
+93,http://fr.dbpedia.org/resource/Hôpital_de_la_Salpêtrière,Hôpital de la Salpêtrière,2.36407,48.8378,0
+94,http://fr.dbpedia.org/resource/Musée_Cernuschi,Musée Cernuschi,2.312,48.88,2
+95,http://fr.dbpedia.org/resource/Passerelle_Debilly,Passerelle Debilly,2.29694,48.8625,2
+96,http://fr.dbpedia.org/resource/Pont_Marie,Pont Marie,2.3575,48.8528,1
+97,http://fr.dbpedia.org/resource/Pont_National_(Paris),Pont National (Paris),2.38778,48.8283,1
+98,http://fr.dbpedia.org/resource/Pont_Royal_(Paris),Pont Royal (Paris),2.33028,48.8608,2
+99,http://fr.dbpedia.org/resource/Pont_d'Iéna,Pont d'Iéna,2.29222,48.8597,0
+100,http://fr.dbpedia.org/resource/Pont_de_Bercy,Ministère de l'économie,2.377114578798354,48.84004308849449,0
+101,http://fr.dbpedia.org/resource/Pont_de_la_Concorde,Pont de la Concorde,2.31944,48.8636,2
+102,http://fr.dbpedia.org/resource/Pont_des_Arts,Pont des Arts,2.3375,48.8583,0
+103,http://fr.dbpedia.org/resource/Viaduc_d'Austerlitz,Viaduc d'Austerlitz,2.36778,48.8436,2
+104,http://fr.dbpedia.org/resource/Église_Notre-Dame_de_Clignancourt,Église Notre-Dame de Clignancourt,2.34503,48.8932,1
+105,http://fr.dbpedia.org/resource/Église_Saint-Christophe-de-Javel,Église Saint-Christophe-de-Javel,2.2795,48.8445,2
+106,http://fr.dbpedia.org/resource/Église_Sainte-Marguerite_de_Paris,Église Sainte-Marguerite de Paris,2.38111,48.8528,2
+107,http://fr.dbpedia.org/resource/Église_Saint-Jean-Baptiste-de-La-Salle,Église Saint-Jean-Baptiste-de-La-Salle,2.3124,48.8412,1
+108,http://fr.dbpedia.org/resource/Église_Saint-Pierre-de-Montrouge,Église Saint-Pierre-de-Montrouge,2.32694,48.8286,2
+109,http://fr.dbpedia.org/resource/Église_Sainte-Marie_des_Batignolles,Église Sainte-Marie des Batignolles,2.31792,48.8868,2
+110,http://fr.dbpedia.org/resource/Église_Notre-Dame-d'Espérance_de_Paris,Église Notre-Dame-d'Espérance de Paris,2.3745,48.8557,2
+111,http://fr.dbpedia.org/resource/Église_Saint-André-de-l'Europe,Église Saint-André-de-l'Europe,2.32583,48.8814,2
+112,http://fr.dbpedia.org/resource/Église_Saint-Bernard_de_la_Chapelle,Église Saint-Bernard de la Chapelle,2.3554,48.8861,2
+113,http://fr.dbpedia.org/resource/Église_Saint-Denys_de_la_Chapelle,Église Saint-Denys de la Chapelle,2.36,48.8913,2
+114,http://fr.dbpedia.org/resource/Église_Saint-François-Xavier_de_Paris,Église Saint-François-Xavier de Paris,2.31333,48.8506,2
+115,http://fr.dbpedia.org/resource/Église_Saint-Jean-Baptiste_de_Grenelle,Église Saint-Jean-Baptiste de Grenelle,2.29258,48.8432,2
+116,http://fr.dbpedia.org/resource/Église_Saint-Leu-Saint-Gilles_de_Paris,Église Saint-Leu-Saint-Gilles de Paris,2.35006,48.8629,2
+117,http://fr.dbpedia.org/resource/Église_Saint-Pierre-du-Gros-Caillou,Église Saint-Pierre-du-Gros-Caillou,2.30525,48.8595,2
+118,http://fr.dbpedia.org/resource/Église_Sainte-Geneviève_des_Grandes_Carrières,Église Sainte-Geneviève des Grandes Carrières,2.3341,48.8947,2
+119,http://fr.dbpedia.org/resource/Église_Sainte-Hélène_de_Paris,Église Sainte-Hélène de Paris,2.34217,48.8966,2
+120,http://fr.dbpedia.org/resource/Église_réformée_de_Port-Royal,Église réformée de Port-Royal,2.34921,48.8362,2
+121,http://fr.dbpedia.org/resource/Carrières_des_Capucins,Carrières des Capucins,2.3325,48.8339,2
+122,http://fr.dbpedia.org/resource/Maison_de_Victor_Hugo,Maison de Victor Hugo,2.36611,48.8549,1
+123,http://fr.dbpedia.org/resource/Église_Notre-Dame-du-Bon-Conseil_de_Paris,Église Notre-Dame-du-Bon-Conseil de Paris,2.34992,48.895,2
+124,http://fr.dbpedia.org/resource/Cathédrale_américaine_de_Paris,Cathédrale américaine de Paris,2.30063,48.8675,2
+125,http://fr.dbpedia.org/resource/Chapelle_Notre-Dame-de-Consolation_de_Paris,Chapelle Notre-Dame-de-Consolation de Paris,2.30603,48.8656,2
+126,http://fr.dbpedia.org/resource/Chapelle_Saint-Bernard-de-Montparnasse,Chapelle Saint-Bernard-de-Montparnasse,2.3212200000000003,48.8409,2
+127,http://fr.dbpedia.org/resource/Cimetière_des_Juifs_Portugais_de_Paris,Cimetière des Juifs Portugais de Paris,2.37306,48.8867,2
+128,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Compassion_de_Paris,Église Notre-Dame-de-Compassion de Paris,2.28325,48.8814,2
+129,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Nazareth_de_Paris,Église Notre-Dame-de-Nazareth de Paris,2.28361,48.8364,2
+130,http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Foyers,Église Notre-Dame-des-Foyers,2.36984,48.8869,2
+131,http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Otages,Église Notre-Dame-des-Otages,2.40305,48.8742,2
+132,http://fr.dbpedia.org/resource/Église_Notre-Dame-du-Rosaire_de_Paris,Église Notre-Dame-du-Rosaire de Paris,2.30796,48.8292,2
+133,http://fr.dbpedia.org/resource/Église_Notre-Dame-du-Travail_de_Paris,Église Notre-Dame-du-Travail de Paris,2.31693,48.8361,2
+134,http://fr.dbpedia.org/resource/Église_Saint-Antoine-de-Padoue_de_Paris,Église Saint-Antoine-de-Padoue de Paris,2.29439,48.8298,2
+135,http://fr.dbpedia.org/resource/Église_Saint-Charles-de-Monceau,Église Saint-Charles-de-Monceau,2.31258,48.8828,2
+136,http://fr.dbpedia.org/resource/Église_Saint-Dominique_de_Paris,Église Saint-Dominique de Paris,2.33503,48.8321,2
+137,http://fr.dbpedia.org/resource/Église_Saint-François-d'Assise_de_Paris,Église Saint-François-d'Assise de Paris,2.39153,48.8803,2
+138,http://fr.dbpedia.org/resource/Église_Saint-François-de-Sales_de_Paris,Église Saint-François-de-Sales de Paris,2.30494,48.8847,2
+139,http://fr.dbpedia.org/resource/Église_Saint-Gabriel_de_Paris,Église Saint-Gabriel de Paris,2.40608,48.8486,2
+140,http://fr.dbpedia.org/resource/Église_Saint-Georges_de_la_Villette,Église Saint-Georges de la Villette,2.37475,48.8795,2
+141,http://fr.dbpedia.org/resource/Église_Saint-Ignace_de_Paris,Église Saint-Ignace de Paris,2.32628,48.8506,2
+142,http://fr.dbpedia.org/resource/Église_Saint-Jean-Bosco_de_Paris,Église Saint-Jean-Bosco de Paris,2.39797,48.8551,2
+143,http://fr.dbpedia.org/resource/Église_Saint-Joseph-des-Carmes,Église Saint-Joseph-des-Carmes,2.33033,48.8485,1
+144,http://fr.dbpedia.org/resource/Église_Saint-Joseph-des-Nations,Église Saint-Joseph-des-Nations,2.37342,48.869,2
+145,http://fr.dbpedia.org/resource/Église_Saint-Joseph-des-Épinettes,Église Saint-Joseph-des-Épinettes,2.32056,48.8936,2
+146,http://fr.dbpedia.org/resource/Église_Saint-Martin-des-Champs_de_Paris,Église Saint-Martin-des-Champs de Paris,2.36279,48.8699,2
+147,http://fr.dbpedia.org/resource/Église_Saint-Michel_de_Paris,Église Saint-Michel de Paris,2.3245,48.889,2
+148,http://fr.dbpedia.org/resource/Église_Sainte-Claire_de_Paris,Église Sainte-Claire de Paris,2.39511,48.8888,1
+149,http://fr.dbpedia.org/resource/Église_Saint-Eugène-Sainte-Cécile,Église Saint-Eugène-Sainte-Cécile,2.34714,48.8733,2
+150,http://fr.dbpedia.org/resource/Chapelle_Saint-Louis_de_la_Salpêtrière,Chapelle Saint-Louis de la Salpêtrière,2.3618200000000003,48.8402,2
+151,http://fr.dbpedia.org/resource/Église_Saint-André-des-Arts,Église Saint-André-des-Arts,2.34291,48.8531,1
+152,http://fr.dbpedia.org/resource/Pont_Mirabeau,Pont Mirabeau,2.27639,48.8464,0
+153,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Lorette_de_Paris,Église Notre-Dame-de-Lorette de Paris,2.33889,48.8764,1
+154,http://fr.dbpedia.org/resource/Église_de_la_Sainte-Trinité_de_Paris,Église de la Sainte-Trinité de Paris,2.3315,48.8769,2
+155,http://fr.dbpedia.org/resource/Chapelle_expiatoire,Chapelle expiatoire,2.32278,48.8736,2
+156,http://fr.dbpedia.org/resource/Musée_de_l'Homme,Musée de l'Homme,2.28861,48.8628,0
+157,http://fr.dbpedia.org/resource/Musée_national_de_la_Marine,Musée national de la Marine,2.2875,48.862,1
+158,http://fr.dbpedia.org/resource/Pont_Rouelle,Pont Rouelle,2.28357,48.8523,2
+159,http://fr.dbpedia.org/resource/Église_Saint-Denys-du-Saint-Sacrement,Église Saint-Denys-du-Saint-Sacrement,2.3652,48.86,2
+160,http://fr.dbpedia.org/resource/Église_Saint-Jean_de_Montmartre,Église Saint-Jean de Montmartre,2.33788,48.8841,2
+161,http://fr.dbpedia.org/resource/Basilique_Notre-Dame-du-Perpétuel-Secours,Basilique Notre-Dame-du-Perpétuel-Secours,2.38694,48.8614,2
+162,http://fr.dbpedia.org/resource/Église_Notre-Dame-d'Auteuil,Église Notre-Dame-d'Auteuil,2.26936,48.8472,2
+163,http://fr.dbpedia.org/resource/Église_Notre-Dame-des-Blancs-Manteaux,Église Notre-Dame-des-Blancs-Manteaux,2.35751,48.8588,2
+164,http://fr.dbpedia.org/resource/Église_Saint-Jacques-du-Haut-Pas,Église Saint-Jacques-du-Haut-Pas,2.34139,48.8436,2
+165,http://fr.dbpedia.org/resource/Église_Saint-Séverin,Église Saint-Séverin,2.34565,48.8521,2
+166,http://fr.dbpedia.org/resource/Église_Sainte-Élisabeth-de-Hongrie,Église Sainte-Élisabeth-de-Hongrie,2.36081,48.86600000000001,2
+167,http://fr.dbpedia.org/resource/Le_Pot_doré,Le Pot doré,2.35169,48.8604,3
+168,http://fr.dbpedia.org/resource/Église_Saint-Louis-en-l'Île,Église Saint-Louis-en-l'Île,2.3576,48.8513,1
+169,http://fr.dbpedia.org/resource/Basilique_Sainte-Clotilde_de_Paris,Basilique Sainte-Clotilde de Paris,2.31917,48.8583,2
+170,http://fr.dbpedia.org/resource/Hôtel_Régina,Hôtel Régina,2.33204,48.8638,3
+171,http://fr.dbpedia.org/resource/Maison_européenne_de_la_photographie,Maison européenne de la photographie,2.35913,48.855,1
+172,http://fr.dbpedia.org/resource/Église_Saint-Joseph-Artisan_de_Paris,Église Saint-Joseph-Artisan de Paris,2.36753,48.8816,2
+173,http://fr.dbpedia.org/resource/Église_Saint-Louis-d'Antin,Église Saint-Louis-d'Antin,2.3283,48.8745,2
+174,http://fr.dbpedia.org/resource/Église_Saint-Nicolas-des-Champs,Église Saint-Nicolas-des-Champs,2.35367,48.8656,2
+175,http://fr.dbpedia.org/resource/Cloître_et_église_des_Billettes,Cloître et église des Billettes,2.355,48.858,2
+176,http://fr.dbpedia.org/resource/Église_Saint-Julien-le-Pauvre_de_Paris,Église Saint-Julien-le-Pauvre de Paris,2.34711,48.852,2
+177,http://fr.dbpedia.org/resource/Église_évangélique_allemande_de_Paris,Église évangélique allemande de Paris,2.33111,48.8794,2
+178,http://fr.dbpedia.org/resource/Shangri-La_Hotel_Paris,Shangri-La Hotel Paris,2.29323,48.8638,2
+179,http://fr.dbpedia.org/resource/Église_réformée_de_l'Annonciation,Église réformée de l'Annonciation,2.28056,48.8619,2
+180,http://fr.dbpedia.org/resource/Chapelle_du_Père-Lachaise,Chapelle du Père-Lachaise,2.3928700000000003,48.8612,2
+181,http://fr.dbpedia.org/resource/Église_réformée_Saint-Jean,Église réformée Saint-Jean,2.30802,48.8575,2
+182,http://fr.dbpedia.org/resource/Église_évangélique_de_la_Rédemption_de_Paris,Église évangélique de la Rédemption de Paris,2.33973,48.8738,2
+183,http://fr.dbpedia.org/resource/Collégiale_Saint-Marcel_de_Paris,Collégiale Saint-Marcel de Paris,2.35273,48.8368,2
+184,http://fr.dbpedia.org/resource/Temple_des_Batignolles,Temple des Batignolles,2.32205,48.8824,2
+185,http://fr.dbpedia.org/resource/Église_Saint-Ambroise_de_Paris,Église Saint-Ambroise de Paris,2.37556,48.8611,1
+186,http://fr.dbpedia.org/resource/Église_écossaise_de_Paris,Église écossaise de Paris,2.30764,48.8668,2
+187,http://fr.dbpedia.org/resource/Viaduc_des_Arts,Viaduc des Arts,2.38125,48.8444,0
+188,http://fr.dbpedia.org/resource/Musée_d'art_moderne_de_la_ville_de_Paris,Musée d'art moderne de la ville de Paris,2.29778,48.8644,1
+189,http://fr.dbpedia.org/resource/Église_Saint-Médard_de_Paris,Église Saint-Médard de Paris,2.35028,48.8399,1
+190,http://fr.dbpedia.org/resource/Cathédrale_Notre-Dame-du-Liban_de_Paris,Cathédrale Notre-Dame-du-Liban de Paris,2.34534,48.844,2
+191,http://fr.dbpedia.org/resource/Cent_Quatre_(établissement_culturel),Cent Quatre (établissement culturel),2.3698900000000003,48.8902,1
+192,http://fr.dbpedia.org/resource/Paroisse_Notre-Dame-Joie-des-Affligés-et-Sainte-Geneviève,Paroisse Notre-Dame-Joie-des-Affligés-et-Sainte-Geneviève,2.35156,48.848,2
+193,http://fr.dbpedia.org/resource/Temple_protestant_du_Foyer_de_l'Âme,Temple protestant du Foyer de l'Âme,2.36944,48.8558,2
+194,http://fr.dbpedia.org/resource/Cadran_solaire_à_fibres_optiques,Cadran solaire à fibres optiques,2.34417,48.8631,3
+195,http://fr.dbpedia.org/resource/Le_Jules_Verne,Le Jules Verne,2.2945,48.8582,1
+196,http://fr.dbpedia.org/resource/Église_Sainte-Opportune_de_Paris,Église Sainte-Opportune,2.34734,48.8597,0
+197,http://fr.dbpedia.org/resource/Monument_à_la_République,Monument à la République,2.3638,48.8675,3
+198,http://fr.dbpedia.org/resource/Prieuré_Saint-Martin-des-Champs,Prieuré Saint-Martin-des-Champs,2.35508,48.86600000000001,2
+199,http://fr.dbpedia.org/resource/Chevaux_de_Marly,Chevaux de Marly,2.33577,48.8621,1
+200,http://fr.dbpedia.org/resource/Passerelle_Alibert,Passerelle Alibert,2.3656900000000003,48.8708,2
+201,http://fr.dbpedia.org/resource/Passerelle_Bichat,Passerelle Bichat,2.36331,48.8739,2
+202,http://fr.dbpedia.org/resource/Passerelle_Richerand,Passerelle Richerand,2.3649400000000003,48.8718,2
+203,http://fr.dbpedia.org/resource/Passerelle_des_Douanes,Passerelle des Douanes,2.3665,48.8698,2
+204,http://fr.dbpedia.org/resource/Pont_de_la_rue_Louis-Blanc,Pont de la rue Louis-Blanc,2.36754,48.8798,2
+205,http://fr.dbpedia.org/resource/Pont_tournant_de_la_Grange-aux-Belles,Pont tournant de la Grange-aux-Belles,2.36397,48.8731,1
+206,http://fr.dbpedia.org/resource/Pont_tournant_de_la_rue_Dieu,Pont tournant de la rue Dieu,2.36565,48.8709,2
+207,http://fr.dbpedia.org/resource/Statue_équestre_de_Louis_XIII,Statue équestre de Louis XIII,2.36553,48.8556,2
+208,http://fr.dbpedia.org/resource/Pont_La-Fayette_(Paris),Pont La-Fayette (Paris),2.36081,48.8803,2
+209,http://fr.dbpedia.org/resource/Passerelle_des_écluses_de_la_Villette,Passerelle des écluses de la Villette,2.37089,48.8837,2
+210,http://fr.dbpedia.org/resource/Jardin_des_serres_d'Auteuil,Jardin des serres d'Auteuil,2.25222,48.8469,1
+211,http://fr.dbpedia.org/resource/Parc_de_Bagatelle,Parc de Bagatelle,2.24722,48.8714,1
+212,http://fr.dbpedia.org/resource/Façade_du_palais_de_la_porte_Dorée,Palais de la Porte Dorée,2.40916,48.835,1
+213,http://fr.dbpedia.org/resource/Les_Poings_d'eau,Les Poings d'eau,2.41072,48.8542,3
+214,http://fr.dbpedia.org/resource/Synagogue_Adath_Israël,Synagogue Adath Israël,2.37889,48.8556,2
+215,http://fr.dbpedia.org/resource/Synagogue_Rashi_(Paris),Synagogue Rashi (Paris),2.3474,48.8745,2
+216,http://fr.dbpedia.org/resource/Statue_équestre_de_Simón_Bolívar_(Paris),Statue équestre de Simón Bolívar (Paris),2.31421,48.8645,2
+217,http://fr.dbpedia.org/resource/Porte_Dorée_(métro_de_Paris),Porte Dorée,2.4061,48.8355,1
+218,http://fr.dbpedia.org/resource/Porte_de_Charenton_(métro_de_Paris),Porte de Charenton,2.4004,48.8328,1
+219,http://fr.dbpedia.org/resource/Jardin_d'acclimatation_(Paris),Jardin d'acclimatation,2.26306,48.8775,0
+220,http://fr.dbpedia.org/resource/Pagode_de_Vincennes,Pagode de Vincennes,2.4154,48.8285,1
+221,http://fr.dbpedia.org/resource/Roseraie_de_Bagatelle,Roseraie de Bagatelle,2.24423,48.8673,1
+222,http://fr.dbpedia.org/resource/Statue_équestre_du_Maréchal_Foch,Statue équestre du Maréchal Foch,2.28734,48.8629,2
+223,http://fr.dbpedia.org/resource/La_France_renaissante,La France renaissante,2.28783,48.8558,3
+224,http://fr.dbpedia.org/resource/Statue_équestre_de_Washington,Statue équestre de Washington,2.29389,48.8647,2
+225,http://fr.dbpedia.org/resource/Passerelle_de_la_Grange-aux-Belles,Passerelle de la Grange-aux-Belles,2.363889813423157,48.87317640717858,1
+226,http://fr.dbpedia.org/resource/Pont_Eugène-Varlin,Pont Eugène-Varlin,2.36561,48.8776,2
+227,http://fr.dbpedia.org/resource/Jardin_des_Plantes_(Paris),Jardin des Plantes,2.359483709129298,48.84293901015745,0
+228,http://fr.dbpedia.org/resource/Passerelle_de_la_Moselle,Bassin de la Villette,2.375,48.8862,0
+229,http://fr.dbpedia.org/resource/Pont_de_la_rue_de_l'Ourcq,Pont de la rue de l'Ourcq,2.38287,48.8901,2
+230,http://fr.dbpedia.org/resource/Synagogue_Don_Isaac_Abravanel,Synagogue Don Isaac Abravanel,2.37625,48.856,2
+231,http://fr.dbpedia.org/resource/Viaduc_d'Auteuil,Viaduc d'Auteuil,2.26833,48.8394,1
+232,http://fr.dbpedia.org/resource/Église_Sainte-Jeanne-de-Chantal,Église Sainte-Jeanne-de-Chantal,2.2561400000000003,48.8387,2
+233,http://fr.dbpedia.org/resource/Musée_d'Ennery,Musée d'Ennery,2.28139,48.8717,2
+234,http://fr.dbpedia.org/resource/Synagogue_Chivtei_Israël,Synagogue Chivtei Israël,2.38611,48.8436,2
+235,http://fr.dbpedia.org/resource/Baiser_Promenade,Baiser Promenade,2.3288900000000003,48.8708,3
+236,http://fr.dbpedia.org/resource/Canyoneaustrate,Cité de la Mode et du Design,2.3709317026456533,48.84017060001698,1
+237,http://fr.dbpedia.org/resource/Carolina_(Tommasi),Carolina (Tommasi),2.33664,48.857,3
+238,http://fr.dbpedia.org/resource/Cascades_de_temps,Cascades de temps,2.34444,48.8714,3
+239,http://fr.dbpedia.org/resource/Fers_(sculpture),Fers (sculpture),2.31056,48.8828,3
+240,http://fr.dbpedia.org/resource/Hommage_au_capitaine_Dreyfus,Hommage au capitaine Dreyfus,2.32877,48.8451,3
+241,http://fr.dbpedia.org/resource/L'Oiseau,Jussieu,2.3570511221031243,48.847493887816015,0
+242,http://fr.dbpedia.org/resource/La_Place_des_enfants,La Place des enfants,2.34833,48.8653,3
+243,http://fr.dbpedia.org/resource/La_Terre_(Blanchy),La Terre (Blanchy),2.39406,48.8688,3
+244,http://fr.dbpedia.org/resource/La_Tour_d'exercice,La Tour d'exercice,2.28917,48.8844,3
+245,http://fr.dbpedia.org/resource/Le_Cheval,Le Cheval,2.35664,48.8417,3
+246,"http://fr.dbpedia.org/resource/Le_Cri,_l'Écrit","Le Cri, l'Écrit",2.33917,48.8464,3
+247,http://fr.dbpedia.org/resource/Le_Poisson,Le Poisson,2.35672,48.8417,3
+248,http://fr.dbpedia.org/resource/Lumière_en_éclats,Lumière en éclats,2.345,48.8761,2
+249,http://fr.dbpedia.org/resource/P.I.L.I.,P.I.L.I.,2.325,48.8706,3
+250,http://fr.dbpedia.org/resource/Point_de_rencontre_(Signori),Point de rencontre (Signori),2.34639,48.8614,3
+251,http://fr.dbpedia.org/resource/Pèlerins_des_nuages_et_de_l'eau,Pèlerins des nuages et de l'eau,2.41361,48.8292,3
+252,http://fr.dbpedia.org/resource/Ryaba_la_Poule,Ryaba la Poule,2.325,48.8706,3
+253,http://fr.dbpedia.org/resource/Le_Génie_de_la_Liberté,Le Génie de la Liberté,2.369157671928406,48.85316325915519,1
+254,http://fr.dbpedia.org/resource/Monochrome_for_Paris,Monochrome for Paris,2.3819,48.8297,3
+255,http://fr.dbpedia.org/resource/Cimetière_de_la_Villette,Cimetière de la Villette,2.38889,48.8846,2
+256,http://fr.dbpedia.org/resource/Bois_de_Vincennes,Bois de Vincennes,2.4406696810644406,48.83017606257502,0
+257,http://fr.dbpedia.org/resource/Cimetière_de_Charonne,Cimetière de Charonne,2.40347,48.8609,2
+258,http://fr.dbpedia.org/resource/Gare_de_Lyon_(métro_de_Paris),Gare de Lyon (métro de Paris),2.37407,48.8447,0
+259,http://fr.dbpedia.org/resource/Jaurès_(métro_de_Paris),Jaurès (métro de Paris),2.3702,48.8818,2
+260,http://fr.dbpedia.org/resource/Ménilmontant_(métro_de_Paris),Ménilmontant (métro de Paris),2.38362,48.8662,2
+261,http://fr.dbpedia.org/resource/Parmentier_(métro_de_Paris),Parmentier (métro de Paris),2.37438,48.8653,2
+262,http://fr.dbpedia.org/resource/Place_des_Vosges,Place des Vosges,2.3654900000000003,48.8556,0
+263,http://fr.dbpedia.org/resource/Pont_Saint-Michel,Pont Saint-Michel,2.34472,48.8542,2
+264,http://fr.dbpedia.org/resource/Pont_au_Change,Pont au Change,2.3467736173846547,48.85667482942199,2
+265,http://fr.dbpedia.org/resource/Père_Lachaise_(métro_de_Paris),Père Lachaise (métro de Paris),2.3873900000000003,48.8629,3
+266,http://fr.dbpedia.org/resource/Rue_Saint-Maur_(métro_de_Paris),Rue Saint-Maur (métro de Paris),2.37945,48.8643,2
+267,http://fr.dbpedia.org/resource/Victor_Hugo_(métro_de_Paris),Victor Hugo (métro de Paris),2.2852,48.8698,2
+268,http://fr.dbpedia.org/resource/Bastille_(métro_de_Paris),Opéra Bastille,2.37055778503418,48.852079617570965,0
+269,http://fr.dbpedia.org/resource/Gare_du_Nord_(métro_de_Paris),Gare du Nord (métro de Paris),2.35493,48.8806,3
+270,http://fr.dbpedia.org/resource/Villiers_(métro_de_Paris),Villiers (métro de Paris),2.31487,48.8811,2
+271,http://fr.dbpedia.org/resource/Zouave_du_pont_de_l'Alma,Zouave du pont de l'Alma,2.30201,48.8638,0
+272,http://fr.dbpedia.org/resource/École_de_Chaillot,École de Chaillot,2.29091,48.8631,1
+273,http://fr.dbpedia.org/resource/Pont_du_Garigliano,Pont du Garigliano,2.26833,48.8394,1
+274,http://fr.dbpedia.org/resource/Pont_levant_de_la_rue_de_Crimée,Pont levant de la rue de Crimée,2.37944,48.8883,2
+275,http://fr.dbpedia.org/resource/Hôpital_Cochin,Hôpital Cochin,2.34028,48.8369,1
+276,http://fr.dbpedia.org/resource/La_Coupole_(brasserie),La Coupole (brasserie),2.32806,48.8424,2
+277,http://fr.dbpedia.org/resource/Cimetière_du_Calvaire,Cimetière du Calvaire,2.34179,48.8868,2
+278,http://fr.dbpedia.org/resource/Square_René-Le_Gall,Square René-Le Gall,2.34961,48.8324,2
+279,http://fr.dbpedia.org/resource/Cimetière_d'Auteuil,Cimetière d'Auteuil,2.25944,48.8411,1
+280,http://fr.dbpedia.org/resource/Cimetière_de_Vaugirard,Cimetière de Vaugirard,2.28444,48.8383,2
+281,http://fr.dbpedia.org/resource/Église_Saint-Cyrille-Saint-Méthode_de_Paris,Église Saint-Cyrille-Saint-Méthode de Paris,2.40475,48.8603,2
+282,http://fr.dbpedia.org/resource/Église_Saint-Éphrem-le-Syriaque,Église Saint-Éphrem-le-Syriaque,2.34778,48.8483,2
+283,http://fr.dbpedia.org/resource/Église_des_Saints-Archanges,Église des Saints-Archanges,2.34722,48.8494,2
+284,http://fr.dbpedia.org/resource/Chapelle_Sainte-Jeanne-d'Arc_de_Paris,Chapelle Sainte-Jeanne-d'Arc de Paris,2.33921,48.8249,2
+285,http://fr.dbpedia.org/resource/Cimetière_de_Bercy,Cimetière de Bercy,2.39764,48.8328,1
+286,http://fr.dbpedia.org/resource/Napoléon_en_triomphateur,Napoléon en triomphateur,2.33683,48.8618,3
+287,http://fr.dbpedia.org/resource/Azulejo_géométrique,Azulejo géométrique,2.3139,48.8675,3
+288,http://fr.dbpedia.org/resource/Grande_fresque_de_la_gare_de_Lyon,Grande fresque de la gare de Lyon,2.37467,48.8448,3
+289,"http://fr.dbpedia.org/resource/La_Voix_lactée_(Cadieux,_Paris)","La Voix lactée (Cadieux, Paris)",2.3246,48.8747,3
+290,http://fr.dbpedia.org/resource/Monument_à_la_mission_Marchand,Monument à la mission Marchand,2.40877,48.8345,3
+291,http://fr.dbpedia.org/resource/Bibliothèque_nationale_de_France,Bibliothèque nationale de France,2.37583,48.8336,0
+292,http://fr.dbpedia.org/resource/Cimetière_du_Montparnasse,Cimetière du Montparnasse,2.3278122716536758,48.83781890649802,0
+293,http://fr.dbpedia.org/resource/Cimetière_du_Père-Lachaise,Cimetière du Père-Lachaise,2.3946585235411533,48.861021498696346,0
+294,http://fr.dbpedia.org/resource/Colonel_Fabien_(métro_de_Paris),Colonel Fabien (métro de Paris),2.37116,48.8771,2
+295,http://fr.dbpedia.org/resource/Couronnes_(métro_de_Paris),Couronnes (métro de Paris),2.37986,48.8695,2
+296,http://fr.dbpedia.org/resource/Gare_du_Musée_d'Orsay,Musée d'Orsay,2.3266088929366417,48.859927346537646,0
+297,http://fr.dbpedia.org/resource/Kléber_(métro_de_Paris),Kléber (métro de Paris),2.29312,48.8711,2
+298,http://fr.dbpedia.org/resource/Monceau_(métro_de_Paris),Parc Monceau,2.3092317581176762,48.87938235071586,1
+299,http://fr.dbpedia.org/resource/Mouton-Duvernet_(métro_de_Paris),Mouton-Duvernet (métro de Paris),2.3299,48.8314,2
+300,http://fr.dbpedia.org/resource/Nation_(métro_de_Paris),Nation (métro de Paris),2.39591,48.8485,2
+301,http://fr.dbpedia.org/resource/Pont_de_l'Alma,Pont de l'Alma,2.30185831986411,48.86345780023368,1
+302,http://fr.dbpedia.org/resource/Porte_Dauphine_(métro_de_Paris),Porte Dauphine,2.2764042846019583,48.87178590732627,0
+303,http://fr.dbpedia.org/resource/Richard-Lenoir_(métro_de_Paris),Richard-Lenoir (métro de Paris),2.37184,48.8598,2
+304,http://fr.dbpedia.org/resource/Rome_(métro_de_Paris),Rome (métro de Paris),2.32205,48.8824,2
+305,http://fr.dbpedia.org/resource/République_(métro_de_Paris),Place de la République,2.3639293587102417,48.8675575648714,0
+306,http://fr.dbpedia.org/resource/Ternes_(métro_de_Paris),Ternes (métro de Paris),2.29867,48.8782,2
+307,http://fr.dbpedia.org/resource/Wagram_(métro_de_Paris),Wagram (métro de Paris),2.30367,48.8841,2
+308,http://fr.dbpedia.org/resource/Cimetière_Sainte-Marguerite,Cimetière Sainte-Marguerite,2.38115,48.8531,2
+309,http://fr.dbpedia.org/resource/Cimetière_des_Errancis,Cimetière des Errancis,2.31676,48.8808,2
+310,http://fr.dbpedia.org/resource/Musée_national_des_arts_asiatiques_-_Guimet,Musée national des arts asiatiques - Guimet,2.29389,48.8653,1
+311,http://fr.dbpedia.org/resource/Passerelle_Léopold-Sédar-Senghor,Passerelle Léopold-Sédar-Senghor,2.32472,48.8619,1
+312,http://fr.dbpedia.org/resource/Pont_Charles-de-Gaulle,Pont Charles-de-Gaulle,2.37,48.8431,1
+313,http://fr.dbpedia.org/resource/Pont_Louis-Philippe,Pont Louis-Philippe,2.3544400000000003,48.8539,1
+314,http://fr.dbpedia.org/resource/Pont_Saint-Louis,Pont Saint-Louis,2.35222,48.8528,2
+315,http://fr.dbpedia.org/resource/Pont_amont,Pont amont,2.38889,48.8267,2
+316,http://fr.dbpedia.org/resource/Pont_aval,Pont aval,2.26389,48.835,2
+317,http://fr.dbpedia.org/resource/Pont_d'Arcole,Pont d'Arcole,2.3506439435287074,48.855519279042305,2
+318,http://fr.dbpedia.org/resource/Pont_d'Austerlitz,Pont d'Austerlitz,2.36611,48.845,1
+319,http://fr.dbpedia.org/resource/Pont_de_Sully,Pont de Sully,2.35889,48.85,1
+320,http://fr.dbpedia.org/resource/Pont_de_Tolbiac,Pont de Tolbiac,2.38194,48.8333,0
+321,http://fr.dbpedia.org/resource/Pont_de_l'Archevêché,Pont de l'Archevêché,2.35167,48.8517,1
+322,http://fr.dbpedia.org/resource/Pont_de_la_Tournelle,Pont de la Tournelle,2.355,48.8503,2
+323,http://fr.dbpedia.org/resource/Pont_des_Invalides,Pont des Invalides,2.31028,48.8644,1
+324,http://fr.dbpedia.org/resource/Pont_du_Carrousel,Pont du Carrousel,2.33333,48.86,2
+325,http://fr.dbpedia.org/resource/Église_de_Marie-Médiatrice-de-Toutes-les-Grâces,Église de Marie-Médiatrice-de-Toutes-les-Grâces,2.4025,48.8792,2
+326,http://fr.dbpedia.org/resource/Basilique_Sainte-Jeanne-d'Arc_de_Paris,Basilique Sainte-Jeanne-d'Arc de Paris,2.3601400000000003,48.8915,2
+327,http://fr.dbpedia.org/resource/Square_Louis-XIII,Square Louis-XIII,2.3654900000000003,48.8556,2
+328,http://fr.dbpedia.org/resource/Synagogue_Adas_Yereim,Synagogue Adas Yereim,2.34281,48.8746,2
+329,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Lourdes_de_Paris,Église Notre-Dame-de-Lourdes de Paris,2.39948,48.8707,2
+330,http://fr.dbpedia.org/resource/Musée_des_monuments_français_(1879),Musée des monuments français (1879),2.2896,48.8632,2
+331,http://fr.dbpedia.org/resource/Chapelle_Notre-Dame-du-Bon-Conseil_de_Paris,Chapelle Notre-Dame-du-Bon-Conseil de Paris,2.3079,48.8488,2
+332,http://fr.dbpedia.org/resource/Chapelle_Notre-Dame_du_Saint_Sacrement_de_Paris,Chapelle Notre-Dame du Saint Sacrement de Paris,2.27975,48.862,2
+333,http://fr.dbpedia.org/resource/Chapelle_Sainte-Rita_(Paris),Chapelle Sainte-Rita (Paris),2.33167,48.8838,2
+334,http://fr.dbpedia.org/resource/Paroisse_Saint-Honoré-d'Eylau,Paroisse Saint-Honoré-d'Eylau,2.28608,48.8684,2
+335,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-Grâce-de-Passy,Église Notre-Dame-de-Grâce-de-Passy,2.27999,48.8563,2
+336,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-l'Assomption-de-Passy,Église Notre-Dame-de-l'Assomption-de-Passy,2.2665,48.8556,2
+337,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-l'Assomption-des-Buttes-Chaumont,Église Notre-Dame-de-l'Assomption-des-Buttes-Chaumont,2.37833,48.88399999999999,2
+338,http://fr.dbpedia.org/resource/Église_Notre-Dame-de-la-Salette_de_Paris,Église Notre-Dame-de-la-Salette de Paris,2.30021,48.8339,2
+339,http://fr.dbpedia.org/resource/Église_Sainte-Colette-des-Buttes-Chaumont,Église Sainte-Colette-des-Buttes-Chaumont,2.38656,48.8839,2
+340,http://fr.dbpedia.org/resource/Église_du_Bon-Pasteur_de_Paris,Église du Bon-Pasteur de Paris,2.3919200000000003,48.8565,2
+341,http://fr.dbpedia.org/resource/Église_du_Cœur-Eucharistique-de-Jésus,Église du Cœur-Eucharistique-de-Jésus,2.40647,48.8678,2
+342,http://fr.dbpedia.org/resource/Georges_Brassens_(Greck),Georges Brassens (Greck),2.29889,48.8314,3
+343,http://fr.dbpedia.org/resource/L'Âne_(Lalanne),L'Âne (Lalanne),2.29889,48.8314,2
+344,http://fr.dbpedia.org/resource/Le_Porteur_de_viande,Le Porteur de viande,2.29889,48.8314,3
+345,http://fr.dbpedia.org/resource/Les_Taureaux_(Isidore_Bonheur),Les Taureaux (Isidore Bonheur),2.29889,48.8314,3
+346,http://fr.dbpedia.org/resource/Les_Vautours_(Monard),Les Vautours (Monard),2.31582,48.8879,3
+347,http://fr.dbpedia.org/resource/Mur_des_vents,Mur des vents,2.34917,48.8661,2
+348,http://fr.dbpedia.org/resource/Napoléon_empereur,Napoléon empereur,2.3369,48.8572,2
+349,http://fr.dbpedia.org/resource/Cimetière_Sud_de_Saint-Mandé,Cimetière Sud de Saint-Mandé,2.41154,48.8375,2
+350,"http://fr.dbpedia.org/resource/Le_Travail,_par_l'Industrie_et_le_Commerce,_enrichit_l'Humanité","Le Travail, par l'Industrie et le Commerce, enrichit l'Humanité",2.34231,48.8697,3
+351,http://fr.dbpedia.org/resource/Fondation_Deutsch_de_la_Meurthe,Fondation Deutsch de la Meurthe,2.33508,48.8204,2
+352,http://fr.dbpedia.org/resource/Petit-Pont_-_Cardinal_Lustiger,Petit-Pont - Cardinal Lustiger,2.34694,48.8533,2
+353,http://fr.dbpedia.org/resource/Place_d'Italie_(métro_de_Paris),Place d'Italie,2.355624837600741,48.83141279679442,0
+354,http://fr.dbpedia.org/resource/Pont_Notre-Dame,Pont Notre-Dame,2.3488900000000004,48.8564,1
+355,http://fr.dbpedia.org/resource/Pont_au_Double,Pont au Double,2.34833,48.8525,2
+356,http://fr.dbpedia.org/resource/Boissière_(métro_de_Paris),Boissière (métro de Paris),2.29039,48.8674,2
+357,http://fr.dbpedia.org/resource/Botzaris_(métro_de_Paris),Botzaris (métro de Paris),2.38804,48.8796,2
+358,http://fr.dbpedia.org/resource/Bréguet_-_Sabin_(métro_de_Paris),Bréguet - Sabin (métro de Paris),2.3700900000000003,48.8561,2
+359,http://fr.dbpedia.org/resource/Campo-Formio_(métro_de_Paris),Campo-Formio (métro de Paris),2.35813,48.835,2
+360,http://fr.dbpedia.org/resource/Chardon-Lagache_(métro_de_Paris),Chardon-Lagache (métro de Paris),2.26621,48.8451,2
+361,http://fr.dbpedia.org/resource/Château_d'Eau_(métro_de_Paris),Château d'Eau (métro de Paris),2.35615,48.8729,2
+362,http://fr.dbpedia.org/resource/Cité_de_l'architecture_et_du_patrimoine,Cité de l'architecture et du patrimoine,2.28956,48.8632,1
+363,http://fr.dbpedia.org/resource/Crimée_(métro_de_Paris),Crimée (métro de Paris),2.37707,48.8916,2
+364,http://fr.dbpedia.org/resource/Daumesnil_(métro_de_Paris),Daumesnil (métro de Paris),2.3957900000000003,48.8396,2
+365,http://fr.dbpedia.org/resource/Denfert-Rochereau_(métro_de_Paris),Denfert-Rochereau,2.3326689004898076,48.833876581660704,0
+366,"http://fr.dbpedia.org/resource/Institut_national_du_sport,_de_l'expertise_et_de_la_performance","Institut national du sport, de l'expertise et de la performance",2.45361,48.8314,1
+367,http://fr.dbpedia.org/resource/Louis_Blanc_(métro_de_Paris),Louis Blanc (métro de Paris),2.36484,48.8811,3
+368,http://fr.dbpedia.org/resource/Mirabeau_(métro_de_Paris),Mirabeau (métro de Paris),2.27171,48.8467,2
+369,http://fr.dbpedia.org/resource/Picpus_(métro_de_Paris),Picpus (métro de Paris),2.40049,48.8452,2
+370,http://fr.dbpedia.org/resource/Porte_d'Auteuil_(métro_de_Paris),Porte d'Auteuil,2.25875,48.848,1
+371,http://fr.dbpedia.org/resource/Pré_Saint-Gervais_(métro_de_Paris),Pré Saint-Gervais (métro de Paris),2.39891,48.8803,2
+372,http://fr.dbpedia.org/resource/Raspail_(métro_de_Paris),Raspail (métro de Paris),2.33061,48.8392,2
+373,http://fr.dbpedia.org/resource/Saint-Marcel_(métro_de_Paris),Saint-Marcel (métro de Paris),2.36042,48.838,2
+374,http://fr.dbpedia.org/resource/Saint-Michel_(métro_de_Paris),Saint-Michel (métro de Paris),2.34393,48.8537,2
+375,http://fr.dbpedia.org/resource/Église_d'Auteuil_(métro_de_Paris),Église d'Auteuil (métro de Paris),2.2690200000000003,48.8472,2
+376,http://fr.dbpedia.org/resource/Abbaye_de_Penthemont,Abbaye de Penthemont,2.32194,48.8564,2
+377,http://fr.dbpedia.org/resource/Pont_de_Grenelle,Pont de Grenelle,2.28,48.8503,1
+378,http://fr.dbpedia.org/resource/Cimetière_de_Picpus,Cimetière de Picpus,2.4,48.8439,2
+379,http://fr.dbpedia.org/resource/Synagogue_Chasseloup-Laubat,Synagogue Chasseloup-Laubat,2.30486,48.8474,2
+380,http://fr.dbpedia.org/resource/Église_Saint-Ferdinand-des-Ternes,Église Saint-Ferdinand-des-Ternes,2.29074,48.8791,2
+381,http://fr.dbpedia.org/resource/Chapelle_Notre-Dame-du-Lys,Chapelle Notre-Dame-du-Lys,2.30863,48.8438,2
+382,http://fr.dbpedia.org/resource/Cimetière_Valmy,Cimetière Valmy,2.39895,48.8303,2
+383,http://fr.dbpedia.org/resource/Le_Botteleur_(Perrin),Le Botteleur (Perrin),2.3790400000000003,48.862,3
+384,http://fr.dbpedia.org/resource/Cimetière_Saint-Louis_de_Paris,Cimetière Saint-Louis de Paris,2.36692,48.8767,2
+385,http://fr.dbpedia.org/resource/Twisted_Lamppost_Star,Twisted Lamppost Star,2.40892,48.8645,3
+386,http://fr.dbpedia.org/resource/L'Inspiration_du_poète,L'Inspiration du poète,2.33578,48.8611,3
+387,http://fr.dbpedia.org/resource/Monument_en_hommage_à_Komitas,Monument en hommage à Komitas,2.30981,48.8644,3
+388,http://fr.dbpedia.org/resource/Chasseur_à_pied_(Auguste_Arnaud),Chasseur à pied (Auguste Arnaud),2.4554,48.8182,3
+389,http://fr.dbpedia.org/resource/Pont_Marchand_(Paris),Pont Marchand (Paris),2.34616,48.8568,2
+390,http://fr.dbpedia.org/resource/Pont_aux_Meuniers,Pont aux Meuniers,2.34592,48.8569,2
+391,http://fr.dbpedia.org/resource/Statue_de_sainte_Catherine_(2e_arrondissement_de_Paris),Statue de sainte Catherine (2e arrondissement de Paris),2.34764,48.8685,2
+392,http://fr.dbpedia.org/resource/Jardin_tropical_de_Paris,Jardin tropical de Paris,2.466,48.833,1
+393,http://fr.dbpedia.org/resource/Passerelle_Simone-de-Beauvoir,Passerelle Simone-de-Beauvoir,2.37806,48.8353,0
+394,http://fr.dbpedia.org/resource/1SQMH,1SQMH,2.36889,48.8211,3
+395,http://fr.dbpedia.org/resource/Abellio_(Libéraki),Abellio (Libéraki),2.35955,48.8484,3
+396,http://fr.dbpedia.org/resource/Animal_82,Animal 82,2.35942,48.8484,3
+397,http://fr.dbpedia.org/resource/Belt_II,Belt II,2.35957,48.8486,3
+398,http://fr.dbpedia.org/resource/Chronos_10,Chronos 10,2.3616900000000003,48.8472,3
+399,http://fr.dbpedia.org/resource/Consigne_à_vie,Consigne à vie,2.32433,48.8755,3
+400,http://fr.dbpedia.org/resource/Cœur_de_gaucho,Cœur de gaucho,2.35913,48.8487,3
+401,http://fr.dbpedia.org/resource/Demeurre_1,Demeurre 1,2.36107,48.8476,3
+402,http://fr.dbpedia.org/resource/Fiesole_(Etrog),Fiesole (Etrog),2.35917,48.8484,3
+403,http://fr.dbpedia.org/resource/Harmonie_(Volti),Harmonie (Volti),2.3566700000000003,48.8656,3
+404,http://fr.dbpedia.org/resource/Hautes_Herbes,Hautes Herbes,2.34056,48.86,3
+405,http://fr.dbpedia.org/resource/Horizons_suspendus,Horizons suspendus,2.3725,48.8856,3
+406,http://fr.dbpedia.org/resource/Hydrophage,Hydrophage,2.35994,48.8482,3
+407,http://fr.dbpedia.org/resource/Incubate_Lactate_Perambulate,Incubate Lactate Perambulate,2.30778,48.8269,3
+408,http://fr.dbpedia.org/resource/Interpénétration_des_deux_espaces,Interpénétration des deux espaces,2.35949,48.8482,3
+409,http://fr.dbpedia.org/resource/L'Arche_(Tual),L'Arche (Tual),2.34417,48.8653,3
+410,http://fr.dbpedia.org/resource/L'Heure_de_tous,Sculpture L'Heure de tous,2.3266400000000003,48.8758,1
+411,http://fr.dbpedia.org/resource/La_Bicyclette_ensevelie,La Bicyclette ensevelie,2.39194,48.8933,2
+412,http://fr.dbpedia.org/resource/La_Demeure_10,Parc de Bercy,2.381727129899423,48.83606841306949,1
+413,http://fr.dbpedia.org/resource/La_Forêt_pétrifiée_(Stahly),La Forêt pétrifiée (Stahly),2.35639,48.8481,3
+414,http://fr.dbpedia.org/resource/La_Grande_Fenêtre,La Grande Fenêtre,2.36045,48.848,3
+415,http://fr.dbpedia.org/resource/Le_Centaure_(César),Le Centaure (César),2.32944,48.8519,3
+416,http://fr.dbpedia.org/resource/Le_Kiosque_des_noctambules,Le Kiosque des noctambules,2.33611,48.8631,1
+417,http://fr.dbpedia.org/resource/Les_Enfants_du_Monde_(Paris),Les Enfants du Monde (Paris),2.37944,48.8361,3
+418,http://fr.dbpedia.org/resource/Marseille_(César),Marseille (César),2.3608,48.8478,3
+419,http://fr.dbpedia.org/resource/Mind_Accumulation,Mind Accumulation,2.36145,48.8471,3
+420,http://fr.dbpedia.org/resource/Mirage_(Lavier),Mirage (Lavier),2.3525,48.8214,3
+421,http://fr.dbpedia.org/resource/Murmures,Murmures,2.33528,48.8208,3
+422,http://fr.dbpedia.org/resource/Neptune_II,Neptune II,2.36031,48.848,3
+423,http://fr.dbpedia.org/resource/Obliques_enrubannées,Obliques enrubannées,2.34722,48.8583,3
+424,http://fr.dbpedia.org/resource/Pyegemalion,Pyegemalion,2.34444,48.8617,3
+425,"http://fr.dbpedia.org/resource/Sculpture_(Niemeyer,_parc_de_Bercy)","Sculpture (Niemeyer, parc de Bercy)",2.38167,48.8372,3
+426,"http://fr.dbpedia.org/resource/Sculpture_(Pan,_Paris)","Sculpture (Pan, Paris)",2.36166,48.8468,3
+427,http://fr.dbpedia.org/resource/Shining_Wings,Shining Wings,2.35926,48.8484,3
+428,http://fr.dbpedia.org/resource/Skate_Park,Skate Park,2.35889,48.8186,3
+429,http://fr.dbpedia.org/resource/Stèle_(Kirova),Stèle (Kirova),2.35966,48.8482,3
+430,http://fr.dbpedia.org/resource/Tchaïkovski_(Lévêque),Tchaïkovski (Lévêque),2.33389,48.8211,3
+431,http://fr.dbpedia.org/resource/Tissignalisation_n°14,Tissignalisation n°14,2.33472,48.8658,3
+432,http://fr.dbpedia.org/resource/Vizitor,Vizitor,2.34639,48.8614,3
+433,http://fr.dbpedia.org/resource/Vénus_des_Arts,Vénus des Arts,2.33694,48.8553,2
+434,http://fr.dbpedia.org/resource/Écoute_(sculpture),Écoute (sculpture),2.345,48.8631,3
+435,http://fr.dbpedia.org/resource/Énergies_(Trémois),Énergies (Trémois),2.34778,48.8619,3
+436,http://fr.dbpedia.org/resource/Buste_de_Frédérick_Lemaître,Buste de Frédérick Lemaître,2.36718,48.8689,2
+437,http://fr.dbpedia.org/resource/Église_Saint-Séraphin-de-Sarov,Église Saint-Séraphin-de-Sarov,2.30389,48.8428,2
+438,http://fr.dbpedia.org/resource/Cimetière_de_la_Trinité,Cimetière de la Trinité,2.35019,48.8645,2
+439,http://fr.dbpedia.org/resource/La_République_(Soitoux),La République (Soitoux),2.3359,48.8578,3
+440,http://fr.dbpedia.org/resource/Passerelle_de_l'Estacade,Passerelle de l'Estacade,2.36083,48.8495,1
+441,http://fr.dbpedia.org/resource/Pont_Saint-Charles_(Paris),Pont Saint-Charles (Paris),2.3477200000000003,48.8529,2
+442,http://fr.dbpedia.org/resource/Cimetière_de_Clamart,Cimetière de Clamart,2.3561,48.8389,2
+443,http://fr.dbpedia.org/resource/Square_Saint-Lambert,Square Saint-Lambert,2.29694,48.8422,2
+444,http://fr.dbpedia.org/resource/Chapelle_Saint-Joseph-de-Cluny,Chapelle Saint-Joseph-de-Cluny,2.33812,48.8351,2
+445,http://fr.dbpedia.org/resource/Palais_épiscopal_de_Paris,Palais épiscopal de Paris,2.34972,48.8531,2
+446,http://fr.dbpedia.org/resource/Opéra_(métro_de_Paris),Opéra Garnier,2.331764474175726,48.8719768500719,0
+447,http://fr.dbpedia.org/resource/Anvers_(métro_de_Paris),Anvers (métro de Paris),2.34485,48.883,1
+448,http://fr.dbpedia.org/resource/Barbès_-_Rochechouart_(métro_de_Paris),Barbès - Rochechouart,2.35052,48.8836,0
+449,http://fr.dbpedia.org/resource/Louvre_-_Rivoli_(métro_de_Paris),Louvre - Rivoli (métro de Paris),2.34028,48.8611,2
+450,http://fr.dbpedia.org/resource/Palais_Royal_-_Musée_du_Louvre_(métro_de_Paris),Palais Royal - Musée du Louvre (métro de Paris),2.33582,48.8628,2
+451,http://fr.dbpedia.org/resource/Gambetta_(métro_de_Paris),Gambetta (métro de Paris),2.39845,48.8649,2
+452,http://fr.dbpedia.org/resource/Quatre-Septembre_(métro_de_Paris),Quatre-Septembre (métro de Paris),2.33663,48.8696,2
+453,http://fr.dbpedia.org/resource/Temple_(métro_de_Paris),Temple (métro de Paris),2.36059,48.8665,2
+454,http://fr.dbpedia.org/resource/Institut_catholique_de_Paris,Institut catholique de Paris,2.32917,48.8481,1
+455,http://fr.dbpedia.org/resource/Hôpital_Necker-Enfants_malades,Hôpital Necker-Enfants malades,2.31554,48.845,1
+456,http://fr.dbpedia.org/resource/Bibliothèque_Forney,Bibliothèque Forney,2.35908,48.8534,2
+457,http://fr.dbpedia.org/resource/Réaumur_-_Sébastopol_(métro_de_Paris),Réaumur - Sébastopol (métro de Paris),2.35239,48.8662,2
+458,http://fr.dbpedia.org/resource/Tuileries,Tuileries,2.32667,48.8636,1
+459,http://fr.dbpedia.org/resource/École_du_Louvre,École du Louvre,2.33222,48.8608,1
+460,http://fr.dbpedia.org/resource/Alexandre_Dumas_(métro_de_Paris),Alexandre Dumas (métro de Paris),2.39499,48.8562,2
+461,http://fr.dbpedia.org/resource/Avron_(métro_de_Paris),Avron (métro de Paris),2.39786,48.8519,2
+462,http://fr.dbpedia.org/resource/Bibliothèque_historique_de_la_ville_de_Paris,Bibliothèque historique de la ville de Paris,2.3618,48.8571,2
+463,http://fr.dbpedia.org/resource/Blanche_(métro_de_Paris),Blanche (métro de Paris),2.3337,48.8835,2
+464,http://fr.dbpedia.org/resource/Cimetière_de_Belleville,Cimetière de Belleville,2.40015,48.875,1
+465,http://fr.dbpedia.org/resource/Cité_(métro_de_Paris),Place Dauphine,2.342575089200336,48.85653000519108,0
+466,http://fr.dbpedia.org/resource/Musée_des_arts_et_métiers,Musée des arts et métiers,2.355636542824651,48.86659767429629,0
+467,http://fr.dbpedia.org/resource/Musée_national_Eugène-Delacroix,Musée national Eugène-Delacroix,2.33555,48.8543,1
+468,http://fr.dbpedia.org/resource/Musée_national_d'art_moderne,Musée national d'art moderne,2.35221,48.8605,2
+469,http://fr.dbpedia.org/resource/Philippe_Auguste_(métro_de_Paris),Philippe Auguste (métro de Paris),2.39094,48.858,2
+470,http://fr.dbpedia.org/resource/Pigalle_(métro_de_Paris),Place Pigalle,2.3373088382353484,48.88223377259178,0
+471,http://fr.dbpedia.org/resource/Place_de_Clichy_(métro_de_Paris),Place de Clichy,2.3274479247372386,48.883690187179226,0
+472,http://fr.dbpedia.org/resource/Saint-Lazare_(métro_de_Paris),Saint-Lazare (métro de Paris),2.32619,48.8756,3
+473,http://fr.dbpedia.org/resource/Tuileries_(métro_de_Paris),Tuileries (métro de Paris),2.33031,48.8645,3
+474,http://fr.dbpedia.org/resource/Square_Jean-XXIII,Square Jean-XXIII,2.3513900000000003,48.8525,2
+475,"http://fr.dbpedia.org/resource/Palais_Galliera,_musée_de_la_Mode_de_la_Ville_de_Paris","Palais Galliera, musée de la Mode",2.29667,48.8656,1
+476,http://fr.dbpedia.org/resource/Le_Rocher_de_Cancale,Le Rocher de Cancale,2.34715,48.8656,1
+477,http://fr.dbpedia.org/resource/Église_Saint-Honoré-d'Eylau_(église_ancienne),Église Saint-Honoré-d'Eylau (église ancienne),2.28466,48.8691,2
+478,http://fr.dbpedia.org/resource/Église_Saint-Honoré-d'Eylau_(église_nouvelle),Église Saint-Honoré-d'Eylau (église nouvelle),2.28608,48.8684,2
+479,http://fr.dbpedia.org/resource/Crypte_archéologique_du_parvis_Notre-Dame,Notre-Dame de Paris,2.3498426091115254,48.85299963311617,0
+480,http://fr.dbpedia.org/resource/Europe_(métro_de_Paris),Europe (métro de Paris),2.32238,48.8788,2
+481,http://fr.dbpedia.org/resource/Sentier_(métro_de_Paris),Sentier (métro de Paris),2.34639,48.8676,2
+482,http://fr.dbpedia.org/resource/Abbesses_(métro_de_Paris),Place des Abbesses,2.338450437993394,48.884402640683085,0
+483,http://fr.dbpedia.org/resource/Cadet_(métro_de_Paris),Cadet (métro de Paris),2.34488,48.8761,2
+484,http://fr.dbpedia.org/resource/Châtelet_(métro_de_Paris),Place du Châtelet,2.34712,48.8585,1
+485,http://fr.dbpedia.org/resource/Pasteur_(métro_de_Paris),Pasteur (métro de Paris),2.31268,48.8428,2
+486,http://fr.dbpedia.org/resource/Étienne_Marcel_(métro_de_Paris),Étienne Marcel (métro de Paris),2.35061,48.8641,2
+487,http://fr.dbpedia.org/resource/Bibliothèque_de_l'hôtel_de_ville_de_Paris,Bibliothèque de l'hôtel de ville de Paris,2.35222,48.8564,2
+488,http://fr.dbpedia.org/resource/Au_chien_qui_fume,Au chien qui fume,2.34486,48.8613,2
+489,http://fr.dbpedia.org/resource/Abbaye_Sainte-Geneviève_de_Paris,Abbaye Sainte-Geneviève,2.34783,48.8459,0
+490,http://fr.dbpedia.org/resource/Hôpital_d'instruction_des_armées_du_Val-de-Grâce,Hôpital  du Val-de-Grâce,2.344295670799892,48.839074415258125,0
+491,http://fr.dbpedia.org/resource/Pont_Masséna,Pont Masséna,2.3825,48.8236,1
+492,http://fr.dbpedia.org/resource/Couleur_en_masses,Couleur en masses,2.36056,48.8664,3
+493,http://fr.dbpedia.org/resource/De_la_verticale_à_l'oblique,De la verticale à l'oblique,2.38167,48.8944,3
+494,http://fr.dbpedia.org/resource/Flore_(Maillol),Flore (Maillol),2.3319400000000003,48.8619,3
+495,http://fr.dbpedia.org/resource/Il_faut_se_méfier_des_mots,Il faut se méfier des mots,2.38194,48.8731,3
+496,http://fr.dbpedia.org/resource/L'Air,L'Air,2.3319400000000003,48.8619,3
+497,http://fr.dbpedia.org/resource/L'Homme_aux_semelles_devant,L'Homme aux semelles devant,2.36255,48.8509,3
+498,http://fr.dbpedia.org/resource/La_Montagne_(Maillol),La Montagne (Maillol),2.3319400000000003,48.8619,3
+499,http://fr.dbpedia.org/resource/La_Méditerranée,La Méditerranée,2.3319400000000003,48.8619,3
+500,http://fr.dbpedia.org/resource/La_Nuit_(Maillol),La Nuit (Maillol),2.3319400000000003,48.8619,3
+501,http://fr.dbpedia.org/resource/Laudator_Temporis,Laudator Temporis,2.36972,48.8525,3
+502,http://fr.dbpedia.org/resource/Le_Grand_Assistant,Le Grand Assistant,2.35586,48.8607,3
+503,http://fr.dbpedia.org/resource/Les_Nymphes,Les Nymphes,2.3319400000000003,48.8619,3
+504,http://fr.dbpedia.org/resource/Motifs_d'une_porosité,Motifs d'une porosité,2.3775,48.8811,3
+505,http://fr.dbpedia.org/resource/Nozitagne_Lemsebale_F580_368,Nozitagne Lemsebale F580 368,2.35788,48.8593,3
+506,http://fr.dbpedia.org/resource/Pomone_(Maillol),Pomone (Maillol),2.3319400000000003,48.8619,3
+507,http://fr.dbpedia.org/resource/Rendez-vous_à_l'angle_des_rues_de_Belleville_et_Julien_Lacroix,Rendez-vous à l'angle des rues de Belleville et Julien Lacroix,2.38195,48.8732,3
+508,http://fr.dbpedia.org/resource/Vénus_(Maillol),Vénus (Maillol),2.3319400000000003,48.8619,3
+509,"http://fr.dbpedia.org/resource/Éclats_verts,_jaunes,_rouges","Éclats verts, jaunes, rouges",2.36222,48.8569,3
+510,http://fr.dbpedia.org/resource/Castel_(restaurant),Castel (restaurant),2.33459,48.852,2
+511,http://fr.dbpedia.org/resource/Le_Triomphe_de_la_République,Le Triomphe de la République,2.39594,48.8484,3
+512,http://fr.dbpedia.org/resource/Night_and_Day_(Ledgerwood),Night and Day (Ledgerwood),2.2894400000000004,48.8539,3
+513,http://fr.dbpedia.org/resource/Call_&_Response,Call & Response,2.4090000000000003,48.8471,3
+514,http://fr.dbpedia.org/resource/Les_Rochers_dans_le_ciel,Les Rochers dans le ciel,2.38145,48.8259,3
+515,http://fr.dbpedia.org/resource/Coup_de_chapeau_II,Coup de chapeau II,2.32833,48.8642,3
+516,http://fr.dbpedia.org/resource/Galatea_(Lichtenstein),Galatea (Lichtenstein),2.32833,48.8642,3
+517,http://fr.dbpedia.org/resource/L'Hommage_à_Cézanne,L'Hommage à Cézanne,2.3319400000000003,48.8619,3
+518,http://fr.dbpedia.org/resource/L'Été_(Maillol),L'Été (Maillol),2.3319400000000003,48.8619,3
+519,http://fr.dbpedia.org/resource/La_Baigneuse_aux_bras_levés,La Baigneuse aux bras levés,2.3319400000000003,48.8619,3
+520,http://fr.dbpedia.org/resource/Passerelle_de_la_Mare,Passerelle de la Mare,2.38861,48.8697,2
+521,http://fr.dbpedia.org/resource/La_Ceinture_de_feu,La Ceinture de feu,2.35659,48.8448,3
+522,http://fr.dbpedia.org/resource/Pont_Caulaincourt,Pont Caulaincourt,2.332,48.886,1
+523,http://fr.dbpedia.org/resource/Musée_d'art_et_d'histoire_du_judaïsme,Musée d'art et d'histoire du judaïsme,2.35528,48.8611,2
+524,http://fr.dbpedia.org/resource/Mémorial_de_la_Shoah,Mémorial de la Shoah,2.3562,48.8548,1
+525,http://fr.dbpedia.org/resource/(Placé)_sur_un_point_fixe_(Pris)_depuis_un_point_fixe._n°_717,(Placé) sur un point fixe (Pris) depuis un point fixe. n° 717,2.325,48.8653,3
+526,http://fr.dbpedia.org/resource/Arbre_des_voyelles,Arbre des voyelles,2.32611,48.8631,3
+527,http://fr.dbpedia.org/resource/Arcs_de_cercles_complémentaires,Arcs de cercles complémentaires,2.32278,48.865,3
+528,http://fr.dbpedia.org/resource/Column_(Cragg),Column (Cragg),2.325,48.8658,3
+529,http://fr.dbpedia.org/resource/Comptine_(Rochette),Comptine (Rochette),2.32528,48.8633,3
+530,http://fr.dbpedia.org/resource/Confidence_(Dezeuze),Confidence (Dezeuze),2.3275,48.8631,3
+531,http://fr.dbpedia.org/resource/Force_et_Tendresse,Force et Tendresse,2.32833,48.8642,3
+532,http://fr.dbpedia.org/resource/From_Boullée_to_Eternity,From Boullée to Eternity,2.28763,48.8327,3
+533,http://fr.dbpedia.org/resource/Grand_Commandement_blanc,Grand Commandement blanc,2.3225,48.8642,3
+534,http://fr.dbpedia.org/resource/Grande_Femme_II,Grande Femme II,2.32472,48.8639,3
+535,http://fr.dbpedia.org/resource/Hommage_à_Charlie_Parker,Hommage à Charlie Parker,2.37889,48.8289,3
+536,http://fr.dbpedia.org/resource/L'Ami_de_personne,L'Ami de personne,2.32778,48.8642,3
+537,http://fr.dbpedia.org/resource/L'Escalier_des_signes_et_des_nombres,L'Escalier des signes et des nombres,2.3766700000000003,48.8297,3
+538,"http://fr.dbpedia.org/resource/L'Échiquier,_grand","L'Échiquier, grand",2.32639,48.8633,3
+539,http://fr.dbpedia.org/resource/La_Foule_(Mason),La Foule (Mason),2.32472,48.8653,3
+540,http://fr.dbpedia.org/resource/La_Grande_Musicienne,La Grande Musicienne,2.32472,48.8639,3
+541,http://fr.dbpedia.org/resource/La_Pluie_de_citations,La Pluie de citations,2.3766700000000003,48.8297,3
+542,http://fr.dbpedia.org/resource/Le_Bel_costumé,Le Bel costumé,2.32361,48.8656,3
+543,http://fr.dbpedia.org/resource/Le_Défenseur_du_temps,Le Défenseur du temps,2.35261,48.8625,3
+544,http://fr.dbpedia.org/resource/Le_Monde_en_marche_(Chalon),Le Monde en marche (Chalon),2.35929,48.8768,3
+545,http://fr.dbpedia.org/resource/Manus_Ultimus,Manus Ultimus,2.32778,48.8636,3
+546,http://fr.dbpedia.org/resource/Microbe_vu_à_travers_un_tempérament,Microbe vu à travers un tempérament,2.32472,48.8639,3
+547,http://fr.dbpedia.org/resource/Personnage_III,Personnage III,2.32528,48.8644,3
+548,http://fr.dbpedia.org/resource/Primo_Piano_II,Primo Piano II,2.32472,48.8639,3
+549,http://fr.dbpedia.org/resource/Reclining_Figure,Reclining Figure,2.32361,48.8639,3
+550,http://fr.dbpedia.org/resource/Standing_Woman,Standing Woman,2.32778,48.8636,3
+551,http://fr.dbpedia.org/resource/The_Welcoming_Hands,The Welcoming Hands,2.32278,48.8653,3
+552,,Jardin du Palais-Royal,2.3377970626301807,48.864982237343185,0
+553,,Les Halles,2.3468224030081157,48.86189052349755,0
+554,,Hôtel de Ville,2.3524815353532125,48.856434091959365,0
+555,,Tour Saint-Jacques,2.348903922951125,48.857996189989294,0
+556,,Jardin du Luxembourg,2.3371696472167973,48.84692582192718,0
+557,,Tour Montparnasse,2.3219561576843266,48.842110426689665,0
+558,,Tour Eiffel,2.294533252716065,48.85823523708224,0
+559,,Jardin des Tuileries,2.329301354486555,48.862865608295884,0
+560,,Invalides,2.312674394408996,48.85651150722803,0
+561,,Assemblée Nationale,2.318680364643902,48.86197656475684,0
+562,,Maison de la Radio,2.2782481874354588,48.85254428235952,0
+563,,Parc des Buttes-Chaumont,2.382995667042232,48.88024116873428,0
+564,,La Géode,2.3886948823928833,48.89457466528419,1
+565,,Lac Daumesnil,2.413687705993653,48.83103749800748,0
+566,,Zoo de Vincennes,2.4182681085872253,48.83250409482393,0
+567,,Parc Montsouris,2.338179578159392,48.822301269760835,0
+568,,Parc Georges Brassens,2.300101518630982,48.83158837756452,1
+569,,Musée Albert Kahn,2.227542400360108,48.84217397597593,1
+570,,Place de la Nation,2.395891402785688,48.848380321090296,0
+571,,Colonne Vendôme,2.3294464111110673,48.86747135594075,0
+572,,UNESCO,2.3061525821685795,48.84970752546687,1
+573,,Palais de l'Elysée,2.3167365789413457,48.87036777946593,0
+574,,Place Beauvau,2.316350340843201,48.8711899192255,1
+575,,Le Passe-Muraille,2.3378616571426396,48.88765809602976,1
+576,,Arènes de Lutèce,2.3531869699617802,48.84514578976249,0
+577,,Philharmonie de Paris,2.3941851126491454,48.891601583509555,1
+578,,Comédie Française,2.3374718251392816,48.863179652313285,0
+579,,Place de la Concorde,2.321144903086188,48.86544758257793,0
+580,,Palais de Justice,2.343716270012824,48.85612165399038,1
+581,,La Sorbonne,2.344046611826967,48.84950194812554,0
+582,,Porte de Clignancourt,2.3443456276978307,48.8979676914882,0
+583,,Porte d'Italie,2.3595063404730965,48.818938064381186,0
+584,,Porte de Versailles,2.2879588213323654,48.832582822573066,0
+585,,Porte de Saint-Cloud,2.25591372947255,48.83771624391739,0

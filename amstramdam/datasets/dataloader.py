@@ -1,13 +1,15 @@
 import json
 import glob
+import os
 import warnings
+from datetime import datetime
 
 import bidict
 
 from .game_map import GameMap
 from .grouped_game_map import GroupBasedGameMap
 from .dataframe import DataFrameLoader, mask_df, autorank
-
+import io
 
 def read_code(filename, sep="\t"):
     bidirectional_codes = bidict.bidict()
@@ -101,14 +103,43 @@ class Dataloader(object):
         df = mask_df(df, params.pop("filters", []))
 
         if "autorank" in params:
-            print("autoranking", params["name"])
             df, extra_params = autorank(df, **params.pop("autorank"))
-            # extra_params["available_levels"] -= params.get("scale", 0)
             params.update(extra_params)
-            print(params)
 
         params["df"] = df
         return GroupBasedGameMap(**params)
+
+    def commit_changes(self, name, changes):
+        if name not in self.flattened:
+            raise KeyError(name)
+        created = changes.get("create", [])
+        updated = changes.get("update", {})
+        output = changes.get("output", "save")
+
+        filename = self.flattened[name].get("base_file")
+        if filename is None:
+            warnings.warn(f"Dataset '{name} can't be edited because it doesn't have"
+                          "a registered 'base_file'. Please change 'datasets.json' and"
+                          "add a 'base_file' key.")
+            return
+
+        df = self.dataframes.edit(filename, created, updated)
+
+        root, ext = os.path.splitext(filename)
+        timestamp = f"{datetime.now():%d-%m-%Y_%Hh%M}"
+        new_filename = root + "_edited_" + timestamp + ext
+        _, short_filename = os.path.split(new_filename)
+        if output == "save":
+            df.to_csv(new_filename)
+            print("New df saved in", new_filename)
+            return df, short_filename
+        elif output == "download":
+            raw = df.to_csv().encode("utf-8")
+            file = io.BytesIO(raw)
+            return file, short_filename
+        else:
+            raise ValueError(f"Unknwon output method '{output}'")
+
 
     @property
     def n_groups(self):
@@ -155,7 +186,7 @@ class Dataloader(object):
 
     def _build_country_maps(self, base_params):
         maps = []
-        base_file = base_params.get("base_file", "data/extra/places.grouped.csv")
+        base_file = base_params.get("base_file")
         map_id = base_params.pop("map_id")
         col = base_params.pop("country_col", "iso2")
         suggested = set(base_params.pop("suggested", []))
@@ -168,8 +199,6 @@ class Dataloader(object):
                 autorank_params = analyze_country(df, country_code, col="population")
                 if autorank_params:
                     autorank_params["available_levels"] -= self.SCALE_COUNTRY
-                if autorank_params:
-                    print(f"Setting autoranks with ranks {autorank_params['autorank']['ranks']} for country {codes.get(country_code, country_code)}")
             else:
                 autorank_params = dict()
 

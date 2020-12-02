@@ -162,5 +162,22 @@
         "customLevels": ["Facile", "Normal", "Difficile"]
       }
     ]
+  },
+  {
+    "group": "Par ville",
+    "maps": [
+      {
+        "map_id": "<id>",
+        "name": "<id>",
+        "base_file": "data/cities/*.csv",
+        "col_place": "name",
+        "col_lon": "lon",
+        "use_hint": false,
+        "scale": 0,
+        "weights": [
+          [1], [1, 1], [1, 1, 0.6]
+        ]
+      }
+    ]
   }
 ]

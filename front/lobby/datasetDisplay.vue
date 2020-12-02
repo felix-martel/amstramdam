@@ -7,7 +7,6 @@ import mapBaseMixin from "../map/mapBaseMixin.vue";
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import constants from "../common/constants";
-import {LAYERS, CREDITS, defaultView, getIcon, CREDITS_SHORT} from "../common/map";
 
 export default {
   name: "datasetDisplay",
@@ -59,22 +58,6 @@ export default {
       this.nPoints = n;
       this.canvas.flyToBounds(this.datapoints.getBounds());
     },
-
-    difficulty(diff, old) {
-      console.log(diff, old)
-      // if (this.datapoints) {
-      //   let n = 0;
-      //   this.datapoints.eachLayer(point => {
-      //     if (point.rank > this.maxRank) {
-      //       point._icon.classList.add("hidden");
-      //     } else {
-      //       point._icon.classList.remove("hidden");
-      //       n ++;
-      //     }
-      //   });
-      //   this.nPoints = n;
-      // }
-    }
   },
   computed: {
     maxRank () {
@@ -84,7 +67,6 @@ export default {
 
   mounted() {
     this.initialize("dataset-display", {credits: ""});
-    // this.datapoints = L.featureGroup().addTo(this.canvas);
   }
 }
 </script>

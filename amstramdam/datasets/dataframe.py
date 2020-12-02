@@ -67,7 +67,10 @@ class DataFrameLoader(object):
         return len(self._dataframes)
 
     def load(self, filename, persist=False, **kwargs):
-        df = pd.read_csv(filename, **kwargs)
+        df = pd.read_csv(filename, index_col=0, **kwargs)
+        df = df.fillna(0)
+        if "pid" not in df.columns:
+            df["pid"] = df.index
         if persist:
             self.persistent.add(filename)
         if filename in self.persistent:
@@ -81,4 +84,27 @@ class DataFrameLoader(object):
 
     def __delitem__(self, filename):
         del self._dataframes[filename]
+
+    def edit(self, filename, created, updated):
+        """
+        filename: original DF filename
+        inserted: list of inserted records. Each record is a dict whose keys are the columns of
+        DF, and values are the corresponding values
+        changed: a dictionnary from pids to changes. For each pid, changed[pid] is a dictionnary
+        mapping changed columns to their new values
+        """
+        df = self.load(filename, persist=False)
+        types = {col: df[col].dtype for col in df.columns}
+        if created:
+            added = pd.DataFrame.from_records(created, index=[o["pid"] for o in created])
+            added = added.astype(types)
+            df = df.append(added, verify_integrity=True)
+        for pid, changes in updated.items():
+            pid = int(pid)
+            for col, value in changes.items():
+                casted_value = np.array([value], dtype=types.get(col))
+                df.loc[pid, col] = casted_value
+        df = df.drop(columns=["pid"])
+        return df
+
 

@@ -1,11 +1,11 @@
 # Countries
-Afghanistan	AFG
+Afghanistan	AF
 Afrique du Sud	ZA
 Albanie	AL
 Algérie	DZ
 Allemagne	DE
 Angola	AO
-Arabie Saoudite	SAU
+Arabie Saoudite	SA
 Argentine	AR
 Australie	AU
 Autriche	AT

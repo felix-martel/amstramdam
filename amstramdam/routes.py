@@ -1,5 +1,7 @@
+import os
+
 from amstramdam import app, manager, dataloader, IS_LOCAL, CONF
-from flask import render_template, jsonify, request, session, redirect, url_for
+from flask import render_template, jsonify, request, session, redirect, url_for, send_file
 from amstramdam.game.params_handler import merge_params
 
 @app.route("/")
@@ -23,7 +25,8 @@ def serve_builder():
 
 @app.route("/editor")
 def serve_editor():
-    if IS_LOCAL:
+    CAN_EDIT = request.args.get("auth", "_") == os.environ.get("EDITOR_ACCESS_KEY")
+    if IS_LOCAL or CAN_EDIT:
         return render_template("editor.html", datasets=dataloader.datasets)
     return redirect(url_for("serve_main"))
 
@@ -31,14 +34,8 @@ def serve_editor():
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
     try:
-        args = dict(
-            label=request.args.get("labels") == "true",
-            hint=request.args.get("hint") == "true",
-            columns=request.args["columns"].split(";") if "columns" in request.args else None
-        )
-        if request.args.get("all") == "true":
-            args["max_points"] = -1
-        data = dataloader.load(dataset).get_geometry(**args)
+        label=request.args.get("labels") == "true"
+        data = dataloader.load(dataset).get_geometry(label=label)
     except KeyError as e:
         print(f"ERROR: No dataset named '{dataset}' found.")
         print(e)
@@ -47,19 +44,32 @@ def get_dataset_geometry(dataset):
 
 @app.route("/edit/<dataset>")
 def get_edit_information(dataset):
-    if not IS_LOCAL:
-        return redirect(url_for("serve_main"))
+    CAN_COMMIT = request.args.get("auth", "_") == os.environ.get("EDITOR_COMMIT_KEY")
+    if not (IS_LOCAL or CAN_COMMIT):
+        return jsonify(message="Invalid access key") #redirect(url_for("serve_main"))
     data = dataloader.load(dataset).get_dataframe_as_json()
     return jsonify(data)
 
+@app.route("/commit/<dataset>", methods=["POST"])
+def commit_dataset_change(dataset):
+    changes = request.json
+    CAN_COMMIT = request.json.get("auth", "_") == os.environ.get("EDITOR_COMMIT_KEY")
+    if not (IS_LOCAL or CAN_COMMIT):
+        return jsonify(message="Invalid access key")
+    out, fn = dataloader.commit_changes(dataset, changes)
+    if changes.get("output") == "download":
+        return send_file(out,
+                         mimetype="text/csv",
+                         as_attachment=True,
+                         attachment_filename="file.csv")#fn)
+    return jsonify(dict(message="Commit request received."))
 
 
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
-    print(request.form)
+    if not IS_LOCAL:
+        return redirect(url_for("serve_main"))
     params = merge_params(request.form)
-    print(params)
-
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],

@@ -1,0 +1,87 @@
+,x,name,lon,lat
+0,http://fr.dbpedia.org/resource/Musée_et_Centre_d’Études_du_Sport_Docteur_Melcior_Colet,Musée et Centre d’Études du Sport Docteur Melcior Colet,2.14833,41.3931
+1,http://fr.dbpedia.org/resource/Plan_Cerdà,Plan Cerdà,2.1892,41.4037
+2,http://fr.dbpedia.org/resource/Musée_d'histoire_de_Barcelone,Musée d'histoire de Barcelone,2.17759,41.3841
+3,http://fr.dbpedia.org/resource/Musée_d'archéologie_de_Catalogne_(Barcelone),Musée d'archéologie de Catalogne (Barcelone),2.15778,41.3697
+4,http://fr.dbpedia.org/resource/Maison-Musée_Gaudi,Maison-Musée Gaudi,2.1526,41.4153
+5,http://fr.dbpedia.org/resource/Centre_de_Documentació_i_Museu_de_les_Arts_Escèniques,Centre de Documentació i Museu de les Arts Escèniques,2.15775,41.3712
+6,http://fr.dbpedia.org/resource/Museu_blau,Museu blau,2.22078,41.4114
+7,http://fr.dbpedia.org/resource/Musée_d'art_contemporain_de_Barcelone,Musée d'art contemporain de Barcelone,2.1675,41.3825
+8,http://fr.dbpedia.org/resource/Sainte_Eulalie_de_Vilapicina,Sainte Eulalie de Vilapicina,2.17278,41.4308
+9,http://fr.dbpedia.org/resource/Musée_Picasso_(Barcelone),Musée Picasso (Barcelone),2.18082,41.386
+10,http://fr.dbpedia.org/resource/Rue_Montcada,Rue Montcada,2.18083,41.385
+11,http://fr.dbpedia.org/resource/Université_Pompeu_Fabra,Université Pompeu Fabra,2.17972,41.3792
+12,http://fr.dbpedia.org/resource/Quartier_de_la_Ribera,Quartier de la Ribera,2.18319,41.3837
+13,http://fr.dbpedia.org/resource/Hostafrancs_(métro_de_Barcelone),Hostafrancs (métro de Barcelone),2.14329,41.3753
+14,http://fr.dbpedia.org/resource/Mercat_Nou_(métro_de_Barcelone),Mercat Nou (métro de Barcelone),2.13367,41.3734
+15,http://fr.dbpedia.org/resource/Plaça_de_Sants_(métro_de_Barcelone),Plaça de Sants (métro de Barcelone),2.13544,41.3754
+16,http://fr.dbpedia.org/resource/Bellvitge_(métro_de_Barcelone),Bellvitge (métro de Barcelone),2.11104,41.3512
+17,http://fr.dbpedia.org/resource/Can_Serra_(métro_de_Barcelone),Can Serra (métro de Barcelone),2.10349,41.3679
+18,http://fr.dbpedia.org/resource/Florida_(métro_de_Barcelone),Florida (métro de Barcelone),2.11059,41.3683
+19,http://fr.dbpedia.org/resource/Hospital_de_Bellvitge_(métro_de_Barcelone),Hospital de Bellvitge (métro de Barcelone),2.10681,41.3444
+20,http://fr.dbpedia.org/resource/Rambla_Just_Oliveras_(métro_de_Barcelone),Rambla Just Oliveras (métro de Barcelone),2.10042,41.3637
+21,http://fr.dbpedia.org/resource/Santa_Eulàlia_(métro_de_Barcelone),Santa Eulàlia (métro de Barcelone),2.12933,41.369
+22,http://fr.dbpedia.org/resource/Torrassa_(métro_de_Barcelone),Torrassa (métro de Barcelone),2.11672,41.3684
+23,http://fr.dbpedia.org/resource/Passeig_de_Gràcia,Passeig de Gràcia,2.16114,41.3952
+24,http://fr.dbpedia.org/resource/Université_de_Barcelone,Université de Barcelone,2.16399,41.3866
+25,http://fr.dbpedia.org/resource/Gare_de_Barcelone-Passeig_de_Gràcia,Gare de Barcelone-Passeig de Gràcia,2.16815,41.3896
+26,http://fr.dbpedia.org/resource/Avenue_Portal_de_l'Àngel,Avenue Portal de l'Àngel,2.17181,41.3865
+27,http://fr.dbpedia.org/resource/Avenue_méridienne,Avenue méridienne,2.18685,41.4219
+28,http://fr.dbpedia.org/resource/Avenue_parallèle,Avenue parallèle,2.1587,41.375
+29,http://fr.dbpedia.org/resource/Avinguda_Diagonal,Avinguda Diagonal,2.15806,41.3964
+30,http://fr.dbpedia.org/resource/Passeig_de_Sant_Joan,Passeig de Sant Joan,2.16799,41.4005
+31,http://fr.dbpedia.org/resource/Rambla_Catalunya,Rambla Catalunya,2.16544,41.3897
+32,http://fr.dbpedia.org/resource/Rue_Ferran_(Barcelone),Rue Ferran (Barcelone),2.17496,41.381
+33,http://fr.dbpedia.org/resource/Rue_Majorque_(Barcelone),Rue Majorque (Barcelone),2.15567,41.3886
+34,http://fr.dbpedia.org/resource/Rue_conseil_des_Cent,Rue conseil des Cent,2.17467,41.3979
+35,http://fr.dbpedia.org/resource/Rue_de_Balmes,Rue de Balmes,2.15914,41.3919
+36,http://fr.dbpedia.org/resource/Rue_de_Provence_(Barcelone),Rue de Provence (Barcelone),2.15449,41.3895
+37,http://fr.dbpedia.org/resource/Travessera_de_Gràcia,Travessera de Gràcia,2.15939,41.4023
+38,http://fr.dbpedia.org/resource/Via_Laietana,Via Laietana,2.17693,41.3853
+39,http://fr.dbpedia.org/resource/Arc_de_Triomf_(métro_de_Barcelone),Arc de Triomf (métro de Barcelone),2.18111,41.3925
+40,http://fr.dbpedia.org/resource/Baró_de_Viver_(métro_de_Barcelone),Baró de Viver (métro de Barcelone),2.1997,41.4497
+41,http://fr.dbpedia.org/resource/Catalunya_(métro_de_Barcelone),Catalunya (métro de Barcelone),2.1696,41.3869
+42,http://fr.dbpedia.org/resource/Clot_(métro_de_Barcelone),Clot (métro de Barcelone),2.187,41.4098
+43,http://fr.dbpedia.org/resource/Espanya_(métro_de_Barcelone),Espanya (métro de Barcelone),2.1493,41.3748
+44,http://fr.dbpedia.org/resource/Fabra_i_Puig_(métro_de_Barcelone),Fabra i Puig (métro de Barcelone),2.1836,41.43
+45,http://fr.dbpedia.org/resource/Fondo_(métro_de_Barcelone),Fondo (métro de Barcelone),2.2182,41.4514
+46,http://fr.dbpedia.org/resource/Glòries_(métro_de_Barcelone),Glòries (métro de Barcelone),2.1874,41.4018
+47,http://fr.dbpedia.org/resource/Marina_(métro_de_Barcelone),Marina (métro de Barcelone),2.187,41.3947
+48,http://fr.dbpedia.org/resource/Navas_(métro_de_Barcelone),Navas (métro de Barcelone),2.1872,41.4161
+49,http://fr.dbpedia.org/resource/Rocafort_(métro_de_Barcelone),Rocafort (métro de Barcelone),2.1543,41.379
+50,http://fr.dbpedia.org/resource/Sagrera_-_Meridiana_(métro_de_Barcelone),Sagrera - Meridiana (métro de Barcelone),2.187,41.4217
+51,http://fr.dbpedia.org/resource/Sant_Andreu_(métro_de_Barcelone),Sant Andreu (métro de Barcelone),2.191,41.437
+52,http://fr.dbpedia.org/resource/Santa_Coloma_(métro_de_Barcelone),Santa Coloma (métro de Barcelone),2.2081,41.4512
+53,http://fr.dbpedia.org/resource/Torras_i_Bages_(métro_de_Barcelone),Torras i Bages (métro de Barcelone),2.1906,41.4431
+54,http://fr.dbpedia.org/resource/Trinitat_Vella_(métro_de_Barcelone),Trinitat Vella (métro de Barcelone),2.1938,41.4486
+55,http://fr.dbpedia.org/resource/Universitat_(métro_de_Barcelone),Universitat (métro de Barcelone),2.164,41.3854
+56,http://fr.dbpedia.org/resource/Urgell_(métro_de_Barcelone),Urgell (métro de Barcelone),2.159,41.3824
+57,http://fr.dbpedia.org/resource/Urquinaona_(métro_de_Barcelone),Urquinaona (métro de Barcelone),2.1729,41.3886
+58,http://fr.dbpedia.org/resource/La_Rambla,La Rambla,2.17461,41.3815
+59,http://fr.dbpedia.org/resource/Gran_Via_de_les_Corts_Catalanes,Gran Via de les Corts Catalanes,2.16364,41.3863
+60,http://fr.dbpedia.org/resource/Aéroport_international_de_Barcelone-El_Prat,Aéroport international de Barcelone-El Prat,2.07833,41.2969
+61,http://fr.dbpedia.org/resource/Port_Vell,Port Vell,2.18464,41.3758
+62,http://fr.dbpedia.org/resource/Parc_Joan-Miró,Parc Joan-Miró,2.14838,41.3779
+63,http://fr.dbpedia.org/resource/Pont_Bac_de_Roda,Pont Bac de Roda,2.19246,41.4162
+64,http://fr.dbpedia.org/resource/Gare_de_Barcelone-França,Gare de Barcelone-França,2.18514,41.3845
+65,http://fr.dbpedia.org/resource/Gare_de_Barcelone-Sagrera_TAV,Gare de Barcelone-Sagrera TAV,2.19361,41.4217
+66,http://fr.dbpedia.org/resource/Place_de_Catalogne,Place de Catalogne,2.1699,41.3867
+67,http://fr.dbpedia.org/resource/Plaça_del_Pi,Plaça del Pi,2.17369,41.3824
+68,http://fr.dbpedia.org/resource/Musée_national_d'art_de_Catalogne,Musée national d'art de Catalogne,2.15333,41.3683
+69,http://fr.dbpedia.org/resource/Dona_i_ocell,Dona i ocell,2.14697,41.3778
+70,http://fr.dbpedia.org/resource/La_Caresse_d'un_oiseau,La Caresse d'un oiseau,2.15951,41.3686
+71,http://fr.dbpedia.org/resource/Place_Francesc_Macià,Place Francesc Macià,2.14444,41.3928
+72,http://fr.dbpedia.org/resource/Place_Lesseps_(Barcelone),Place Lesseps (Barcelone),2.14983,41.4066
+73,http://fr.dbpedia.org/resource/Place_Sant_Jaume,Place Sant Jaume,2.17698,41.3827
+74,http://fr.dbpedia.org/resource/Place_Tétouan,Place Tétouan,2.17537,41.395
+75,http://fr.dbpedia.org/resource/Place_Urquinaona,Place Urquinaona,2.17312,41.3889
+76,http://fr.dbpedia.org/resource/Place_de_l'Université_(Barcelone),Place de l'Université (Barcelone),2.164,41.3857
+77,http://fr.dbpedia.org/resource/Place_de_la_Sagrada_Família,Place de la Sagrada Família,2.17321,41.4027
+78,http://fr.dbpedia.org/resource/Place_de_la_Ville_de_Gràcia,Place de la Ville de Gràcia,2.15756,41.4002
+79,http://fr.dbpedia.org/resource/Place_Molina,Place Molina,2.14722,41.4011
+80,http://fr.dbpedia.org/resource/Conservatoire_supérieur_de_musique_du_Liceu,Conservatoire supérieur de musique du Liceu,2.17306,41.3886
+81,http://fr.dbpedia.org/resource/Gare_de_Barcelone-Sants,Gare de Barcelone-Sants,2.14,41.3789
+82,http://fr.dbpedia.org/resource/Fundació_Suñol,Fundació Suñol,2.16128,41.3956
+83,http://fr.dbpedia.org/resource/Place_d'Espagne_(Barcelone),Place d'Espagne (Barcelone),2.14914,41.375
+84,http://fr.dbpedia.org/resource/Plaça_Reial,Plaça Reial,2.17529,41.3802
+85,http://fr.dbpedia.org/resource/Plaça_de_les_Glòries_Catalanes,Plaça de les Glòries Catalanes,2.18694,41.4034

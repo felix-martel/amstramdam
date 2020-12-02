@@ -1,0 +1,152 @@
+,x,name,lon,lat
+0,http://fr.dbpedia.org/resource/Cathédrale_Saint-Patrick_de_New_York,Cathédrale Saint-Patrick de New York,-73.9763,40.7586
+1,http://fr.dbpedia.org/resource/Ancienne_cathédrale_Saint-Patrick_de_New_York,Ancienne cathédrale Saint-Patrick de New York,-73.9956,40.7236
+2,http://fr.dbpedia.org/resource/Cathédrale_Saint-Jean_le_Divin_de_New_York,Cathédrale Saint-Jean le Divin de New York,-73.9617,40.8036
+3,http://fr.dbpedia.org/resource/Église_Saint-Vincent-de-Paul_(New_York),Église Saint-Vincent-de-Paul (New York),-73.9937,40.7436
+4,http://fr.dbpedia.org/resource/Grand_Central_Terminal,Grand Central Terminal,-73.9765,40.7528
+5,http://fr.dbpedia.org/resource/Pont_de_Brooklyn,Pont de Brooklyn,-73.9969,40.7061
+6,http://fr.dbpedia.org/resource/Pont_de_Manhattan,Pont de Manhattan,-73.9903,40.7067
+7,http://fr.dbpedia.org/resource/Pont_de_Queensboro,Pont de Queensboro,-73.9564,40.7572
+8,http://fr.dbpedia.org/resource/SoHo,SoHo,-74.0038,40.7244
+9,http://fr.dbpedia.org/resource/Washington_Square_Park,Washington Square Park,-73.9975,40.7308
+10,http://fr.dbpedia.org/resource/Jardin_botanique_de_New_York,Jardin botanique de New York,-73.8783,40.8636
+11,http://fr.dbpedia.org/resource/Chapelle_Saint_John,Chapelle Saint John,-74.0061,40.7211
+12,http://fr.dbpedia.org/resource/Pont_de_Williamsburg_(New_York),Pont de Williamsburg (New York),-73.9719,40.7133
+13,http://fr.dbpedia.org/resource/Hell_Gate_Bridge,Hell Gate Bridge,-73.9219,40.7827
+14,http://fr.dbpedia.org/resource/New_York_Stock_Exchange,New York Stock Exchange,-74.0111,40.7069
+15,http://fr.dbpedia.org/resource/Pont_Verrazano-Narrows,Pont Verrazano-Narrows,-74.0431,40.6067
+16,http://fr.dbpedia.org/resource/Castle_Clinton_National_Monument,Castle Clinton National Monument,-74.0169,40.7036
+17,http://fr.dbpedia.org/resource/Plaza_Hotel,Plaza Hotel,-73.9746,40.7647
+18,http://fr.dbpedia.org/resource/Cimetière_de_Woodlawn,Cimetière de Woodlawn,-73.8734,40.889
+19,http://fr.dbpedia.org/resource/George_Washington_Bridge,George Washington Bridge,-73.9525,40.8516
+20,http://fr.dbpedia.org/resource/Union_Square_(New_York),Union Square (New York),-73.9906,40.7356
+21,http://fr.dbpedia.org/resource/Cooper_Union,Cooper Union,-73.9906,40.7293
+22,http://fr.dbpedia.org/resource/Chapelle_Saint-Paul,Chapelle Saint-Paul,-74.0099,40.7114
+23,http://fr.dbpedia.org/resource/Cimetière_de_Cypress_Hills,Cimetière de Cypress Hills,-73.8753,40.689
+24,http://fr.dbpedia.org/resource/Triborough_Bridge,Triborough Bridge,-73.9267,40.78
+25,http://fr.dbpedia.org/resource/Trinity_Church,Trinity Church,-74.0125,40.7078
+26,http://fr.dbpedia.org/resource/Cimetière_de_Flushing,Cimetière de Flushing,-73.7994,40.7517
+27,http://fr.dbpedia.org/resource/Isham_Park,Isham Park,-73.9192,40.8697
+28,http://fr.dbpedia.org/resource/Parc_Zuccotti,Parc Zuccotti,-74.0113,40.7094
+29,http://fr.dbpedia.org/resource/Katz's_Delicatessen,Katz's Delicatessen,-73.9874,40.7223
+30,http://fr.dbpedia.org/resource/Pont_de_Bronx–Whitestone,Pont de Bronx–Whitestone,-73.8306,40.8008
+31,http://fr.dbpedia.org/resource/Rikers_Island_Bridge,Rikers Island Bridge,-73.8883,40.7819
+32,http://fr.dbpedia.org/resource/Throgs_Neck_Bridge,Throgs Neck Bridge,-73.7934,40.8004
+33,http://fr.dbpedia.org/resource/Battery_Park,Battery Park,-74.0161,40.7037
+34,http://fr.dbpedia.org/resource/Central_Park,Central Park,-73.9667,40.7833
+35,http://fr.dbpedia.org/resource/New_York_Public_Library,New York Public Library,-73.9818,40.7527
+36,http://fr.dbpedia.org/resource/Riverside_Park,Riverside Park,-73.97,40.804
+37,http://fr.dbpedia.org/resource/Brooklyn_Museum,Brooklyn Museum,-73.9643,40.6705
+38,http://fr.dbpedia.org/resource/Bryant_Park,Bryant Park,-73.9836,40.7538
+39,http://fr.dbpedia.org/resource/Wave_Hill,Wave Hill,-73.9131,40.8986
+40,http://fr.dbpedia.org/resource/IAC_building,IAC building,-74.0078,40.7456
+41,http://fr.dbpedia.org/resource/Parc_d'État_Roberto_Clemente,Parc d'État Roberto Clemente,-73.92,40.855
+42,http://fr.dbpedia.org/resource/Van_Cortlandt_Park,Van Cortlandt Park,-73.8839,40.8978
+43,"http://fr.dbpedia.org/resource/Saint_Joseph's_College,_New_York","Saint Joseph's College, New York",-73.9681,40.6908
+44,http://fr.dbpedia.org/resource/Parc_de_Ferry_Point,Parc de Ferry Point,-73.833,40.813
+45,http://fr.dbpedia.org/resource/Herald_Square,Herald Square,-73.988,40.75
+46,http://fr.dbpedia.org/resource/Bennett_Park,Bennett Park,-73.9381,40.8528
+47,http://fr.dbpedia.org/resource/East_River_Park,East River Park,-73.9754,40.7152
+48,http://fr.dbpedia.org/resource/Gramercy_Park,Gramercy Park,-73.9861,40.7378
+49,http://fr.dbpedia.org/resource/Marcus_Garvey_Park,Marcus Garvey Park,-73.9437,40.8045
+50,http://fr.dbpedia.org/resource/Pelham_Bay_Park,Pelham Bay Park,-73.8083,40.8656
+51,http://fr.dbpedia.org/resource/Riverbank_State_Park,Riverbank State Park,-73.957,40.825
+52,http://fr.dbpedia.org/resource/Jardin_botanique_de_Brooklyn,Jardin botanique de Brooklyn,-73.9647,40.6687
+53,http://fr.dbpedia.org/resource/Fort_Tryon_Park,Fort Tryon Park,-73.9325,40.8608
+54,http://fr.dbpedia.org/resource/City_College_of_New_York,City College of New York,-73.95,40.8194
+55,http://fr.dbpedia.org/resource/Tompkins_Square_Park,Tompkins Square Park,-73.9814,40.7261
+56,http://fr.dbpedia.org/resource/Teardrop_Park,Teardrop Park,-74.0156,40.7168
+57,http://fr.dbpedia.org/resource/High_Line,High Line,-74.0069,40.7439
+58,http://fr.dbpedia.org/resource/Parc_Dante_(New_York),Parc Dante (New York),-73.9825,40.7719
+59,http://fr.dbpedia.org/resource/Veselka,Veselka,-73.9871,40.729
+60,http://fr.dbpedia.org/resource/American_Folk_Art_Museum,American Folk Art Museum,-73.9814,40.7733
+61,http://fr.dbpedia.org/resource/Musée_d'art_de_Queens,Musée d'art de Queens,-73.8467,40.7458
+62,http://fr.dbpedia.org/resource/New_Museum_of_Contemporary_Art,New Museum of Contemporary Art,-73.9929,40.7224
+63,http://fr.dbpedia.org/resource/14th_Street_–_Union_Square,14th Street – Union Square,-73.9903,40.7347
+64,http://fr.dbpedia.org/resource/Kosciuszko_Bridge,Kosciuszko Bridge,-73.9292,40.7278
+65,http://fr.dbpedia.org/resource/Pulaski_Bridge,Pulaski Bridge,-73.9525,40.7392
+66,http://fr.dbpedia.org/resource/Queens_College_(New_York),Queens College (New York),-73.817,40.737
+67,http://fr.dbpedia.org/resource/Greenwich_Village,Greenwich Village,-74.0,40.7333
+68,http://fr.dbpedia.org/resource/Metropolitan_Museum_of_Art,Metropolitan Museum of Art,-73.9631,40.7794
+69,http://fr.dbpedia.org/resource/Muséum_américain_d'histoire_naturelle,Muséum américain d'histoire naturelle,-73.9742,40.781
+70,http://fr.dbpedia.org/resource/Roosevelt_Island,Roosevelt Island,-73.95,40.7617
+71,http://fr.dbpedia.org/resource/Times_Square,Times Square,-73.9863,40.7566
+72,http://fr.dbpedia.org/resource/Université_Columbia,Université Columbia,-73.9623,40.8088
+73,http://fr.dbpedia.org/resource/Pennsylvania_Station_(New_York),Pennsylvania Station (New York),-73.9939,40.7506
+74,http://fr.dbpedia.org/resource/Université_Rockefeller,Université Rockefeller,-73.9554,40.7626
+75,http://fr.dbpedia.org/resource/The_Frick_Collection,The Frick Collection,-73.9675,40.7711
+76,http://fr.dbpedia.org/resource/Stern_School_of_Business,Stern School of Business,-73.9959,40.7296
+77,http://fr.dbpedia.org/resource/Hôtel_Chelsea,Hôtel Chelsea,-73.9968,40.7445
+78,http://fr.dbpedia.org/resource/New_York_Law_School,New York Law School,-74.007,40.7181
+79,http://fr.dbpedia.org/resource/Rubin_Museum_of_Art,Rubin Museum of Art,-73.9977,40.7401
+80,http://fr.dbpedia.org/resource/Tribeca,Tribeca,74.0078,40.7183
+81,http://fr.dbpedia.org/resource/NoLIta,NoLIta,-73.9951,40.7225
+82,http://fr.dbpedia.org/resource/Yeshiva_Université,Yeshiva Université,-73.9297,40.8503
+83,http://fr.dbpedia.org/resource/Flushing_Meadows,Flushing Meadows,-73.8447,40.7458
+84,http://fr.dbpedia.org/resource/Mount_Sinai_School_of_Medicine,Mount Sinai School of Medicine,-73.9538,40.7895
+85,http://fr.dbpedia.org/resource/New_York_University_College_of_Arts_and_Science,New York University College of Arts and Science,-73.9957,40.7302
+86,http://fr.dbpedia.org/resource/Université_polytechnique_de_New_York,Université polytechnique de New York,-73.9865,40.6944
+87,http://fr.dbpedia.org/resource/Roosevelt_Island_Bridge,Roosevelt Island Bridge,-73.9457,40.7634
+88,http://fr.dbpedia.org/resource/The_Broken_Kilometer,The Broken Kilometer,-74.002,40.7241
+89,http://fr.dbpedia.org/resource/The_New_York_Earth_Room,The New York Earth Room,-73.9998,40.726
+90,http://fr.dbpedia.org/resource/34th_Street_–_Herald_Square,34th Street – Herald Square,-73.988,40.7493
+91,http://fr.dbpedia.org/resource/72nd_Street,72nd Street,-73.982,40.7789
+92,http://fr.dbpedia.org/resource/96th_Street,96th Street,-73.972,40.7941
+93,http://fr.dbpedia.org/resource/Atlantic_Avenue_–_Barclays_Center,Atlantic Avenue – Barclays Center,-73.9788,40.6845
+94,http://fr.dbpedia.org/resource/Court_Square,Court Square,-73.9451,40.7476
+95,http://fr.dbpedia.org/resource/Franklin_Avenue_–_Botanic_Garden,Franklin Avenue – Botanic Garden,-73.9581,40.6706
+96,http://fr.dbpedia.org/resource/Fulton_Street,Fulton Street,-74.0077,40.7102
+97,http://fr.dbpedia.org/resource/Grand_Central_–_42nd_Street,Grand Central – 42nd Street,-73.9776,40.7523
+98,http://fr.dbpedia.org/resource/New_Lots_Avenue,New Lots Avenue,-73.8826,40.6664
+99,http://fr.dbpedia.org/resource/Roosevelt_Avenue_/_74th_Street,Roosevelt Avenue / 74th Street,-73.8914,40.7467
+100,http://fr.dbpedia.org/resource/Times_Square_–_42nd_Street,Times Square – 42nd Street,-73.9864,40.7559
+101,http://fr.dbpedia.org/resource/Centre_international_de_la_photographie,Centre international de la photographie,-73.9834,40.7558
+102,http://fr.dbpedia.org/resource/Museum_of_Arts_and_Design,Museum of Arts and Design,-73.9819,40.7675
+103,http://fr.dbpedia.org/resource/Neue_Galerie,Neue Galerie,-73.9606,40.7814
+104,http://fr.dbpedia.org/resource/South_Street_Seaport_Museum_de_New_York,South Street Seaport Museum de New York,-74.0028,40.7061
+105,http://fr.dbpedia.org/resource/Sofitel_New_York_Hotel,Sofitel New York Hotel,-73.9816,40.7559
+106,http://fr.dbpedia.org/resource/Musée_Solomon_R._Guggenheim,Musée Solomon R. Guggenheim,-73.9641,40.7732
+107,http://fr.dbpedia.org/resource/Aéroport_de_New_York-LaGuardia,Aéroport de New York-LaGuardia,-73.8726,40.7775
+108,http://fr.dbpedia.org/resource/Aéroport_international_de_New_York-John_F._Kennedy,Aéroport international de New York-John F. Kennedy,-73.7789,40.6405
+109,http://fr.dbpedia.org/resource/Aéroport_international_de_Newark-Liberty,Aéroport international de Newark-Liberty,-74.1686,40.6928
+110,http://fr.dbpedia.org/resource/Museum_of_Modern_Art,Museum of Modern Art,-73.9777,40.7615
+111,http://fr.dbpedia.org/resource/Université_de_New_York,Université de New York,-73.995,40.73
+112,http://fr.dbpedia.org/resource/Museum_of_Jewish_Heritage_(New-York),Museum of Jewish Heritage (New-York),-74.0187,40.7062
+113,http://fr.dbpedia.org/resource/Windows_on_the_World,Windows on the World,-74.0133,40.7115
+114,http://fr.dbpedia.org/resource/Groupe_de_quatre_arbres,Groupe de quatre arbres,-74.0089,40.7075
+115,http://fr.dbpedia.org/resource/The_Pierre,The Pierre,-73.9716,40.765
+116,http://fr.dbpedia.org/resource/Long_Island,Long Island,-73.3,40.8
+117,http://fr.dbpedia.org/resource/Alexander_Hamilton_Bridge,Alexander Hamilton Bridge,-73.9287,40.8455
+118,http://fr.dbpedia.org/resource/Henry_Hudson_Bridge,Henry Hudson Bridge,-73.9218,40.8779
+119,http://fr.dbpedia.org/resource/Macombs_Dam_Bridge,Macombs Dam Bridge,-73.9339,40.8281
+120,http://fr.dbpedia.org/resource/Park_Avenue_Bridge,Park Avenue Bridge,-73.9333,40.8111
+121,http://fr.dbpedia.org/resource/Third_Avenue_Bridge,Third Avenue Bridge,-73.9325,40.8076
+122,http://fr.dbpedia.org/resource/Washington_Bridge,Washington Bridge,-73.928,40.8467
+123,http://fr.dbpedia.org/resource/Université_de_Saint_John_(New_York),Université de Saint John (New York),-73.7956,40.7219
+124,http://fr.dbpedia.org/resource/Royalton,Royalton,-73.9819,40.7558
+125,http://fr.dbpedia.org/resource/Queensboro_Plaza,Queensboro Plaza,-73.9402,40.7506
+126,http://fr.dbpedia.org/resource/South_Ferry_–_Whitehall_Street,South Ferry – Whitehall Street,74.0128,40.7025
+127,http://fr.dbpedia.org/resource/Université_Fordham,Université Fordham,-73.8844,40.8608
+128,http://fr.dbpedia.org/resource/14th_Street_/_Sixth_Avenue,14th Street / Sixth Avenue,-73.999,40.738
+129,http://fr.dbpedia.org/resource/14th_Street_–_Eighth_Avenue,14th Street – Eighth Avenue,-74.0025,40.7398
+130,http://fr.dbpedia.org/resource/42nd_Street_/_Fifth_Avenue_–_Bryant_Park,42nd Street / Fifth Avenue – Bryant Park,-73.9842,40.7548
+131,http://fr.dbpedia.org/resource/47th–50th_Streets_–_Rockefeller_Center,47th–50th Streets – Rockefeller Center,-73.9814,40.7586
+132,http://fr.dbpedia.org/resource/77th_Street,77th Street,-73.9599,40.7736
+133,http://fr.dbpedia.org/resource/Astoria_–_Ditmars_Boulevard,Astoria – Ditmars Boulevard,-73.9107,40.7761
+134,http://fr.dbpedia.org/resource/Bedford_Park_Boulevard,Bedford Park Boulevard,-73.888,40.8725
+135,http://fr.dbpedia.org/resource/Bleecker_Street_/_Broadway_–_Lafayette_Street,Bleecker Street / Broadway – Lafayette Street,-73.9947,40.7259
+136,http://fr.dbpedia.org/resource/Broadway_Junction,Broadway Junction,-73.9034,40.6789
+137,http://fr.dbpedia.org/resource/Canarsie_–_Rockaway_Parkway,Canarsie – Rockaway Parkway,-73.9026,40.6453
+138,http://fr.dbpedia.org/resource/Coney_Island_–_Stillwell_Avenue,Coney Island – Stillwell Avenue,-73.9811,40.5772
+139,http://fr.dbpedia.org/resource/Court_Street_–_Borough_Hall,Court Street – Borough Hall,-73.9902,40.693
+140,http://fr.dbpedia.org/resource/East_Broadway,East Broadway,-73.9902,40.714
+141,http://fr.dbpedia.org/resource/Forest_Hills_–_71st_Avenue,Forest Hills – 71st Avenue,-73.844,40.7214
+142,http://fr.dbpedia.org/resource/Lexington_Avenue_/_59th_Street,Lexington Avenue / 59th Street,-73.968,40.7625
+143,http://fr.dbpedia.org/resource/Marcy_Avenue_(métro_de_New_York),Marcy Avenue (métro de New York),-73.9579,40.7084
+144,http://fr.dbpedia.org/resource/Mets_–_Willets_Point,Mets – Willets Point,-73.8456,40.7546
+145,http://fr.dbpedia.org/resource/Middle_Village_–_Metropolitan_Avenue,Middle Village – Metropolitan Avenue,-73.8892,40.7122
+146,http://fr.dbpedia.org/resource/Myrtle_Avenue_(métro_de_New_York),Myrtle Avenue (métro de New York),-73.9353,40.6969
+147,http://fr.dbpedia.org/resource/Parkchester,Parkchester,-73.8606,40.8332
+148,http://fr.dbpedia.org/resource/Sutphin_Boulevard_–_Archer_Avenue_–_JFK_Airport,Sutphin Boulevard – Archer Avenue – JFK Airport,-73.8077,40.7005
+149,http://fr.dbpedia.org/resource/West_Fourth_Street_–_Washington_Square,West Fourth Street – Washington Square,-74.0009,40.7317
+150,http://fr.dbpedia.org/resource/Nassau_Avenue,Nassau Avenue,-73.9508,40.7238

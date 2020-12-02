@@ -120,7 +120,7 @@ export default {
       tooltips: {
       "precision_mode": "En mode Précision, le temps n'est pas pris en compte dans le calcul du score"
     },
-      defaultDiffButtons: ["Normal", "Difficile", "Déplaisant"],
+      defaultDiffButtons: ["Normal", "Avancé", "Difficile"],
     }
   },
 

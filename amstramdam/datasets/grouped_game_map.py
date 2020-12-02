@@ -1,7 +1,9 @@
 import random
 from collections import Counter
-from amstramdam.game.geo import Point, distance
+from functools import partial
 
+from amstramdam.game.geo import Point, distance
+import pandas as pd
 
 class GroupBasedGameMap:
     scales = ["world", "continent", "country"]
@@ -32,21 +34,26 @@ class GroupBasedGameMap:
         self.name = name
         self.id = map_id if map_id is not None else f"map<{name.replace(' ', '_')}>"
         self.group = group
+        self.use_hint = use_hint and col_hint in df.columns
 
         # Map data
         if col_group not in df.columns:
             # When no group is provided, automatically activate single group mode
-            df[col_group] = 0
+            #df[col_group] = 0
             available_levels = 1
             default_level = 0
-        if col_hint not in df.columns or not use_hint:
-            df[col_hint] = ""
-        self.df = df.rename(columns={
-            col_place: "place", col_hint: "hint",
-            col_lon: "lon", col_lat: "lat", col_group: "group"})
-        print(self.df.head())
-        print(self.df[["group", "place"]].groupby(by="group").count())
-        self.counts = self.df.groupby(by="group").place.count()
+        self.single_group = available_levels == 1
+        self.col_place = col_place
+        self.col_hint = col_hint
+        self.col_lon = col_lon
+        self.col_lat = col_lat
+        self.col_group = col_group
+        self.df = df
+
+        if self.single_group:
+            self.counts = {0: len(self.df)}
+        else:
+            self.counts = self.df.groupby(by=col_group)[col_place].count()
 
         # Difficulty settings
         self.scale_index = scale
@@ -79,10 +86,38 @@ class GroupBasedGameMap:
         if self.bbox is None:
             # Compute once, then cache
             self.bbox = [
-                [self.df.lat.max(), self.df.lon.min()],
-                [self.df.lat.min(), self.df.lon.max()],
+                [self.df[self.col_lat].max(), self.df[self.col_lon].min()],
+                [self.df[self.col_lat].min(), self.df[self.col_lon].max()],
             ]
         return self.bbox
+
+    def _extract_attr(self, attr, point=None):
+        if point is None:
+            return self.df[attr]
+        return getattr(point, attr)
+
+    def extract_place(self, point=None):
+        return self._extract_attr(self.col_place, point)
+
+    def extract_hint(self, point=None):
+        if not self.use_hint:
+            if point is None:
+                return pd.Series("", index=self.df.index)
+            return ""
+        return self._extract_attr(self.col_hint, point)
+
+    def extract_lon(self, point=None):
+        return self._extract_attr(self.col_lon, point)
+
+    def extract_lat(self, point=None):
+        return self._extract_attr(self.col_lat, point)
+
+    def extract_group(self, point=None):
+        if self.single_group:
+            if point is None:
+                return pd.Series(0, index=self.df.index)
+            return 0
+        return self._extract_attr(self.col_group, point)
 
     def jsonify_point(self, point, label=False, hint=False, columns=None):
         """
@@ -93,17 +128,19 @@ class GroupBasedGameMap:
         """
         if columns is None:
             columns = []
-        additional_data = [(f"col_{k}", k) for k in set(columns) & set(point._fields)]
+        valid_fields = set(columns) & set(point._fields)
+        additional_data = {f"col_{k}": self._extract_attr(point, k) for k in valid_fields}
         if label:
-            additional_data.append(("name", "place"))
+            additional_data["name"] = self.extract_place(point)
         if hint:
-            additional_data.append(("hint", "admin"))
+            additional_data["hint"] = self.extract_hint(point)
+
         jsonified = dict(
-            coords=[point.lat, point.lon],
+            coords=[self.extract_lat(point), self.extract_lon(point)],
             data=dict(
-                rank=point.group,
-                group=max(0, point.group - self.scale_index),
-                **{name: getattr(point, attr) for name, attr in additional_data}
+                rank=self.extract_group(point),
+                group=max(0, self.extract_group(point) - self.scale_index),
+                **additional_data
             ),
         )
         return jsonified
@@ -111,8 +148,9 @@ class GroupBasedGameMap:
     def get_geometry(self, max_points=400, **kwargs):
         samples = self.df.sample(min(max_points, len(self.df))) if max_points > 0 else self.df
         points = [self.jsonify_point(p, **kwargs) for p in samples.itertuples()]
-        min_rank = min(self.df.group)
-        max_rank = max(self.df.group)
+        groups = self.extract_group()
+        min_rank = min(groups)
+        max_rank = max(groups)
         bbox = self.bounding_box()
         return dict(dataset=self.name, points=points, bbox=bbox,
                     stats=dict(
@@ -127,16 +165,15 @@ class GroupBasedGameMap:
                     )
 
     def get_dataframe_as_json(self):
-        filled = self.df.fillna(0)
-        filled["pid"] = filled.index
-        records = list(filled.to_dict("records"))
-        columns = list(filled.columns)
+        records = list(self.df.to_dict("records"))
+        columns = list(self.df.columns)
+        converter = {k: getattr(self, "col_" + k)
+                     for k in ["lon", "lat", "group", "hint", "place"]}
         bbox = self.bounding_box()
-        return dict(dataset=self.name, points=records, bbox=bbox, columns=columns)
+        return dict(dataset=self.name, points=records, bbox=bbox, columns=columns, converter=converter)
 
     def get_distance(self):
         corner1, corner2 = self.bounding_box()
-        print(corner1, corner2)
         p1 = Point.from_latlon(*corner1)
         p2 = Point.from_latlon(*corner2)
         dist = distance(p1, p2)
@@ -146,12 +183,17 @@ class GroupBasedGameMap:
         return dist_param
 
     def sample_from_group(self, group):
-        return self.df[self.df.group == group].sample(1).iloc[0]
+        return self.df[self.extract_group() == group].sample(1).iloc[0]
 
     def sample_many_from_group(self, group, k):
-        return list(self.df[self.df.group == group].sample(k).itertuples())
+        return list(self.df[self.extract_group() == group].sample(k).itertuples())
 
-    def sample(self, k, level=None, verbose=True):
+    def point_to_places(self, point):
+        displayed_hint = (self.extract_place(point), self.extract_hint(point))
+        ground_truth = (self.extract_lon(point), self.extract_lat(point))
+        return displayed_hint, ground_truth
+
+    def sample(self, k, level=None, verbose=False):
         if level is None:
             level = self.default_level
         level = round(level)
@@ -183,5 +225,5 @@ class GroupBasedGameMap:
                 report = 0
             places += self.sample_many_from_group(group, sample_size)
         random.shuffle(places)
-        return [((p.place, p.hint), Point(p.lon, p.lat)) for p in places]
+        return [self.point_to_places(p) for p in places]
 

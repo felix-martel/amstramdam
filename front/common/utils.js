@@ -33,6 +33,25 @@ export function GET(url) {
     }))
 }
 
+export function POST(url, data) {
+    return new Promise((resolve, reject) => {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(data));
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4 && xhr.status === 200){
+                const data = JSON.parse(xhr.responseText);
+                resolve(data);
+            } else if (xhr.readyState === 4 && xhr.status >= 400) {
+                console.warn("Invalid response received for", url);
+                reject(xhr)
+            }
+        }
+    })
+
+}
+
 export const NamingMixin = {
     methods: {
         getPlayerName (id) {

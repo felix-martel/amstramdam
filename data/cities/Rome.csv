@@ -1,0 +1,341 @@
+,x,name,lon,lat
+0,http://fr.dbpedia.org/resource/Pont_Milvius,Pont Milvius,12.4669,41.9356
+1,http://fr.dbpedia.org/resource/Pont_Nomentano,Pont Nomentano,12.5325,41.9336
+2,http://fr.dbpedia.org/resource/Basilique_Sant'Agnese_fuori_le_Mura,Basilique Sant'Agnese fuori le Mura,12.5185,41.9228
+3,http://fr.dbpedia.org/resource/Baptistère_du_Latran,Baptistère du Latran,12.5046,41.886
+4,http://fr.dbpedia.org/resource/Abbaye_de_Tre_Fontane,Abbaye de Tre Fontane,12.4833,41.8344
+5,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Concezione_in_Campo_Marzio,Église Santa Maria della Concezione in Campo Marzio,12.4764,41.9014
+6,http://fr.dbpedia.org/resource/Basilique_Santa_Croce_a_Via_Flaminia,Basilique Santa Croce a Via Flaminia,12.4685,41.9286
+7,http://fr.dbpedia.org/resource/Ponte_Duca_d'Aosta,Ponte Duca d'Aosta,12.4608,41.9311
+8,http://fr.dbpedia.org/resource/Chapelle_Sant'Elena,Chapelle Sant'Elena,12.5028,41.8926
+9,http://fr.dbpedia.org/resource/Chapelle_Santa_Maria_Addolorata_all'Esquilino,Chapelle Santa Maria Addolorata all'Esquilino,12.5072,41.8901
+10,http://fr.dbpedia.org/resource/Pont_Sisto,Pont Sisto,12.4708,41.8923
+11,http://fr.dbpedia.org/resource/Église_San_Roberto_Bellarmino,Église San Roberto Bellarmino,12.493,41.9234
+12,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Popolo,Église Santa Maria del Popolo,12.4764,41.9114
+13,http://fr.dbpedia.org/resource/Villa_Celimontana,Villa Celimontana,12.4956,41.8835
+14,http://fr.dbpedia.org/resource/Scala_Santa,Scala Santa,12.507,41.887
+15,http://fr.dbpedia.org/resource/Musée_national_des_instruments_de_musique_de_Rome,Musée national des instruments de musique de Rome,12.5147,41.8889
+16,http://fr.dbpedia.org/resource/Église_San_Giuseppe_alla_Lungara,Église San Giuseppe alla Lungara,12.4641,41.8968
+17,http://fr.dbpedia.org/resource/Église_San_Leone_I,Église San Leone I,12.5293,41.8909
+18,http://fr.dbpedia.org/resource/Église_Santa_Susanna_alle_Terme_di_Diocleziano,Église Santa Susanna alle Terme di Diocleziano,12.4937,41.9042
+19,http://fr.dbpedia.org/resource/Basilique_San_Camillo_de_Lellis,Basilique San Camillo de Lellis,12.4944,41.907
+20,http://fr.dbpedia.org/resource/Basilique_San_Giovanni_Bosco,Basilique San Giovanni Bosco,12.5657,41.8587
+21,http://fr.dbpedia.org/resource/MAXXI_-_Musée_national_des_arts_du_XXIe_siècle,MAXXI - Musée national des arts du XXIe siècle,12.4665,41.9281
+22,http://fr.dbpedia.org/resource/Musée_Barracco,Musée Barracco,12.4773,41.896
+23,http://fr.dbpedia.org/resource/Temple_mormon_de_Rome,Temple mormon de Rome,12.5454,41.9683
+24,http://fr.dbpedia.org/resource/Église_Natività_di_Gesù,Église Natività di Gesù,12.472,41.898
+25,http://fr.dbpedia.org/resource/Église_Sacro_Cuore_di_Gesù,Église Sacro Cuore di Gesù,12.4991,41.9081
+26,http://fr.dbpedia.org/resource/Église_San_Gabriele_dell'Addolorata,Église San Gabriele dell'Addolorata,12.5594,41.8636
+27,http://fr.dbpedia.org/resource/Église_San_Lorenzo_in_Miranda,Église San Lorenzo in Miranda,12.4867,41.8923
+28,http://fr.dbpedia.org/resource/Église_San_Paolo_dentro_le_Mura,Église San Paolo dentro le Mura,12.4942,41.9011
+29,http://fr.dbpedia.org/resource/Église_San_Policarpo,Église San Policarpo,12.558,41.8525
+30,http://fr.dbpedia.org/resource/Église_San_Tommaso_in_Formis,Église San Tommaso in Formis,12.4953,41.8853
+31,http://fr.dbpedia.org/resource/Église_San_Tommaso_in_Parione,Église San Tommaso in Parione,12.4706,41.8986
+32,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Buon_Consiglio_a_Porta_Furba,Église Santa Maria del Buon Consiglio a Porta Furba,12.5502,41.8636
+33,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Cosmedin,Église Santa Maria in Cosmedin,12.4817,41.8881
+34,http://fr.dbpedia.org/resource/Église_San_Giuseppe_dei_Falegnami,Église San Giuseppe dei Falegnami,12.4845,41.8931
+35,http://fr.dbpedia.org/resource/Église_San_Giorgio_in_Velabro,Église San Giorgio in Velabro,12.4832,41.8896
+36,http://fr.dbpedia.org/resource/Basilique_Santa_Francesca_Romana,Basilique Santa Francesca Romana,12.4889,41.8912
+37,http://fr.dbpedia.org/resource/Église_San_Pietro_in_Borgo,Église San Pietro in Borgo,12.4635,41.9035
+38,http://fr.dbpedia.org/resource/Église_Santa_Maria_Mater_Ecclesiae,Église Santa Maria Mater Ecclesiae,12.4311,41.8075
+39,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Pietà_in_Camposanto_dei_Teutonici,Église Santa Maria della Pietà in Camposanto dei Teutonici,12.4586,41.9025
+40,http://fr.dbpedia.org/resource/Parc_des_Aqueducs,Parc des Aqueducs,12.558,41.848
+41,http://fr.dbpedia.org/resource/Panthéon_(Rome),Panthéon (Rome),12.4768,41.8986
+42,http://fr.dbpedia.org/resource/Église_du_Gesù_(Rome),Église du Gesù (Rome),12.4797,41.8958
+43,http://fr.dbpedia.org/resource/Basilique_Saint-Paul-hors-les-Murs,Basilique Saint-Paul-hors-les-Murs,12.4772,41.8586
+44,http://fr.dbpedia.org/resource/Basilique_Sainte-Marie-Majeure,Basilique Sainte-Marie-Majeure,12.4986,41.8976
+45,http://fr.dbpedia.org/resource/Grande_synagogue_de_Rome,Grande synagogue de Rome,12.478,41.8921
+46,http://fr.dbpedia.org/resource/Chapelle_Paolina,Chapelle Paolina,12.4547,41.9026
+47,http://fr.dbpedia.org/resource/Mosquée_de_Rome,Mosquée de Rome,12.4952,41.9348
+48,http://fr.dbpedia.org/resource/Musée_d'art_contemporain_de_Rome,Musée d'art contemporain de Rome,12.503,41.9136
+49,http://fr.dbpedia.org/resource/Église_Sant'Ivo_alla_Sapienza,Église Sant'Ivo alla Sapienza,12.4749,41.8982
+50,http://fr.dbpedia.org/resource/Église_Saint-Étienne-le-Rond,Église Saint-Étienne-le-Rond,12.4968,41.8846
+51,http://fr.dbpedia.org/resource/Église_Sainte-Cécile-du-Trastevere,Église Sainte-Cécile-du-Trastevere,12.4759,41.8876
+52,http://fr.dbpedia.org/resource/Basilique_Santi_Ambrogio_e_Carlo_al_Corso,Basilique Santi Ambrogio e Carlo al Corso,12.4779,41.9054
+53,http://fr.dbpedia.org/resource/Église_Saint-Yves-des-Bretons,Église Saint-Yves-des-Bretons,12.4748,41.9026
+54,http://fr.dbpedia.org/resource/Église_San_Giovanni_della_Malva_in_Trastevere,Église San Giovanni della Malva in Trastevere,12.4692,41.8921
+55,http://fr.dbpedia.org/resource/Église_San_Pietro_in_Montorio,Église San Pietro in Montorio,12.4661,41.8888
+56,http://fr.dbpedia.org/resource/Église_Sant'Egidio,Église Sant'Egidio,12.4687,41.8901
+57,http://fr.dbpedia.org/resource/Basilique_Santa_Maria_in_Montesanto,Basilique Santa Maria in Montesanto,12.4767,41.9097
+58,http://fr.dbpedia.org/resource/Palazzo_delle_Esposizioni,Palazzo delle Esposizioni,12.49,41.8994
+59,http://fr.dbpedia.org/resource/Basilique_San_Lorenzo_in_Lucina,Basilique San Lorenzo in Lucina,12.4787,41.9034
+60,http://fr.dbpedia.org/resource/Église_Santa_Maria_Liberatrice,Église Santa Maria Liberatrice,12.4738,41.8793
+61,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Concezione_dei_Cappuccini,Église Santa Maria della Concezione dei Cappuccini,12.4883,41.9047
+62,http://fr.dbpedia.org/resource/Basilique_San_Marco_Evangelista_al_Campidoglio,Basilique San Marco Evangelista al Campidoglio,12.4814,41.8957
+63,http://fr.dbpedia.org/resource/Basilique_San_Martino_ai_Monti,Basilique San Martino ai Monti,12.4986,41.8945
+64,http://fr.dbpedia.org/resource/Basilique_San_Nicola_in_Carcere,Basilique San Nicola in Carcere,12.48,41.8911
+65,http://fr.dbpedia.org/resource/Basilique_San_Pancrazio,Basilique San Pancrazio,12.4539,41.885
+66,http://fr.dbpedia.org/resource/Basilique_San_Vitale_(Rome),Basilique San Vitale (Rome),12.4908,41.8994
+67,http://fr.dbpedia.org/resource/Basilique_Sant'Apollinare_(Rome),Basilique Sant'Apollinare (Rome),12.4736,41.9009
+68,http://fr.dbpedia.org/resource/Basilique_Sant'Aurea,Basilique Sant'Aurea,12.3018,41.7593
+69,http://fr.dbpedia.org/resource/Biblioteca_Universitaria_Alessandrina,Biblioteca Universitaria Alessandrina,12.5125,41.9025
+70,http://fr.dbpedia.org/resource/Biblioteca_di_Archeologia_e_Storia_dell'Arte,Biblioteca di Archeologia e Storia dell'Arte,12.4813,41.896
+71,http://fr.dbpedia.org/resource/Bibliothèque_Angelica,Bibliothèque Angelica,12.4746,41.9008
+72,http://fr.dbpedia.org/resource/Bibliothèque_Casanatense,Bibliothèque Casanatense,12.4794,41.8987
+73,http://fr.dbpedia.org/resource/Église_Saint-Nicolas_de_Tolentino_(Rome),Église Saint-Nicolas de Tolentino (Rome),12.4911,41.9051
+74,http://fr.dbpedia.org/resource/Église_Sant'Atanasio_a_Via_Tiburtina,Église Sant'Atanasio a Via Tiburtina,12.5433,41.9129
+75,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Via_Lata,Église Santa Maria in Via Lata,12.4811,41.8981
+76,http://fr.dbpedia.org/resource/Église_Santa_Prisca,Église Santa Prisca,12.4894,41.8828
+77,http://fr.dbpedia.org/resource/Musée_de_la_Civilisation_romaine,Musée de la Civilisation romaine,12.4778,41.8315
+78,http://fr.dbpedia.org/resource/Basilique_Saint-Pierre-aux-Liens,Basilique Saint-Pierre-aux-Liens,12.4932,41.8938
+79,http://fr.dbpedia.org/resource/Basilique_San_Bartolomeo_all'Isola,Basilique San Bartolomeo all'Isola,12.4783,41.8903
+80,http://fr.dbpedia.org/resource/Basilique_Santi_Bonifacio_e_Alessio,Basilique Santi Bonifacio e Alessio,12.4788,41.8836
+81,http://fr.dbpedia.org/resource/Église_San_Sebastiano_al_Palatino,Église San Sebastiano al Palatino,12.4886,41.8897
+82,http://fr.dbpedia.org/resource/Église_Sant'Angelo_in_Pescheria,Église Sant'Angelo in Pescheria,12.4787,41.8925
+83,http://fr.dbpedia.org/resource/Basilique_Sainte-Marie-du-Trastevere,Basilique Sainte-Marie-du-Trastevere,12.4697,41.8894
+84,http://fr.dbpedia.org/resource/Basilique_Santa_Maria_in_Aracoeli,Basilique Santa Maria in Aracoeli,12.4833,41.8939
+85,http://fr.dbpedia.org/resource/Basilique_Saint-Sébastien-hors-les-Murs,Basilique Saint-Sébastien-hors-les-Murs,12.5156,41.8556
+86,http://fr.dbpedia.org/resource/Basilique_Sainte-Croix-de-Jérusalem,Basilique Sainte-Croix-de-Jérusalem,12.5164,41.8878
+87,http://fr.dbpedia.org/resource/Basilique_Santi_Giovanni_e_Paolo,Basilique Santi Giovanni e Paolo,12.4922,41.8865
+88,http://fr.dbpedia.org/resource/Basilique_des_Quatre-Saints-Couronnés,Basilique des Quatre-Saints-Couronnés,12.4983,41.8883
+89,http://fr.dbpedia.org/resource/Basilique_des_Saints-Apôtres,Basilique des Saints-Apôtres,12.4835,41.8981
+90,http://fr.dbpedia.org/resource/Villa_Torlonia_(Rome),Villa Torlonia (Rome),12.512,41.9139
+91,http://fr.dbpedia.org/resource/Église_Natività_di_Nostro_Signore_Gesù_Cristo,Église Natività di Nostro Signore Gesù Cristo,12.5054,41.8805
+92,http://fr.dbpedia.org/resource/Église_Ognissanti_(Rome),Église Ognissanti (Rome),12.5156,41.8799
+93,http://fr.dbpedia.org/resource/Église_Preziosissimo_Sangue_di_Nostro_Signore_Gesù_Cristo,Église Preziosissimo Sangue di Nostro Signore Gesù Cristo,12.5023,41.8797
+94,http://fr.dbpedia.org/resource/Église_San_Giovanni_Battista_de_Rossi,Église San Giovanni Battista de Rossi,12.519,41.8715
+95,http://fr.dbpedia.org/resource/Église_San_Gregorio_al_Celio,Église San Gregorio al Celio,12.4906,41.8855
+96,http://fr.dbpedia.org/resource/Église_Sant'Alfonso_all'Esquilino,Église Sant'Alfonso all'Esquilino,12.5003,41.8958
+97,http://fr.dbpedia.org/resource/Église_Sant'Anna_al_Laterano,Église Sant'Anna al Laterano,12.5024,41.8907
+98,http://fr.dbpedia.org/resource/Église_Sant'Antonio_da_Padova_a_Circonvallazione_Appia,Église Sant'Antonio da Padova a Circonvallazione Appia,12.5128,41.8754
+99,http://fr.dbpedia.org/resource/Église_Sant'Antonio_da_Padova_all'Esquilino,Église Sant'Antonio da Padova all'Esquilino,12.5041,41.8889
+100,http://fr.dbpedia.org/resource/Église_Sant'Eusebio_(Rome),Église Sant'Eusebio (Rome),12.5038,41.8963
+101,http://fr.dbpedia.org/resource/Église_Santa_Maria_Addolorata_a_piazza_Buenos_Aires,Église Santa Maria Addolorata a piazza Buenos Aires,12.5008,41.9181
+102,http://fr.dbpedia.org/resource/Église_Santa_Maria_Immacolata_all'Esquilino,Église Santa Maria Immacolata all'Esquilino,12.506,41.8909
+103,http://fr.dbpedia.org/resource/Église_Santa_Maria_Immacolata_e_San_Giovanni_Berchmans,Église Santa Maria Immacolata e San Giovanni Berchmans,12.5147,41.8971
+104,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Aquiro,Église Santa Maria in Aquiro,12.4782,41.9
+105,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Palmis,Église Santa Maria in Palmis,12.5037,41.8665
+106,http://fr.dbpedia.org/resource/Église_Santi_Antonio_da_Padova_e_Annibale_Maria,Église Santi Antonio da Padova e Annibale Maria,12.5203,41.8813
+107,http://fr.dbpedia.org/resource/Église_Santi_Marcellino_e_Pietro_al_Laterano,Église Santi Marcellino e Pietro al Laterano,12.5031,41.8891
+108,http://fr.dbpedia.org/resource/Église_Saint-Julien-des-Flamands,Église Saint-Julien-des-Flamands,12.4758,41.8959
+109,http://fr.dbpedia.org/resource/Église_Santa_Maria_di_Loreto_(Rome),Église Santa Maria di Loreto (Rome),12.4838,41.896
+110,http://fr.dbpedia.org/resource/Basilique_Saint-Laurent-hors-les-Murs,Basilique Saint-Laurent-hors-les-Murs,12.5208,41.9025
+111,http://fr.dbpedia.org/resource/Basilique_de_la_Minerve,Basilique de la Minerve,12.4783,41.8981
+112,http://fr.dbpedia.org/resource/Église_Sainte-Sabine_de_Rome,Église Sainte-Sabine de Rome,12.4797,41.8844
+113,http://fr.dbpedia.org/resource/Basilique_Santa_Maria_degli_Angeli_e_dei_Martiri,Basilique Santa Maria degli Angeli e dei Martiri,12.4969,41.9031
+114,http://fr.dbpedia.org/resource/Église_Saint-Louis-des-Français_de_Rome,Église Saint-Louis-des-Français de Rome,12.4747,41.8994
+115,http://fr.dbpedia.org/resource/Église_Sainte-Agnès-en-Agone,Église Sainte-Agnès-en-Agone,12.4726,41.8988
+116,http://fr.dbpedia.org/resource/Église_Assunzione_di_Maria,Église Assunzione di Maria,12.5529,41.8598
+117,http://fr.dbpedia.org/resource/Église_San_Giuseppe_Cafasso,Église San Giuseppe Cafasso,12.5452,41.8736
+118,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Soccorso_(Roma),Église Santa Maria del Soccorso (Roma),12.5621,41.9148
+119,http://fr.dbpedia.org/resource/Église_Santo_Stefano_protomartire,Église Santo Stefano protomartire,12.5406,41.8567
+120,http://fr.dbpedia.org/resource/Basilique_Sant'Agostino_in_Campo_Marzio,Basilique Sant'Agostino in Campo Marzio,12.4743,41.9011
+121,http://fr.dbpedia.org/resource/Église_Santi_Vincenzo_e_Anastasio_a_Trevi,Église Santi Vincenzo e Anastasio a Trevi,12.4839,41.9007
+122,http://fr.dbpedia.org/resource/Église_Spirito_Santo_dei_Napoletani,Église Spirito Santo dei Napoletani,12.4679,41.8964
+123,http://fr.dbpedia.org/resource/Cimetière_Flaminio,Cimetière Flaminio,12.4945,42.0143
+124,http://fr.dbpedia.org/resource/Cimetière_communal_monumental_de_Campo_Verano,Cimetière communal monumental de Campo Verano,12.526,41.9032
+125,http://fr.dbpedia.org/resource/Église_San_Salvatore_in_Lauro,Église San Salvatore in Lauro,12.4696,41.9008
+126,http://fr.dbpedia.org/resource/Pont_Cestius,Pont Cestius,12.4773,41.8901
+127,http://fr.dbpedia.org/resource/Cimetière_non-catholique_de_Rome,Cimetière non-catholique de Rome,12.4793,41.8762
+128,http://fr.dbpedia.org/resource/Église_Saint-Nicolas-des-Lorrains,Église Saint-Nicolas-des-Lorrains,12.4723,41.8999
+129,http://fr.dbpedia.org/resource/Pont_Fabricius,Pont Fabricius,12.4783,41.8911
+130,http://fr.dbpedia.org/resource/Église_Saint-André_du_Quirinal,Église Saint-André du Quirinal,12.4894,41.9007
+131,http://fr.dbpedia.org/resource/Église_San_Lorenzo_in_Damaso,Église San Lorenzo in Damaso,12.472,41.8969
+132,http://fr.dbpedia.org/resource/Basilique_Saint-Clément-du-Latran,Basilique Saint-Clément-du-Latran,12.4975,41.8894
+133,http://fr.dbpedia.org/resource/Basilique_Santa_Maria_Ausiliatrice,Basilique Santa Maria Ausiliatrice,12.5301,41.8744
+134,http://fr.dbpedia.org/resource/Galerie_nationale_d'art_moderne_et_contemporain,Galerie nationale d'art moderne et contemporain,12.4821,41.917
+135,http://fr.dbpedia.org/resource/Pont_Saint-Ange,Pont Saint-Ange,12.4665,41.9017
+136,http://fr.dbpedia.org/resource/Église_San_Giovanni_Battista_dei_Fiorentini,Église San Giovanni Battista dei Fiorentini,12.465,41.8997
+137,http://fr.dbpedia.org/resource/Église_Sant'Agata_in_Trastevere,Église Sant'Agata in Trastevere,12.4736,41.8897
+138,http://fr.dbpedia.org/resource/Église_Santa_Caterina_da_Siena,Église Santa Caterina da Siena,12.5075,41.8742
+139,http://fr.dbpedia.org/resource/Église_Santa_Maria_Immacolata_e_San_Giuseppe_Benedetto_Labre,Église Santa Maria Immacolata e San Giuseppe Benedetto Labre,12.5154,41.8847
+140,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Carmine_alle_Tre_Cannelle,Église Santa Maria del Carmine alle Tre Cannelle,12.4848,41.8969
+141,http://fr.dbpedia.org/resource/Église_Santi_Fabiano_e_Venanzio,Église Santi Fabiano e Venanzio,12.5218,41.8846
+142,http://fr.dbpedia.org/resource/Église_Santissimo_Nome_di_Maria,Église Santissimo Nome di Maria,12.5114,41.8712
+143,http://fr.dbpedia.org/resource/Basilique_Santi_Cosma_e_Damiano,Basilique Santi Cosma e Damiano,12.4874,41.8921
+144,http://fr.dbpedia.org/resource/Église_San_Gioacchino_in_Prati,Église San Gioacchino in Prati,12.4651,41.91
+145,http://fr.dbpedia.org/resource/Église_San_Salvatore_ai_Monti,Église San Salvatore ai Monti,12.4899,41.8944
+146,http://fr.dbpedia.org/resource/Église_Santa_Maria_dei_Monti,Église Santa Maria dei Monti,12.4906,41.8947
+147,http://fr.dbpedia.org/resource/Villa_Doria_Pamphilj,Villa Doria Pamphilj,12.4505,41.8873
+148,http://fr.dbpedia.org/resource/Église_Gesù_Bambino_all'Esquilino,Église Gesù Bambino all'Esquilino,12.4959,41.8979
+149,http://fr.dbpedia.org/resource/Église_San_Giovanni_Battista_dei_Genovesi,Église San Giovanni Battista dei Genovesi,12.4754,41.8881
+150,http://fr.dbpedia.org/resource/Église_San_Giovanni_Battista_in_Prati,Église San Giovanni Battista in Prati,12.456,41.9092
+151,http://fr.dbpedia.org/resource/Église_San_Giuseppe_di_Cluny,Église San Giuseppe di Cluny,12.5005,41.892
+152,http://fr.dbpedia.org/resource/Église_San_Lorenzo_in_Fonte,Église San Lorenzo in Fonte,12.4937,41.8957
+153,http://fr.dbpedia.org/resource/Église_San_Lorenzo_in_Panisperna,Église San Lorenzo in Panisperna,12.4932,41.8973
+154,http://fr.dbpedia.org/resource/Église_Sant'Agata_dei_Goti,Église Sant'Agata dei Goti,12.4893,41.8964
+155,http://fr.dbpedia.org/resource/Église_Sant'Antonio_Abate,Église Sant'Antonio Abate,12.5005,41.897
+156,http://fr.dbpedia.org/resource/Église_Santa_Giuliana_Falconieri,Église Santa Giuliana Falconieri,12.4582,41.8853
+157,http://fr.dbpedia.org/resource/Église_Santa_Margherita_Maria_Alacoque,Église Santa Margherita Maria Alacoque,12.5126,41.8894
+158,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Rosario_in_Prati,Église Santa Maria del Rosario in Prati,12.4585,41.9084
+159,http://fr.dbpedia.org/resource/Église_évangélique_baptiste_à_Monti,Église évangélique baptiste à Monti,12.4953,41.8978
+160,http://fr.dbpedia.org/resource/Église_San_Luigi_Gonzaga,Église San Luigi Gonzaga,12.4901,41.9293
+161,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Mercede_e_Sant'Adriano,Église Santa Maria della Mercede e Sant'Adriano,12.5007,41.9172
+162,http://fr.dbpedia.org/resource/Église_Santi_Angeli_Custodi,Église Santi Angeli Custodi,12.5359,41.9359
+163,http://fr.dbpedia.org/resource/Église_Santa_Balbina_all'Aventino,Église Santa Balbina all'Aventino,12.4893,41.8806
+164,http://fr.dbpedia.org/resource/Université_américaine_de_Rome,Université américaine de Rome,12.4623,41.8857
+165,http://fr.dbpedia.org/resource/Gare_de_Rome-Tuscolana,Gare de Rome-Tuscolana,12.5233,41.8795
+166,http://fr.dbpedia.org/resource/Séminaire_français_de_Rome,Séminaire français de Rome,12.4773,41.8977
+167,http://fr.dbpedia.org/resource/Arco_di_Travertino_(métro_de_Rome),Arco di Travertino (métro de Rome),12.5347,41.8659
+168,http://fr.dbpedia.org/resource/Cinecittà_(métro_de_Rome),Cinecittà (métro de Rome),12.5754,41.8487
+169,http://fr.dbpedia.org/resource/Conca_d'Oro_(métro_de_Rome),Conca d'Oro (métro de Rome),12.5278,41.9394
+170,http://fr.dbpedia.org/resource/Giulio_Agricola_(métro_de_Rome),Giulio Agricola (métro de Rome),12.5623,41.8566
+171,http://fr.dbpedia.org/resource/Jonio,Jonio,12.528,41.9464
+172,http://fr.dbpedia.org/resource/Lucio_Sestio_(métro_de_Rome),Lucio Sestio (métro de Rome),12.5623,41.8566
+173,http://fr.dbpedia.org/resource/Numidio_Quadrato,Numidio Quadrato,12.5571,41.8599
+174,http://fr.dbpedia.org/resource/Porta_Furba_-_Quadraro_(métro_de_Rome),Porta Furba - Quadraro (métro de Rome),12.5483,41.8638
+175,http://fr.dbpedia.org/resource/Subaugusta_(métro_de_Rome),Subaugusta (métro de Rome),12.5682,41.8535
+176,http://fr.dbpedia.org/resource/Gardenie_(métro_de_Rome),Gardenie (métro de Rome),12.562,41.8862
+177,http://fr.dbpedia.org/resource/Gare_de_Rome-Nomentana,Gare de Rome-Nomentana,12.5236,41.9326
+178,http://fr.dbpedia.org/resource/Lodi_(métro_de_Rome),Lodi (métro de Rome),12.5174,41.8866
+179,http://fr.dbpedia.org/resource/Malatesta_(métro_de_Rome),Malatesta (métro de Rome),12.5402,41.8873
+180,http://fr.dbpedia.org/resource/Pigneto_(métro_de_Rome),Pigneto (métro de Rome),12.523,41.8895
+181,http://fr.dbpedia.org/resource/Teano_(métro_de_Rome),Teano (métro de Rome),12.5505,41.889
+182,http://fr.dbpedia.org/resource/Furio_Camillo_(métro_de_Rome),Furio Camillo (métro de Rome),12.5226,41.8747
+183,http://fr.dbpedia.org/resource/Ponte_Lungo_(métro_de_Rome),Ponte Lungo (métro de Rome),12.5188,41.878
+184,http://fr.dbpedia.org/resource/Re_di_Roma_(métro_de_Rome),Re di Roma (métro de Rome),12.5144,41.8819
+185,http://fr.dbpedia.org/resource/San_Giovanni_(métro_de_Rome),San Giovanni (métro de Rome),12.5092,41.8853
+186,http://fr.dbpedia.org/resource/Église_Santi_Nereo_e_Achilleo,Église Santi Nereo e Achilleo,12.4948,41.8801
+187,http://fr.dbpedia.org/resource/Place_de_la_République_(Rome),Place de la République (Rome),12.4961,41.9028
+188,http://fr.dbpedia.org/resource/Place_du_Capitole_(Rome),Place du Capitole (Rome),12.4933,41.8908
+189,http://fr.dbpedia.org/resource/Colli_Albani_-_Parco_Appia_Antica_(métro_de_Rome),Colli Albani - Parco Appia Antica (métro de Rome),12.5298,41.8693
+190,http://fr.dbpedia.org/resource/Oratoire_Preziosissimo_Sangue,Oratoire Preziosissimo Sangue,12.5011,41.8877
+191,http://fr.dbpedia.org/resource/Église_San_Pantaleo,Église San Pantaleo,12.4733,41.8971
+192,http://fr.dbpedia.org/resource/Villa_Ada,Villa Ada,12.5015,41.932
+193,http://fr.dbpedia.org/resource/Église_Santa_Lucia_in_Selci,Église Santa Lucia in Selci,12.4968,41.8947
+194,http://fr.dbpedia.org/resource/Église_San_Patrizio_a_Villa_Ludovisi,Église San Patrizio a Villa Ludovisi,12.493,41.9085
+195,http://fr.dbpedia.org/resource/Église_Santa_Maria_dell'Anima,Église Santa Maria dell'Anima,12.472,41.9007
+196,http://fr.dbpedia.org/resource/Piazza_Navona,Piazza Navona,12.4731,41.8989
+197,http://fr.dbpedia.org/resource/Libera_Università_Internazionale_degli_Studi_Sociali,Libera Università Internazionale degli Studi Sociali,12.4931,41.9244
+198,http://fr.dbpedia.org/resource/Place_Saint-Pierre,Place Saint-Pierre,12.4564,41.9022
+199,http://fr.dbpedia.org/resource/Université_de_Rome_«_La_Sapienza_»,Université de Rome « La Sapienza »,12.5158,41.9033
+200,http://fr.dbpedia.org/resource/Gare_de_Rome-Termini,Gare de Rome-Termini,12.5019,41.9008
+201,http://fr.dbpedia.org/resource/Libera_Università_degli_Studi_Per_l'Innovazione_e_le_Organizzazioni,Libera Università degli Studi Per l'Innovazione e le Organizzazioni,12.4963,41.8602
+202,http://fr.dbpedia.org/resource/Université_de_Rome_«_Foro_Italico_»,Université de Rome « Foro Italico »,12.4576,41.9315
+203,http://fr.dbpedia.org/resource/Université_de_Rome_III,Université de Rome III,12.4789,41.8625
+204,http://fr.dbpedia.org/resource/Via_Condotti,Via Condotti,12.4805,41.9051
+205,http://fr.dbpedia.org/resource/Basilique_San_Crisogono,Basilique San Crisogono,12.4736,41.8891
+206,http://fr.dbpedia.org/resource/Église_San_Cesareo_de_Appia,Église San Cesareo de Appia,12.497,41.8786
+207,http://fr.dbpedia.org/resource/Église_Santa_Dorotea,Église Santa Dorotea,12.4682,41.8922
+208,http://fr.dbpedia.org/resource/Église_Santa_Margherita_in_Trastevere,Église Santa Margherita in Trastevere,12.4711,41.8898
+209,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Scala,Église Santa Maria della Scala,12.4678,41.8911
+210,http://fr.dbpedia.org/resource/Piazza_Barberini,Piazza Barberini,12.4886,41.9037
+211,http://fr.dbpedia.org/resource/Université_Nicolas-de-Cues,Université Nicolas-de-Cues,12.3939,41.9111
+212,http://fr.dbpedia.org/resource/Hôpital_San_Giovanni–Addolorata,Hôpital San Giovanni–Addolorata,12.5019,41.8863
+213,http://fr.dbpedia.org/resource/Hôpital_Umberto_I,Hôpital Umberto I,12.5117,41.9066
+214,http://fr.dbpedia.org/resource/Aéroport_Léonard-de-Vinci_de_Rome_Fiumicino,Aéroport Léonard-de-Vinci de Rome Fiumicino,12.2508,41.8075
+215,http://fr.dbpedia.org/resource/Piazza_di_Spagna,Piazza di Spagna,12.4819,41.9058
+216,http://fr.dbpedia.org/resource/Piazza_Venezia,Piazza Venezia,12.4824,41.8961
+217,http://fr.dbpedia.org/resource/Église_San_Giovanni_a_Porta_Latina,Église San Giovanni a Porta Latina,12.5018,41.8773
+218,http://fr.dbpedia.org/resource/Basilique_San_Silvestro_in_Capite,Basilique San Silvestro in Capite,12.4806,41.9031
+219,http://fr.dbpedia.org/resource/Piazza_del_Popolo_(Rome),Piazza del Popolo (Rome),12.4764,41.9106
+220,http://fr.dbpedia.org/resource/Église_San_Callisto,Église San Callisto,12.4705,41.889
+221,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Via,Église Santa Maria in Via,12.4816,41.9017
+222,http://fr.dbpedia.org/resource/Église_Santi_Claudio_e_Andrea_dei_Borgognoni,Église Santi Claudio e Andrea dei Borgognoni,12.4815,41.9023
+223,http://fr.dbpedia.org/resource/Anagnina_(métro_de_Rome),Anagnina (métro de Rome),12.5863,41.8415
+224,http://fr.dbpedia.org/resource/Basilica_San_Paolo_(métro_de_Rome),Basilica San Paolo (métro de Rome),12.4776,41.8561
+225,http://fr.dbpedia.org/resource/Bologna_(métro_de_Rome),Bologna (métro de Rome),12.5206,41.9133
+226,http://fr.dbpedia.org/resource/Castro_Pretorio_(métro_de_Rome),Castro Pretorio (métro de Rome),12.5055,41.9064
+227,http://fr.dbpedia.org/resource/Cavour_(métro_de_Rome),Cavour (métro de Rome),12.4936,41.895
+228,http://fr.dbpedia.org/resource/Circo_Massimo_(métro_de_Rome),Circo Massimo (métro de Rome),12.4885,41.8842
+229,http://fr.dbpedia.org/resource/Colosseo_(métro_de_Rome),Colosseo (métro de Rome),12.4916,41.8917
+230,http://fr.dbpedia.org/resource/EUR_Fermi_(métro_de_Rome),EUR Fermi (métro de Rome),12.4713,41.8288
+231,http://fr.dbpedia.org/resource/EUR_Magliana_(métro_de_Rome),EUR Magliana (métro de Rome),12.4632,41.8394
+232,http://fr.dbpedia.org/resource/EUR_Palasport_(métro_de_Rome),EUR Palasport (métro de Rome),12.4655,41.8303
+233,http://fr.dbpedia.org/resource/Garbatella_(métro_de_Rome),Garbatella (métro de Rome),12.4833,41.8656
+234,http://fr.dbpedia.org/resource/Laurentina_(métro_de_Rome),Laurentina (métro de Rome),12.4815,41.8274
+235,http://fr.dbpedia.org/resource/Libia_(métro_de_Rome),Libia (métro de Rome),12.5205,41.9329
+236,http://fr.dbpedia.org/resource/Marconi_(métro_de_Rome),Marconi (métro de Rome),12.4776,41.8561
+237,http://fr.dbpedia.org/resource/Monti_Tiburtini_(métro_de_Rome),Monti Tiburtini (métro de Rome),12.5473,41.916
+238,http://fr.dbpedia.org/resource/Pietralata_(métro_de_Rome),Pietralata (métro de Rome),12.5617,41.9156
+239,http://fr.dbpedia.org/resource/Piramide_(métro_de_Rome),Piramide (métro de Rome),12.4825,41.8747
+240,http://fr.dbpedia.org/resource/Policlinico_(métro_de_Rome),Policlinico (métro de Rome),12.512,41.909
+241,http://fr.dbpedia.org/resource/Ponte_Mammolo_(métro_de_Rome),Ponte Mammolo (métro de Rome),12.5661,41.9203
+242,http://fr.dbpedia.org/resource/Quintiliani_(métro_de_Rome),Quintiliani (métro de Rome),12.5386,41.9162
+243,http://fr.dbpedia.org/resource/Rebibbia_(métro_de_Rome),Rebibbia (métro de Rome),12.5728,41.9257
+244,http://fr.dbpedia.org/resource/Sant'Agnese_-_Annibaliano_(métro_de_Rome),Sant'Agnese - Annibaliano (métro de Rome),12.5159,41.924
+245,http://fr.dbpedia.org/resource/Santa_Maria_del_Soccorso_(métro_de_Rome),Santa Maria del Soccorso (métro de Rome),12.5608,41.9156
+246,http://fr.dbpedia.org/resource/Tiburtina_(métro_de_Rome),Tiburtina (métro de Rome),12.5293,41.9111
+247,http://fr.dbpedia.org/resource/Université_pontificale_grégorienne,Université pontificale grégorienne,12.4847,41.8989
+248,http://fr.dbpedia.org/resource/Campo_de'_Fiori,Campo de' Fiori,12.4722,41.8956
+249,http://fr.dbpedia.org/resource/Villa_Borghèse,Villa Borghèse,12.4851,41.9136
+250,http://fr.dbpedia.org/resource/Piazza_di_Santa_Maria_in_Trastevere,Piazza di Santa Maria in Trastevere,12.4703,41.8895
+251,http://fr.dbpedia.org/resource/Scuola_ufficiali_carabinieri,Scuola ufficiali carabinieri,12.45,41.9
+252,http://fr.dbpedia.org/resource/Fori_Imperiali/Colosseo_(métro_de_Rome),Fori Imperiali/Colosseo (métro de Rome),12.4911,41.8914
+253,http://fr.dbpedia.org/resource/Gare_de_Rome-Ostiense,Gare de Rome-Ostiense,12.4847,41.8728
+254,http://fr.dbpedia.org/resource/Gare_de_Rome-Prenestina,Gare de Rome-Prenestina,12.546,41.8978
+255,http://fr.dbpedia.org/resource/Gare_de_Rome-San_Pietro,Gare de Rome-San Pietro,12.4547,41.8962
+256,http://fr.dbpedia.org/resource/Gare_de_Rome-Trastevere,Gare de Rome-Trastevere,12.4664,41.8724
+257,http://fr.dbpedia.org/resource/Mirti_(métro_de_Rome),Mirti (métro de Rome),12.5667,41.8811
+258,http://fr.dbpedia.org/resource/Parco_di_Centocelle_(métro_de_Rome),Parco di Centocelle (métro de Rome),12.5624,41.8748
+259,http://fr.dbpedia.org/resource/Via_Cristoforo_Colombo,Via Cristoforo Colombo,12.4062,41.7828
+260,http://fr.dbpedia.org/resource/Via_dei_Fori_Imperiali,Via dei Fori Imperiali,12.4865,41.8936
+261,http://fr.dbpedia.org/resource/Basilique_Santa_Prassede,Basilique Santa Prassede,12.4987,41.8963
+262,http://fr.dbpedia.org/resource/Via_del_Corso_(Rome),Via del Corso (Rome),12.4928,41.9021
+263,http://fr.dbpedia.org/resource/Église_San_Francesco_a_Ripa,Église San Francesco a Ripa,12.4733,41.8851
+264,http://fr.dbpedia.org/resource/Église_Santa_Caterina_a_Magnanapoli,Église Santa Caterina a Magnanapoli,12.4869,41.896
+265,http://fr.dbpedia.org/resource/Église_Santi_Domenico_e_Sisto,Église Santi Domenico e Sisto,12.4881,41.8959
+266,http://fr.dbpedia.org/resource/Église_Santi_Quirico_e_Giulitta,Église Santi Quirico e Giulitta,12.4877,41.894
+267,http://fr.dbpedia.org/resource/Église_Santissimo_Crocifisso,Église Santissimo Crocifisso,12.482,41.8996
+268,http://fr.dbpedia.org/resource/Baldo_degli_Ubaldi_(métro_de_Rome),Baldo degli Ubaldi (métro de Rome),12.4327,41.8996
+269,http://fr.dbpedia.org/resource/Barberini_-_Fontana_di_Trevi_(métro_de_Rome),Barberini - Fontana di Trevi (métro de Rome),12.4886,41.9038
+270,http://fr.dbpedia.org/resource/Battistini_(métro_de_Rome),Battistini (métro de Rome),12.4144,41.9061
+271,http://fr.dbpedia.org/resource/Cipro_(métro_de_Rome),Cipro (métro de Rome),12.4474,41.9075
+272,http://fr.dbpedia.org/resource/Cornelia_(métro_de_Rome),Cornelia (métro de Rome),12.425,41.9019
+273,http://fr.dbpedia.org/resource/Flaminio_-_Piazza_del_Popolo_(métro_de_Rome),Flaminio - Piazza del Popolo (métro de Rome),12.4759,41.9119
+274,http://fr.dbpedia.org/resource/Lepanto_(métro_de_Rome),Lepanto (métro de Rome),12.4662,41.9118
+275,http://fr.dbpedia.org/resource/Manzoni_-_Museo_della_Liberazione_(métro_de_Rome),Manzoni - Museo della Liberazione (métro de Rome),12.5061,41.8898
+276,http://fr.dbpedia.org/resource/Ottaviano_-_San_Pietro_-_Musei_Vaticani_(métro_de_Rome),Ottaviano - San Pietro - Musei Vaticani (métro de Rome),12.4586,41.91
+277,http://fr.dbpedia.org/resource/Repubblica_-_Teatro_dell'Opera_(métro_de_Rome),Repubblica - Teatro dell'Opera (métro de Rome),12.4955,41.9029
+278,http://fr.dbpedia.org/resource/Spagna_(métro_de_Rome),Spagna (métro de Rome),12.4853,41.907
+279,http://fr.dbpedia.org/resource/Termini_(métro_de_Rome),Termini (métro de Rome),12.5019,41.9008
+280,http://fr.dbpedia.org/resource/Valle_Aurelia_(métro_de_Rome),Valle Aurelia (métro de Rome),12.4417,41.9031
+281,http://fr.dbpedia.org/resource/Vittorio_Emanuele_(métro_de_Rome),Vittorio Emanuele (métro de Rome),12.5043,41.8945
+282,http://fr.dbpedia.org/resource/Église_San_Francesco_di_Paola_(Rome),Église San Francesco di Paola (Rome),12.4914,41.8938
+283,http://fr.dbpedia.org/resource/Église_Santi_Andrea_e_Bartolomeo,Église Santi Andrea e Bartolomeo,12.5028,41.8872
+284,http://fr.dbpedia.org/resource/Église_Santi_Gioacchino_e_Anna_ai_Monti,Église Santi Gioacchino e Anna ai Monti,12.4939,41.8945
+285,http://fr.dbpedia.org/resource/Église_Santi_Sergio_e_Bacco_degli_Ucraini,Église Santi Sergio e Bacco degli Ucraini,12.4908,41.8951
+286,http://fr.dbpedia.org/resource/Église_San_Benedetto_in_Piscinula,Église San Benedetto in Piscinula,12.4768,41.8889
+287,http://fr.dbpedia.org/resource/Église_San_Bernardino_in_Panisperna,Église San Bernardino in Panisperna,12.4892,41.896
+288,http://fr.dbpedia.org/resource/Église_Santa_Maria_dell'Orto,Église Santa Maria dell'Orto,12.4747,41.8868
+289,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Luce,Église Santa Maria della Luce,12.4755,41.8892
+290,http://fr.dbpedia.org/resource/Basilique_Santa_Pudenziana,Basilique Santa Pudenziana,12.4956,41.8984
+291,http://fr.dbpedia.org/resource/Gare_de_Rome-Tiburtina,Gare de Rome-Tiburtina,12.5308,41.9102
+292,http://fr.dbpedia.org/resource/Église_Santa_Rita_da_Cascia_alle_Vergini,Église Santa Rita da Cascia alle Vergini,12.4829,41.8998
+293,http://fr.dbpedia.org/resource/Église_Santissime_Stimmate_di_San_Francesco,Église Santissime Stimmate di San Francesco,12.4776,41.8963
+294,http://fr.dbpedia.org/resource/Église_Santissimo_Nome_di_Maria_al_Foro_Traiano,Église Santissimo Nome di Maria al Foro Traiano,12.4846,41.8961
+295,http://fr.dbpedia.org/resource/Parc_des_Scipioni,Parc des Scipioni,12.5014,41.8764
+296,http://fr.dbpedia.org/resource/Aéroport_international_de_Rome_Ciampino,Aéroport international de Rome Ciampino,12.5947,41.8
+297,http://fr.dbpedia.org/resource/Amba_Aradam_-_Ipponio_(métro_de_Rome),Amba Aradam - Ipponio (métro de Rome),12.4987,41.8825
+298,http://fr.dbpedia.org/resource/Église_San_Carlo_ai_Catinari,Église San Carlo ai Catinari,12.4697,41.8894
+299,http://fr.dbpedia.org/resource/Église_San_Bernardo_alle_Terme,Église San Bernardo alle Terme,12.4945,41.9036
+300,http://fr.dbpedia.org/resource/Église_Santo_Stanislao_dei_Polacchi,Église Santo Stanislao dei Polacchi,12.4793,41.8948
+301,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Priorato,Église Santa Maria del Priorato,12.4777,41.9105
+302,http://fr.dbpedia.org/resource/Église_Sant'Eligio_degli_Orefici,Église Sant'Eligio degli Orefici,12.468,41.8957
+303,http://fr.dbpedia.org/resource/Basilique_Sant'Anastasia_al_Palatino,Basilique Sant'Anastasia al Palatino,12.4842,41.8881
+304,http://fr.dbpedia.org/resource/Basilique_Sant'Andrea_delle_Fratte,Basilique Sant'Andrea delle Fratte,12.4836,41.9036
+305,http://fr.dbpedia.org/resource/Basilique_Santa_Maria_in_Domnica,Basilique Santa Maria in Domnica,12.4957,41.8847
+306,http://fr.dbpedia.org/resource/Église_Santa_Caterina_dei_Funari,Église Santa Caterina dei Funari,12.4786,41.8939
+307,http://fr.dbpedia.org/resource/Église_Santa_Maria_Maddalena,Église Santa Maria Maddalena,12.4767,41.9001
+308,http://fr.dbpedia.org/resource/Église_Santi_Bartolomeo_e_Alessandro_dei_Bergamaschi,Église Santi Bartolomeo e Alessandro dei Bergamaschi,12.4799,41.9005
+309,http://fr.dbpedia.org/resource/Église_Santi_Vito_e_Modesto,Église Santi Vito e Modesto,12.5016,41.8958
+310,http://fr.dbpedia.org/resource/Église_Santo_Spirito_in_Sassia,Église Santo Spirito in Sassia,12.4612,41.9012
+311,http://fr.dbpedia.org/resource/Église_Santissima_Trinità_dei_Pellegrini,Église Santissima Trinità dei Pellegrini,12.4726,41.8935
+312,http://fr.dbpedia.org/resource/Cinecittà,Cinecittà,12.5754,41.8503
+313,http://fr.dbpedia.org/resource/Chiesa_Nuova,Chiesa Nuova,12.4692,41.8986
+314,http://fr.dbpedia.org/resource/Hôpital_Gemelli,Hôpital Gemelli,12.4297,41.9303
+315,http://fr.dbpedia.org/resource/Église_Santa_Maria_della_Pietà_al_Colosseo,Église Santa Maria della Pietà al Colosseo,12.4925,41.8907
+316,http://fr.dbpedia.org/resource/Alessandrino_(métro_de_Rome),Alessandrino (métro de Rome),12.5801,41.8709
+317,http://fr.dbpedia.org/resource/Bolognetta_(métro_de_Rome),Bolognetta (métro de Rome),12.6808,41.8651
+318,http://fr.dbpedia.org/resource/Borghesiana_(métro_de_Rome),Borghesiana (métro de Rome),12.6674,41.8647
+319,http://fr.dbpedia.org/resource/Due_Leoni_-_Fontana_Candida_(métro_de_Rome),Due Leoni - Fontana Candida (métro de Rome),12.6582,41.8649
+320,http://fr.dbpedia.org/resource/Finocchio_(métro_de_Rome),Finocchio (métro de Rome),12.6878,41.8655
+321,http://fr.dbpedia.org/resource/Giardinetti_(métro_de_Rome),Giardinetti (métro de Rome),12.6045,41.8652
+322,http://fr.dbpedia.org/resource/Graniti_(métro_de_Rome),Graniti (métro de Rome),12.6981,41.8657
+323,http://fr.dbpedia.org/resource/Grotte_Celoni_(métro_de_Rome),Grotte Celoni (métro de Rome),12.6463,41.8628
+324,http://fr.dbpedia.org/resource/Torre_Angela_(métro_de_Rome),Torre Angela (métro de Rome),12.6257,41.8643
+325,http://fr.dbpedia.org/resource/Torre_Gaia_(métro_de_Rome),Torre Gaia (métro de Rome),12.636,41.8641
+326,http://fr.dbpedia.org/resource/Torre_Maura_(métro_de_Rome),Torre Maura (métro de Rome),12.5925,41.8675
+327,http://fr.dbpedia.org/resource/Torre_Spaccata_(métro_de_Rome),Torre Spaccata (métro de Rome),12.5869,41.8687
+328,http://fr.dbpedia.org/resource/Torrenova_(métro_de_Rome),Torrenova (métro de Rome),12.6101,41.8643
+329,http://fr.dbpedia.org/resource/Basilique_San_Sisto_Vecchio,Basilique San Sisto Vecchio,12.496,41.8804
+330,http://fr.dbpedia.org/resource/Corso_Vittorio_Emanuele_II,Corso Vittorio Emanuele II,12.4724,41.8969
+331,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Monterone,Église Santa Maria in Monterone,12.4756,41.8968
+332,http://fr.dbpedia.org/resource/Église_Santa_Maria_in_Publicolis,Église Santa Maria in Publicolis,12.4762,41.8938
+333,http://fr.dbpedia.org/resource/Oratoire_San_Silvestro_in_Palatio,Oratoire San Silvestro in Palatio,12.507,41.887
+334,http://fr.dbpedia.org/resource/Oratoire_Santa_Maria_Immacolata_della_Concezione,Oratoire Santa Maria Immacolata della Concezione,12.5004,41.8959
+335,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Buonaiuto,Église Santa Maria del Buonaiuto,12.5145,41.8876
+336,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Buonaiuto,Église Santa Maria del Buonaiuto,12.5147,41.8876
+337,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Buonaiuto,Église Santa Maria del Buonaiuto,12.5145,41.8878
+338,http://fr.dbpedia.org/resource/Église_Santa_Maria_del_Buonaiuto,Église Santa Maria del Buonaiuto,12.5147,41.8878
+339,http://fr.dbpedia.org/resource/Basilique_Sant'Eustachio,Basilique Sant'Eustachio,12.4758,41.8988
