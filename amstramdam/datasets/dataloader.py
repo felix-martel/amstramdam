@@ -1,29 +1,14 @@
+import io
+import os
 import json
 import glob
-import os
 import warnings
 from datetime import datetime
-
-import bidict
 
 from .game_map import GameMap
 from .grouped_game_map import GroupBasedGameMap
 from .dataframe import DataFrameLoader, mask_df, autorank
-import io
-
-def read_code(filename, sep="\t"):
-    bidirectional_codes = bidict.bidict()
-    with open(filename, "r", encoding="utf8") as f:
-        for i, line in enumerate(f):
-            if line.startswith("#"):
-                continue
-            try:
-                name, code = line.rstrip().split(sep)
-                bidirectional_codes[code] = name
-            except ValueError:
-                print(f"Error on line {i}: {line.rstrip()}")
-                continue
-    return bidirectional_codes
+from .codes import read_code
 
 
 codes = read_code("data/codes.txt")
