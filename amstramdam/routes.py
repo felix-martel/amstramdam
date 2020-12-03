@@ -1,11 +1,11 @@
-from amstramdam import app, manager, dataloader, IS_LOCAL, CONF
+from amstramdam import app, manager, dataloader, IS_LOCAL, IS_BETA, CONF
 from flask import render_template, jsonify, request, session, redirect, url_for
 from amstramdam.game.params_handler import merge_params
 
 @app.route("/")
 def serve_main():
     return render_template("lobby.html",
-                           datasets=dataloader.datasets, games=manager.get_public_games())
+                           datasets=dataloader.datasets, games=manager.get_public_games(), is_beta=IS_BETA)
 
 @app.route("/games")
 def get_public_games():

@@ -46,26 +46,7 @@ option:checked {
   display: none;
 }
 
-#title {
-  position: relative;
-  font-style: italic;
-  font-weight: 900;
-}
 
-#title:after {
-  display: block;
-  content: "beta";
-  color: red;
-  /*font-family: "Courier Prime", monospace;*/
-  position: absolute;
-  left:100%;
-    top: 0;
-    font-size: 0.4em;
-    font-style: normal;
-    /* font-weight: normal; */
-    text-transform: uppercase;
-    /* letter-spacing: 0.3em;*/
-}
 
 
 .ams-icon {
