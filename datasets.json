@@ -66,6 +66,24 @@
         "col_rank": "transit",
         "use_hint": true,
         "harshness": 0.3
+      },
+      {
+        "map_id": "france_pref",
+        "name": "Préfectures",
+        "file": "data/misc/france.presfo.csv",
+        "col_place": "city",
+        "col_hint": "altname",
+        "col_lon": "lon",
+        "use_hint": true
+      },
+      {
+        "map_id": "france_subpref",
+        "name": "Préf. et sous-préfectures",
+        "file": "data/misc/france.prefs.csv",
+        "col_place": "city",
+        "col_hint": "altname",
+        "col_lon":  "lon",
+        "use_hint": true
       }
     ]
   },
@@ -103,6 +121,15 @@
   {
     "group": "Impitoyable",
     "maps": [
+      {
+        "map_id": "france_subpref_code",
+        "name": "Préf. et sous-préfectures",
+        "file": "data/misc/france.prefs.csv",
+        "col_place": "city",
+        "col_hint": "dcode",
+        "col_lon": "lon",
+        "use_hint": true
+      },
       {
         "map_id": "<id>_hard",
         "name": "<name>",
