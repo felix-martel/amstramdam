@@ -1,24 +1,19 @@
-import {CountUp} from "countup.js";
-import Countdown from "./ui/countdown";
-import AmstramdamApp from "./mainGamePage.vue";
-
 import { createApp } from 'vue'
 import io from "socket.io-client";
-//import store from './store';
-import initStore from './store';
 import 'leaflet/dist/leaflet.css';
-import L from "leaflet";
+
+// Plugins and mixins
+import initStore from './store';
 import SocketIOPlugin from "./socket";
 import {NamingMixin, EventRegistrationMixin} from "./common/utils";
-//import {$} from "./common/utils";
-import popup from "./components/popup.vue";
-import {CookieHandler, BooleanCookieHandler, IntCookieHandler, CookiePlugin} from "./common/cookie";
 import {MobileDetectionMixin} from "./plugins/mobileDetectionPlugin.js";
+import {CookieHandler, IntCookieHandler, CookiePlugin} from "./common/cookie";
+
+// Components
+import AmstramdamApp from "./mainGamePage.vue";
+import PopupComponent from "./components/popup.vue";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const rejectUnauthorized = !params.debug && !params.ssl_disabled;
-    const protocol = params.ssl_disabled ? "ws" : "wss";
-    const url = `${protocol}://${window.location.host}`; // "ws://" + window.location.host;//.replace("https://", "http://");
     const socket = io({
         rejectUnauthorized: true,
     });
@@ -39,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     app.mixin(MobileDetectionMixin);
 
     // Register components
-    app.component("popup", popup);
+    app.component("popup", PopupComponent);
 
     // Mount!
     app.mount('#amstramdam');
