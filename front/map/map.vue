@@ -11,7 +11,7 @@ import constants from "../common/constants";
 import {mapState} from "vuex";
 import mapBaseMixin from "./mapBaseMixin.vue";
 import {summary2, generateFakeSummary} from "../common/debug.js";
-import {CREDITS, CREDITS_SHORT} from "../common/map.js";
+import {CREDITS, CREDITS_SHORT, getIcon} from "../common/map.js";
 
 export default {
   data() {
@@ -108,8 +108,9 @@ export default {
       TODO: when this is settled, remove extra lines and clean the code
        */
       const trueCoords = L.latLng(lat, lon);
-      const truth = this.createMarker({lon, lat}, location, constants.colors.TRUE,
-          {extraClasses: ["summary-icon", "truth-icon"]});
+      const truth = L.marker([lat, lon], {
+        zIndexOffset: 20,
+        icon: getIcon(constants.colors.TRUE, location, {extraClasses: ["summary-icon", "truth-icon"]})});
       //const run = L.featureGroup().addTo(this.canvas);
       //run.addLayer(truth);
       const runCircles = L.featureGroup().addTo(this.canvas);
