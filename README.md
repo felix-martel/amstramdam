@@ -65,5 +65,11 @@ Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugge
 
 - [x] Fix CSP issue with Firefox
 
-- [ ] Zoom issue on MS Edge
+- [ ] Cacher le chat par défaut
+
+- [ ] Supprimer / désactiver le mode inversé par défaut
+
+- [ ] Gérer les parties fantômes
+
+- [ ] ~~Zoom issue on MS Edge~~
 

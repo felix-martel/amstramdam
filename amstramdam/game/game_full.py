@@ -258,12 +258,17 @@ Run: {self.curr_run_id + 1}/{self.n_run}
                 distances[player].append(rec["dist"])
                 durations[player].append(rec["delta"])
 
+        def summary(values):
+            if not values:
+                return "-"
+            return np.median(values)
+
         results = [dict(
-            player=player,
-            dist=sum(distances.get(player, [])) / self.n_run,
-            delta=sum(durations.get(player, [])) / self.n_run,
-            score=self.scores.get(player, 0)
-        ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
+                player=player,
+                dist=summary(distances.get(player, [])),
+                delta=summary(durations.get(player, [])),
+                score=self.scores.get(player, 0)
+            ) for player in sorted(self.players, key=lambda p: -self.scores.get(p, 0))]
 
         final_results = dict(records=self.get_filtered_records(),
                              # scores=self.scores,

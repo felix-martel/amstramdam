@@ -32,7 +32,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import {mapState} from "vuex";
 import animatedCount from "../../components/animatedCount.vue";
@@ -87,41 +86,70 @@ export default {
   border-bottom: 1px solid lightgray;
 }
 
-.collective-results ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0;
-}
-
-.collective-results li:last-of-type {
-  margin-bottom: 0;
-}
-
-.collective-results .pname {
-  margin-right: 10px;
-}
-
-.collective-results .pscore {
-  font-style: italic;
-}
-
-@media screen and (max-width: 600px) {
-  .collective-results ul {
+ul {
+    width: 100%;
     margin: 0;
-    margin-top: 5px;
-    display: inline-block;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
   }
 
+  li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .pscore {
+    color: gray;
+    text-align: right;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  .pname {
+    text-align: left;
+    margin-right: 10px;
+  }
+
+
+@media screen and (max-width: 600px) {
   .score {
     border: none;
     margin: 0;
     padding: 0;
   }
 
-  #current-results li {
+  ul {
+    margin: 0;
+    margin-top: 5px;
+    display: inline-block;
+    width: auto;
+  }
+
+  li {
+    display: none;
     background-color: blue;
     color: white;
     padding: 1px 5px;
+    margin-bottom: 1px;
+  }
+
+  li:nth-last-of-type(1),
+  li:nth-last-of-type(2),
+  li:nth-last-of-type(3) {
+    display: block;
+    width: auto;
+  }
+
+  .pscore {
+    color: white;
   }
 
   #results {

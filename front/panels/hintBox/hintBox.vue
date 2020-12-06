@@ -2,24 +2,22 @@
   <div class="game-info box" id="display-hint">
     <div class="countdown-container">
       <linear-countdown :duration="runDuration" class="countdown"
-                        progress="rgba(255, 255, 255, 0.3)"
-                        v-if="isMobile"
-                        :background="'blue'"></linear-countdown>
+                        progress="rgba(0, 0, 0, 0.1)"
+                        :background="'white'"></linear-countdown>
     </div>
-    <runIndicator/>
-    <span id="target">
-<!--      {{ customHint.station }}-->
-<!--      <span class="line-icon" :class="`line-${customHint.line}`"><span>{{ customHint.line }}</span></span>-->
+    <div class="game-info">
+      <runIndicator/>
+      <span id="target">
         {{ hint.main }}
         <paris-subway-line v-if="currentMap === 'paris_subway'" :line="hint.extra.line"></paris-subway-line>
     </span>
-    <radial-countdown :duration="runDuration" v-if="!isMobile"></radial-countdown>
+    </div>
+
   </div>
 </template>
 
 <script>
 import {mapState} from "vuex";
-import radialCountdown from "../../components/radialCountdown.vue";
 import RunIndicator from "./RunIndicator.vue";
 import ParisSubwayLine from "./customHintDisplay/parisSubwayLine.vue";
 import LinearCountdown from "../../components/linearCountdown.vue";
@@ -29,9 +27,7 @@ export default {
     LinearCountdown,
     ParisSubwayLine,
     RunIndicator,
-    'radial-countdown': radialCountdown,
   },
-
 
   computed: {
     customHint () {
@@ -86,11 +82,10 @@ export default {
 <style scoped>
 .countdown-container {
   position: absolute;
-  top: -5px;
+  top: 0;
   right: 0;
   left: 0;
-  height: 5px;
-  z-index: 1;
+  bottom:0;
 }
 
 .game-info {
@@ -104,100 +99,5 @@ export default {
   color: blue;
   font-size: 2em;
   font-weight: bold;
-}
-
-.line-icon {
-  display: inline-block;
-  /*background-color: yellow;*/
-  color: black;
-  height: 30px;
-  width: 30px;
-  position: relative;
-  border-radius: 50%;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 22px;
-  transform: translate(7px, 3px);
-}
-.line-icon span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/*.line-icon.line-1, .line-icon.line-3b, .line-icon.line-5, .line-icon.line-6, .line-icon.line-8, .line-icon.line-9, .line-icon.line-10,*/
-/*.line-icon.line-13, .line-icon.line-7b, .line-icon.line-7 {*/
-/*  color: black;*/
-/*}*/
-
-.line-icon.line-2, .line-icon.line-3, .line-icon.line-4, .line-icon.line-11, .line-icon.line-12, .line-icon.line-14 {
-  color: white;
-}
-
-.line-icon.line-1 {
-  background-color: #FFCD00;
-}
-
-.line-icon.line-2 {
-  background-color: #003CA6;
-}
-
-.ligne-icon.line-3 {
-  background-color: #837902;
-}
-
-.ligne-icon.line-3b {
-  background-color: #6EC4E8;
-}
-
-.ligne-icon.line-4 {
-  background-color: #CF009E;
-}
-
-.ligne-icon.line-5 {
-  background-color: #FF7E2E;
-}
-
-.ligne-icon.line-6 {
-  background-color: #6ECA97;
-}
-
-.ligne-icon.line-7 {
-  background-color: #FA9ABA;
-}
-
-.ligne-icon.line-7b {
-  background-color: #6ECA97;
-}
-
-.ligne-icon.line-8 {
-  background-color: #E19BDF;
-}
-
-.ligne-icon.line-9 {
-  background-color: #B6BD00;
-}
-
-.ligne-icon.line-10 {
-  background-color: #C9910D;
-}
-.ligne-icon.line-11 {
-  background-color: #704B1C;
-}
-.ligne-icon.line-12 {
-  background-color: #007852;
-}
-.ligne-icon.line-13 {
-  background-color: #6EC4E8;
-}
-.ligne-icon.line-14 {
-  background-color: #62259D;
-}
-
-@media screen and (max-width: 600px) {
-  .box {
-    border: none;
-  }
 }
 </style>

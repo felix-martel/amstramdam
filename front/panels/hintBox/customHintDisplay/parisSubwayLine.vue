@@ -67,6 +67,7 @@ export default {
   font-weight: bold;
   font-size: 22px;
   transform: translate(7px, 3px);
+  margin-right: 10px;
 }
 .line-icon span {
   position: absolute;

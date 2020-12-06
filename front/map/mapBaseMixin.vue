@@ -74,6 +74,7 @@ export default {
 
 
     createMarker({lat, lon}, label, color=constants.colors.BASE, options){
+      // TODO: cleaner interface OR remove entirely
       return L.marker([lat, lon], {icon: getIcon(color, label, options)});
     },
 

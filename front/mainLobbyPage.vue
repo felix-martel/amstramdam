@@ -4,7 +4,7 @@
     <popup :visible="true">
       <div class="main-title">
         <h1 class="blue">
-          <span id="title">am·stram·dam</span>
+          <span id="title" :class="{beta: IS_BETA}">am·stram·dam</span>
         </h1>
         <div><i>Localiser les villes sur la carte, le plus rapidement possible</i></div>
       </div>
@@ -93,6 +93,28 @@ export default {
 </script>
 
 <style scoped>
+#title {
+  position: relative;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#title.beta:after {
+  display: block;
+  content: "beta";
+  color: red;
+  /*font-family: "Courier Prime", monospace;*/
+  position: absolute;
+  left:100%;
+    top: 0;
+    font-size: 0.4em;
+    font-style: normal;
+    /* font-weight: normal; */
+    text-transform: uppercase;
+    /* letter-spacing: 0.3em;*/
+}
+
+
 .map-container {
   height: 220px;
   width: 100%;
