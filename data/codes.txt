@@ -36,7 +36,7 @@ République Dominicaine	DO
 Egypte	EG
 Equateur	EC
 Espagne	ES
-Etats-Unis d'Amérique	US
+Etats-Unis	US
 Ethiopie	ET
 Finlande	FI
 France	FR
