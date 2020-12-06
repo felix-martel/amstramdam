@@ -135,6 +135,35 @@
         "use_hint": false,
         "single_group": true
       },
+        {
+          "map_id": "france_pref",
+          "name": "Préfectures",
+          "file": "data/france/prefs.france.csv",
+          "col_place": "city",
+          "col_lon": "lon",
+          "use_hint": true,
+          "levels": [
+            {
+              "weight": [1],
+              "col_hint": "altname",
+              "filters": [
+                {
+                  "column": "status",
+                  "values": "pref"
+                }
+              ]
+            },
+            {
+              "weight": [1],
+              "col_hint": "altname",
+              "filters": []
+            },
+            {
+              "weight": [1],
+              "col_hint": "dcode"
+            }
+          ]
+        },
       {
         "map_id": "paris_landmarks",
         "name": "Monuments parisiens",
@@ -227,37 +256,6 @@
         "single_group": true
       }
     ]
-  },
-    {
-      "group": "Test",
-      "maps": [
-        {
-        "map_id": "france_pref",
-        "name": "Préfectures",
-        "file": "data/misc/france.presfo.csv",
-        "col_place": "city",
-        "col_hint": "altname",
-        "col_lon": "lon",
-        "use_hint": true
-      },
-      {
-        "map_id": "france_subpref",
-        "name": "Préf. et sous-préfectures",
-        "file": "data/misc/france.prefs.csv",
-        "col_place": "city",
-        "col_hint": "altname",
-        "col_lon":  "lon",
-        "use_hint": true},
-        {
-        "map_id": "france_subpref_code",
-        "name": "Préf. et sous-préfectures",
-        "file": "data/misc/france.prefs.csv",
-        "col_place": "city",
-        "col_hint": "dcode",
-        "col_lon": "lon",
-        "use_hint": true
-      }
-      ]
-    }
+  }
   ]
 }

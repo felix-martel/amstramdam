@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     if args.debug:
         kwargs["debug"] = True
-        check_loading = True
+        check_loading = False
         debug_game = False
         message = "Live-reloading enabled"
         if debug_game:
