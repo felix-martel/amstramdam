@@ -231,6 +231,18 @@
     ]
   },
     {
+    "group": "Régions du monde",
+    "maps": [
+      {
+        "map_id": "western_europe",
+        "spec_file": "data/subcontinents/western_europe.json",
+        "file": "data/places.world.csv",
+        "preset": "continent",
+        "col_hint": "country_name"
+      }
+    ]
+  },
+    {
       "group": "Par pays",
       "maps": [
         {

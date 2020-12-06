@@ -2893,11 +2893,11 @@
 2,Rotterdam,51.916667,4.5,Netherlands,NL,Zuid-Holland,minor,1005000.0,598199.0,Pays-Bas,2,1
 3,Utrecht,52.093813,5.119095,Netherlands,NL,Utrecht,admin,640000.0,316448.0,Pays-Bas,3,1
 4,Eindhoven,51.45,5.466667,Netherlands,NL,Noord-Brabant,minor,398053.0,209620.0,Pays-Bas,4,1
-5,Haarlemmerliede,52.388873,4.687978,Netherlands,NL,Noord-Holland,,349957.0,147590.0,Pays-Bas,5,1
+5,Haarlemmerliede,52.388873,4.687978,Netherlands,NL,Noord-Holland,,349957.0,147590.0,Pays-Bas,5,2
 6,Groningen,53.216667,6.55,Netherlands,NL,Groningen,admin,216688.0,181194.0,Pays-Bas,6,1
 7,Arnhem,51.979818,5.925636,Netherlands,NL,Gelderland,admin,141674.0,141674.0,Pays-Bas,7,2
 8,’s-Hertogenbosch,51.70019600000001,5.306806,Netherlands,NL,Noord-Brabant,admin,134520.0,134520.0,Pays-Bas,8,2
-9,Leeuwarden,53.20139,5.808587999999999,Netherlands,NL,Fryslân,admin,125778.0,91424.0,Pays-Bas,9,2
+9,Leeuwarden,53.20139,5.808587999999999,Netherlands,NL,Fryslân,admin,125778.0,91424.0,Pays-Bas,9,1
 10,Maastricht,50.85,5.683333,Netherlands,NL,Limburg,admin,122378.0,122378.0,Pays-Bas,10,2
 11,Zwolle,52.505751000000004,6.085822,Netherlands,NL,Overijssel,admin,111805.0,111805.0,Pays-Bas,11,2
 12,Assen,52.994749,6.563223,Netherlands,NL,Drenthe,admin,62237.0,62237.0,Pays-Bas,12,2
@@ -3064,7 +3064,6 @@
 9,Vigo,42.232822999999996,-8.722636999999999,Spain,ES,Galicia,,378952.0,292745.0,Espagne,9,2
 10,Palma,39.574337,2.655222,Spain,ES,Balearic Islands,admin,375773.0,264129.0,Espagne,10,2
 11,A Coruña,43.366609000000004,-8.406812,Spain,ES,Galicia,minor,370610.0,242619.0,Espagne,11,2
-12,Santa María de Gracia,28.466666999999998,-16.266667,Spain,ES,Canary Islands,,336061.0,222190.0,Espagne,12,2
 13,Gijón,43.535731,-5.661519,Spain,ES,Asturias,,335972.0,271452.0,Espagne,13,2
 14,Valladolid,41.655181,-4.72372,Spain,ES,Castille-Leon,admin,322304.0,276443.0,Espagne,14,2
 15,Córdoba,37.89155,-4.772748,Spain,ES,Andalusia,minor,321376.0,279648.0,Espagne,15,2
@@ -3094,9 +3093,7 @@
 39,Toledo,39.867263,-4.0298099999999994,Spain,ES,Castille-La Mancha,admin,74632.0,33125.0,Espagne,39,4
 40,Guadalajara,40.628621,-3.161849,Spain,ES,Castille-La Mancha,minor,72850.0,30963.0,Espagne,40,4
 41,Linares,38.095193,-3.63602,Spain,ES,Andalusia,,59761.0,39338.0,Espagne,41,4
-42,Arrecife,28.965706,-13.551378,Spain,ES,Canary Islands,,52944.0,41421.0,Espagne,42,4
 43,Mérida,38.91610900000001,-6.343657,Spain,ES,Extremadura,admin,52423.0,52423.0,Espagne,43,4
-44,Las Palmas de Gran Canaria,28.099727,-15.413429999999998,Spain,ES,Canary Islands,admin,,,Espagne,60,4
 45,Vitoria-Gasteiz,42.85,-2.666667,Spain,ES,Basque Country,admin,,,Espagne,59,4
 46,Castellón de la Plana,39.987497,-0.039245999999999996,Spain,ES,Valencia,minor,,,Espagne,58,4
 47,Palencia,42.009552,-4.524063,Spain,ES,Castille-Leon,minor,,,Espagne,57,4
@@ -3104,7 +3101,6 @@
 49,Cáceres,39.481877000000004,-6.373222,Spain,ES,Extremadura,minor,,,Espagne,55,4
 50,Segovia,40.948083000000004,-4.11839,Spain,ES,Castille-Leon,minor,,,Espagne,54,4
 51,Pontevedra,42.43333300000001,-8.633333,Spain,ES,Galicia,minor,,,Espagne,53,4
-52,Santa Cruz de Tenerife,28.460238,-16.280616000000002,Spain,ES,Canary Islands,admin,,,Espagne,47,4
 53,Soria,41.764334999999996,-2.468251,Spain,ES,Castille-Leon,minor,,,Espagne,51,4
 54,Huesca,42.13868,-0.409411,Spain,ES,Aragon,minor,,,Espagne,50,4
 55,Donostia,43.313556,-1.981855,Spain,ES,Basque Country,minor,,,Espagne,49,4
@@ -4500,10 +4496,8 @@
 0,Lisbonne,38.716667,-9.133333,Portugal,PT,Lisboa,primary,2812000.0,517802.0,Portugal,0,0
 1,Porto,41.192402,-8.619816,Portugal,PT,Porto,,1337000.0,249633.0,Portugal,1,1
 2,Braga,41.550323,-8.420052,Portugal,PT,Braga,admin,826833.0,181819.0,Portugal,2,2
-3,Funchal,32.633333,-16.9,Portugal,PT,Madeira,admin,204767.0,100847.0,Portugal,3,2
 4,Setúbal,38.533333,-8.9,Portugal,PT,Setúbal,admin,117974.0,117110.0,Portugal,4,2
 5,Copeira,40.176915,-8.424017999999998,Portugal,PT,Coimbra,,106582.0,89131.0,Portugal,5,2
-6,Ponta Delgada,37.733333,-25.666667,Portugal,PT,Azores,admin,61526.0,20056.0,Portugal,6,2
 7,Portimão,37.136635999999996,-8.539796,Portugal,PT,Faro,minor,61226.0,38487.0,Portugal,7,3
 8,Évora,38.566666999999995,-7.9,Portugal,PT,Évora,admin,55620.0,55620.0,Portugal,8,3
 9,Aveiro,40.644269,-8.645535,Portugal,PT,Aveiro,admin,54162.0,54162.0,Portugal,9,3
@@ -4519,8 +4513,6 @@
 19,Vila Marim,41.304961,-7.779742999999999,Portugal,PT,Vila Real,,17001.0,17001.0,Portugal,19,4
 20,Portalegre,39.297178,-7.430150999999999,Portugal,PT,Portalegre,admin,15581.0,15581.0,Portugal,20,4
 21,Viana do Castelo,41.693234000000004,-8.832869,Portugal,PT,Viana do Castelo,admin,15555.0,15555.0,Portugal,21,4
-22,Angra do Heroísmo,38.65,-27.216666999999998,Portugal,PT,Azores,,12045.0,10228.0,Portugal,22,4
-23,Portela,38.533333,-28.666666999999997,Portugal,PT,Azores,,6611.0,6572.0,Portugal,23,4
 188,Tomar,39.601987,-8.409241999999999,Portugal,PT,Santarém,minor,,,Portugal,24,4
 189,Tondela,40.516815,-8.080866,Portugal,PT,Viseu,minor,,,Portugal,25,4
 190,Constância,39.466667,-8.333333,Portugal,PT,Santarém,minor,,,Portugal,26,4
@@ -4945,3 +4937,5 @@
 1741,Augusta,44.31062410000001,-69.7794897,United States of America,US,Maine,admin,24042.0,18560.0,Etats-Unis,1741,3
 30,Lhassa,29.65,91.116669,China,CN,Tibet,,2426000.0,313247.0,Chine,30,0
 30,Hong-Kong,22.29999,114.1999,China,CN,Hong-Kong,,7466441,7466441,Chine,30,0
+4,Vaduz,47.141000000000005,9.521,Liechtenstein,LI,Liechtenstein,,0,0,Liechtenstein,0,0
+133,Andorre-la-Vieille,42.5,1.5,Andorre,AD,Andorre,,0,0,Andorre,0,0

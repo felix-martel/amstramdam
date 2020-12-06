@@ -1,6 +1,6 @@
 {
   "name": "Europe de l'Ouest",
-  "scale": "continent",
+  "preset": "continent",
   "col_hint": "country_name",
   "filters": [
     {
@@ -10,7 +10,6 @@
         "AT",
         "BE",
         "DK",
-        "FI",
         "FR",
         "JE",
         "IM",
@@ -18,7 +17,6 @@
         "GG",
         "DE",
         "GI",
-        "GR",
         "VA",
         "IS",
         "IE",
@@ -28,11 +26,9 @@
         "MT",
         "MC",
         "NL",
-        "NO",
         "PT",
         "SM",
         "ES",
-        "SE",
         "CH"
       ]
     }
