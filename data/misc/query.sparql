@@ -1,0 +1,17 @@
+select distinct ?uri ?city ?lon ?lat ?dept ?altname ?dcode where {
+?d a <http://dbpedia.org/ontology/Department> .
+?d dbpedia-owl:country dbpedia-fr:France .
+?d dbpedia-owl:inseeCode ?deptcode .
+?d rdfs:label ?dept .
+?d ( dbpedia-owl:prefecture |  dbpedia-owl:subprefecture) ?uri.
+?uri  rdfs:label ?city .
+?uri prop-fr:longitude ?lon .
+?uri prop-fr:latitude ?lat .
+optional {
+?d foaf:name ?altname .
+}
+filter ( lang(?dept) = "fr")
+filter ( lang(?city) = "fr")
+bind (str(?deptcode) as ?dcode)
+}
+limit 1000
