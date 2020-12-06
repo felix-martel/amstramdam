@@ -7,7 +7,7 @@ from amstramdam.game.params_handler import merge_params
 @app.route("/")
 def serve_main():
     return render_template("lobby.html",
-                           datasets=dataloader.datasets, games=manager.get_public_games())
+                           datasets=dataloader.get_datasets(full=False), games=manager.get_public_games())
 
 @app.route("/games")
 def get_public_games():
@@ -15,7 +15,8 @@ def get_public_games():
 
 @app.route("/datasets")
 def get_all_datasets():
-    return jsonify(dataloader.datasets)
+    full = request.args.get("full") == "true"
+    return jsonify(dataloader.get_datasets(full=full))
 
 @app.route("/builder")
 def serve_builder():
@@ -35,10 +36,10 @@ def serve_editor():
 def get_dataset_geometry(dataset):
     try:
         label=request.args.get("labels") == "true"
-        data = dataloader.load(dataset).get_geometry(label=label)
+        data = dataloader.load(dataset).get_geometry()
     except KeyError as e:
         print(f"ERROR: No dataset named '{dataset}' found.")
-        print(e)
+        raise e
         data = {}
     return jsonify(data)
 
@@ -65,6 +66,8 @@ def commit_dataset_change(dataset):
 @app.route("/new", methods=["GET", "POST"])
 def create_new_game():
     params = merge_params(request.form)
+    print("Creating new game with parameters:")
+    print(*[f"{k}={v}" for k, v in params.items()], sep=", ")
     name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],

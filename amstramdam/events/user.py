@@ -42,7 +42,7 @@ def change_game(data):
         return
 
     params = merge_params(data)
-    print(params)
+    print(*[f"{k}={v}" for k, v in params.items()], sep=", ")
     new_game_name, game = manager.create_game(n_run=params["runs"],
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],

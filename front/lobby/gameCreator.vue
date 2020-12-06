@@ -7,17 +7,17 @@
       </div>
 
 
-      <div class="fieldset diffset" v-if="diffLevels.min !== diffLevels.max">
+      <div class="fieldset diffset" v-if="currentMap.levels && (currentMap.levels.length > 1)">
         <label>Difficulté</label>
         <div class="slidecontainer">
 <!--          <input-->
 <!--              type="range" min="1" max="100" v-model="difficulty" @change="difficultyChange"-->
 <!--              class="slider diff-slider" id="diff-level" name="difficulty">-->
 <!--          <span class="diff-counter">{{ difficulty }}%</span>-->
-          <button v-for="(label, level) in diffButtons"
-                  @click.prevent="difficultyChange(level)"
-                  :class="{selected: level === difficulty}">
-            {{ label }}
+          <button v-for="level in currentMap.levels"
+                  @click.prevent="difficultyChange(level.index)"
+                  :class="{selected: level.index === difficulty}">
+            {{ level.name }}
           </button>
           <input type="range" min="0" max="2" v-model="difficulty" name="difficulty" hidden>
         </div>
@@ -143,7 +143,7 @@ export default {
       return {
         map: this.currentMap.map_id,
         difficulty: this.difficulty,
-        runs: this.nRuns,
+        runs: this.runs,
         duration: this.duration,
         wait_time: this.waitDuration,
         zoom: this.allowZoom,

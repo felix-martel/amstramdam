@@ -52,12 +52,12 @@ class Game:
                  duration=10, wait_time=8, map="world", pseudos=None, **kwargs):
         self.name = name
         self.map_name = map
-        map = dataloader.load(self.map_name)  # GameMap.from_name(self.map_name)
+        map = dataloader.load(self.map_name, difficulty)  # GameMap.from_name(self.map_name)
         self.map_display_name = map.name
         self.is_permanent = is_permanent
         if dist_param is None:
-            dist_param = map.get_distance()
-        self.bbox = map.bounding_box()
+            dist_param = map.distance
+        self.bbox = map.bbox
         # self.map_info = map
         self.difficulty = difficulty
         self.n_run = n_run
@@ -71,7 +71,7 @@ class Game:
         if players is None:
             players = set()
         self.players = set(players)
-        self.places = map.sample(self.n_run, self.difficulty)  # random.sample(get_cities(map), self.n_run)
+        self.places = map.sample(self.n_run)  # random.sample(get_cities(map), self.n_run)
         self.duration = duration
         self.runs = [GameRun(self.players, place, **self.get_run_params())
                      for place in self.places]
@@ -144,7 +144,7 @@ class Game:
 
     def __str__(self):
         return f"""---
-Multigeo {'Public' if self.is_public else 'Private'} Game
+Amstramdam {'Public' if self.is_public else 'Private'} Game
 Map: {self.map_display_name}
 Difficulty: {100. * self.difficulty:.0f}%
 Players: {self.print_pseudos()}

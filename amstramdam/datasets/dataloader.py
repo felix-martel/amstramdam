@@ -1,27 +1,17 @@
 import io
 import os
-import json
 import glob
 import warnings
 from datetime import datetime
+from pprint import pprint
+from copy import deepcopy
 
 from .game_map import GameMap
-from .grouped_game_map import GroupBasedGameMap
-from .dataframe import DataFrameLoader, mask_df, autorank
+from .dataframe import DataFrameLoader, mask_df, autorank, UnifiedDataFrame, create_masks
 from .codes import read_code
-
+from ._loader import DEFAULTS, open_json, merge, process
 
 codes = read_code("data/codes.txt")
-
-
-def process_map(filename, map_, pref="", suff=""):
-    code = filename[len(pref):-len(suff)]
-    name = codes.get(code, code)
-    processed = dict(file=filename)
-    for k, v in map_.items():
-        processed[k] = v.replace("<id>", code).replace("<name>", name) if isinstance(v, str) else v
-    return processed
-
 
 
 def analyze_country(df, code, col="population"):
@@ -46,6 +36,22 @@ def analyze_country(df, code, col="population"):
 
     return dict(autorank=dict(column=col, ranks=ranks), available_levels=len(ranks))
 
+DEFAULT_PARAMS = dict(
+    col_place="city",
+    col_hint="admin",
+    col_lon="lng",
+    col_lat="lat",
+    col_rank="population",
+    default_level=0,
+    harshness=0.7,
+    use_hint=True,
+    single_group=False,
+    levels=[
+        dict(label="Facile", weights=[1]),
+        dict(label="Moyen", weights=[1, 1]),
+        dict(label="Difficile", weights=[1, 1, 0.5]),
+    ]
+)
 
 class Dataloader(object):
     GSYSTEM = "__gsystem__"
@@ -56,6 +62,8 @@ class Dataloader(object):
     SCALE_CONTINENT = 1
     SCALE_COUNTRY = 2
 
+    DISTRIB_SYMBOL = "*"
+
     processing_methods = {
         GSYSTEM: "_process_grouped_map",
         GCOUNTRIES: "_build_country_maps",
@@ -64,35 +72,146 @@ class Dataloader(object):
 
     def __init__(self, datasets):
         self.dataframes = DataFrameLoader()
+        self.presets = None
         self.datasets = self.process_json(datasets)
         self.flattened = {item["map_id"]: dict(group=G["group"], **item)
                           for G in self.datasets
                           for item in G["maps"]}
 
-    def load(self, name, **params):
-        if name in self.flattened:
-            map_params = self.flattened[name].copy()
-            try:
-                if map_params.pop("mtype", None) == self.LEGACY_SYSTEM:
-                    attr = map_params.pop("method", "from_file")
-                    return getattr(GameMap, attr)(**map_params, **params)
-                return self.load_from_group(map_params)
-            except Exception as e:
-                print(map_params)
-                raise e
-        raise KeyError(name)
+    def _distribute_to_levels(self, params: dict):
+        """
+        Distribute values among levels. A params dict is supposed to look like this:
+        params = {
+            "use_hint": True,
+            "harshness": 0.7,
+            "levels": [
+                {"label": "Easy", "weights": [1, 0.5]}, {"label": "Hard", "weights": [0.2, 0.5]}
+            ]
+        }
+        The "levels" entry contains a list of difficulty levels (easiest -> hardest). Each level
+        can define its own value for each possible parameter (use_hint, label, harshness...). But
+        we also allow the following syntactic sugar:
+        params = {
+            ...
+            "label*": ["Easy", "Hard"]
+        }
+        which is equivalent to declaring "levels"=[{"label": "Easy}, {"label": "Hard"}]. This
+        distributivity is indicated by the trailing "*" symbol in the key. Here, we distribute
+        such key, value pairs to the corresponding levels.
+        """
+        # print("DISTRIBUTING", params.get("name", "<unknown>"))
+        params = params.copy()
+        # pprint(params)
+        distributed_cols = [k for k in params if k.endswith(self.DISTRIB_SYMBOL)]
+        distributed_vals = [params[k] for k in distributed_cols]
+        if distributed_cols:
+            numbers_of_levels = set(map(len, distributed_vals))
+            assert len(numbers_of_levels) == 1, "All distributed parameters (indicated by the trailing '*' " \
+                                                          "symbol) must have the same length in 'datasets.json'"
+            n_levels = numbers_of_levels.pop()
+        if "levels" not in params:
+            if not distributed_cols:
+                # Nothing to distribute, return 'params' untouched
+                # print("nothing to distribute")
+                return params
+            else:
+                # print(n_levels, "levels found, filling with None")
+                levels = [None] * n_levels
+        else:
+            levels = params["levels"]
+        levels = [level if level is not None else dict() for level in levels]
+        protected_columns = {"file", "name", "map_id", "levels"}
 
-    def load_from_group(self, params):
-        df_file = params.pop("base_file")
-        df = self.dataframes[df_file]
-        df = mask_df(df, params.pop("filters", []))
+        for k in distributed_cols:
+            values = params.pop(k)
+            k = k[:-len(self.DISTRIB_SYMBOL)]
+            for level, value in enumerate(values):
+                levels[level][k] = value
+        for k in params.keys() - protected_columns:
+            for i in range(len(levels)):
+                levels[i][k] = params[k]
+        params["levels"] = levels
 
-        if "autorank" in params:
-            df, extra_params = autorank(df, **params.pop("autorank"))
-            params.update(extra_params)
+        # print("TO:")
+        # pprint(params)
+        return params
 
-        params["df"] = df
-        return GroupBasedGameMap(**params)
+    def _merge(self, params, defaults):
+        # print(f"Merging <{params}> with <{defaults}>")
+        # Here are the keys that should not be distributed to levels
+        protected_keys = {"file", "name", "map_id"}
+        if not params:
+            return deepcopy(defaults)
+
+        params = self._distribute_to_levels(params)
+        defaults = self._distribute_to_levels(defaults)
+        levels = params.pop("levels", None)
+        default_levels = defaults.pop("levels", None)
+        if levels is None and default_levels is None:
+            return {**defaults, **params}
+        new_levels = []
+        if levels is None and default_levels is not None:
+            for level in default_levels:
+                new_level = {**level}
+                for k in params.keys() - protected_keys:
+                    new_level[k] = params[k]
+                new_levels.append(new_level)
+        else:
+            for level in levels:
+                if level is None:
+                    level = dict()
+                new_level = {**level}
+                for k in defaults.keys() - params.keys() - level.keys() - protected_keys:
+                    new_level[k] = defaults[k]
+                for k in params.keys() - level.keys() - protected_keys:
+                    new_level[k] = params[k]
+                new_levels.append(new_level)
+        return {
+            **defaults,
+            **params,
+            "levels": new_levels
+        }
+
+    def merge_params(self, common_params, preset_params, default_params):
+        print(common_params["name"])
+        presetted = self._merge(preset_params, default_params)
+        print("--PRESETTED--")
+        pprint(presetted)
+        print("\n--INITIAL--")
+        pprint(common_params)
+        merged = self._merge(common_params, presetted)
+        print("\n--MERGED--")
+        pprint(merged)
+        print("")
+        return merged
+
+    def load(self, name, level=None, **params):
+        map_params = self.flattened[name].copy()
+        return self._load(map_params, level)
+
+    def _load(self, map_params, level=None):
+        map_params = deepcopy(map_params)
+        if level is None:
+            # raise ValueError("Passing level=None to dataloader.load is not supported yet")
+            # TODO: when level is None, return a mix of points for all levels in some way
+            level = map_params.get("default_level", 0)
+        try:
+            datafile = map_params.pop("file")
+            name = map_params.pop("name")
+            map_id = map_params.pop("map_id")
+            params = map_params["levels"][level].copy()
+            # pprint(params)
+            filters = params.pop("filters")
+            columns = {col: params.pop(col) for col in [
+                "col_place", "col_hint", "col_rank", "col_lon", "col_lat", "col_group",
+                "use_hint", "single_group"
+            ]}
+            df = self.dataframes[datafile]
+            mask = create_masks(df, filters)
+            udf = UnifiedDataFrame(df, mask, **columns)
+            return GameMap(name, map_id, udf, **params)
+        except Exception as e:
+            raise e
 
     def commit_changes(self, name, changes):
         if name not in self.flattened:
@@ -101,11 +220,11 @@ class Dataloader(object):
         updated = changes.get("update", {})
         output = changes.get("output", "save")
 
-        filename = self.flattened[name].get("base_file")
+        filename = self.flattened[name].get("file")
         if filename is None:
             warnings.warn(f"Dataset '{name} can't be edited because it doesn't have"
-                          "a registered 'base_file'. Please change 'datasets.json' and"
-                          "add a 'base_file' key.")
+                          "a registered 'file'. Please change 'datasets.json' and"
+                          "add a 'file' key.")
             return
 
         df = self.dataframes.edit(filename, created, updated)
@@ -148,89 +267,136 @@ class Dataloader(object):
             s.append(f"  Group <{name}>: {n} maps")
         return "\n".join(s)
 
-    @classmethod
-    def open_json(cls, file_or_object):
-        if isinstance(file_or_object, str):
-            with open(file_or_object, "r", encoding="utf8") as f:
-                file_or_object = json.load(f)
-        return file_or_object
-
     def process_json(self, obj):
+        dataset_file = open_json(obj)
+        presets = {k: self._preprocess(v) for k, v in dataset_file["presets"].items()}
+        presets["default"] = merge(presets["default"], DEFAULTS)
+        self.presets = presets
+
         datasets = []
-        for g in self.open_json(obj):
+        for g in dataset_file["datasets"]:
             group = g.get("group")
             _maps = g.get("maps", [])
             maps = []
             for map_ in _maps:
-                unsorted_maps = self.process_one(map_)
+                try:
+                    unsorted_maps = self.process_one(map_)
+                except Exception as e:
+                    pprint(map_)
+                    raise e
                 sorted_maps = sorted(unsorted_maps, key=lambda m: m["name"])
                 maps.extend(sorted_maps)
             datasets.append(dict(group=group, maps=maps))
         return datasets
 
 
-    def _build_country_maps(self, base_params):
-        maps = []
-        base_file = base_params.get("base_file")
-        map_id = base_params.pop("map_id")
-        col = base_params.pop("country_col", "iso2")
-        suggested = set(base_params.pop("suggested", []))
-        del base_params["mtype"]
-        df = self.dataframes[base_file]
+    def process_one(self, map_):
+        """Process one map description
+        One map description = one JSON dict listed in a "maps" list in a datasets.json file
+        It must have at least 1 id, 1 name, 1 file
+        """
+        raw_maps = self.unglobify(map_)
+        merged_maps = []
+        for raw_map in raw_maps:
+            raw_map = self._preprocess(raw_map)
+            merged = process(raw_map, self.presets)
+            merged = self.detect(merged)
+            if merged is not None:
+                merged_maps.append(merged)
 
-        for country_code in df[col].unique():
-            sugg = "⭐" if country_code in suggested else ""
-            if "autorank" not in base_params:
-                autorank_params = analyze_country(df, country_code, col="population")
-                if autorank_params:
-                    autorank_params["available_levels"] -= self.SCALE_COUNTRY
+        return merged_maps
+
+    def _preprocess(self, map_):
+        if "single_group" in map_ and map_["single_group"] is True:
+            map_["weights*"] = [[1]]
+            map_["label*"] = ["Normal"]
+        return map_
+
+    def detect(self, map_):
+        levels = map_["levels"]
+        valid_levels = []
+        invalid_levels = []
+        possible_levels = []
+        for i, level in enumerate(levels):
+            gm = self._load(map_, i)
+            if len(gm.df) >= 10:
+                possible_levels.append(i)
+            # Count all points that have a non-zero probability to be sampled
+            n_points = sum(gm.counts[group] for group in gm.counts if gm.weights[group] > 0)
+            if n_points >= 10:
+                valid_levels.append(level)
             else:
-                autorank_params = dict()
+                invalid_levels.append(i)
+        if not valid_levels:
+            if possible_levels:
+                # do someting
+                print(f"Switching to single_group mode for map '{map_['name']}")
+                map_["single_group"] = True
+                level = levels[possible_levels[0]]
+                level["single_group"] = True
+                level["weights"] = [1]
+                valid_levels = [level]
+            else:
+                print(f"Not enough points for map '{map_['name']}', removing it")
+                return None
+        elif invalid_levels:
+            print(f"Remove levels from map '{map_['name']}' :", *invalid_levels)
+        map_["levels"] = valid_levels
+        return map_
 
-            maps.append({
-                **base_params,
-                **autorank_params,
-                "map_id": map_id.replace("<id>", country_code),
-                "name": codes.get(country_code, country_code) + sugg,
-                "scale": self.SCALE_COUNTRY,
-                "mtype": "__gsystem__",
-                "filters": [dict(column="iso2", values=country_code)]
-            })
+    def generate_countries(self, base_file, column, preset):
+        df = self.dataframes[base_file]
+        maps = []
+        for country_code in df[column].unique():
+            maps.append(dict(
+                name=codes.get(country_code, country_code),
+                map_id=country_code,
+                preset=preset,
+                file=base_file,
+                filters=[dict(column=column, values=country_code)]
+            ))
         return maps
 
-    def process_one(self, map_):
-        """Dispatch the processing depending on the format (legacy, G-system, or special cases)"""
-        map_system = map_.get("mtype", self.GSYSTEM)
-        processing_method = self.processing_methods[map_system]
-        return getattr(self, processing_method)(map_)
-
-    def _process_legacy_map(self, map_):
-        """Process standard, file-based specification dict"""
-        warnings.warn("The legacy map format is deprecated, and should be replaced by the G-system", DeprecationWarning)
-
-        file_pattern = map_.pop("file")
-        pref, suff = file_pattern.split("*") if "*" in file_pattern else ("", "")
-        unsorted_maps = [process_map(fn, map_, pref, suff) for fn in glob.glob(file_pattern)]
-        return unsorted_maps
-
-    def _process_grouped_map(self, map_):
-        """Process new, group-based specification dict (nicknamed 'G-system')"""
+    def unglobify(self, map_):
+        if "method" in map_:
+            method = map_["method"]
+            args = map_.get("args", {})
+            return getattr(self, method)(**args)
         if "spec_file" in map_:
             file_pattern = map_.pop("spec_file")
             pref, suff = file_pattern.split("*") if "*" in file_pattern else ("", "")
-            to_process = [(fn, {**map_, **self.open_json(fn)}) for fn in glob.glob(file_pattern)]
-        else:
-            file_pattern = map_["base_file"]
+            to_process = [(fn, {**map_, **open_json(fn)}) for fn in glob.glob(file_pattern)]
+        elif "file" in map_:
+            file_pattern = map_["file"]
             pref, suff = file_pattern.split("*") if "*" in file_pattern else ("", "")
-            to_process = [(fn, {**map_, "base_file": fn}) for fn in glob.glob(file_pattern)]
+            to_process = [(fn, {**map_, "file": fn}) for fn in glob.glob(file_pattern)]
+        else:
+            return [map_]
         maps = []
         for fn, params in to_process:
-            # params = {**map_, **self.open_json(fn)}
             code = fn[len(pref):-len(suff)]
             name = codes.get(code, code)
             for k, v in params.items():
                 params[k] = v.replace("<id>", code).replace("<name>", name) if isinstance(v, str) else v
-            if "autorank" in params and not "available_levels" in params:
-                params["available_levels"] = len(params["autorank"]["ranks"]) - params.get("scale", 0)
             maps.append(params)
         return maps
+
+    def get_dataset_information(self, map_):
+        keys = ["map_id", "name", "default_level"]
+        params = {k: map_[k] for k in keys}
+        levels = map_["levels"]
+        params["levels"] = [dict(index=i, name=level["label"])
+                                      for i, level in enumerate(levels)]
+        return params
+
+    def get_datasets(self, full=False):
+        if full:
+            return self.datasets
+        datasets = list()
+        for dataset_group in self.datasets:
+            group = dataset_group["group"]
+            maps = dataset_group["maps"]
+            filtered_maps = [self.get_dataset_information(m) for m in maps]
+            datasets.append(dict(group=group,
+                                 maps=filtered_maps))
+        return datasets
