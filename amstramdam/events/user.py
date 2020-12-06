@@ -47,6 +47,7 @@ def change_game(data):
                                      duration=params["duration"],
                                      difficulty=params["difficulty"],
                                      is_public=params["public"],
+                                     precision_mode=params["precision_mode"],
                                      allow_zoom=params["zoom"],
                                      map=params["map"], wait_time=params["wait_time"])
     url = url_for("serve_game", name=new_game_name)
