@@ -9,7 +9,23 @@ Fonctionne avec `Python 3.8`, `Flask` et `SocketIO`. Le serveur est géré par `
 et les fonds de carte proviennent de 
 [Stamen](http://maps.stamen.com/#toner/12/37.7706/-122.3782)+[OpenStreetMap](http://openstreetmap.org/). 
 
-Source des données : [World Cities Database](https://simplemaps.com/data/world-cities) sous licence [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/) pour les villes hors France, [NosDonnées.FR](https://www.data.gouv.fr/fr/datasets/listes-des-communes-geolocalisees-par-regions-departements-circonscriptions-nd/) sous licence [Open Database License](https://opendatacommons.org/licenses/odbl/summary/) pour les villes de France.
+
+
+## Source des données
+
+am·stram·dam agrège des données provenant des sources suivantes :
+
+| Source | Licence | Utilisation |
+| :-     | :-      | :-          |
+| [World Cities Database](https://simplemaps.com/data/world-cities) | [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Villes du monde (hors capitales) |
+| [NosDonnées.FR](https://www.data.gouv.fr/fr/datasets/listes-des-communes-geolocalisees-par-regions-departements-circonscriptions-nd/) | [Open Database License](https://opendatacommons.org/licenses/odbl/summary/) | Villes de France |
+| [DBpedia](http://dbpedia.org) | [Creative Commons BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License) | Événements |
+| [DBpedia FR](http://fr.dbpedia.org) | [Creative Commons BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License) | Capitales, préfectures, monuments et métro parisiens |
+| [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/aires-et-produits-aoc-aop-et-igp/) | [Licence Ouverte](https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouverte.pdf) | Spécialités, vins, fromages |
+| [Wikidata](https://www.wikidata.org) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | Régions naturelles |
+
+[👉 Signaler un oubli](https://github.com/felix-martel/amstramdam/issues/new/choose)
+
 
 ## Installation & développement
 
