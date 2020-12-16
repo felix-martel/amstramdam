@@ -28,48 +28,5 @@ Lancement du serveur
 ```
 python server.py [--debug] [--threading]
 ```
-Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugger. Sinon, `eventlet` est utilisé et peut suffire en production.
-
-
-## À faire
-
-- [x] Traduire l'interface en français
-
-- [x] Bug: répétition de certaines vilels
-
-- [x] Ré-équilibrer le dataset France
-
-- [x] Zoomer sur les résultats à la fin d'une manche
-
-- [x] Multi-room support
-
-- [x] Editable player names
-
-- [x] Add more countries/regions
-
-- [ ] Add custom games (choose map boundaries, and select all cities in the bbox)
-
-- [x] Add proper locks for multithreading (not needed with `eventlet` apparently)
-
-- [x] Add a `home` link in results page
-
-- [x] Mobile version
-
-- [x] Fix HTTPS issue
-
-- [x] Add a timer when launching a game ("game will start in 3..2..1")
-
-- [x] Disable/fix zoom animations on mobile
-
-- [x] Add a "Signaler un bug" button, linking to [the project issue page](https://github.com/felix-martel/multigeo/issues/new)
-
-- [x] Fix CSP issue with Firefox
-
-- [ ] Cacher le chat par défaut
-
-- [ ] Supprimer / désactiver le mode inversé par défaut
-
-- [ ] Gérer les parties fantômes
-
-- [ ] ~~Zoom issue on MS Edge~~
+Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugger. Sinon, `eventlet` est utilisé.
 
