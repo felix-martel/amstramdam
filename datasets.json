@@ -254,20 +254,6 @@
           }
         }
       ]
-    },
-  {
-    "group": "Par ville",
-    "maps": [
-      {
-        "map_id": "<id>",
-        "name": "<id>",
-        "file": "data/cities/*.csv",
-        "col_place": "name",
-        "col_lon": "lon",
-        "use_hint": false,
-        "single_group": true
-      }
-    ]
-  }
+    }
   ]
 }
