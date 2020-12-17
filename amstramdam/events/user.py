@@ -3,11 +3,17 @@ from flask import session, url_for
 from flask_socketio import emit
 from amstramdam.game.params_handler import merge_params
 
+MAX_LEN = 20
 
 def is_valid_pseudo(name):
     # TODO: implement checks?
     name = str(name)
     return len(name) > 0
+
+def trunc_pseudo(name):
+    if len(name) > MAX_LEN + 3:
+        name = name[:MAX_LEN] + "..."
+    return name
 
 
 @socketio.on("chat:send")
@@ -28,6 +34,7 @@ def update_pseudo(data):
     game = manager.get_game(game_name)
     pseudo = data["name"]
     if is_valid_pseudo(pseudo):
+        pseudo = trunc_pseudo(pseudo)
         game.add_pseudo(player, pseudo)
     else:
         pseudo = game.request_pseudo(player)
