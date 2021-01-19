@@ -90,8 +90,8 @@
               "col_hint": "admin"
             },
             {"label":  "Normal", "weights": [1, 1,
-              0.1]},
-            {"label":  "Difficile", "weights":  [1, 1, 1]}
+              0.1], "use_hint": false},
+            {"label":  "Difficile", "weights":  [1, 1, 1], "use_hint": false}
           ]
         },
         {
