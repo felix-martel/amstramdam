@@ -3,6 +3,7 @@ from typing import Iterable, Optional, Any, Callable, TypedDict, Mapping, NewTyp
 from datetime import datetime
 
 Hint = tuple[str, Optional[str]]
+GameName = NewType("GameName", str)
 Player = NewType("Player", str)
 Pseudo = NewType("Pseudo", str)
 PlayerList = set[Player]
@@ -77,6 +78,12 @@ class FullGameRunParams(GameRunParams):
 class GameFinalResults(TypedDict):
     records: list[list[dict[str, Any]]]
     places: list[PlaceDict]
+
+class AvailableGames(TypedDict):
+    name: GameName
+    map: str
+    players: int
+    difficulty: float
 
 Leaderboard = list[PlayerFinalResult]
 

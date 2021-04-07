@@ -22,7 +22,7 @@ from .types import (
     GameFinalResults,
     MetricSummary,
     PlayerFinalResult,
-    Leaderboard,
+    Leaderboard, GameName,
 )
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
@@ -75,7 +75,7 @@ def get_cities(map: dict[str, Any]) -> Iterable[PlaceToGuess]:
 class Game:
     def __init__(
         self,
-        name: str,
+        name: GameName,
         players: Optional[set[Player]] = None,
         n_run: int = 20,
         time_param: int = 5,
