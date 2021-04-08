@@ -85,5 +85,15 @@ class AvailableGames(TypedDict):
     players: int
     difficulty: float
 
+class FilledGameParams(TypedDict):
+    map: str
+    duration: int
+    zoom: bool
+    runs: int
+    wait_time: int
+    difficulty: int
+    public: bool
+    precision_mode: bool
+
 Leaderboard = list[PlayerFinalResult]
 

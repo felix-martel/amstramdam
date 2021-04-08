@@ -1,6 +1,6 @@
 DEFAULT_PARAMS = {
     "map": "world",
-    "duration": "10",
+    "duration": 10,
     "zoom": False,
     "runs": 10,
     "wait_time": 10,
@@ -9,6 +9,7 @@ DEFAULT_PARAMS = {
     "precision_mode": False,
 }
 
+
 def merge_params(params, defaults=None):
     """
     Merge a (potentially incomplete) params dict with a default params dict,
@@ -16,16 +17,13 @@ def merge_params(params, defaults=None):
     """
     if defaults is None:
         defaults = DEFAULT_PARAMS
-    params = {
-        **defaults,
-        **params
-    }
+    merged = {**defaults, **params} # type: ignore
     converts = [
-        (int, ["duration", "runs", "wait_time", "difficulty"]),
-        (bool, ["public", "zoom", "precision_mode"])
+        (int, {"duration", "runs", "wait_time", "difficulty"}),
+        (bool, {"public", "zoom", "precision_mode"}),
     ]
     for convert, keys in converts:
-        for key in keys:
-            params[key] = convert(params[key])
+        for key in keys & merged.keys():
+            merged[key] = convert(merged[key]) # type: ignore
 
-    return params
+    return merged
