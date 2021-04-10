@@ -15,13 +15,16 @@ import amstramdam.game.manager as manager
 from .datasets import dataloader
 
 import eventlet
+
 eventlet.monkey_patch(socket=False)
 
 # Read environment variables
 IS_LOCAL = os.environ.get("IS_HEROKU") != "1"
 IS_BETA = os.environ.get("IS_BETA") == "1"
 NO_SSL = os.environ.get("NO_SSL") == "1"
-SECRET_KEY = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(",")[0]
+SECRET_KEY = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(
+    ","
+)[0]
 
 # Load configuration file
 with open("config.json", "r", encoding="utf8") as fp:
@@ -35,9 +38,12 @@ with open("csp.json", "r", encoding="utf8") as fp:
 hosts = CONF["hosts"]
 hosts += ["www." + name for name in hosts]
 if IS_LOCAL:
-    hosts +=  ["127.0.0.1", "localhost"]
-valid_hosts = ["http://"+h for h in hosts] if CONF["disableSSL"] \
-    else ["https://"+h for h in hosts]
+    hosts += ["127.0.0.1", "localhost"]
+valid_hosts = (
+    ["http://" + h for h in hosts]
+    if CONF["disableSSL"]
+    else ["https://" + h for h in hosts]
+)
 
 # Init Flask app
 print(f"Creating app... (local={IS_LOCAL}, SSL disabled={CONF['disableSSL']})")
@@ -45,31 +51,35 @@ print(f"Creating app... (local={IS_LOCAL}, SSL disabled={CONF['disableSSL']})")
 
 class CustomFlask(Flask):
     jinja_options = Flask.jinja_options.copy()
-    jinja_options.update(dict(
-        variable_start_string='[[',
-        variable_end_string=']]',
-    ))
+    jinja_options.update(
+        dict(
+            variable_start_string="[[",
+            variable_end_string="]]",
+        )
+    )
 
 
 app = CustomFlask(__name__)
-#app = Flask(__name__)
-app.config['SECRET_KEY'] = SECRET_KEY
+# app = Flask(__name__)
+app.config["SECRET_KEY"] = SECRET_KEY
 
 # Init Talisman for HTTP headers
-Talisman(app,
-         content_security_policy=csp,
-         content_security_policy_nonce_in=['script-src'],
-         force_https=not CONF["disableSSL"]
-         )
+Talisman(
+    app,
+    content_security_policy=csp,
+    content_security_policy_nonce_in=["script-src"],
+    force_https=not CONF["disableSSL"],
+)
 
 # Init SocketIO
 logger = IS_LOCAL and CONF["verbose"]
-socketio = SocketIO(app,
-                    async_mode=CONF["async"],
-                    cors_allowed_origins=valid_hosts,
-                    engineio_logger=logger,
-                    logger=logger,
-                    )
+socketio = SocketIO(
+    app,
+    async_mode=CONF["async"],
+    cors_allowed_origins=valid_hosts,
+    engineio_logger=logger,
+    logger=logger,
+)
 
 timers = defaultdict(int)
 

@@ -22,7 +22,7 @@ if __name__ == '__main__':
     if args.debug:
         kwargs["debug"] = True
         check_loading = False
-        debug_game = False
+        debug_game = True
         message = "Live-reloading enabled"
         if debug_game:
             name, game = manager.create_game(n_run=3,
