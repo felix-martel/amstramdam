@@ -1,29 +1,34 @@
 import json
+from typing import Any, Union, Optional
 from pprint import pprint
 from copy import deepcopy
 
-SYMBOL = "*"
-PROTECTED = {"file", "name", "map_id", "default_level", "preset"}
-DEFAULTS = {
-    'col_group': 'group',
-    'col_hint': 'admin',
-    'col_lat': 'lat',
-    'col_lon': 'lng',
-    'col_place': 'city',
-    'col_rank': 'population',
-    'default_level': 0,
-    'file': 'data/places.world.csv',
-    'filters': [],
-    'harshness': 0.7,
-    'levels': [{'label': 'Facile', 'weights': [1]},
-               {'label': 'Moyen', 'weights': [1, 1]},
-               {'label': 'Difficile', 'weights': [1, 1, 0.5]}],
-    'single_group': False,
-    'use_hint': True
+from amstramdam.datasets.types import DatasetParams
+
+SYMBOL: str = "*"
+PROTECTED: set[str] = {"file", "name", "map_id", "default_level", "preset"}
+DEFAULTS: DatasetParams = {
+    "col_group": "group",
+    "col_hint": "admin",
+    "col_lat": "lat",
+    "col_lon": "lng",
+    "col_place": "city",
+    "col_rank": "population",
+    "default_level": 0,
+    "file": "data/places.world.csv",
+    "filters": [],
+    "harshness": 0.7,
+    "levels": [
+        {"label": "Facile", "weights": [1]},
+        {"label": "Moyen", "weights": [1, 1]},
+        {"label": "Difficile", "weights": [1, 1, 0.5]},
+    ],
+    "single_group": False,
+    "use_hint": True,
 }
 
 
-def open_json(fp_or_obj):
+def open_json(fp_or_obj: Union[dict[Any, Any], str]) -> dict[Any, Any]:
     if isinstance(fp_or_obj, str):
         with open(fp_or_obj, "r", encoding="utf8") as f:
             raw = json.load(f)
@@ -63,7 +68,7 @@ def distribute_starred(descr, n_levels):
     levels = [dict() for _ in range(n_levels)]
     for key in keys:
         for i, value in enumerate(descr.pop(key)):
-            levels[i][key[:-len(SYMBOL)]] = value
+            levels[i][key[: -len(SYMBOL)]] = value
     return levels
 
 
@@ -120,21 +125,21 @@ def merge(descr, default):
         base = {
             **base_descr(default),
             **base_descr(descr),
-            "levels": [{**level, **common} for level in default["levels"]]
+            "levels": [{**level, **common} for level in default["levels"]],
         }
         return base
     # Else
     # 1: distribute
     descr = distribute(descr)
-    base = {
-        **base_descr(default),
-        **base_descr(descr)
-    }
+    base = {**base_descr(default), **base_descr(descr)}
     common = distributable_descr(base)  # <- check if base or descr
     levels, default_levels = descr["levels"], default["levels"]
     if len(levels) != len(default_levels):
         default_levels = [dict() for _ in range(len(levels))]
-    new_levels = [{**default_level, **common, **level} for default_level, level in zip(default_levels, levels)]
+    new_levels = [
+        {**default_level, **common, **level}
+        for default_level, level in zip(default_levels, levels)
+    ]
     base["levels"] = new_levels
     return base
 
