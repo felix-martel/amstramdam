@@ -4,9 +4,17 @@ import pandas as pd
 import numpy as np
 
 from amstramdam.game.geo import Point
-from amstramdam.datasets.types import Filter, Mask, Rank, PointCreationRecord, PointUpdateRecord, GuessRecord
+from amstramdam.datasets.types import (
+    Filter,
+    Mask,
+    Rank,
+    PointCreationRecord,
+    PointUpdateRecord,
+    GuessRecord,
+)
 
 T = TypeVar("T")
+
 
 def create_mask(df: pd.DataFrame, filter: Filter) -> Mask:
     # Column to use for filtering
@@ -40,7 +48,9 @@ def mask_df(df: pd.DataFrame, filters: Iterable[Filter]) -> pd.DataFrame:
     return df if masks is None else df.loc[masks]
 
 
-def autorank(df: pd.DataFrame, column: str, ranks: Sequence[Rank], reverse: bool=False) -> tuple[pd.DataFrame, dict[str, int]]:
+def autorank(
+    df: pd.DataFrame, column: str, ranks: Sequence[Rank], reverse: bool = False
+) -> tuple[pd.DataFrame, dict[str, int]]:
     """Create G0, G1, Gi groups on-the-fly, from a list of group sizes"""
     if len(ranks) == 0:
         df.loc[:, "group"] = 0
@@ -51,7 +61,7 @@ def autorank(df: pd.DataFrame, column: str, ranks: Sequence[Rank], reverse: bool
 
     def get_rank(r: int) -> int:
         for i, threshold in enumerate(ranks):
-            if r < threshold: # type: ignore
+            if r < threshold:  # type: ignore
                 return i
         return len(ranks)
 
@@ -66,7 +76,7 @@ class DataFrameLoader(object):
     # List here the file that should be kept in memory
     persistent: set[str] = {"data/places.world.csv"}
 
-    def __init__(self, dataframes: Optional[dict[str, pd.DataFrame]]=None) -> None:
+    def __init__(self, dataframes: Optional[dict[str, pd.DataFrame]] = None) -> None:
         if dataframes is None:
             dataframes = dict()
         self._dataframes = dataframes
@@ -77,7 +87,7 @@ class DataFrameLoader(object):
     def __len__(self) -> int:
         return len(self._dataframes)
 
-    def load(self, filename: str, persist: bool=False, **kwargs: Any) -> pd.DataFrame:
+    def load(self, filename: str, persist: bool = False, **kwargs: Any) -> pd.DataFrame:
         df = pd.read_csv(filename, **kwargs)
         df = df.fillna(0)
         if "pid" not in df.columns:
@@ -96,13 +106,18 @@ class DataFrameLoader(object):
     def __delitem__(self, filename: str) -> None:
         del self._dataframes[filename]
 
-    def edit(self, filename: str, created: Iterable[PointCreationRecord], updated: dict[str, PointUpdateRecord]) -> pd.DataFrame:
+    def edit(
+        self,
+        filename: str,
+        created: Iterable[PointCreationRecord],
+        updated: dict[str, PointUpdateRecord],
+    ) -> pd.DataFrame:
         """
         filename: original DF filename
-        inserted: list of inserted records. Each record is a dict whose keys are the columns of
-        DF, and values are the corresponding values
-        changed: a dictionnary from pids to changes. For each pid, changed[pid] is a dictionnary
-        mapping changed columns to their new values
+        inserted: list of inserted records. Each record is a dict whose keys are the
+        columns of DF, and values are the corresponding values
+        changed: a dictionnary from pids to changes. For each pid, changed[pid] is a
+        dictionnary mapping changed columns to their new values
         """
         df = self.load(filename, persist=False)
         types = {col: df[col].dtype for col in df.columns}
@@ -125,16 +140,16 @@ class UnifiedDataFrame:
     def __init__(
         self,
         df: pd.DataFrame,
-        mask: Mask=None,
+        mask: Mask = None,
         col_place: str = "city",
         col_hint: str = "admin",
         col_lon: str = "lng",
         col_lat: str = "lat",
         col_group: str = "group",
         col_rank: str = "population",
-        use_hint: bool=True,
-        single_group: bool=False,
-        special_char: str="!",
+        use_hint: bool = True,
+        single_group: bool = False,
+        special_char: str = "!",
     ) -> None:
         self.df = df
         self.mask = mask if mask is not None else pd.Series(True, index=self.df.index)
@@ -195,10 +210,10 @@ class UnifiedDataFrame:
     def __getitem__(self, key: Union[list[str], pd.Series, str]) -> "UnifiedDataFrame":
         if isinstance(key, list):
             keys = self.col(*key)
-            return self.df.loc[self.mask, keys] # type: ignore
+            return self.df.loc[self.mask, keys]  # type: ignore
         elif isinstance(key, pd.Series):
             return self.unify_df(self.df.loc[self.mask & key])
-        return self.df[self.mask, self.col(key)] # type: ignore
+        return self.df[self.mask, self.col(key)]  # type: ignore
 
     def __getattr__(self, attr: str) -> Any:
         own_attr = set(dir(self))
@@ -212,9 +227,11 @@ class UnifiedDataFrame:
         sampled = self.df.loc[self.mask].sample(*args, **kwargs)
         return self.unify_df(sampled)
 
-    def to_dict(self, *args: Any, renamed: bool=True, **kwargs: Any) -> Union[list[dict[str, Any], dict[str, Any]]]:
+    def to_dict(
+        self, *args: Any, renamed: bool = True, **kwargs: Any
+    ) -> Union[list[dict[str, Any], dict[str, Any]]]:
         if not renamed:
-            return self.df.loc[self.mask].to_dict(*args, **kwargs) # type: ignore
+            return self.df.loc[self.mask].to_dict(*args, **kwargs)  # type: ignore
         renamed_df = self.df.loc[self.mask].rename(columns=self.reversed_converter)
         if "hint" not in renamed_df.columns:
             renamed_df = pd.concat(
@@ -226,7 +243,7 @@ class UnifiedDataFrame:
                 [renamed_df, pd.Series(0, index=renamed_df.index, name="group")],
                 axis="columns",
             )
-        return renamed_df.to_dict(*args, **kwargs) # type: ignore
+        return renamed_df.to_dict(*args, **kwargs)  # type: ignore
 
     @property
     def place(self) -> pd.Series:

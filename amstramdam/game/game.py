@@ -118,7 +118,8 @@ class GameRun:
         return max(0, 1 - (delta / self.time_param))
 
     def non_linear_bonus(self, dist: float) -> float:
-        # Max bonus as a fraction of the score multiplier (so +200 bonus for a 0km distance with the standard 1000km)
+        # Max bonus as a fraction of the score multiplier (so +200 bonus for a 0km
+        # distance with the standard 1000km)
         t = 0.2 * self.SCORE_MULTIPLIER
         # Last n kilometers for the non-linear bonus
         g = 0.2 * self.dist_param
@@ -126,7 +127,7 @@ class GameRun:
 
     def dist_score(self, dist: float, non_linear: Optional[bool] = None) -> float:
         s = self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.dist_param))
-        if (non_linear == True) or self.non_linear:
+        if (non_linear is True) or self.non_linear:
             return s + self.non_linear_bonus(dist)
         return s
 
@@ -149,7 +150,8 @@ class GameRun:
         return self.place[1]
 
     def get_params(self) -> GameRunParams:
-        """So you can re-create a new GameRun with game2 = GameRun(**game1.get_params())"""
+        """So you can re-create a new GameRun with
+        game2 = GameRun(**game1.get_params())"""
         return dict(
             players=set(self.players),
             dist_param=self.dist_param,

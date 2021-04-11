@@ -4,13 +4,19 @@ from amstramdam import socketio, timers, manager
 from flask import session, url_for
 from flask_socketio import emit, join_room, leave_room, close_room
 from .utils import safe_cancel
-from amstramdam.events.types import InitNotification, RedirectNotification, NewPlayerNotification, \
-    PlayerLeftNotification, ConnectionPayload
+from amstramdam.events.types import (
+    InitNotification,
+    RedirectNotification,
+    NewPlayerNotification,
+    PlayerLeftNotification,
+    ConnectionPayload,
+)
 from amstramdam.game.types import GameName, Player, Pseudo
 
 
 @socketio.on("connection")
 def init_game(data: ConnectionPayload) -> None:
+    print("Trying to connect with payload", data)
     game_name: GameName = session["game"]
     player: Player = session.get("player", Player("unknown"))
     print(f"Receive <event:connection[to={game_name}]> from <player:{player}>")
@@ -58,7 +64,9 @@ def init_game(data: ConnectionPayload) -> None:
     )
     emit(
         "new-player",
-        NewPlayerNotification(player=player, pseudo=pseudo, score=game.get_player_score(player)),
+        NewPlayerNotification(
+            player=player, pseudo=pseudo, score=game.get_player_score(player)
+        ),
         broadcast=True,
         room=game_name,
     )
@@ -75,7 +83,12 @@ def leave_game() -> None:
         return
     game.remove_player(player)
     leave_room(game_name)
-    emit("player-left", PlayerLeftNotification(player=player), broadcast=True, room=game_name)
+    emit(
+        "player-left",
+        PlayerLeftNotification(player=player),
+        broadcast=True,
+        room=game_name,
+    )
 
     print(f"<{player}> disconnected!")
 

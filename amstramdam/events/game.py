@@ -19,7 +19,8 @@ def terminate_game(game_name: GameName) -> None:
     with app.test_request_context("/"):
         status = game.status
         print(
-            f"Ending game <{game_name}> (emitting <event:status-update> with status={status})"
+            f"Ending game <{game_name}> (emitting <event:status-update> "
+            f"with status={status})"
         )
         socketio.emit(
             "status-update",
@@ -136,7 +137,8 @@ def process_guess(data: Coordinates) -> None:
     res["total_score"] = (
         game.scores[player] + res["score"]
     )  # We need to add res["score"] between game.scores isn't updated yet
-    # emit("log", f"Player <{player}> has scored {res['score']} points", broadcast=True, room=game_name)
+    # emit("log", f"Player <{player}> has scored {res['score']} points", broadcast=True,
+    # room=game_name)
     emit(
         "new-guess",
         dict(player=player, dist=res["dist"], delta=res["delta"], score=res["score"]),

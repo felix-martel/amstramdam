@@ -52,7 +52,7 @@ def serve_editor():
 @app.route("/points/<dataset>")
 def get_dataset_geometry(dataset):
     try:
-        label = request.args.get("labels") == "true"
+        # label = request.args.get("labels") == "true"
         data = dataloader.load(dataset).get_geometry()
     except KeyError as e:
         print(f"ERROR: No dataset named '{dataset}' found.")
@@ -104,6 +104,8 @@ def create_new_game():
 @app.route("/game/<name>")
 def serve_game(name):
     if not manager.exists(name):
+        if "game" in session:
+            del session["game"]
         return redirect(url_for("serve_main"))
     else:
         session["game"] = name

@@ -1,4 +1,4 @@
-from typing import TypedDict, Mapping, Optional
+from typing import TypedDict, Optional
 
 from amstramdam.game.types import Leaderboard, PlayerFinalResult, GameFinalResults
 
@@ -11,12 +11,15 @@ class ChatMessage(TypedDict):
 class NameChangePayload(TypedDict):
     name: str
 
+
 class ConnectionPayload(TypedDict, total=False):
     pseudo: str
+
 
 class NewNameNotification(TypedDict):
     player: str
     pseudo: str
+
 
 class GameChangeNotification(TypedDict):
     name: str
@@ -24,13 +27,16 @@ class GameChangeNotification(TypedDict):
     map_name: str
     player: str
 
+
 class GameEndPayload(TypedDict):
     leaderboard: Leaderboard
     full: GameFinalResults
 
+
 class GameEndNotification(TypedDict):
     status: str
     payload: GameEndPayload
+
 
 class Guess(TypedDict):
     lon: float
@@ -40,10 +46,12 @@ class Guess(TypedDict):
 class PlayerLeftNotification(TypedDict):
     player: str
 
+
 class NewPlayerNotification(TypedDict):
     player: str
     pseudo: Optional[str]
     score: PlayerFinalResult
+
 
 class InitNotification(TypedDict):
     player: str
@@ -57,8 +65,10 @@ class InitNotification(TypedDict):
     leaderboard: Leaderboard
     pseudos: dict[str, str]
 
+
 class RedirectNotification(TypedDict):
     url: str
+
 
 class PartialGameParams(TypedDict, total=False):
     map: str
