@@ -7,3 +7,6 @@ pandas~=1.1.4
 unidecode~=1.1.1
 eventlet~=0.29.1
 bidict~=0.21.2
+tqdm~=4.57.0
+pytest~=6.2.3
+lxml~=4.6.3

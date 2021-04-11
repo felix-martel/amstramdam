@@ -1,48 +1,74 @@
-from amstramdam import app, socketio, manager
+from typing import Optional
+
+from amstramdam import socketio, manager
 from flask import session, url_for
 from flask_socketio import emit
+
+from amstramdam.events.types import (
+    ChatMessage,
+    NameChangePayload,
+    NewNameNotification,
+    PartialGameParams,
+    GameChangeNotification,
+)
 from amstramdam.game.params_handler import merge_params
+from amstramdam.game.types import GameName, Pseudo, Player
 
 MAX_LEN = 20
 
-def is_valid_pseudo(name):
+
+def is_valid_pseudo(name: str) -> bool:
     # TODO: implement checks?
     name = str(name)
     return len(name) > 0
 
-def trunc_pseudo(name):
+
+def process_pseudo(name: str) -> Pseudo:
     if len(name) > MAX_LEN + 3:
         name = name[:MAX_LEN] + "..."
-    return name
+    return Pseudo(name)
 
 
 @socketio.on("chat:send")
-def process_chat_message(message):
-    game_name = session.get("game")
-    author = session.get("player")
+def process_chat_message(message: str) -> None:
+    game_name: Optional[GameName] = session.get("game")
+    author: Optional[Player] = session.get("player")
     if author is None or game_name is None:
         return
-    emit("chat:new", dict(author=author, message=message), json=True, broadcast=True, room=game_name)
+    emit(
+        "chat:new",
+        ChatMessage(author=author, message=message),
+        json=True,
+        broadcast=True,
+        room=game_name,
+    )
 
 
 @socketio.on("name-change")
-def update_pseudo(data):
-    game_name = session["game"]
-    player = session.get("player")
-    if player is None:
-        return
+def update_pseudo(data: NameChangePayload) -> None:
+    game_name: GameName = session["game"]
+    player: Optional[Player] = session.get("player")
     game = manager.get_game(game_name)
+    if player is None or game is None:
+        return
+
     pseudo = data["name"]
     if is_valid_pseudo(pseudo):
-        pseudo = trunc_pseudo(pseudo)
+        pseudo = process_pseudo(pseudo)
         game.add_pseudo(player, pseudo)
     else:
         pseudo = game.request_pseudo(player)
-    emit("new-name", dict(player=player, pseudo=pseudo),
-         room=game_name, broadcast=True, json=True)
+    emit(
+        "new-name",
+        NewNameNotification(player=player, pseudo=pseudo),
+        room=game_name,
+        broadcast=True,
+        json=True,
+    )
+
 
 @socketio.on("request-game-change")
-def change_game(data):
+def change_game(data: PartialGameParams) -> None:
     game_name = session["game"]
     player = session.get("player")
     if player is None:
@@ -50,17 +76,26 @@ def change_game(data):
 
     params = merge_params(data)
     print(*[f"{k}={v}" for k, v in params.items()], sep=", ")
-    new_game_name, game = manager.create_game(n_run=params["runs"],
-                                     duration=params["duration"],
-                                     difficulty=params["difficulty"],
-                                     is_public=params["public"],
-                                     precision_mode=params["precision_mode"],
-                                     allow_zoom=params["zoom"],
-                                     map=params["map"], wait_time=params["wait_time"])
+    new_game_name, game = manager.create_game(
+        n_run=params["runs"],
+        duration=params["duration"],
+        difficulty=params["difficulty"],
+        is_public=params["public"],
+        precision_mode=params["precision_mode"],
+        allow_zoom=params["zoom"],
+        map=params["map"],
+        wait_time=params["wait_time"],
+    )
     url = url_for("serve_game", name=new_game_name)
     print(url)
     print(manager.get_status())
 
-    emit("game-change", dict(name=new_game_name, url=url, map_name=params["map"], player=player),
-         room=game_name, broadcast=True, json=True)
-
+    emit(
+        "game-change",
+        GameChangeNotification(
+            name=new_game_name, url=url, map_name=params["map"], player=player
+        ),
+        room=game_name,
+        broadcast=True,
+        json=True,
+    )

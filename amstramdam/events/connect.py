@@ -1,24 +1,38 @@
+from typing import Optional
+
 from amstramdam import socketio, timers, manager
 from flask import session, url_for
 from flask_socketio import emit, join_room, leave_room, close_room
 from .utils import safe_cancel
+from amstramdam.events.types import (
+    InitNotification,
+    RedirectNotification,
+    NewPlayerNotification,
+    PlayerLeftNotification,
+    ConnectionPayload,
+)
+from amstramdam.game.types import GameName, Player, Pseudo
 
 
-@socketio.on('connection')
-def init_game(data):
-    game_name = session["game"]
-    player = session.get("player", "unknown")
+@socketio.on("connection")
+def init_game(data: ConnectionPayload) -> None:
+    print("Trying to connect with payload", data)
+    game_name: GameName = session["game"]
+    player: Player = session.get("player", Player("unknown"))
     print(f"Receive <event:connection[to={game_name}]> from <player:{player}>")
     if not manager.exists(game_name):
         print(f"Game <game:{game_name}> does not exist")
         del session["game"]
-        emit("redirect", dict(url=url_for("serve_main")), json=True)
+        emit("redirect", RedirectNotification(url=url_for("serve_main")), json=True)
         # return redirect(url_for("serve_main"))
 
     join_room(game_name)
     game = manager.get_game(game_name)
+    if game is None:
+        raise KeyError(f"Game <game:{game_name}> is None")
+    pseudo: Optional[str]
     if "pseudo" in data and data["pseudo"]:
-        pseudo = data["pseudo"]
+        pseudo = Pseudo(data["pseudo"])
     else:
         pseudo = None
     if "player" in session:
@@ -32,31 +46,49 @@ def init_game(data):
 
     print(f"Player <{player}> connected to game <{game_name}> with pseudo <{pseudo}>")
     leaderboard = game.get_current_leaderboard()
-    emit("init", dict(player=player, launched=game.launched, pseudo=pseudo,
-            game=game.map_name, current=game.curr_run_id, runs=game.n_run, diff=game.difficulty,
-                      #precision=game.precision_mode,
-                      game_name=game.map_display_name,
-                      leaderboard=leaderboard,
-                      pseudos=game.pseudos))
-    emit("new-player", dict(
-        player=player,
-        pseudo=pseudo,
-        score=game.get_player_score(player)
-    ), broadcast=True, room=game_name)
+    emit(
+        "init",
+        InitNotification(
+            player=player,
+            launched=game.launched,
+            pseudo=pseudo,
+            game=game.map_name,
+            current=game.curr_run_id,
+            runs=game.n_run,
+            diff=game.difficulty,
+            # precision=game.precision_mode,
+            game_name=game.map_display_name,
+            leaderboard=leaderboard,
+            pseudos=game.pseudos,
+        ),
+    )
+    emit(
+        "new-player",
+        NewPlayerNotification(
+            player=player, pseudo=pseudo, score=game.get_player_score(player)
+        ),
+        broadcast=True,
+        room=game_name,
+    )
 
 
-
-
-@socketio.on('disconnect')
-def leave_game():
+@socketio.on("disconnect")
+def leave_game() -> None:
     if "player" not in session:
         return
     player = session["player"]
     game_name = session["game"]
     game = manager.get_game(game_name)
+    if game is None:
+        return
     game.remove_player(player)
     leave_room(game_name)
-    emit("player-left", dict(player=player), broadcast=True, room=game_name)
+    emit(
+        "player-left",
+        PlayerLeftNotification(player=player),
+        broadcast=True,
+        room=game_name,
+    )
 
     print(f"<{player}> disconnected!")
 
