@@ -1,5 +1,14 @@
-from collections import defaultdict
-from typing import Iterable, Optional, Any, Callable, TypedDict, Mapping, NewType, Union, Literal
+
+from typing import (
+    Optional,
+    Any,
+    Callable,
+    TypedDict,
+    Mapping,
+    NewType,
+    Union,
+    Literal,
+)
 from datetime import datetime
 
 Hint = tuple[str, Optional[str]]
@@ -10,6 +19,7 @@ PlayerList = set[Player]
 CoordinatesTuple = tuple[float, float]
 Callback = Callable[..., Any]
 MetricSummary = Union[float, Literal["-"]]
+
 
 class Coordinates(TypedDict):
     lon: float
@@ -43,11 +53,13 @@ class RunResults(TypedDict):
     distances: Mapping[Player, float]
     durations: Mapping[Player, float]
 
+
 class PlayerFinalResult(TypedDict):
     player: Player
     dist: MetricSummary
     delta: MetricSummary
     score: float
+
 
 class GameRunParams(TypedDict):
     players: set[Player]
@@ -55,9 +67,11 @@ class GameRunParams(TypedDict):
     time_param: int
     duration: int
 
+
 class GameMetrics(TypedDict):
     distance: Mapping[Player, list[float]]
     delay: Mapping[Player, list[float]]
+
 
 class GameParams(GameRunParams):
     n_run: int
@@ -71,19 +85,23 @@ class GameParams(GameRunParams):
     allow_zoom: bool
     precision_mode: bool
 
+
 class FullGameRunParams(GameRunParams):
     precision_mode: bool
     non_linear: bool
 
+
 class GameFinalResults(TypedDict):
     records: list[list[dict[str, Any]]]
     places: list[PlaceDict]
+
 
 class AvailableGames(TypedDict):
     name: GameName
     map: str
     players: int
     difficulty: float
+
 
 class FilledGameParams(TypedDict):
     map: str
@@ -95,5 +113,5 @@ class FilledGameParams(TypedDict):
     public: bool
     precision_mode: bool
 
-Leaderboard = list[PlayerFinalResult]
 
+Leaderboard = list[PlayerFinalResult]

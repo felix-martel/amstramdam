@@ -1,14 +1,19 @@
 import random
-from typing import TypeVar, Any, Union, Optional
-from numbers import Number
+from typing import TypeVar, Any, Optional
 from collections import Counter
 
-from amstramdam.datasets.types import BoundingBoxArray, DatasetGeometry, JsonifiedPoint, JsonifiedDataset
+from amstramdam.datasets.types import (
+    BoundingBoxArray,
+    DatasetGeometry,
+    JsonifiedPoint,
+    JsonifiedDataset,
+)
 from amstramdam.game.game import PlaceToGuess
 from amstramdam.game.geo import Point, distance
 from amstramdam.datasets.dataframe import UnifiedDataFrame
 
 T = TypeVar("T")
+
 
 def arg_or_default(value: Optional[T], default: T) -> T:
     if value is None:
@@ -22,10 +27,10 @@ class GameMap:
         name: str,
         map_id: str,
         udf: UnifiedDataFrame,
-        harshness: Optional[float]=None,
-        weights: Optional[list[float]]=None,
-        min_group: int=0,
-        max_group: Optional[int]=None,
+        harshness: Optional[float] = None,
+        weights: Optional[list[float]] = None,
+        min_group: int = 0,
+        max_group: Optional[int] = None,
         **extra_params: Any
     ) -> None:
         self.name = name
@@ -37,7 +42,7 @@ class GameMap:
             max_group = self.df.group.max()
         self.max_group = max_group
         # Samping weights
-        self._weights: list[float] = arg_or_default(weights, [1.] * len(self.counts))
+        self._weights: list[float] = arg_or_default(weights, [1.0] * len(self.counts))
         self.weights = self.normalize_weights(self._weights)
 
         self.harshness = arg_or_default(harshness, 0.7)
@@ -61,7 +66,7 @@ class GameMap:
     def distance(self) -> float:
         return self.char_dist ** self.harshness
 
-    def get_geometry(self, max_points: int=400) -> DatasetGeometry:
+    def get_geometry(self, max_points: int = 400) -> DatasetGeometry:
         data = self.df
         if max_points > 0:
             data = data.sample(min(max_points, len(data)))
@@ -100,7 +105,7 @@ class GameMap:
     def guessify_point(self, point: dict[str, Any]) -> PlaceToGuess:
         return ((point["place"], point["hint"]), Point(point["lon"], point["lat"]))
 
-    def sample(self, k: int, verbose: bool=True) -> list[PlaceToGuess]:
+    def sample(self, k: int, verbose: bool = True) -> list[PlaceToGuess]:
         mask = self.df.group >= self.min_group
         if self.max_group is not None:
             mask = mask & (self.df.group <= self.max_group)

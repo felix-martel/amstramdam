@@ -1,12 +1,11 @@
-# import bidict
 from bidict import bidict
 import warnings
-from os import PathLike
+
 
 def read_codefile(filename: str) -> bidict:
     warnings.warn(
-        "You're using the deprecated function `read_codefile` (from `ams.datasets.codes`)."
-        "Please use `read_code` instead.",
+        "You're using the deprecated function `read_codefile` "
+        "(from `ams.datasets.codes`). Please use `read_code` instead.",
         DeprecationWarning,
     )
     with open(filename) as f:
@@ -17,7 +16,9 @@ def read_codefile(filename: str) -> bidict:
     return codes
 
 
-def read_code(filename: str, sep: str="\t", comment: str="#", errors: str="ignore") -> bidict:
+def read_code(
+    filename: str, sep: str = "\t", comment: str = "#", errors: str = "ignore"
+) -> bidict:
     bidirectional_codes = bidict()
     with open(filename, "r", encoding="utf8") as f:
         for i, line in enumerate(f):
@@ -34,7 +35,9 @@ def read_code(filename: str, sep: str="\t", comment: str="#", errors: str="ignor
     return bidirectional_codes
 
 
-def read_region_file(filename: str, sep: str=";") -> tuple[bidict, dict[str, set[str]]]:
+def read_region_file(
+    filename: str, sep: str = ";"
+) -> tuple[bidict, dict[str, set[str]]]:
     with open(filename) as f:
         codes = bidict()
         regions = dict()

@@ -1,11 +1,16 @@
 from typing import Optional
 
-from amstramdam import app, socketio, manager
+from amstramdam import socketio, manager
 from flask import session, url_for
 from flask_socketio import emit
 
-from amstramdam.events.types import ChatMessage, NameChangePayload, NewNameNotification, PartialGameParams, \
-    GameChangeNotification
+from amstramdam.events.types import (
+    ChatMessage,
+    NameChangePayload,
+    NewNameNotification,
+    PartialGameParams,
+    GameChangeNotification,
+)
 from amstramdam.game.params_handler import merge_params
 from amstramdam.game.types import GameName, Pseudo, Player
 
@@ -87,7 +92,9 @@ def change_game(data: PartialGameParams) -> None:
 
     emit(
         "game-change",
-        GameChangeNotification(name=new_game_name, url=url, map_name=params["map"], player=player),
+        GameChangeNotification(
+            name=new_game_name, url=url, map_name=params["map"], player=player
+        ),
         room=game_name,
         broadcast=True,
         json=True,

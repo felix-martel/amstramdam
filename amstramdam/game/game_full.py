@@ -1,4 +1,4 @@
-from typing import Any, Iterable, Optional, Literal, Union
+from typing import Any, Iterable, Optional, Union
 import string
 from collections import defaultdict, Counter
 
@@ -22,7 +22,8 @@ from .types import (
     GameFinalResults,
     MetricSummary,
     PlayerFinalResult,
-    Leaderboard, GameName,
+    Leaderboard,
+    GameName,
 )
 
 with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
@@ -110,7 +111,7 @@ class Game:
         self.precision_mode = precision_mode
         self.small_scale = (
             dist_param < 15
-        )  # When the characteristic distance is below 15km, the game is considered 'small-scale'
+        )  # When the characteristic distance is below 15km
         self.__curr_run_id = 0
         self.allow_zoom = allow_zoom
         if players is None:
@@ -336,11 +337,14 @@ Run: {self.curr_run_id + 1}/{self.n_run}
         self, keys: Optional[list[str]] = None
     ) -> list[list[dict[str, Any]]]:
         """
-        `self.records` contains a lot of information. This function filters it by keeping only the keys specified in
-        `keys`. If not provided, `keys = ["guess", "player"]`, which are necessary for the final summary display.
-        `self.records` contains, per each run, one record dict per player with the following keys:
+        `self.records` contains a lot of information. This function filters it by
+        keeping only the keys specified in `keys`. If not provided, `keys = ["guess",
+        "player"]`, which are necessary for the final summary display.
+        `self.records` contains, per each run, one record dict per player with the
+        following keys:
         - guess (guess.lon, guess.lat): coordinates of the player's guess for this run
-        - answer (answer.lon, answer.lat, answer.name): coordinates of the ground truth for this run
+        - answer (answer.lon, answer.lat, answer.name): coordinates of the ground truth
+        for this run
         - dist: distance between guess and ground truth
         - delta: player's answering time
         - score: points awarded to the player for this run

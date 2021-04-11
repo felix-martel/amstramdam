@@ -57,7 +57,8 @@ def iter_games(purge: bool = True) -> Generator[tuple[GameName, Game], None, Non
 
 
 def get_public_games() -> list[AvailableGames]:
-    #  The 'if' clause is a dirty fix for the case 'route to /game/xxx then socket io fails'
+    #  The 'if' clause is a dirty fix for the case 'route to /game/xxx then socketio
+    #  fails'
     return [
         dict(
             name=name,

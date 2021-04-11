@@ -17,13 +17,13 @@ def merge_params(params, defaults=None):
     """
     if defaults is None:
         defaults = DEFAULT_PARAMS
-    merged = {**defaults, **params} # type: ignore
+    merged = {**defaults, **params}  # type: ignore
     converts = [
         (int, {"duration", "runs", "wait_time", "difficulty"}),
         (bool, {"public", "zoom", "precision_mode"}),
     ]
     for convert, keys in converts:
         for key in keys & merged.keys():
-            merged[key] = convert(merged[key]) # type: ignore
+            merged[key] = convert(merged[key])  # type: ignore
 
     return merged

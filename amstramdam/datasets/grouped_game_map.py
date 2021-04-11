@@ -1,18 +1,13 @@
 import random
 from collections import Counter
-from functools import partial
 from typing import Optional, Any, NoReturn
 
 from amstramdam.datasets.dataframe import UnifiedDataFrame
 from amstramdam.datasets.types import (
     BoundingBoxArray,
-    DatasetGeometry,
-    JsonifiedPoint,
-    JsonifiedDataset,
-    MapWeights, LevelWeights,
+    MapWeights,
+    LevelWeights,
 )
-
-from amstramdam.game.game import PlaceToGuess
 
 from amstramdam.game.geo import Point, distance
 import pandas as pd
@@ -34,20 +29,20 @@ class GroupBasedGameMap:
         self,
         name: str,
         df: UnifiedDataFrame,
-        scale: int=0,
-        weights: Optional[LevelWeights]=None,
-        available_levels: Optional[list]=None,
-        default_level: int =0,
-        group: Optional[int]=None,
-        harshness: float=0.7,
-        map_id: Optional[str]=None,
-        use_hint: bool=True,
-        col_place: str="city",
-        col_hint: str="admin",
-        col_lon: str="lng",
-        col_lat: str="lat",
-        col_group: str="group",
-        col_rank: str="population",
+        scale: int = 0,
+        weights: Optional[LevelWeights] = None,
+        available_levels: Optional[list] = None,
+        default_level: int = 0,
+        group: Optional[int] = None,
+        harshness: float = 0.7,
+        map_id: Optional[str] = None,
+        use_hint: bool = True,
+        col_place: str = "city",
+        col_hint: str = "admin",
+        col_lon: str = "lng",
+        col_lat: str = "lat",
+        col_group: str = "group",
+        col_rank: str = "population",
         **kwargs: Any,
     ) -> None:
         # Map information
@@ -143,8 +138,9 @@ class GroupBasedGameMap:
 
     def jsonify_point(self, point, label=False, hint=False, columns=None):
         """
-        Convert a `point`, represented as a NamedTuple, to a JSON-ifiable format, ready to be sent over HTTP to the
-        client. The JSON-like outpout contains two keys:
+        Convert a `point`, represented as a NamedTuple, to a JSON-ifiable format,
+        ready to be sent over HTTP to the client. The JSON-like outpout contains two
+        keys:
         - `coords`, a `[lat, lon]` array of geographic coordinates
         - `data`, extra data attached to the point (e.g its name, rank, group)
         """
@@ -264,8 +260,8 @@ class GroupBasedGameMap:
         for group, sample_size in Counter(groups).items():
             if verbose:
                 print(
-                    f"{self.name} : {sample_size} places to sample from group G{group}, "
-                    f"out of {self.counts[group]}, "
+                    f"{self.name} : {sample_size} places to sample from group G{group},"
+                    f" out of {self.counts[group]}, "
                     f"plus {report} places reported from previous group"
                 )
             sample_size += report

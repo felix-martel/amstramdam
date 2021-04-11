@@ -5,28 +5,34 @@ import warnings
 from datetime import datetime
 from pprint import pprint
 from copy import deepcopy
-from typing import Any, Optional, Union, Iterable, Mapping
+from typing import Any, Optional, Union
 
 import pandas as pd
-from bidict import bidict
 
 from .game_map import GameMap
 from .dataframe import (
     DataFrameLoader,
-    mask_df,
-    autorank,
     UnifiedDataFrame,
     create_masks,
 )
 from .codes import read_code
 from ._loader import DEFAULTS, open_json, merge, process
-from .types import DatasetParams, FlattenedDatasets, GroupedDatasets, PointChangeRecords, DatasetInformation, \
-    DatasetGroup, FilteredGroupedDatasets
+from .types import (
+    DatasetParams,
+    FlattenedDatasets,
+    GroupedDatasets,
+    PointChangeRecords,
+    DatasetInformation,
+    DatasetGroup,
+    FilteredGroupedDatasets,
+)
 
 codes = read_code("data/codes.txt")
 
 
-def analyze_country(df: pd.DataFrame, code: str, col: str="population") -> dict[str, Any]:
+def analyze_country(
+    df: pd.DataFrame, code: str, col: str = "population"
+) -> dict[str, Any]:
     sdf = df.loc[df.iso2 == code]
     if "group" in sdf.columns and len(sdf[sdf.group <= 2]) >= 10:
         # Places are already grouped, no re-ranking
@@ -101,19 +107,20 @@ class Dataloader(object):
             "use_hint": True,
             "harshness": 0.7,
             "levels": [
-                {"label": "Easy", "weights": [1, 0.5]}, {"label": "Hard", "weights": [0.2, 0.5]}
+                {"label": "Easy", "weights": [1, 0.5]},
+                {"label": "Hard", "weights": [0.2, 0.5]},
             ]
         }
-        The "levels" entry contains a list of difficulty levels (easiest -> hardest). Each level
-        can define its own value for each possible parameter (use_hint, label, harshness...). But
-        we also allow the following syntactic sugar:
+        The "levels" entry contains a list of difficulty levels (easiest -> hardest).
+        Each level can define its own value for each possible parameter (use_hint,
+        label, harshness...). But we also allow the following syntactic sugar:
         params = {
             ...
             "label*": ["Easy", "Hard"]
         }
-        which is equivalent to declaring "levels"=[{"label": "Easy}, {"label": "Hard"}]. This
-        distributivity is indicated by the trailing "*" symbol in the key. Here, we distribute
-        such key, value pairs to the corresponding levels.
+        which is equivalent to declaring "levels"=[{"label": "Easy}, {"label": "Hard"}].
+        This distributivity is indicated by the trailing "*" symbol in the key. Here, we
+        distribute such key, value pairs to the corresponding levels.
         """
         # print("DISTRIBUTING", params.get("name", "<unknown>"))
         params = params.copy()
@@ -137,17 +144,19 @@ class Dataloader(object):
                 levels = [None] * n_levels
         else:
             levels = params["levels"]
-        levels = [level if level is not None else dict() for level in levels] # type: ignore
+        levels = [
+            level if level is not None else dict() for level in levels
+        ]  # type: ignore
         protected_columns = {"file", "name", "map_id", "levels"}
 
         for k in distributed_cols:
             values = params.pop(k)
             k = k[: -len(self.DISTRIB_SYMBOL)]
             for level, value in enumerate(values):
-                levels[level][k] = value # type: ignore
+                levels[level][k] = value  # type: ignore
         for k in params.keys() - protected_columns:
             for i in range(len(levels)):
-                levels[i][k] = params[k] # type: ignore
+                levels[i][k] = params[k]  # type: ignore
         params["levels"] = levels
 
         # print("TO:")
@@ -188,7 +197,12 @@ class Dataloader(object):
                 new_levels.append(new_level)
         return {**defaults, **params, "levels": new_levels}
 
-    def merge_params(self, common_params: DatasetParams, preset_params: DatasetParams, default_params: DatasetParams) -> DatasetParams:
+    def merge_params(
+        self,
+        common_params: DatasetParams,
+        preset_params: DatasetParams,
+        default_params: DatasetParams,
+    ) -> DatasetParams:
         print(common_params["name"])
         presetted = self._merge(preset_params, default_params)
         print("--PRESETTED--")
@@ -201,15 +215,14 @@ class Dataloader(object):
         print("")
         return merged
 
-    def load(self, name: str, level: Optional[int]=None, **params: Any) -> GameMap:
+    def load(self, name: str, level: Optional[int] = None, **params: Any) -> GameMap:
         map_params = self.flattened[name].copy()
         return self._load(map_params, level)
 
-    def _load(self, map_params: DatasetParams, level: Optional[int]=None) -> GameMap:
+    def _load(self, map_params: DatasetParams, level: Optional[int] = None) -> GameMap:
         map_params = deepcopy(map_params)
         if level is None:
-            # raise ValueError("Passing level=None to dataloader.load is not supported yet")
-            # TODO: when level is None, return a mix of points for all levels in some way
+            # TODO: when None, return a mix of points for all levels in some way
             level = map_params.get("default_level", 0)
         try:
             datafile = map_params.pop("file")
@@ -238,7 +251,9 @@ class Dataloader(object):
         except Exception as e:
             raise e
 
-    def commit_changes(self, name: str, changes: PointChangeRecords) -> Optional[tuple[Union[pd.DataFrame, io.BytesIO], str]]:
+    def commit_changes(
+        self, name: str, changes: PointChangeRecords
+    ) -> Optional[tuple[Union[pd.DataFrame, io.BytesIO], str]]:
         if name not in self.flattened:
             raise KeyError(name)
         created = changes.get("create", [])
@@ -310,7 +325,8 @@ class Dataloader(object):
                 except Exception as e:
                     pprint(map_)
                     raise e
-                sorted_maps = sorted(unsorted_maps, key=lambda m: m["name"]) # type: ignore
+                sorted_maps = sorted(
+                    unsorted_maps, key=lambda m: m["name"])  # type: ignore
                 maps.extend(sorted_maps)
             dataset_group: DatasetGroup = {"group": group, "maps": maps}
             datasets.append(dataset_group)
@@ -318,8 +334,8 @@ class Dataloader(object):
 
     def process_one(self, map_: DatasetParams) -> list[DatasetParams]:
         """Process one map description
-        One map description = one JSON dict listed in a "maps" list in a datasets.json file
-        It must have at least 1 id, 1 name, 1 file
+        One map description = one JSON dict listed in a "maps" list in a datasets.json
+        file. It must have at least 1 id, 1 name, 1 file
         """
         raw_maps = self.unglobify(map_)
         merged_maps = []
@@ -368,11 +384,14 @@ class Dataloader(object):
                 print(f"Not enough points for map '{map_['name']}', removing it")
                 return None
         elif invalid_levels:
-            print(f"Remove levels from map '{map_['name']}' :", *invalid_levels)
+            # print(f"Remove levels from map '{map_['name']}' :", *invalid_levels)
+            pass
         map_["levels"] = valid_levels
         return map_
 
-    def generate_countries(self, base_file: str, column: str, preset: str) -> list[DatasetParams]:
+    def generate_countries(
+        self, base_file: str, column: str, preset: str
+    ) -> list[DatasetParams]:
         df = self.dataframes[base_file]
         maps = []
         for country_code in df[column].unique():
@@ -391,7 +410,7 @@ class Dataloader(object):
         if "method" in map_:
             method = map_["method"]
             args = map_.get("args", {})
-            return getattr(self, method)(**args) # type: ignore
+            return getattr(self, method)(**args)  # type: ignore
         if "spec_file" in map_:
             file_pattern = map_.pop("spec_file")
             pref, suff = file_pattern.split("*") if "*" in file_pattern else ("", "")
@@ -428,20 +447,28 @@ class Dataloader(object):
             "map_id": map_["map_id"],
             "name": map_["name"],
             "default_level": map_["default_level"],
-            "levels": [{"index": i, "name": level["label"]} for i, level in enumerate(levels)]
+            "levels": [
+                {"index": i, "name": level["label"]} for i, level in enumerate(levels)
+            ],
         }
         return params
 
-    def get_datasets(self, full: bool=False) -> Union[GroupedDatasets, FilteredGroupedDatasets]:
+    def get_datasets(
+        self, full: bool = False
+    ) -> Union[GroupedDatasets, FilteredGroupedDatasets]:
         if full:
             return self.datasets
         datasets: FilteredGroupedDatasets = []
         for dataset_group in self.datasets:
             group = dataset_group["group"]
             maps = dataset_group["maps"]
-            filtered_maps: list[DatasetInformation] = [self.get_dataset_information(m) for m in maps]
-            datasets.append({
-                "group": group,
-                "maps": filtered_maps,
-            })
+            filtered_maps: list[DatasetInformation] = [
+                self.get_dataset_information(m) for m in maps
+            ]
+            datasets.append(
+                {
+                    "group": group,
+                    "maps": filtered_maps,
+                }
+            )
         return datasets
