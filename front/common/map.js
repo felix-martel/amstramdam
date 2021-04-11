@@ -10,6 +10,25 @@ const LAYERS = {
     bwSSL: 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
 };
 
+const DATA_CREDITS = `Data by <a href="http://openstreetmap.org">OpenStreetMap</a>,
+under <a href="http://www.openstreetmap.org/copyright">ODbL</a> and
+<a href="https://simplemaps.com/data/world-cities">World Cities Database</a>
+under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`;
+
+const TILES = {
+    toner: {
+        id: "toner",
+        url: "https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png",
+        credits: `Tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.`,
+        style: {},
+    },
+    terrain: {
+        id: "terrain",
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}",
+        credits: "Tiles &copy; Esri &mdash; Source: Esri",
+    },
+};
+
 const CREDITS = `Map tiles by <a href="http://stamen.com">Stamen Design</a>,
 under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.
 Data by <a href="http://openstreetmap.org">OpenStreetMap</a>,
@@ -63,5 +82,5 @@ const defaultBounds = [
 ];
 
 export {
-    LAYERS, CREDITS, CREDITS_SHORT, getIcon, defaultView, defaultBounds
+    LAYERS, TILES, DATA_CREDITS, CREDITS, CREDITS_SHORT, getIcon, defaultView, defaultBounds
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="map-wrapper" :class="{shaded: shaded}">
+  <div id="map-wrapper" :class="[mapClass, shaded ? 'shaded': '']">
     <div id="mapid"></div>
   </div>
 </template>
@@ -59,6 +59,11 @@ export default {
 
     hasOwnGuess () {
       return typeof  this.ownGuess !== "undefined";
+    },
+
+    mapClass () {
+      console.log(this.tileType);
+      return this.tileType;
     },
 
     ...mapState({
@@ -353,5 +358,9 @@ export default {
 .truth-icon .icon-label:hover {
   background-color: blue !important;
   opacity: 1 !important;
+}
+
+.terrain .leaflet-tile {
+  filter: grayscale(100%) brightness(50%) contrast(250%);
 }
 </style>

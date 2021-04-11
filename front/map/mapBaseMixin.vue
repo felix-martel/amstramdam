@@ -6,12 +6,13 @@
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import constants from "../common/constants";
-import {LAYERS, CREDITS, defaultView, defaultBounds, getIcon} from "../common/map";
+import {LAYERS, CREDITS, TILES, DATA_CREDITS, defaultView, defaultBounds, getIcon} from "../common/map";
 export default {
   data() {
     return {
       canvas: undefined,
       map: undefined,
+      tileType: "",
     }
   },
 
@@ -41,7 +42,7 @@ export default {
       bounds = defaultBounds,
       credits = CREDITS,
       maxZoom = 18,
-      tiles = LAYERS.bwSSL,
+      tiles = TILES.toner,
       extraCanvasParams = {},
       extraTileParams = {},
     } = {}) {
@@ -64,9 +65,10 @@ export default {
       else if (typeof maxZoom === "undefined"){
         this.canvas.setMaxZoom(18);
       }
-      this.map = L.tileLayer(tiles, {
+      this.tileType = tiles.id;
+      this.map = L.tileLayer(tiles.url, {
         zoomControl: false,
-        attribution: credits,
+        attribution: tiles.credits + DATA_CREDITS,
         ...extraTileParams
       });
       this.map.addTo(this.canvas);
