@@ -5,7 +5,7 @@
 Le but est de localiser des villes de France et du monde le plus précisément et le plus rapidement possible, 
 sur le modèle de Jeux Géographiques. Hébergé par Heroku à l'adresse [amstramdam.com](https://www.amstramdam.com). 
 
-Fonctionne avec `Python 3.8`, `Flask` et `SocketIO`. Le serveur est géré par `eventlet` 
+Fonctionne avec `Python 3.9`, `Flask` et `SocketIO`. Le serveur est géré par `eventlet` 
 et les fonds de carte proviennent de 
 [Stamen](http://maps.stamen.com/#toner/12/37.7706/-122.3782)+[OpenStreetMap](http://openstreetmap.org/). 
 
@@ -42,7 +42,7 @@ openssl req -x509 -newkey rsa:4096 -keyout extra/certif.key -out extra/certif.cr
 
 Lancement du serveur 
 ```
-python server.py [--debug] [--threading]
+python server.py [--debug]
 ```
 Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugger. Sinon, `eventlet` est utilisé.
 
