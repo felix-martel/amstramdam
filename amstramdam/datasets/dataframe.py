@@ -233,16 +233,10 @@ class UnifiedDataFrame:
         if not renamed:
             return self.df.loc[self.mask].to_dict(*args, **kwargs)  # type: ignore
         renamed_df = self.df.loc[self.mask].rename(columns=self.reversed_converter)
-        if "hint" not in renamed_df.columns:
-            renamed_df = pd.concat(
-                [renamed_df, pd.Series("", index=renamed_df.index, name="hint")],
-                axis="columns",
-            )
+        if "hint" not in renamed_df.columns or not self.use_hint:
+            renamed_df["hint"] = ""
         if "group" not in renamed_df.columns:
-            renamed_df = pd.concat(
-                [renamed_df, pd.Series(0, index=renamed_df.index, name="group")],
-                axis="columns",
-            )
+            renamed_df["group"] = 0
         return renamed_df.to_dict(*args, **kwargs)  # type: ignore
 
     @property

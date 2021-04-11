@@ -83,7 +83,7 @@ class Game:
         dist_param: Optional[int] = None,
         is_permanent: bool = False,
         precision_mode: bool = False,
-        difficulty: int = 1,
+        difficulty: int = 0,
         is_public: bool = False,
         creation_date: Optional[datetime] = None,
         allow_zoom: bool = False,
