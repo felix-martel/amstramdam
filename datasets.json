@@ -164,6 +164,15 @@
             }
           ]
         },
+        {
+          "map_id": "alps",
+          "name": "Sommets des Alpes",
+          "file": "data/misc/alps.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "use_hint": false,
+          "single_group": true
+        },
       {
         "map_id": "paris_landmarks",
         "name": "Monuments parisiens",

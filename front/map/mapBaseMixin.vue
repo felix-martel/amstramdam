@@ -42,10 +42,11 @@ export default {
       bounds = defaultBounds,
       credits = CREDITS,
       maxZoom = 18,
-      tiles = TILES.toner,
+      tiles = "toner",
       extraCanvasParams = {},
       extraTileParams = {},
     } = {}) {
+      let tileParams = TILES[tiles];
       this.canvas = L.map(identifier, {
         scrollWheelZoom: allowZoom,
         doubleClickZoom: allowZoom,
@@ -65,10 +66,10 @@ export default {
       else if (typeof maxZoom === "undefined"){
         this.canvas.setMaxZoom(18);
       }
-      this.tileType = tiles.id;
-      this.map = L.tileLayer(tiles.url, {
+      this.tileType = tileParams.id;
+      this.map = L.tileLayer(tileParams.url, {
         zoomControl: false,
-        attribution: tiles.credits + DATA_CREDITS,
+        attribution: tileParams.credits + DATA_CREDITS,
         ...extraTileParams
       });
       this.map.addTo(this.canvas);
