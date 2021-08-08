@@ -1,5 +1,15 @@
 from amstramdam._types.game import RoundScore
 from dataclasses import dataclass
+from typing import TypedDict
+
+
+class ScoringParams(TypedDict, total=False):
+    time_param: int
+    dist_param: int
+    precision_mode: bool
+    non_linear_bonus: bool
+    non_linear_bonus_amount: float
+    multiplier: int
 
 
 @dataclass

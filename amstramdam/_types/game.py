@@ -2,6 +2,7 @@ from typing import NewType, TypedDict
 
 PlayerId = NewType("PlayerId", str)
 PlayerName = NewType("PlayerName", str)
+GameName = NewType("GameName", str)
 
 
 class Coordinates(TypedDict):
@@ -13,6 +14,9 @@ class Place(TypedDict):
     name: str
     hint: str
     coords: Coordinates
+
+
+BoundingBoxArray = tuple[tuple[float, float], tuple[float, float]]
 
 
 class RoundScore(TypedDict):
