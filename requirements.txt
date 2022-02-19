@@ -10,3 +10,6 @@ bidict
 tqdm
 pytest
 lxml
+mypy
+flake8
+black
