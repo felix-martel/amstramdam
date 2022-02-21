@@ -1,16 +1,17 @@
 from typing import Any, Iterable, Optional, Union
 import string
 from collections import defaultdict, Counter
+from datetime import datetime, timedelta
 
 import pandas as pd
 import numpy as np
 
 from .game import GameRun, load_cities, PlaceToGuess
 from ..datasets import dataloader
-from datetime import datetime, timedelta
 import random
 import amstramdam.game.status as status
 from amstramdam.datasets.game_map import GameMap
+from amstramdam import utils
 from .types import (
     Player,
     Pseudo,
@@ -150,14 +151,7 @@ class Game:
         # self.run_in_progress = False
 
     def get_new_id(self) -> str:
-        return "".join(
-            random.choices(
-                string.ascii_lowercase + string.ascii_uppercase + string.digits, k=16
-            )
-        )
-        # curr_id = self.__id_counter
-        # self.__id_counter += 1
-        # return str(curr_id)
+        return utils.random.generate_random_identifier(length=16)
 
     def generate_player_name(self) -> Player:
         return Player(f"{self.name}_{self.get_new_id()}")
