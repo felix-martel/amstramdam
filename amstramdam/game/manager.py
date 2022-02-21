@@ -5,6 +5,8 @@ import random
 from typing import Any, Optional, Generator
 from unidecode import unidecode
 from amstramdam.game.types import GameName, AvailableGames
+from amstramdam import utils
+
 
 with open("data/game_names.txt", "r", encoding="utf8", errors="ignore") as f:
     VALID_GAME_NAMES = {GameName(unidecode(line.rstrip())) for line in f}
@@ -22,6 +24,8 @@ def create_game(
         if name in MANAGER:
             disambig[name] += 1
             name = GameName(f"{name}_{disambig[name]}")
+    elif not kwargs.get("is_public", True):
+        name = GameName(utils.random.generate_random_identifier(12))
     else:
         names = list(VALID_GAME_NAMES - MANAGER.keys())
         if names:
