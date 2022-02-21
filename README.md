@@ -1,5 +1,10 @@
 # am·stram·dam
 
+<a href="https://github.com/felix-martel/amstramdam/actions"><img src="https://img.shields.io/github/workflow/status/felix-martel/amstramdam/python-ci?label=checks"></a>
+<a href="https://github.com/felix-martel/amstramdam/releases"><img src="https://img.shields.io/github/v/release/felix-martel/amstramdam"></a>
+<a href="https://github.com/felix-martel/amstramdam/commits/master"><img src="https://img.shields.io/github/last-commit/felix-martel/amstramdam"></a>
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+
 *Le jeu original est accessible ici : [jeux-geographiques.com](https://www.jeux-geographiques.com/)*
 
 Le but est de localiser des villes de France et du monde le plus précisément et le plus rapidement possible, 
