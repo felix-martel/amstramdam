@@ -3,6 +3,7 @@ from typing import Optional
 from amstramdam import socketio, timers, manager
 from flask import session, url_for
 from flask_socketio import emit, join_room, leave_room, close_room
+
 from .utils import safe_cancel
 from amstramdam.events.types import (
     InitNotification,
@@ -11,7 +12,8 @@ from amstramdam.events.types import (
     PlayerLeftNotification,
     ConnectionPayload,
 )
-from amstramdam.game.types import GameName, Player, Pseudo
+from amstramdam.game.types import GameName, Player
+from amstramdam import utils
 
 
 @socketio.on("connection")
@@ -24,17 +26,14 @@ def init_game(data: ConnectionPayload) -> None:
         print(f"Game <game:{game_name}> does not exist")
         del session["game"]
         emit("redirect", RedirectNotification(url=url_for("serve_main")), json=True)
-        # return redirect(url_for("serve_main"))
 
     join_room(game_name)
     game = manager.get_game(game_name)
     if game is None:
         raise KeyError(f"Game <game:{game_name}> is None")
-    pseudo: Optional[str]
-    if "pseudo" in data and data["pseudo"]:
-        pseudo = Pseudo(data["pseudo"])
-    else:
-        pseudo = None
+    pseudo: Optional[str] = data.get("pseudo")
+    if utils.nickname.is_valid(pseudo):
+        pseudo = utils.nickname.clean(data["pseudo"])
     if "player" in session:
         player = session["player"]
         print(f"Receive <event:connection> from existing player <player:{player}>")
