@@ -12,21 +12,8 @@ from amstramdam.events.types import (
     GameChangeNotification,
 )
 from amstramdam.game.params_handler import merge_params
-from amstramdam.game.types import GameName, Pseudo, Player
-
-MAX_LEN = 20
-
-
-def is_valid_pseudo(name: str) -> bool:
-    # TODO: implement checks?
-    name = str(name)
-    return len(name) > 0
-
-
-def process_pseudo(name: str) -> Pseudo:
-    if len(name) > MAX_LEN + 3:
-        name = name[:MAX_LEN] + "..."
-    return Pseudo(name)
+from amstramdam.game.types import GameName, Player
+from amstramdam import utils
 
 
 @socketio.on("chat:send")
@@ -45,22 +32,22 @@ def process_chat_message(message: str) -> None:
 
 
 @socketio.on("name-change")
-def update_pseudo(data: NameChangePayload) -> None:
+def update_nickname(data: NameChangePayload) -> None:
     game_name: GameName = session["game"]
     player: Optional[Player] = session.get("player")
     game = manager.get_game(game_name)
     if player is None or game is None:
         return
 
-    pseudo = data["name"]
-    if is_valid_pseudo(pseudo):
-        pseudo = process_pseudo(pseudo)
-        game.add_pseudo(player, pseudo)
+    nickname = data["name"]
+    if utils.nickname.is_valid(nickname):
+        nickname = utils.nickname.clean(nickname)
+        game.players.add_nickname(player, nickname)
     else:
-        pseudo = game.request_pseudo(player)
+        nickname = game.players.request_nickname(player)
     emit(
         "new-name",
-        NewNameNotification(player=player, pseudo=pseudo),
+        NewNameNotification(player=player, pseudo=nickname),
         room=game_name,
         broadcast=True,
         json=True,

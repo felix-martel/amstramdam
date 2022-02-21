@@ -38,7 +38,7 @@ if __name__ == "__main__":
                 force_name="__debug__",
             )
             for _ in range(3):
-                game.add_player(pseudo=None)
+                game.add_player(nickname=None)
             message += ", debug game created at https://localhost/game/__debug__"
 
         if check_loading:

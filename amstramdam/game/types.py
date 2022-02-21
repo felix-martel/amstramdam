@@ -1,4 +1,3 @@
-
 from typing import (
     Optional,
     Any,
@@ -76,7 +75,7 @@ class GameMetrics(TypedDict):
 class GameParams(GameRunParams):
     n_run: int
     map: str
-    pseudos: dict[Player, Pseudo]
+    nicknames: dict[Player, Pseudo]
     wait_time: int
     difficulty: int
     is_public: bool

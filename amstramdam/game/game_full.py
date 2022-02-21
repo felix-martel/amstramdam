@@ -1,5 +1,4 @@
 from typing import Any, Iterable, Optional, Union
-import string
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta
 
@@ -8,10 +7,9 @@ import numpy as np
 
 from .game import GameRun, load_cities, PlaceToGuess
 from ..datasets import dataloader
-import random
 import amstramdam.game.status as status
 from amstramdam.datasets.game_map import GameMap
-from amstramdam import utils
+from amstramdam.game.players import PlayerList
 from .types import (
     Player,
     Pseudo,
@@ -26,9 +24,6 @@ from .types import (
     Leaderboard,
     GameName,
 )
-
-with open("data/player_names.txt", "r", encoding="utf8", errors="ignore") as f:
-    NAMES: set[Pseudo] = {Pseudo(line.rstrip()) for line in f}
 
 
 def choose_countries(
@@ -66,10 +61,6 @@ def choose_depts(
     return pd.DataFrame(cities)
 
 
-available_names: set[Pseudo] = set(NAMES)
-global_player_list: set[Player] = set()
-
-
 def get_cities(map: dict[str, Any]) -> Iterable[PlaceToGuess]:
     return load_cities(map["fname"], map["min-pop"])
 
@@ -91,20 +82,17 @@ class Game:
         duration: int = 10,
         wait_time: int = 8,
         map: str = "world",
-        pseudos: Optional[dict[Player, Pseudo]] = None,
+        nicknames: Optional[dict[Player, Pseudo]] = None,
         # **kwargs,
     ) -> None:
         self.name = name
         self.map_name = map
-        game_map: GameMap = dataloader.load(
-            self.map_name, difficulty
-        )  # GameMap.from_name(self.map_name)
+        game_map: GameMap = dataloader.load(self.map_name, difficulty)
         self.map_display_name = game_map.name
         self.is_permanent = is_permanent
         if dist_param is None:
             dist_param = game_map.distance
         self.bbox = game_map.bbox
-        # self.map_info = map
         self.difficulty = difficulty
         self.n_run = n_run
         self.dist_param = dist_param
@@ -115,29 +103,19 @@ class Game:
         )  # When the characteristic distance is below 15km
         self.__curr_run_id = 0
         self.allow_zoom = allow_zoom
-        if players is None:
-            players = set()
-        self.players = set(players)
-        self.places = game_map.sample(
-            self.n_run
-        )  # random.sample(get_cities(map), self.n_run)
+        self.players = PlayerList(
+            game_name=self.name, players=players, nicknames=nicknames
+        )
+        self.places = game_map.sample(self.n_run)
         self.duration = duration
         self.runs = [
             GameRun(place=place, **self.get_run_params()) for place in self.places
         ]
-        # names = list(NAMES - self.players)
-        # random.shuffle(names)
-        self.global_player_list = global_player_list
-        self.available_names = available_names.copy()  # set(names)
         self.wait_time = wait_time
-        self.records: list[list[Record]] = []  # defaultdict(list)
+        self.records: list[list[Record]] = []
         self.scores: defaultdict[Player, int] = defaultdict(int)
         self.is_public = is_public
-        if pseudos is None:
-            pseudos = dict()
-        pseudos = {k: v for k, v in pseudos.items() if k in self.players}
         self.done = False
-        self.pseudos = pseudos
         self.metrics: GameMetrics = dict(
             distance=defaultdict(list), delay=defaultdict(list)
         )
@@ -148,17 +126,10 @@ class Game:
         self.launched: bool = False
         self.status = status.NOT_LAUNCHED
         self.__id_counter = len(self.players)
-        # self.run_in_progress = False
-
-    def get_new_id(self) -> str:
-        return utils.random.generate_random_identifier(length=16)
-
-    def generate_player_name(self) -> Player:
-        return Player(f"{self.name}_{self.get_new_id()}")
 
     def get_run_params(self) -> FullGameRunParams:
         return FullGameRunParams(
-            players=self.players,
+            players=self.players.ids,
             dist_param=self.dist_param,
             time_param=self.time_param,
             precision_mode=self.precision_mode,
@@ -168,14 +139,13 @@ class Game:
 
     def get_params(self) -> GameParams:
         return GameParams(
-            players=set(self.players),
+            players=set(self.players.ids),
             n_run=self.n_run,
             time_param=self.time_param,
             dist_param=self.dist_param,
             duration=self.duration,
             map=self.map_name,
-            # map_display=self.map_display_name,
-            pseudos=self.pseudos,
+            nicknames=self.players.nicknames,
             wait_time=self.wait_time,
             difficulty=self.difficulty,
             is_public=self.is_public,
@@ -201,79 +171,21 @@ class Game:
 Amstramdam {'Public' if self.is_public else 'Private'} Game
 Map: {self.map_display_name}
 Difficulty: {100. * self.difficulty:.0f}%
-Players: {self.print_pseudos()}
+Players: {self.players.format()}
 Places: {', '.join([p[0][0] for p in self.places])}
 Run: {self.curr_run_id + 1}/{self.n_run}
 ---"""
 
-    def generate_new_pseudo(self) -> Pseudo:
-        if self.available_names:
-            pseudo = self.available_names.pop()
-        else:
-            pseudo = random.choice(list(NAMES))
-        return Pseudo(pseudo)
-
-    def print_pseudos(self) -> str:
-        pseudos = []
-        for player in self.players:
-            pseudo = self.get_pseudo(player)
-            if pseudo and str(pseudo) != str(player):
-                pseudos.append(f"{player} ({pseudo})")
-            else:
-                pseudos.append(player)
-        return ", ".join(pseudos)
-
     def add_player(
-        self, name: Optional[Player] = None, pseudo: Optional[Pseudo] = None
+        self, player: Optional[Player] = None, nickname: Optional[Pseudo] = None
     ) -> tuple[Player, Pseudo]:
-        if name is not None:
-            assert (
-                name not in self.global_player_list and name not in self.players
-            ), f"Name '{name}' already exists"
-            # assert name not in self.players, f"Name '{name}' already exists"
-        else:
-            name = self.generate_player_name()
-            while name in self.players:
-                name = self.generate_player_name()  # self.available_names.pop()
-        self.players.add(name)
-        self.global_player_list.add(name)
-        if pseudo is None:
-            pseudo = self.generate_new_pseudo()
-        self.add_pseudo(name, pseudo)
+        player, nickname = self.players.add_player(player, nickname)
+        return player, nickname
 
-        return name, pseudo
-
-    def add_pseudo(self, name: Player, pseudo: Pseudo) -> None:
-        if name not in self.players:
-            print(f"Ignored unknown player '{name}'")
-        self.pseudos[name] = pseudo
-
-    def request_pseudo(self, name: Player) -> Pseudo:
-        pseudo = self.generate_new_pseudo()
-        self.add_pseudo(name, pseudo)
-        return pseudo
-
-    def remove_pseudo(self, name: Player) -> None:
-        if name in self.pseudos:
-            del self.pseudos[name]
-
-    def get_pseudo(self, name: Player) -> Pseudo:
-        return self.pseudos.get(name, Pseudo(name))
-
-    def remove_player(self, name: Player) -> None:
-        if name in self.global_player_list:
-            self.global_player_list.remove(name)
-
-        if name not in self.players:
-            return
-        # if name in NAMES:
-        #     self.available_names.add(name)
-        self.players.remove(name)
-        self.remove_pseudo(name)
-        # if name in self.records:
-        #     del self.records[name]
-        if name in self.scores:
-            del self.scores[name]
+    def remove_player(self, player: Player) -> None:
+        self.players.remove_player(player)
+        if player in self.scores:
+            del self.scores[player]
 
     @property
     def current(self) -> GameRun:
@@ -321,9 +233,7 @@ Run: {self.curr_run_id + 1}/{self.n_run}
 
         final_results = GameFinalResults(
             records=self.get_filtered_records(),
-            # scores=self.scores,
             places=self.places_as_json(),
-            # summary=results
         )
         return final_results
 
