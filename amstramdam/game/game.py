@@ -123,7 +123,7 @@ class GameRun:
         t = 0.2 * self.SCORE_MULTIPLIER
         # Last n kilometers for the non-linear bonus
         g = 0.2 * self.dist_param
-        return (t / g ** 2) * max(0, g - dist) ** 2
+        return (t / g**2) * max(0, g - dist) ** 2
 
     def dist_score(self, dist: float, non_linear: Optional[bool] = None) -> float:
         s = self.SCORE_MULTIPLIER * max(0, 1 - (dist / self.dist_param))

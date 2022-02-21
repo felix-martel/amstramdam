@@ -45,22 +45,22 @@ def process_chat_message(message: str) -> None:
 
 
 @socketio.on("name-change")
-def update_pseudo(data: NameChangePayload) -> None:
+def update_nickname(data: NameChangePayload) -> None:
     game_name: GameName = session["game"]
     player: Optional[Player] = session.get("player")
     game = manager.get_game(game_name)
     if player is None or game is None:
         return
 
-    pseudo = data["name"]
-    if is_valid_pseudo(pseudo):
-        pseudo = process_pseudo(pseudo)
-        game.add_pseudo(player, pseudo)
+    nickname = data["name"]
+    if is_valid_pseudo(nickname):
+        nickname = process_pseudo(nickname)
+        game.players.add_nickname(player, nickname)
     else:
-        pseudo = game.request_pseudo(player)
+        nickname = game.players.request_nickname(player)
     emit(
         "new-name",
-        NewNameNotification(player=player, pseudo=pseudo),
+        NewNameNotification(player=player, pseudo=nickname),
         room=game_name,
         broadcast=True,
         json=True,

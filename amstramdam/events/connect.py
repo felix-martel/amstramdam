@@ -41,7 +41,7 @@ def init_game(data: ConnectionPayload) -> None:
         if player not in game.players:
             game.add_player(player, pseudo)
     else:
-        player, pseudo = game.add_player(pseudo=pseudo)
+        player, pseudo = game.add_player(nickname=pseudo)
         session["player"] = player
 
     print(f"Player <{player}> connected to game <{game_name}> with pseudo <{pseudo}>")
@@ -56,10 +56,9 @@ def init_game(data: ConnectionPayload) -> None:
             current=game.curr_run_id,
             runs=game.n_run,
             diff=game.difficulty,
-            # precision=game.precision_mode,
             game_name=game.map_display_name,
             leaderboard=leaderboard,
-            pseudos=game.pseudos,
+            pseudos=game.players.nicknames,
         ),
     )
     emit(
