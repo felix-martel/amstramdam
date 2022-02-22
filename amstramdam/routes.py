@@ -63,7 +63,7 @@ def get_dataset_geometry(dataset):
 
 @app.route("/dataset/<dataset>")
 def get_edit_information(dataset):
-    data = dataloader.load(dataset).get_dataframe_as_json()
+    data = dataloader.load(dataset).jsonify_dataset()
     return jsonify(data)
 
 
