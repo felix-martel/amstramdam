@@ -65,6 +65,7 @@ DEFAULT_PARAMS: dict[str, Any] = dict(
     harshness=0.7,
     use_hint=True,
     single_group=False,
+    tiles="flat",
     levels=[
         dict(label="Facile", weights=[1]),
         dict(label="Moyen", weights=[1, 1]),

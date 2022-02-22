@@ -31,6 +31,7 @@ class GameMap:
         weights: Optional[list[float]] = None,
         min_group: int = 0,
         max_group: Optional[int] = None,
+        tiles: str = "flat",
         **extra_params: Any
     ) -> None:
         self.name = name
@@ -48,6 +49,7 @@ class GameMap:
         self.harshness = arg_or_default(harshness, 0.7)
         self.bbox = self.get_bounding_box()
         self.char_dist = self.get_characteristic_distance()
+        self.tiles = tiles
 
     def get_bounding_box(self) -> BoundingBoxArray:
         return [

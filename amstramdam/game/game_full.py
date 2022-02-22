@@ -103,6 +103,7 @@ class Game:
         )  # When the characteristic distance is below 15km
         self.__curr_run_id = 0
         self.allow_zoom = allow_zoom
+        self.tiles = game_map.tiles
         self.players = PlayerList(
             game_name=self.name, players=players, nicknames=nicknames
         )
