@@ -170,10 +170,10 @@
 168,http://fr.dbpedia.org/resource/Col_de_la_Portette,Col de la Portette,5.29472,44.9567,1175.0,Vercors,col,3,Col de la Portette,Vercors
 169,http://fr.dbpedia.org/resource/Col_Lacroix,Col Lacroix,7.02328,44.7645,2298.0,Alpes cottiennes,col,3,Col Lacroix,Alpes cottiennes
 170,http://fr.dbpedia.org/resource/Col_du_Chaussy,Col du Chaussy,6.35647,45.3438,1533.0,Vanoise,col,3,Col du Chaussy,Vanoise
-171,http://fr.dbpedia.org/resource/Col_de_Couz,Col de Couz,5.81722,45.4692,624.0,0,col,3,Col de Couz,0
-172,http://fr.dbpedia.org/resource/Col_du_Galibier,Col du Galibier,6.40862,45.0643,2642.0,0,col,0,Col du Galibier,0
-173,http://fr.dbpedia.org/resource/Col_de_la_Croix-Haute,Col de la Croix-Haute,5.67755,44.7248,1176.0,0,col,3,Col de la Croix-Haute,0
-174,http://fr.dbpedia.org/resource/Col_d'Ornon,Col d'Ornon,5.96757,45.0088,1367.0,0,col,2,Col d'Ornon,0
+171,http://fr.dbpedia.org/resource/Col_de_Couz,Col de Couz,5.81722,45.4692,624.0,0,col,3,Col de Couz,""
+172,http://fr.dbpedia.org/resource/Col_du_Galibier,Col du Galibier,6.40862,45.0643,2642.0,0,col,0,Col du Galibier,""
+173,http://fr.dbpedia.org/resource/Col_de_la_Croix-Haute,Col de la Croix-Haute,5.67755,44.7248,1176.0,0,col,3,Col de la Croix-Haute,""
+174,http://fr.dbpedia.org/resource/Col_d'Ornon,Col d'Ornon,5.96757,45.0088,1367.0,0,col,2,Col d'Ornon,""
 175,http://fr.dbpedia.org/resource/Hirmentaz,Hirmentaz,6.495,46.2297,1607.0,Chablais,ski,2,Hirmentaz,
 176,http://fr.dbpedia.org/resource/Semnoz,Semnoz,6.10472,45.7972,1699.0,Bauges,ski,0,Semnoz,
 177,http://fr.dbpedia.org/resource/Auris,Auris,6.0875,45.0472,1240.0,0,ski,3,Auris,
@@ -859,10 +859,10 @@
 857,http://fr.dbpedia.org/resource/Grand_Assaly,Grand Assaly,6.97028,45.6542,3173.0,Alpes grées,sommet,4,Grand Assaly,Alpes grées
 858,http://fr.dbpedia.org/resource/Gros_Rognon,Gros Rognon,6.90444,45.8683,3541.0,Mont-Blanc,sommet,4,Gros Rognon,Mont-Blanc
 859,http://fr.dbpedia.org/resource/Le_Grand_Manti,Le Grand Manti,5.90861,45.3847,1818.0,Chartreuse,sommet,4,Le Grand Manti,Chartreuse
-860,http://fr.dbpedia.org/resource/Mont_Ventoux,Mont Ventoux,5.27889,44.1744,1911.0,0,sommet,0,Mont Ventoux,0
-861,http://fr.dbpedia.org/resource/Sommarel,Sommarel,5.90047,44.6463,2400.0,0,sommet,4,Sommarel,0
-862,http://fr.dbpedia.org/resource/Pointe_de_Platé,Pointe de Platé,6.73056,45.9653,2554.0,0,sommet,4,Pointe de Platé,0
-863,http://fr.dbpedia.org/resource/Aiguille_de_Varan,Aiguille de Varan,6.68278,45.9583,2544.0,0,sommet,4,Aiguille de Varan,0
+860,http://fr.dbpedia.org/resource/Mont_Ventoux,Mont Ventoux,5.27889,44.1744,1911.0,0,sommet,0,Mont Ventoux,""
+861,http://fr.dbpedia.org/resource/Sommarel,Sommarel,5.90047,44.6463,2400.0,0,sommet,4,Sommarel,""
+862,http://fr.dbpedia.org/resource/Pointe_de_Platé,Pointe de Platé,6.73056,45.9653,2554.0,0,sommet,4,Pointe de Platé,""
+863,http://fr.dbpedia.org/resource/Aiguille_de_Varan,Aiguille de Varan,6.68278,45.9583,2544.0,0,sommet,4,Aiguille de Varan,""
 864,,Gap,6.079432600191486,44.5595869312691,,,ville,0,,
 865,,Embrun,6.495560952335447,44.56485713871447,,,ville,0,,
 866,,Les Orres,6.554023109652923,44.49710763054921,1650.0,Parpaillon,ski,0,,
@@ -916,7 +916,7 @@
 914,,Névache,6.610107202646259,45.02034244983677,,,ville,1,,
 915,,Le Monétier-les-Bains,6.509086708829712,44.97685437584322,,,ville,2,,
 916,,Les Contamines-Montjoie,6.729091591806778,45.82252717690924,,,ville,1,,
-917,Bourg-Saint-Maurice,,6.7680574366519695,45.616137255196975,,,ville,0,,
+917,"",Bourg-Saint-Maurice,6.7680574366519695,45.616137255196975,,,ville,0,,
 918,,Sainte-Foy-Tarentaise,6.884334129135975,45.59180985239221,,,ville,1,,
 919,,Cluses,6.581036552262885,46.06311628337413,,,ville,0,,
 920,,Séchilienne,5.844316911130973,45.05730375511637,,,ville,1,,
