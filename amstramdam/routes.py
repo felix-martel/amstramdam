@@ -117,6 +117,7 @@ def serve_game(name):
             bbox=game.bbox,
             ssl_disabled=CONF["disableSSL"],
             difficulty=game.difficulty,
+            tiles=game.tiles,
             allow_zoom=game.allow_zoom,
             precision_mode=game.precision_mode,
             duration=game.duration,

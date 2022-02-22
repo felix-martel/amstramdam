@@ -6,6 +6,8 @@ const LAYERS = {
     alt: 'https://tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png',
     watercolor: 'http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
     terrain: 'http://c.tile.stamen.com/terrain-background/{z}/{x}/{y}.jpg',
+    labelled: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+    terrainSSL: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}',
     bw: 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
     bwSSL: 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
 };
