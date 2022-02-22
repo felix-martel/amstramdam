@@ -105,7 +105,7 @@ class GameMap:
         )
 
     def guessify_point(self, point: dict[str, Any]) -> PlaceToGuess:
-        return ((point["place"], point["hint"]), Point(point["lon"], point["lat"]))
+        return (str(point["place"]), point["hint"]), Point(point["lon"], point["lat"])
 
     def sample(self, k: int, verbose: bool = True) -> list[PlaceToGuess]:
         mask = self.df.group >= self.min_group
