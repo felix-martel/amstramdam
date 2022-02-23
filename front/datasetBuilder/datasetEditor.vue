@@ -36,7 +36,7 @@
     </table>
     <div class="dataset-control">
       <button @click="createPoint">Nouveau</button>
-      <button @click="commitChanges">Enregistrer</button>
+      <button disabled @click="commitChanges">Enregistrer</button>
       <button @click="downloadChanges">Télécharger</button>
     </div>
   </div>
@@ -56,7 +56,7 @@ import constants from "../common/constants";
 import mapBaseMixin from "../map/mapBaseMixin.vue";
 import {GET, POST, unproxify} from "../common/utils.js";
 import MapSelector from "../lobby/mapSelector.vue";
-import {getIcon} from "../common/map.js";
+import {LAYERS, getIcon} from "../common/map.js";
 
 export default {
   components: {MapSelector},
@@ -93,7 +93,8 @@ export default {
       maxZoom: 18,
       extraCanvasParams: {
         zoomSnap: 0.1
-      }
+      },
+      tiles: LAYERS.labelled,
     });
 
     this.loadPoints(this.baseMap);
@@ -209,6 +210,7 @@ export default {
     },
 
     commitChanges() {
+      return;
       const changes = this.changes;
       changes["auth"] = this.authKey;
       POST(`/commit/${this.baseMap.map_id}`, changes);

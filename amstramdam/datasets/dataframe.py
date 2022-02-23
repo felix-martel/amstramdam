@@ -122,15 +122,14 @@ class DataFrameLoader(object):
         df = self.load(filename, persist=False)
         types = {col: df[col].dtype for col in df.columns}
         if created:
-            added = pd.DataFrame.from_records(
-                created, index=[o["pid"] for o in created]
-            )
-            added = added.astype(types)
+            added = pd.DataFrame.from_records(created)
+            added.index = added.pid
+            added = added.astype(types, errors="ignore")
             df = df.append(added, verify_integrity=True)
         for pid, changes in updated.items():
             parsed_pid = int(pid)
             for col, value in changes.items():
-                casted_value = np.array([value], dtype=types.get(col))
+                casted_value = np.array([value], dtype=types.get(col))[0]
                 df.loc[parsed_pid, col] = casted_value
         df = df.drop(columns=["pid"])
         return df

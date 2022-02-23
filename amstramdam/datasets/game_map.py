@@ -89,7 +89,7 @@ class GameMap:
         )
 
     def jsonify_dataset(self) -> JsonifiedDataset:
-        records = list(self.df.to_records("records", renamed=False))
+        records = list(self.df.to_dict("records", renamed=False))
         return dict(
             dataset=self.name,
             points=records,
