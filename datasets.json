@@ -127,7 +127,7 @@
         "tiles": "terrain",
         "harshness": 0.65,
         "label*": ["Facile", "Normal", "Difficile"],
-        "weights*": [[1, 0.01], [1, 0.7, 0.1], [1, 1, 0.5]]
+        "weights*": [[1, 0.02], [1, 0.8, 0.1, 0.001], [1, 1, 1, 0.5]]
       },
       {
         "map_id": "aoc_fr",
