@@ -62,7 +62,7 @@ export default {
   components: {MapSelector},
   mixins: [mapBaseMixin],
   data() {
-    const levels = [true, false, false, false, false];
+    const levels = [true, false, false, false, false, false];
     return {
       levels: levels,
       columns: [],
