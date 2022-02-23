@@ -119,7 +119,7 @@
         "name": "Alpes",
         "file": "data/france/alps.csv",
         "use_hint": true,
-        "col_place": "name",
+        "col_place": "short_name",
         "col_hint": "hint",
         "col_lon": "lon",
         "col_lat": "lat",
