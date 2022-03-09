@@ -1,5 +1,5 @@
 <template>
-  <div id="map-wrapper" :class="{shaded: shaded}">
+  <div id="map-wrapper" :class="{shaded: shaded, terrain: isTerrain}">
     <div id="mapid"></div>
   </div>
 </template>
@@ -11,7 +11,7 @@ import constants from "../common/constants";
 import {mapState} from "vuex";
 import mapBaseMixin from "./mapBaseMixin.vue";
 import {summary2, generateFakeSummary} from "../common/debug.js";
-import {CREDITS, CREDITS_SHORT, getIcon} from "../common/map.js";
+import {CREDITS, CREDITS_SHORT, LAYERS, getIcon} from "../common/map.js";
 
 export default {
   data() {
@@ -21,7 +21,10 @@ export default {
       groundTruth: undefined,
       ownGuess: undefined,
       shaded: false,
+      tiles: LAYERS.bwSSL,
+      isTerrain: false,
       precorrectionState: undefined,
+      maxZoom: 18,
     }
   },
 
@@ -30,11 +33,17 @@ export default {
   ],
 
   mounted() {
+    if (this.params.tiles === "terrain") {
+      this.tiles = LAYERS.terrainSSL;
+      this.isTerrain = true;
+      this.maxZoom = 9;
+    }
     this.initialize("mapid", {
       allowZoom: true, // this.params.allow_zoom || this.isMobile,
       bounds: this.params.bbox,
-      maxZoom: canvas => (this.isMobile ? 18 : (canvas.getZoom() + 1)),
+      maxZoom: canvas => (this.isMobile ? this.maxZoom : Math.max(this.maxZoom, canvas.getZoom() + 1)),
       credits: this.isNarrow ? CREDITS_SHORT : CREDITS,
+      tiles: this.tiles
     });
     this.canvas.on("mousedown", this.ctrlClickMap);
     this.canvas.on("click", this.submitGuess);
@@ -75,7 +84,7 @@ export default {
       this.precorrectionState = this.getMapState();
       // Allow unrestricted zoom during correction
       this.enableZoom();
-      this.canvas.setMaxZoom(18);
+      this.canvas.setMaxZoom(this.maxZoom);
       this.displayGameSummary(summary);
     },
 
@@ -278,7 +287,7 @@ export default {
       const refState = this.getMapState();
       // Disable zoom events (which allows us to unset max zoom)
       this.disableZoom();
-      this.canvas.setMaxZoom(18);
+      this.canvas.setMaxZoom(this.maxZoom);
       const bounds = answers.getBounds().pad(0.5);
       this.canvas.flyToBounds(bounds, {
         duration: constants.animations.map.duration});
@@ -339,7 +348,6 @@ export default {
 
 </style>
 <style>
-
 .shaded .truth-icon:not(:hover) {
   /*opacity: 0!important;*/
   background-color: rgba(0, 0, 0, 0.2) !important;
@@ -353,5 +361,9 @@ export default {
 .truth-icon .icon-label:hover {
   background-color: blue !important;
   opacity: 1 !important;
+}
+
+.terrain img {
+  filter: grayscale(100%) brightness(55%) contrast(450%);
 }
 </style>

@@ -17,6 +17,7 @@
     "'self'",
     "data:",
     "stamen-tiles.a.ssl.fastly.net",
+    "server.arcgisonline.com",
     "tile.stamen.com"
   ],
   "style-src": [

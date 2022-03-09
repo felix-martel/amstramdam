@@ -63,7 +63,7 @@ def get_dataset_geometry(dataset):
 
 @app.route("/dataset/<dataset>")
 def get_edit_information(dataset):
-    data = dataloader.load(dataset).get_dataframe_as_json()
+    data = dataloader.load(dataset).jsonify_dataset()
     return jsonify(data)
 
 
@@ -117,6 +117,7 @@ def serve_game(name):
             bbox=game.bbox,
             ssl_disabled=CONF["disableSSL"],
             difficulty=game.difficulty,
+            tiles=game.tiles,
             allow_zoom=game.allow_zoom,
             precision_mode=game.precision_mode,
             duration=game.duration,

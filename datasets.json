@@ -115,6 +115,21 @@
         "single_group": true
       },
       {
+        "map_id": "alps_fr",
+        "name": "Alpes",
+        "file": "data/france/alps.csv",
+        "use_hint": true,
+        "col_place": "short_name",
+        "col_hint": "hint",
+        "col_lon": "lon",
+        "col_lat": "lat",
+        "col_group": "group",
+        "tiles": "terrain",
+        "harshness": 0.65,
+        "label*": ["Facile", "Normal", "Difficile"],
+        "weights*": [[1, 0.02], [1, 0.8, 0.1, 0.001], [1, 1, 1, 0.5]]
+      },
+      {
         "map_id": "aoc_fr",
         "name": "Spécialités françaises",
         "file": "data/france/food.csv",

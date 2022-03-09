@@ -31,6 +31,7 @@ class GameMap:
         weights: Optional[list[float]] = None,
         min_group: int = 0,
         max_group: Optional[int] = None,
+        tiles: str = "flat",
         **extra_params: Any
     ) -> None:
         self.name = name
@@ -48,6 +49,7 @@ class GameMap:
         self.harshness = arg_or_default(harshness, 0.7)
         self.bbox = self.get_bounding_box()
         self.char_dist = self.get_characteristic_distance()
+        self.tiles = tiles
 
     def get_bounding_box(self) -> BoundingBoxArray:
         return [
@@ -87,7 +89,7 @@ class GameMap:
         )
 
     def jsonify_dataset(self) -> JsonifiedDataset:
-        records = list(self.df.to_records("records", renamed=False))
+        records = list(self.df.to_dict("records", renamed=False))
         return dict(
             dataset=self.name,
             points=records,
@@ -103,7 +105,7 @@ class GameMap:
         )
 
     def guessify_point(self, point: dict[str, Any]) -> PlaceToGuess:
-        return ((point["place"], point["hint"]), Point(point["lon"], point["lat"]))
+        return (str(point["place"]), point["hint"]), Point(point["lon"], point["lat"])
 
     def sample(self, k: int, verbose: bool = True) -> list[PlaceToGuess]:
         mask = self.df.group >= self.min_group
