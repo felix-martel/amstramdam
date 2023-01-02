@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "@vue/compiler-sfc": "^3.0.2",
+    "@vue/compiler-sfc": "^3.2.45",
     "countup.js": "^2.0.7",
     "leaflet": "^1.7.1",
     "socket.io": "^3.1.1",
