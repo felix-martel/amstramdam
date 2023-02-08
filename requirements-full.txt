@@ -1,7 +1,7 @@
 bidict==0.21.2
 cffi==1.14.5
 click==7.1.2
-cryptography==3.4.6
+cryptography==39.0.1
 dnspython==1.16.0
 eventlet==0.30.1
 Flask==1.1.2
