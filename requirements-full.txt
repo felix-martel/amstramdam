@@ -24,4 +24,4 @@ pytz==2021.1
 six==1.15.0
 tqdm==4.57.0
 Unidecode==1.2.0
-Werkzeug==1.0.1
+Werkzeug==2.2.3
