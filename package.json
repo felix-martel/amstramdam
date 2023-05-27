@@ -12,7 +12,6 @@
     "socket.io-client": "^3.1.1",
     "vue": "^3.0.2",
     "vue-loader": "^16.0.0-rc.1",
-    "vue-select": "^3.10.8",
     "vuex": "^4.0.0-rc.1"
   },
   "devDependencies": {
@@ -44,7 +43,6 @@
   },
   "homepage": "https://github.com/felix-martel/amstramdam#readme",
   "engines": {
-    "node": "15.x",
-    "npm": "6.x"
+    "node": "16.x"
   }
 }
