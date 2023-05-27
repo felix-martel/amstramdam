@@ -68,7 +68,6 @@
 </template>
 
 <script>
-import vSelect from 'vue-select'
 import MapSelector from "./mapSelector.vue";
 import CollapsibleDiv from "../components/collapsibleDiv.vue";
 import HelpTooltip from "../components/helpTooltip.vue";
@@ -88,7 +87,6 @@ export default {
     HelpTooltip,
     CollapsibleDiv,
     MapSelector,
-    "v-select": vSelect,
   },
 
   emits: ["map-change", "difficulty-change", "launch"],
