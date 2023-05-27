@@ -38,7 +38,7 @@ with open("csp.json", "r", encoding="utf8") as fp:
 hosts = CONF["hosts"]
 hosts += ["www." + name for name in hosts]
 if IS_LOCAL:
-    hosts += ["127.0.0.1", "localhost"]
+    hosts += ["127.0.0.1", "localhost", "localhost:8000"]
 valid_hosts = (
     ["http://" + h for h in hosts]
     if CONF["disableSSL"]

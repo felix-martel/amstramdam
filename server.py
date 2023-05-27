@@ -18,9 +18,10 @@ if __name__ == "__main__":
     if IS_LOCAL and not CONF["disableSSL"]:
         kwargs["certfile"] = certfile
         kwargs["keyfile"] = keyfile
-        kwargs["port"] = int(os.environ.get("PORT", 443))
+        kwargs["port"] = int(os.environ.get("PORT", 8000))
     else:
         kwargs["port"] = int(os.environ.get("PORT", 80))
+
     if args.debug:
         kwargs["debug"] = True
         check_loading = False
