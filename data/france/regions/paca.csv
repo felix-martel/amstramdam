@@ -1,0 +1,305 @@
+com_id,reg_id,region,dep_id,arr_id,can_id,name,population,lat,lon,group
+13201,93,Provence-Alpes-Côte d'Azur,13,3,12,Marseille,876602,43.2999009436,5.38227869795,0
+6088,93,Provence-Alpes-Côte d'Azur,6,2,99,Nice,346376,43.7119992661,7.23826889465,0
+83137,93,Provence-Alpes-Côte d'Azur,83,2,99,Toulon,181506,43.1361589728,5.93239634249,0
+13001,93,Provence-Alpes-Côte d'Azur,13,1,97,Aix-en-Provence,150358,43.5360708378,5.39857444582,0
+84007,93,Provence-Alpes-Côte d'Azur,84,2,99,Avignon,92277,43.9352448339,4.84071572505,0
+6004,93,Provence-Alpes-Côte d'Azur,6,1,94,Antibes,75779,43.587465146,7.10635418256,0
+6029,93,Provence-Alpes-Côte d'Azur,6,1,96,Cannes,73159,43.5526202843,7.00427592728,0
+83126,93,Provence-Alpes-Côte d'Azur,83,2,98,La Seyne-sur-Mer,62999,43.0880294967,5.87089841754,0
+83061,93,Provence-Alpes-Côte d'Azur,83,1,96,Fréjus,56598,43.4719558114,6.76361597424,0
+83069,93,Provence-Alpes-Côte d'Azur,83,2,97,Hyères,55528,43.1018713534,6.18898508469,0
+6027,93,Provence-Alpes-Côte d'Azur,6,1,95,Cagnes-sur-Mer,52575,43.6715162078,7.15275703379,0
+13004,93,Provence-Alpes-Côte d'Azur,13,2,4,Arles,51691,43.5468692378,4.66215642574,0
+6069,93,Provence-Alpes-Côte d'Azur,6,1,98,Grasse,49607,43.655639428,6.93190508233,0
+13056,93,Provence-Alpes-Côte d'Azur,13,4,24,Martigues,49037,43.3798920489,5.04945402314,0
+13005,93,Provence-Alpes-Côte d'Azur,13,3,5,Aubagne,47640,43.2934843764,5.56331273477,0
+13103,93,Provence-Alpes-Côte d'Azur,13,1,99,Salon-de-Provence,45595,43.6462885238,5.06814649576,0
+13047,93,Provence-Alpes-Côte d'Azur,13,4,10,Istres,45119,43.5502689105,4.9511813524,0
+6030,93,Provence-Alpes-Côte d'Azur,6,1,97,Le Cannet,42524,43.5729768613,7.00642057758,0
+5061,93,Provence-Alpes-Côte d'Azur,5,2,99,Gap,41528,44.5798600596,6.06486052138,0
+83050,93,Provence-Alpes-Côte d'Azur,83,1,3,Draguignan,40362,43.5357513285,6.45436569191,0
+13028,93,Provence-Alpes-Côte d'Azur,13,3,8,La Ciotat,36812,43.1926410861,5.61318955778,0
+83118,93,Provence-Alpes-Côte d'Azur,83,1,14,Saint-Raphaël,36460,43.4574625431,6.84734210398,0
+83129,93,Provence-Alpes-Côte d'Azur,83,2,17,Six-Fours-les-Plages,35890,43.086818602,5.82924464931,0
+13117,93,Provence-Alpes-Côte d'Azur,13,4,29,Vitrolles,34814,43.4497831674,5.26357787665,0
+13054,93,Provence-Alpes-Côte d'Azur,13,4,11,Marignane,32735,43.4172068362,5.21221904548,0
+6083,93,Provence-Alpes-Côte d'Azur,6,2,14,Menton,31163,43.7908233727,7.49365612374,0
+84031,93,Provence-Alpes-Côte d'Azur,84,3,6,Carpentras,30564,44.0593802565,5.06134844776,0
+6123,93,Provence-Alpes-Côte d'Azur,6,1,6,Saint-Laurent-du-Var,30333,43.6859625772,7.18218791815,0
+84087,93,Provence-Alpes-Côte d'Azur,84,3,11,Orange,29103,44.128913537,4.8098792403,0
+6155,93,Provence-Alpes-Côte d'Azur,6,1,1,Vallauris,28168,43.5766472999,7.05836612893,0
+13063,93,Provence-Alpes-Côte d'Azur,13,4,27,Miramas,26807,43.5842134124,5.01384348574,1
+84035,93,Provence-Alpes-Côte d'Azur,84,1,7,Cavaillon,26206,43.8508361826,5.03606300916,0
+83062,93,Provence-Alpes-Côte d'Azur,83,2,6,La Garde,25876,43.1263279384,6.01898164719,1
+83144,93,Provence-Alpes-Côte d'Azur,83,2,21,La Valette-du-Var,24377,43.1499152044,5.99222538877,1
+4112,93,Provence-Alpes-Côte d'Azur,4,4,99,Manosque,23689,43.8354040831,5.79106654173,0
+13071,93,Provence-Alpes-Côte d'Azur,13,1,9,Les Pennes-Mirabeau,22174,43.4026791235,5.31547094057,1
+6079,93,Provence-Alpes-Côte d'Azur,6,1,13,Mandelieu-la-Napoule,22067,43.5380510468,6.91808936542,1
+13041,93,Provence-Alpes-Côte d'Azur,13,1,9,Gardanne,21850,43.4526063249,5.47963860272,2
+13002,93,Provence-Alpes-Côte d'Azur,13,3,3,Allauch,21769,43.3533145712,5.51134767187,1
+84089,93,Provence-Alpes-Côte d'Azur,84,1,13,Pertuis,20767,43.6872357464,5.52052480281,1
+6085,93,Provence-Alpes-Côte d'Azur,6,1,9,Mougins,20626,43.5961410556,7.00129444919,1
+84054,93,Provence-Alpes-Côte d'Azur,84,2,9,L'Isle-sur-la-Sorgue,20531,43.913397592,5.05664277545,1
+6157,93,Provence-Alpes-Côte d'Azur,6,1,26,Vence,19585,43.7384640641,7.10194436087,1
+83047,93,Provence-Alpes-Côte d'Azur,83,2,2,La Crau,19481,43.1635207421,6.09268351583,1
+84129,93,Provence-Alpes-Côte d'Azur,84,2,15,Sorgues,19176,44.0145763951,4.86740515419,1
+83116,93,Provence-Alpes-Côte d'Azur,83,3,13,Saint-Maximin-la-Sainte-Baume,18006,43.4509676414,5.85962873535,0
+83023,93,Provence-Alpes-Côte d'Azur,83,3,1,Brignoles,17964,43.3992941902,6.07740244296,1
+13026,93,Provence-Alpes-Côte d'Azur,13,4,11,Châteauneuf-les-Martigues,17883,43.3865906403,5.14753822568,2
+4070,93,Provence-Alpes-Côte d'Azur,4,3,98,Digne-les-Bains,17804,44.0908723554,6.23590323452,0
+83123,93,Provence-Alpes-Côte d'Azur,83,2,10,Sanary-sur-Mer,17440,43.138282853,5.79588814177,1
+84092,93,Provence-Alpes-Côte d'Azur,84,2,14,Le Pontet,17146,43.9683903531,4.86549590773,1
+6161,93,Provence-Alpes-Côte d'Azur,6,1,27,Villeneuve-Loubet,16588,43.6492560734,7.10728434873,1
+13027,93,Provence-Alpes-Côte d'Azur,13,2,7,Châteaurenard,16454,43.8824707581,4.83990004648,1
+13077,93,Provence-Alpes-Côte d'Azur,13,4,24,Port-de-Bouc,16422,43.4233518835,4.99266322339,2
+13039,93,Provence-Alpes-Côte d'Azur,13,4,10,Fos-sur-Mer,15685,43.4556812107,4.90452133912,2
+13108,93,Provence-Alpes-Côte d'Azur,13,2,7,Tarascon,15639,43.7939885332,4.68614849204,2
+13015,93,Provence-Alpes-Côte d'Azur,13,1,29,Bouc-Bel-Air,15257,43.4472296617,5.41237056144,1
+83115,93,Provence-Alpes-Côte d'Azur,83,1,15,Sainte-Maxime,14954,43.3564730986,6.61172790208,1
+83107,93,Provence-Alpes-Côte d'Azur,83,1,11,Roquebrune-sur-Argens,14522,43.4285090958,6.65212881719,1
+83090,93,Provence-Alpes-Côte d'Azur,83,2,10,Ollioules,14260,43.1386133658,5.85369204547,2
+84019,93,Provence-Alpes-Côte d'Azur,84,3,5,Bollène,14043,44.2882016409,4.75235956257,1
+13014,93,Provence-Alpes-Côte d'Azur,13,4,6,Berre-l'Étang,13903,43.5036442498,5.1606136975,1
+6152,93,Provence-Alpes-Côte d'Azur,6,1,25,Valbonne,13665,43.628288325,7.02954476696,1
+13097,93,Provence-Alpes-Côte d'Azur,13,2,27,Saint-Martin-de-Crau,13661,43.6119214615,4.85701475567,1
+6012,93,Provence-Alpes-Côte d'Azur,6,2,4,Beausoleil,13280,43.747724383,7.42222154586,1
+84080,93,Provence-Alpes-Côte d'Azur,84,3,10,Monteux,13206,44.0335256003,4.9847476645,1
+6104,93,Provence-Alpes-Côte d'Azur,6,2,14,Roquebrune-Cap-Martin,13162,43.7638278953,7.4587361611,2
+6033,93,Provence-Alpes-Côte d'Azur,6,1,17,Carros,13010,43.7850390592,7.18414159904,1
+83148,93,Provence-Alpes-Côte d'Azur,83,1,23,Vidauban,12849,43.4015046271,6.44908485499,1
+13007,93,Provence-Alpes-Côte d'Azur,13,3,3,Auriol,12834,43.3607946934,5.6583901873,2
+83049,93,Provence-Alpes-Côte d'Azur,83,2,18,Cuers,12433,43.2411645502,6.06856350453,1
+83112,93,Provence-Alpes-Côte d'Azur,83,2,12,Saint-Cyr-sur-Mer,12303,43.1720355248,5.70832603708,1
+13081,93,Provence-Alpes-Côte d'Azur,13,4,6,Rognac,12239,43.4971347324,5.23106220021,2
+83130,93,Provence-Alpes-Côte d'Azur,83,2,18,Solliès-Pont,12158,43.1907611248,6.06327697157,2
+83042,93,Provence-Alpes-Côte d'Azur,83,1,15,Cogolin,12007,43.2464550515,6.52192234084,2
+84141,93,Provence-Alpes-Côte d'Azur,84,2,14,Vedène,11780,43.9708612885,4.90327834789,2
+83071,93,Provence-Alpes-Côte d'Azur,83,2,2,La Londe-les-Maures,11643,43.1689213414,6.24285151023,2
+13075,93,Provence-Alpes-Côte d'Azur,13,3,3,Plan-de-Cuques,11612,43.3670927162,5.46488623464,2
+13106,93,Provence-Alpes-Côte d'Azur,13,3,9,Septèmes-les-Vallons,11434,43.3934944571,5.3808040555,1
+83073,93,Provence-Alpes-Côte d'Azur,83,3,9,Le Luc,11166,43.3804648949,6.30599950133,1
+84003,93,Provence-Alpes-Côte d'Azur,84,1,1,Apt,11116,43.879393265,5.38921757843,1
+5023,93,Provence-Alpes-Côte d'Azur,5,1,98,Briançon,11095,44.8994986041,6.64947524018,0
+13069,93,Provence-Alpes-Côte d'Azur,13,1,25,Pélissanne,10827,43.6308385635,5.15957327275,1
+13110,93,Provence-Alpes-Côte d'Azur,13,1,28,Trets,10680,43.4378087269,5.6999524319,1
+83098,93,Provence-Alpes-Côte d'Azur,83,2,6,Le Pradet,10656,43.099405984,6.02844015499,2
+84088,93,Provence-Alpes-Côte d'Azur,84,3,12,Pernes-les-Fontaines,10578,43.9960550539,5.03959100234,1
+6084,93,Provence-Alpes-Côte d'Azur,6,1,12,Mouans-Sartoux,10397,43.6185304023,6.96494426706,1
+13040,93,Provence-Alpes-Côte d'Azur,13,1,28,Fuveau,10351,43.4594948454,5.55305747206,2
+13019,93,Provence-Alpes-Côte d'Azur,13,1,29,Cabriès,10332,43.4496421919,5.34976663984,2
+13050,93,Provence-Alpes-Côte d'Azur,13,1,25,Lambesc,10273,43.6615217681,5.25191446931,2
+6149,93,Provence-Alpes-Côte d'Azur,6,2,21,La Trinité,10155,43.7433480978,7.33946073911,1
+13043,93,Provence-Alpes-Côte d'Azur,13,4,11,Gignac-la-Nerthe,9990,43.3905074118,5.22834752895,2
+83016,93,Provence-Alpes-Côte d'Azur,83,2,12,Le Beausset,9983,43.2069315557,5.82020086096,2
+6018,93,Provence-Alpes-Côte d'Azur,6,1,3,Biot,9926,43.6276558141,7.08318612891,1
+13100,93,Provence-Alpes-Côte d'Azur,13,2,26,Saint-Rémy-de-Provence,9888,43.7834249015,4.85366665286,1
+83054,93,Provence-Alpes-Côte d'Azur,83,2,18,La Farlède,9725,43.1615363005,6.04275325508,2
+83086,93,Provence-Alpes-Côte d'Azur,83,1,23,Le Muy,9717,43.4687307949,6.576949368,2
+83034,93,Provence-Alpes-Côte d'Azur,83,2,6,Carqueiranne,9627,43.0971940145,6.0717379342,2
+84138,93,Provence-Alpes-Côte d'Azur,84,3,17,Valréas,9616,44.3771588623,4.99354936197,1
+83072,93,Provence-Alpes-Côte d'Azur,83,1,23,Lorgues,9589,43.4814630298,6.35892744946,2
+13051,93,Provence-Alpes-Côte d'Azur,13,1,6,Lançon-Provence,9175,43.5760406168,5.15953601477,1
+84132,93,Provence-Alpes-Côte d'Azur,84,2,9,Le Thor,9063,43.928239832,4.99324123379,2
+84081,93,Provence-Alpes-Côte d'Azur,84,2,4,Morières-lès-Avignon,8978,43.9337788848,4.90875878315,1
+13037,93,Provence-Alpes-Côte d'Azur,13,1,6,La Fare-les-Oliviers,8906,43.5544485185,5.20247621443,2
+13092,93,Provence-Alpes-Côte d'Azur,13,4,6,Saint-Chamas,8752,43.5436905217,5.07329988936,2
+84043,93,Provence-Alpes-Côte d'Azur,84,2,10,Entraigues-sur-la-Sorgue,8729,43.9950173356,4.93295387179,1
+13112,93,Provence-Alpes-Côte d'Azur,13,1,6,Velaux,8729,43.5239854581,5.24996424883,2
+13086,93,Provence-Alpes-Côte d'Azur,13,3,5,Roquevaire,8691,43.3437864693,5.59772643152,2
+13113,93,Provence-Alpes-Côte d'Azur,13,1,28,Venelles,8597,43.5928673895,5.49138381609,2
+83009,93,Provence-Alpes-Côte d'Azur,83,2,10,Bandol,8483,43.1473544522,5.74789358398,2
+13078,93,Provence-Alpes-Côte d'Azur,13,4,4,Port-Saint-Louis-du-Rhône,8447,43.4148193741,4.80679663589,1
+6095,93,Provence-Alpes-Côte d'Azur,6,1,11,Peymeinade,8400,43.6305294544,6.88166520884,1
+83019,93,Provence-Alpes-Côte d'Azur,83,2,2,Bormes-les-Mimosas,8277,43.1622722101,6.34956987347,2
+13032,93,Provence-Alpes-Côte d'Azur,13,1,25,Éguilles,8222,43.5711208794,5.32885751916,2
+6044,93,Provence-Alpes-Côte d'Azur,6,1,27,La Colle-sur-Loup,8208,43.6871701387,7.09773643833,2
+83099,93,Provence-Alpes-Côte d'Azur,83,1,11,Puget-sur-Argens,8173,43.4717671252,6.68628195857,2
+6090,93,Provence-Alpes-Côte d'Azur,6,1,13,Pégomas,8047,43.5865553156,6.92224837943,2
+4209,93,Provence-Alpes-Côte d'Azur,4,4,14,Sisteron,7910,44.2001925067,5.93083716039,0
+83036,93,Provence-Alpes-Côte d'Azur,83,1,15,Cavalaire-sur-Mer,7735,43.1819055812,6.52121721395,2
+6048,93,Provence-Alpes-Côte d'Azur,6,2,10,Contes,7612,43.8092959296,7.3242451162,1
+6105,93,Provence-Alpes-Côte d'Azur,6,1,27,Roquefort-les-Pins,7476,43.6741732535,7.0530127273,2
+6065,93,Provence-Alpes-Côte d'Azur,6,1,6,La Gaude,7225,43.721423765,7.16039926444,2
+13035,93,Provence-Alpes-Côte d'Azur,13,1,26,Eyguières,7014,43.7025562953,5.01557705248,1
+13105,93,Provence-Alpes-Côte d'Azur,13,1,26,Sénas,6966,43.7446066018,5.08687884411,2
+13022,93,Provence-Alpes-Côte d'Azur,13,3,8,Cassis,6889,43.2230470065,5.55117810991,2
+13042,93,Provence-Alpes-Côte d'Azur,13,3,8,Gémenos,6827,43.2981044185,5.64391464048,2
+5046,93,Provence-Alpes-Côte d'Azur,5,2,5,Embrun,6781,44.5804294908,6.47559298927,0
+83081,93,Provence-Alpes-Côte d'Azur,83,1,11,Montauroux,6730,43.5990101065,6.78985995347,2
+13102,93,Provence-Alpes-Côte d'Azur,13,4,29,Saint-Victoret,6660,43.4142378837,5.25398700813,2
+13070,93,Provence-Alpes-Côte d'Azur,13,3,5,La Penne-sur-Huveaune,6574,43.2772079729,5.51850914394,2
+84072,93,Provence-Alpes-Côte d'Azur,84,3,12,Mazan,6395,44.0545320098,5.13048600927,2
+83091,93,Provence-Alpes-Côte d'Azur,83,2,7,Pierrefeu-du-Var,6188,43.2345472455,6.17955823473,1
+83153,93,Provence-Alpes-Côte d'Azur,83,2,17,Saint-Mandrier-sur-Mer,6170,43.0754322948,5.92642315155,2
+84039,93,Provence-Alpes-Côte d'Azur,84,3,15,Courthézon,6127,44.0865790966,4.88163342078,1
+83141,93,Provence-Alpes-Côte d'Azur,83,1,3,Trans-en-Provence,6119,43.5024684242,6.48943252904,2
+84122,93,Provence-Alpes-Côte d'Azur,84,3,10,Sarrians,6114,44.0993149114,4.95726948743,2
+83120,93,Provence-Alpes-Côte d'Azur,83,3,12,Saint-Zacharie,6058,43.3775300587,5.71820851044,1
+13107,93,Provence-Alpes-Côte d'Azur,13,1,9,Simiane-Collongue,6042,43.411551859,5.43796924424,2
+4143,93,Provence-Alpes-Côte d'Azur,4,4,10,Oraison,6035,43.911106033,5.92458011626,1
+84137,93,Provence-Alpes-Côte d'Azur,84,3,16,Vaison-la-Romaine,6019,44.247701867,5.06040782309,1
+13098,93,Provence-Alpes-Côte d'Azur,13,4,10,Saint-Mitre-les-Remparts,5929,43.4554029916,5.01494725455,2
+84004,93,Provence-Alpes-Côte d'Azur,84,3,6,Aubignan,5920,44.0977380589,5.03165676735,2
+13066,93,Provence-Alpes-Côte d'Azur,13,2,7,Noves,5893,43.8584523466,4.89952194493,2
+6114,93,Provence-Alpes-Côte d'Azur,6,2,21,Saint-André-de-la-Roche,5722,43.745876244,7.28871372647,2
+83027,93,Provence-Alpes-Côte d'Azur,83,2,12,La Cadière-d'Azur,5647,43.2032263059,5.72471001592,2
+84091,93,Provence-Alpes-Côte d'Azur,84,3,11,Piolenc,5560,44.1774697051,4.76585289056,2
+6108,93,Provence-Alpes-Côte d'Azur,6,1,13,La Roquette-sur-Siagne,5509,43.5849092456,6.95049794824,2
+84056,93,Provence-Alpes-Côte d'Azur,84,3,15,Jonquières,5452,44.1318029558,4.91341542999,2
+84016,93,Provence-Alpes-Côte d'Azur,84,2,15,Bédarrides,5432,44.0477457533,4.90804109098,2
+83097,93,Provence-Alpes-Côte d'Azur,83,3,13,Pourrières,5431,43.4938863602,5.74717711665,2
+83064,93,Provence-Alpes-Côte d'Azur,83,3,7,Garéoult,5406,43.3403271328,6.04087625954,1
+83106,93,Provence-Alpes-Côte d'Azur,83,3,7,Rocbaron,5396,43.3066686926,6.08361658334,2
+13044,93,Provence-Alpes-Côte d'Azur,13,4,27,Grans,5286,43.6142225937,5.04474558898,2
+4088,93,Provence-Alpes-Côte d'Azur,4,4,6,Forcalquier,5210,43.9599082374,5.7882827572,1
+84034,93,Provence-Alpes-Côte d'Azur,84,2,7,Caumont-sur-Durance,5197,43.8913580487,4.95633077332,1
+6054,93,Provence-Alpes-Côte d'Azur,6,2,10,Drap,5195,43.7582432488,7.33724090222,2
+83140,93,Provence-Alpes-Côte d'Azur,83,3,1,Tourves,5176,43.4088015642,5.92715707141,2
+4049,93,Provence-Alpes-Côte d'Azur,4,3,3,Château-Arnoux-Saint-Auban,5172,44.0854706133,5.99239535024,1
+84119,93,Provence-Alpes-Côte d'Azur,84,2,14,Saint-Saturnin-lès-Avignon,5109,43.9621529369,4.94109967241,2
+6159,93,Provence-Alpes-Côte d'Azur,6,2,4,Villefranche-sur-Mer,5037,43.7122153121,7.32225410533,2
+6075,93,Provence-Alpes-Côte d'Azur,6,2,24,Levens,5011,43.8500976014,7.24033027327,1
+83087,93,Provence-Alpes-Côte d'Azur,83,3,12,Nans-les-Pins,5002,43.3790514316,5.78486448585,2
+6147,93,Provence-Alpes-Côte d'Azur,6,2,24,Tourrette-Levens,4921,43.7860737213,7.2725568209,2
+84099,93,Provence-Alpes-Côte d'Azur,84,1,8,Robion,4773,43.8519678718,5.11008684319,1
+83092,93,Provence-Alpes-Côte d'Azur,83,3,9,Pignans,4705,43.2968837854,6.25442934778,2
+84029,93,Provence-Alpes-Côte d'Azur,84,3,16,Camaret-sur-Aigues,4636,44.1596814027,4.88410397503,2
+6032,93,Provence-Alpes-Côte d'Azur,6,2,4,Cap-d'Ail,4585,43.7247392327,7.40161617522,2
+84133,93,Provence-Alpes-Côte d'Azur,84,1,13,La Tour-d'Aigues,4466,43.7214835187,5.56734664063,2
+83100,93,Provence-Alpes-Côte d'Azur,83,3,7,Puget-Ville,4456,43.2763475939,6.14893054109,2
+4242,93,Provence-Alpes-Côte d'Azur,4,4,10,Villeneuve,4439,43.8957056864,5.85732128727,2
+6122,93,Provence-Alpes-Côte d'Azur,6,1,26,Saint-Jeannet,4431,43.758845389,7.14073211756,2
+83067,93,Provence-Alpes-Côte d'Azur,83,3,9,Gonfaron,4410,43.3206494882,6.30036862428,2
+83104,93,Provence-Alpes-Côte d'Azur,83,3,13,Rians,4384,43.6055023788,5.74132523759,2
+83143,93,Provence-Alpes-Côte d'Azur,83,3,1,Le Val,4380,43.4452384829,6.05179903767,2
+84038,93,Provence-Alpes-Côte d'Azur,84,1,8,Cheval-Blanc,4373,43.7886782282,5.12410732071,2
+13046,93,Provence-Alpes-Côte d'Azur,13,1,3,Gréasque,4361,43.4262029745,5.54685109195,1
+83058,93,Provence-Alpes-Côte d'Azur,83,1,4,Flayosc,4298,43.542212098,6.36275720984,1
+84026,93,Provence-Alpes-Côte d'Azur,84,1,8,Cadenet,4297,43.7304056282,5.38354319666,2
+6064,93,Provence-Alpes-Côte d'Azur,6,1,17,Gattières,4272,43.7652195423,7.16877468184,2
+6112,93,Provence-Alpes-Côte d'Azur,6,1,25,Le Rouret,4219,43.6795612779,7.00962553615,2
+6148,93,Provence-Alpes-Côte d'Azur,6,1,25,Tourrettes-sur-Loup,4164,43.7174536642,7.03989376281,2
+83103,93,Provence-Alpes-Côte d'Azur,83,2,21,Le Revest-les-Eaux,4071,43.1824918424,5.94565392204,2
+4152,93,Provence-Alpes-Côte d'Azur,4,4,7,Pierrevert,4070,43.8065050599,5.72273821724,1
+6118,93,Provence-Alpes-Côte d'Azur,6,1,11,Saint-Cézaire-sur-Siagne,4028,43.6594259137,6.80329376165,2
+84064,93,Provence-Alpes-Côte d'Azur,84,3,5,Lapalud,3921,44.3065428944,4.67951575962,2
+6136,93,Provence-Alpes-Côte d'Azur,6,2,10,Sospel,3879,43.8844607415,7.44794904955,2
+83121,93,Provence-Alpes-Côte d'Azur,83,1,4,Salernes,3848,43.5621099339,6.22873067235,2
+4116,93,Provence-Alpes-Côte d'Azur,4,3,10,Les Mées,3813,43.9944767361,5.96601755581,1
+6130,93,Provence-Alpes-Côte d'Azur,6,1,11,Saint-Vallier-de-Thiey,3775,43.696895033,6.85062748704,2
+84078,93,Provence-Alpes-Côte d'Azur,84,3,5,Mondragon,3771,44.2429843935,4.72457377095,2
+5070,93,Provence-Alpes-Côte d'Azur,5,2,11,Laragne-Montéglin,3631,44.3340345431,5.81650957133,1
+13038,93,Provence-Alpes-Côte d'Azur,13,2,26,Fontvieille,3599,43.7232610704,4.72310168882,2
+4197,93,Provence-Alpes-Côte d'Azur,4,4,9,Sainte-Tulle,3559,43.7830482525,5.77302331731,1
+6046,93,Provence-Alpes-Côte d'Azur,6,2,24,Colomars,3534,43.7594234187,7.22263249849,2
+84030,93,Provence-Alpes-Côte d'Azur,84,3,10,Caromb,3505,44.1124328753,5.10687040517,2
+84036,93,Provence-Alpes-Côte d'Azur,84,2,9,Châteauneuf-de-Gadagne,3452,43.9276331683,4.94259114535,2
+13065,93,Provence-Alpes-Côte d'Azur,13,2,26,Mouriès,3447,43.7008454163,4.89038486174,2
+5179,93,Provence-Alpes-Côte d'Azur,5,2,15,Veynes,3378,44.5571529708,5.82286002514,1
+84147,93,Provence-Alpes-Côte d'Azur,84,1,13,Villelaure,3377,43.7075157136,5.43085449725,2
+4245,93,Provence-Alpes-Côte d'Azur,4,4,8,Volx,3283,43.8706676132,5.83153973779,1
+4230,93,Provence-Alpes-Côte d'Azur,4,4,15,Valensole,3224,43.8380844852,5.94191847166,1
+84017,93,Provence-Alpes-Côte d'Azur,84,3,12,Bédoin,3157,44.1374624096,5.23446005284,2
+5040,93,Provence-Alpes-Côte d'Azur,5,2,4,Chorges,3156,44.5455124295,6.28782392595,1
+84047,93,Provence-Alpes-Côte d'Azur,84,1,1,Gargas,3115,43.8960653944,5.34362330109,2
+84118,93,Provence-Alpes-Côte d'Azur,84,1,1,Saint-Saturnin-lès-Apt,2985,43.9587368913,5.37325716104,2
+83085,93,Provence-Alpes-Côte d'Azur,83,1,4,La Motte,2944,43.5078511168,6.55055399937,2
+83001,93,Provence-Alpes-Côte d'Azur,83,1,14,Les Adrets-de-l'Estérel,2877,43.5356229284,6.8110879666,2
+4149,93,Provence-Alpes-Côte d'Azur,4,3,3,Peyruis,2847,44.03515352,5.92833355728,2
+4094,93,Provence-Alpes-Côte d'Azur,4,4,15,Gréoux-les-Bains,2825,43.7676102812,5.86495046225,2
+84069,93,Provence-Alpes-Côte d'Azur,84,3,16,Malaucène,2794,44.1884482159,5.14985080872,2
+4019,93,Provence-Alpes-Côte d'Azur,4,1,1,Barcelonnette,2760,44.3785614205,6.65215089713,0
+84027,93,Provence-Alpes-Côte d'Azur,84,3,11,Caderousse,2688,44.1099358763,4.74345046999,2
+5017,93,Provence-Alpes-Côte d'Azur,5,2,4,La Bâtie-Neuve,2649,44.5797566279,6.21267983536,2
+83102,93,Provence-Alpes-Côte d'Azur,83,3,4,Régusse,2607,43.6676978951,6.11814572566,1
+84067,93,Provence-Alpes-Côte d'Azur,84,3,6,Loriol-du-Comtat,2541,44.0753500101,5.00514799731,2
+5065,93,Provence-Alpes-Côte d'Azur,5,1,10,Guillestre,2374,44.6680987436,6.7010158705,1
+5170,93,Provence-Alpes-Côte d'Azur,5,2,14,Tallard,2349,44.459122073,6.04485602868,1
+83007,93,Provence-Alpes-Côte d'Azur,83,3,4,Aups,2342,43.6246326968,6.22132785585,2
+5006,93,Provence-Alpes-Côte d'Azur,5,1,1,L'Argentière-la-Bessée,2324,44.7821732712,6.47214497323,1
+83093,93,Provence-Alpes-Côte d'Azur,83,3,12,Plan-d'Aups-Sainte-Baume,2262,43.3337130548,5.73856018349,2
+5132,93,Provence-Alpes-Côte d'Azur,5,2,12,Saint-Bonnet-en-Champsaur,2146,44.6823269908,6.10286050171,1
+13096,93,Provence-Alpes-Côte d'Azur,13,2,4,Saintes-Maries-de-la-Mer,2145,43.50398297,4.46396357194,2
+84037,93,Provence-Alpes-Côte d'Azur,84,3,15,Châteauneuf-du-Pape,2090,44.0595884031,4.82728435607,2
+13049,93,Provence-Alpes-Côte d'Azur,13,1,26,Lamanon,2085,43.704757813,5.0886270398,2
+4108,93,Provence-Alpes-Côte d'Azur,4,3,5,Malijai,2015,44.0336660524,6.0504243737,1
+84150,93,Provence-Alpes-Côte d'Azur,84,3,17,Visan,1962,44.3268006533,4.94430178075,2
+83043,93,Provence-Alpes-Côte d'Azur,83,2,9,Collobrières,1943,43.2414148175,6.34032184648,1
+6099,93,Provence-Alpes-Côte d'Azur,6,2,26,Puget-Théniers,1906,43.9521649219,6.90609311435,1
+83063,93,Provence-Alpes-Côte d'Azur,83,1,9,La Garde-Freinet,1871,43.3234160321,6.46693786821,1
+84053,93,Provence-Alpes-Côte d'Azur,84,3,17,Grillon,1788,44.3945766896,4.93414256152,2
+4160,93,Provence-Alpes-Côte d'Azur,4,4,11,Reillanne,1732,43.8861362182,5.65935415272,1
+4166,93,Provence-Alpes-Côte d'Azur,4,4,12,Riez,1700,43.8284587474,6.08237819985,1
+4244,93,Provence-Alpes-Côte d'Azur,4,3,3,Volonne,1671,44.1239478859,6.03467827528,2
+5123,93,Provence-Alpes-Côte d'Azur,5,2,15,La Roche-des-Arnauds,1621,44.5838170428,5.96045927972,2
+6066,93,Provence-Alpes-Côte d'Azur,6,2,26,Gilette,1609,43.8481962471,7.1613234113,2
+5133,93,Provence-Alpes-Côte d'Azur,5,1,2,Saint-Chaffrey,1569,44.9346479572,6.60139023926,1
+83149,93,Provence-Alpes-Côte d'Azur,83,3,4,Villecroze,1511,43.564445349,6.28543419016,2
+4039,93,Provence-Alpes-Côte d'Azur,4,2,2,Castellane,1502,43.8449862174,6.49029842016,0
+5183,93,Provence-Alpes-Côte d'Azur,5,1,2,Villar-Saint-Pancrace,1500,44.8395685825,6.65048294053,2
+6067,93,Provence-Alpes-Côte d'Azur,6,2,14,Gorbio,1498,43.7860281963,7.44603824995,2
+4145,93,Provence-Alpes-Côte d'Azur,4,4,14,Peipin,1496,44.1413026547,5.9437147381,2
+4001,93,Provence-Alpes-Côte d'Azur,4,3,5,Aiglun,1448,44.0638744567,6.13842845338,2
+5162,93,Provence-Alpes-Côte d'Azur,5,2,14,La Saulce,1431,44.4305124468,6.01099383219,2
+6025,93,Provence-Alpes-Côte d'Azur,6,1,17,Le Broc,1424,43.8147822086,7.15907633922,2
+4205,93,Provence-Alpes-Côte d'Azur,4,3,13,Seyne,1400,44.3390108176,6.38482796835,1
+4111,93,Provence-Alpes-Côte d'Azur,4,4,11,Mane,1380,43.9388973757,5.74234213479,2
+5118,93,Provence-Alpes-Côte d'Azur,5,2,11,Val Buëch-Méouge,1356,44.2207910151,5.84342231314,2
+4178,93,Provence-Alpes-Côte d'Azur,4,4,6,Saint-Étienne-les-Orgues,1352,44.0670149849,5.78046052827,2
+5166,93,Provence-Alpes-Côte d'Azur,5,2,13,Serres,1319,44.4213858087,5.71549751124,1
+4063,93,Provence-Alpes-Côte d'Azur,4,4,9,Corbières-en-Provence,1277,43.7606909826,5.74590452535,2
+4192,93,Provence-Alpes-Côte d'Azur,4,4,11,Saint-Michel-l'Observatoire,1254,43.909879406,5.72004315449,2
+5036,93,Provence-Alpes-Côte d'Azur,5,2,5,Châteauroux-les-Alpes,1235,44.6423670958,6.48290823337,2
+5101,93,Provence-Alpes-Côte d'Azur,5,1,1,Vallouise-Pelvoux,1168,44.899639207,6.43586430867,2
+5145,93,Provence-Alpes-Côte d'Azur,5,2,12,Saint-Jean-Saint-Nicolas,1166,44.6744954225,6.23085847467,2
+5151,93,Provence-Alpes-Côte d'Azur,5,1,1,Saint-Martin-de-Queyrières,1164,44.8375257288,6.58255010654,2
+4096,93,Provence-Alpes-Côte d'Azur,4,1,1,Jausiers,1163,44.3876110175,6.78602312361,2
+5045,93,Provence-Alpes-Côte d'Azur,5,2,5,Crots,1156,44.496293828,6.46197152572,2
+4123,93,Provence-Alpes-Côte d'Azur,4,4,14,Mison,1148,44.2624329752,5.86562678758,2
+5164,93,Provence-Alpes-Côte d'Azur,5,2,4,Savines-le-Lac,1135,44.5273256992,6.39368059257,2
+4034,93,Provence-Alpes-Côte d'Azur,4,4,6,La Brillanne,1132,43.9319005392,5.88421838797,2
+5079,93,Provence-Alpes-Côte d'Azur,5,1,2,Le Monêtier-les-Bains,1085,44.9956106766,6.46966497275,2
+4008,93,Provence-Alpes-Côte d'Azur,4,2,2,Annot,1056,43.9620009704,6.66395811566,2
+4173,93,Provence-Alpes-Côte d'Azur,4,2,2,Saint-André-les-Alpes,1036,43.9713301406,6.50149712225,2
+4110,93,Provence-Alpes-Côte d'Azur,4,3,5,Mallemoisson,1022,44.0420071966,6.11807147192,2
+4036,93,Provence-Alpes-Côte d'Azur,4,3,13,Le Brusquet,996,44.1681621392,6.30347351863,2
+5059,93,Provence-Alpes-Côte d'Azur,5,2,14,La Freissinouse,953,44.535534165,6.00812804583,2
+5029,93,Provence-Alpes-Côte d'Azur,5,2,12,Chabottes,944,44.6475783169,6.16791978587,2
+5139,93,Provence-Alpes-Côte d'Azur,5,2,15,Dévoluy,930,44.6775419763,5.94047368781,2
+6094,93,Provence-Alpes-Côte d'Azur,6,2,26,Péone,886,44.1299250439,6.92098583862,2
+5010,93,Provence-Alpes-Côte d'Azur,5,2,13,Aspres-sur-Buëch,813,44.5617512104,5.77203298744,2
+5103,93,Provence-Alpes-Côte d'Azur,5,2,11,Le Poët,812,44.2789746584,5.90131318428,2
+5052,93,Provence-Alpes-Côte d'Azur,5,1,10,Eygliers,812,44.6925244966,6.66688741371,2
+4033,93,Provence-Alpes-Côte d'Azur,4,1,1,Ubaye-Serre-Ponçon,800,44.4434662119,6.28924750363,2
+4046,93,Provence-Alpes-Côte d'Azur,4,3,12,Le Chaffaut-Saint-Jurson,791,44.0231804287,6.14073798744,1
+4217,93,Provence-Alpes-Côte d'Azur,4,3,4,Thoard,757,44.1473006003,6.12401298333,1
+83154,93,Provence-Alpes-Côte d'Azur,83,1,1,Saint-Antonin-du-Var,749,43.5112335006,6.29002187703,1
+5136,93,Provence-Alpes-Côte d'Azur,5,1,10,Saint-Crépin,746,44.7243260485,6.63555027257,2
+4172,93,Provence-Alpes-Côte d'Azur,4,4,12,Roumoules,745,43.821041609,6.14864703263,2
+4135,93,Provence-Alpes-Côte d'Azur,4,3,12,Moustiers-Sainte-Marie,733,43.8383278559,6.22818909628,2
+4157,93,Provence-Alpes-Côte d'Azur,4,4,12,Puimoisson,691,43.8708152829,6.12200213815,2
+83152,93,Provence-Alpes-Côte d'Azur,83,1,2,Rayol-Canadel-sur-Mer,659,43.1642973413,6.47477478292,1
+4189,93,Provence-Alpes-Côte d'Azur,4,4,15,Saint-Martin-de-Brômes,648,43.7774768739,5.96250175121,2
+4121,93,Provence-Alpes-Côte d'Azur,4,3,12,Mézel,642,43.9980863365,6.17879892264,2
+5174,93,Provence-Alpes-Côte d'Azur,5,1,3,Val-des-Prés,635,44.9505522191,6.66654834986,1
+4013,93,Provence-Alpes-Côte d'Azur,4,4,3,Aubignosc,631,44.1182449561,5.95734484907,1
+4066,93,Provence-Alpes-Côte d'Azur,4,4,13,Curbans,588,44.4083473334,6.03005001215,1
+4134,93,Provence-Alpes-Côte d'Azur,4,4,13,La Motte-du-Caire,573,44.3408705676,6.03052669324,2
+6022,93,Provence-Alpes-Côte d'Azur,6,1,26,Bouyon,554,43.8254399796,7.12553872813,2
+5053,93,Provence-Alpes-Côte d'Azur,5,2,13,Garde-Colombe,536,44.3570512046,5.78336490177,2
+4053,93,Provence-Alpes-Côte d'Azur,4,4,3,Châteauneuf-Val-Saint-Donat,514,44.0954534225,5.93054683108,2
+4203,93,Provence-Alpes-Côte d'Azur,4,3,13,Selonnet,481,44.3717210833,6.29379329975,2
+5085,93,Provence-Alpes-Côte d'Azur,5,1,3,Montgenèvre,466,44.9389932221,6.72778259009,2
+4113,93,Provence-Alpes-Côte d'Azur,4,3,4,Marcoux,463,44.128219237,6.28007885939,2
+4022,93,Provence-Alpes-Côte d'Azur,4,2,12,Barrême,418,43.9462808705,6.37811558709,1
+5093,93,Provence-Alpes-Côte d'Azur,5,1,3,Névache,367,45.0441286352,6.59862935541,2
+4144,93,Provence-Alpes-Côte d'Azur,4,2,12,La Palud-sur-Verdon,352,43.796648297,6.32708874551,2
+4222,93,Provence-Alpes-Côte d'Azur,4,4,13,Turriers,351,44.3915882101,6.15918221528,2
+4109,93,Provence-Alpes-Côte d'Azur,4,3,6,Mallefougasse-Augès,329,44.0759918613,5.89779648569,1
+4127,93,Provence-Alpes-Côte d'Azur,4,4,3,Montfort,329,44.0591709898,5.95286093626,2
+4167,93,Provence-Alpes-Côte d'Azur,4,3,4,La Robine-sur-Galabre,291,44.1927329945,6.23038435702,2
+4128,93,Provence-Alpes-Côte d'Azur,4,4,7,Montfuron,235,43.831580084,5.68859318549,2
+4059,93,Provence-Alpes-Côte d'Azur,4,2,12,Clumanc,224,44.0220942583,6.37764321053,2
+4190,93,Provence-Alpes-Côte d'Azur,4,4,8,Saint-Martin-les-Eaux,127,43.8719702944,5.74137178032,2
+4176,93,Provence-Alpes-Côte d'Azur,4,3,15,Sainte-Croix-du-Verdon,121,43.7642821493,6.15158882357,1
