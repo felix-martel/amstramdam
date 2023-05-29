@@ -121,6 +121,7 @@ def serve_game(name):
             allow_zoom=game.allow_zoom,
             precision_mode=game.precision_mode,
             duration=game.duration,
+            borders=game.game_map.borders,
         )
         return render_template(
             "main.html", game_name=name, params=params, debug=IS_LOCAL
