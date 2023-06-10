@@ -1,6 +1,6 @@
 {
   "name": "amstramdam",
-  "version": "2.1.0-beta",
+  "version": "2.2.0",
   "description": "*Le jeu original est accessible ici : [jeux-geographiques.com](https://www.jeux-geographiques.com/)*",
   "private": true,
   "dependencies": {
@@ -37,7 +37,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "CC BY 4.0 Non Commercial",
   "bugs": {
     "url": "https://github.com/felix-martel/amstramdam/issues"
   },

@@ -1,6 +1,6 @@
 # am·stram·dam
 
-<a href="https://github.com/felix-martel/amstramdam/actions"><img src="https://img.shields.io/github/workflow/status/felix-martel/amstramdam/python-ci?label=checks"></a>
+<a href="https://github.com/felix-martel/amstramdam/actions"><img src="https://img.shields.io/github/actions/workflow/status/felix-martel/amstramdam/ci.yml"></a>
 <a href="https://github.com/felix-martel/amstramdam/releases"><img src="https://img.shields.io/github/v/release/felix-martel/amstramdam"></a>
 <a href="https://github.com/felix-martel/amstramdam/commits/master"><img src="https://img.shields.io/github/last-commit/felix-martel/amstramdam"></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
