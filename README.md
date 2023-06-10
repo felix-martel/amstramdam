@@ -52,3 +52,9 @@ python server.py [--debug] [--threading]
 ```
 Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugger. Sinon, `eventlet` est utilisé.
 
+Lancement du front:
+```shell
+NODE_OPTIONS=--openssl-legacy-provider npm run watch
+```
+
+(L'option est nécessaire localement en attendant de mettre à jour les dépendances du projet)
