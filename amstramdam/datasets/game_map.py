@@ -1,4 +1,6 @@
+import json
 import random
+from pathlib import Path
 from typing import TypeVar, Any, Optional
 from collections import Counter
 
@@ -32,6 +34,10 @@ class GameMap:
         min_group: int = 0,
         max_group: Optional[int] = None,
         tiles: str = "flat",
+        map_borders: bool = False,
+        map_borders_file: Optional[str] = None,
+        map_borders_filter_key: Optional[str] = None,
+        map_borders_filter_value: Optional[str] = None,
         **extra_params: Any
     ) -> None:
         self.name = name
@@ -50,6 +56,26 @@ class GameMap:
         self.bbox = self.get_bounding_box()
         self.char_dist = self.get_characteristic_distance()
         self.tiles = tiles
+
+        self.borders = self.load_borders(
+            filename=map_borders_file,
+            filter_key=map_borders_filter_key,
+            filter_value=map_borders_filter_value,
+        ) if map_borders and map_borders_file is not None else None
+
+    def load_borders(self, filename: str, filter_value: Optional[str], filter_key: Optional[str] = "code") -> Optional[dict[str, Any]]:
+        path = Path(filename)
+        if not path.exists():
+            return None
+        features = json.loads(path.read_text())
+        if filter_value is None or filter_key is None:
+            return features
+        filtered = [
+            feature
+            for feature in features["features"]
+            if feature["properties"].get(filter_key, None) == filter_value
+        ]
+        return filtered[0] if len(filtered) else None
 
     def get_bounding_box(self) -> BoundingBoxArray:
         return [

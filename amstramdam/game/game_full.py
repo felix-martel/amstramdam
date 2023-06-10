@@ -120,6 +120,7 @@ class Game:
         self.metrics: GameMetrics = dict(
             distance=defaultdict(list), delay=defaultdict(list)
         )
+        self.game_map = game_map
 
         if creation_date is None:
             creation_date = datetime.now()

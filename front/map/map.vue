@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       answers: undefined,
+      summary: [],
       refWorld: 0,
       groundTruth: undefined,
       ownGuess: undefined,
@@ -43,7 +44,8 @@ export default {
       bounds: this.params.bbox,
       maxZoom: canvas => (this.isMobile ? this.maxZoom : Math.max(this.maxZoom, canvas.getZoom() + 1)),
       credits: this.isNarrow ? CREDITS_SHORT : CREDITS,
-      tiles: this.tiles
+      tiles: this.tiles,
+      borders: this.params.borders,
     });
     this.canvas.on("mousedown", this.ctrlClickMap);
     this.canvas.on("click", this.submitGuess);
@@ -98,6 +100,7 @@ export default {
 
     displayGameSummary({places, records}){
       this.clearMap();
+      this.summary = [];
       for (let i=0; i<records.length;i++){
         let rec = records[i];//.concat(this.generateFakeRunSummary(places[i]));
         this.displayRunSummary(rec, places[i])
@@ -118,21 +121,17 @@ export default {
       TODO: when this is settled, remove extra lines and clean the code
        */
       const trueCoords = L.latLng(lat, lon);
-      const truth = L.marker([lat, lon], {
-        zIndexOffset: 20,
-        icon: getIcon(constants.colors.TRUE, location, {extraClasses: ["summary-icon", "truth-icon"]})});
-      //const run = L.featureGroup().addTo(this.canvas);
-      //run.addLayer(truth);
+      const truth = L.marker(
+          [lat, lon], {
+            zIndexOffset: 20,
+            icon: getIcon(constants.colors.TRUE, location, {extraClasses: ["summary-icon", "truth-icon"]})
+          }
+      );
       const runCircles = L.featureGroup().addTo(this.canvas);
-      const runIcons = L.featureGroup(); //.addTo(this.canvas);
+      const runIcons = L.featureGroup();
       const runLines = L.featureGroup().addTo(this.canvas);
       const runLightIcons = L.featureGroup().addTo(this.canvas);
-      const run = L.featureGroup([
-          truth,
-          // runLightIcons,
-          // runIcons,
-          // runLines
-      ]).addTo(this.canvas);
+      const run = L.featureGroup([truth]).addTo(this.canvas);
       const styles = {
         line: {
           activated: false,
@@ -188,9 +187,7 @@ export default {
           runCircles.addLayer(circle);
         }
         runLightIcons.addLayer(lightMarker);
-        //run.addLayer(line);
       });
-      //run.addTo(this.canvas);
       run.on("mouseover", () => {
         this.shaded = true;
         runCircles.setStyle(styles.circle.on);
@@ -203,6 +200,21 @@ export default {
         runLines.setStyle(styles.line.off);
         runIcons.remove();
       })
+      this.summary.push(runCircles, runLines, runLightIcons, runIcons, run);
+    },
+
+    clearSummary() {
+      if (!this.summary) return;
+      this.summary.forEach(layerGroup => {
+        layerGroup.clearLayers();
+        layerGroup.remove();
+      })
+    },
+
+    clearAnswers() {
+      if (!this.answers) return;
+      this.answers.clearLayers();
+      this.answers.remove();
     },
 
     ctrlClickMap(e){
@@ -258,6 +270,15 @@ export default {
       this.answers.addLayer(marker);
     },
 
+    drawAnimatedCircle({lon, lat}, radius, color, timestep=5) {
+      const circle = L.circle([lat, lon], {
+          color: color,
+          radius: 0.01
+        });
+        this.answers.addLayer(circle);
+        return this.animateCircle(circle, radius, color)
+    },
+
     displayResults(answer, results){
       if (!this.hasGroundTruth) {
         this.addTrueMarker(answer);
@@ -270,8 +291,11 @@ export default {
         const color = isSelf ? constants.colors.SELF : constants.colors.BASE;
         return this.drawAnimatedCircle(this.groundTruth, rec.dist, color)
             .then(circle => {
-              const marker = this.createMarker(this.moveToSameWorld(rec.guess, this.groundTruth),
-                  this.getPlayerName(rec.player), color);
+              const marker = this.createMarker(
+                  this.moveToSameWorld(rec.guess, this.groundTruth),
+                  this.getPlayerName(rec.player),
+                  color
+              );
               //if (isSelf) {this.hasOwnGuess = true;}
               this.answers.addLayer(marker);
             });
@@ -298,10 +322,13 @@ export default {
     },
 
     clearMap(){
-      this.removeAllLayers();
+      this.clearSummary();
+      this.clearAnswers();
+      // this.removeAllLayers();
       this.groundTruth = undefined;
       this.ownGuess = undefined;
       this.answers = undefined;
+      this.summary = [];
     }
   },
 

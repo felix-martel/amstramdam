@@ -13,13 +13,14 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    port = os.environ.get("PORT", 80)
-    kwargs = dict(host="0.0.0.0", port=port)
+    kwargs = dict(host="0.0.0.0")
 
     if IS_LOCAL and not CONF["disableSSL"]:
         kwargs["certfile"] = certfile
         kwargs["keyfile"] = keyfile
-        kwargs["port"] = 443
+        kwargs["port"] = int(os.environ.get("PORT", 8000))
+    else:
+        kwargs["port"] = int(os.environ.get("PORT", 80))
 
     if args.debug:
         kwargs["debug"] = True

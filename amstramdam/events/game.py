@@ -25,8 +25,6 @@ def terminate_game(game_name: GameName) -> None:
         socketio.emit(
             "status-update",
             GameEndNotification(status=status, payload=payload),
-            json=True,
-            broadcast=True,
             room=game_name,
         )
         manager.relaunch_game(game_name)
@@ -55,8 +53,6 @@ def end_game(game_name: GameName, run_id: int) -> None:
         socketio.emit(
             "status-update",
             dict(status=game.status, payload=payload),
-            json=True,
-            broadcast=True,
             room=game_name,
         )
 
@@ -82,9 +78,7 @@ def launch_run(game_name: GameName, run_id: int) -> None:
         socketio.emit(
             "status-update",
             dict(status=game.status, payload=payload),
-            json=True,
             room=game_name,
-            broadcast=True,
         )
 
         timers[game_name] = wait_and_run(
@@ -113,7 +107,6 @@ def launch_game() -> None:
     emit(
         "status-update",
         dict(status=game.status, payload=payload),
-        json=True,
         broadcast=True,
         room=game_name,
     )

@@ -180,6 +180,19 @@
           ]
         },
       {
+        "map_id": "paris_suburbs",
+        "name": "Petite couronne",
+        "file": "data/france/greater_paris.csv",
+        "col_place": "name",
+        "col_lon": "lon",
+        "col_hint": "dep_id",
+        "use_hint": true,
+        "harshness": 0.35,
+        "weights*": [
+          [1], [1, 1], [1, 1, 0.8]
+        ]
+      },
+      {
         "map_id": "paris_landmarks",
         "name": "Monuments parisiens",
         "file": "data/cities/Paris.csv",
@@ -257,6 +270,200 @@
       }
     ]
   },
+    {
+      "group": "Régions françaises",
+      "maps": [
+        {
+          "map_id": "fr_region_bourgogne",
+          "name": "Bourgogne-Franche-Comt\u00e9",
+          "file": "data/france/regions/bourgogne.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "27",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Diabolique"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_normandie",
+          "name": "Normandie",
+          "file": "data/france/regions/normandie.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "28",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Sadique"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_nord",
+          "name": "Hauts-de-France",
+          "file": "data/france/regions/nord.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "32",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Corsé",
+            "Zinzin"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_est",
+          "name": "Grand Est",
+          "file": "data/france/regions/est.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "44",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Embistrouillé"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_bretagne",
+          "name": "Bretagne",
+          "file": "data/france/regions/bretagne.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "53",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Diabolique"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_aquitaine",
+          "name": "Nouvelle-Aquitaine",
+          "file": "data/france/regions/aquitaine.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "75",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Diabolique"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_occitanie",
+          "name": "Occitanie",
+          "file": "data/france/regions/occitanie.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "76",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Fada"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_ara",
+          "name": "Auvergne-Rh\u00f4ne-Alpes",
+          "file": "data/france/regions/ara.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "84",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Diabolique"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        },
+        {
+          "map_id": "fr_region_paca",
+          "name": "Provence-Alpes-C\u00f4te d'Azur",
+          "file": "data/france/regions/paca.csv",
+          "col_place": "name",
+          "col_lon": "lon",
+          "col_lat": "lat",
+          "use_hint": false,
+          "map_borders": true,
+          "map_borders_file": "data/shapes/france.regions.geojson",
+          "map_borders_filter_value": "93",
+          "map_borders_filter_key": "code",
+          "harshness": 0.6,
+          "label*": [
+            "Normal",
+            "Difficile",
+            "Fada"
+          ],
+          "weights*": [[1], [1, 1], [1, 1, 1]],
+          "tiles": "terrain"
+        }
+      ]
+    },
     {
       "group": "Par pays",
       "maps": [

@@ -11,12 +11,9 @@ export default {
   data() {
     return {
       canvas: undefined,
+      borders: undefined,
       map: undefined,
     }
-  },
-
-  created() {
-
   },
 
   methods: {
@@ -44,6 +41,7 @@ export default {
       tiles = LAYERS.bwSSL,
       extraCanvasParams = {},
       extraTileParams = {},
+      borders = null,
     } = {}) {
       this.canvas = L.map(identifier, {
         scrollWheelZoom: allowZoom,
@@ -70,6 +68,18 @@ export default {
         ...extraTileParams
       });
       this.map.addTo(this.canvas);
+
+      if (borders) {
+        console.log("adding borders");
+        const layerGroup = L.geoJSON(
+            {"type": "FeatureCollection", "features": [borders]},
+            {
+              interactive: false,
+              style: {"color": "white", "weight": 3, "fillColor": "transparent"}})
+            .addTo(this.canvas);
+        this.borders = layerGroup.getLayers();
+        console.log(this.borders);
+      }
     },
 
 
@@ -78,17 +88,8 @@ export default {
       return L.marker([lat, lon], {icon: getIcon(color, label, options)});
     },
 
-    drawAnimatedCircle({lat, lon}, radius, color, timestep=5) {
+    animateCircle(circle, radius, color, timestep=5) {
       return new Promise(resolve => {
-        // 1: initialize circle
-        const circle = L.circle([lat, lon], {
-          color: color,
-          radius: 0.01
-        });
-        circle.addTo(this.canvas);
-
-        // 2: animate circle
-        //const timestep = 5;
         // convert kilometers to meters
         const finalRadius = radius * 1000;
         const step = finalRadius / timestep;
@@ -144,9 +145,9 @@ export default {
 
     removeAllLayers(){
       this.canvas.eachLayer(layer => {
-        if (layer !== this.map) {
-          this.canvas.removeLayer(layer);
-        }
+        if (layer === this.map) return;
+        if (this.borders?.includes(layer)) return;
+        this.canvas.removeLayer(layer);
       });
     },
 
