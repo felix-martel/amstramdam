@@ -18,7 +18,8 @@
     "data:",
     "stamen-tiles.a.ssl.fastly.net",
     "server.arcgisonline.com",
-    "tile.stamen.com"
+    "tile.stamen.com",
+    "tiles.stadiamaps.com"
   ],
   "style-src": [
     "'self'",
