@@ -65,6 +65,7 @@ export default {
       this.map = L.tileLayer(tiles, {
         zoomControl: false,
         attribution: credits,
+        referrerPolicy: "strict-origin-when-cross-origin",
         ...extraTileParams
       });
       this.map.addTo(this.canvas);
