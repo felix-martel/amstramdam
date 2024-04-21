@@ -62,7 +62,8 @@ export default {
       else if (typeof maxZoom === "undefined"){
         this.canvas.setMaxZoom(18);
       }
-      this.map = L.tileLayer(tiles, {
+      // Force use `LAYERS.satellite` until I find a solution for Stadia usage limit
+      this.map = L.tileLayer(LAYERS.satellite, {
         zoomControl: false,
         attribution: credits,
         ...extraTileParams
