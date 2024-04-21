@@ -389,8 +389,8 @@ export default {
   background-color: blue !important;
   opacity: 1 !important;
 }
-
+/* Disable custom style until Stadia usage issue is solved
 .terrain img {
   filter: grayscale(100%) brightness(55%) contrast(450%);
-}
+}*/
 </style>
