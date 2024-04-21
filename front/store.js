@@ -86,7 +86,9 @@ function initScore(params) {
             },
 
             autozoom(state, getters){
-                return state.playerParams.autozoom && !getters.isMobile;
+                // Force return false to reduce tile usage
+                // return state.playerParams.autozoom && !getters.isMobile;
+                return false
             },
 
             selfScore(state) {
