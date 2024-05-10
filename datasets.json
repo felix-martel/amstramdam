@@ -205,6 +205,17 @@
         ]
       },
       {
+        "map_id": "lyon_subway",
+        "name": "Métro & tram lyonnais",
+        "file": "data/france/metro.lyon.csv",
+        "col_place": "name",
+        "col_hint":  "lines",
+        "col_lon": "lon",
+        "use_hint": true,
+        "harshness": 0.3,
+        "single_group": true
+      },
+      {
         "map_id": "paris_subway",
         "name": "Métro parisien",
         "file": "data/france/metro.paris.csv",

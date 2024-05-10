@@ -27,6 +27,7 @@ am·stram·dam agrège des données provenant des sources suivantes :
 | [DBpedia](http://dbpedia.org) | [Creative Commons BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License) | Événements |
 | [DBpedia FR](http://fr.dbpedia.org) | [Creative Commons BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License) | Capitales, préfectures, monuments et métro parisiens |
 | [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/aires-et-produits-aoc-aop-et-igp/) | [Licence Ouverte](https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouverte.pdf) | Spécialités, vins, fromages |
+| [transport.data.gouv.fr](https://transport.data.gouv.fr/datasets/horaires-theoriques-du-reseau-transports-en-commun-lyonnais?locale=en) | Licence mobilité | Métro lyonnais |
 | [Wikidata](https://www.wikidata.org) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | Régions naturelles |
 
 [👉 Signaler un oubli](https://github.com/felix-martel/amstramdam/issues/new/choose)
