@@ -55,7 +55,5 @@ Le flag `--debug` lance le serveur Flask de débug, avec auto-reload et débugge
 
 Lancement du front:
 ```shell
-NODE_OPTIONS=--openssl-legacy-provider npm run watch
+npm run watch
 ```
-
-(L'option est nécessaire localement en attendant de mettre à jour les dépendances du projet)
