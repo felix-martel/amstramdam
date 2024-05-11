@@ -22,6 +22,8 @@ eventlet.monkey_patch(socket=False)
 IS_LOCAL = os.environ.get("IS_HEROKU") != "1"
 IS_STAGING = os.environ.get("IS_STAGING") == "1"
 APP_VERSION = os.environ.get("HEROKU_RELEASE_VERSION", "dev")
+if commit_sha := os.environ.get("HEROKU_SLUG_COMMIT"):
+    APP_VERSION += f" ({commit_sha[:6]})"
 NO_SSL = os.environ.get("NO_SSL") == "1"
 SECRET_KEY = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(
     ","
