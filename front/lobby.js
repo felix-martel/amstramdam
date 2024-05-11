@@ -12,7 +12,7 @@ const USE_VUE = true;
 
 if (USE_VUE) {
     document.addEventListener("DOMContentLoaded", () => {
-        const app = createApp(AmstramdamLobby);
+        const app = createApp(AmstramdamLobby, {datasets, games, appConfig});
         app.mixin(MobileDetectionMixin);
 
         app.mount("#amstramdam-lobby");

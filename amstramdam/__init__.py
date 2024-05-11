@@ -20,7 +20,8 @@ eventlet.monkey_patch(socket=False)
 
 # Read environment variables
 IS_LOCAL = os.environ.get("IS_HEROKU") != "1"
-IS_BETA = os.environ.get("IS_BETA") == "1"
+IS_STAGING = os.environ.get("IS_STAGING") == "1"
+APP_VERSION = os.environ.get("HEROKU_RELEASE_VERSION", "dev")
 NO_SSL = os.environ.get("NO_SSL") == "1"
 SECRET_KEY = os.environ.get("SECURE_KEY", "dummy_secure_key_for_local_debugging").split(
     ","

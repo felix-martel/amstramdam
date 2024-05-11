@@ -1,15 +1,20 @@
 <template>
 <footer id="game-sharing-link" style="z-index: 1002;">
-        <a href="https://github.com/felix-martel/amstramdam"  target="_blank">À propos</a>
-        <a href="https://github.com/felix-martel/amstramdam/issues" target="_blank">Signaler un bug</a>
-        <span style="color: white;">Demandez l'original : </span>
-        <a href="https://www.jeux-geographiques.com/"  target="_blank">Jeux-Géographiques.com</a>
+  <span >Amstramdam {{ version }}</span>
+  <a href="https://github.com/felix-martel/amstramdam"  target="_blank">À propos</a>
+  <a href="https://github.com/felix-martel/amstramdam/issues" target="_blank">Signaler un bug</a>
+  <span>Demandez l'original : </span>
+  <a href="https://www.jeux-geographiques.com/"  target="_blank">Jeux-Géographiques.com</a>
     </footer>
 </template>
 
 <script>
 export default {
-name: "footer.vue"
+  name: "footer.vue",
+  props: {
+    version: String,
+    isStaging: Boolean,
+  }
 }
 </script>
 
@@ -29,7 +34,7 @@ footer {
   align-items: center;
 }
 
-footer a, footer a:visited, footer a:hover {
+footer a, footer a:visited, footer a:hover, footer span {
   color: white;
   margin-right: 10px;
 }
