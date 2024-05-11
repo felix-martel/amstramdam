@@ -43,6 +43,6 @@
   },
   "homepage": "https://github.com/felix-martel/amstramdam#readme",
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   }
 }
