@@ -1,6 +1,6 @@
 import os
 
-from amstramdam import app, manager, dataloader, IS_LOCAL, IS_BETA, CONF
+from amstramdam import app, manager, dataloader, IS_LOCAL, CONF, IS_STAGING, APP_VERSION
 from flask import (
     render_template,
     jsonify,
@@ -19,7 +19,10 @@ def serve_main():
         "lobby.html",
         datasets=dataloader.get_datasets(full=False),
         games=manager.get_public_games(),
-        is_beta=IS_BETA,
+        config={
+            "is_staging": IS_STAGING,
+            "version": APP_VERSION,
+        }
     )
 
 

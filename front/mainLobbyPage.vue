@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <footer-box></footer-box>
+    <footer-box :is-staging="appConfig.is_staging" :version="appConfig.version"></footer-box>
     <popup :visible="true">
       <div class="main-title">
         <h1 class="blue">
-          <span id="title" :class="{beta: IS_BETA}">am·stram·dam</span>
+          <span id="title" :class="{beta: appConfig.is_staging}">am·stram·dam</span>
         </h1>
         <div><i>Localiser les villes sur la carte, le plus rapidement possible</i></div>
       </div>
@@ -54,10 +54,14 @@ export default {
     "game-creator": gameCreator,
   },
 
+  props: {
+    datasets: Object,
+    games: Object,
+    appConfig: Object,
+  },
+
   data() {
     return {
-      datasets: datasets,
-      games: games,
       map: {map_id: ""},
       points: [],
       loading: true,
