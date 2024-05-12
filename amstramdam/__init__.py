@@ -42,6 +42,8 @@ hosts = CONF["hosts"]
 hosts += ["www." + name for name in hosts]
 if IS_LOCAL:
     hosts += ["127.0.0.1", "localhost", "localhost:8000"]
+if review_app_name := os.environ.get("HEROKU_APP_NAME"):
+    hosts += [f"{review_app_name}.herokuapp.com"]
 valid_hosts = (
     ["http://" + h for h in hosts]
     if CONF["disableSSL"]
