@@ -1,12 +1,13 @@
 from collections import Counter
 
-from .game_full import Game
+from .game import Game
 import random
 from typing import Any, Optional, Generator
 from unidecode import unidecode
 from amstramdam.game.types import GameName, AvailableGames
 from amstramdam import utils
-
+from .params import GameParams, GameMetadata
+from ..settings import settings
 
 with open("data/game_names.txt", "r", encoding="utf8", errors="ignore") as f:
     VALID_GAME_NAMES = {GameName(unidecode(line.rstrip())) for line in f}
@@ -17,28 +18,44 @@ MANAGER: dict[GameName, Game] = dict()
 
 
 def create_game(
-    *args: Any, force_name: Optional[str] = None, **kwargs: Any
+    dataset_name: str,
+    level: int = 0,
+    is_public: bool = True,
+    precision_mode: bool = False,
+    wait_duration: int = settings.game.wait_duration,
+    force_name: str | None = None,
+    **kwargs: Any,
 ) -> tuple[GameName, Game]:
-    if force_name is not None:
-        name = GameName(force_name)
+    name = _assign_name(name=force_name, is_public=is_public)
+    assert name not in MANAGER
+    params = GameParams(
+        dataset_name=dataset_name,
+        level=level,
+        is_public=is_public,
+        precision_mode=precision_mode,
+        wait_duration=wait_duration,
+        **kwargs,
+    )
+    metadata = GameMetadata(name=name)
+    MANAGER[name] = Game(metadata=metadata, params=params)
+    return name, MANAGER[name]
+
+
+def _assign_name(name: str, is_public: bool = True) -> GameName:
+    if name is not None:
+        name = GameName(name)
         if name in MANAGER:
             disambig[name] += 1
             name = GameName(f"{name}_{disambig[name]}")
-    elif not kwargs.get("is_public", True):
-        name = GameName(utils.random.generate_random_identifier(12))
+        return name
+    elif not is_public:
+        return GameName(utils.random.generate_random_identifier(12))
+    elif names := VALID_GAME_NAMES - MANAGER.keys():
+        return random.choice(list(names))
     else:
-        names = list(VALID_GAME_NAMES - MANAGER.keys())
-        if names:
-            name = random.choice(names)
-        else:
-            name = random.choice(list(VALID_GAME_NAMES))
-            disambig[name] += 1
-            name = GameName(f"{name}_{disambig[name]}")
-
-    assert name not in MANAGER
-    MANAGER[name] = Game(name, *args, **kwargs)
-
-    return name, MANAGER[name]
+        name = random.choice(list(VALID_GAME_NAMES))
+        disambig[name] += 1
+        return GameName(f"{name}_{disambig[name]}")
 
 
 def remove_game(name: GameName) -> None:
@@ -68,17 +85,16 @@ def get_public_games() -> list[AvailableGames]:
             name=name,
             map=game.map_display_name,
             players=len(game.players),
-            difficulty=game.difficulty,
+            difficulty=game.params.level,
         )
         for name, game in iter_games()
-        if game.is_public and (len(game.players) > 0 or game.is_permanent)
+        if game.params.is_public and (len(game.players) > 0 or game.params.is_permanent)
     ]
 
 
-def relaunch_game(name: GameName, **kwargs: Any) -> Game:
+def relaunch_game(name: GameName) -> Game:
     old_game = MANAGER[name]
-    params = {**old_game.get_params(), **kwargs}
-    MANAGER[name] = Game(old_game.name, **params)  # type: ignore
+    MANAGER[name] = old_game.clone()  # type: ignore
     return MANAGER[name]
 
 

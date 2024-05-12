@@ -51,10 +51,10 @@ def init_game(data: ConnectionPayload) -> None:
             player=player,
             launched=game.launched,
             pseudo=pseudo,
-            game=game.map_name,
+            game=game.params.dataset_name,
             current=game.curr_run_id,
-            runs=game.n_run,
-            diff=game.difficulty,
+            runs=game.params.n_runs,
+            diff=game.params.level,
             game_name=game.map_display_name,
             leaderboard=leaderboard,
             pseudos=game.players.nicknames,
@@ -90,7 +90,7 @@ def leave_game() -> None:
 
     print(f"<{player}> disconnected!")
 
-    if not game.players and not game.is_permanent:
+    if not game.players and not game.params.is_permanent:
         manager.remove_game(game_name)
         close_room(game_name)
         safe_cancel(timers[game_name])

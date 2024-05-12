@@ -58,10 +58,10 @@ def end_game(game_name: GameName, run_id: int) -> None:
 
         # 3: continue?
         if done:
-            timers[game_name] = wait_and_run(game.wait_time, terminate_game, game_name)
+            timers[game_name] = wait_and_run(game.params.wait_duration, terminate_game, game_name)
         else:
             timers[game_name] = wait_and_run(
-                game.wait_time, launch_run, game_name, game.curr_run_id
+                game.params.wait_duration, launch_run, game_name, game.curr_run_id
             )
 
 
@@ -73,7 +73,7 @@ def launch_run(game_name: GameName, run_id: int) -> None:
     print(f"Launching run {game.curr_run_id+1} for game <{game_name}>")
     with app.test_request_context("/"):
         hint = game.launch_run()
-        payload = dict(hint=hint, current=game.curr_run_id, total=game.n_run)
+        payload = dict(hint=hint, current=game.curr_run_id, total=game.params.n_runs)
         print(f"Hint is '{hint}'")
         socketio.emit(
             "status-update",
@@ -98,9 +98,9 @@ def launch_game() -> None:
         return
     game.launch()  # GameRun(players)
     payload = dict(
-        game=game.map_name,
-        runs=game.n_run,
-        diff=game.difficulty,
+        game=game.params.dataset_name,
+        runs=game.params.n_runs,
+        diff=game.params.level,
         by=player,
         small_scale=game.small_scale,
     )
