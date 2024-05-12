@@ -37,7 +37,7 @@ am·stram·dam agrège des données provenant des sources suivantes :
 
 Installation:
 ```
-pip install -r requirements-full.txt
+pip install -r requirements.txt
 npm install
 ```
 
