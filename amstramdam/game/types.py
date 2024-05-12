@@ -71,18 +71,18 @@ class GameMetrics(TypedDict):
     distance: Mapping[Player, list[float]]
     delay: Mapping[Player, list[float]]
 
-
-class GameParams(GameRunParams):
-    n_run: int
-    map: str
-    nicknames: dict[Player, Pseudo]
-    wait_time: int
-    difficulty: int
-    is_public: bool
-    is_permanent: bool
-    creation_date: datetime
-    allow_zoom: bool
-    precision_mode: bool
+#
+# class GameParams(GameRunParams):
+#     n_run: int
+#     map: str
+#     nicknames: dict[Player, Pseudo]
+#     wait_time: int
+#     difficulty: int
+#     is_public: bool
+#     is_permanent: bool
+#     creation_date: datetime
+#     allow_zoom: bool
+#     precision_mode: bool
 
 
 class FullGameRunParams(GameRunParams):

@@ -9,6 +9,8 @@ eventlet
 bidict
 tqdm
 pytest
+pydantic
+pydantic-settings
 lxml
 mypy
 flake8

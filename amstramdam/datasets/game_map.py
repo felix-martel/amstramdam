@@ -10,7 +10,7 @@ from amstramdam.datasets.types import (
     JsonifiedPoint,
     JsonifiedDataset,
 )
-from amstramdam.game.game import PlaceToGuess
+from amstramdam.game.game_run import PlaceToGuess
 from amstramdam.game.geo import Point, distance
 from amstramdam.datasets.dataframe import UnifiedDataFrame
 

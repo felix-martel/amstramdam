@@ -11,6 +11,7 @@ from flask import (
     send_file,
 )
 from amstramdam.game.params_handler import merge_params
+from amstramdam.settings import settings
 
 
 @app.route("/")
@@ -90,17 +91,13 @@ def create_new_game():
     print("Creating new game with parameters:")
     print(*[f"{k}={v}" for k, v in params.items()], sep=", ")
     name, game = manager.create_game(
-        n_run=params["runs"],
-        duration=params["duration"],
-        difficulty=params["difficulty"],
+        dataset_name=params["map"],
+        level=params["difficulty"],
         is_public=params["public"],
-        allow_zoom=False,  # params["zoom"],
         precision_mode=params["precision_mode"],
-        map=params["map"],
-        wait_time=params["wait_time"],
+        wait_duration=params["wait_time"],
     )
     print(manager.get_status())
-
     return redirect(url_for("serve_game", name=name))
 
 
@@ -115,16 +112,16 @@ def serve_game(name):
         game_name = session["game"]
         game = manager.get_game(game_name)
         params = dict(
-            map=game.map_name,
-            wait_time=game.wait_time,
+            map=game.params.dataset_name,
+            wait_time=game.params.wait_duration,
             bbox=game.bbox,
             ssl_disabled=CONF["disableSSL"],
-            difficulty=game.difficulty,
+            difficulty=game.params.level,
             tiles=game.tiles,
-            allow_zoom=game.allow_zoom,
-            precision_mode=game.precision_mode,
-            duration=game.duration,
-            borders=game.game_map.borders,
+            allow_zoom=settings.game.allow_zoom,
+            precision_mode=game.params.precision_mode,
+            duration=game.params.run_duration,
+            borders=game.borders,
         )
         return render_template(
             "main.html", game_name=name, params=params, debug=IS_LOCAL

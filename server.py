@@ -29,13 +29,12 @@ if __name__ == "__main__":
         message = "Live-reloading enabled"
         if debug_game:
             name, game = manager.create_game(
-                n_run=3,
+                dataset_name="paris_subway",
+                n_runs=3,
                 is_permanent=True,
                 duration=5,
                 map="paris_subway",
-                wait_time=4,
-                is_public=True,
-                allow_zoom=True,
+                wait_duration=4,
                 force_name="__debug__",
             )
             for _ in range(3):
@@ -52,7 +51,7 @@ if __name__ == "__main__":
                             print(m["name"], level["name"], file=f)
                             try:
                                 _, game = manager.create_game(
-                                    n_run=10, map=m["map_id"], difficulty=level["index"]
+                                    dataset_name=m["map_id"], difficulty=level["index"]
                                 )
                                 print(game, file=f)
                             except Exception as e:
