@@ -8,7 +8,7 @@ TEST_GAME = "_test_game_"
 
 @pytest.fixture
 def game():
-    name, game = manager.create_game(force_name=TEST_GAME, is_permanent=True)
+    name, game = manager.create_game(dataset_name="world_capitals", force_name=TEST_GAME, is_permanent=True)
     yield game
     manager.remove_game(name)
 
