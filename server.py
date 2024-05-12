@@ -51,7 +51,7 @@ if __name__ == "__main__":
                             print(m["name"], level["name"], file=f)
                             try:
                                 _, game = manager.create_game(
-                                    n_run=10, map=m["map_id"], difficulty=level["index"]
+                                    dataset_name=m["map_id"], difficulty=level["index"]
                                 )
                                 print(game, file=f)
                             except Exception as e:

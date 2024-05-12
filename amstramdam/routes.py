@@ -91,17 +91,13 @@ def create_new_game():
     print("Creating new game with parameters:")
     print(*[f"{k}={v}" for k, v in params.items()], sep=", ")
     name, game = manager.create_game(
-        n_runs=params["runs"],
-        duration=params["duration"],
-        difficulty=params["difficulty"],
+        dataset_name=params["map"],
+        level=params["difficulty"],
         is_public=params["public"],
-        allow_zoom=False,  # params["zoom"],
         precision_mode=params["precision_mode"],
-        map=params["map"],
-        wait_time=params["wait_time"],
+        wait_duration=params["wait_time"],
     )
     print(manager.get_status())
-
     return redirect(url_for("serve_game", name=name))
 
 

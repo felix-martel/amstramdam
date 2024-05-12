@@ -1,4 +1,5 @@
 import pytest
+from flask import url_for, request
 
 from amstramdam import app as base_app, manager
 from tests.server_utils import parse_events, parse_html, connect_socketio
@@ -56,3 +57,23 @@ def test_join_game(app, game, client):
 
     assert events["new-player"]["player"] == id1
     assert events["new-player"]["pseudo"] == "gorgz"
+
+
+def test_create_game(app, client):
+    with client:
+        response = client.post(
+            "/new",
+            data={
+                "map": "world_capitals",
+                "difficulty": "2",
+                "public": "true",
+                "runs": "10",
+                "duration": "10",
+                "wait_time": "7"
+            },
+            follow_redirects=True
+        )
+        assert response.status_code == 200
+        assert request.path.startswith("/game/")
+        game_name = request.path.split("/")[-1]
+        assert manager.get_game(game_name) is not None
